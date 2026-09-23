@@ -25,11 +25,13 @@
   <div class="stage" id="stage">
     <canvas id="cv" width="480" height="352"></canvas>
     <div class="zone-toast" id="toast" style="opacity:0"></div>
+    <div class="dpad" id="dpad" aria-label="Movement controls">
+      <button data-dir="up" aria-label="Move up">▲</button>
+      <button data-dir="left" aria-label="Move left">◀</button>
+      <button data-dir="down" aria-label="Move down">▼</button>
+      <button data-dir="right" aria-label="Move right">▶</button>
+    </div>
     <div class="overlay" id="ov" hidden></div>
-  </div>
-  <div class="pad">
-    <div class="help"><b>Drag the joystick</b> on a tablet, or use Arrow keys / WASD on a keyboard. Walk into <b>tall grass</b> to meet creatures.</div>
-    <div class="joystick" id="joystick" role="application" aria-label="Movement joystick"><div class="joystick-knob" id="joystickKnob"></div></div>
   </div>
 </div>
 

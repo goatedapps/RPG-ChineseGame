@@ -25,7 +25,7 @@ test('prototype shell and modular scripts parse successfully', () => {
   assert.equal(dom.window.document.querySelector('#cv')?.tagName, 'CANVAS');
   assert.ok(dom.window.document.querySelector('#objectiveText'));
   assert.ok(dom.window.document.querySelector('#hXpT'));
-  assert.ok(dom.window.document.querySelector('#joystick'));
+  assert.equal(dom.window.document.querySelectorAll('#dpad button').length, 4);
   assert.doesNotThrow(() => new vm.Script(gameSource));
   assert.doesNotThrow(() => new vm.Script(audioSource));
   assert.deepEqual(
@@ -72,6 +72,10 @@ test('prototype reaches the level picker without a startup error', async () => {
   await new Promise(resolve => setImmediate(resolve));
   assert.deepEqual(errors.map(error => error.message), []);
   assert.match(runtime.window.document.querySelector('#ov').textContent, /Choose your level/);
+  runtime.window.document.querySelector('[data-l="p5"]').click();
+  assert.match(runtime.window.document.querySelector('#ov').textContent, /Grandma Wang/);
+  assert.equal(runtime.window.document.querySelector('#hLevel').textContent, 'P5');
+  assert.deepEqual(errors.map(error => error.message), []);
   runtime.window.close();
 });
 
@@ -154,6 +158,14 @@ test('approved progression and reward rules are wired into the prototype', () =>
   assert.match(gameSource, /showLevelUp\(up,/);
   assert.match(gameSource, /function openOv\(html,dim\)\{stopSpeaking\(\)/);
   assert.match(gameSource, /function closeOv\(\)\{stopSpeaking\(\)/);
+  assert.match(gameSource, /const LESSON_GATE_PCT=\.75/);
+  assert.match(gameSource, /2:\{minLevel:4,minCreature:4,maxCreature:6\}/);
+  assert.match(gameSource, /3:\{minLevel:6,minCreature:6,maxCreature:8\}/);
+  assert.match(gameSource, /const heroStats=.*attack:1\+Math\.floor\(level\/3\).*defense:Math\.floor\(level\/4\).*evasion:/);
+  assert.match(gameSource, /dmg=Math\.max\(1,dmg-B\.defense\)/);
+  assert.match(gameSource, /lessonCollected\(lesson-1\)>=lessonRequired\(lesson-1\)/);
+  assert.match(gameSource, /S\.baits\.splice\(baitIndex,1\)/);
+  assert.match(gameSource, /data-bait=/);
 });
 
 test('primary controls meet the 44 pixel touch target baseline', () => {
@@ -162,10 +174,12 @@ test('primary controls meet the 44 pixel touch target baseline', () => {
   assert.match(css, /\.speak\{[^}]*min-height:44px/);
 });
 
-test('tablet joystick, expanded world, and scene audio are connected', () => {
-  assert.equal(dom.window.document.querySelectorAll('#dpad button').length, 0);
-  assert.ok(dom.window.document.querySelector('#joystickKnob'));
-  assert.match(css, /\.joystick\{[^}]*touch-action:none/);
+test('tablet d-pad, expanded world, and scene audio are connected', () => {
+  assert.equal(dom.window.document.querySelectorAll('#dpad button').length, 4);
+  assert.equal(dom.window.document.querySelector('#joystick'), null);
+  assert.match(css, /\.dpad\{[^}]*position:absolute[^}]*touch-action:none/);
+  assert.match(css, /\.dpad button\{[^}]*font-size:23px/);
+  assert.match(gameSource, /document\.querySelectorAll\('#dpad button'\)/);
   assert.match(gameSource, /MW=52, MH=38/);
   assert.match(gameSource, /rect\(29,6,MW-31,MH-8,'b'\)/);
   assert.match(gameSource, /GameAudio\.setScene\('battle'\)/);

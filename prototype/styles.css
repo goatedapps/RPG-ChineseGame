@@ -166,13 +166,14 @@ table.weak th{font-weight:500;color:var(--muted);font-size:12px}
 @keyframes pop{0%{transform:scale(.3) rotate(-10deg);opacity:0}70%{transform:scale(1.08)}100%{transform:none;opacity:1}}
 .level-burst{font-family:var(--display);font-size:clamp(44px,10vw,72px);color:var(--gold);text-shadow:0 3px 0 var(--ink);animation:pop .55s}
 /* tablet controls */
-.pad{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.joystick{width:132px;height:132px;flex:0 0 132px;border-radius:50%;position:relative;touch-action:none;user-select:none;-webkit-user-select:none;background:radial-gradient(circle at 38% 32%,#43536a,#202b3b 72%);border:3px solid #607087;box-shadow:inset 0 4px 12px rgba(255,255,255,.12),0 8px 18px rgba(0,0,0,.28)}
-.joystick::before{content:"";position:absolute;inset:23px;border:1px solid rgba(255,255,255,.14);border-radius:50%}
-.joystick-knob{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f5d77c,#c6982f 72%);border:3px solid #71531a;box-shadow:0 5px 10px rgba(0,0,0,.35);pointer-events:none;transform:translate(0,0);transition:transform .08s ease-out}
-.joystick.active .joystick-knob{transition:none}
-.help{font-size:13px;color:#A8B3C2;line-height:1.6;max-width:36ch}
-.help b{color:var(--paper);font-weight:500}
+.dpad{position:absolute;right:12px;bottom:12px;z-index:3;display:grid;grid-template-columns:repeat(3,50px);grid-template-rows:repeat(3,50px);gap:3px;touch-action:none;user-select:none;-webkit-user-select:none;filter:drop-shadow(0 5px 6px rgba(0,0,0,.3))}
+.dpad button{border:2px solid rgba(255,255,255,.78);border-radius:12px;background:rgba(27,36,48,.78);color:#fff;font-size:23px;line-height:1;display:grid;place-items:center;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);touch-action:none}
+.dpad button:active,.dpad button.active{background:rgba(198,63,43,.9);transform:translateY(1px)}
+.dpad button[data-dir="up"]{grid-column:2;grid-row:1}
+.dpad button[data-dir="left"]{grid-column:1;grid-row:2}
+.dpad button[data-dir="down"]{grid-column:2;grid-row:3}
+.dpad button[data-dir="right"]{grid-column:3;grid-row:2}
+.overlay{z-index:5}
 .atk.wide{grid-column:1/-1}
 .stars i.half,.skillrow .dots i.half{background:linear-gradient(90deg,var(--seal) 50%,#D8CFC0 50%)}
 .wclue{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:15px}

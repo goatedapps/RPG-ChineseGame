@@ -76,6 +76,7 @@ canvas{display:block;width:100%;height:100%;image-rendering:pixelated}
 .pcard{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:4px 10px;font-size:13px}
 .hpbar{width:130px;height:10px;background:#D8CFC0;border-radius:5px;overflow:hidden;margin-top:3px}
 .hpbar i{display:block;height:100%;background:var(--jade);transition:width .3s}
+.hpbar.enemy i{background:var(--seal)}
 .console{margin:10px;background:var(--paper);border:3px solid var(--ink);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;align-self:end}
 .msg{font-size:15px;line-height:1.55;margin:0}
 .attacks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}

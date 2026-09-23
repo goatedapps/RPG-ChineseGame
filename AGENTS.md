@@ -10,7 +10,7 @@ Keep the four-miss handwriting help threshold, current self-marking rewards and 
 Gates use percentages of distinct regional vocabulary; Higher Chinese reading is opt-in.
 Preserve old saves through validated migrations and recovery rather than resetting invalid data automatically.
 The intended session is 30–60 minutes, with numeric XP and a shared level-up celebration.
-Lesson 2 unlocks at level 4 with 14 Lesson 1 spirits, and Lesson 3 unlocks at level 6 with 14 Lesson 2 spirits.
+All three lesson areas are open from the start, with sharply increasing creature difficulty guiding progression.
 Tablet movement uses an in-map directional pad, and the shop offers targeted bait for each unlocked lesson.
 The Lavish review and pre-feedback plan snapshot are in `.lavish/`.
 Never end an active annotation session until the user finishes or requests it.

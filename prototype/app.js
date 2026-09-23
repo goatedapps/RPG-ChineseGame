@@ -17,8 +17,7 @@ const CHARDATA=window.HANZI_DATA;
 const REVIEW_DAYS=3, REVIEW_MAX_DAYS=30;
 const DAILY_OPTIONS=[10,15,20,30,0]; // 0 = no limit
 const ZONES={a:{n:'Camping Forest',l:1,cls:''},b:{n:'Misty Path',l:2,cls:'b2'},c:{n:'Kitchen Garden',l:3,cls:'b3'}};
-const LESSON_RULES={1:{minLevel:1,minCreature:1,maxCreature:3},2:{minLevel:4,minCreature:4,maxCreature:6},3:{minLevel:6,minCreature:6,maxCreature:8}};
-const LESSON_GATE_PCT=.75;
+const LESSON_RULES={1:{minCreature:1,maxCreature:3},2:{minCreature:5,maxCreature:8},3:{minCreature:9,maxCreature:12}};
 const BAITS={
   a:{n:'Forest Acorn',p:40,d:'Choose the next Lesson 1 spirit you meet.'},
   b:{n:'Moonmist Sachet',p:55,d:'Choose the next Lesson 2 spirit you meet.'},
@@ -148,12 +147,8 @@ const isResting=w=>{const s=S.words[w];return tierOf(w)==='gold'&&daysSince(s.re
 const silverCount=()=>WORDS.filter(w=>{const t=tierOf(w.w);return t==='silver'||t==='gold'}).length;
 const collectedCount=()=>WORDS.filter(w=>S.words[w.w]?.c).length;
 const lessonWords=lesson=>WORDS.filter(w=>w.l===lesson);
-const lessonCollected=lesson=>lessonWords(lesson).filter(w=>S.words[w.w]?.c).length;
-const lessonRequired=lesson=>Math.ceil(lessonWords(lesson).length*LESSON_GATE_PCT);
-const lessonUnlocked=lesson=>lesson===1||(S.lvl>=LESSON_RULES[lesson].minLevel&&lessonCollected(lesson-1)>=lessonRequired(lesson-1));
-const heroStats=(level=S.lvl)=>({attack:1+Math.floor(level/3),defense:Math.floor(level/4),evasion:Math.min(.24,Math.floor((level-1)/2)*.04)});
-function creatureStats(zone){const r=LESSON_RULES[ZONES[zone].l],level=r.minCreature+rnd(r.maxCreature-r.minCreature+1);return{level,hp:2+level,attack:1+Math.ceil(level/2),defense:Math.floor(level/4)}}
-function lessonGateText(lesson){const prev=lesson-1,have=lessonCollected(prev),need=lessonRequired(prev),level=LESSON_RULES[lesson].minLevel;return `Lesson ${lesson} opens at Level ${level} with ${need}/${lessonWords(prev).length} Lesson ${prev} spirits. You have Level ${S.lvl} and ${have}/${need}.`}
+const heroStats=(level=S.lvl)=>({attack:3+level*3,defense:level*2,evasion:Math.min(.24,Math.floor((level-1)/2)*.04)});
+function creatureStats(zone){const r=LESSON_RULES[ZONES[zone].l],level=r.minCreature+rnd(r.maxCreature-r.minCreature+1);return{level,hp:8+level*4,attack:8+level*2,defense:1+level*2}}
 const hasLantern=()=>S.keyItems.includes('cave-lantern');
 const gateSilverRequired=()=>Math.ceil(WORDS.length*GATE_SILVER_PCT);
 const gateOpen=()=>S.gateTest||(silverCount()>=gateSilverRequired()&&hasLantern());
@@ -204,8 +199,8 @@ function defineWorld(){
   QUESTION_VILLAGERS=['grandma','teller','xiaoqiang','lin','mei','dong','guard'];
   SIGNS=[
     {x:12,y:15,t:'← Camping Forest · Lesson 1 words'},
-    {x:27,y:15,t:'Misty Path · Lesson 2 words →'},
-    {x:21,y:21,t:'↓ Kitchen Garden · Lesson 3 words'},
+    {x:28,y:15,t:'Misty Path · Lesson 2 words →'},
+    {x:21,y:22,t:'↓ Kitchen Garden · Lesson 3 words'},
     {x:19,y:5,t:'↑ Muddle Cave · home of the Muddle King'}
   ];
 }
@@ -221,13 +216,10 @@ defineWorld();
   rect(2,5,36,1,'.');
   for(let x=1;x<MW-1;x++)map[16][x]='=';
   for(let y=2;y<MH-1;y++)map[y][20]='=';
-  for(let y=5;y<MH-1;y++)map[y][28]='T';map[16][28]='2';
-  for(let x=12;x<=28;x++)map[22][x]='T';map[22][20]='3';
-  for(let y=22;y<MH-1;y++)map[y][12]='T';
   map[4][20]='G'; map[1][20]='K'; map[1][19]='R'; map[1][21]='R';
   BUILDINGS.forEach(b=>{rect(b.x,b.y,b.w,b.h,'B');map[b.y+b.h-1][b.dx]='D'});
   for(let y=11;y<16;y++){map[y][15]='=';map[y][24]='='}
-  rect(14,25,3,2,'~');
+  rect(13,22,3,1,'~');
   NPCS.forEach(n=>map[n.y][n.x]='N');
   SIGNS.forEach(s=>map[s.y][s.x]='S');
 })();
@@ -246,7 +238,6 @@ function drawTile(c,x,y,sx,sy){
   if(c==='.'&&h<18){g.fillStyle=zone?'rgba(0,0,0,.08)':'rgba(255,255,255,.18)';g.fillRect(sx+(h%5)*6,sy+(h%7)*4,3,3)}
   if(c==='.'&&!zone&&y>5&&h>94){g.fillStyle=h%2?'#F2C94C':'#F29FB0';g.beginPath();g.arc(sx+16,sy+16,3,0,7);g.fill()}
   if(c==='='){g.fillStyle='#D9C08A';g.fillRect(sx,sy,TS,TS);g.fillStyle='rgba(120,90,40,.18)';g.fillRect(sx+(h%6)*5,sy+(h%4)*7,4,3)}
-  if(c==='2'||c==='3'){g.fillStyle='#D9C08A';g.fillRect(sx,sy,TS,TS)}
   if(c==='a'||c==='b'||c==='c'){
     const col=c==='a'?['#2F6B35','#3E8243']:c==='b'?['#5E6E7E','#77879A']:['#4E8A2E','#6BA83E'];
     const sway=Math.sin((tick+h*7)/30)*1.5;
@@ -295,11 +286,6 @@ function render(){
     const c=map[y][x];drawTile(['B','D','N','S','G','K'].includes(c)?'.':c,x,y,x*TS-ox,y*TS-oy);
     const sx=x*TS-ox,sy=y*TS-oy;
     if(c==='S'){g.fillStyle='#6B4A2B';g.fillRect(sx+14,sy+16,4,14);g.fillStyle='#C9A45C';g.fillRect(sx+5,sy+6,22,13);g.fillStyle='#6B4A2B';g.fillRect(sx+8,sy+10,16,2);g.fillRect(sx+8,sy+14,12,2)}
-    if(c==='2'||c==='3'){
-      const open=lessonUnlocked(+c);g.fillStyle='#6B4A2B';g.fillRect(sx+3,sy+2,5,30);g.fillRect(sx+24,sy+2,5,30);
-      if(!open){g.fillStyle='#C9A45C';g.fillRect(sx+6,sy+12,20,8);g.fillStyle='#1B2430';g.font='700 11px "Baloo 2", sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('L'+c,sx+16,sy+16)}
-      else{g.fillStyle='#E2B23C';g.beginPath();g.arc(sx+16,sy+16,4,0,7);g.fill()}
-    }
     if(c==='G'){const open=gateOpen();g.fillStyle='#8E3B2E';g.fillRect(sx+2,sy+2,4,30);g.fillRect(sx+26,sy+2,4,30);g.fillStyle='#1B2430';g.fillRect(sx-2,sy,36,6);if(!open){g.fillStyle='#6B4A2B';for(let i=0;i<4;i++)g.fillRect(sx+7+i*5,sy+8,3,22);g.fillStyle='#E2B23C';g.fillRect(sx+13,sy+16,6,6)}}
     if(c==='K'){g.fillStyle='#6E6A64';g.beginPath();g.arc(sx+16,sy+22,20,Math.PI,0);g.fill();g.fillStyle='#111';g.beginPath();g.arc(sx+16,sy+30,11,Math.PI,0);g.fill();g.fillRect(sx+5,sy+30,22,2);if(S.boss){g.fillStyle='#E2B23C';g.fillRect(sx+13,sy+4,6,6)}}
   }
@@ -327,10 +313,6 @@ function tryMove(d){
   if(nx<0||ny<0||nx>=MW||ny>=MH)return;
   const c=map[ny][nx];
   if(c==='G'&&gateOpen()){startMoveTo(nx,ny);return}
-  if(c==='2'||c==='3'){
-    if(lessonUnlocked(+c)){startMoveTo(nx,ny);return}
-    held=null;dialog('Trail Guide',[lessonGateText(+c)]);return;
-  }
   if(solid(c)){held=null;bump(c,nx,ny);return}
   startMoveTo(nx,ny);
 }
@@ -377,13 +359,11 @@ function showLevelUp(levels,onContinue=closeOv){
   const from=S.lvl-levels;
   const before=heroStats(from),after=heroStats();
   const gains=[after.attack>before.attack?`Attack ${before.attack} → ${after.attack}`:'',after.defense>before.defense?`Defense ${before.defense} → ${after.defense}`:'',after.evasion>before.evasion?`Evasion ${Math.round(before.evasion*100)}% → ${Math.round(after.evasion*100)}%`:''].filter(Boolean);
-  const unlocked=[2,3].filter(l=>from<LESSON_RULES[l].minLevel&&S.lvl>=LESSON_RULES[l].minLevel&&lessonCollected(l-1)>=lessonRequired(l-1));
   openOv(`<div class="panel reveal" style="justify-content:center">
     <div class="level-burst" aria-label="Level up">LEVEL UP!</div>
     <h2 style="margin:0">Level ${from} → ${S.lvl}</h2>
     <p class="msg">Your maximum HP increased to <b>${maxHp()}</b>, and your HP is fully restored.</p>
     ${gains.length?`<p class="msg"><b>${gains.join(' · ')}</b></p>`:''}
-    ${unlocked.length?`<p class="msg">Lesson ${unlocked.join(' and ')} trail unlocked!</p>`:''}
     ${levels>1?`<p class="sub">Amazing — you gained ${levels} levels at once!</p>`:''}
     <div class="row"><button class="btn jade" id="levelContinue">Continue</button></div></div>`);
   const b=$('#levelContinue');b.onclick=()=>{b.disabled=true;onContinue()};b.focus();
@@ -394,8 +374,6 @@ function objectiveText(){
   const p=activePassage();
   if(p&&Object.keys(S.reading.results).length<p.qs.length)return `Answer the villagers’ passage questions: ${Object.keys(S.reading.results).length}/${p.qs.length}.`;
   if(!hasLantern())return 'Finish the current passage to earn the Cave Lantern.';
-  if(!lessonUnlocked(2))return `Open Lesson 2: reach Level 4 and collect ${lessonRequired(1)} Lesson 1 spirits (${lessonCollected(1)}/${lessonRequired(1)}).`;
-  if(!lessonUnlocked(3))return `Open Lesson 3: reach Level 6 and collect ${lessonRequired(2)} Lesson 2 spirits (${lessonCollected(2)}/${lessonRequired(2)}).`;
   if(!gateOpen())return `Raise ${gateSilverRequired()-silverCount()} more spirits to Silver for the Muddle Cave gate.`;
   if(!S.boss)return 'The Muddle Cave gate is open. Challenge the Muddle King!';
   return 'Region 1 is clear. Keep turning spirits Gold while the next region is built.';
@@ -718,7 +696,7 @@ function startBattle(zone){
   openOv(`<div class="battle ${ZONES[zone].cls}" id="bt">
     <div class="arena">
       <div class="fighter"><div class="pcard"><b>You</b> Lv${S.lvl}<div class="weak">ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion*100)}%</div><div class="hpbar"><i id="bHp"></i></div><span id="bHpT"></span></div></div>
-      <div class="fighter"><div class="nameplate"><div class="n">Lv${B.level} ${TYPES[type].n}</div><div class="weak">ATK ${B.attack} · DEF ${B.defense} · Weak to ${SKILLS[TYPES[type].weak].n}</div><div class="pips" id="ePips"></div></div><div id="monBox">${monSVG(type)}</div></div>
+      <div class="fighter"><div class="nameplate"><div class="n">Lv${B.level} ${TYPES[type].n}</div><div class="weak">ATK ${B.attack} · DEF ${B.defense} · Weak to ${SKILLS[TYPES[type].weak].n}</div><div class="hpbar enemy"><i id="eHp"></i></div><span id="eHpT"></span></div><div id="monBox">${monSVG(type)}</div></div>
     </div>
     <div class="console" id="con"></div></div>`);
   bRefresh();
@@ -727,7 +705,7 @@ function startBattle(zone){
 }
 function bRefresh(){
   const mh=maxHp();$('#bHp').style.width=(S.hp/mh*100)+'%';$('#bHpT').textContent=`HP ${S.hp}/${mh}`;
-  $('#ePips').innerHTML=Array.from({length:B.max},(_,i)=>`<i class="${i<B.hp?'':'off'}"></i>`).join('');refreshHud();
+  $('#eHp').style.width=(B.hp/B.max*100)+'%';$('#eHpT').textContent=`HP ${B.hp}/${B.max}`;refreshHud();
 }
 function bSay(html,btns){
   const con=$('#con');con.innerHTML=`<p class="msg">${html}</p><div class="row"></div>`;
@@ -747,11 +725,12 @@ function bMenu(){
   $('#bNoodles').onclick=()=>{S.noodles--;S.hp=Math.min(maxHp(),S.hp+20);bRefresh();enemyTurn('You ate Instant Noodles. +20 HP.',true)};
   $('#bRun').onclick=()=>{closeOv();toast('You got away safely.')};
 }
+function damageRoll(attack,defense,bonus=0){const mitigation=Math.floor(defense*.65);return Math.max(1,attack+bonus+rnd(5)-2-mitigation)}
 function dealDamage(k,base){
-  B.streak++;let dmg=base+heroStats().attack-1;const notes=[];
-  if(k===TYPES[B.type].weak){dmg++;notes.push('Super effective!')}
-  if(B.streak>=3){dmg++;notes.push('Streak bonus!')}
-  dmg=Math.max(1,dmg-B.defense);
+  B.streak++;const hero=heroStats(),notes=[];let bonus=base;
+  if(k===TYPES[B.type].weak){bonus+=3;notes.push('Super effective!')}
+  if(B.streak>=3){bonus+=2;notes.push('Streak bonus!')}
+  let dmg=damageRoll(hero.attack,B.defense,bonus);
   if(B.double){dmg*=2;B.double=false;notes.push('Teamwork ×2!')}
   B.hp=Math.max(0,B.hp-dmg);hitMon();bRefresh();
   if(B.hp<=0){bWin();return}
@@ -784,11 +763,11 @@ function enemyTurn(prefix,wasCorrect){
         record(dw.w,T.atk,ok,B.bid);
         if(ok){bSay(`Blocked! The ${T.spell} bounces right off you.`,[{t:'Next',f:bMenu}]);return}
         if(B.shield){B.shield=false;bSay(`The ${T.spell} hits, but you put it out of your mind (抛到脑后). No damage!`,[{t:'Next',f:bMenu}]);return}
-        const dmg=Math.max(1,B.attack+1-hero.defense);takeHit(dmg,`The ${T.spell} hits you for <b>${dmg}</b> damage!`);
+        const dmg=damageRoll(B.attack,hero.defense,4);takeHit(dmg,`The ${T.spell} hits you for <b>${dmg}</b> damage!`);
       })}}]);
     return;
   }
-  let dmg=Math.max(1,B.attack+rnd(3)-1-hero.defense);
+  let dmg=damageRoll(B.attack,hero.defense);
   if(wasCorrect){
     if(Math.random()<Math.min(.55,hero.evasion+(B.streak>=3?.3:.18))){bSay(`${prefix}<br>The ${T.n} lunges at you, but you dodge!`,[{t:'Next',f:bMenu}]);return}
     takeHit(dmg,`${prefix}<br>The ${T.n} strikes back for <b>${dmg}</b> damage!`);
@@ -811,7 +790,7 @@ function bIdiom(w){
     if(fx==='heal'){S.hp=maxHp();msg='You wolf down a big meal (狼吞虎咽). HP fully restored!'}
     if(fx==='double'){B.double=true;msg='Your spirits work together (齐心协力). Your next hit does double damage!'}
     if(fx==='shield'){B.shield=true;msg='You put your worries out of your mind (抛到脑后). Your next wrong answer does no damage.'}
-    if(fx==='shout'){B.hp=Math.max(0,B.hp-1);hitMon();msg='All your spirits shout in one voice (异口同声) for 1 damage!'}
+    if(fx==='shout'){const dmg=damageRoll(heroStats().attack,B.defense,1);B.hp=Math.max(0,B.hp-dmg);hitMon();msg=`All your spirits shout in one voice (异口同声) for ${dmg} damage!`}
     bRefresh();if(B.hp<=0)return bWin();
     enemyTurn(msg,true);
   });
@@ -948,7 +927,7 @@ function openShop(){
    <p class="sub">You have <b>${S.coins}</b> coins. Bait lets you choose the next word spirit you encounter in that lesson.</p>
     <div class="shopitem"><span class="nm">Rice Ball<small>+10 HP in battle · you have ${S.potions}</small></span><button class="btn" data-buy="potion" ${S.coins<25?'disabled':''}>25 coins</button></div>
     <div class="shopitem"><span class="nm">Instant Noodles<small>+20 HP in battle · you have ${S.noodles}</small></span><button class="btn" data-buy="noodles" ${S.coins<50?'disabled':''}>50 coins</button></div>
-   ${Object.entries(BAITS).map(([zone,b])=>{const queued=S.baits.filter(x=>x.zone===zone).length,open=lessonUnlocked(ZONES[zone].l);return`<div class="shopitem"><span class="nm">${b.n}<small>${b.d}${queued?` · ${queued} ready`:''}${open?'':` · Lesson ${ZONES[zone].l} locked`}</small></span><button class="btn" data-bait="${zone}" ${S.coins<b.p||!open?'disabled':''}>${b.p} coins</button></div>`}).join('')}
+   ${Object.entries(BAITS).map(([zone,b])=>{const queued=S.baits.filter(x=>x.zone===zone).length;return`<div class="shopitem"><span class="nm">${b.n}<small>${b.d}${queued?` · ${queued} ready`:''}</small></span><button class="btn" data-bait="${zone}" ${S.coins<b.p?'disabled':''}>${b.p} coins</button></div>`}).join('')}
    ${Object.entries(HATS).map(([k,h])=>`<div class="shopitem"><span class="nm">${h.n}<small>${S.hats.includes(k)?(S.hat===k?'Wearing':'Owned'):'Just for looks'}</small></span>${S.hats.includes(k)?`<button class="btn alt" data-wear="${k}">${S.hat===k?'Take off':'Wear'}</button>`:`<button class="btn" data-buy="${k}" ${S.coins<h.p?'disabled':''}>${h.p} coins</button>`}</div>`).join('')}
   </div>`);
   $('#x').onclick=closeOv;
@@ -1012,11 +991,11 @@ function startBoss(){
   const cz=DATA.cloze.qs.map((q,i)=>({kind:'cloze',q,i}));
   const known=WORDS.filter(w=>S.words[w.w]?.c);
   const wr=shuffle(known.length>=2?known:WORDS).slice(0,2).map(W=>({kind:'write',W}));
-  B={boss:true,queue:[...conj,...ord,...wr,...cz],hp:12,max:12,level:10,attack:7,defense:2,phase:'',bid:++S.battles,clozeDone:{},used:{},double:false,shield:false,streak:0};
+  B={boss:true,queue:[...conj,...ord,...wr,...cz],hp:36,max:36,level:13,attack:34,defense:25,phase:'',bid:++S.battles,clozeDone:{},used:{},double:false,shield:false,streak:0};
   openOv(`<div class="battle boss" id="bt">
     <div class="arena">
       <div class="fighter"><div class="pcard"><b>You</b> Lv${S.lvl}<div class="weak">ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion*100)}%</div><div class="hpbar"><i id="bHp"></i></div><span id="bHpT"></span></div></div>
-      <div class="fighter"><div class="nameplate"><div class="n">Lv10 Muddle King</div><div class="weak">ATK 7 · DEF 2</div><div class="weak" id="bPhase"></div><div class="pips" id="ePips"></div></div><div id="monBox">${bossSVG()}</div></div>
+      <div class="fighter"><div class="nameplate"><div class="n">Lv13 Muddle King</div><div class="weak">ATK 34 · DEF 25</div><div class="weak" id="bPhase"></div><div class="hpbar enemy"><i id="eHp"></i></div><span id="eHpT"></span></div><div id="monBox">${bossSVG()}</div></div>
     </div><div class="console" id="con"></div></div>`);
   bRefresh();bossNext();
 }
@@ -1027,14 +1006,14 @@ function bossNext(){
   $('#bPhase').textContent=phaseName;
   const done=ok=>{
     record(null,'x',ok,B.bid);B.queue.shift();
-    if(ok){let dmg=Math.max(1,heroStats().attack-B.defense);if(B.double){dmg*=2;B.double=false}B.hp=Math.max(0,B.hp-dmg);hitMon();bRefresh();if(it.kind==='cloze')B.clozeDone[it.i]=it.q.c;
+    if(ok){let dmg=damageRoll(heroStats().attack,B.defense,2);if(B.double){dmg*=2;B.double=false}B.hp=Math.max(0,B.hp-dmg);hitMon();bRefresh();if(it.kind==='cloze')B.clozeDone[it.i]=it.q.c;
       if(B.hp<=0)return bossWin();
-      if(Math.random()<.3&&Math.random()>=heroStats().evasion){const hit=Math.max(1,3-heroStats().defense);S.hp=Math.max(0,S.hp-hit);bRefresh();if(S.hp<=0){S.hp=maxHp();P.x=24;P.y=11;P.px=P.x*TS;P.py=P.y*TS;return bSay('The Muddle King knocked you out! You woke up at the inn. Collect more spirits and try again!',[{t:'OK',f:closeOv}])}
+      if(Math.random()<.3&&Math.random()>=heroStats().evasion){const hit=damageRoll(B.attack,heroStats().defense,-12);S.hp=Math.max(0,S.hp-hit);bRefresh();if(S.hp<=0){S.hp=maxHp();P.x=24;P.y=11;P.px=P.x*TS;P.py=P.y*TS;return bSay('The Muddle King knocked you out! You woke up at the inn. Collect more spirits and try again!',[{t:'OK',f:closeOv}])}
         return bSayBoss('Spell broken! The Muddle King loses '+dmg+' HP… but he throws a Muddle Bomb at you for '+hit+' damage!')}
       bSayBoss('Spell broken! The Muddle King loses '+dmg+' HP.');}
     else{B.queue.push(it);
       if(B.shield){B.shield=false;bSayBoss('The Muddle King strikes back, but you put it out of your mind (抛到脑后)! This spell will come back later.');return}
-      const hit=Math.max(1,5-heroStats().defense);S.hp=Math.max(0,S.hp-hit);bRefresh();$('#bt').classList.add('flash');setTimeout(()=>$('#bt')?.classList.remove('flash'),400);
+      const hit=damageRoll(B.attack,heroStats().defense);S.hp=Math.max(0,S.hp-hit);bRefresh();$('#bt').classList.add('flash');setTimeout(()=>$('#bt')?.classList.remove('flash'),400);
       if(S.hp<=0){S.hp=maxHp();P.x=24;P.y=11;P.px=P.x*TS;P.py=P.y*TS;return bSay('The Muddle King knocked you out! You woke up at the inn. Collect more spirits and try again!',[{t:'OK',f:closeOv}])}
       bSayBoss(`The Muddle King strikes back! You lose ${hit} HP. This spell will come back later.`)}
   };

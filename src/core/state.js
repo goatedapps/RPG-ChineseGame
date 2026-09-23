@@ -1,4 +1,4 @@
-export const SAVE_SCHEMA_VERSION = 2;
+export const SAVE_SCHEMA_VERSION = 3;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -27,12 +27,18 @@ export function createFreshState(levelPackage) {
       flags: {},
       quests: {},
       stories: [],
-      battles: 0
+      battles: 0,
+      energy: { day: '', used: 0 },
+      school: { day: '', runs: 0, examWeek: '' },
+      inventory: { 'rice-ball': 1, keyItems: [] },
+      reading: { completed: [], active: null, index: 0, results: {}, written: [] },
+      accuracy: {}
     },
     settings: {
       dailyBattles: 15,
       lenientWriting: true,
-      sound: true
+      sound: true,
+      sendWrittenAnswers: true
     },
     session: {
       playMs: 0,
@@ -49,7 +55,7 @@ export function migrateState(candidate, levelPackage) {
   const fresh = createFreshState(levelPackage);
   if (!candidate || typeof candidate !== 'object') return fresh;
 
-  if (candidate.schemaVersion === SAVE_SCHEMA_VERSION) {
+  if (candidate.schemaVersion >= 2) {
     if (candidate.level !== levelPackage.id) throw new Error(`This save belongs to ${candidate.level}, not ${levelPackage.id}.`);
     const player = candidate.player || {};
     return {
@@ -69,7 +75,15 @@ export function migrateState(candidate, levelPackage) {
         x: numberOr(player.x, fresh.player.x),
         y: numberOr(player.y, fresh.player.y)
       },
-      progress: { ...fresh.progress, ...(candidate.progress || {}) },
+      progress: {
+        ...fresh.progress,
+        ...(candidate.progress || {}),
+        energy: { ...fresh.progress.energy, ...(candidate.progress?.energy || {}) },
+        school: { ...fresh.progress.school, ...(candidate.progress?.school || {}) },
+        inventory: { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) },
+        reading: { ...fresh.progress.reading, ...(candidate.progress?.reading || {}) },
+        accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
+      },
       settings: { ...fresh.settings, ...(candidate.settings || {}) },
       session: { ...fresh.session, ...(candidate.session || {}) }
     };
@@ -99,6 +113,18 @@ export function migrateState(candidate, levelPackage) {
       characters: candidate.chars || {},
       stories: candidate.stories || [],
       battles: numberOr(candidate.battles, 0),
+      energy: candidate.energy || fresh.progress.energy,
+      school: candidate.school || fresh.progress.school,
+      inventory: {
+        ...fresh.progress.inventory,
+        'rice-ball': numberOr(candidate.potions, 1),
+        keyItems: candidate.keyItems || []
+      },
+      reading: {
+        ...fresh.progress.reading,
+        ...(candidate.reading || {}),
+        written: candidate.written || []
+      },
       legacySnapshot: {
         boss: Boolean(candidate.boss),
         keyItems: candidate.keyItems || [],

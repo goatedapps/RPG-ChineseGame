@@ -1,6 +1,6 @@
 import { createEventBus } from './core/events.js';
 import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js';
-import { listLevels, loadLevelPackage } from './content/loader.js';
+import { listLevels, loadLevelPackage } from './content/loader.js?p3';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js';
 import { bindInput } from './world/input.js';
@@ -8,6 +8,7 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
+import { createGameplay } from './gameplay.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -28,6 +29,7 @@ let levels = [];
 let active = null;
 let unbindInput = null;
 let autosave = null;
+let gameplay = null;
 
 function render() {
   if (!active) return;
@@ -58,7 +60,7 @@ function move(direction) {
     persist();
   } else if (result.interaction) {
     events.emit('world:interaction', result.interaction);
-    overlay.dialogue(result.interaction.interaction);
+    if (!gameplay?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
   }
   render();
 }
@@ -76,11 +78,11 @@ function showWelcome(loadResult) {
   const messages = [];
   if (loadResult.migrated) messages.push('Your existing P5 prototype progress was copied into this preview. The original prototype save was left untouched.');
   if (loadResult.warning) messages.push(`Save recovery notice: ${loadResult.warning}`);
-  messages.push('Walk with the keyboard arrows, WASD, or the on-screen arrows. Walk into a sign, door, or villager to interact.');
+  messages.push('Walk with the keyboard arrows, WASD, or the on-screen arrows. Village signs lead to lesson battles, and each building now provides its full learning service.');
   overlay.open(`<div class="panel">
     <h1>Scholar Village engine preview</h1>
     ${messages.map(message => `<p>${message}</p>`).join('')}
-    <p>This build tests the modular world, content loader, and isolated saves. Continue using the stable prototype for battles and learning activities.</p>
+    <p>Collect word spirits in battle, practise at School, complete a Reading Hall passage for the Cave Lantern, rest at the Inn, and buy Rice Balls at the Shop.</p>
     <button class="primary" data-enter-world>Enter the village</button>
   </div>`, { dismissible: false });
   $('[data-enter-world]').addEventListener('click', () => {
@@ -110,6 +112,7 @@ async function startLevel(levelId) {
       renderer: createRenderer($('#world'), levelPackage.map),
       saveBlocked: Boolean(loadResult.blocked)
     };
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast });
     unbindInput?.();
     unbindInput = bindInput({ dpad: $('#dpad'), onMove: move });
     startAutosave();
@@ -150,7 +153,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Modular build status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P2 are complete. The shared engine now includes reusable mastery, selection, questions, exam adapters, speech and three-stage writing for both curriculum packs.</p>
+    <p>P0–P3 are complete. Region 1 now connects battles, School, Reading Hall, Spirit Book, Inn, Shop, daily energy and the parent learning summary to the shared engine.</p>
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
@@ -166,6 +169,8 @@ function showBuildStatus() {
 
 async function boot() {
   $('#status-button').addEventListener('click', showBuildStatus);
+  $('#book-button').addEventListener('click', () => gameplay?.spiritBook());
+  $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
   events.on('world:interaction', interaction => console.debug('Interaction', interaction.id));
   try {
     levels = await listLevels();
@@ -181,5 +186,5 @@ async function boot() {
 }
 
 window.addEventListener('beforeunload', persist);
-window.__WSQ_P1__ = { get active() { return active; }, events, startLevel };
+window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, events, startLevel };
 boot();

@@ -1,0 +1,6 @@
+[
+  { "id": "jade-brush", "name": "Jade Brush", "coins": 20, "materials": { "mist-drop": 3, "ink-bead": 2 } },
+  { "id": "echo-bell", "name": "Echo Bell", "coins": 20, "materials": { "echo-feather": 4 } },
+  { "id": "mirror-charm", "name": "Mirror Charm", "coins": 20, "materials": { "mirror-shard": 4 } }
+]
+

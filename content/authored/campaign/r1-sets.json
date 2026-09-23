@@ -1,0 +1,8 @@
+[
+  { "id": "campfire", "name": "Campfire", "words": ["露营", "探险", "集合", "绑"], "restoration": "The village campfire burns again." },
+  { "id": "kitchen", "name": "Kitchen", "words": ["黄瓜", "紫菜", "调味料", "炒", "材料"], "restoration": "The noodle stall reopens." },
+  { "id": "healthy-eyes", "name": "Healthy Eyes", "words": ["电脑", "眼圈", "模糊", "距离", "保持"], "restoration": "The optician's sign is repaired." },
+  { "id": "kind-words", "name": "Kind Words", "words": ["祝福", "安慰", "贺卡", "异口同声"], "restoration": "The square is decorated for Grandma's birthday." },
+  { "id": "team-spirit", "name": "Team Spirit", "words": ["齐心协力", "配合", "冠军", "轮"], "restoration": "The village race track is repaired." }
+]
+

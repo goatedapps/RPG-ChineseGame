@@ -1,0 +1,12 @@
+[
+  { "id": "bamboo-brush", "name": "Bamboo Brush", "slot": "brush", "effect": "starter", "source": "start" },
+  { "id": "jade-brush", "name": "Jade Brush", "slot": "brush", "effect": "writing-damage", "amount": 1, "source": "craft" },
+  { "id": "echo-bell", "name": "Echo Bell", "slot": "charm", "effect": "pinyin-damage", "amount": 1, "source": "craft" },
+  { "id": "mirror-charm", "name": "Mirror Charm", "slot": "charm", "effect": "hanzi-damage", "amount": 1, "source": "craft" },
+  { "id": "fog-lantern-charm", "name": "Fog Lantern Charm", "slot": "charm", "effect": "spell-defense", "amount": 2, "source": "region-2-shop" },
+  { "id": "red-cap", "name": "Red Cap", "slot": "hat", "effect": "max-hp", "amount": 3, "price": 40, "source": "shop" },
+  { "id": "bamboo-hat", "name": "Bamboo Hat", "slot": "hat", "effect": "evasion", "amount": 0.1, "source": "milestone-20" },
+  { "id": "scholars-cap", "name": "Scholar's Cap", "slot": "hat", "effect": "xp", "amount": 0.1, "source": "region-2-boss" },
+  { "id": "gold-crown", "name": "Gold Crown", "slot": "hat", "effect": "cosmetic", "source": "mastery" }
+]
+

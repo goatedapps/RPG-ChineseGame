@@ -1,6 +1,6 @@
 import { createEventBus } from './core/events.js';
 import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js';
-import { listLevels, loadLevelPackage } from './content/loader.js?p3';
+import { listLevels, loadLevelPackage } from './content/loader.js?p5';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js';
 import { bindInput } from './world/input.js';
@@ -9,6 +9,7 @@ import { createOverlay } from './ui/overlay.js';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
 import { createGameplay } from './gameplay.js';
+import { createCollection } from './collection.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -30,6 +31,7 @@ let active = null;
 let unbindInput = null;
 let autosave = null;
 let gameplay = null;
+let collection = null;
 
 function render() {
   if (!active) return;
@@ -112,7 +114,9 @@ async function startLevel(levelId) {
       renderer: createRenderer($('#world'), levelPackage.map),
       saveBlocked: Boolean(loadResult.blocked)
     };
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast });
+    collection = createCollection({ overlay, getActive: () => active, persist, render, toast });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, onCollectionChanged: () => collection.applyMilestones() });
+    collection.refreshMaxHp();
     unbindInput?.();
     unbindInput = bindInput({ dpad: $('#dpad'), onMove: move });
     startAutosave();
@@ -153,7 +157,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Modular build status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P3 are complete. Region 1 now connects battles, School, Reading Hall, Spirit Book, Inn, Shop, daily energy and the parent learning summary to the shared engine.</p>
+    <p>P0–P5 are complete. Region 1 now includes items, gear, crafting, partners, Restoration Sets, milestones and the player room on top of the complete learning loop.</p>
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
@@ -170,6 +174,8 @@ function showBuildStatus() {
 async function boot() {
   $('#status-button').addEventListener('click', showBuildStatus);
   $('#book-button').addEventListener('click', () => gameplay?.spiritBook());
+  $('#character-button').addEventListener('click', () => collection?.character());
+  $('#room-button').addEventListener('click', () => collection?.room());
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
   events.on('world:interaction', interaction => console.debug('Interaction', interaction.id));
   try {

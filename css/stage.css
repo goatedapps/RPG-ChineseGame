@@ -137,10 +137,24 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .written-review { display: grid; gap: 4px; margin: 8px 0; padding: 10px; border-radius: 8px; background: white; }
 .written-review p { margin: 2px 0; }
 .written-review small { display: block; }
+.gear-grid, .set-grid, .shop-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+.gear-grid article, .set-card, .shop-grid article { display: grid; gap: 6px; padding: 12px; border-radius: 9px; background: white; }
+.gear-grid span, .set-card small, .shop-grid span { color: #647180; font: 12px system-ui; }
+.gear-grid button, .set-card button, .shop-grid button { min-height: 40px; border: 0; border-radius: 8px; font-weight: 800; }
+.set-card.complete { border: 2px solid var(--jade); }
+.character-preview { display: flex; align-items: center; gap: 18px; margin: 12px 0; padding: 14px; border-radius: 12px; background: white; }
+.paper-hero { display: grid; place-items: center; width: 82px; height: 96px; border: 4px solid var(--ink); border-radius: 35px 35px 18px 18px; color: white; background: var(--jade); font: 34px var(--font-chinese); }
+.room-scene { position: relative; min-height: 300px; overflow: hidden; border: 8px solid #8b623d; border-radius: 12px; background: linear-gradient(#f1dfb6 0 72%,#b98455 72%); }
+.room-shelf { position: absolute; top: 35px; left: 35px; min-width: 170px; padding: 12px; border-bottom: 8px solid #754b2e; font-size: 28px; }
+.room-shelf .empty, .room-partners span { color: #735f4c; font: 13px system-ui; }
+.room-bed { position: absolute; right: 35px; bottom: 35px; width: 190px; padding: 40px 10px 12px; border: 5px solid #6f4930; border-radius: 10px; background: #88a6c3; text-align: center; }
+.room-partners { position: absolute; left: 35px; bottom: 50px; display: flex; gap: 10px; }
+.room-partners i { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: var(--ink); background: var(--paper); box-shadow: 0 3px 8px #735f4c; font: 24px var(--font-chinese); }
+.room-decor { position: absolute; top: 105px; left: 35px; }
 @media (max-width: 600px) {
   .dpad { right: 9px; bottom: 9px; grid-template-columns: repeat(3,47px); grid-template-rows: repeat(3,47px); }
   .level-grid, .status-grid { grid-template-columns: 1fr; }
-  .battle-grid, .writing-layout, .question-options, .attack-grid, .service-grid, .spirit-grid { grid-template-columns: 1fr; }
+  .battle-grid, .writing-layout, .question-options, .attack-grid, .service-grid, .spirit-grid, .gear-grid, .set-grid, .shop-grid { grid-template-columns: 1fr; }
   .shop-item { grid-template-columns: auto 1fr; }
   .shop-item button { grid-column: 1 / -1; }
 }

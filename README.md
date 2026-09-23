@@ -2,7 +2,7 @@
 
 Word Spirit Quest is a tablet-friendly exploration RPG for learning primary-school Chinese.
 The current playable reference is the Primary 5 Region 1 prototype under `prototype/`.
-The modular rebuild is being developed alongside it.
+The modular rebuild is being developed alongside it and now completes phases P0–P5.
 
 ## Run the reference prototype
 
@@ -10,7 +10,7 @@ Serve the repository with any static HTTP server and open `prototype/`.
 The published reference remains available through GitHub Pages while the rebuild reaches parity.
 
 The current modular engine preview is served from `game/`.
-It covers shared-world loading, movement, interactions, isolated saves and the reusable Learning Core.
+It covers the complete Region 1 learning loop plus consumables, gear, crafting, partners, Restoration Sets, collection milestones and the player room.
 The content lab at `game/lab.html` runs P2 and P5 questions, speech and local handwriting tasks against real curriculum data.
 On GitHub Pages it is available at `/RPG-ChineseGame/game/`; the main project URL continues to open the stable prototype.
 
@@ -33,7 +33,7 @@ Each level supplies its own lesson mapping, supported question types and tuning 
 npm test
 ```
 
-The test suite covers the playable prototype, generated multi-level content, modular engine and Learning Core.
+The test suite covers the playable prototype, generated multi-level content, modular engine, Learning Core, Region 1 gameplay and collection systems.
 
 ## Project references
 

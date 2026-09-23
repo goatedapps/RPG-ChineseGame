@@ -1,0 +1,10 @@
+[
+  { "count": 10, "reward": "running-shoes", "name": "Running Shoes" },
+  { "count": 20, "reward": "bamboo-hat", "name": "Bamboo Hat" },
+  { "count": 30, "reward": "creature-radar", "name": "Creature Radar" },
+  { "count": 50, "reward": "material-pouch", "name": "Material Pouch" },
+  { "count": 80, "reward": "travel-map", "name": "Travel Map" },
+  { "count": 120, "reward": "echo-bell", "name": "Echo Bell" },
+  { "count": 200, "reward": "golden-lure", "name": "Golden Lure" }
+]
+

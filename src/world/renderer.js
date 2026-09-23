@@ -72,7 +72,7 @@ function drawBuilding(context, object, offsetX, offsetY) {
   context.fillText(object.name, left + pixelWidth / 2, top + 43);
 }
 
-function drawPerson(context, x, y, color, direction = 'down', isPlayer = false) {
+function drawPerson(context, x, y, color, direction = 'down', isPlayer = false, equipment = {}) {
   context.fillStyle = 'rgba(15,25,30,.22)';
   context.beginPath();
   context.ellipse(x + 16, y + 29, 9, 3, 0, 0, Math.PI * 2);
@@ -96,6 +96,22 @@ function drawPerson(context, x, y, color, direction = 'down', isPlayer = false) 
     context.fillRect(x + 12 + glance, y + 10, 2, 2);
     context.fillRect(x + 18 + glance, y + 10, 2, 2);
   }
+  if (isPlayer && equipment.hat) {
+    context.fillStyle = equipment.hat === 'gold-crown' ? '#e2b23c' : equipment.hat === 'red-cap' ? '#c63f2b' : '#c9a45c';
+    context.fillRect(x + 8, y + 2, 16, 5);
+  }
+  if (isPlayer && equipment.brush) {
+    context.strokeStyle = equipment.brush === 'jade-brush' ? '#2f8a66' : '#6e492d';
+    context.lineWidth = 3;
+    context.beginPath(); context.moveTo(x + 23, y + 17); context.lineTo(x + 28, y + 28); context.stroke();
+  }
+}
+
+function drawCampfire(context, x, y) {
+  context.strokeStyle = '#68482d'; context.lineWidth = 4;
+  context.beginPath(); context.moveTo(x + 8, y + 27); context.lineTo(x + 25, y + 21); context.moveTo(x + 8, y + 21); context.lineTo(x + 25, y + 27); context.stroke();
+  context.fillStyle = '#f29b32'; context.beginPath(); context.arc(x + 16, y + 17, 8, 0, Math.PI * 2); context.fill();
+  context.fillStyle = '#f5d34f'; context.beginPath(); context.arc(x + 16, y + 19, 4, 0, Math.PI * 2); context.fill();
 }
 
 function drawSign(context, x, y) {
@@ -143,7 +159,15 @@ export function createRenderer(canvas, map) {
       const y = entity.y * TILE - offsetY;
       if (entity.type === 'sign') drawSign(context, x, y);
       else if (entity.type === 'npc') drawPerson(context, x, y, entity.color, 'down');
-      else drawPerson(context, x, y, '#2f6f8f', state.player.direction, true);
+      else drawPerson(context, x, y, '#2f6f8f', state.player.direction, true, state.progress?.equipment?.equipped);
+    }
+    if (state.progress?.sets?.campfire) drawCampfire(context, 20 * TILE - offsetX, 16 * TILE - offsetY);
+    const partner = state.progress?.partners?.[0];
+    if (partner) {
+      const glyph = partner.split('-').slice(2).join('-').slice(0, 1);
+      context.fillStyle = '#f4efe2'; context.strokeStyle = '#d9a62e'; context.lineWidth = 2;
+      context.beginPath(); context.arc(playerPx - offsetX - 5, playerPy - offsetY + 5, 11, 0, Math.PI * 2); context.fill(); context.stroke();
+      context.fillStyle = '#1b2430'; context.font = '700 13px serif'; context.fillText(glyph, playerPx - offsetX - 5, playerPy - offsetY + 5);
     }
   }
   return { render };

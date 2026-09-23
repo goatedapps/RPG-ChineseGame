@@ -106,7 +106,8 @@ P0 is complete: both source packs validate and generate normalized content plus 
 P1 is complete under `game/`: the modular preview loads shared Region 1 data, supports movement and interactions, and keeps isolated encoded preview saves.
 P2 is complete under `game/lab.html`: both content packs can run generated questions, supported exam questions, speech and local three-stage handwriting through shared learning modules.
 P3 is complete: the modular Region 1 has stat-based wild battles, School activities, Reading Hall passage chains, Spirit Book, Inn, Shop, daily energy and a PIN-protected parent summary.
-P4 and P5 are next: migrate consumables, gear, crafting, partners, sets, milestones and the player room.
+P4 and P5 are complete: the modular build has consumables, gear, crafting, partner skills, Restoration Sets, milestones and the player room.
+P6 is next: add the daily quest board, chest, Lantern Streak, freeze, Daily Scroll and Scroll Library.
 
 ## Development workflow
 

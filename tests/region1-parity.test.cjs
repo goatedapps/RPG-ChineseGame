@@ -66,7 +66,7 @@ test('School rewards only the first three daily runs while XP can continue', asy
 test('Rice Balls use coins, stack in inventory, and never overheal', async () => {
   const { buyItem, useHealingItem } = await import('../src/systems/economy.js');
   const item = readJson('content/authored/shared/balance.json').items['rice-ball'];
-  const purchase = buyItem({ coins: 20, hp: 4, maxHp: 20 }, {}, 'rice-ball', item);
+  const purchase = buyItem({ coins: 30, hp: 4, maxHp: 20 }, {}, 'rice-ball', item);
   assert.equal(purchase.ok, true);
   assert.equal(purchase.player.coins, 5);
   assert.equal(purchase.inventory['rice-ball'], 1);
@@ -83,7 +83,7 @@ test('finishing a passage chain records completion and grants the Cave Lantern o
   assert.deepEqual(second.inventory.keyItems, ['cave-lantern']);
 });
 
-test('schema 2 modular saves migrate to P3 without losing progress', async () => {
+test('schema 2 modular saves migrate without losing progress', async () => {
   const { migrateState, SAVE_SCHEMA_VERSION } = await import('../src/core/state.js');
   const levelPackage = {
     id: 'p5', content: { contentVersion: 'new' },

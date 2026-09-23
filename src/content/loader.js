@@ -13,14 +13,20 @@ export async function listLevels(fetcher = fetch, baseUrl = '..') {
 }
 
 export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..') {
-  const [content, characters, config, regions, map, balance, strings] = await Promise.all([
+  const [content, characters, config, regions, map, balance, strings, items, gear, recipes, milestones, sets, wordTags] = await Promise.all([
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.content.json`)),
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.chars.json`)),
     fetchJson(fetcher, join(baseUrl, `content/authored/levels/${levelId}/level.json`)),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/regions.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r1-hub.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/shared/balance.json')),
-    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/strings.json'))
+    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/strings.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/items.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/gear.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/recipes.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/milestones.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r1-sets.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/shared/word-tags.json'))
   ]);
   if (content.level !== levelId || characters.level !== levelId || config.id !== levelId) {
     throw new Error(`The ${levelId} package contains mismatched level identifiers.`);
@@ -37,6 +43,12 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     region,
     map,
     balance,
-    strings
+    strings,
+    items,
+    gear,
+    recipes,
+    milestones,
+    sets,
+    wordTags
   };
 }

@@ -9,6 +9,10 @@ The modular rebuild is being developed alongside it.
 Serve the repository with any static HTTP server and open `prototype/`.
 The published reference remains available through GitHub Pages while the rebuild reaches parity.
 
+The current modular engine preview is served from `game/`.
+It covers shared-world loading, movement, interactions and isolated saves while later gameplay systems are migrated.
+On GitHub Pages it is available at `/RPG-ChineseGame/game/`; the main project URL continues to open the stable prototype.
+
 ## Build curriculum content
 
 Install the development dependencies, then build both school-level packs.

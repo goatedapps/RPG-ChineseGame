@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1b2430">
+  <title>Word Spirit Quest — Modular Preview</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/stage.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud" aria-label="Player status">
+      <div class="brand">Word Spirit Quest <span>字灵</span><small>P1 engine preview</small></div>
+      <div class="hud-stat"><span>Curriculum</span><b id="hud-level">—</b></div>
+      <div class="hud-stat"><span>Location</span><b id="hud-location">—</b></div>
+      <div class="hud-stat"><span>Level</span><b id="hud-player-level">1</b></div>
+      <div class="hud-stat"><span>XP</span><b id="hud-xp">0 XP</b></div>
+      <div class="hud-stat hp"><span>HP</span><i><em id="hud-hp-bar"></em></i><b id="hud-hp">20/20</b></div>
+      <div class="hud-stat"><span>Coins</span><b id="hud-coins">20</b></div>
+      <button class="hud-button" id="status-button" type="button">Build status</button>
+    </header>
+
+    <div class="objective"><b>Next step</b><span>Explore Scholar Village and read its signs.</span><small id="save-status">Save verified</small></div>
+
+    <section class="stage" aria-label="Scholar Village map">
+      <canvas id="world" width="640" height="448" aria-label="Game world"></canvas>
+      <div class="toast" id="toast" hidden aria-live="polite"></div>
+      <div class="dpad" id="dpad" aria-label="Movement controls">
+        <button type="button" data-direction="up" aria-label="Move up">▲</button>
+        <button type="button" data-direction="left" aria-label="Move left">◀</button>
+        <button type="button" data-direction="down" aria-label="Move down">▼</button>
+        <button type="button" data-direction="right" aria-label="Move right">▶</button>
+      </div>
+      <div class="overlay" id="overlay" hidden></div>
+    </section>
+    <p class="preview-note">This modular preview covers engine and save behavior. Battles and learning activities remain in the stable prototype until their migration phases are complete.</p>
+  </main>
+  <script type="module" src="../src/main.js"></script>
+</body>
+</html>

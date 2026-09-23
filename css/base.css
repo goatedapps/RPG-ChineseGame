@@ -1,0 +1,65 @@
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  padding: 12px;
+  color: var(--paper);
+  background: var(--ink);
+  font-family: var(--font-ui);
+}
+button { min-width: var(--touch-target); min-height: var(--touch-target); font: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.game-shell { width: min(980px, 100%); margin: 0 auto; display: grid; gap: 10px; }
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 15px;
+  padding: 10px 12px;
+  border: 2px solid var(--ink-3);
+  border-radius: 13px;
+  background: var(--ink-2);
+}
+.brand { margin-right: auto; color: var(--gold); font-size: 20px; font-weight: 800; line-height: 1.1; }
+.brand span { color: var(--paper); font-family: var(--font-hanzi); }
+.brand small { display: block; margin-top: 4px; color: var(--silver); font: 11px system-ui; letter-spacing: .08em; text-transform: uppercase; }
+.hud-stat { display: grid; gap: 1px; font: 12px system-ui; }
+.hud-stat span { color: var(--silver); }
+.hud-stat b { color: var(--paper); font-size: 14px; }
+.hud-stat.hp { grid-template-columns: auto 82px auto; align-items: center; column-gap: 6px; }
+.hud-stat.hp span { grid-column: 1 / -1; }
+.hud-stat.hp i { height: 10px; overflow: hidden; border-radius: 8px; background: #101720; }
+.hud-stat.hp em { display: block; height: 100%; background: var(--jade); transition: width .2s; }
+.hud-button, .secondary, .primary {
+  padding: 9px 14px;
+  color: var(--ink);
+  border: 0;
+  border-radius: 10px;
+  background: var(--paper);
+  font-weight: 800;
+  box-shadow: 0 3px 0 var(--line);
+}
+.primary { color: white; background: var(--jade); box-shadow: 0 3px 0 #1e684c; }
+.secondary { background: var(--paper-2); }
+.objective {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  color: var(--ink);
+  border: 2px solid var(--gold);
+  border-radius: 11px;
+  background: var(--paper);
+  font: 14px system-ui;
+}
+.objective b { color: var(--seal); }
+.objective small { margin-left: auto; color: #607080; }
+.objective small.warning { color: var(--seal); font-weight: 800; }
+.preview-note { margin: 0; color: var(--silver); font: 12px/1.5 system-ui; text-align: center; }
+@media (max-width: 640px) {
+  body { padding: 7px; }
+  .brand { width: 100%; }
+  .objective { align-items: flex-start; flex-wrap: wrap; }
+  .objective small { width: 100%; margin-left: 0; }
+}

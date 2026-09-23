@@ -1,0 +1,295 @@
+{
+  "id": "r1-hub",
+  "region": "r1",
+  "name": "Scholar Village",
+  "width": 40,
+  "height": 28,
+  "spawn": {
+    "x": 20,
+    "y": 14,
+    "direction": "down"
+  },
+  "legend": {
+    "g": {
+      "name": "grass",
+      "walkable": true,
+      "color": "#72ad63"
+    },
+    "p": {
+      "name": "path",
+      "walkable": true,
+      "color": "#d5bc86"
+    },
+    "t": {
+      "name": "tree",
+      "walkable": false,
+      "color": "#2f6a3a"
+    },
+    "w": {
+      "name": "water",
+      "walkable": false,
+      "color": "#4f8fb8"
+    },
+    "f": {
+      "name": "flowers",
+      "walkable": true,
+      "color": "#8fbd69"
+    }
+  },
+  "tiles": [
+    "tttttttttttttttttttttttttttttttttttttttt",
+    "tgggggggggggggggggggpggggggggggggggggggt",
+    "tggggtggtgggggggggggpggggggggggtggtggggt",
+    "tggggggggtggggggggggpggggggggggggggtgggt",
+    "tggtggggggggggggggggpggggggggggggggggggt",
+    "tgggtggtggggggggggggpggggggggggggtgggggt",
+    "tgggggggtgggggggggggpgggggggggggggtggtgt",
+    "tgtgggggggggggggggggpggggggggggggggggggt",
+    "tggtggtgggggggfgggggpggggfggggggtggggggt",
+    "tggggggtgggggfpgggggpgggfgpggggggtggtggt",
+    "tgggggggggggfgpgggggpggfggpggggggggggtgt",
+    "tgtggtgggggfggpgggggpgfgggpggggtgggggggt",
+    "tgggggtggtggggpgggggpfggggpgggggtggtgggt",
+    "tgggggggggggggpgggggpgggggpgggggggggtggt",
+    "tppppppppppppppppppppppppppppppppppppppt",
+    "tggggtggtgggggpgggfgpgggggpggfgtggtggggt",
+    "tggggggggtggggpggfggpgggggpgfggggggtgggt",
+    "tggtggggggggggpgfgggpgggggpfgggggggggggt",
+    "tgggwwwwwgggggpfggggpgggggpggggggtgggggt",
+    "tgggwwwwwgggggpgggggpggggfpgggggggtggtgt",
+    "tgtgwwwwwggggfpgggggpgggfgpggggggggggggt",
+    "tggtwwwwwgggggpgggggpgggggpgggggtggggggt",
+    "tgggwwwwwgggggpgggggpgggggpggggggtggtggt",
+    "tgggggggggggggggggggpggggggggggggggggtgt",
+    "tgtggtggggggggggggggpggggggggggtgggggggt",
+    "tgggggtggtggggggggggpgggggggggggtggtgggt",
+    "tgggggggggggggggggggpggggggggggggggggggt",
+    "tttttttttttttttttttttttttttttttttttttttt"
+  ],
+  "objects": [
+    {
+      "id": "school",
+      "type": "building",
+      "name": "School",
+      "rect": {
+        "x": 11,
+        "y": 5,
+        "width": 6,
+        "height": 4
+      },
+      "door": {
+        "x": 14,
+        "y": 9
+      },
+      "solid": true,
+      "color": "#2f6f8f"
+    },
+    {
+      "id": "inn",
+      "type": "building",
+      "name": "Inn",
+      "rect": {
+        "x": 23,
+        "y": 5,
+        "width": 6,
+        "height": 4
+      },
+      "door": {
+        "x": 26,
+        "y": 9
+      },
+      "solid": true,
+      "color": "#8e3b2e"
+    },
+    {
+      "id": "reading-hall",
+      "type": "building",
+      "name": "Reading Hall",
+      "rect": {
+        "x": 11,
+        "y": 18,
+        "width": 6,
+        "height": 4
+      },
+      "door": {
+        "x": 14,
+        "y": 22
+      },
+      "solid": true,
+      "color": "#6b4e8e"
+    },
+    {
+      "id": "shop",
+      "type": "building",
+      "name": "Shop",
+      "rect": {
+        "x": 23,
+        "y": 18,
+        "width": 6,
+        "height": 4
+      },
+      "door": {
+        "x": 26,
+        "y": 22
+      },
+      "solid": true,
+      "color": "#3f7a4a"
+    },
+    {
+      "id": "school-door",
+      "type": "door",
+      "x": 14,
+      "y": 8,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "School",
+        "lines": [
+          "The School interior arrives with the learning-core migration.",
+          "This preview already knows which questions belong to the selected level."
+        ]
+      }
+    },
+    {
+      "id": "inn-door",
+      "type": "door",
+      "x": 26,
+      "y": 8,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Inn",
+        "lines": [
+          "The Inn is closed during the engine preview.",
+          "Your position still saves automatically while you explore."
+        ]
+      }
+    },
+    {
+      "id": "hall-door",
+      "type": "door",
+      "x": 14,
+      "y": 21,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Reading Hall",
+        "lines": [
+          "P2 and P5 will use their own stories inside this same Reading Hall.",
+          "Higher Chinese remains an optional shelf."
+        ]
+      }
+    },
+    {
+      "id": "shop-door",
+      "type": "door",
+      "x": 26,
+      "y": 21,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Shop",
+        "lines": [
+          "The shared shop will sell the same item families at every school level.",
+          "Lesson bait will read its available words from the selected curriculum."
+        ]
+      }
+    },
+    {
+      "id": "grandma-wang",
+      "type": "npc",
+      "name": "Grandma Wang",
+      "x": 19,
+      "y": 12,
+      "solid": true,
+      "color": "#c9804b",
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Grandma Wang",
+        "lines": [
+          "Welcome back to Scholar Village!",
+          "Every school level follows this same adventure. The word spirits change, but our village and our story remain together.",
+          "For this engine preview, explore the square and read the signs."
+        ]
+      }
+    },
+    {
+      "id": "gatekeeper",
+      "type": "npc",
+      "name": "Gatekeeper",
+      "x": 20,
+      "y": 2,
+      "solid": true,
+      "color": "#8e3b2e",
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Gatekeeper",
+        "lines": [
+          "The road beyond the gate is still being rebuilt as modular map data.",
+          "Scholar Village is ready for walking, saving and shared-level testing."
+        ]
+      }
+    },
+    {
+      "id": "forest-sign",
+      "type": "sign",
+      "x": 9,
+      "y": 14,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Village sign",
+        "lines": [
+          "← Camping Forest",
+          "This path will hold the first lesson slot for whichever school level is selected."
+        ]
+      }
+    },
+    {
+      "id": "mist-sign",
+      "type": "sign",
+      "x": 30,
+      "y": 14,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Village sign",
+        "lines": [
+          "Misty Path →",
+          "Maps are shared. The selected curriculum decides which lesson’s spirits appear."
+        ]
+      }
+    },
+    {
+      "id": "garden-sign",
+      "type": "sign",
+      "x": 20,
+      "y": 23,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Village sign",
+        "lines": [
+          "↓ Kitchen Garden",
+          "Region 1 uses three lesson slots: P2 Lessons 1–3 or P5 Lessons 1–3."
+        ]
+      }
+    },
+    {
+      "id": "tree-sign",
+      "type": "sign",
+      "x": 20,
+      "y": 4,
+      "solid": true,
+      "interaction": {
+        "kind": "dialogue",
+        "title": "Village sign",
+        "lines": [
+          "↑ Great Dictionary Tree",
+          "Seven shared regions lead toward the Great Forgetter."
+        ]
+      }
+    }
+  ]
+}
+

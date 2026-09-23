@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import { load as loadYaml } from 'js-yaml';
+import { validateMap } from '../src/world/map.js';
 
 const projectRoot = path.resolve(import.meta.dirname, '..');
 const sourceRoot = path.join(projectRoot, 'content', 'source');
@@ -140,6 +141,14 @@ function validateSharedConfiguration(reports) {
   const regions = JSON.parse(fs.readFileSync(path.join(authoredRoot, 'campaign', 'regions.json'), 'utf8'));
   const regionIds = regions.map(region => region.id);
   if (new Set(regionIds).size !== 7 || regionIds.length !== 7) errors.push('The shared campaign must define seven unique regions.');
+  const mapRoot = path.join(authoredRoot, 'campaign', 'maps');
+  for (const file of fs.readdirSync(mapRoot).filter(file => file.endsWith('.json'))) {
+    const map = JSON.parse(fs.readFileSync(path.join(mapRoot, file), 'utf8'));
+    if (!regionIds.includes(map.region)) errors.push(`${file} refers to missing region ${map.region}.`);
+    for (const error of validateMap(map)) errors.push(`${file}: ${error}`);
+    const objectIds = map.objects.map(object => object.id);
+    if (objectIds.length !== new Set(objectIds).size) errors.push(`${file} contains duplicate object ids.`);
+  }
 
   const registryById = new Map(registry.map(level => [level.id, level]));
   for (const report of reports) {

@@ -30,6 +30,8 @@ button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 .hbtn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
 .objective{display:flex;align-items:center;gap:10px;background:var(--paper);color:var(--text);border:2px solid var(--gold);border-radius:10px;padding:8px 12px;font-size:14px}
 .objective b{color:var(--seal);white-space:nowrap}
+.objective span.swap{animation:objective-swap .35s ease-out}
+@keyframes objective-swap{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 /* Stage */
 .stage{position:relative;width:100%;aspect-ratio:480/352;max-width:100%;border-radius:12px;overflow:hidden;border:3px solid var(--ink3);background:#111}
 canvas{display:block;width:100%;height:100%;image-rendering:pixelated}

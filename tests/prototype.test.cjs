@@ -170,6 +170,11 @@ test('approved progression and reward rules are wired into the prototype', () =>
   assert.doesNotMatch(gameSource, /map\[16\]\[28\]='2'|map\[22\]\[20\]='3'/);
   assert.match(gameSource, /S\.baits\.splice\(baitIndex,1\)/);
   assert.match(gameSource, /data-bait=/);
+  assert.match(gameSource, /function objectiveTasks\(\)/);
+  assert.match(gameSource, /Explore \$\{z\.n\} and collect Lesson \$\{z\.l\} spirits/);
+  assert.match(gameSource, /Take a rewarded quiz or tingxie session at School/);
+  assert.match(gameSource, /Hear an unread story from the Storyteller/);
+  assert.match(gameSource, /setInterval\(\(\)=>\{if\(LEVEL\)updateObjective\(true\)\},60000\)/);
 });
 
 test('primary controls meet the 44 pixel touch target baseline', () => {

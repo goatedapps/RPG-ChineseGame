@@ -368,15 +368,28 @@ function showLevelUp(levels,onContinue=closeOv){
     <div class="row"><button class="btn jade" id="levelContinue">Continue</button></div></div>`);
   const b=$('#levelContinue');b.onclick=()=>{b.disabled=true;onContinue()};b.focus();
 }
-function objectiveText(){
-  if(!S.seenIntro)return 'Meet Grandma Wang in Scholar Village.';
-  if(!S.reading.scroll)return 'Read a passage in the Reading Hall to begin earning the Cave Lantern.';
-  const p=activePassage();
-  if(p&&Object.keys(S.reading.results).length<p.qs.length)return `Answer the villagers’ passage questions: ${Object.keys(S.reading.results).length}/${p.qs.length}.`;
-  if(!hasLantern())return 'Finish the current passage to earn the Cave Lantern.';
-  if(!gateOpen())return `Raise ${gateSilverRequired()-silverCount()} more spirits to Silver for the Muddle Cave gate.`;
-  if(!S.boss)return 'The Muddle Cave gate is open. Challenge the Muddle King!';
-  return 'Region 1 is clear. Keep turning spirits Gold while the next region is built.';
+function objectiveTasks(){
+  if(!S.seenIntro)return[{id:'intro',text:'Meet Grandma Wang in Scholar Village.'}];
+  const tasks=[],p=activePassage();
+  if(!S.reading.scroll)tasks.push({id:'reading',text:'Read a passage in the Reading Hall to begin earning the Cave Lantern.'});
+  else if(p&&Object.keys(S.reading.results).length<p.qs.length)tasks.push({id:'reading',text:`Answer the villagers’ passage questions: ${Object.keys(S.reading.results).length}/${p.qs.length}.`});
+  else if(!hasLantern())tasks.push({id:'reading',text:'Finish the current passage to earn the Cave Lantern.'});
+  Object.entries(ZONES).forEach(([zone,z])=>{const have=lessonWords(z.l).filter(w=>S.words[w.w]?.c).length,total=lessonWords(z.l).length;if(have<total)tasks.push({id:'collect-'+zone,text:`Explore ${z.n} and collect Lesson ${z.l} spirits (${have}/${total}).`})});
+  const schoolRuns=S.school.day===today()?S.school.runs:0;
+  if(schoolRuns<SCHOOL_PAID_RUNS)tasks.push({id:'school',text:`Take a rewarded quiz or tingxie session at School (${SCHOOL_PAID_RUNS-schoolRuns} left today).`});
+  const unread=DATA.stories.length-S.stories.length;if(unread>0)tasks.push({id:'stories',text:`Hear an unread story from the Storyteller (${unread} left).`});
+  if(S.hp<maxHp()/2)tasks.push({id:'rest',text:'Your HP is low. Rest and review your weakest spirits at the Inn.'});
+  const silverNeeded=Math.max(0,gateSilverRequired()-silverCount());
+  if(!gateOpen()&&silverNeeded)tasks.push({id:'cave-gate',text:`Raise ${silverNeeded} more spirits to Silver for the Muddle Cave gate.`});
+  else if(!S.boss)tasks.push({id:'boss',text:'The Muddle Cave gate is open. Challenge the Muddle King!'});
+  if(!tasks.length)tasks.push({id:'complete',text:'Region 1 is clear. Keep turning spirits Gold while the next region is built.'});
+  return tasks;
+}
+let currentObjectiveId=null;
+function updateObjective(advance=false){
+  const tasks=objectiveTasks();let index=tasks.findIndex(task=>task.id===currentObjectiveId);if(index<0)index=0;if(advance&&tasks.length>1)index=(index+1)%tasks.length;
+  const task=tasks[index],el=$('#objectiveText');currentObjectiveId=task.id;el.textContent=task.text;
+  if(advance){el.classList.remove('swap');void el.offsetWidth;el.classList.add('swap')}
 }
 function refreshHud(){
   $('#hLv').textContent=S.lvl;$('#hXp').style.width=(S.xp/(S.lvl*30)*100)+'%';
@@ -384,9 +397,10 @@ function refreshHud(){
   $('#hHp').style.width=(S.hp/maxHp()*100)+'%';$('#hHpT').textContent=S.hp+'/'+maxHp();
   $('#hCoin').textContent=S.coins;$('#hSp').textContent=collectedCount();
   const e=energyLeft();$('#hEn').textContent=e===Infinity?'∞':e;
-  $('#objectiveText').textContent=objectiveText();
+  updateObjective();
   const audioButton=$('#bAudio');if(audioButton){const on=GameAudio.isEnabled();audioButton.textContent=on?'Sound on':'Sound off';audioButton.setAttribute('aria-pressed',String(on))}
 }
+setInterval(()=>{if(LEVEL)updateObjective(true)},60000);
 
 /* ================= interactions ================= */
 function bump(c,x,y){

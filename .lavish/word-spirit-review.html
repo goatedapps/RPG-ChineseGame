@@ -1,0 +1,1322 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Word Spirit Quest — annotated plan</title><style>
+:root{--ink:#1B2430;--paper:#F4EFE2;--paper2:#E9E1CC;--line:#CBBF9F;--jade:#2F8A66;--seal:#C63F2B;--gold:#D9A62E}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.65 system-ui,'Segoe UI',sans-serif}main{max-width:1180px;margin:auto;padding:30px 24px 70px}a{color:inherit}h1,h2,h3{font-family:'Trebuchet MS',system-ui,sans-serif;line-height:1.15}h1{font-size:clamp(38px,6vw,72px);max-width:850px;margin:20px 0}h2{font-size:32px;margin:0 0 20px}h3{font-size:22px;margin:10px 0}p{margin:10px 0}small,.meta{font-size:13px}.muted{color:#cad0d6}.kicker{color:var(--gold);text-transform:uppercase;letter-spacing:.13em;font-weight:700;font-size:13px}.lede{font-size:21px;max-width:850px}.nav{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.nav a,button{padding:10px 15px;border:1px solid #657283;border-radius:8px;background:#273445;color:var(--paper);font:inherit;min-height:44px;cursor:pointer;text-decoration:none}button[aria-pressed=true]{background:var(--gold);color:var(--ink);border-color:var(--gold)}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}section{margin-top:58px;scroll-margin-top:20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.grid>*{min-width:0}.paper{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:24px}.dark{background:#273445;border:1px solid #526072;border-radius:14px;padding:24px}.note{border-left:5px solid var(--jade)}.note.critical{border-left-color:var(--seal)}.note.high{border-left-color:var(--gold)}.badge{font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;display:inline-block;border:1px solid currentColor;padding:3px 8px;border-radius:5px}.critical .badge{color:#a22e20}.high .badge{color:#755211}.medium .badge{color:#21634a}.ref{font-size:12px;color:#586371;margin:12px 0}.label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#566374;margin-top:18px}.accept{border-top:1px solid var(--line);padding-top:12px;font-size:14px}.strip{display:flex;gap:24px;flex-wrap:wrap;margin:26px 0}.strip strong{font-size:30px;color:var(--gold);display:block}.strip span{font-size:13px}.filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.flow{width:100%;height:auto}.regions{display:flex;flex-wrap:wrap;gap:8px}.regions span{background:#273445;padding:7px 10px;border-radius:6px;font-size:13px}.step{display:grid;grid-template-columns:90px minmax(0,1fr) minmax(0,1fr);gap:24px;border-top:1px solid #596676;padding:24px 0}.step b{color:var(--gold)}.step h3{margin-top:0}.step p{margin-top:0}.conflict{border-top:1px solid var(--line);padding:14px 0}.conflict b{display:block}.source details{background:var(--paper);color:var(--ink);border-radius:8px;margin:8px 0;padding:14px 18px}summary{cursor:pointer;font-weight:700;min-height:32px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.7 ui-monospace,Consolas,monospace}p,h1,h2,h3,span{overflow-wrap:anywhere}.mock{border:3px solid var(--ink);border-radius:12px;background:var(--paper2);padding:18px;margin-top:18px}.mock .btn{background:var(--jade);color:white;padding:10px 14px;border-radius:8px;display:inline-block;font-weight:700}.mock small{display:block}.callout{border-left:4px solid var(--gold);padding:10px 20px;margin:25px 0}.hidden{display:none!important}footer{margin-top:40px;border-top:1px solid #596676;padding-top:20px;font-size:13px}@media(max-width:740px){main{padding:20px 16px}.grid{grid-template-columns:minmax(0,1fr)}.step{grid-template-columns:minmax(0,1fr);gap:10px}.paper,.dark{padding:19px}h2{font-size:27px}.lede{font-size:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{body{background:white;color:#111}.nav,.filter{display:none}.grid{display:block}.paper,.dark{color:#111;break-inside:avoid;margin-bottom:18px}.muted{color:#333}}
+</style></head><body><main>
+<header><div class="kicker">字灵 / Product review / 23 September 2026</div><h1>A world worth restoring.<br>A learning loop worth proving.</h1><p class="lede">Word Spirit Quest has a compelling foundation: Chinese knowledge changes the world around the child. My recommendation is to prove one complete Region 1 learning journey before multiplying its systems across seven regions.</p><div class="strip"><div><strong>5</strong><span>vocabulary skills</span></div><div><strong>7</strong><span>planned P5 regions</span></div><div><strong>14</strong><span>review decisions &amp; additions</span></div><div><strong>30–60 min</strong><span>intended daily session</span></div></div><nav class="nav"><a href="#current">Current plan</a><a href="#comments">My comments</a><a href="#roadmap">Build sequence</a><a href="#conflicts">Resolve contradictions</a><a href="#source">Full updated plan</a></nav><p class="meta muted">Evidence: complete gameplan.md and targeted inspection of prototype/index.html. This is a specification and source-code review, not a completed browser, tablet or child playtest. The browser blocked the local prototype URL. Your 16 annotations have been incorporated into gameplan.md and this review. Prototype game logic is unchanged. The original plan is preserved in .lavish/gameplan-before-feedback.md.</p></header>
+<section id="current"><div class="kicker">01 / What is planned today</div><h2>Explore → learn → restore → return</h2><div class="paper"><svg class="flow" viewBox="0 0 960 155" role="img" aria-labelledby="flow-title"><title id="flow-title">Current learning progression from encounter to a new region</title><defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#1B2430"/></marker></defs><g id="loop-0"><title>Explore</title><rect x="0" y="22" width="178" height="75" rx="12" fill="#E9E1CC" stroke="#CBBF9F"/><text x="89" y="65" text-anchor="middle" fill="#1B2430" font-family="system-ui" font-size="16" font-weight="700">Explore</text><path d="M178 60 H191" stroke="#1B2430" marker-end="url(#arrow)"/></g><g id="loop-1"><title>Answer / write</title><rect x="194" y="22" width="178" height="75" rx="12" fill="#E9E1CC" stroke="#CBBF9F"/><text x="283" y="65" text-anchor="middle" fill="#1B2430" font-family="system-ui" font-size="16" font-weight="700">Answer / write</text><path d="M372 60 H385" stroke="#1B2430" marker-end="url(#arrow)"/></g><g id="loop-2"><title>Collect & revisit</title><rect x="388" y="22" width="178" height="75" rx="12" fill="#E9E1CC" stroke="#CBBF9F"/><text x="477" y="65" text-anchor="middle" fill="#1B2430" font-family="system-ui" font-size="16" font-weight="700">Collect & revisit</text><path d="M566 60 H579" stroke="#1B2430" marker-end="url(#arrow)"/></g><g id="loop-3"><title>Restore & boss</title><rect x="582" y="22" width="178" height="75" rx="12" fill="#E9E1CC" stroke="#CBBF9F"/><text x="671" y="65" text-anchor="middle" fill="#1B2430" font-family="system-ui" font-size="16" font-weight="700">Restore & boss</text><path d="M760 60 H773" stroke="#1B2430" marker-end="url(#arrow)"/></g><g id="loop-4"><title>Next region</title><rect x="776" y="22" width="178" height="75" rx="12" fill="#D9A62E" stroke="#CBBF9F"/><text x="865" y="65" text-anchor="middle" fill="#1B2430" font-family="system-ui" font-size="16" font-weight="700">Next region</text></g><text x="0" y="133" fill="#586371" font-family="system-ui" font-size="15">R1: 22% Silver + passage key • Next region: 70% Gold • Counts scale with region vocabulary</text></svg><p>English navigation and story support Chinese meaning, pinyin, character recognition, contextual usage and handwriting. Every word is collectible; mastery develops across days. A parent controls access and reviews progress. Each school level has separate content and saves.</p></div><div class="grid" style="margin-top:18px"><article class="paper"><span class="badge">Keep</span><h3>The world should visibly improve</h3><p>Spirit Sets repairing a campfire, shop or bridge are the most distinctive part of the plan. They translate an abstract learning achievement into a consequence the child can care about.</p><p>Keep the warm humour, reformed bosses, loss-free fainting, on-demand explanations and always-available help. Keep Hanzi Writer and the separation of learning logic from authored content.</p></article><article class="paper"><span class="badge">Prototype scope</span><h3>A substantial reference, not full parity</h3><p>The source contains Region 1 exploration, battles, writing, a Spirit Book, school, stories, passage quests, Exam Day, parent settings and encoded per-level saves.</p><p>Crafting, partner spirits, restoration sets, the expanded campaign and stronger parent controls are future-plan features. Do not interpret their absence as regressions. Some implemented learning rules also differ from the spec.</p></article></div><h3 style="margin-top:26px">The planned P5 journey</h3><div class="regions"><span>1. Scholar Village · L1–3</span><span>2. Harvest Crossing · L4–6</span><span>3. Tidewater Bay · L7–8</span><span>4. Lantern Theatre · L9–10</span><span>5. Festival City · L11–12</span><span>6. Ancient Grove · L13–15</span><span>7. Dictionary Tree · L16–17</span></div></section>
+<section id="comments"><div class="kicker">02 / Prioritised comments</div><h2>Protect learning quality before adding breadth</h2><p class="muted">Your decisions are shown on every card: Accepted, Updated, Keep current or Added. Priority labels describe implementation priority, not a request to revisit settled choices. Unannotated roadmap suggestions remain proposals.</p><div class="filter" aria-label="Filter review comments"><button data-filter="all" aria-pressed="true">All</button><button data-filter="critical" aria-pressed="false">Critical</button><button data-filter="high" aria-pressed="false">High</button><button data-filter="medium" aria-pressed="false">Medium</button></div><div class="grid" id="notes"><article id="comment-01" class="paper note critical" data-priority="critical"><span class="badge">01 / Keep current</span><h3>Keep the four-miss writing tolerance</h3><p class="ref">§3.4 · prototype: writeWord(), lines 796–801</p><div class="label">Original review / source evidence</div><p>Memory mode shows a stroke hint after three misses, but helped becomes true only at four misses or when Show me how is used. A child can see a hint and still receive an independent-recall result.</p><div class="label">Decision after your feedback</div><p>Your decision: retain the current threshold. Automatic hints below four misses do not set helped; imperfect tracing may not reflect the student’s intent. Autofill at four misses, Show me how and I don’t know still count as help. Keep the existing pinyin, meaning and audio clues.</p><p class="accept">Updated acceptance: three misses followed by a completed stroke may still earn a From memory tick. Four-miss autofill or explicit help cannot. The stricter hint policy and audio-only change are withdrawn.</p></article><article id="comment-02" class="paper note critical" data-priority="critical"><span class="badge">02 / Accepted</span><h3>Award the final fragment before entering the Tree</h3><p class="ref">§7.3 · §13.2 · §13.4</p><div class="label">Original review / source evidence</div><p>The Complete Brush opens the Dictionary Tree. Region 7 awards that brush, but its final boss is the Great Forgetter inside the Tree. The premise also describes seven lieutenants before the Forgetter, while the region list contains six plus the Forgetter.</p><div class="label">Decision after your feedback</div><p>Accepted and added to the plan: six lieutenants award fragments 1–6. A Region 7 treehouse restoration quest awards fragment 7 before the Tree opens; then the child faces the Great Forgetter. No seventh lieutenant is needed.</p><p class="accept">Acceptance: the restoration quest has no prerequisite inside the Tree; every required item and boss is reachable without an override.</p></article><article id="comment-03" class="paper note high" data-priority="high"><span class="badge">03 / Updated</span><h3>Use percentages for every level’s progression</h3><p class="ref">§3.2–3.3 · §10</p><div class="label">Original review / source evidence</div><p>Your decision: replace fixed Silver and Gold counts with percentages so different vocabulary totals work correctly. The denominator is each region’s distinct vocabulary in the selected level; required counts are rounded up.</p><div class="label">Decision after your feedback</div><p>The plan now stores silverPct and goldPct. Region 1 uses 22% Silver-or-better, preserving 12 of 54 in P5; the default for later regions is 35%. The existing Gold threshold remains 70%, giving 38 of 54 in this example. These are derived counts, never cross-level constants. Show both percentages and counts.</p><p class="accept">Acceptance: test multiple region sizes, duplicate words and ceiling rounding. The 54-word example still requires 380 qualifying successes for 38 Gold; it is an illustration, not a fixed requirement or duration estimate.</p></article><article id="comment-04" class="paper note high" data-priority="high"><span class="badge">04 / Updated</span><h3>Random same-level passages; Higher Chinese is optional</h3><p class="ref">§11.4 · §13.4</p><div class="label">Original review / source evidence</div><p>The required Reading Hall chain draws any passage from any subject with no difficulty match. Later, the plan describes Higher Chinese as optional post-game challenges. A new learner could receive the hardest material before the first boss.</p><div class="label">Decision after your feedback</div><p>Your clarification: same-level passages are roughly equivalent in difficulty. Keep random selection from the level’s standard-Chinese pool without regional matching or curated starter passages. Higher Chinese becomes a separate opt-in challenge and never gates required progress.</p><p class="accept">Acceptance: required Reading Hall passages come from the chosen level’s standard pool; Higher Chinese appears only when opted into. Completion with help remains sufficient.</p></article><article id="comment-05" class="paper note high" data-priority="high"><span class="badge">05 / Keep current</span><h3>Keep the existing self-marking and rewards</h3><p class="ref">§11.4 · §12 · prototype: passage answer handler, line 632</p><div class="label">Original review / source evidence</div><p>The Reading percentage combines objectively correct answers with the child selecting Got it. Got it also pays more than Partly, creating a reason to overstate confidence.</p><div class="label">Decision after your feedback</div><p>Your decision: retain Got it / Partly / Not yet, the current 10 / 6 / 3 coin rewards and the existing Reading summary. Keep parent access to written answers and self-ratings. The equal-reward and separate-metric proposal is withdrawn.</p><p class="accept">Interpretation remains explicit: Reading includes self-rated answers; it is not an independently marked assessment. No change to the current scoring policy.</p></article><article id="comment-06" class="paper note high" data-priority="high"><span class="badge">06 / Accepted</span><h3>Finish the review scheduler before importing it</h3><p class="ref">§3.2 · prototype: isResting(), record(), bWin()</p><div class="label">Original review / source evidence</div><p>The prototype rests Gold words for a fixed REVIEW_DAYS interval. bWin resets the date, but record() only increments misses on failure. The specified doubling interval and failed-skill demotion are absent.</p><div class="label">Decision after your feedback</div><p>Accepted and specified: implement the 3 → 6 → 12 → 24 → 30 day schedule and failed-skill tick loss. Failed review resets the interval to 3; re-mastery begins another three-day rest. Successful completed reviews update only their own word; running, fainting or item-assisted answers cannot extend it. Preserve completed collection rewards.</p><p class="accept">Acceptance: simulate interval growth, wrong defensive reviews, assistance under the retained four-miss rule and re-mastery without duplicated rewards.</p></article><article id="comment-07" class="paper note high" data-priority="high"><span class="badge">07 / Keep current</span><h3>Keep current reward rules; use 30–60 minute sessions</h3><p class="ref">§1 · §6 · §9.4 · prototype: schoolQuiz(), schoolDictation()</p><div class="label">Original review / source evidence</div><p>School coins stop after three sessions, but the prototype continues awarding XP on every completed quiz or dictation. The battle cap therefore does not stop reward grinding. Reading chains also remain a repeatable reward route.</p><div class="label">Decision after your feedback</div><p>Your decision: keep the parent battle cap, three paid school sessions, continuing school XP and current passage rewards. Do not add a shared daily reward budget. The intended session is now 30 minutes to one hour; it is not a required minimum or countdown.</p><p class="accept">The proposed reward-budget restriction is withdrawn. Active-time reporting remains a separate observation for later review; no new tracking policy was approved in this annotation.</p></article><article id="comment-08" class="paper note high" data-priority="high"><span class="badge">08 / Accepted</span><h3>Make save recovery a first-class feature</h3><p class="ref">§18 · prototype: loadSave(), save(), freshState()</p><div class="label">Original review / source evidence</div><p>The prototype catches malformed save errors and starts fresh; its periodic autosave can then replace the broken save. Save-write errors are silently ignored. Its freshState also has no schema version. The plan alternates between JSON import/export and an encoded string.</p><div class="label">Decision after your feedback</div><p>Accepted and added: preserve invalid payloads, suspend autosave pending recovery, retain a last-known-good backup and show storage failures. Exports use one JSON envelope containing format, schema version, level, content version and the encoded save with its checksum. Validate before replacing live state.</p><p class="accept">Acceptance: corrupt, truncated, wrong-level and unsupported-version imports leave live progress intact; legacy saves migrate explicitly.</p></article><article id="comment-09" class="paper note medium" data-priority="medium"><span class="badge">09 / Accepted</span><h3>Give the child one obvious next action</h3><p class="ref">§8–11 · prototype: openDex(), openCard()</p><div class="label">Original review / source evidence</div><p>The plan combines five skills, three tiers, writing stages, two gates, eight hub services and several daily loops. The Spirit Book explains much of this in one long paragraph.</p><div class="label">Decision after your feedback</div><p>Accepted and added to gameplan.md: Reveal systems gradually. Start with one guided encounter, one card and one villager request. Keep a compact objective such as “Help Mr Lin: practise 距离” with destination and progress. Explain half-stars when the first one is earned.</p><p class="accept">Acceptance: a first-time child can identify the next action and explain why a half-star cannot finish today without parent explanation. This needs a playtest.</p></article><article id="comment-10" class="paper note medium" data-priority="medium"><span class="badge">10 / Accepted</span><h3>Avoid rewarding the easiest question over the needed skill</h3><p class="ref">§3.3 · §5.2 · §7.2</p><div class="label">Original review / source evidence</div><p>Word selection is weighted, but attack choice is free. Writing deals more damage, and gear can further shorten encounters. Repeatedly choosing one comfortable skill can collect words while leaving other skills untouched.</p><div class="label">Decision after your feedback</div><p>Accepted and added to gameplan.md: Recommend one useful skill on each encounter using missing ticks and due reviews. Preserve choice, but offer a small non-mastery incentive for completing a varied learning objective. Never create a star merely for using the recommended move.</p><p class="accept">Acceptance: an easy-skill-only strategy does not appear to be the fastest route to every learning goal; simulate skill coverage before balancing damage.</p></article><article id="comment-11" class="paper note medium" data-priority="medium"><span class="badge">11 / Accepted</span><h3>Review distractors for language validity</h3><p class="ref">§3.5 · prototype: makeQ(), idiomQ()</p><div class="label">Original review / source evidence</div><p>Same-length words are not necessarily plausible alternatives. Inserting an idiom into another sentence can accidentally produce a valid sentence or a transparently absurd one. Four unique strings do not guarantee a single correct answer.</p><div class="label">Decision after your feedback</div><p>Accepted and added to gameplan.md: Use reviewed options for idioms and required gates; tag vocabulary by part of speech and semantic family for generated distractors. Add a content-review status and fixtures for ambiguous examples.</p><p class="accept">Acceptance: a Chinese-proficient reviewer agrees each mandatory question has one defensible answer; validators still check option count and uniqueness.</p></article><article id="comment-12" class="paper note medium" data-priority="medium"><span class="badge">12 / Accepted</span><h3>Bring touch, audio and recovery checks into Region 1</h3><p class="ref">§3.6 · §16 · §20 · prototype CSS and writeWord()</p><div class="label">Original review / source evidence</div><p>The source sets close buttons to 34 × 34 px despite a 44 px target in the plan. Writing creates a new Hanzi Writer for each character, matching the listener-accumulation pitfall already documented. Offline speech depends on device voices, and fonts currently use Google Fonts.</p><div class="label">Decision after your feedback</div><p>Accepted and added to gameplan.md: Increase small targets, reuse/clean up writing screens, provide a clear audio-unavailable state and test the bundled game offline early. Test a real iPad keyboard, stylus, scrolling, focus and repeated writing transitions before expanding the campaign.</p><p class="accept">Acceptance: complete a passage and a multi-character write on the target tablet; no hidden controls, leaked callbacks or stuck Next actions. Visual and device validation remain outstanding.</p></article><article id="comment-13" class="paper note high" data-priority="high"><span class="badge">13 / Added</span><h3>Make XP visible and level-ups celebratory</h3><p class="ref">Your annotation · §6.1 · prototype: gainXp(), refreshHud(), bWin()</p><div class="label">Original review / source evidence</div><p>The prototype has an XP bar and increments levels, but the HUD updates bar width and the win screen appends a small Level up message. Your experience is that XP and level changes are not obvious.</p><div class="label">Decision after your feedback</div><p>Show a numeric label such as Level 3 · XP 24 / 90, visible XP gain, and a dedicated Level up! panel showing the new level, HP increase and restored HP. Use a brief animation, optional sound and a Continue button. All XP sources share the flow; one reward crossing multiple levels gets one combined celebration.</p><p class="accept">Acceptance: no missed or duplicated celebration across battle, school, reading and quests; respects reduced motion and sound settings. This is specified, not yet implemented in the prototype.</p></article><article id="comment-14" class="paper note medium" data-priority="medium"><span class="badge">14 / Added</span><h3>Add Instant Noodles between the existing heals</h3><p class="ref">Your annotation · §7.1</p><div class="label">Original review / source evidence</div><p>Rice Ball restores 10 HP for 25 coins; Mooncake restores all HP for 80 coins.</p><div class="label">Decision after your feedback</div><p>Added Instant Noodles 方便面: restore 20 HP, capped at the player’s maximum, for 50 coins. These initial balance values place it between Rice Ball and Mooncake in price and healing tier. At low max HP, it may already give a full heal.</p><p class="accept">Acceptance: the item is usable wherever battle healing consumables are allowed, consumes one item and never raises HP above max. Balance values can be adjusted in authored data.</p></article></div></section>
+<section><div class="kicker">03 / Suggested experience</div><h2>Make progress easier to understand</h2><div class="grid"><article class="paper"><h3>Current direction</h3><p>Many systems compete for attention: HP, XP, coins, spirits, battle cap, five skills, tiers, writing stages, quests and gates.</p><p>The prototype's Spirit Book presents collection counts, gate requirements, dot meanings, day spacing and Gold review rules in one introductory paragraph.</p><p><b>Risk:</b> the child understands how to answer but cannot tell which activity helps them move forward.</p></article><article class="paper"><span class="badge">Accepted direction</span><h3>One useful objective at a time</h3><div class="mock"><small>MR LIN'S REQUEST · EXAMPLE STATE</small><h3>Help Mr Lin find his glasses</h3><p>Practise 距离 — “distance” — from memory.</p><p>Writing: one half-star earned today.<br>Return another day to finish this star.</p><span class="btn">Practise with Mr Lin →</span><small style="margin-top:12px">Extra practice is welcome. Today's tick is already saved.</small></div><p>The message explains the next action, its purpose and the daily limit together. You approved this direction. It is now in the plan; this remains a concept panel, not an implemented app change.</p></article></div></section>
+<section id="roadmap"><div class="kicker">04 / Current build plan, annotated</div><h2>Keep the architecture. Move evidence earlier.</h2><article class="step"><b>P0–P2</b><div><h3>Foundation & learning</h3><p>Build content pipeline, shared engine, isolated saves and the five skills.</p></div><div><span class="badge">Review comment</span><p>Add recovery, evidence flags and a simulated multi-day scheduler here.</p></div></article><article class="step"><b>P3</b><div><h3>Region 1 prototype parity</h3><p>Rebuild battle, school, stories, Reading Hall and basic parent views.</p></div><div><span class="badge">Review comment</span><p>Use this as the first child-and-parent pilot, not just a feature checklist.</p></div></article><article class="step"><b>P4–P6</b><div><h3>Items, collection & daily loops</h3><p>Gear, crafting, partners, restoration, milestones, quests and scrolls.</p></div><div><span class="badge">Review comment</span><p>Prioritise one visible village restoration. Add other loops only after the core session is understandable.</p></div></article><article class="step"><b>P7–P8</b><div><h3>Complete Region 1</h3><p>Story, boss, gates, parent controls, goals and portable saves.</p></div><div><span class="badge">Review comment</span><p>Verify percentage gates and the retained writing tolerance; implement the approved XP celebration before region expansion.</p></div></article><article class="step"><b>P9–P15</b><div><h3>Extend the campaign</h3><p>Six more regions, followed by practical and dialogue chains.</p></div><div><span class="badge">Review comment</span><p>Require one campaign dependency validator and an authored-content checklist for each region.</p></div></article><article class="step"><b>P16</b><div><h3>Polish & offline bundle</h3><p>Final performance, accessibility, audio and content proofreading.</p></div><div><span class="badge">Review comment</span><p>Move essential tablet, save and accessibility checks earlier; reserve this phase for final refinements.</p></div></article><div class="callout"><b>Suggested pilot: several short sessions across at least two days.</b><p>Observe first-use navigation, first independent write, first Silver, first restoration and a passage chain. Record active minutes, help used, missing-skill coverage and where a parent intervenes. Check recall again later. These are proposed validation tasks, not results already obtained.</p></div></section>
+<section id="conflicts"><div class="kicker">05 / Spec cleanup</div><h2>Resolve these before they become incompatible code</h2><div class="paper"><div class="conflict"><b>Partner eligibility</b>§3.2 says Gold enables partners; §8.2 allows Silver and Gold. Use one rule.</div><div class="conflict"><b>Paid writing retry</b>The Ink Pot can earn a tick after a failed attempt (§7.1), while hinted answers cannot (§3.2). Define whether a revealed answer disqualifies the retry.</div><div class="conflict"><b>Travel unlock</b>§4 unlocks the Travel Map after Region 2; §8.4 gives it at 80 spirits. Decide whether these are alternatives or both required.</div><div class="conflict"><b>Campaign schema</b>§17.2 shows villagers as a top-level array, then passageVillagers as a separate object in the same file. Specify one object containing both arrays.</div><div class="conflict"><b>Boss phase completion</b>HP can reach zero before all required phases finish, especially with damage bonuses. Explicitly choose whether victory requires HP depletion, required phase completion, or both.</div><div class="conflict"><b>Feature flags</b>A level can lack some features, but the validator requires seven passage villagers for every region. Make validation conditional on enabled content and the actual chain size.</div></div></section>
+<section id="source" class="source"><div class="kicker">06 / Updated specification</div><h2>The complete current game plan</h2><p class="muted">The updated gameplan.md, including your annotations, grouped by section. Expand any section to continue reviewing. Markdown syntax is preserved; the pre-feedback original is saved separately.</p><details id="source-0"><summary>Word Spirit Quest (字灵) — Game Plan</summary><pre>
+A Pokémon-style exploration RPG that teaches primary-school Chinese vocabulary and reading: meaning, pinyin, characters (hanzi), usage, writing and comprehension. It supports several school **levels** (P3, P4, P5, P6 …), each a separate game built from its own content folder. Primary 5 is the first level and the one specified in detail here. This document is the full specification for building the game. It is written so that a coding agent (Claude Code, Codex, etc.) can build it from scratch in a fresh repository without having seen the design conversation.
+
+**Status:** a working single-file prototype of Region 1 exists at `prototype/index.html`. It already includes the level picker, encoded saves, the Reading Hall passage quests and the weekly Exam Day described below. Treat it as a reference for look and feel and for the already-tested writing and battle logic. The goal of this plan is a properly structured rebuild of the full game.
+
+---</pre></details><details id="source-1"><summary>0. How to use this document</summary><pre>
+- Sections 1–3 explain *what* the game is and the rules that must not be broken.
+- Sections 4–12 specify every game system (battle, mastery, items, story, and so on).
+- Section 13 is the storyline and region-by-region content plan.
+- Sections 14–19 cover the technical architecture: file layout, data schemas, save format, build and tests.
+- Section 20 is the build order, broken into phases, each with acceptance criteria.
+- Section 21 is a list of known pitfalls found while building the prototype.
+- Appendix A has a ready-to-paste kickoff prompt for a coding agent.
+
+When this document and the prototype disagree, **this document wins**.
+
+---</pre></details><details id="source-2"><summary>1. Vision and audience</summary><pre>
+- **Player:** a primary-school student (for P5, about 11 years old) in Singapore whose first language is English. They are learning Chinese as a school subject, with weekly 听写 (tingxie, spelling tests) and exam papers.
+- **Parent:** sets limits, checks progress and sets real-world goals.
+- **Core promise:** &quot;Every monster is a word. Beat it by *knowing* the word.&quot; Exploring, collecting and the story are the wrapper; every meaningful action in the game is a learning action.
+- **Session shape:** 30–60 minutes a day, most days of the week.
+  This is an intended session range, not a required minimum or a countdown.
+  Preserve the parent-controlled battle cap, the first-three-school-session coin limit, continuing school XP and current Reading Hall rewards.
+  Do not add a shared progression-reward budget.
+
+### Design pillars
+
+1. **Learning is the verb.** Attacks, defence, spells, quests and unlocks are all powered by answering or writing Chinese. Nothing that counts as learning can be bought with coins.
+2. **English world, Chinese learning.** All UI, menus, dialogue, story and instructions are in **English**. Chinese appears only where it is the thing being learned: vocabulary, example sentences, exam questions, story pages and idioms (shown with an English gloss).
+3. **Spaced, not crammed.** Stars need correct answers on *different days*. Daily battle limits and resting Gold words stop grinding.
+4. **Always fair, never shaming.** Wrong answers teach (show the answer, example and audio). Fainting costs nothing. Streaks have automatic forgiveness. No timers.
+5. **Every item and villager has a job.** No decorative-only systems. Cosmetics are rewards for achievement, not the main use of coins.
+6. **Built on real school content, one level at a time.** Each level (P5, P6 …) is a content pack built from that level's YAML folder. The engine is shared; a new level means a new content folder plus that level's campaign files (section 2.5).
+
+### Healthy-engagement rules (hard requirements)
+
+- No random paid or random &quot;loot box&quot; rewards. Chests have fixed, visible contents or a small fixed pool shown in advance.
+- No countdown timers on questions.
+- Streaks: celebrate at milestones only; one automatic free miss per week; never use guilt messages.
+- Rewards are phrased as feedback (&quot;You wrote it all by yourself!&quot;), not pressure (&quot;Don't lose your streak!&quot;).
+- Daily play cap is set by the parent (default 15 creature battles). After the cap, gentle, non-battle activities remain (stories, Spirit Book, writing practice).
+
+---</pre></details><details id="source-3"><summary>2. Content source (existing data)</summary><pre>
+Each level's content lives in its own folder, for example `p5/`, copied into `content/source/&lt;level&gt;/` in the new repo. Every level uses the same YAML format, described here using P5 as the example.
+
+```
+p5/
+  meta.yaml                  # label: Primary 5, lessonCount: 17
+  tingxie/index.yaml         # list of {id, title}
+  tingxie/1.yaml … 17.yaml   # per-lesson vocabulary
+  stories/index.yaml
+  stories/1.md … 17.md       # short 6-page stories using that lesson's words
+  questions/index.yaml       # index of question groups
+  questions/vocab.yaml       # choose the right character/word for a blank
+  questions/pinyin.yaml      # choose pinyin of an underlined word
+  questions/usage.yaml       # choose the sentence that uses a word correctly
+  questions/phrase.yaml      # choose meaning closest to an underlined phrase
+  questions/conjunction.yaml # choose a joining-word pair (不但……而且)
+  questions/sentence.yaml
+  questions/cloze.yaml       # passage with blanks (MCQ or word bank)
+  questions/errorcorrect.yaml# passage with wrong characters to fix
+  questions/dialogue.yaml
+  questions/comprehension.yaml
+  questions/practical.yaml   # read a notice/poster and answer
+```
+
+### 2.1 Tingxie lesson file (`tingxie/N.yaml`)
+
+```yaml
+title: 第一课 (Lesson 1)
+vocab:
+  - word: 露营
+    pinyin: lù yíng
+    meaning: Camping
+    example: 我们全家去年去森林露营。
+    sentenceBank:            # 5 sentences, each {zh, en}
+      - zh: 我们打算周末去山里露营。
+        en: We plan to go camping in the mountains this weekend.
+sentences:                   # 5 longer model sentences per lesson
+  - text: 听到喊声，他不管三七二十一，跳下水救人。
+    segments: [听到, 喊声, &quot;，&quot;, 他, 不管三七二十一, &quot;，&quot;, 跳下水, 救人, &quot;。&quot;]
+    icon: activity
+    description: Regardless of consequences, jumping in to save someone.
+```
+
+About 15–25 words per lesson; about 330 words in total across 17 lessons.
+
+### 2.2 Single questions (`vocab`, `pinyin`, `usage`, `phrase`, `conjunction`, `sentence`)
+
+```yaml
+- questionID: NH-Q6
+  lessonIds: [1]             # may be [] (untagged)
+  question: 每周的升旗礼，同学们必须在七点半前到礼堂 ___。
+  options: [排列, 欣赏, 集合, 围观]
+  correct: 集合
+```
+
+- `pinyin` and `phrase` questions mark the target word as `__word__` and end with an instruction in brackets, such as `（选出画线词语的汉语拼音）`.
+- `usage` questions look like `以下哪一个句子是正确的？（词语：有限）`.
+- Some questions are tagged `subject: Higher Chinese`; keep that flag.
+
+### 2.3 Passage groups (`cloze`, `errorcorrect`, `comprehension`, `dialogue`, `practical`)
+
+```yaml
+- groupId: TN-G1
+  subject: Chinese
+  passage: { title: 外婆的红烧排骨, text: &quot;… [Q16]___ …&quot; }
+  questions:
+    - format: MCQ            # or Fill-in
+      text: 我的心里感到很 ___ 。
+      options: [充实, 新鲜, 精彩, 温暖]
+      correct: 温暖
+      # Fill-in uses: accepted: [&quot;3&quot;, 建造, ...], displayAnswer: &quot;3 建造&quot;
+```
+
+- Error-correct passages mark wrong characters as `[Q6](兰)`, and each question has `accepted` answers.
+- `questions/index.yaml` also contains group metadata (`category`, `lessonIds`, `questionCount`).
+- About 220 questions have `lessonIds: []`. These go into region-level &quot;mixed&quot; pools and the final region.
+- **Passage question formats:** `MCQ` (auto-marked), `Fill-in` (auto-marked against `accepted`), `Long-Answer` and `Writing-Constrained` (open written answers with a `displayAnswer` model answer, sometimes `marks` and a `context` marking guide; **cannot be auto-marked**).
+- **P5 counts:** comprehension has 48 passages and 294 questions (80 MCQ, 48 Fill-in, 166 open answers); practical has 17 notices and posters; dialogue has 16; error-correction has 8; cloze has 24. Passages have 5–7 questions each. None of these passages are tagged to lessons.
+
+### 2.4 Stories (`stories/N.md`)
+
+The file starts with `# 《Title》`, followed by `## Page 1` … `## Page 6`, each page being 2–4 short Chinese paragraphs. Every story uses its lesson's words. Section 13 uses these stories as the backbone of each region's plot.
+
+### 2.5 Levels (content packs)
+
+- **A level is a separate game.** When the game first starts, the child picks a level on a **Choose your level** screen. Levels whose content isn't installed yet show as &quot;Coming soon&quot;. After choosing, the child stays on that level until they finish it.
+- **Each level has its own save** (section 18). Starting P6 is a fresh game and never changes the P5 save.
+- **Only a parent can switch levels,** from the parent panel (behind the PIN). Switching keeps every level's progress and loads the other level's save.
+- **Finishing a level** (beating its final boss) shows a completion certificate and gives a trophy. The trophy is also shown in every other level's player room. Nothing else carries over: no stats, items or coins.
+- **Shared by all levels:** the engine, creatures, items, gear, recipes, balance defaults, the UI strings and the overall premise (the Great Forgetter and the Spirit Brush).
+- **Per level:** the source YAML; the campaign (regions, maps, villagers, dialogue, Spirit Sets, bosses, idioms and word tags); and a small `level.json`. The number of regions follows the level's lesson count (roughly 2–3 lessons per region), not a fixed 7. Each level is a new land in the same world, for example &quot;Book of P5: the Scholar Lands&quot; and &quot;Book of P6: the Jade Coast&quot;.
+- **`level.json` switches features on or off** for levels that lack some content. For example, a lower-primary level might have no idioms or no practical passages. Boss phases, Reading Hall chains, Exam Day and daily quests only use question types the level actually has. The content validator warns when a campaign asks for content the level doesn't have.
+- **Adding a level:** copy its YAML into `content/source/&lt;level&gt;/`, write its campaign files under `content/authored/levels/&lt;level&gt;/`, set `&quot;ready&quot;: true` in `level.json` and run `npm run build:content`.
+
+---</pre></details><details id="source-4"><summary>3. Learning model (the heart of the game)</summary><pre>
+### 3.1 Skills
+
+Every vocabulary word has **five skills**:
+
+| Key | Skill | What is tested | Example question |
+|---|---|---|---|
+| `m` | Meaning | recognise meaning from hanzi | 露营 → pick &quot;Camping&quot; |
+| `p` | Pinyin | read it with correct tones | 露营 → pick &quot;lù yíng&quot; from tone variants |
+| `h` | Hanzi | recognise the correct characters | &quot;Camping · lù yíng&quot; → pick 露营 from look-alikes; or real `vocab.yaml` blank question |
+| `u` | Usage | use it in context | sentence with a blank → pick 露营; or real `usage.yaml` question |
+| `w` | Writing | write each character stroke by stroke | trace, then guided, then from memory (Hanzi Writer) |
+
+### 3.2 Stars, tiers and spacing
+
+- Each skill has a star made of **two ticks**. A tick is earned by a correct answer in that skill, **at most one tick per skill per calendar day**. So a full star needs correct answers on **two different days**. The first tick shows as a half-filled dot.
+- The **Writing** tick only counts when every character was written in **From memory** mode (stored stage `2`, see 3.4) without help as defined below.
+  Automatic stroke hints below the four-miss autofill threshold do not count as help; explicit demonstrations, autofill and giving up do.
+- Hint items (section 7) let the child answer, but a hinted answer never earns a tick.
+- **Tiers:**
+  - **Bronze:** the word has been collected (a creature carrying it was beaten once).
+  - **Silver:** any 3 of the 5 stars.
+  - **Gold:** all 5 stars.
+- **Resting and review:** when a word turns Gold it &quot;rests&quot; for 3 days (`REVIEW_DAYS`) and does not appear in battles. After that it can appear once as a **review creature**. Beating it resets the rest timer and doubles the next interval (3 → 6 → 12 → 24 days, capped at 30). If a review question is answered wrong, the word drops back to Silver: the star for that skill loses one tick.
+  - On a failed due review, remove one tick from the failed skill, reset `revInterval` to 3 and make the word eligible for focused practice.
+    Retain the collected flag, completed restoration rewards and earned milestones.
+  - A successful due review encounter advances only its own word's interval, once at encounter completion, provided it stayed Gold and its scored review answers were unassisted under section 3.4.
+    Running, fainting or an item-assisted answer cannot extend the interval.
+  - Defensive spell questions affect the word actually tested.
+    A wrong due-review answer for that word applies the same failed-skill rule; a correct incidental answer does not extend a different word's review interval.
+  - Reaching Gold again starts a new three-day rest; milestones and collection rewards never repeat on re-mastery.
+- **What tiers are for:**
+  - Silver count opens each region's **boss gate**.
+  - Gold percentage opens the **next region** (section 10).
+  - Gold words can be equipped as **Partner Spirits** (section 8.2).
+  - Themed **Spirit Sets** at Silver restore the village (section 8.3).
+
+### 3.3 Word selection (spaced repetition)
+
+When an encounter happens in a zone, pick a word from that zone's lesson(s) with weights:
+
+| Word state | Weight |
+|---|---|
+| Not collected | 5 |
+| Collected, not Gold | `max(0.5, 5 − stars) + min(misses, 4) × 0.8` |
+| Gold, review due | 1.5 |
+| Gold, resting | 0 (excluded) |
+
+If every word in the zone is resting, the zone is **peaceful**: no encounters, and a toast says &quot;All spirits here are Gold and resting.&quot;
+
+**Recommended skill:** each encounter highlights one useful attack based on due review skills and missing ticks that can still be earned today.
+The child may choose any attack.
+A completed varied-skill objective can give a small authored coin or material reward, never an automatic tick or star.
+The objective must require actual answers; merely selecting the recommended move gives no reward.
+
+### 3.4 Writing (Hanzi Writer)
+
+- Library: [Hanzi Writer](https://hanziwriter.org) 3.7.x (MIT), with stroke data from `hanzi-writer-data` (Make Me a Hanzi, Arphic licence). **Vendor both locally.** Do not load character data from a CDN at runtime; hosted or sandboxed pages often block it. The build step (section 18) extracts only the characters used in the content.
+- Each **character** (not word) has a writing stage stored in `save.chars[ch].lv`:
+
+| Stage | Name | Outline shown | Hint after misses |
+|---|---|---|---|
+| 0 | Trace | yes | 1 |
+| 1 | Guided | no | 2 |
+| 2 | From memory | no | 3 |
+
+- After 4 misses on one stroke, the stroke is filled in automatically (`markStrokeCorrectAfterMisses: 4`). This counts as **needing help**.
+- **Approved writing tolerance:** keep the prototype's four-miss threshold.
+  A stroke hint after three misses in From memory mode does not by itself set `helped`; a learner's intended stroke may have been correct despite imperfect tracing.
+  Explicit &quot;Show me how&quot;, &quot;I don't know&quot; and an automatically filled stroke still count as help.
+  Keep the current pinyin, meaning and audio clues; do not switch this task to audio-only dictation.
+- **Pass or fail, no mistake counting.** A character is &quot;written&quot; if the child drew every stroke themselves: no auto-filled stroke, no &quot;Show me how&quot;, no &quot;I don't know&quot;. Wobbly attempts don't matter.
+- **Stage changes:** a clean write in a different battle or session moves the character up one stage; needing help moves it down one stage (not below 0).
+- **UI must include:**
+  - pinyin, English meaning and a &quot;Hear it&quot; button
+  - the example sentence with the word blanked out, as a clue
+  - a 米字格 practice grid
+  - slots showing each character's progress
+  - &quot;Show me how&quot; (stages 0–1): animates the strokes, then the child retries; counts as help
+  - &quot;I don't know&quot; (all stages): animates the character, shows the whole word, moves on as a fail and schedules the word sooner
+- **Parent setting:** Gentle (`leniency 1.4`, `acceptBackwardsStrokes: true`, the default) or Strict (`leniency 1.0`). Stroke order is always enforced; tell the parent this.
+
+### 3.5 Question generation rules
+
+- **Meaning:** the correct meaning plus 3 distinct distractor meanings from other words, preferably the same region.
+- **Pinyin:**
+  - 50% chance of using a real `pinyin.yaml` question if one exists for the word.
+  - Otherwise generate tone variants: change the tone of one syllable, sometimes two. Place tone marks with the standard rule (a &gt; o &gt; e; for `iu`/`ui`, mark the second vowel).
+  - Top up with other words' pinyin that has the same number of syllables.
+- **Hanzi:** 60% real `vocab.yaml` question if one exists. Otherwise pick words of the same length. Later improvement: add a look-alike and homophone table (恨/很/狠, 扮/办/般) for character-level distractors.
+- **Usage:**
+  - 40% chance of using a real `usage.yaml` or `phrase.yaml` question if one exists.
+  - `sentence.yaml` (complete the sentence, all tagged to lessons) goes into the School quiz and Exam Day pools, with the English line &quot;Pick the best way to complete the sentence.&quot; 
+  - Otherwise take a `sentenceBank` sentence containing the word, blank the word and offer 3 same-length words from the same lesson as distractors.
+  - Show the English translation after answering.
+- **Idiom casting:** pick the sentence that uses the idiom correctly. Build the wrong options by putting the idiom into other words' sentences in place of their own word.
+- **Exam questions:** show the Chinese stem, but replace bracketed Chinese instructions with a one-line English instruction:
+  - vocab: &quot;Pick the word or character that fits the blank.&quot;
+  - pinyin: &quot;Pick the correct pinyin for the underlined word.&quot;
+  - usage: &quot;Which sentence uses **X** correctly?&quot;
+  - phrase: &quot;Pick the meaning closest to the underlined word.&quot;
+  - conjunction: &quot;Pick the pair of joining words that fits.&quot;
+- **Mapping exam questions to words:** match `correct` to a word (vocab); match `（词语：X）` (usage); match `__X__` (pinyin, phrase).
+- **Language quality:** required gate questions and idiom options must have a content-review status and reviewed alternatives with one defensible answer.
+  Tag generated vocabulary distractors by part of speech and semantic family, as well as length.
+  A Chinese-proficient reviewer checks required content; uniqueness alone does not establish correctness.
+  Maintain fixtures for previously ambiguous questions.
+- **After every answer:**
+  - Show correct or wrong, the correct answer, and the word card (hanzi, pinyin, meaning, example sentence).
+  - Offer a &quot;Hear it&quot; button, and play the audio automatically when the answer was wrong.
+  - Continue only when the child taps &quot;Next&quot;.
+
+### 3.6 Audio
+
+Use the browser's built-in speech (`speechSynthesis`) with `lang: zh-CN` and `rate: 0.85`. Always guard for missing support. A later improvement could add recorded audio files under `assets/audio/` keyed by word; the audio module should allow that without other code changes.
+
+When no usable Chinese voice is available, show a clear audio-unavailable state and a parent-facing setup tip.
+Check voice availability asynchronously and keep text-based activities usable.
+An audio-dependent activity must explain the limitation rather than silently playing nothing.
+
+---</pre></details><details id="source-5"><summary>4. World and exploration</summary><pre>
+- Top-down tile map drawn on a `&lt;canvas&gt;`, 32 px tiles. The viewport is 15×11 tiles and scales to fit the screen, with the camera following the player.
+- Each **region** has:
+  - one **hub town**
+  - 2–3 **wild zones**, each mapped to one lesson, with tall grass that triggers encounters
+  - one **boss lair** behind a gate
+  - optional **secret areas** opened by key items
+- Maps are authored as data (section 15.4). Do not hard-code maps in JS.
+- **Tiles:** grass, path, tall grass (tinted per zone), tree, water, rock, building footprint, door, NPC, sign, gate, lair entrance, bridge, chest, scroll-spot, warp.
+- **Controls:**
+  - Keyboard: arrow keys or WASD.
+  - On-screen D-pad, always visible on touch devices, with pointer capture.
+  - Walking into a door, NPC, sign or chest interacts with it.
+  - Grid-based movement with smooth tweening.
+  - Hold to keep walking; Running Shoes (a milestone reward) doubles speed.
+- **Encounters:** each step in tall grass has a 16% chance of an encounter, with a cooldown of at least 3 steps between encounters.
+- **Encounter blocks:**
+  - Daily cap reached: toast &quot;The creatures are asleep. Come back tomorrow!&quot;, plus a one-time explanatory dialogue.
+  - Zone peaceful: toast only.
+- **Zone toasts:** entering a zone shows its name and lesson, e.g. &quot;Camping Forest · Lesson 1&quot;.
+- **Atmosphere per zone:** tint, particles (fog, leaves, sparkles) and a short ambient tag. Keep it light.
+- **Region travel:** a signpost or gate on the region edge leads to the next region once it is unlocked. A **Travel Map** screen, unlocked after Region 2, lets the child jump between unlocked hub towns.
+
+---</pre></details><details id="source-6"><summary>5. Battle system</summary><pre>
+### 5.1 Turn structure
+
+1. **Intro:** &quot;A wild **Fogling** appeared! It has a word spirit sealed inside.&quot; A review creature says &quot;…woke up one of your Gold spirits for a review!&quot;
+2. **Player turn:** choose one of:
+   - **Attacks (5):** Meaning Strike (`m`), Sound Blast (`p`), Precision Jab (`h`), Heavy Slam (`u`), Brush Finisher (`w`).
+   - **Idiom move:** any collected idiom spirit, once per battle.
+   - **Item:** consumables (section 7).
+   - **Partner skill:** once per battle (section 8.2).
+   - **Run away.**
+3. **Resolve the player action** (a question or writing task). A correct answer deals damage; a wrong one misses.
+4. **Enemy turn** (if the enemy still has HP): see 5.3.
+5. Repeat until the enemy HP reaches 0 (win) or the player HP reaches 0 (faint).
+
+All attacks are about the **creature's word**. The creature's spells (5.3) use *other* words from the same lesson, preferring collected ones, so they also act as review.
+
+### 5.2 Player damage
+
+- Base damage: 1 for `m`, `p`, `h` and `u`; 2 for Brush Finisher.
+- +1 if the attack matches the creature's **weakness**.
+- +1 for a streak of 3 or more correct answers in a row within the battle. Show a visible streak meter.
+- Gear and partner bonuses apply (sections 7 and 8).
+- A &quot;double&quot; effect (the idiom 齐心协力) multiplies the total by 2 for the next hit.
+- **Creature HP:**
+  - normal: 3
+  - elite: 5
+  - golden (rare, 5%): 4, and it flees after 4 turns if not beaten
+  - boss: see 5.6
+
+### 5.3 Enemy turn
+
+After each player action, the creature acts:
+
+- **40% spell attack:** &quot;Fogling casts **Fog Cloud**! Answer correctly to block it.&quot; The child answers a question of the creature's attack type (`atk`) about another word from the same lesson.
+  - Correct: blocked, no damage.
+  - Wrong: take `3 + regionTier` damage. The answer counts for that word's skill tick as normal.
+- **60% physical attack:** damage = `2 + rand(0..2) + (regionTier − 1)`.
+  - If the player's last action was correct: 30% dodge chance (50% with a streak of 3 or more).
+  - If the player's last action was wrong: damage × 1.5, rounded up (&quot;caught you off guard&quot;).
+- The shield effect (抛到脑后) cancels the next damage from a wrong answer.
+- A low-HP warning appears at 6 HP or less.
+
+### 5.4 Creature types
+
+| Type | Weak to | Attacks with | Spell name | Notes |
+|---|---|---|---|---|
+| Fogling | Meaning | Meaning | Fog Cloud | common in misty zones |
+| Echo Bat | Pinyin | Pinyin | Screech | |
+| Twin Shade | Hanzi | Hanzi | Mirror Trick | look-alike theme |
+| Jumble Bug | Usage | Usage | Word Scramble | |
+| Ink Imp | Writing | Hanzi | Ink Splash | |
+| *Region specials* | varies | varies | varies | 1–2 new looks per region (e.g. Tide Crab in Region 3) reusing the same 5 weakness types |
+
+Zones have a **type mix** defined in data, so each zone feels different. Creature art is procedural SVG, one function per type, in the prototype style. Region specials are new SVG functions or sprite files.
+
+### 5.5 Winning, losing and running
+
+- **Win:**
+  - The seal breaks and the spirit card appears with its tier and star changes.
+  - Rewards: +12 XP, +8 coins, a creature **material drop** (section 7.5) and quest progress.
+  - Show &quot;half-stars earned today&quot; so the child knows to come back tomorrow.
+- **Faint:**
+  - &quot;Grandma Wang carried you back to the inn.&quot; HP is restored at the hub's inn.
+  - **No loss** of coins, items or progress.
+  - The battle still counts towards the daily cap.
+- **Run:** always succeeds, gives no rewards, and still counts towards the daily cap.
+
+### 5.6 Bosses
+
+- Each region has one boss with 10–14 HP and **phases** built from that region's lesson content.
+- **Phase types:**
+
+| Phase | Content | Source |
+|---|---|---|
+| Chain Spell | joining words | `conjunction.yaml` tagged to the region's lessons |
+| Scramble Spell | rebuild a sentence from shuffled segments | lesson `sentences[].segments` (merge punctuation into the previous segment) |
+| Ink Spell | tingxie of 2 words, written from memory | region words, preferring collected ones |
+| Muddle Scroll | cloze passage | `cloze.yaml` group chosen for the region |
+| Error Spell | fix the wrongly written characters | `errorcorrect.yaml` group (typed answer or choose from 4) |
+| Riddle | read a short passage and answer | `comprehension.yaml` group |
+| Notice Board | read a poster or notice and answer | `practical.yaml` group |
+| Talk-down | choose the right dialogue lines | `dialogue.yaml` group |
+
+- A correct answer deals 1 damage. After a correct answer, the boss has a 30% chance of a counter-attack for 3 damage.
+- A wrong answer: the boss hits for 5–6 damage, and the question goes back to the end of the queue.
+- Potions, idioms and partner skills are allowed between questions.
+- **Faint:** the boss resets and the player wakes at the inn.
+- **Win:**
+  - Rewards: a Brush Fragment (key item, section 7.3), a region badge, a cutscene, and a big coin and XP reward.
+  - The boss's minions around the region calm down, so tall-grass encounters in that region's zones switch to &quot;review mode&quot;: lower encounter rate, more review creatures.
+
+---</pre></details><details id="source-7"><summary>6. Player progression, HP and balance</summary><pre>
+| Stat | Formula / value |
+|---|---|
+| Level up at | `level × 30` XP |
+| Max HP | `18 + 2 × level + gear bonus + partner bonus` |
+| XP per win | 12 (elite 20, golden 30, boss 80) |
+| Coins per win | 8 (elite 15, golden 40, boss 100) |
+| School quiz or tingxie | +5 coins per correct answer, for the first 3 sessions per day |
+| School XP | quiz: 4 XP per correct answer; tingxie: 5 XP per correct answer, including after the coin limit |
+| Region tier (`regionTier`) | 1 to 7, scales enemy damage |
+| Daily battle cap | parent setting: 10 / 15 / 20 / 30 / no limit (default 15) |
+
+**Target feel:** a child who answers about 80% correctly needs to rest at the inn roughly every 3–4 battles in their current region. Tune enemy damage to hit this; log it in a debug overlay (section 19).
+
+### 6.1 XP visibility and level-up celebration
+
+- Show a labelled numeric XP readout beside the bar, for example **Level 3 · XP 24 / 90**.
+  Keep it visible at tablet and phone widths.
+- Every XP reward shows how much was earned and visibly advances the XP bar.
+- When the player levels up, finish the current answer feedback, then show a dedicated **Level up!** panel with the new level, max HP increase and restored HP.
+  Use a brief celebratory animation and optional sound, plus a **Continue** button.
+  Respect reduced motion, sound settings and the no-timer rule.
+- Use the same level-up flow for battle, school, story, passage and quest XP.
+  If one reward advances multiple levels, show one celebration summarising all gained levels.
+  Persist the reward once before presentation so reloads and double taps cannot grant it twice.
+
+**Resting:**
+- The **Inn** gives a free full heal after a &quot;Bedtime Review&quot; of the 3 weakest collected words (any skill, including writing).
+- Potions and food heal during battle.
+
+---</pre></details><details id="source-8"><summary>7. Items, gear and economy</summary><pre>
+Every item must *do* something. Cosmetics exist, but they come from achievements and milestones, not only the shop.
+
+### 7.1 Consumables (usable in battle; the shop sells them)
+
+| Item | Effect | Price |
+|---|---|---|
+| Rice Ball 饭团 | +10 HP | 25 |
+| Instant Noodles 方便面 | +20 HP, capped at max HP | 50 |
+| Mooncake 月饼 | full HP | 80 |
+| Scholar's Lantern | remove one wrong option (once per question); **no tick** for that answer | 30 |
+| Ink Pot | retry a failed writing attempt with no penalty (the retry can still earn a tick) | 40 |
+| Smoke Ball | escape a boss fight without fainting (boss resets) | 20 |
+| Lucky Knot 中国结 | next battle gives double coins | 50 |
+
+### 7.2 Gear (3 slots: Brush, Charm, Hat; permanent; bought, crafted or rewarded)
+
+| Gear | Slot | Effect | Source |
+|---|---|---|---|
+| Bamboo Brush | Brush | starter | start |
+| Jade Brush | Brush | Brush Finisher +1 damage | craft (Region 1) |
+| Echo Bell | Charm | Sound Blast +1 damage | craft |
+| Mirror Charm | Charm | Precision Jab +1 damage | craft |
+| Fog Lantern Charm | Charm | spell-attack damage −2 | shop (Region 2) |
+| Red Cap | Hat | max HP +3 | shop |
+| Bamboo Hat | Hat | dodge +10% | 20-spirit milestone |
+| Scholar's Cap | Hat | +10% XP | Region 2 boss |
+| Gold Crown | Hat | cosmetic, shows mastery | 50 Gold words |
+
+Gear is visible on the player sprite (hat and brush) and in a Character screen.
+
+### 7.3 Key items (story; open areas; never sold)
+
+- **Brush Fragments:** 7 in total.
+  The six regional lieutenants award fragments 1–6; a Region 7 restoration quest awards fragment 7 before the final boss.
+  Together they restore the **Spirit Brush**.
+  Each fragment grants a map ability (this is the game's &quot;HM&quot; system):
+
+| Fragment | Ability | Opens |
+|---|---|---|
+| 1 Dawn Stroke | Light: clears thick fog | Misty Path's hidden grove (Region 1 post-game), Region 2 fog forest |
+| 2 Bridge Stroke | Draws plank bridges over marked gaps | Region 3 coast |
+| 3 Wave Stroke | Ride a paper boat on marked water | Region 3 islands, whale lagoon |
+| 4 Wind Stroke | Clears fallen-leaf piles and cuts vines | Region 4 fields |
+| 5 Spark Stroke | Lights festival lanterns and gates | Region 5 city |
+| 6 Root Stroke | Makes roots into ladders | Region 6 ancient grove |
+| 7 Complete Brush | Enter the Great Dictionary Tree | Final area |
+
+- **Reading key item (required, one per region):** earned by finishing the region's first Reading Hall passage chain (section 11.4). It is needed to reach the boss. Region 1: the **Cave Lantern** (the Muddle Cave is dark). Later regions: for example the Serpent's Den Map, Tide Chart, Theatre Pass, Festival Pass, Oracle Rubbing and Treehouse Rope.
+- Other key items per region, given by villagers after requests: Grandma's Lantern, S.S. Paper Boat Ticket, Museum Key and so on (see section 13).
+
+### 7.4 Coins
+
+- **Earned from:** battles, school, daily chest, villager requests and milestones.
+- **Spent on:** consumables, some gear, cosmetics and decorations for the player's room (section 9.5).
+- Coins can never buy stars, ticks, answers or region unlocks.
+
+### 7.5 Materials and crafting (light)
+
+- Each creature type drops a material:
+  - Fogling → Mist Drop
+  - Echo Bat → Echo Feather
+  - Twin Shade → Mirror Shard
+  - Jumble Bug → Jumble Silk
+  - Ink Imp → Ink Bead
+- The **Blacksmith / Craft Table** in each hub turns materials into gear (a recipe needs 3–6 materials plus coins).
+- This gives a reason to hunt different creature types and to use every attack type.
+
+---</pre></details><details id="source-9"><summary>8. Collection systems</summary><pre>
+### 8.1 Spirit Book (字灵图鉴)
+
+- Tabs by region, then lesson. Card grid; uncollected cards show &quot;?&quot;.
+- **Card:** hanzi (brush font), pinyin, 5 star dots (half or full), tier seal (B / S / G), and a &quot;resting&quot; tag.
+- **Card detail:**
+  - big card and the skill rows with 2 dots each
+  - writing stage per character
+  - &quot;Hear it&quot; and &quot;Practise writing&quot; (practice changes no stars)
+  - example sentence plus 3 `sentenceBank` sentences with English
+  - the idiom move description, if the word is an idiom
+- **Fun fact line:** a curator-style comment on each card, such as &quot;露 means dew. 营 means camp.&quot;
+  - Optional content; add it later to `content/authored/word-notes.json`.
+  - Only show a note once it has been written. Missing notes are simply hidden.
+
+### 8.2 Partner Spirits (party of up to 3)
+
+- Only **Silver or Gold** spirits can be partners. The lead partner follows the player on the map as a small floating glyph.
+- **Passive bonus by tier:** Silver gives +1 max HP; Gold gives +2 max HP and a **partner skill** decided by the word's lesson &quot;element&quot;:
+
+| Lesson element | Partner skill (once per battle) |
+|---|---|
+| Outdoors / nature | Heal 5 HP |
+| Food | Heal 3 HP and cure &quot;muddled&quot; status (future) |
+| Feelings | Shield: next spell attack blocked |
+| Actions | +1 damage on the next hit |
+| Time / thinking | Reveal the creature's weakness and add +1 to the streak |
+
+- Each word's element is set in `content/authored/word-tags.json`, a hand-tagged list. Default: &quot;Actions&quot;.
+- Idiom words (成语) are special: collected idioms also give the **idiom moves** from the prototype. Each region adds 2–4 idioms, following the same pattern:
+  - 狼吞虎咽: full heal
+  - 齐心协力: next hit ×2
+  - 抛到脑后: next wrong answer does no damage
+  - 异口同声: 1 damage
+  - Later regions, for example: 光阴似箭 (take an extra turn), 恍然大悟 (reveal the answer to a spell attack, no tick), 依依不舍 (a fleeing golden creature stays 2 more turns).
+
+### 8.3 Spirit Sets (like Stardew's bundles)
+
+- Each hub has a **Restoration Board** listing 4–6 themed sets of 3–5 words, drawn from different lessons in the region.
+- When every word in a set reaches **Silver**, the child &quot;offers&quot; the set. It then **restores something visible in the town**:
+  - lanterns relit
+  - a stall reopens, and a new shop item appears
+  - a bridge is repaired, opening a shortcut
+  - a fountain flows
+  - a villager's house is fixed, and that villager moves in
+- Completing **all** sets in a region gives a region trophy placed in the player's room, plus a special cosmetic.
+- Region 1 example sets:
+  - **Campfire:** 露营, 探险, 集合, 绑 → relight the village campfire (a new story scene at night)
+  - **Kitchen:** 黄瓜, 紫菜, 调味料, 炒, 材料 → reopen the noodle stall (sells Rice Balls at a discount)
+  - **Healthy Eyes:** 电脑, 眼圈, 模糊, 距离, 保持 → fix the optician's sign (a villager request unlocks)
+  - **Kind Words:** 祝福, 安慰, 贺卡, 异口同声 → decorate the town square for Grandma's birthday (cutscene)
+  - **Team Spirit:** 齐心协力, 配合, 冠军, 轮 → repair the race track and unlock the rival rematch
+
+### 8.4 Collection milestones (like Oak's aides)
+
+- Rewards at total spirits collected. They come from a &quot;Spirit Scholar&quot; NPC who travels to each hub.
+
+| Spirits | Reward |
+|---|---|
+| 10 | Running Shoes (hold to run) |
+| 20 | Bamboo Hat |
+| 30 | Creature Radar (shows which types live in each zone) |
+| 50 | Material Pouch (+1 material per drop) |
+| 80 | Travel Map fast travel |
+| 120 | Echo Bell |
+| 200 | Golden Lure (golden creature chance ×2) |
+| all | Title &quot;Word Sage&quot; and the Gold Crown |
+
+- There are also milestones for Gold count (10 / 30 / 60 / 100 …) with decorations for the player's room.
+
+---</pre></details><details id="source-10"><summary>9. Daily return loops</summary><pre>
+### 9.1 Daily Quest Board (in every hub)
+
+- 3 small quests per day, generated from templates. They reset at local midnight.
+- **Example quests:**
+  - &quot;Write 3 words from memory.&quot;
+  - &quot;Beat an Echo Bat using Sound Blast.&quot;
+  - &quot;Read 2 story pages.&quot;
+  - &quot;Block 2 spells.&quot;
+  - &quot;Complete a tingxie at the School.&quot;
+  - &quot;Help a villager.&quot;
+- Finishing all 3 opens the **Daily Chest**:
+  - fixed contents: 30 coins, 1 consumable, 2 random materials from a visible pool
+  - on streak milestone days, a small bonus is added
+- Quests only pick activities that are possible with the child's current unlocks and daily cap.
+
+### 9.2 Lantern Streak
+
+- Each day with at least one completed daily quest lights one lantern along the village main street. The lanterns stay lit, and there is a visible count.
+- **Milestones at 3, 7, 14, 30, 60 and 100 days:** a small celebration (fireworks over the town) plus a decoration or cosmetic.
+- **Forgiveness:** one automatic &quot;free miss&quot; per week (Duolingo-style freeze). It is applied silently; the next day the child sees &quot;Grandma kept your lantern lit while you were away.&quot;
+- There is **never** a guilt message.
+
+### 9.3 Daily Scroll (like Animal Crossing's fossils)
+
+- Each day one **Mystery Scroll** appears somewhere in the current region, at a random scroll-spot tile.
+- The Storyteller &quot;reads&quot; it, and it unlocks one extra content item:
+  - an untagged exam question as a mini-challenge, or
+  - a lesson model sentence with English, or
+  - an idiom story line
+- Unlocked scrolls go into a **Scroll Library**, a collection with its own completion count and reward.
+
+### 9.4 Energy / daily cap
+
+- The HUD shows &quot;Battles left today&quot;.
+- When the cap is reached, battles stop, but these stay open: stories, the Scroll Library, writing practice, crafting, room decoration and the quest board (quests that need battles are shown greyed out).
+- The parent can add +5 battles from the parent panel.
+
+### 9.5 Player room (home base)
+
+- The player's room is in Grandma Wang's house in the Region 1 hub, with a portal to it from every hub.
+- It displays trophies, region badges, decorations bought with coins or earned, the Lantern Streak count and the Partner Spirits resting.
+- Its purpose is to be a quiet space to show off achievements, giving the child a sense of pride and ownership.
+
+---</pre></details><details id="source-11"><summary>10. Gates and region progression</summary><pre>
+- **Percentage denominator:** use the distinct vocabulary words assigned to the region's lessons in the selected level.
+  Count duplicate words once; untagged exam questions do not increase the denominator.
+  Threshold counts are always computed as `Math.ceil(regionWordCount * requiredPct)`, never hard-coded across levels.
+- **Boss gate:** a configurable percentage of **Silver-or-better** spirits **and** the region's reading key item (section 11.4).
+  Use a 35% default; Region 1 uses 22% to preserve its gentler existing pacing.
+  For the 54-word P5 Region 1 example, `ceil(54 * 0.22) = 12`.
+  The gatekeeper shows actual percentage, required percentage, derived counts and the key-item status, for example &quot;Silver or better: 9/54 (17%) · Need 22% (12 spirits) · Cave Lantern: not yet&quot;.
+- **Next region gate:** after the boss is beaten, require **70% of the region's words at Gold** by default, configurable per region.
+  Show percentage and derived counts, for example &quot;Gold: 21/54 (39%) · Need 70% (38 spirits)&quot;.
+  - This makes Gold matter and ensures words are properly learned before moving on.
+  - It also stops the game from running ahead of what the child is learning at school.
+- **Parent override:** in the parent panel, &quot;Unlock region N&quot; skips these gates. Use it for testing, or if school is ahead of the game.
+- **Region order:** linear 1 → 7. Regions stay open after clearing, and their creatures shift to review mode (section 5.6).
+
+---</pre></details><details id="source-12"><summary>11. Towns, buildings and villagers</summary><pre>
+### 11.1 Standard hub buildings (every region)
+
+| Building | Function |
+|---|---|
+| School | Exam Quiz (5 real exam questions from the region's lessons); Tingxie (5 words, written from memory; say the word, then the example sentence); **Exam Day** once a week (see 11.6) |
+| Reading Hall | one passage at a time; its questions are spread across villagers (11.4) |
+| Inn | Bedtime Review, then full heal |
+| Shop | consumables and some gear; stock expands as sets are restored |
+| Craft Table | materials into gear |
+| Restoration Board | Spirit Sets (8.3) |
+| Quest Board | Daily Quests (9.1) |
+| Storyteller | the region's lesson stories with tap-to-see words; first read gives coins and XP |
+
+### 11.2 Villagers (3–5 per region, each with a job)
+
+- Villagers are characters from that region's lesson stories. At first they are **muddled**: their English dialogue has scrambled words. For example, Dad from Lesson 2 says: &quot;I can't find my… my… where are the things on my head?&quot;
+- Each villager gives a **request chain** of 2–3 steps:
+  - &quot;Bring me a Silver 贺卡 and 祝福.&quot;
+  - &quot;Beat 3 Twin Shades in the Kitchen Garden.&quot;
+  - &quot;Write 眼圈 from memory for me.&quot;
+- **Rewards:** a key item, gear or a story scene. The villager also becomes **un-muddled**: their dialogue becomes clear and they give a helpful tip.
+- **Do not** add houses or villagers without a job. Prefer restoring existing broken buildings (through sets) over adding new ones.
+
+### 11.3 Rival: Ah Dong (阿东)
+
+- A friendly rival from the Lesson 5 story who is also collecting spirits. He appears 2–3 times per region.
+- His **quiz duel** is 5 quick questions from the region's words, alternating turns with a fake opponent &quot;answer&quot; animation. Winning gives coins and a material.
+- He grows from teasing (&quot;Bet you can't read 模糊!&quot;) to friendship (Region 2 arc, echoing Lesson 5's quarrel and make-up story). Later he helps in a boss fight.
+
+### 11.4 Reading Hall: passage quests spread across villagers
+
+Comprehension passages are daunting in one go, so the questions are handed out one at a time by different villagers.
+
+- **One passage at a time.**
+  Pick any random standard-Chinese comprehension passage from the selected level, with no region matching, difficulty tiers or curated starter passage.
+  Same-level passages are treated as roughly equivalent in difficulty.
+  Do not repeat a passage until that eligible pool has been completed.
+  **Higher Chinese is an opt-in challenge pool**, available separately and never required for the reading key or a progression gate.
+  Completing a standard passage with help remains sufficient for required progression.
+- **Read first.** The child reads the passage in the hall. Tapping a highlighted vocabulary word shows its pinyin and meaning, and &quot;Read aloud&quot; uses speech. Pressing &quot;I've read it&quot; gives a **Passage Scroll**.
+- **Questions go to villagers.** Question 1 goes to the first villager in the region's `passageVillagers` list, question 2 to the second, and so on (at most 7 questions per passage, so each region lists 7 villagers). Villagers with a waiting question show a **?** bubble on the map. The child can answer them in any order.
+- **Answering at a villager:** &quot;I heard you read *&lt;title&gt;*. Can I ask you a question about it?&quot; → Answer / Later. The question screen always has the passage scroll available (collapsible), so the child never answers from memory.
+- **Marking:**
+
+| Format | How it's answered | Marking |
+|---|---|---|
+| MCQ | tap an option | auto; a wrong first try means &quot;Look at the passage again&quot; and one retry; a second wrong answer shows the answer |
+| Fill-in | type in Chinese (pinyin input) | auto against `accepted` (ignoring spaces and punctuation); same retry rule |
+| Long-Answer, Writing-Constrained | type in the box or write on paper, then &quot;Show the model answer&quot; | **self-check:** Got it / Partly / Not yet. &quot;Not yet&quot; the first time sends the child back to re-read, then return; the second time it counts as done with help |
+
+- **&quot;I don't know&quot;** is always available. It shows the answer and marks the question done with help, so a child can never get stuck.
+- **Rewards per question:** right first time or &quot;Got it&quot;: 10 coins and 5 XP; Partly: 6 coins; done with help: 3 coins. Passage questions don't affect word stars. Accuracy is tracked as the **Reading** skill in the parent panel.
+- **Finishing the passage** (every question answered, with or without help):
+  - The **first** passage in each region gives that region's **reading key item**, which is required to reach the boss (section 10).
+  - Later passages give 30 coins and a consumable, plus a Scroll Library entry.
+  - The hall then offers a new random passage.
+- **Parent review:** written answers (the child's text, the model answer and the self-rating) are listed in the parent panel, so a parent can check self-marking. This is on by default and can be turned off.
+- **Data:** `villagers/&lt;region&gt;.json` gets a `passageVillagers` array. Each passage villager also needs a one-line lead-in (optional; a default line is used otherwise).
+
+### 11.5 Other passage types
+
+- **Practical (notices and posters):** the same villager-chain format, run from the town's **Notice Board**. For example, a villager asks &quot;When does the lantern walk start?&quot; about a poster. These chains are optional and give coins and materials.
+- **Dialogue:** a &quot;help two villagers make up&quot; scene. The child fills each blank line from the option bank, one line per turn. Optional.
+- **Cloze and error-correction:** done in one sitting, because the blanks depend on each other. Used in boss phases and on Exam Day.
+
+### 11.6 Exam Day (weekly)
+
+- Once a week (resets on Monday), the School offers **Exam Day**: a short mixed paper of 8 questions.
+- Contents: 3 single exam questions, 2 sentence-completion, 1 conjunction and 2 cloze blanks from one random cloze passage (shown with the passage).
+- Reward: 8 coins per correct answer, plus a consumable for 6 or more correct. Results appear in the parent panel.
+
+---</pre></details><details id="source-13"><summary>12. Parent panel</summary><pre>
+- **Access:** the &quot;Parents&quot; button, with an optional 4-digit PIN set on first open.
+- **Level:** shows the current level, with **Switch level** (section 2.5).
+- **Save warning:** if the save failed its checksum (section 18.3), a notice says the save was changed outside the game, with Dismiss and Reset options.
+- **Written answers:** the latest Reading Hall written answers with the child's text, the model answer and the self-rating (section 11.4).
+- **Summary tiles:**
+  - spirits collected
+  - Bronze / Silver / Gold counts
+  - time played today and this week
+  - battles today out of the cap
+  - Lantern Streak
+- **Accuracy by skill** (m, p, h, u, w, Reading, and exam/boss) as bars with question counts.
+- **Tables:**
+  - words missed most often
+  - characters that needed help in writing
+  - words due for review
+- **Settings:**
+  - battles per day
+  - writing check (Gentle / Strict)
+  - speech speed
+  - unlock region N
+  - test mode (open all gates)
+  - reset progress (confirm twice)
+- **Real-world goal:** the parent types a goal, such as &quot;20 Gold words → ice-cream trip&quot;, and picks a target (Gold count, streak days or a region cleared). The game shows a progress bar in the player's room and a celebration when it is reached.
+- **Weekly summary:** a view summarising the last 7 days, which the parent can screenshot.
+- **Export / import save:** download or upload the versioned JSON export envelope in section 18.3 so progress can move to another device.
+
+---</pre></details><details id="source-14"><summary>13. Storyline</summary><pre>
+### 13.1 Premise
+
+Long ago, every word in the land lived as a **Word Spirit (字灵)** in the **Great Dictionary Tree (字典树)** at the centre of the world. People could speak, read and write clearly because the spirits helped them. The villain, **The Great Forgetter (遗忘大王)**, hates remembering. He wants everyone to forget their words so that nobody can tell stories, write letters or keep promises. He shattered the **Spirit Brush** that guarded the Tree. The Word Spirits scattered and were sealed inside wild creatures, and whole towns have become *muddled*: people use the wrong words, forget names and mix up salt and sugar.
+
+The player is a kid spending the school holidays with **Grandma Wang (王奶奶)** in Scholar Village. On the first night they find the handle of the Spirit Brush in Grandma's attic. It glows when they read a Chinese word aloud. Grandma explains that anyone who truly *knows* a word can free its spirit. The goal:
+
+1. Free the spirits, region by region.
+2. Defeat the Forgetter's six lieutenants to recover the first six **Brush Fragments**.
+3. Complete the Region 7 treehouse restoration quest to recover the seventh fragment and restore the Spirit Brush.
+4. Enter the Great Dictionary Tree to face the Forgetter.
+
+**Tone:** warm and funny, like the lesson stories themselves. Each lieutenant embodies a bad habit or feeling that the lesson stories teach against: muddle, selfishness, wasted time, vanity, misunderstanding, giving up, carelessness with the world. Winning always ends with the lieutenant being *reformed*, not destroyed. They become a friendly NPC in the post-game. This keeps it kind for a young player.
+
+**Recurring cast:**
+- **Grandma Wang:** guide, heals you when you faint, and runs the room portal.
+- **Ah Dong (阿东):** the rival who becomes a friend.
+- **The Storyteller (说书爷爷):** reads lesson stories and identifies Daily Scrolls.
+- **The Spirit Scholar:** gives collection milestone rewards.
+- **Each region's villagers:** drawn from the lesson stories.
+
+### 13.2 Region map for P5 (17 lessons → 7 regions)
+
+Other levels follow the same pattern with their own regions, stories and lieutenants, grouped from that level's lessons (section 2.5).
+
+| # | Region (English name) | Lessons | Story themes used | Lieutenant (boss) | Fragment |
+|---|---|---|---|---|---|
+| 1 | Scholar Village | 1, 2, 3 | camping &quot;treasure&quot;, Dad's lost glasses, sugar-for-salt birthday | **Muddle King 糊涂大王** | Dawn Stroke |
+| 2 | Harvest Crossing | 4, 5, 6 | food donation and the humble stranger, forest treasure and a quarrel, honest breakfast and the lost wallet | **Doubt Serpent 猜疑蛇** (makes friends suspect each other and hoard food) | Bridge Stroke |
+| 3 | Tidewater Bay &amp; Clock Tower | 7, 8 | stranded baby whale, robot from the future and wasted time | **Idle Clock 懒惰钟** (freezes time so nobody plans or helps) | Wave Stroke |
+| 4 | Lantern Theatre &amp; Farm Fields | 9, 10 | Mulan opera at the community club, pimples, phone addiction and the farmer grandpa | **Mocking Mirror 嘲笑镜** (makes people judge looks and forget what matters) | Wind Stroke |
+| 5 | Festival City | 11, 12 | martial-arts class misunderstanding, National Day night at Marina Bay | **Grudge Dragon 误会龙** (turns small bumps into big fights; tries to ruin the fireworks) | Spark Stroke |
+| 6 | Ancient Grove | 13, 14, 15 | oracle bones and the history of hanzi, the team quiz where a teammate makes a mistake, the magic cannonball tree | **Give-Up Ghost 放弃鬼** (whispers &quot;you'll never learn this&quot;) | Root Stroke |
+| 7 | Treehouse Summit &amp; the Dictionary Tree | 16, 17 (+ untagged mixed pool) | museum painting of a polluted spring, ancestors' treehouse after the earthquake | **The Great Forgetter 遗忘大王** (final boss, multi-phase) | Complete Brush |
+
+### 13.3 Region 1: Scholar Village (fully specified; build this first)
+
+**Hub:** Scholar Village.
+- **Buildings:** School, Inn, Shop, Craft Table, Grandma Wang's house (player room), Storyteller's bench, Restoration Board and Quest Board.
+- **Broken at the start:** the noodle stall, the race track, the optician's sign and the unlit campfire. Spirit Sets repair them.
+
+**Zones:**
+- **Camping Forest:** Lesson 1. Mostly Foglings and Jumble Bugs. Hidden grove behind thick fog opens after the boss (Dawn Stroke).
+- **Misty Path:** Lesson 2. Echo Bats and Twin Shades, with a light fog overlay.
+- **Kitchen Garden:** Lesson 3. Jumble Bugs and Ink Imps; cucumber-vine tall grass.
+- **Muddle Cave:** the boss lair, north of the gate.
+
+**Villagers and request chains:**
+
+| Villager | From story | Muddled symptom | Request chain | Reward |
+|---|---|---|---|---|
+| Xiaoqiang 小强 | L1 消失的&quot;宝物&quot; | Thinks a pork rib is his treasure; keeps losing things | 1) Collect 贵重 and 探险. 2) Find his &quot;treasure box&quot; in Camping Forest (a chest tile). 3) Silver 狼吞虎咽 (he laughs: &quot;I ate it!&quot;) | Jade Brush recipe, and 小强 joins the Campfire scene |
+| Dad (Mr Lin) 林爸爸 | L2 爸爸&quot;看不见&quot;了 | Searches for the glasses sitting on his head | 1) Bring Silver 模糊 and 眼圈. 2) Beat 3 Twin Shades on Misty Path. 3) Write 距离 from memory. | Grandma's Lantern: Misty Path shows creature weakness icons; fixes the optician's sign |
+| Chef Mei 梅厨师 | L3 最特别的生日礼物 | Put sugar in everything | 1) Silver 调味料 and 材料. 2) Beat 2 Ink Imps in the Kitchen Garden. 3) Tingxie at the School with 3 Lesson 3 words written well. | Mooncake recipe; the noodle stall reopens |
+| Ah Dong 阿东 (rival) | L5 (preview) | Brags | Quiz duel ×2 (after 5 and 20 spirits collected) | coins, Echo Bell materials |
+| Grandma Wang | — | — | Kind Words set (birthday) | Birthday cutscene and a room decoration |
+
+**Passage villagers (Reading Hall question order):** Grandma Wang, the Storyteller, Xiaoqiang, Mr Lin, Chef Mei, Ah Dong, the Gatekeeper.
+
+**Story beats (cutscenes are short dialogue sequences, 3–6 lines each):**
+
+1. **Arrival:** a bus drops the player off. Grandma greets them, and the village is oddly muddled.
+2. **Attic:** find the Spirit Brush handle. First scripted battle (tutorial): a Fogling carrying 露营, with forced Meaning Strike. The spirit is freed and the Spirit Book is given.
+3. **The Storyteller** tells Story 1. It unlocks the Camping Forest sign.
+4. **After 5 spirits:** Ah Dong appears (&quot;You collect spirits too?&quot;). First quiz duel.
+5. **Each villager solved:** that villager turns clear-spoken and says one line about their story's lesson (for example, Dad: &quot;Rest your eyes every 30 minutes!&quot;).
+6. **Reading Hall:** the librarian gives the first passage. After the villagers' questions are all answered, they present the **Cave Lantern**.
+7. **At the configured Silver-or-better percentage and with the Cave Lantern:** the gatekeeper opens the gate to Muddle Cave.
+   For P5 Region 1, 22% of 54 rounds up to 12 spirits.
+8. **Boss: Muddle King.**
+   - Phases: Chain Spell (3 conjunctions tagged L1–3), then Scramble Spell (2 lesson sentences), then Ink Spell (2 words), then Muddle Scroll (cloze TN-G1 外婆的红烧排骨, 5 blanks).
+   - After defeat, he confesses the Forgetter made him muddle everyone. He is reformed and becomes the village's cheerful &quot;Mistake Museum&quot; keeper, who shows the funniest wrong answers the child has fixed (a fun review view).
+   - The player gets **Brush Fragment 1: Dawn Stroke**.
+9. **Post-boss:**
+   - The hidden grove in Camping Forest opens. It holds 3 elite creatures and a chest with the first idiom scroll.
+   - The Region 2 gate shows its Gold progress bar.
+
+### 13.4 Regions 2–7 (outline; flesh out when building each region)
+
+For each region, the builder should create:
+
+- a hub, 2–3 zones (one per lesson) and a lair
+- a Reading Hall with 7 `passageVillagers` and a reading key item that gates the boss
+- 3–4 villagers from the lesson stories with 2–3-step requests
+- 4–6 Spirit Sets
+- 2–4 idiom moves from that region's 成语
+- 1–2 region-special creature looks
+- a boss with 4 phases drawn from that region's tagged exam content, plus any untagged passages
+- one Brush Fragment ability, and a secret area that uses the *previous* fragment
+  - Regions 2–6 award their fragment from the lieutenant; Region 7 awards its fragment from the pre-boss restoration quest.
+
+**Region 2: Harvest Crossing (L4–6)**
+- A market village with a hawker centre, and a remote hill village that lacks shops.
+- Villagers: the Teacher running the food drive (L4); the humble Stranger Uncle who takes only a little (L4, a lesson in not being 自私); Xiaoming and Ah Dong who quarrel over a broken vase (L5); the Old Lady who lost her silver wallet (L6).
+- Plot: the **Doubt Serpent** makes villagers suspect each other and hoard food. Ah Dong and the player fall out after a misunderstanding (echoing L5) and make up. Ah Dong becomes a friend.
+- Boss phases: conjunction, error-correct passage, dialogue talk-down, Ink Spell.
+- Fragment: **Bridge Stroke**.
+- Idioms: 一溜烟, 一分一秒, 争先恐后, 不约而同.
+
+**Region 3: Tidewater Bay &amp; Clock Tower (L7–8)**
+- The coast: fishermen and a baby whale stuck in the shallows (L7). Bridge Stroke reaches the sandbar.
+- Rescue quest: keep the whale wet by answering Lesson 7 questions in a mini-sequence, then wait for the tide.
+- Clock Tower: a robot from the future (L8) shows the player a gloomy &quot;future self&quot; who wasted time.
+- Boss: **Idle Clock**, fought across timed-feel phases with *no real timer*: &quot;each correct answer moves the clock hands&quot;.
+- Fragment: **Wave Stroke** (paper boat).
+- Idioms: 依依不舍, 光阴似箭, 井井有条, 一眨眼.
+
+**Region 4: Lantern Theatre &amp; Farm Fields (L9–10)**
+- The community club puts on a Mulan opera (L9). The player helps the actress, who has lost her costume pieces (requests).
+- The farm: the phone-addicted boy Xiaole and his farmer grandpa (L10).
+- Boss: **Mocking Mirror**, which mocks your looks. The winning theme is gratitude and health.
+- Fragment: **Wind Stroke**.
+- Idioms: from L9–10 plus untagged ones where suitable.
+
+**Region 5: Festival City (L11–12)**
+- A martial-arts school, where two boys fight after a bump (L11), and National Day at the bay with fighter jets and fireworks (L12). The player gets separated from their family in the crowd; a finding-your-family quest.
+- Boss: **Grudge Dragon**, fought on the night of the fireworks.
+- Fragment: **Spark Stroke** (lights the festival).
+- Idioms: 五彩缤纷 and others.
+
+**Region 6: Ancient Grove (L13–15)**
+- An archaeologist's camp with oracle bones (L13). Its **Hanzi History** mini-feature shows 3–5 characters evolving from oracle-bone script to modern form (static images; optional).
+- The school team quiz where a teammate makes a mistake (L14). The cannonball tree needing care (L15).
+- Boss: **Give-Up Ghost**. The final phase is a tingxie of the child's *weakest* words, framed as &quot;prove you can learn anything&quot;.
+- Fragment: **Root Stroke**.
+- Idioms: 恍然大悟, 涌上心头 and others.
+
+**Region 7: Treehouse Summit &amp; the Great Dictionary Tree (L16–17 + mixed pool)**
+- A museum painting that pulls you into a polluted spring (L16). The ancestors' treehouse village rebuilt after an earthquake (L17).
+- **Pre-boss restoration quest:** restore the ancestors' treehouse using the configured Region 7 learning objectives and reading key.
+  Its reward is the seventh fragment, which completes the Brush.
+  The quest must not require entering the Dictionary Tree or defeating the Great Forgetter.
+- The Complete Brush then opens the Dictionary Tree.
+- Final boss: **The Great Forgetter**, 5 phases mixing every question type, drawing from all regions' words (weighted to the child's weak words) and the untagged question pool.
+- Ending: the spirits return to the Tree. Every lieutenant appears reformed. Credits roll over the child's Spirit Book stats.
+- **Post-game:** all regions stay in review mode.
+  Optional **Higher Chinese Challenge Scrolls** remain available through the opt-in challenge pool.
+
+### 13.5 Dialogue style guide
+
+- **English**, short sentences (at most 20 words), friendly and a little funny. Aim for a reading age of about 9–11.
+- Chinese appears inline only for words being learned, always with meaning nearby the first time in a scene. Example: &quot;I'm so 烦恼 (worried)!&quot;
+- **Muddled** villager lines swap or scramble 1–2 English words, never Chinese. Example: &quot;Where did I put my… my… sugar? No, SALT!&quot;
+- Bosses are theatrical but never scary. No violence beyond cartoon &quot;bonks&quot;. The endings are about redemption.
+
+---</pre></details><details id="source-15"><summary>14. Technical architecture</summary><pre>
+### 14.1 Constraints
+
+- **Plain HTML, CSS and JavaScript** (ES2020+ modules). No framework and no TypeScript required. The only runtime library is Hanzi Writer.
+- **Content is separate from code.** The HTML file is a shell. All text, vocabulary, maps, dialogue, items and balance numbers live in JSON under `content/`. The JS modules contain logic only.
+- Works on a **tablet** (touch, stylus) and a desktop browser. Target: latest Chrome, Safari (iPad) and Edge.
+- **Offline-capable.** The game runs from a local static server during development. A bundle step also produces a **single-file `dist/index.html`** that runs by double-clicking or as a Claude artifact, like the prototype.
+- **No backend.** Progress is saved in `localStorage`, one save per level, encoded (section 18.3), with export and import for moving devices.
+
+### 14.2 Running
+
+```
+npm install              # dev dependencies only
+npm run build:content    # for every level in content/source/: YAML → content/generated/&lt;level&gt;.*.json, extracts Hanzi Writer data, validates
+npm run dev              # static server at http://localhost:5173 (ES modules and fetch need http, not file://)
+npm test                 # unit tests (node --test)
+npm run e2e              # Playwright smoke tests
+npm run bundle           # dist/index.html: one file with JS, CSS and JSON inlined
+```
+
+`npm run dev` can be as simple as `npx http-server -c-1 -p 5173 .` or `python -m http.server 5173`.
+
+### 14.3 Module layering
+
+```
+ui/  ─────▶ systems/, battle/, world/, learning/   (UI calls game logic; logic never touches the DOM directly
+                                                    except through ui/ callbacks or events)
+battle/, systems/, world/ ─▶ learning/, core/
+learning/ ─▶ core/                                  (pure, unit-testable: no DOM, no canvas)
+core/     = state, save, events, time, rng, config
+```
+
+- The logic modules in `learning/`, `systems/` and `battle/` must be **pure or state-only**, so that `node --test` can exercise them without a browser.
+- A tiny event bus (`core/events.js`) carries events like `answer:correct`, `battle:won`, `word:tierChanged` and `day:changed`. Quests, streaks and milestones subscribe to it instead of being called from everywhere.
+
+---</pre></details><details id="source-16"><summary>15. Repository layout</summary><pre>
+```
+/
+├─ index.html                 # shell: HUD, &lt;canvas&gt;, overlay root, D-pad; loads css/* and src/main.js
+├─ gameplan.md                # this document
+├─ README.md                  # how to run, build and add content
+├─ package.json
+├─ prototype/index.html       # original single-file prototype (reference only)
+│
+├─ css/
+│  ├─ tokens.css              # colours, fonts, spacing, radii (section 16)
+│  ├─ base.css                # reset, [hidden] rule, buttons, focus styles
+│  ├─ hud.css  stage.css  overlay.css  dialog.css
+│  ├─ battle.css  question.css  writing.css
+│  ├─ book.css  town.css  room.css  parent.css
+│
+├─ src/
+│  ├─ main.js                 # boot: load content → load or migrate save → init systems → start loop
+│  ├─ config.js               # imports content/authored/balance.json and exposes tunables
+│  ├─ core/        state.js  save.js  migrations.js  events.js  time.js  rng.js  safe.js
+│  ├─ content/     loader.js  indexes.js           # fetch JSON; build words-by-lesson, exam-by-word, etc.
+│  ├─ learning/    mastery.js  selection.js  questions.js  examAdapters.js  pinyin.js
+│  │               writing.js  audio.js
+│  ├─ world/       map.js  renderer.js  sprites.js  movement.js  input.js  interactions.js
+│  │               encounters.js  camera.js
+│  ├─ battle/      battle.js  enemy.js  boss.js  bossPhases.js  creatures.js  effects.js  damage.js
+│  ├─ systems/     inventory.js  gear.js  crafting.js  economy.js  energy.js  gates.js
+│  │               quests.js  streak.js  scrolls.js  sets.js  milestones.js  partners.js
+│  │               villagers.js  dialogue.js  rival.js  room.js  parent.js
+│  └─ ui/          dom.js  hud.js  overlay.js  toast.js  dialogView.js  questionView.js
+│                  writingView.js  battleView.js  bossView.js  spiritBook.js  cardView.js
+│                  shopView.js  craftView.js  boardView.js  questView.js  storyView.js
+│                  roomView.js  travelView.js  parentView.js  characterView.js
+│
+├─ content/
+│  ├─ source/                 # ORIGINAL YAML per level: copy as-is, never edit by hand
+│  │  ├─ p5/                  # tingxie/, stories/, questions/, meta.yaml
+│  │  └─ p6/ …                # future levels
+│  ├─ authored/               # hand-written game data (JSON), edited by humans
+│  │  ├─ shared/              # used by every level
+│  │  │  ├─ balance.json      # every tunable number (section 6)
+│  │  │  ├─ strings.json      # UI strings in English
+│  │  │  ├─ creatures.json  items.json  gear.json  recipes.json  materials.json
+│  │  │  ├─ milestones.json  quest-templates.json
+│  │  │  └─ levels.json       # list of levels: id, label, ready
+│  │  └─ levels/
+│  │     └─ p5/               # the P5 campaign
+│  │        ├─ level.json     # features on/off, region count, final boss (section 2.5)
+│  │        ├─ regions.json
+│  │        ├─ maps/          # one file per map: r1-hub.json, r1-camping.json, …
+│  │        ├─ idioms.json  word-tags.json  word-notes.json
+│  │        ├─ sets/r1.json …       # Spirit Sets per region
+│  │        ├─ villagers/r1.json …  # villagers, request chains, passageVillagers per region
+│  │        ├─ dialogue/r1.json …   # cutscenes and dialogue scripts per region
+│  │        └─ bosses.json
+│  └─ generated/              # written by tools/*; git-ignored or committed, never hand-edited
+│     ├─ p5.content.json      # normalised words, sentences, stories, questions for P5
+│     └─ p5.chars.json        # Hanzi Writer stroke data for P5's characters only
+│
+├─ vendor/hanzi-writer/       # hanzi-writer.min.js + LICENSE
+├─ assets/                    # optional images, sprites, audio (none required for MVP)
+├─ tools/
+│  ├─ build-content.mjs       # for each level: parse YAML with js-yaml → &lt;level&gt;.content.json
+│  ├─ build-chars.mjs         # read hanzi-writer-data/&lt;char&gt;.json → &lt;level&gt;.chars.json (strip radStrokes)
+│  ├─ validate-content.mjs    # referential checks (section 17.3)
+│  └─ bundle.mjs              # esbuild bundle + inline CSS/JSON → dist/index.html
+└─ tests/
+   ├─ unit/                   # mastery, selection, questions, pinyin, damage, quests, streak, migrations
+   └─ e2e/                    # boot, walk, battle, writing (simulated strokes), save/reload
+```
+
+**Rule:** if something is text a person could want to change (dialogue, names, prices, numbers, map layout, word tags), it belongs in `content/authored/`, not in `src/`. Nothing in `src/` may mention a specific level: the loader reads the chosen level's files by id.
+
+---</pre></details><details id="source-17"><summary>16. Visual design system (keep the prototype's look)</summary><pre>
+- **Palette tokens (`css/tokens.css`):**
+  - `--ink: #1B2430` (frame and text), `--ink2: #273445`, `--ink3: #3A4B60`
+  - `--paper: #F4EFE2` (dialogue boxes and panels), `--paper2: #E9E1CC`, `--line: #CBBF9F`
+  - `--jade: #2F8A66` (correct, HP), `--seal: #C63F2B` (seal stamps, wrong, weakness)
+  - `--gold: #D9A62E`, `--silver: #8E9BAA`, `--bronze: #B06C35`
+  - `--mist: #7F7AA6`
+- **Fonts (Google Fonts, each with a fallback stack):**
+  - UI and display: **Baloo 2** (500/700/800)
+  - hanzi display (cards, big words, 米字格 results): **Ma Shan Zheng**, fallback KaiTi
+  - Chinese body text: **Noto Sans SC**
+- **Look:** a dark ink game frame around a canvas world; paper-textured panels with ink borders; cinnabar **seal stamps** for tiers (B / S / G) and on the creatures' sealed scrolls. It is deliberately a single theme; it doesn't need light and dark variants.
+- **Layout:** HUD on top (level, XP bar, HP bar, coins, spirits, battles left, and the Spirit Book, Bag and Parents buttons). A 480:352 stage with overlays on top of it. D-pad and help text below.
+- Minimum touch target 44 px. Must work at 400 px wide (phone) and on an iPad.
+- Apply the 44 px minimum to close, back, audio and icon-only buttons as well as primary actions.
+- **One useful objective at a time:** display a compact objective with purpose, destination, progress and a direct action.
+  Example: &quot;Help Mr Lin: practise 距离 (distance) from memory&quot; with a &quot;Practise with Mr Lin&quot; action.
+  Explain the first half-star when earned: &quot;One half-star earned today; return another day to finish it.&quot;
+  First use reveals a guided encounter, the first card and one villager request before introducing additional systems.
+- The XP bar must also have the numeric label and shared celebration flow from section 6.1.
+- **CSS naming:** prefix component classes (`.bt-…` battle, `.wr-…` writing, `.bk-…` book) to avoid collisions. The prototype had a bug where a `.stage` helper class collided with the game stage.
+- Global rule: `[hidden]{display:none!important}`. Toggle visibility with `el.hidden`.
+- Respect `prefers-reduced-motion`. Show visible focus rings. Never use colour alone for state: weakness also shows as text (&quot;Weak to: Pinyin&quot;).
+
+---</pre></details><details id="source-18"><summary>17. Data schemas (authored content)</summary><pre>
+Examples are illustrative; keep field names consistent. All IDs are kebab-case strings.
+
+### 17.1 Generated content (`content/generated/&lt;level&gt;.content.json`, P5 example)
+
+```json
+{
+  &quot;level&quot;: &quot;p5&quot;,
+  &quot;lessons&quot;: [{ &quot;id&quot;: 1, &quot;title&quot;: &quot;第一课 (Lesson 1)&quot; }],
+  &quot;words&quot;: [{
+    &quot;id&quot;: &quot;p5-1-露营&quot;, &quot;w&quot;: &quot;露营&quot;, &quot;p&quot;: &quot;lù yíng&quot;, &quot;m&quot;: &quot;Camping&quot;, &quot;lesson&quot;: 1,
+    &quot;ex&quot;: &quot;我们全家去年去森林露营。&quot;,
+    &quot;sb&quot;: [[&quot;我们打算周末去山里露营。&quot;, &quot;We plan to go camping in the mountains this weekend.&quot;]],
+    &quot;isIdiom&quot;: false
+  }],
+  &quot;sentences&quot;: [{ &quot;lesson&quot;: 1, &quot;t&quot;: &quot;…&quot;, &quot;seg&quot;: [&quot;…&quot;], &quot;en&quot;: &quot;…&quot; }],
+  &quot;stories&quot;: [{ &quot;lesson&quot;: 1, &quot;title&quot;: &quot;《消失的“宝物”》&quot;, &quot;pages&quot;: [&quot;…&quot;, &quot;…&quot;] }],
+  &quot;questions&quot;: {
+    &quot;single&quot;: [{ &quot;id&quot;: &quot;NH-Q6&quot;, &quot;kind&quot;: &quot;vocab&quot;, &quot;lessons&quot;: [1], &quot;q&quot;: &quot;…&quot;, &quot;o&quot;: [&quot;…&quot;], &quot;c&quot;: &quot;集合&quot;,
+                 &quot;subject&quot;: &quot;Chinese&quot;, &quot;word&quot;: &quot;集合&quot; }],
+    &quot;groups&quot;: [{ &quot;id&quot;: &quot;TN-G1&quot;, &quot;kind&quot;: &quot;cloze&quot;, &quot;lessons&quot;: [], &quot;subject&quot;: &quot;Chinese&quot;,
+                 &quot;passage&quot;: { &quot;title&quot;: &quot;…&quot;, &quot;text&quot;: &quot;…&quot; }, &quot;items&quot;: [{ &quot;format&quot;: &quot;MCQ&quot;, &quot;q&quot;: &quot;…&quot;, &quot;o&quot;: [], &quot;c&quot;: &quot;…&quot; }] }]
+  }
+}
+```
+
+- `word` on single questions is filled in by the build script using the mapping rules in 3.5.
+- `isIdiom` means a four-character word listed in `idioms.json`.
+
+### 17.2 Authored files (examples)
+
+**`levels.json`** (shared) and **`levels/p5/level.json`**
+```json
+[{ &quot;id&quot;: &quot;p3&quot;, &quot;label&quot;: &quot;Primary 3&quot;, &quot;ready&quot;: false },
+ { &quot;id&quot;: &quot;p5&quot;, &quot;label&quot;: &quot;Primary 5&quot;, &quot;ready&quot;: true }]
+```
+```json
+{ &quot;id&quot;: &quot;p5&quot;, &quot;label&quot;: &quot;Primary 5&quot;, &quot;book&quot;: &quot;The Scholar Lands&quot;,
+  &quot;features&quot;: { &quot;idioms&quot;: true, &quot;comprehension&quot;: true, &quot;practical&quot;: true, &quot;dialogue&quot;: true,
+                &quot;cloze&quot;: true, &quot;errorcorrect&quot;: true, &quot;writing&quot;: true },
+  &quot;firstRegion&quot;: &quot;r1&quot;, &quot;finalBoss&quot;: &quot;great-forgetter&quot; }
+```
+
+**`regions.json`**
+```json
+[{ &quot;id&quot;: &quot;r1&quot;, &quot;name&quot;: &quot;Scholar Village&quot;, &quot;lessons&quot;: [1,2,3], &quot;tier&quot;: 1,
+   &quot;hubMap&quot;: &quot;r1-hub&quot;, &quot;zones&quot;: [&quot;r1-camping&quot;,&quot;r1-misty&quot;,&quot;r1-garden&quot;], &quot;lairMap&quot;: &quot;r1-lair&quot;,
+   &quot;bossId&quot;: &quot;muddle-king&quot;, &quot;bossGate&quot;: { &quot;silverPct&quot;: 0.22, &quot;keyItem&quot;: &quot;cave-lantern&quot; }, &quot;nextGate&quot;: { &quot;goldPct&quot;: 0.7 },
+   &quot;readingKeyItem&quot;: &quot;cave-lantern&quot;,
+   &quot;fragment&quot;: &quot;dawn-stroke&quot; }]
+```
+
+**`maps/r1-camping.json`** (tile grid plus objects; the legend is shared)
+```json
+{ &quot;id&quot;: &quot;r1-camping&quot;, &quot;name&quot;: &quot;Camping Forest&quot;, &quot;lesson&quot;: 1, &quot;zone&quot;: true, &quot;tint&quot;: &quot;forest&quot;,
+  &quot;encounter&quot;: { &quot;rate&quot;: 0.16, &quot;types&quot;: { &quot;fog&quot;: 3, &quot;jumble&quot;: 2, &quot;echo&quot;: 1 }, &quot;eliteChance&quot;: 0.08, &quot;goldenChance&quot;: 0.05 },
+  &quot;tiles&quot;: [&quot;TTTTTTTT…&quot;, &quot;T..,,,,.…&quot;],
+  &quot;legend&quot;: { &quot;T&quot;: &quot;tree&quot;, &quot;.&quot;: &quot;grass&quot;, &quot;,&quot;: &quot;tallgrass&quot;, &quot;=&quot;: &quot;path&quot;, &quot;~&quot;: &quot;water&quot;, &quot;F&quot;: &quot;thickfog&quot; },
+  &quot;objects&quot;: [
+    { &quot;type&quot;: &quot;sign&quot;, &quot;x&quot;: 3, &quot;y&quot;: 2, &quot;text&quot;: &quot;Camping Forest · Lesson 1 words&quot; },
+    { &quot;type&quot;: &quot;chest&quot;, &quot;x&quot;: 12, &quot;y&quot;: 9, &quot;id&quot;: &quot;xiaoqiang-box&quot;, &quot;requiresFlag&quot;: &quot;q-xiaoqiang-2&quot; },
+    { &quot;type&quot;: &quot;warp&quot;, &quot;x&quot;: 0, &quot;y&quot;: 8, &quot;to&quot;: &quot;r1-hub&quot;, &quot;tx&quot;: 38, &quot;ty&quot;: 16 },
+    { &quot;type&quot;: &quot;scrollSpot&quot;, &quot;x&quot;: 7, &quot;y&quot;: 14 }
+  ] }
+```
+
+**`creatures.json`**
+```json
+[{ &quot;id&quot;: &quot;fog&quot;, &quot;name&quot;: &quot;Fogling&quot;, &quot;weak&quot;: &quot;m&quot;, &quot;atk&quot;: &quot;m&quot;, &quot;spell&quot;: &quot;Fog Cloud&quot;,
+   &quot;color&quot;: &quot;#9C97BF&quot;, &quot;art&quot;: &quot;fog&quot;, &quot;drop&quot;: &quot;mist-drop&quot; }]
+```
+
+**`items.json`**
+```json
+[{ &quot;id&quot;: &quot;rice-ball&quot;, &quot;name&quot;: &quot;Rice Ball&quot;, &quot;zh&quot;: &quot;饭团&quot;, &quot;kind&quot;: &quot;consumable&quot;, &quot;price&quot;: 25,
+   &quot;effect&quot;: { &quot;type&quot;: &quot;heal&quot;, &quot;amount&quot;: 10 }, &quot;usableIn&quot;: [&quot;battle&quot;,&quot;boss&quot;] },
+ { &quot;id&quot;: &quot;scholar-lantern&quot;, &quot;name&quot;: &quot;Scholar's Lantern&quot;, &quot;kind&quot;: &quot;consumable&quot;, &quot;price&quot;: 30,
+   &quot;effect&quot;: { &quot;type&quot;: &quot;removeOption&quot;, &quot;count&quot;: 1 }, &quot;noTick&quot;: true }]
+```
+
+**`gear.json`** and **`recipes.json`**
+```json
+[{ &quot;id&quot;: &quot;jade-brush&quot;, &quot;name&quot;: &quot;Jade Brush&quot;, &quot;slot&quot;: &quot;brush&quot;, &quot;mods&quot;: { &quot;dmg.w&quot;: 1 } }]
+[{ &quot;id&quot;: &quot;r-jade-brush&quot;, &quot;makes&quot;: &quot;jade-brush&quot;, &quot;needs&quot;: { &quot;ink-bead&quot;: 4, &quot;mirror-shard&quot;: 2 }, &quot;coins&quot;: 40,
+   &quot;unlockFlag&quot;: &quot;q-xiaoqiang-done&quot; }]
+```
+
+**`sets/r1.json`**
+```json
+[{ &quot;id&quot;: &quot;r1-campfire&quot;, &quot;name&quot;: &quot;Campfire&quot;, &quot;words&quot;: [&quot;露营&quot;,&quot;探险&quot;,&quot;集合&quot;,&quot;绑&quot;], &quot;tier&quot;: &quot;silver&quot;,
+   &quot;restores&quot;: { &quot;flag&quot;: &quot;campfire-lit&quot;, &quot;mapPatch&quot;: { &quot;map&quot;: &quot;r1-hub&quot;, &quot;x&quot;: 20, &quot;y&quot;: 18, &quot;tile&quot;: &quot;campfire&quot; } },
+   &quot;reward&quot;: { &quot;coins&quot;: 50, &quot;dialogue&quot;: &quot;r1-campfire-scene&quot; } }]
+```
+
+**`villagers/r1.json`**
+```json
+[{ &quot;id&quot;: &quot;dad-lin&quot;, &quot;name&quot;: &quot;Mr Lin&quot;, &quot;map&quot;: &quot;r1-hub&quot;, &quot;x&quot;: 26, &quot;y&quot;: 14, &quot;sprite&quot;: { &quot;shirt&quot;: &quot;#C9804B&quot; },
+   &quot;muddledLines&quot;: [&quot;Have you seen my… my… face windows? GLASSES!&quot;],
+   &quot;clearLines&quot;: [&quot;Rest your eyes every 30 minutes, like the doctor said!&quot;],
+   &quot;requests&quot;: [
+     { &quot;id&quot;: &quot;q-dad-1&quot;, &quot;text&quot;: &quot;Bring me Silver spirits of 模糊 and 眼圈.&quot;,
+       &quot;goal&quot;: { &quot;type&quot;: &quot;wordsTier&quot;, &quot;words&quot;: [&quot;模糊&quot;,&quot;眼圈&quot;], &quot;tier&quot;: &quot;silver&quot; } },
+     { &quot;id&quot;: &quot;q-dad-2&quot;, &quot;text&quot;: &quot;Beat 3 Twin Shades on Misty Path.&quot;,
+       &quot;goal&quot;: { &quot;type&quot;: &quot;defeat&quot;, &quot;creature&quot;: &quot;twin&quot;, &quot;map&quot;: &quot;r1-misty&quot;, &quot;count&quot;: 3 } },
+     { &quot;id&quot;: &quot;q-dad-3&quot;, &quot;text&quot;: &quot;Write 距离 from memory for me.&quot;,
+       &quot;goal&quot;: { &quot;type&quot;: &quot;writeFromMemory&quot;, &quot;word&quot;: &quot;距离&quot; } }],
+   &quot;reward&quot;: { &quot;keyItem&quot;: &quot;grandmas-lantern&quot;, &quot;flag&quot;: &quot;optician-fixed&quot;, &quot;dialogue&quot;: &quot;r1-dad-clear&quot; } }]
+```
+The same file also lists the passage villagers for the Reading Hall:
+```json
+{ &quot;passageVillagers&quot;: [&quot;grandma&quot;,&quot;teller&quot;,&quot;xiaoqiang&quot;,&quot;dad-lin&quot;,&quot;chef-mei&quot;,&quot;ah-dong&quot;,&quot;gatekeeper&quot;],
+  &quot;passageLeadIn&quot;: { &quot;dad-lin&quot;: &quot;Reading makes my eyes tired… but I loved that passage! Tell me:&quot; } }
+```
+
+**Request goal types:**
+- `wordsTier` (words reach a tier)
+- `collect` (collect N spirits in a zone)
+- `defeat` (beat N creatures of a type, optionally in a map)
+- `writeFromMemory` (write a word from memory)
+- `tingxie` (write N words well in a School tingxie)
+- `readStory` (finish a story)
+- `talk` (talk to a villager)
+- `bring` (hand over an item)
+- `flag` (a story flag is set)
+
+**`dialogue/r1.json`** (a small script language)
+```json
+{ &quot;r1-intro&quot;: [
+    { &quot;say&quot;: &quot;Welcome to &lt;b&gt;Scholar Village&lt;/b&gt;!&quot;, &quot;who&quot;: &quot;grandma&quot; },
+    { &quot;say&quot;: &quot;Everyone here has gone a bit… muddled.&quot;, &quot;who&quot;: &quot;grandma&quot; },
+    { &quot;choice&quot;: [{ &quot;text&quot;: &quot;What happened?&quot;, &quot;goto&quot;: &quot;r1-intro-why&quot; }, { &quot;text&quot;: &quot;Let's explore!&quot;, &quot;end&quot;: true }] }
+  ],
+  &quot;r1-intro-why&quot;: [
+    { &quot;say&quot;: &quot;Come up to the attic. I'll show you.&quot;, &quot;who&quot;: &quot;grandma&quot; },
+    { &quot;setFlag&quot;: &quot;attic-open&quot; }, { &quot;give&quot;: { &quot;keyItem&quot;: &quot;spirit-brush-handle&quot; } }
+  ] }
+```
+
+**Script commands:**
+- `say` (with `who`)
+- `choice` (with `goto` or `end`)
+- `setFlag`
+- `if` (`flag` or `hasItem`, then a `then`/`else` script id)
+- `give` (coins, item, gear or key item)
+- `battle` (a scripted creature and word)
+- `startBoss`
+- `wait`
+- `sfx`
+
+**`bosses.json`**
+```json
+[{ &quot;id&quot;: &quot;muddle-king&quot;, &quot;name&quot;: &quot;Muddle King&quot;, &quot;zh&quot;: &quot;糊涂大王&quot;, &quot;hp&quot;: 12, &quot;art&quot;: &quot;muddle-king&quot;,
+   &quot;introDialogue&quot;: &quot;r1-boss-intro&quot;, &quot;outroDialogue&quot;: &quot;r1-boss-outro&quot;,
+   &quot;counterChance&quot;: 0.3, &quot;counterDmg&quot;: 3, &quot;wrongDmg&quot;: 5,
+   &quot;phases&quot;: [
+     { &quot;type&quot;: &quot;chain&quot;, &quot;count&quot;: 3, &quot;source&quot;: { &quot;kind&quot;: &quot;conjunction&quot;, &quot;lessons&quot;: [1,2,3] } },
+     { &quot;type&quot;: &quot;scramble&quot;, &quot;count&quot;: 2, &quot;source&quot;: { &quot;kind&quot;: &quot;sentences&quot;, &quot;lessons&quot;: [1,2,3] } },
+     { &quot;type&quot;: &quot;ink&quot;, &quot;count&quot;: 2, &quot;source&quot;: { &quot;words&quot;: &quot;regionCollected&quot; } },
+     { &quot;type&quot;: &quot;scroll&quot;, &quot;source&quot;: { &quot;group&quot;: &quot;TN-G1&quot; } } ],
+   &quot;rewards&quot;: { &quot;fragment&quot;: &quot;dawn-stroke&quot;, &quot;coins&quot;: 100, &quot;xp&quot;: 80, &quot;badge&quot;: &quot;r1-badge&quot; } }]
+```
+
+**`milestones.json`**, **`quest-templates.json`** and **`balance.json`** hold the tables from sections 6, 8.4 and 9.1 as data.
+
+### 17.3 Content validation (`tools/validate-content.mjs`, run by `build:content`)
+
+Fail the build if any of these is not true:
+
+- Every word referenced in sets, villagers, idioms and word tags exists in the generated words.
+- Every map warp points to an existing map and a walkable tile. Every map row has the same length.
+- Every dialogue `goto` and every `dialogue` reference exists.
+- Every recipe's materials and outputs exist. Every creature has a valid `weak`/`atk` skill and `art` function.
+- Every boss phase source has enough questions for its `count`.
+- Every character in every word exists in `&lt;level&gt;.chars.json`. If one doesn't, list the missing characters.
+- Every level marked `ready` has a campaign folder. Every campaign region has 7 existing `passageVillagers`. Boss phases, Exam Day and chains only use types that `level.json` enables and that the level's content actually has.
+- Every single question has 4 unique options, and `correct` is one of them.
+- Gate percentages are in `[0, 1]`, and every playable region has at least one vocabulary word in its denominator.
+- Required items and boss areas are reachable without circular prerequisites, including the seventh fragment before the Dictionary Tree.
+- Required gate and idiom questions have reviewed options and a content-review status.
+
+---</pre></details><details id="source-19"><summary>18. Save data</summary><pre>
+### 18.1 Schema (version 1)
+
+`localStorage` keys:
+- `wsq-profile`: `{&quot;level&quot;:&quot;p5&quot;}`, the chosen level (plain JSON).
+- `wsq-save-&lt;level&gt;`: that level's save, encoded (18.3). One per level.
+
+The decoded save looks like this:
+
+```json
+{
+  &quot;version&quot;: 1, &quot;level&quot;: &quot;p5&quot;, &quot;contentVersion&quot;: &quot;1&quot;,
+  &quot;createdAt&quot;: &quot;2026-09-22&quot;,
+  &quot;player&quot;: { &quot;name&quot;: &quot;&quot;, &quot;level&quot;: 1, &quot;xp&quot;: 0, &quot;hp&quot;: 20, &quot;coins&quot;: 20, &quot;map&quot;: &quot;r1-hub&quot;, &quot;x&quot;: 20, &quot;y&quot;: 14, &quot;dir&quot;: &quot;down&quot;,
+              &quot;gear&quot;: { &quot;brush&quot;: &quot;bamboo-brush&quot;, &quot;charm&quot;: null, &quot;hat&quot;: null } },
+  &quot;words&quot;: { &quot;露营&quot;: { &quot;c&quot;: 1, &quot;st&quot;: { &quot;m&quot;: 2, &quot;p&quot;: 1, &quot;h&quot;: 0, &quot;u&quot;: 0, &quot;w&quot;: 0 }, &quot;ld&quot;: { &quot;m&quot;: &quot;2026-9-21&quot; },
+                        &quot;r&quot;: 3, &quot;x&quot;: 1, &quot;rev&quot;: null, &quot;revInterval&quot;: 3 } },
+  &quot;chars&quot;: { &quot;露&quot;: { &quot;lv&quot;: 1, &quot;n&quot;: 2, &quot;help&quot;: 1, &quot;lb&quot;: 17 } },
+  &quot;inventory&quot;: { &quot;rice-ball&quot;: 2 }, &quot;materials&quot;: { &quot;mist-drop&quot;: 3 }, &quot;keyItems&quot;: [&quot;spirit-brush-handle&quot;],
+  &quot;ownedGear&quot;: [&quot;bamboo-brush&quot;], &quot;partners&quot;: [&quot;露营&quot;, null, null],
+  &quot;flags&quot;: { &quot;attic-open&quot;: true }, &quot;requests&quot;: { &quot;q-dad-1&quot;: &quot;done&quot;, &quot;q-dad-2&quot;: 1 },
+  &quot;sets&quot;: { &quot;r1-campfire&quot;: &quot;done&quot; }, &quot;milestones&quot;: [&quot;spirits-10&quot;],
+  &quot;regions&quot;: { &quot;r1&quot;: { &quot;bossBeaten&quot;: false, &quot;unlocked&quot;: true } },
+  &quot;daily&quot;: { &quot;day&quot;: &quot;2026-9-22&quot;, &quot;battles&quot;: 3, &quot;quests&quot;: [ { &quot;tpl&quot;: &quot;write-3&quot;, &quot;progress&quot;: 1 } ], &quot;chestOpened&quot;: false,
+             &quot;schoolRuns&quot;: 1, &quot;scrollFound&quot;: false },
+  &quot;streak&quot;: { &quot;count&quot;: 5, &quot;lastDay&quot;: &quot;2026-9-21&quot;, &quot;freezesUsedWeek&quot;: &quot;2026-W38&quot; },
+  &quot;scrolls&quot;: [&quot;scroll-12&quot;], &quot;stories&quot;: [1, 2],
+  &quot;reading&quot;: { &quot;active&quot;: &quot;HC-G3&quot;, &quot;scroll&quot;: true, &quot;done&quot;: [&quot;CH-G2&quot;], &quot;results&quot;: { &quot;0&quot;: { &quot;how&quot;: &quot;right&quot; } }, &quot;tries&quot;: { &quot;2&quot;: 1 } },
+  &quot;written&quot;: [{ &quot;day&quot;: &quot;2026-9-22&quot;, &quot;title&quot;: &quot;大卫的成长&quot;, &quot;q&quot;: &quot;…&quot;, &quot;a&quot;: &quot;…&quot;, &quot;ans&quot;: &quot;…&quot;, &quot;rating&quot;: &quot;partly&quot; }],
+  &quot;school&quot;: { &quot;day&quot;: &quot;2026-9-22&quot;, &quot;runs&quot;: 1, &quot;examWeek&quot;: &quot;2026-9-21&quot; }, &quot;tampered&quot;: false,
+  &quot;stats&quot;: { &quot;m&quot;: [10, 12], &quot;p&quot;: [5, 9], &quot;h&quot;: [7, 8], &quot;u&quot;: [4, 6], &quot;w&quot;: [3, 5], &quot;c&quot;: [6, 8], &quot;x&quot;: [2, 5] },
+  &quot;settings&quot;: { &quot;daily&quot;: 15, &quot;lenient&quot;: true, &quot;speechRate&quot;: 0.85, &quot;pin&quot;: null, &quot;goal&quot;: null },
+  &quot;battleCounter&quot;: 17, &quot;playMs&quot;: 0
+}
+```
+
+### 18.2 Rules
+
+- **Always migrate on load.** `migrations.js` exports an ordered list, e.g. `[v0→v1, v1→v2]`. After migrating, **fill in any missing fields from `freshState()`**, deeply for known objects.
+  - The prototype froze on &quot;Next&quot; because an older save, carried over from the previous version of the page, was missing new fields.
+- Save after every battle, request, purchase and dialogue end, and every 5 seconds while playing.
+- **Recovery before autosave:** validate and migrate into temporary state before replacing live state.
+  Preserve an unreadable or invalid payload unchanged and suspend autosave until the user chooses recovery or explicitly confirms a fresh start.
+  Maintain a last-known-good backup separately from the active save.
+  A failed storage write shows a persistent warning and offers export; it must not be silently ignored.
+- Use local calendar dates (not UTC) for `day` keys. A `day:changed` event resets `daily`.
+- Offer export and import using the envelope in section 18.3.
+  Validate schema version, level identifier, content version, required field types and value ranges before committing an import.
+  Reject unsupported future versions or wrong-level data without changing active progress.
+  Back up the current valid save before a successful replacement.
+- The first prototype's save key was `zilin-save-v1` (plain JSON). When there's no `wsq-save-p5`, load it into P5 once and migrate it.
+- A save always belongs to one level. Never load one level's save while another level is active.
+
+### 18.3 Save encoding (anti-tampering)
+
+- Store each save as `WSQ1.&lt;base64 of the UTF-8 JSON&gt;.&lt;checksum&gt;`. The checksum is FNV-1a (32-bit, hex) of a fixed salt string plus the base64 text.
+- On load: decode it, then recompute the checksum. If it doesn't match, **still load the save**, but set `tampered: true`. The parent panel then shows a notice (section 12). Never delete or reset automatically.
+- Also accept plain JSON (older saves and imports) and re-save it in the encoded format.
+- **Canonical export format:** a JSON envelope `{ &quot;format&quot;: &quot;wsq-export&quot;, &quot;version&quot;: 1, &quot;level&quot;: &quot;p5&quot;, &quot;contentVersion&quot;: &quot;1&quot;, &quot;save&quot;: &quot;WSQ1.&lt;body&gt;.&lt;checksum&gt;&quot; }`.
+  The encoded save body also records its schema `version`, `level` and `contentVersion`; validate agreement with the envelope.
+  The checksum remains in the encoded save string.
+  Accept legacy encoded strings and plain-JSON saves through explicit migration; use the active selected level only for recognised legacy saves that lack a level field.
+  New exports always use the envelope.
+- **Be honest about the limits:** this stops casual editing (the text is unreadable in dev tools and any edit breaks the checksum), but it is **not** real security. The salt and code are visible to anyone who reads the page source. That is acceptable for a family game with no backend.
+
+---</pre></details><details id="source-20"><summary>19. Testing and debug</summary><pre>
+### 19.1 Unit tests (`node --test`, no browser)
+
+- **mastery:** a tick only once per day per skill; a star needs 2 days; tier thresholds; Writing ticks only for recall; review interval doubling and the demotion rule.
+- **selection:** resting words excluded; the weights match the table; a peaceful zone returns `null`.
+- **questions:**
+  - for every word × skill (seeded random), the correct answer is among the options
+  - there are 4 unique options, none `undefined`
+  - exam-to-word mapping regexes
+- **pinyin:** tone placement for `iu`, `ui` and `ü`; variants never equal the original.
+- **damage and enemy turn:** formulas against a seeded random source.
+- **quests, streak and freeze:** across simulated days.
+- **migrations:** v0 (prototype) → v1 fills every field.
+- **save encoding:** round-trips Chinese text; a changed character in the body sets `tampered`; plain JSON still loads.
+- **levels:** saves are isolated per level; switching levels loads the right save; features switched off in `level.json` never appear.
+- **Reading Hall:** questions map to villagers in order; retry and &quot;I don't know&quot; rules; finishing the first passage gives the key item exactly once.
+- **content validation:** runs as a test too.
+- **Approved tolerance:** three misses followed by a completed stroke can still earn a From memory tick; four-miss autofill, an explicit demonstration or giving up cannot.
+- **Percentage gates:** use different region sizes and duplicate vocabulary references; verify ceiling rounding, Silver-or-better counting and level isolation.
+- **Save recovery:** corrupt, truncated, unsupported-version and wrong-level imports cannot overwrite working progress; failed writes leave the previous good payload intact.
+- **XP presentation:** one reward crossing several level thresholds grants progression once and queues one celebration containing every gained level.
+
+### 19.2 End-to-end smoke tests (Playwright)
+
+- Boot, dismiss the intro, walk into tall grass, then force a battle.
+- Answer by clicking the correct option (read it from exposed test hooks), and see the enemy turn.
+- **Writing:** simulate strokes by dragging the mouse along the Hanzi Writer `medians` from `chars.json`:
+  - Convert with `x = left + pad + mx·s` and `y = top + pad + (900 − my)·s`, where `s = (size − 2·pad) / 1024`.
+  - Assert the result is &quot;Well done!&quot;, then tap Next and the battle continues. (This exact test caught the hang bug.)
+- &quot;I don't know&quot; moves on and marks a fail.
+- Reload and check the save persists; an old save migrates cleanly.
+- Before expanding beyond Region 1, complete a multi-character write and a passage on a real target iPad, including the Chinese keyboard, stylus, scrolling and focus.
+- Check repeated writing-screen entry and exit for leaked callbacks or stuck Next actions.
+- Test the offline bundle, missing Chinese speech voices, local font fallbacks and 44 px touch targets during Region 1 work.
+- Verify the numeric XP label and level-up celebration for battle and non-battle XP, with reduced motion and sound disabled.
+
+### 19.3 Debug overlay (dev only, `?debug=1`)
+
+- Shows the current word weights, the day (with the ability to fake the date: +1 day button), the daily counters and an HP log.
+- Buttons: grant spirits, set tiers and open gates.
+
+---</pre></details><details id="source-21"><summary>20. Build phases (in order, with acceptance criteria)</summary><pre>
+Each phase ends with a playable build and passing tests. Do not start a phase before the previous one's acceptance criteria are met.
+
+| Phase | Scope | Acceptance criteria |
+|---|---|---|
+| **P0 Setup** | repo layout (15), `package.json`, vendor Hanzi Writer, `build-content`, `build-chars`, `validate-content` | `npm run build:content` produces JSON for all 17 lessons; validation passes; the missing-characters list is empty |
+| **P1 Engine** | `index.html` shell, CSS tokens, state/save/migrations/events, **level picker and per-level encoded saves**, map loading and rendering, movement, D-pad, interactions, overlay, dialogue box, toasts, HUD | pick P5; walk around an r1-hub map loaded from JSON on desktop and iPad; talk to a sign; save and reload restores the position; an edited save loads with the tamper flag |
+| **P2 Learning core** | questions (all 4 MCQ skills plus exam adapters), mastery, selection, audio, writing module (3 stages, pass/fail, Show me how, I don't know) | unit tests pass; a dev page can run any question or writing task for any word |
+| **P3 Region 1 parity** | wild battles (5.1–5.5), enemy turn, creatures, Spirit Book, School (quiz, tingxie, Exam Day), Inn, Shop (Rice Ball), Storyteller, **Reading Hall passage quests (11.4)**, energy cap, parent panel (basic, with written answers) | everything the prototype does works, split into modules; the e2e writing test passes; a full passage chain can be finished and gives the Cave Lantern |
+| **P4 Items and gear** | consumables, gear slots, materials drops, Craft Table, Character screen, player sprite shows gear | each item in 7.1 and 7.2 has a working effect; hint items suppress ticks |
+| **P5 Collection** | partners (8.2), Spirit Sets and map patches (8.3), milestones (8.4), player room (9.5) | completing the Campfire set visibly lights the campfire; partner bonuses apply; milestones grant rewards once |
+| **P6 Daily loops** | quest board and chest, Lantern Streak with freeze, Daily Scroll and Scroll Library | with a faked date: quests reset at midnight, the streak counts, a freeze applies silently once a week |
+| **P7 Region 1 story** | dialogue engine (script commands), villagers and requests (Xiaoqiang, Mr Lin, Chef Mei), rival duel, tutorial battle, gate, Muddle King boss with 4 phases, reform scene, Dawn Stroke, hidden grove, next-region Gold gate | Region 1 can be played start to finish as a story; all requests complete; the boss is beatable and gives the fragment |
+| **P8 Parent** | PIN, goals, weekly summary, export/import, unlock region, speech rate | a parent can set a goal and see progress in the room; import restores the save |
+| **P9–P14 Regions 2–7** | one region per phase, following 13.4, including new creature looks, idioms, sets, villagers, boss and fragment ability | each region is completable; the previous fragment opens that region's secret area |
+| **P15 Notice Board and dialogue chains** | practical and dialogue villager chains (11.5) | each chain can be finished; rewards given once |
+| **P16 Polish** | bundle to `dist/index.html`, sound effects (optional), performance on an older iPad, accessibility pass, content proofreading | a single file runs offline by double-click; Lighthouse accessibility ≥ 90 on the menu screens |
+
+**Scope guard:** if time is short, ship P0–P8 (the complete Region 1 experience) before adding any new regions.
+
+**Adding a new level later** (after P16): copy the YAML, write that level's campaign files (regions, maps, villagers, dialogue, sets, bosses), set it `ready`, and run the validator. No engine changes should be needed; if any are, the engine has level-specific code that should be moved into content.
+
+---</pre></details><details id="source-22"><summary>21. Known pitfalls (learned from the prototype)</summary><pre>
+1. **Old save missing fields** makes the game freeze silently on &quot;Next&quot;. Always migrate and deep-fill defaults (18.2). Wrap every &quot;Next&quot; and continue handler in `safe()`, which logs the error and returns to the map instead of freezing. Disable a button after it is clicked, so a double tap can't advance twice.
+2. `display:flex` on an overlay overrides the `hidden` attribute. Add `[hidden]{display:none!important}`.
+3. **CSS class collisions** (`.stage`). Prefix component classes.
+4. **Double-counting stats:** only `mastery.record()` should update accuracy stats. Don't also increment them at the call site.
+5. **Treating a result object as a boolean:** a quiz runner received `{ok:false}`, which is truthy, and counted it as correct. Normalise results to `{ ok, ... }` everywhere.
+6. **Hanzi Writer:**
+   - Don't rely on the CDN for character data; vendor a subset.
+   - It adds `mouseup` and `touchend` listeners on the whole document each time a writer is created. Reuse one writer per writing screen with `setCharacter()` rather than creating many.
+   - Call `cancelQuiz()` before animating.
+   - The grid box must have `touch-action: none`.
+7. **`file://`** blocks ES modules and `fetch`. Use the dev server, or the bundled single file.
+8. **speechSynthesis:** the list of voices loads asynchronously, and some Windows machines have no zh-CN voice. Detect this and show a one-time tip to the parent: &quot;Install the Chinese (Simplified) speech pack in Windows settings&quot;.
+9. **Scramble phase:** merge punctuation segments into the previous segment. If a shuffle comes out already in order, reshuffle.
+10. **Option lists:** remove duplicates and `undefined`, and always check that `correct` is among the options.
+11. **Exam text:** strip bracketed Chinese instructions and add an English instruction line (3.5). Some `usage` stems don't match the regex; fall back to a generic English line.
+12. **Stars per day** confuse children the first time. Show &quot;Half-star today, finish it tomorrow!&quot; on the win screen, and explain it in the Spirit Book header.
+13. **Open written answers can't be auto-marked.** Never make a required step depend on a written answer being *right*: completion (answered, compared with the model answer, rated) is what counts. &quot;I don't know&quot; must always be available.
+14. **Base64 saves:** `btoa` fails on Chinese text. Encode the JSON to UTF-8 bytes first (`TextEncoder`), then base64, and reverse with `TextDecoder`.
+
+---</pre></details><details id="source-23"><summary>Appendix A: Kickoff prompt for a coding agent</summary><pre>
+&gt; You are building **Word Spirit Quest**, an educational RPG in plain HTML, CSS and ES-module JavaScript. Read `gameplan.md` fully before writing code; it is the spec, and it overrides the reference prototype in `prototype/index.html`. The school content is in `content/source/&lt;level&gt;/` (YAML); P5 is the first level, and nothing in `src/` may be specific to it. Work phase by phase from section 20, starting with **P0**. For each phase: (1) list the files you will create or change, (2) implement, (3) add or extend the unit and e2e tests named in section 19, (4) run `npm run build:content &amp;&amp; npm test`, and (5) summarise what works and what is left. Hard rules: all UI and dialogue in English, with Chinese only for learning content (pillar 2); all game text, numbers, maps and dialogue in `content/authored/*.json`, never in `src/`; no answers, stars or unlocks purchasable with coins; no timers; no guilt-based streak messages. Ask before changing any rule in sections 1, 3 or 10.</pre></details><details id="source-24"><summary>Appendix B: Glossary</summary><pre>
+- **字灵 (Word Spirit):** a collectible vocabulary word.
+- **Tick / star / tier:** see 3.2.
+- **听写 (tingxie):** dictation; the child hears a word and writes it.
+- **米字格:** a practice grid with diagonal guide lines.
+- **成语 (chengyu):** four-character idiom; these become special moves.
+- **Brush Fragment:** a key item from each boss that grants a map ability.
+- **Review mode:** a cleared region's state, with fewer, mostly review, encounters.
+- **Level:** a school year's content pack (P5, P6 …); a separate game with its own save.
+- **Passage Scroll / passage villagers:** the Reading Hall's current passage and the villagers who each ask one of its questions.</pre></details></section>
+<footer>Design source: the game's own ink, paper, jade, cinnabar and gold tokens from prototype/index.html and gameplan.md §16, with local fallback fonts. No external assets are required. Review comments are grounded in these local sources; no claim of independently validated learning outcomes is made.</footer></main><script>document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('[data-priority]').forEach(x=>x.classList.toggle('hidden',b.dataset.filter!=='all'&&x.dataset.priority!==b.dataset.filter));}));</script></body></html>

@@ -1,0 +1,335 @@
+title: 第二课 (Lesson 2)
+vocab:
+  - word: 答案
+    pinyin: dá àn
+    meaning: Answer
+    example: 这个问题没有标准答案。
+    sentenceBank:
+      - zh: 我终于找到了这道题的正确答案。
+        en: I finally found the correct answer to this problem.
+      - zh: 请把你的答案写在答题纸上。
+        en: Please write your answer on the answer sheet.
+      - zh: 老师公布了昨天的测验答案。
+        en: The teacher announced the answers to yesterday's test.
+      - zh: 这个问题没有唯一的答案。
+        en: There is no single answer to this question.
+      - zh: 经过认真思考，他得出了答案。
+        en: After careful thought, he arrived at the answer.
+  - word: 户外
+    pinyin: hù wài
+    meaning: Outdoors
+    example: 我喜欢在周末参加户外活动。
+    sentenceBank:
+      - zh: 多参加户外运动对身体有好处。
+        en: Participating more in outdoor sports is good for one's health.
+      - zh: 今天天气晴朗，适合去户外郊游。
+        en: The weather is sunny today, suitable for an outdoor outing.
+      - zh: 户外活动能让我们接触大自然。
+        en: Outdoor activities allow us to get in touch with nature.
+      - zh: 请在户外空旷的地方放风筝。
+        en: Please fly kites in open outdoor spaces.
+      - zh: 他们举办了一场热闹的户外音乐会。
+        en: They organized a lively outdoor concert.
+  - word: 伤害
+    pinyin: shāng hài
+    meaning: Harm / Hurt
+    example: 我们不要轻易伤害别人的感情。
+    sentenceBank:
+      - zh: 我们不能做出伤害别人的事情。
+        en: We must not do things that harm others.
+      - zh: 强烈的阳光会伤害眼睛。
+        en: Intense sunlight will damage the eyes.
+      - zh: 他的言语伤害了朋友的感情。
+        en: His words hurt his friend's feelings.
+      - zh: 学会自我保护，避免受到伤害。
+        en: Learn self-protection to avoid being hurt.
+      - zh: 乱扔垃圾会严重伤害自然环境。
+        en: Littering will severely harm the natural environment.
+  - word: 盯
+    pinyin: dīng
+    meaning: Stare / Gaze
+    example: 他目不转睛地盯着书本。
+    sentenceBank:
+      - zh: 不要一直盯着屏幕看，注意休息。
+        en: Don't keep staring at the screen; make sure to rest.
+      - zh: 小猫正死死地盯着老鼠。
+        en: The kitten is staring intently at the mouse.
+      - zh: 他盯着地图看了好久，寻找路线。
+        en: He stared at the map for a long time, looking for the route.
+      - zh: 被陌生人盯着看会让人觉得不舒服。
+        en: Being stared at by a stranger makes one feel uncomfortable.
+      - zh: 老师盯着黑板上的算式认真检查。
+        en: The teacher stared at the equation on the blackboard, checking it carefully.
+  - word: 代表
+    pinyin: dài biǎo
+    meaning: Represent
+    example: 他代表学校参加了比赛。
+    sentenceBank:
+      - zh: 他代表全班同学在台上发言。
+        en: He represents the entire class speaking on stage.
+      - zh: 红色的心形符号代表爱心。
+        en: The red heart symbol represents love.
+      - zh: 每一个代表都提出了宝贵的建议。
+        en: Every representative offered valuable suggestions.
+      - zh: 这项荣誉代表了大家共同的努力。
+        en: This honor represents everyone's joint efforts.
+      - zh: 班长作为学生代表去参加了会议。
+        en: The class monitor attended the meeting as the student representative.
+  - word: 而且
+    pinyin: ér qiě
+    meaning: Furthermore / And
+    example: 她不仅聪明，而且非常勤奋。
+    sentenceBank:
+      - zh: 他不仅聪明，而且非常勤奋。
+        en: He is not only smart, but also very diligent.
+      - zh: 这件衣服款式好看，而且价格便宜。
+        en: This piece of clothing looks nice and is also cheap.
+      - zh: 外面下着大雨，而且还刮起了大风。
+        en: It is raining heavily outside, and moreover, strong winds have blown up.
+      - zh: 这本书很有趣，而且能学到知识。
+        en: This book is very interesting, and you can also learn knowledge from it.
+      - zh: 他按时完成了作业，而且字写得很好。
+        en: He completed his homework on time, and moreover, his handwriting is very good.
+  - word: 习惯
+    pinyin: xí guàn
+    meaning: Habit
+    example: 早睡早起是一个好习惯。
+    sentenceBank:
+      - zh: 养成早睡早起的好习惯很重要。
+        en: Developing the good habit of sleeping early and rising early is very important.
+      - zh: 我已经习惯了这里的日常生活。
+        en: I have already gotten used to daily life here.
+      - zh: 改掉不良习惯需要持之以恒的努力。
+        en: Breaking bad habits requires persistent effort.
+      - zh: 饭后散步是爷爷多年来的习惯。
+        en: Taking a walk after meals has been Grandpa's habit for many years.
+      - zh: 他慢慢习惯了新学校的环境。
+        en: He gradually got used to the new school's environment.
+  - word: 正确
+    pinyin: zhèng què
+    meaning: Correct
+    example: 请选择正确的选项。
+    sentenceBank:
+      - zh: 请用正确的姿势书写和阅读。
+        en: Please use the correct posture for writing and reading.
+      - zh: 他的回答完全正确，得到了老师的称赞。
+        en: His answer was completely correct and won praise from the teacher.
+      - zh: 做出正确的选择需要冷静思考。
+        en: Making the correct choice requires calm thinking.
+      - zh: 只有通过正确的方法才能解决问题。
+        en: Only through correct methods can problems be solved.
+      - zh: 请确认输入了正确的密码。
+        en: Please confirm that you have entered the correct password.
+  - word: 昏暗
+    pinyin: hūn àn
+    meaning: Dim / Dark
+    example: 这里的灯光太昏暗了。
+    sentenceBank:
+      - zh: 在昏暗的光线下看书对眼睛不好。
+        en: Reading books under dim light is bad for the eyes.
+      - zh: 房间里十分昏暗，需要打开灯。
+        en: The room is very dim and needs the lights turned on.
+      - zh: 太阳落山了，四周渐渐昏暗下来。
+        en: The sun set, and surroundings gradually grew dim.
+      - zh: 昏暗的街灯照射着空无一人的马路。
+        en: Dim streetlights illuminated the empty road.
+      - zh: 他们走进了昏暗的山洞里。
+        en: They walked into the dim cave.
+  - word: 放松
+    pinyin: fàng sōng
+    meaning: Relax
+    example: 听音乐可以让我感到放松。
+    sentenceBank:
+      - zh: 考试结束后，大家终于可以放松一下了。
+        en: After the exam ended, everyone could finally relax a bit.
+      - zh: 听音乐是放松心情的好办法。
+        en: Listening to music is a good way to relax your mind.
+      - zh: 做深呼吸可以帮助身体放松。
+        en: Taking deep breaths can help the body relax.
+      - zh: 学习时不能放松对自己的要求。
+        en: One shouldn't relax standards for oneself while studying.
+      - zh: 周末去公园散步让人感到无比放松。
+        en: Walking in the park on weekends makes one feel exceptionally relaxed.
+  - word: 每隔
+    pinyin: měi gé
+    meaning: At intervals of
+    example: 每隔一小时，我们就休息一下。
+    sentenceBank:
+      - zh: 每隔两小时，我们就要休息十分钟。
+        en: Every two hours, we take a ten-minute break.
+      - zh: 这里的公交车每隔一趟车需要等很久。
+        en: The buses here require a long wait between every run.
+      - zh: 道路两旁每隔几米就有一棵树。
+        en: There is a tree every few meters on both sides of the road.
+      - zh: 请每隔一段时间清理一下垃圾。
+        en: Please clean up the trash every once in a while.
+      - zh: 闹钟每隔五分钟就会响一次。
+        en: The alarm clock rings every five minutes.
+  - word: 下降
+    pinyin: xià jiàng
+    meaning: Decline / Drop
+    example: 最近气温有所下降。
+    sentenceBank:
+      - zh: 近期的气温开始明显下降。
+        en: Temperatures recently have begun to drop noticeably.
+      - zh: 长期看手机会导致视力下降。
+        en: Looking at mobile phones long-term will lead to declining eyesight.
+      - zh: 飞机正在缓缓下降，准备降落。
+        en: The airplane is gradually descending, preparing to land.
+      - zh: 不努力学习会导致成绩下降。
+        en: Not studying hard will lead to a drop in grades.
+      - zh: 商品的价格在节后有所下降。
+        en: Prices of goods dropped somewhat after the holiday.
+  - word: 电脑
+    pinyin: diàn nǎo
+    meaning: Computer
+    example: 我用电脑写作业。
+    sentenceBank:
+      - zh: 我用电脑来查阅学习资料。
+        en: I use a computer to look up study materials.
+      - zh: 不要长时间坐在电脑面前。
+        en: Do not sit in front of the computer for a long time.
+      - zh: 这台电脑的处理速度非常快。
+        en: This computer's processing speed is extremely fast.
+      - zh: 哥哥正在电脑上编写程序。
+        en: My elder brother is writing programs on the computer.
+      - zh: 现代人的工作离不开电脑。
+        en: Modern people's work cannot do without computers.
+  - word: 眼圈
+    pinyin: yǎn quān
+    meaning: Eye circles
+    example: 他熬夜了，黑眼圈很重。
+    sentenceBank:
+      - zh: 昨晚没睡好，今天他的眼圈黑黑的。
+        en: He didn't sleep well last night, so today his eye circles are dark.
+      - zh: 听到坏消息，她的眼圈一下子红了。
+        en: Upon hearing the bad news, the rims of her eyes reddened instantly.
+      - zh: 大熊猫有标志性的黑眼圈。
+        en: Giant pandas have iconic dark eye circles.
+      - zh: 哭过之后，她的眼圈显得有些红肿。
+        en: After crying, the areas around her eyes appeared somewhat red and swollen.
+      - zh: 长期熬夜会让眼圈颜色变深。
+        en: Staying up late long-term will darken one's eye circles.
+  - word: 模糊
+    pinyin: mó hu
+    meaning: Blurry
+    example: 远处的景物有些模糊。
+    sentenceBank:
+      - zh: 不戴眼镜时，我看远处的字很模糊。
+        en: Without glasses, the characters I see in the distance are blurry.
+      - zh: 玻璃上蒙了一层水汽，视线变得模糊。
+        en: Water vapor gathered on the glass, making line of sight blurry.
+      - zh: 对很久以前的事，我的记忆已经模糊了。
+        en: For things from long ago, my memories have become vague.
+      - zh: 雨水打湿了字迹，上面的文字模糊不清。
+        en: Rain soaked the handwriting, leaving the text on it blurry and unclear.
+      - zh: 天色暗了，轮廓开始模糊起来。
+        en: The sky darkened, and outlines began to grow fuzzy.
+  - word: 抛到脑后
+    pinyin: pāo dào nǎo hòu
+    meaning: To forget completely
+    example: 他把烦恼都抛到脑后了。
+    sentenceBank:
+      - zh: 玩耍时，他把作业完全抛到脑后了。
+        en: While playing, he completely threw his homework to the back of his mind.
+      - zh: 我们要把烦恼抛到脑后，快乐生活。
+        en: We should cast our worries behind us and live happily.
+      - zh: 一遇到好吃的，他就把减肥的计划抛到脑后。
+        en: Whenever he encounters tasty food, he casts his weight-loss plan to the wind.
+      - zh: 老师的叮嘱全被他抛到脑后去了。
+        en: The teacher's instructions were entirely put out of his mind by him.
+      - zh: 面对危机，他把个人安全抛到脑后。
+        en: Facing crisis, he put his personal safety out of his mind.
+  - word: 保持
+    pinyin: bǎo chí
+    meaning: Maintain
+    example: 请保持安静。
+    sentenceBank:
+      - zh: 上课时要保持安静，认真听讲。
+        en: Keep quiet during class and listen attentively.
+      - zh: 请保持室内的卫生和整洁。
+        en: Please maintain indoor hygiene and neatness.
+      - zh: 运动员在比赛中保持着良好的状态。
+        en: The athlete maintained a good condition during the competition.
+      - zh: 看书时眼睛与书本要保持适当距离。
+        en: When reading, maintain an appropriate distance between eyes and books.
+      - zh: 遇到急事时要保持冷静。
+        en: Maintain calm when encountering urgent matters.
+  - word: 距离
+    pinyin: jù lí
+    meaning: Distance
+    example: 我们要保持安全距离。
+    sentenceBank:
+      - zh: 学校距离我家只有一公里。
+        en: The school is only one kilometer away from my home.
+      - zh: 保持安全距离可以避免碰撞。
+        en: Keeping a safe distance can prevent collisions.
+      - zh: 距离考试还有最后三天时间。
+        en: There are still three final days left before the exam.
+      - zh: 科技缩小了人们之间的空间距离。
+        en: Technology has narrowed the spatial distance between people.
+      - zh: 两座城市之间的距离非常遥远。
+        en: The distance between the two cities is very far.
+sentences:
+  - text: 小月吓得浑身发抖，直冒冷汗。
+    segments:
+      - 小月
+      - 吓得
+      - 浑身发抖
+      - ，
+      - 直冒
+      - 冷汗
+      - 。
+    icon: ghost
+    description: Scared girl, shivering with cold sweat.
+  - text: 小安坐在电脑前，目不转睛地盯着屏幕。
+    segments:
+      - 小安
+      - 坐在
+      - 电脑前
+      - ，
+      - 目不转睛地
+      - 盯着
+      - 屏幕
+      - 。
+    icon: monitor
+    description: A boy staring intently at the computer screen.
+  - text: 我急得像热锅上的蚂蚁，心里七上八下的。
+    segments:
+      - 我
+      - 急得像
+      - 热锅上的
+      - 蚂蚁
+      - ，
+      - 心里
+      - 七上八下的
+      - 。
+    icon: flame
+    description: Anxious like an ant on a hot pan.
+  - text: 在好奇心的驱使下，我向着烟味的方向走去。
+    segments:
+      - 在
+      - 好奇心的
+      - 驱使下
+      - ，
+      - 我
+      - 向着
+      - 烟味的方向
+      - 走去
+      - 。
+    icon: search
+    description: Driven by curiosity, walking towards the smoke.
+  - text: 因为睡眠不足，他整天无精打采，身体也变差了。
+    segments:
+      - 因为
+      - 睡眠不足
+      - ，
+      - 他
+      - 整天
+      - 无精打采
+      - ，
+      - 身体
+      - 也变差了
+      - 。
+    icon: coffee
+    description: Listless and tired due to lack of sleep.

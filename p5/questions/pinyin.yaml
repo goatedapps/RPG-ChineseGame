@@ -1,0 +1,338 @@
+- questionID: CH-Q1
+  lessonIds:
+    - 13
+  question: 汉字是由笔画__构成__的方块字。（选出画线词语的汉语拼音）
+  options:
+    - gòu céng
+    - guò céng
+    - gòu chéng
+    - guò chéng
+  correct: gòu chéng
+- questionID: CH-Q2
+  lessonIds:
+    - 12
+  question: 弟弟__盼望__生日那天收到一个玩具汽车。（选出画线词语的汉语拼音）
+  options:
+    - pán wán
+    - pàn wàng
+    - pàng wǎn
+    - páng wāng
+  correct: pàn wàng
+- questionID: NH-Q1
+  lessonIds:
+    - 11
+  question: 他穿了一件白色的__衬衫__去工作。（选出画线词语的汉语拼音）
+  options:
+    - chèn sān
+    - chèn shān
+    - chèng sān
+    - chèng shān
+  correct: chèn shān
+- questionID: NH-Q2
+  lessonIds:
+    - 3
+  question: 妈妈在碗里打了两个鸡蛋，加入调味料后开始__搅拌__。（选出画线词语的汉语拼音）
+  options:
+    - jué pàn
+    - jué bàn
+    - jiǎo pàn
+    - jiǎo bàn
+  correct: jiǎo bàn
+- questionID: ACSJ-Q1
+  lessonIds:
+    - 3
+  question: 这个杯子的__形状__很特别，吸引了我的目光。 (选出画线词语的汉语拼音)
+  options:
+    - xín zhuàn
+    - xín zhuàng
+    - xíng zhuàn
+    - xíng zhuàng
+  correct: xíng zhuàng
+- questionID: ACSJ-Q2
+  lessonIds:
+    - 15
+  question: 他为人__慷慨__，常常出钱请朋友们吃饭。 (选出画线词语的汉语拼音)
+  options:
+    - kān kǎi
+    - kān gài
+    - kāng kǎi
+    - kāng gài
+  correct: kāng kǎi
+- questionID: HP-Q1
+  lessonIds:
+    - 1
+  question: 学校__禁止__学生在课室里用手机。 (选出画线词语的汉语拼音)
+  options:
+    - jìn zǐ
+    - jìn zhǐ
+    - jìng zǐ
+    - jìng zhǐ
+  correct: jìn zhǐ
+- questionID: HP-Q2
+  lessonIds:
+    - 15
+  question: 小明喜欢在课间休息时和同学们__闲聊__。 (选出画线词语的汉语拼音)
+  options:
+    - xián liáo
+    - xián liǎo
+    - xiǎn liáo
+    - xiǎn liǎo
+  correct: xián liáo
+- questionID: MB-Q1
+  lessonIds:
+    - 6
+  question: 陈阿姨很__善良__，总是帮助身边的人。 (选出画线词语的汉语拼音)
+  options:
+    - shàn liáng
+    - shàn liǎng
+    - shàng liáng
+    - shàng liǎng
+  correct: shàn liáng
+- questionID: MB-Q2
+  lessonIds:
+    - 8
+  question: 小月经常生病，而且身体也很__瘦弱__。 (选出画线词语的汉语拼音)
+  options:
+    - shōu luò
+    - shòu luò
+    - shōu ruò
+    - shòu ruò
+  correct: shòu ruò
+- questionID: NY-Q1
+  lessonIds:
+    - 11
+  question: 哥哥穿着新买的__衬衫__，看起来很神气。 (选出画线词语的汉语拼音)
+  options:
+    - chén sān
+    - chèn shān
+    - chéng sān
+    - chèng shān
+  correct: chèn shān
+- questionID: NY-Q2
+  lessonIds:
+    - 6
+  question: 如果你找到小狗，请尽快__联系__我。 (选出画线词语的汉语拼音)
+  options:
+    - nián xí
+    - nián xì
+    - lián xí
+    - lián xì
+  correct: lián xì
+- questionID: RG-Q1
+  lessonIds: []
+  question: 丽丽戴了一整天的__隐形__眼镜，眼睛又累又干。 (选出画线词语的汉语拼音)
+  options:
+    - yǐn xīng
+    - yǐn xíng
+    - yǐng xīng
+    - yǐng xíng
+  correct: yǐn xíng
+- questionID: RG-Q2
+  lessonIds:
+    - 7
+  question: 我今天忘了带伞，结果被雨淋得全身都__湿透__了。 (选出画线词语的汉语拼音)
+  options:
+    - sī tòu
+    - sī tuò
+    - shī tòu
+    - shī tuò
+  correct: shī tòu
+- questionID: RS-Q1
+  lessonIds:
+    - 13
+  question: 今年来新加坡旅游的人数打破了__历史__记录。 (选出画线词语的汉语拼音)
+  options:
+    - lí sǐ
+    - lì shǐ
+    - ní sǐ
+    - nì shǐ
+  correct: lì shǐ
+- questionID: RS-Q2
+  lessonIds: []
+  question: 工人们在后院挖出了一颗__炮弹__，惊动了警方。 (选出画线词语的汉语拼音)
+  options:
+    - bào dàn
+    - bào tàn
+    - pào dàn
+    - pào tàn
+  correct: pào dàn
+- questionID: RO-Q1
+  lessonIds:
+    - 13
+  question: 我们要了解国家的__历史__。 (选出画线词语的汉语拼音)
+  options:
+    - lǐ sī
+    - lǐ sì
+    - lì shī
+    - lì shǐ
+  correct: lì shǐ
+- questionID: RO-Q2
+  lessonIds:
+    - 15
+  question: 放在桌子上的水果已经__腐烂__了。 (选出画线词语的汉语拼音)
+  options:
+    - fú lán
+    - fǔ làn
+    - fú làng
+    - fǔ láng
+  correct: fǔ làn
+- questionID: TN-Q1
+  lessonIds:
+    - 11
+  question: 书法课程的报名__截止__日期快到了，妈妈要我赶快报名。（选出画线词语的汉语拼音）
+  options:
+    - jiē zì
+    - jié zhǐ
+    - qiē zì
+    - qié zhǐ
+  correct: jié zhǐ
+- questionID: TN-Q2
+  lessonIds:
+    - 12
+  question: 鱼尾狮公园是新加坡__著名__的景点之一。（选出画线词语的汉语拼音）
+  options:
+    - chù mín
+    - chù míng
+    - zhù mín
+    - zhù míng
+  correct: zhù míng
+- questionID: RL-Q1
+  lessonIds:
+    - 4
+  question: 他做事__缺少__耐心。（选出画线词语的汉语拼音）
+  options:
+    - jiē shǎo
+    - juē shǎo
+    - qiē shǎo
+    - quē shǎo
+  correct: quē shǎo
+- questionID: RL-Q2
+  lessonIds:
+    - 12
+  question: 同学们把桌椅__排列__得整整齐齐。（选出画线词语的汉语拼音）
+  options:
+    - bái liè
+    - bài lèi
+    - pái liè
+    - pài lèi
+  correct: pái liè
+- questionID: SH-Q1
+  lessonIds:
+    - 13
+  question: 书法是一门__艺术__。（选出画线词语的汉语拼音）
+  options:
+    - yì běn
+    - yí běn
+    - yì shù
+    - yí shù
+  correct: yì shù
+- questionID: SH-Q2
+  lessonIds:
+    - 9
+  question: 木兰一个女生竟能代替父亲去__打仗__。（选出画线词语的汉语拼音）
+  options:
+    - dǎ zāng
+    - dǎ zàng
+    - dǎ zhāng
+    - dǎ zhàng
+  correct: dǎ zhàng
+- questionID: PL-Q1
+  lessonIds:
+    - 1
+  question: 我们在海边玩了一整天，直到__黄昏__才回家。（选出画线词语的汉语拼音）
+  options:
+    - huáng hūn
+    - háng hūn
+    - huáng yún
+    - háng yún
+  correct: huáng hūn
+- questionID: PL-Q2
+  lessonIds: []
+  question: 上完了__初级__班后，我们就会得到证书__。（选出画线词语的汉语拼音）
+  options:
+    - chū jì
+    - zhū qì
+    - chū jí
+    - zhū qí
+  correct: chū jí
+- questionID: NY24-Q1
+  lessonIds:
+    - 1
+  question: 我们到达机场时，已经接近__黄昏__了。（选出画线词语的汉语拼音）
+  options:
+    - huán hūn
+    - huán fēn
+    - huáng hūn
+    - huáng fēn
+  correct: huáng hūn
+- questionID: NY24-Q2
+  lessonIds:
+    - 8
+  question: 同学们在沙滩上散步，留下了一串一串的__足迹__。（选出画线词语的汉语拼音）
+  options:
+    - zú jī
+    - zú jì
+    - zhú jī
+    - zhú jì
+  correct: zú jì
+- questionID: NY24EOY-Q1
+  lessonIds:
+    - 12
+    - 15
+  question: 汽车在__宽阔__的马路上来来往往。（选出画线词语的汉语拼音）
+  options:
+    - kuān huò
+    - kuān kuò
+    - kuāng huò
+    - kuāng kuò
+  correct: kuān kuò
+- questionID: NY24EOY-Q2
+  lessonIds:
+    - 6
+  question: 搬家后，我还是和旧邻居保持__联系__。（选出画线词语的汉语拼音）
+  options:
+    - lián xì
+    - lián sì
+    - guān xì
+    - guān sì
+  correct: lián xì
+- questionID: HP24EOY-Q1
+  lessonIds:
+    - 2
+    - 5
+  question: 我们今天完成了一项数学__测试__。（选出画线词语的汉语拼音）
+  options:
+    - cè sì
+    - cè shì
+    - chè sì
+    - chè shì
+  correct: cè shì
+- questionID: HP24EOY-Q2
+  lessonIds:
+    - 15
+  question: 风一吹，树上的__枯叶__就纷纷落下。（选出画线词语的汉语拼音）
+  options:
+    - gū yè
+    - gū yè
+    - kū yè
+    - kū yè
+  correct: kū yè
+- questionID: MB24SA2-Q1
+  lessonIds:
+    - 1
+  question: 爷爷送给我的手表非常__贵重__，我一定会好好珍惜。（选出画线词语的汉语拼音）
+  options:
+    - guì zòng
+    - kuì zòng
+    - guì zhòng
+    - kuì zhòng
+  correct: guì zhòng
+- questionID: MB24SA2-Q2
+  lessonIds: []
+  question: 坏人一发现屋主回来了，便从后门__溜走__了。（选出画线词语的汉语拼音）
+  options:
+    - liū zǒu
+    - liū zhǒu
+    - liú zǒu
+    - liú zhǒu
+  correct: liū zǒu

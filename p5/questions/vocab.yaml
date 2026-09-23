@@ -1,0 +1,2322 @@
+- questionID: CH-Q3
+  lessonIds:
+    - 11
+  question: 大家非常痛 ___ 明华伤害小动物的行为。
+  options:
+    - 很
+    - 恨
+    - 狠
+    - 银
+  correct: 恨
+- questionID: CH-Q4
+  lessonIds:
+    - 9
+  question: 妹妹喜欢把洋娃娃装 ___ 成公主的样子。
+  options:
+    - 办
+    - 般
+    - 扮
+    - 板
+  correct: 扮
+- questionID: CH-Q5
+  lessonIds:
+    - 10
+  question: 小明玩手机游戏 ___ 了，一直玩到三更半夜也不想睡。
+  options:
+    - 上瘾
+    - 控制
+    - 习惯
+    - 湿透
+  correct: 上瘾
+- questionID: CH-Q6
+  lessonIds: []
+  question: 火药是中国古代的四大 ___ 之一。
+  options:
+    - 发明
+    - 发表
+    - 发现
+    - 发展
+  correct: 发明
+- questionID: NH-Q3
+  lessonIds: []
+  question: 一棵大树倒在路中间，压 ___ 了一辆汽车。
+  options:
+    - 扁
+    - 过
+    - 骗
+    - 偏
+  correct: 扁
+- questionID: NH-Q4
+  lessonIds:
+    - 17
+  question: 从前，人们会用野 ___ 的骨头做成工具来打猎。
+  options:
+    - 守
+    - 首
+    - 受
+    - 兽
+  correct: 兽
+- questionID: NH-Q5
+  lessonIds:
+    - 2
+  question: 在光线 ___ 的地方看书会对眼睛造成伤害。
+  options:
+    - 明亮
+    - 充足
+    - 昏暗
+    - 模糊
+  correct: 昏暗
+- questionID: NH-Q6
+  lessonIds:
+    - 1
+  question: 每周的升旗礼，同学们必须在七点半前到礼堂 ___。
+  options:
+    - 排列
+    - 欣赏
+    - 集合
+    - 围观
+  correct: 集合
+- questionID: ACSJ-Q3
+  lessonIds: []
+  question: 爸爸 ___ 种的苹果树结出了许多红红的苹果。
+  options:
+    - 戴
+    - 载
+    - 截
+    - 栽
+  correct: 栽
+- questionID: ACSJ-Q4
+  lessonIds:
+    - 8
+  question: 沙滩上留下了我和弟弟奔跑的足 ___ 。
+  options:
+    - 季
+    - 迹
+    - 寄
+    - 纪
+  correct: 迹
+- questionID: ACSJ-Q5
+  lessonIds: []
+  question: 长大后，我更加 ___ 和家人在一起的时光。
+  options:
+    - 珍惜
+    - 保护
+    - 爱护
+    - 爱惜
+  correct: 珍惜
+- questionID: ACSJ-Q6
+  lessonIds:
+    - 12
+    - 15
+  question: 我家门前有一条 ___ 的马路。
+  options:
+    - 巨大
+    - 宽阔
+    - 大型
+    - 粗壮
+  correct: 宽阔
+- questionID: HP-Q3
+  lessonIds: []
+  question: 我常常到附近的小 ___ 中心吃午餐。
+  options:
+    - 反
+    - 板
+    - 贩
+    - 饭
+  correct: 贩
+- questionID: HP-Q4
+  lessonIds:
+    - 5
+  question: 根 ___ 天气预报，明天可能会下雨。
+  options:
+    - 聚
+    - 据
+    - 具
+    - 距
+  correct: 据
+- questionID: HP-Q5
+  lessonIds: []
+  question: 为了有 ___ 的睡眠，欢欢每天晚上八点就上床睡觉。
+  options:
+    - 丰富
+    - 丰盛
+    - 充实
+    - 充足
+  correct: 充足
+- questionID: HP-Q6
+  lessonIds: []
+  question: 丽丽每天练习画画，希望能 ___ 美术老师的要求。
+  options:
+    - 获得
+    - 拥有
+    - 遵守
+    - 达到
+  correct: 达到
+- questionID: MB-Q3
+  lessonIds:
+    - 12
+  question: 那些树枝上有尖尖的 ___ ，妈妈要我小心点儿。
+  options:
+    - 刺
+    - 利
+    - 刷
+    - 刻
+  correct: 刺
+- questionID: MB-Q4
+  lessonIds:
+    - 3
+  question: 我们在家里举办了一场 ___ 会，请了许多朋友。
+  options:
+    - 距
+    - 俱
+    - 剧
+    - 聚
+  correct: 聚
+- questionID: MB-Q5
+  lessonIds:
+    - 15
+  question: 外婆很 ___ ，常常准备好吃的食物和邻居们分享。
+  options:
+    - 热烈
+    - 配合
+    - 慷慨
+    - 优秀
+  correct: 慷慨
+- questionID: MB-Q6
+  lessonIds:
+    - 11
+  question: 如果你想参加比赛，就要 ___ 告诉老师。
+  options:
+    - 尽早
+    - 纷纷
+    - 大概
+    - 连声
+  correct: 尽早
+- questionID: NY-Q3
+  lessonIds: []
+  question: 妈妈劝姐姐要早睡早起，但她 ___ 不听。
+  options:
+    - 扁
+    - 偏
+    - 遍
+    - 编
+  correct: 偏
+- questionID: NY-Q4
+  lessonIds:
+    - 8
+  question: 我们在沙滩上玩闹，留下了一串串的足 ___ 。
+  options:
+    - 计
+    - 基
+    - 纪
+    - 迹
+  correct: 迹
+- questionID: NY-Q5
+  lessonIds:
+    - 10
+  question: 无论考得多好，你都不应该 ___ 成绩比你差的人。
+  options:
+    - 担心
+    - 唠叨
+    - 嘲笑
+    - 怀疑
+  correct: 嘲笑
+- questionID: NY-Q6
+  lessonIds:
+    - 13
+  question: 自从去英国游玩后，表哥就 ___ 了搬到那儿居住的想法。
+  options:
+    - 增添
+    - 露出
+    - 构成
+    - 产生
+  correct: 产生
+- questionID: RG-Q3
+  lessonIds:
+    - 6
+  question: 我在图书馆的地上捡到了一张 ___ 票。
+  options:
+    - 秒
+    - 钞
+    - 沙
+    - 炒
+  correct: 钞
+- questionID: RG-Q4
+  lessonIds:
+    - 3
+  question: 爸爸说下个周末去爬山，大家都 ___ 口同声地说好。
+  options:
+    - 意
+    - 议
+    - 异
+    - 亿
+  correct: 异
+- questionID: RG-Q5
+  lessonIds:
+    - 5
+    - 14
+  question: 大家 ___ 地捐出食品和钱，希望能帮助到有需要的人。
+  options:
+    - 积极
+    - 热烈
+    - 耐心
+    - 勇敢
+  correct: 积极
+- questionID: RG-Q6
+  lessonIds:
+    - 15
+  question: 妈妈忘记把水果放进冰箱，结果几天后发现水果 ___ 了。
+  options:
+    - 伤害
+    - 腐烂
+    - 变化
+    - 破坏
+  correct: 腐烂
+- questionID: RS-Q3
+  lessonIds: []
+  question: 他把自己最喜欢的菜 ___ 到了妈妈的碗里。
+  options:
+    - 夫
+    - 失
+    - 夹
+    - 来
+  correct: 夹
+- questionID: RS-Q4
+  lessonIds:
+    - 11
+  question: 这个活动的报名 ___ 止日期是9月6日。
+  options:
+    - 戴
+    - 截
+    - 载
+    - 栽
+  correct: 截
+- questionID: RS-Q5
+  lessonIds:
+    - 11
+  question: 哥哥上课很认真，课堂笔记写得很 ___ 。
+  options:
+    - 完好
+    - 小心
+    - 详细
+    - 干净
+  correct: 详细
+- questionID: RS-Q6
+  lessonIds:
+    - 7
+  question: 天色暗了，路上的行人 ___ 少了。
+  options:
+    - 明明
+    - 渐渐
+    - 阵阵
+    - 纷纷
+  correct: 渐渐
+- questionID: RO-Q3
+  lessonIds:
+    - 10
+  question: 父母把我们养大，我们要懂得感___。
+  options:
+    - 思
+    - 恩
+    - 意
+    - 总
+  correct: 恩
+- questionID: RO-Q4
+  lessonIds:
+    - 3
+  question: 如果我们做错了，要承认自己的错___。
+  options:
+    - 屋
+    - 物
+    - 误
+    - 鸟
+  correct: 误
+- questionID: RO-Q5
+  lessonIds:
+    - 2
+  question: 运动能让我们身体健康，也能___心情。
+  options:
+    - 放松
+    - 培育
+    - 进步
+    - 休息
+  correct: 放松
+- questionID: RO-Q6
+  lessonIds:
+    - 5
+    - 12
+  question: 妈妈告诉我考到第一名不能___，要继续努力。
+  options:
+    - 激动
+    - 骄傲
+    - 害羞
+    - 紧张
+  correct: 骄傲
+- questionID: TN-Q3
+  lessonIds: []
+  question: 同学们纷纷举手，表 ___ 要去老人院做义工。
+  options:
+    - 事
+    - 视
+    - 示
+    - 市
+  correct: 示
+- questionID: TN-Q4
+  lessonIds:
+    - 3
+  question: 这道菜需要用大火快速 ___ 熟，才会更美味。
+  options:
+    - 抄
+    - 吵
+    - 钞
+    - 炒
+  correct: 炒
+- questionID: TN-Q5
+  lessonIds:
+    - 7
+  question: 同学们听到老师宣布的好消息，___ 地欢呼起来。
+  options:
+    - 幸福
+    - 温柔
+    - 激动
+    - 惊奇
+  correct: 激动
+- questionID: TN-Q6
+  lessonIds:
+    - 3
+  question: 知道小丽这次考试没考好，我立刻上前 ___ 她。
+  options:
+    - 谈论
+    - 爱惜
+    - 认识
+    - 安慰
+  correct: 安慰
+- questionID: RL-Q3
+  lessonIds: []
+  question: 这是阿姨旅游时买的 ___ 念品。
+  options:
+    - 纪
+    - 记
+    - 级
+    - 计
+  correct: 纪
+- questionID: RL-Q4
+  lessonIds:
+    - 2
+    - 5
+  question: 今天上课时，老师让同学们做一份小 ___ 试。
+  options:
+    - 则
+    - 厕
+    - 测
+    - 侧
+  correct: 测
+- questionID: RL-Q5
+  lessonIds:
+    - 7
+  question: 听到这个好消息，姐姐 ___ 得跳了起来。
+  options:
+    - 骄傲
+    - 激动
+    - 满意
+    - 欢呼
+  correct: 激动
+- questionID: RL-Q6
+  lessonIds:
+    - 15
+  question: 林叔叔很 ___ ，常常捐钱给穷苦的人。
+  options:
+    - 幽默
+    - 慷慨
+    - 孝顺
+    - 诚实
+  correct: 慷慨
+- questionID: SH-Q3
+  lessonIds:
+    - 11
+  question: 伟文跌倒了，不小心弄伤了 ___ 膀。
+  options:
+    - 腿
+    - 背
+    - 前
+    - 肩
+  correct: 肩
+- questionID: SH-Q4
+  lessonIds: []
+  question: 弟弟 ___ 成爸爸的样子骂小狗。
+  options:
+    - 分
+    - 扮
+    - 纷
+    - 份
+  correct: 扮
+- questionID: SH-Q5
+  lessonIds:
+    - 5
+  question: 当我 ___ 不开心的事，都会告诉妈妈。
+  options:
+    - 遇到
+    - 收到
+    - 找到
+    - 赶到
+  correct: 遇到
+- questionID: SH-Q6
+  lessonIds:
+    - 6
+  question: 妈妈常教导我们要做 ___ 的人，多帮助别人。
+  options:
+    - 自豪
+    - 认真
+    - 善良
+    - 公平
+  correct: 善良
+- questionID: PL-Q3
+  lessonIds: []
+  question: 看到课室的地上有垃圾，我就应该 ___ 起来丢进垃圾桶里。
+  options:
+    - 检
+    - 脸
+    - 捡
+    - 验
+  correct: 捡
+- questionID: NY24-Q3
+  lessonIds:
+    - 1
+  question: 这 ___ 丰盛的晚餐，都是这两位名厨准备的。
+  options:
+    - 顶
+    - 项
+    - 顿
+    - 烦
+  correct: 顿
+- questionID: NY24-Q4
+  lessonIds: []
+  question: 学校 ___ 离我家只有几百米远，走路就能到。
+  options:
+    - 具
+    - 剧
+    - 聚
+    - 距
+  correct: 距
+- questionID: NY24-Q5
+  lessonIds:
+    - 2
+  question: 小明来新加坡很多年了，已经 ___ 了本地炎热的天气。
+  options:
+    - 理解
+    - 介绍
+    - 适合
+    - 习惯
+  correct: 习惯
+- questionID: NY24-Q6
+  lessonIds:
+    - 8
+  question: 这家工厂 ___ 的手表很受大家欢迎。
+  options:
+    - 制造
+    - 购买
+    - 建立
+    - 安排
+  correct: 制造
+- questionID: MB24-Q1
+  lessonIds:
+    - 8
+  question: 妹妹年 ___ 还小，不能自己出门。
+  options:
+    - 领
+    - 零
+    - 龄
+    - 邻
+  correct: 龄
+- questionID: MB24-Q2
+  lessonIds:
+    - 7
+  question: 我们兄弟俩在泳池里互相 ___ 水，好玩极了！
+  options:
+    - 涨
+    - 泼
+    - 测
+    - 波
+  correct: 泼
+- questionID: NY24EOY-Q3
+  lessonIds: []
+  question: ___ 说，万里长城是世界上最长的建筑物。
+  options:
+    - 距
+    - 拒
+    - 剧
+    - 据
+  correct: 据
+- questionID: HP24EOY-Q3
+  lessonIds: []
+  question: 恐龙已经灭 ___ 了，不可能再看到了。
+  options:
+    - 绝
+    - 觉
+    - 决
+    - 角
+  correct: 绝
+- questionID: HP24EOY-Q4
+  lessonIds: []
+  question: 老师非常 ___ 赏明华的优秀表现。
+  options:
+    - 精
+    - 赞
+    - 极
+    - 欣
+  correct: 赞
+- questionID: HP24EOY-Q5
+  lessonIds: []
+  question: 听到好消息，哥哥兴奋得大 ___ 起来。
+  options:
+    - 叫
+    - 笑
+    - 哭
+    - 喊
+  correct: 喊
+- questionID: HP24EOY-Q6
+  lessonIds: []
+  question: 虽然他犯了错，但大家都 ___ 原谅了他。
+  options:
+    - 主动
+    - 同意
+    - 选择
+    - 希望
+  correct: 选择
+- questionID: MB24SA2-Q3
+  lessonIds: []
+  question: 为了尽快完成任务，他每天都连 ___ 工作几个小时。
+  options:
+    - 序
+    - 续
+    - 许
+    - 须
+  correct: 续
+- questionID: MB24SA2-Q4
+  lessonIds:
+    - 11
+  question: 你们是好朋友，你不应该因为这件小事而 ___ 他。
+  options:
+    - 恨
+    - 狠
+    - 狼
+    - 跟
+  correct: 恨
+- questionID: MB24SA2-Q5
+  lessonIds: []
+  question: 听到自己得奖的消息，他兴奋地 ___ 了起来。
+  options:
+    - 抖
+    - 叫
+    - 跳
+    - 笑
+  correct: 跳
+- questionID: MB24SA2-Q6
+  lessonIds: []
+  question: 你如果不听劝告，将来一定会 ___ 的。
+  options:
+    - 后悔
+    - 难过
+    - 害怕
+    - 担心
+  correct: 后悔
+- questionID: TX-Q1
+  lessonIds:
+    - 1
+  question: 我们全家在山上搭起帐篷 ___ ，度过了愉快的两天一夜。
+  options:
+    - 露营
+    - 郊游
+    - 野餐
+    - 旅行
+  correct: 露营
+- questionID: TX-Q2
+  lessonIds:
+    - 1
+  question: 在探险活动中，老师规定我们不能 ___ 行动，必须两人以上结伴同行。
+  options:
+    - 单独
+    - 一起
+    - 悄悄
+    - 偷偷
+  correct: 单独
+- questionID: TX-Q3
+  lessonIds:
+    - 1
+  question: 坏人用绳子把他的双手 ___ 在背后，让他完全无法挣脱。
+  options:
+    - 绑
+    - 拉
+    - 抓
+    - 打
+  correct: 绑
+- questionID: TX-Q4
+  lessonIds:
+    - 1
+  question: 他因为肚子实在太饿了，也顾不得细嚼慢咽，只是 ___ 地把整碗面条吃个精光。
+  options:
+    - 狼吞虎咽
+    - 细嚼慢咽
+    - 匆匆忙忙
+    - 小心翼翼
+  correct: 狼吞虎咽
+- questionID: TX-Q5
+  lessonIds:
+    - 1
+  question: 这块手表价值十万元，是家里最 ___ 的东西，妈妈特地把它锁进保险箱里。
+  options:
+    - 贵重
+    - 华丽
+    - 精致
+    - 稀有
+  correct: 贵重
+- questionID: TX-Q6
+  lessonIds:
+    - 1
+  question: 弟弟跑得太快，一不小心被石头绊了一下，整个人向前 ___ 。
+  options:
+    - 摔倒
+    - 站立
+    - 蹲下
+    - 后退
+  correct: 摔倒
+- questionID: TX-Q7
+  lessonIds:
+    - 1
+  question: 他在这次比赛中打败了所有对手，勇夺 ___ ，全班同学都为他感到骄傲。
+  options:
+    - 冠军
+    - 亚军
+    - 季军
+    - 名次
+  correct: 冠军
+- questionID: TX-Q8
+  lessonIds:
+    - 1
+  question: 这群勇敢的年轻人决定冒着生命危险，深入雨林去 ___ 未知的世界。
+  options:
+    - 探险
+    - 探望
+    - 探测
+    - 探亲
+  correct: 探险
+- questionID: TX-Q9
+  lessonIds:
+    - 1
+  question: 只要大家 ___ ，就一定能完成这项艰巨的任务。
+  options:
+    - 齐心协力
+    - 各自为政
+    - 三心二意
+    - 漫不经心
+  correct: 齐心协力
+- questionID: TX-Q10
+  lessonIds:
+    - 1
+  question: 医生建议我们平时就要勤洗手，才能有效 ___ 病菌的传播，而不是等生病了才补救。
+  options:
+    - 防止
+    - 制止
+    - 阻止
+    - 禁止
+  correct: 防止
+- questionID: TX-Q11
+  lessonIds:
+    - 2
+  question: 老师把这道数学题的正确 ___ ——也就是398——写在黑板上让大家核对。
+  options:
+    - 答案
+    - 问题
+    - 题目
+    - 方法
+  correct: 答案
+- questionID: TX-Q12
+  lessonIds:
+    - 2
+  question: 只要天气好，我们就喜欢在家附近的公园等 ___ 活动，不需要特地跑到郊区，也能呼吸新鲜空气。
+  options:
+    - 户外
+    - 室内
+    - 郊外
+    - 野外
+  correct: 户外
+- questionID: TX-Q13
+  lessonIds:
+    - 2
+  question: 说话时不小心的言语，有时候会狠狠 ___ 别人的感情，让对方难过好久。
+  options:
+    - 伤害
+    - 影响
+    - 伤心
+    - 妨碍
+  correct: 伤害
+- questionID: TX-Q14
+  lessonIds:
+    - 2
+  question: 他玩游戏玩得入迷，两只眼睛死死地 ___ 着屏幕，完全没有察觉我已经走到他身后。
+  options:
+    - 盯
+    - 看
+    - 望
+    - 瞄
+  correct: 盯
+- questionID: TX-Q15
+  lessonIds:
+    - 2
+  question: 全班同学投票选出她担任班级 ___ ，代表大家出席学校的会议，表达同学们的意见。
+  options:
+    - 代表
+    - 代替
+    - 替代
+    - 代理
+  correct: 代表
+- questionID: TX-Q16
+  lessonIds:
+    - 2
+  question: 老师说，这道判断题的答案不是"对"就是"错"，你只需要写出 ___ 的选项即可。
+  options:
+    - 正确
+    - 准确
+    - 精确
+    - 清楚
+  correct: 正确
+- questionID: TX-Q17
+  lessonIds:
+    - 2
+  question: 这个月的气温明显 ___ 了许多，大家都穿上了外套。
+  options:
+    - 下降
+    - 降落
+    - 减少
+    - 降临
+  correct: 下降
+- questionID: TX-Q18
+  lessonIds:
+    - 2
+  question: 他因为昨晚熬夜看书，今天顶着一对黑黑的 ___ 。
+  options:
+    - 眼圈
+    - 眼睛
+    - 眼皮
+    - 眼神
+  correct: 眼圈
+- questionID: TX-Q19
+  lessonIds:
+    - 2
+  question: 雨水不停地打在车窗上，让我几乎看不清楚窗外的景色，整个世界都变得十分 ___ 。
+  options:
+    - 模糊
+    - 清楚
+    - 空旷
+    - 昏暗
+  correct: 模糊
+- questionID: TX-Q20
+  lessonIds:
+    - 2
+  question: 医生建议我们每天运动，才能让身体长期 ___ 在健康的状态，不容易生病。
+  options:
+    - 保持
+    - 维持
+    - 持续
+    - 坚持
+  correct: 保持
+- questionID: TX-Q21
+  lessonIds:
+    - 3
+  question: 妈妈买了几根翠绿修长的 ___ 回来做沙拉，切片后又脆又爽口。
+  options:
+    - 黄瓜
+    - 番茄
+    - 洋葱
+    - 茄子
+  correct: 黄瓜
+- questionID: TX-Q22
+  lessonIds:
+    - 3
+  question: 姐姐拿起剪刀，把纸张 ___ 成漂亮的图案。
+  options:
+    - 剪
+    - 切
+    - 割
+    - 撕
+  correct: 剪
+- questionID: TX-Q23
+  lessonIds:
+    - 3
+  question: 这碗汤里加了几片薄如纸片的 ___ ，喝起来带点海鲜的味道。
+  options:
+    - 紫菜
+    - 海带
+    - 豆腐
+    - 粉丝
+  correct: 紫菜
+- questionID: TX-Q24
+  lessonIds:
+    - 3
+  question: 在这重要的日子里，亲朋好友纷纷送上美好的 ___ ，希望她往后的日子平安喜乐。
+  options:
+    - 祝福
+    - 祝贺
+    - 恭喜
+    - 庆祝
+  correct: 祝福
+- questionID: TX-Q25
+  lessonIds:
+    - 3
+  question: 蜘蛛侠一直隐瞒着自己的真实 ___ ，除了几个至亲好友，没有人知道他就是那位打击罪犯的英雄。
+  options:
+    - 身份
+    - 姓名
+    - 地位
+    - 职业
+  correct: 身份
+- questionID: TX-Q26
+  lessonIds:
+    - 3
+  question: 妈妈用星星模具把饼干压出可爱的 ___ ，每一个都有五个尖尖的角。
+  options:
+    - 形状
+    - 样子
+    - 图案
+    - 造型
+  correct: 形状
+- questionID: TX-Q27
+  lessonIds:
+    - 3
+  question: 妈妈在汤里加了一小撮盐和几滴酱油等 ___ ，让味道更加鲜美。
+  options:
+    - 调味料
+    - 材料
+    - 配料
+    - 蔬菜
+  correct: 调味料
+- questionID: TX-Q28
+  lessonIds:
+    - 3
+  question: 圣诞节前，同学们互相赠送亲手制作、写满祝福语的圣诞 ___ ，卡面上还画了圣诞老人。
+  options:
+    - 贺卡
+    - 礼物
+    - 信件
+    - 手链
+  correct: 贺卡
+- questionID: TX-Q29
+  lessonIds:
+    - 3
+  question: 听到这个坏消息后，全班同学都陷入了 ___ ，教室里安静得连一根针掉在地上都听得见。
+  options:
+    - 沉默
+    - 安静
+    - 伤心
+    - 失望
+  correct: 沉默
+- questionID: TX-Q30
+  lessonIds:
+    - 3
+  question: 考试考不好让他感到十分 ___ ，不知道该怎么办。
+  options:
+    - 烦恼
+    - 兴奋
+    - 骄傲
+    - 满足
+  correct: 烦恼
+- questionID: TX-Q31
+  lessonIds:
+    - 4
+  question: 他把不再穿的旧衣物整理好， ___ 到小区里的捐衣箱内，希望能帮助有需要的人。
+  options:
+    - 捐出
+    - 送出
+    - 拿出
+    - 交出
+  correct: 捐出
+- questionID: TX-Q32
+  lessonIds:
+    - 4
+  question: 妈妈每天一早到巴刹购买 ___ 的蔬菜和水果，因为菜叶上还带着露珠，一点也不干瘪。
+  options:
+    - 新鲜
+    - 干净
+    - 健康
+    - 美味
+  correct: 新鲜
+- questionID: TX-Q33
+  lessonIds:
+    - 4
+  question: 他发出了一阵 ___ 的笑声，让大家都愣住了。
+  options:
+    - 奇怪
+    - 好笑
+    - 搞笑
+    - 尴尬
+  correct: 奇怪
+- questionID: TX-Q34
+  lessonIds:
+    - 4
+  question: 便利店里售卖各种各样的饮料，但不出售 ___ 。
+  options:
+    - 酒类
+    - 饮品
+    - 零食
+    - 糖果
+  correct: 酒类
+- questionID: TX-Q35
+  lessonIds:
+    - 4
+  question: 天气炎热，妈妈榨了一些新鲜的 ___ 给我们解渴。
+  options:
+    - 果汁
+    - 牛奶
+    - 茶水
+    - 汽水
+  correct: 果汁
+- questionID: TX-Q36
+  lessonIds:
+    - 4
+  question: 听到这个好消息，同学们 ___ 从座位上站起来鼓掌欢呼。
+  options:
+    - 纷纷
+    - 连连
+    - 渐渐
+    - 常常
+  correct: 纷纷
+- questionID: TX-Q37
+  lessonIds:
+    - 4
+  question: 他刚搬到这座 ___ 的城市，人生地不熟，一个朋友也没有。
+  options:
+    - 陌生
+    - 遥远
+    - 繁华
+    - 寂静
+  correct: 陌生
+- questionID: TX-Q38
+  lessonIds:
+    - 4
+  question: 她 ___ 了所有的好朋友来参加她的生日派对。
+  options:
+    - 邀请
+    - 招待
+    - 拜访
+    - 请求
+  correct: 邀请
+- questionID: TX-Q39
+  lessonIds:
+    - 4
+  question: 夜晚的乡村显得格外 ___ ，只听得见虫鸣声。
+  options:
+    - 宁静
+    - 热闹
+    - 拥挤
+    - 繁忙
+  correct: 宁静
+- questionID: TX-Q40
+  lessonIds:
+    - 4
+  question: 他从不愿意与人分享玩具，也从不考虑别人的感受，大家都说他很 ___ 。
+  options:
+    - 自私
+    - 小气
+    - 骄傲
+    - 固执
+  correct: 自私
+- questionID: TX-Q41
+  lessonIds:
+    - 5
+  question: 他伤心的 ___ 超出了我们的预料，甚至哭了整整一个晚上。
+  options:
+    - 程度
+    - 水平
+    - 水准
+    - 标准
+  correct: 程度
+- questionID: TX-Q42
+  lessonIds:
+    - 5
+  question: 他这番话前后 ___ ，一会儿说没做过，一会儿又说是不小心做的，让人摸不着头脑。
+  options:
+    - 矛盾
+    - 冲突
+    - 错误
+    - 混乱
+  correct: 矛盾
+- questionID: TX-Q43
+  lessonIds:
+    - 5
+  question: 老师板着脸，用 ___ 而不失温和的语气提醒我们要遵守课堂纪律。
+  options:
+    - 严肃
+    - 严格
+    - 严厉
+    - 认真
+  correct: 严肃
+- questionID: TX-Q44
+  lessonIds:
+    - 5
+  question: 弟弟扮成小丑的样子对着妹妹做鬼脸，想要 ___ 她开心，让她不要哭了。
+  options:
+    - 逗
+    - 骗
+    - 哄
+    - 惹
+  correct: 逗
+- questionID: TX-Q45
+  lessonIds:
+    - 5
+  question: 医生 ___ 检查报告，判断出病人的病情。
+  options:
+    - 根据
+    - 为了
+    - 关于
+    - 对于
+  correct: 根据
+- questionID: TX-Q46
+  lessonIds:
+    - 5
+  question: 这个理由编得漏洞百出，他对此感到十分 ___ ，认为对方很可能在说谎骗人。
+  options:
+    - 怀疑
+    - 好奇
+    - 疑惑
+    - 担心
+  correct: 怀疑
+- questionID: TX-Q47
+  lessonIds:
+    - 5
+  question: 花瓶掉到地上摔碎了，地上散落着许多锋利的玻璃 ___ ，一不小心就会割伤脚。
+  options:
+    - 碎片
+    - 碎屑
+    - 残渣
+    - 零件
+  correct: 碎片
+- questionID: TX-Q48
+  lessonIds:
+    - 5
+  question: 做瑜伽时，教练提醒我们要闭上眼睛，缓缓地深 ___ ，让身心都放松下来。
+  options:
+    - 呼吸
+    - 喘气
+    - 呼叫
+    - 吸气
+  correct: 呼吸
+- questionID: TX-Q49
+  lessonIds:
+    - 5
+  question: 看到有人残忍地虐待小动物，他感到十分 ___ ，气得浑身发抖，忍不住上前制止。
+  options:
+    - 愤怒
+    - 生气
+    - 难过
+    - 失望
+  correct: 愤怒
+- questionID: TX-Q50
+  lessonIds:
+    - 5
+  question: 弟弟不小心打破了妈妈最心爱的古董花瓶，这下 ___ 了，等一下肯定会被妈妈骂一顿。
+  options:
+    - 闯祸
+    - 完蛋
+    - 遭殃
+    - 犯错
+  correct: 闯祸
+- questionID: TX-Q51
+  lessonIds:
+    - 6
+  question: 她穿了一件 ___ 的礼服，如同月光洒落般，在灯光下闪闪发亮。
+  options:
+    - 银色
+    - 金色
+    - 白色
+    - 灰色
+  correct: 银色
+- questionID: TX-Q52
+  lessonIds:
+    - 6
+  question: 我们已经好几年没有 ___ 了，不知道他现在过得怎么样。
+  options:
+    - 联系
+    - 见面
+    - 交流
+    - 沟通
+  correct: 联系
+- questionID: TX-Q53
+  lessonIds:
+    - 6
+  question: 请你把你的电话 ___ 写在这张纸上。
+  options:
+    - 号码
+    - 号数
+    - 数字
+    - 代号
+  correct: 号码
+- questionID: TX-Q54
+  lessonIds:
+    - 6
+  question: 公共汽车突然刹车，车厢剧烈地 ___ 了一下。
+  options:
+    - 摇晃
+    - 倾斜
+    - 颤抖
+    - 震动
+  correct: 摇晃
+- questionID: TX-Q55
+  lessonIds:
+    - 6
+  question: 他开车时不小心挂错了挡，车子一下子 ___ ，撞上了后面的护栏。
+  options:
+    - 倒退
+    - 后退
+    - 退步
+    - 撤退
+  correct: 倒退
+- questionID: TX-Q56
+  lessonIds:
+    - 6
+  question: 铃声一响，同学们就 ___ 地冲出教室，谁都不想当最后一个。
+  options:
+    - 争先恐后
+    - 一拥而上
+    - 慢条斯理
+    - 井然有序
+  correct: 争先恐后
+- questionID: TX-Q57
+  lessonIds:
+    - 6
+  question: 天空中，几朵棉花般轻盈的白云缓缓地 ___ 过。
+  options:
+    - 飘
+    - 吹
+    - 飞
+    - 滑
+  correct: 飘
+- questionID: TX-Q58
+  lessonIds:
+    - 6
+  question: 尽管家人站在门口极力 ___ ，不让他出门，他还是硬闯了出去，独自出国留学。
+  options:
+    - 阻拦
+    - 阻止
+    - 劝阻
+    - 反对
+  correct: 阻拦
+- questionID: TX-Q59
+  lessonIds:
+    - 6
+  question: 对不起，给你添 ___ 了，谢谢你的帮忙。
+  options:
+    - 麻烦
+    - 困难
+    - 负担
+    - 压力
+  correct: 麻烦
+- questionID: TX-Q60
+  lessonIds:
+    - 6
+  question: 做错事要勇于承认，不撒谎欺骗别人，做一个 ___ 的孩子。
+  options:
+    - 诚实
+    - 老实
+    - 坦白
+    - 乖巧
+  correct: 诚实
+- questionID: TX-Q61
+  lessonIds:
+    - 7
+  question: 他站得笔直，一只小鸟从天而降，正好停在他光秃秃的 ___ 上，逗得大家哈哈大笑。
+  options:
+    - 头顶
+    - 肩膀
+    - 头发
+    - 额头
+  correct: 头顶
+- questionID: TX-Q62
+  lessonIds:
+    - 7
+  question: 鲸鱼每隔一段时间就要缓缓地 ___ 水面呼吸，接着又慢慢沉入水中。
+  options:
+    - 浮出
+    - 冒出
+    - 露出
+    - 跳出
+  correct: 浮出
+- questionID: TX-Q63
+  lessonIds:
+    - 7
+  question: 消防员用水管喷出一道笔直有力的 ___ ，扑灭了大火。
+  options:
+    - 水柱
+    - 水流
+    - 水花
+    - 水珠
+  correct: 水柱
+- questionID: TX-Q64
+  lessonIds:
+    - 7
+  question: 冬天到了，他穿上了摸起来毛茸茸、看起来鼓鼓的 ___ 外套抵御寒冷。
+  options:
+    - 厚厚
+    - 重重
+    - 暖暖
+    - 大大
+  correct: 厚厚
+- questionID: TX-Q65
+  lessonIds:
+    - 7
+  question: 这条大鱼足足有十 ___ 重，需要两个人才能抬起来。
+  options:
+    - 公斤
+    - 公里
+    - 公升
+    - 公分
+  correct: 公斤
+- questionID: TX-Q66
+  lessonIds:
+    - 7
+  question: 这种奇特的鱼类只生活在漆黑的 ___ 之中。
+  options:
+    - 深海
+    - 大海
+    - 浅海
+    - 湖泊
+  correct: 深海
+- questionID: TX-Q67
+  lessonIds:
+    - 7
+  question: 由于长期缺水，花园里的花草先是渐渐枯黄，最后连根都 ___ 了，怎么浇水也救不活。
+  options:
+    - 死掉
+    - 枯萎
+    - 凋谢
+    - 腐烂
+  correct: 死掉
+- questionID: TX-Q68
+  lessonIds:
+    - 7
+  question: 妈妈把煮好的汤用锅盖 ___ 起来，防止蚊虫飞进去。
+  options:
+    - 盖
+    - 封
+    - 关
+    - 罩
+  correct: 盖
+- questionID: TX-Q69
+  lessonIds:
+    - 7
+  question: 这只鲸鱼的体型十分 ___ ，比一辆巴士还要长。
+  options:
+    - 巨大
+    - 伟大
+    - 壮大
+    - 强大
+  correct: 巨大
+- questionID: TX-Q70
+  lessonIds:
+    - 7
+  question: 魔术师一挥手，手中的扑克牌就瞬间 ___ 得无影无踪，观众们都看呆了。
+  options:
+    - 消失
+    - 不见
+    - 失踪
+    - 隐藏
+  correct: 消失
+- questionID: TX-Q71
+  lessonIds:
+    - 8
+  question: 从生物分类的角度来看，动物可以分为水生动物和 ___ 动物两大类，例如老虎、大象都属于后者。
+  options:
+    - 陆地
+    - 沙滩
+    - 海岸
+    - 岛屿
+  correct: 陆地
+- questionID: TX-Q72
+  lessonIds:
+    - 8
+  question: 外国朋友觉得 ___ 很有趣，因为每一个字都像一幅小小的图画，充满了象形的美感。
+  options:
+    - 汉字
+    - 文字
+    - 字母
+    - 符号
+  correct: 汉字
+- questionID: TX-Q73
+  lessonIds:
+    - 8
+  question: 这家医院已经开始使用一种外形像人的手臂、动作比人手还要精准稳定的 ___ 来协助医生进行手术。
+  options:
+    - 机器人
+    - 电脑
+    - 仪器
+    - 机械
+  correct: 机器人
+- questionID: TX-Q74
+  lessonIds:
+    - 8
+  question: 电脑明明可以正常开机使用，但由于 ___ 出现了故障，一直连不上网，我们没有办法准时提交功课。
+  options:
+    - 网络
+    - 电脑
+    - 系统
+    - 信号
+  correct: 网络
+- questionID: TX-Q75
+  lessonIds:
+    - 8
+  question: 老师鼓励我们要为自己的 ___ 制定一个清楚的计划。
+  options:
+    - 未来
+    - 现在
+    - 才艺
+    - 明天
+  correct: 未来
+- questionID: TX-Q76
+  lessonIds:
+    - 8
+  question: 看完这部电影的结局后，很多观众都感到十分 ___ 。
+  options:
+    - 悲伤
+    - 兴奋
+    - 满足
+    - 失落
+  correct: 悲伤
+- questionID: TX-Q77
+  lessonIds:
+    - 8
+  question: 生病之后，他原本健壮结实的身体迅速消瘦，变得十分 ___ ，连走路都有些摇晃。
+  options:
+    - 瘦弱
+    - 虚弱
+    - 衰弱
+    - 瘦小
+  correct: 瘦弱
+- questionID: TX-Q78
+  lessonIds:
+    - 8
+  question: 妈妈答应我，无论发生什么事，她都会 ___ 爱我。
+  options:
+    - 永远
+    - 特别
+    - 更加
+    - 永久
+  correct: 永远
+- questionID: TX-Q79
+  lessonIds:
+    - 8
+  question: 爷爷年轻的时候 ___ 是一名出色的运动员，只是现在上了年纪，身材早已大不如前。
+  options:
+    - 曾经
+    - 已经
+    - 忽然
+    - 常常
+  correct: 曾经
+- questionID: TX-Q80
+  lessonIds:
+    - 8
+  question: 他脸上的表情 ___ 有一些不太开心。
+  options:
+    - 似乎
+    - 突然
+    - 已经
+    - 似的
+  correct: 似乎
+- questionID: TX-Q81
+  lessonIds:
+    - 9
+  question: 新的装饰品为房间 ___ 了不少节日气氛。
+  options:
+    - 增添
+    - 消耗
+    - 添加
+    - 增长
+  correct: 增添
+- questionID: TX-Q82
+  lessonIds:
+    - 9
+  question: 爸爸帮我报读了 ___ 举办的游泳初级班，星期六一早就带我去上课。
+  options:
+    - 民众俱乐部
+    - 活动中心
+    - 体育馆
+    - 游泳池
+  correct: 民众俱乐部
+- questionID: TX-Q83
+  lessonIds:
+    - 9
+  question: 电影院最近调低了周末场次的 ___ ，每张门票只要五元，吸引了不少观众。
+  options:
+    - 票价
+    - 价钱
+    - 费用
+    - 价格
+  correct: 票价
+- questionID: TX-Q84
+  lessonIds:
+    - 9
+  question: 图书馆为读者提供 ___ 的无线网络服务。
+  options:
+    - 免费
+    - 收费
+    - 便宜
+    - 廉价
+  correct: 免费
+- questionID: TX-Q85
+  lessonIds:
+    - 9
+  question: 出门郊游时，妈妈总会从超市买几瓶清澈透明、没有添加任何味道的 ___ 给我们解渴。
+  options:
+    - 矿泉水
+    - 自来水
+    - 果汁
+    - 汽水
+  correct: 矿泉水
+- questionID: TX-Q86
+  lessonIds:
+    - 9
+  question: 万圣节那天，同学们都把自己 ___ 成各种有趣的角色。
+  options:
+    - 装扮
+    - 收拾
+    - 化妆
+    - 装饰
+  correct: 装扮
+- questionID: TX-Q87
+  lessonIds:
+    - 9
+  question: 老师因为生病请假，由另一位老师 ___ 她上课。
+  options:
+    - 代替
+    - 顶替
+    - 陪伴
+    - 打扰
+  correct: 代替
+- questionID: TX-Q88
+  lessonIds:
+    - 9
+  question: 弟弟用自己存下的零用钱买礼物送给妈妈，感谢妈妈多年来的养育之恩，真是个十分有 ___ 的孩子。
+  options:
+    - 孝心
+    - 爱心
+    - 耐心
+    - 孝顺
+  correct: 孝心
+- questionID: TX-Q89
+  lessonIds:
+    - 9
+  question: 每逢佳节，他都会格外想念自己的 ___ 。
+  options:
+    - 家乡
+    - 学校
+    - 公司
+    - 家庭
+  correct: 家乡
+- questionID: TX-Q90
+  lessonIds:
+    - 9
+  question: 消防员冒着生命危险救出被困居民，事后被大家称赞为拯救生命的 ___ 。
+  options:
+    - 英雄
+    - 勇士
+    - 好汉
+    - 豪杰
+  correct: 英雄
+- questionID: TX-Q91
+  lessonIds:
+    - 10
+  question: 警方公布了全天候待命的防诈骗 ___ ，市民一发现可疑情况就能立即拨打求助，希望市民提高警惕。
+  options:
+    - 热线
+    - 电话
+    - 号码
+    - 专线
+  correct: 热线
+- questionID: TX-Q92
+  lessonIds:
+    - 10
+  question: 消防员经过几个小时的努力，终于把森林里的大火 ___ 住了。
+  options:
+    - 控制
+    - 扑灭
+    - 制止
+    - 平息
+  correct: 控制
+- questionID: TX-Q93
+  lessonIds:
+    - 10
+  question: 妈妈为全家人准备了一顿非常 ___ 的晚餐，桌上摆满了鸡鸭鱼肉，让人看了食指大动。
+  options:
+    - 丰盛
+    - 丰富
+    - 丰厚
+    - 充足
+  correct: 丰盛
+- questionID: TX-Q94
+  lessonIds:
+    - 10
+  question: 他用筷子 ___ 起一块新鲜的鱼肉放到奶奶的碗里。
+  options:
+    - 夹
+    - 拿
+    - 叉
+    - 挑
+  correct: 夹
+- questionID: TX-Q95
+  lessonIds:
+    - 10
+  question: 虽然妈妈总是喜欢把同样的话一遍又一遍地 ___ ，但我知道她这全都是为了我好。
+  options:
+    - 唠叨
+    - 沉默
+    - 叮嘱
+    - 提醒
+  correct: 唠叨
+- questionID: TX-Q96
+  lessonIds:
+    - 10
+  question: 他拿起一把小 ___ ，仔细地把桌缝里、角落里的旧灰尘一点一点刷干净。
+  options:
+    - 刷子
+    - 扫把
+    - 抹布
+    - 海绵
+  correct: 刷子
+- questionID: TX-Q97
+  lessonIds:
+    - 10
+  question: 我们一定要懂得 ___ 时间，不要把宝贵的青春白白浪费掉。
+  options:
+    - 珍惜
+    - 珍重
+    - 抱怨
+    - 重视
+  correct: 珍惜
+- questionID: TX-Q98
+  lessonIds:
+    - 10
+  question: 天空中突然刮起了大风，厚厚的乌云 ___ 了耀眼的阳光，天色瞬间变得昏暗。
+  options:
+    - 遮住
+    - 挡住
+    - 盖住
+    - 罩住
+  correct: 遮住
+- questionID: TX-Q99
+  lessonIds:
+    - 10
+  question: 看到地上有垃圾，他立刻 ___ 把它捡起来扔进垃圾桶。
+  options:
+    - 弯腰
+    - 低头
+    - 蹲下
+    - 站直
+  correct: 弯腰
+- questionID: TX-Q100
+  lessonIds:
+    - 10
+  question: 意识到自己的错误之后，他低下了头并感到非常 ___ 。
+  options:
+    - 惭愧
+    - 骄傲
+    - 兴奋
+    - 后悔
+  correct: 惭愧
+- questionID: TX-Q101
+  lessonIds:
+    - 11
+  question: 他刚开始学游泳，只能报读 ___ 班。
+  options:
+    - 初级
+    - 高级
+    - 入门
+    - 中级
+  correct: 初级
+- questionID: TX-Q102
+  lessonIds:
+    - 11
+  question: 这是一场为期三个月的国际合作项目，两支团队经过密切磋商后，对 ___ 有了更深的了解，也建立了深厚的友谊。
+  options:
+    - 彼此
+    - 互相
+    - 大家
+    - 双方
+  correct: 彼此
+- questionID: TX-Q103
+  lessonIds:
+    - 11
+  question: 学习任何一门语言，都要先掌握 ___ 的词汇。
+  options:
+    - 基本
+    - 复杂
+    - 根本
+    - 主要
+  correct: 基本
+- questionID: TX-Q104
+  lessonIds:
+    - 11
+  question: 跑完一千米后，他感到 ___ 一阵阵地发闷。
+  options:
+    - 胸口
+    - 背部
+    - 肚子
+    - 喉咙
+  correct: 胸口
+- questionID: TX-Q105
+  lessonIds:
+    - 11
+  question: 他不小心把衬衫上的 ___ 扯掉了一颗。
+  options:
+    - 扣子
+    - 拉链
+    - 袖子
+    - 领子
+  correct: 扣子
+- questionID: TX-Q106
+  lessonIds:
+    - 11
+  question: 小猫一下子 ___ 向那团毛线球，用两只前爪紧紧抱住，玩得不亦乐乎。
+  options:
+    - 扑
+    - 冲
+    - 跳
+    - 扔
+  correct: 扑
+- questionID: TX-Q107
+  lessonIds:
+    - 11
+  question: 由于时间 ___ ，我们只能参观其中一个展览馆。
+  options:
+    - 有限
+    - 漫长
+    - 充裕
+    - 短暂
+  correct: 有限
+- questionID: TX-Q108
+  lessonIds:
+    - 11
+  question: 面对同学的质问，他支支吾吾，眼神不断 ___ 。
+  options:
+    - 躲闪
+    - 坚定
+    - 专注
+    - 直视
+  correct: 躲闪
+- questionID: TX-Q109
+  lessonIds:
+    - 11
+  question: 两个男孩因为一点小事吵了起来，情绪越来越激动，最后甚至 ___ 在了一起，被老师及时拉开。
+  options:
+    - 扭打
+    - 争吵
+    - 打闹
+    - 争执
+  correct: 扭打
+- questionID: TX-Q110
+  lessonIds:
+    - 11
+  question: 他今天穿了一件白色的 ___ ，把下摆整齐地塞进西裤里，再系上一条领带，看起来十分正式，准备去上班。
+  options:
+    - 衬衫
+    - 外套
+    - 背心
+    - 夹克
+  correct: 衬衫
+- questionID: TX-Q111
+  lessonIds:
+    - 12
+  question: 这位 ___ 的科学家发明了许多改变世界的东西。
+  options:
+    - 著名
+    - 神秘
+    - 谦虚
+    - 年轻
+  correct: 著名
+- questionID: TX-Q112
+  lessonIds:
+    - 12
+  question: 老师要我们按照身高从矮到高 ___ 整齐，然后站在原地不动，准备拍照留念。
+  options:
+    - 排列
+    - 排队
+    - 排序
+    - 安排
+  correct: 排列
+- questionID: TX-Q113
+  lessonIds:
+    - 12
+  question: 圣诞节的装饰让整个商场充满了节日 ___ 。
+  options:
+    - 气氛
+    - 阳光
+    - 情绪
+    - 场面
+  correct: 气氛
+- questionID: TX-Q114
+  lessonIds:
+    - 12
+  question: 全班同学都已经交了功课，只剩下他是 ___ 一个还没交的学生。
+  options:
+    - 唯一
+    - 仅有
+    - 单独
+    - 独自
+  correct: 唯一
+- questionID: TX-Q115
+  lessonIds:
+    - 12
+  question: 这幅画生动地 ___ 出了乡村宁静的景色。
+  options:
+    - 呈现
+    - 展现
+    - 隐藏
+    - 破坏
+  correct: 呈现
+- questionID: TX-Q116
+  lessonIds:
+    - 12
+  question: 他完全 ___ 在这本精彩的小说情节里，忘了时间。
+  options:
+    - 沉浸
+    - 沉迷
+    - 厌倦
+    - 迷失
+  correct: 沉浸
+- questionID: TX-Q117
+  lessonIds:
+    - 12
+  question: 学校的年终音乐会上，同学们精彩的 ___ 赢得了阵阵掌声。
+  options:
+    - 表演
+    - 作业
+    - 演唱
+    - 演奏
+  correct: 表演
+- questionID: TX-Q118
+  lessonIds:
+    - 12
+  question: 他每天都 ___ 着能收到心仪已久的礼物。
+  options:
+    - 盼望
+    - 讨厌
+    - 抱怨
+    - 希望
+  correct: 盼望
+- questionID: TX-Q119
+  lessonIds:
+    - 12
+  question: 烟花在夜空中绽放，呈现出 ___ 的美丽景象。
+  options:
+    - 五彩缤纷
+    - 井井有条
+    - 五花八门
+    - 眼花缭乱
+  correct: 五彩缤纷
+- questionID: TX-Q120
+  lessonIds:
+    - 12
+  question: 看到孩子在台上获奖，父母的脸上露出了 ___ 的笑容。
+  options:
+    - 自豪
+    - 尴尬
+    - 得意
+    - 光荣
+  correct: 自豪
+- questionID: TX-Q121
+  lessonIds:
+    - 13
+  question: 老师要我们把观察到的现象仔细 ___ 下来。
+  options:
+    - 记录
+    - 记住
+    - 记忆
+    - 登记
+  correct: 记录
+- questionID: TX-Q122
+  lessonIds:
+    - 13
+  question: 大家都对他坚持不懈的精神感到十分 ___ 。
+  options:
+    - 佩服
+    - 反感
+    - 崇拜
+    - 羡慕
+  correct: 佩服
+- questionID: TX-Q123
+  lessonIds:
+    - 13
+  question: 医生检查后发现，他的手臂 ___ 头骨折了。
+  options:
+    - 骨
+    - 肉
+    - 肌
+    - 筋
+  correct: 骨
+- questionID: TX-Q124
+  lessonIds:
+    - 13
+  question: 这位来自教育部的政府 ___ ，前来视察这所新建的学校，并检查各项设施是否达标。
+  options:
+    - 官员
+    - 人员
+    - 代表
+    - 议员
+  correct: 官员
+- questionID: TX-Q125
+  lessonIds:
+    - 13
+  question: 士兵深知军令如山，不敢 ___ 将军的命令，只好含泪照做。
+  options:
+    - 违抗
+    - 违反
+    - 反抗
+    - 抵抗
+  correct: 违抗
+- questionID: TX-Q126
+  lessonIds:
+    - 13
+  question: 这条小巷两侧是高高的墙壁，中间十分狭 ___ ，只能容一人侧身通过。
+  options:
+    - 窄
+    - 小
+    - 细
+    - 短
+  correct: 窄
+- questionID: TX-Q127
+  lessonIds:
+    - 13
+  question: 他梦想有一天能环游 ___ 各地，亲身体验不同国家、不同民族的风俗文化。
+  options:
+    - 世界
+    - 全球
+    - 国际
+    - 地球
+  correct: 世界
+- questionID: TX-Q128
+  lessonIds:
+    - 13
+  question: 他礼貌地向一位穿着制服的警察 ___ 前往火车站的最佳路线，态度十分恭敬。
+  options:
+    - 询问
+    - 请问
+    - 打听
+    - 询查
+  correct: 询问
+- questionID: TX-Q129
+  lessonIds:
+    - 13
+  question: 他的作品曾在画展、音乐会和舞蹈表演中展出，这幅画正展现了他高超的 ___ 造诣。
+  options:
+    - 艺术
+    - 美术
+    - 技术
+    - 才艺
+  correct: 艺术
+- questionID: TX-Q130
+  lessonIds:
+    - 13
+  question: 听了老师的解释后，他终于 ___ ，明白了这道题的做法。
+  options:
+    - 恍然大悟
+    - 一知半解
+    - 若有所思
+    - 半信半疑
+  correct: 恍然大悟
+- questionID: TX-Q131
+  lessonIds:
+    - 14
+  question: 农夫们 ___ 地在田里工作，只为了能有个好收成。
+  options:
+    - 辛勤
+    - 辛苦
+    - 懒惰
+    - 匆忙
+  correct: 辛勤
+- questionID: TX-Q132
+  lessonIds:
+    - 14
+  question: 被老师误会后，她心想："这根本不是我做的呀！"感到非常 ___ ，忍不住哭了起来。
+  options:
+    - 委屈
+    - 难过
+    - 伤心
+    - 兴奋
+  correct: 委屈
+- questionID: TX-Q133
+  lessonIds:
+    - 14
+  question: 这个 ___ 的男孩总是喜欢捉弄同学。
+  options:
+    - 顽皮
+    - 害羞
+    - 认真
+    - 活泼
+  correct: 顽皮
+- questionID: TX-Q134
+  lessonIds:
+    - 14
+  question: 为了赶上进度，他决定付出比平时多一倍的时间和精力， ___ 努力学习。
+  options:
+    - 加倍
+    - 加紧
+    - 更加
+    - 格外
+  correct: 加倍
+- questionID: TX-Q135
+  lessonIds:
+    - 14
+  question: 妈妈用 ___ 的声音安慰哭泣的妹妹。
+  options:
+    - 温柔
+    - 严肃
+    - 柔和
+    - 洪亮
+  correct: 温柔
+- questionID: TX-Q136
+  lessonIds:
+    - 14
+  question: 老师用心 ___ 每一位学生，希望他们都能成才。
+  options:
+    - 培育
+    - 批评
+    - 惩罚
+    - 教育
+  correct: 培育
+- questionID: TX-Q137
+  lessonIds:
+    - 14
+  question: 经过几天的休养，他的身体渐渐 ___ 了健康。
+  options:
+    - 恢复
+    - 康复
+    - 痊愈
+    - 复原
+  correct: 恢复
+- questionID: TX-Q138
+  lessonIds:
+    - 14
+  question: 每个人都可能会 ___ ，做出让自己后悔的决定，但重要的是懂得反省并改正。
+  options:
+    - 犯错
+    - 出错
+    - 做错
+    - 认错
+  correct: 犯错
+- questionID: TX-Q139
+  lessonIds:
+    - 14
+  question: 校长在大会上正式 ___ 了这项新政策。
+  options:
+    - 宣布
+    - 讨论
+    - 宣告
+    - 发布
+  correct: 宣布
+- questionID: TX-Q140
+  lessonIds:
+    - 14
+  question: 他闭上眼睛，双手合十，默默地 ___ 家人平安健康。
+  options:
+    - 祈祷
+    - 祝福
+    - 期望
+    - 盼望
+  correct: 祈祷
+- questionID: TX-Q141
+  lessonIds:
+    - 15
+  question: 爷爷在院子里 ___ 了许多果树。
+  options:
+    - 栽种
+    - 砍伐
+    - 收割
+    - 修剪
+  correct: 栽种
+- questionID: TX-Q142
+  lessonIds:
+    - 15
+  question: 微风轻轻吹过，空气中飘来一阵 ___ 的花香，若有似无，让人心旷神怡。
+  options:
+    - 淡淡
+    - 浓浓
+    - 阵阵
+    - 丝丝
+  correct: 淡淡
+- questionID: TX-Q143
+  lessonIds:
+    - 15
+  question: 这颗南瓜种子的外形 ___ 的，中间稍厚、边缘很薄，摸起来像一片小小的瓜子壳。
+  options:
+    - 扁扁
+    - 圆圆
+    - 尖尖
+    - 方方
+  correct: 扁扁
+- questionID: TX-Q144
+  lessonIds:
+    - 15
+  question: 天空渐渐染上了一层 ___ 色的雾气，朦朦胧胧，像打翻了一杯牛奶般柔和。
+  options:
+    - 乳白
+    - 雪白
+    - 灰白
+    - 苍白
+  correct: 乳白
+- questionID: TX-Q145
+  lessonIds:
+    - 15
+  question: 公园里种着一棵奇特的 ___ ，树干上直接挂满了一颗颗又大又圆、像炮弹一样的果实，十分少见。
+  options:
+    - 炮弹树
+    - 椰子树
+    - 榕树
+    - 松树
+  correct: 炮弹树
+- questionID: TX-Q146
+  lessonIds:
+    - 15
+  question: 公园里每一棵树都挂着一个由三位数字组成的 ___ ，方便工作人员记录和管理。
+  options:
+    - 编号
+    - 标签
+    - 牌子
+    - 记号
+  correct: 编号
+- questionID: TX-Q147
+  lessonIds:
+    - 15
+  question: 邻居们喜欢在傍晚坐在一起 ___ ，东家长西家短，说说轻松的话题，一点也不正经。
+  options:
+    - 闲聊
+    - 谈话
+    - 交谈
+    - 商量
+  correct: 闲聊
+- questionID: TX-Q148
+  lessonIds:
+    - 15
+  question: 那棵历经百年风霜的大树，依然以挺拔不屈的 ___ 屹立在山坡上，仿佛一位守护家园的巨人。
+  options:
+    - 姿态
+    - 姿势
+    - 样子
+    - 形态
+  correct: 姿态
+- questionID: TX-Q149
+  lessonIds:
+    - 15
+  question: 太阳正大，我们坐在树下枝叶茂密、遮住阳光的 ___ 地方乘凉，感觉特别舒服。
+  options:
+    - 阴凉
+    - 凉爽
+    - 阴暗
+    - 清凉
+  correct: 阴凉
+- questionID: TX-Q150
+  lessonIds:
+    - 15
+  question: 他说话十分 ___ ，总能逗得大家哈哈大笑。
+  options:
+    - 幽默
+    - 严肃
+    - 搞笑
+    - 滑稽
+  correct: 幽默
+- questionID: TX-Q151
+  lessonIds:
+    - 16
+  question: 水是地球上非常珍贵的自然 ___ ，一旦被过度开采或污染，就很难再恢复。
+  options:
+    - 资源
+    - 财富
+    - 能源
+    - 物资
+  correct: 资源
+- questionID: TX-Q152
+  lessonIds:
+    - 16
+  question: 老师让我们把课本 ___ 到第十页，一页一页仔细地翻找。
+  options:
+    - 翻开
+    - 打开
+    - 展开
+    - 揭开
+  correct: 翻开
+- questionID: TX-Q153
+  lessonIds:
+    - 16
+  question: 农夫辛勤耕种稻田，为大家提供赖以生存的 ___ ，一年四季从不间断。
+  options:
+    - 粮食
+    - 食物
+    - 粮草
+    - 食粮
+  correct: 粮食
+- questionID: TX-Q154
+  lessonIds:
+    - 16
+  question: 工厂排放的废气 ___ 了周围的空气。
+  options:
+    - 污染
+    - 弄脏
+    - 破坏
+    - 损害
+  correct: 污染
+- questionID: TX-Q155
+  lessonIds:
+    - 16
+  question: 邻里之间应该 ___ 相处。
+  options:
+    - 和谐
+    - 冷漠
+    - 疏远
+    - 友好
+  correct: 和谐
+- questionID: TX-Q156
+  lessonIds:
+    - 16
+  question: 星期天，爸爸带我去 ___ 参观，里面展示了许多珍贵的历史文物和恐龙化石，让我大开眼界。
+  options:
+    - 博物院
+    - 美术馆
+    - 展览馆
+    - 图书馆
+  correct: 博物院
+- questionID: TX-Q157
+  lessonIds:
+    - 16
+  question: 这座城市的市中心非常 ___ 热闹，街道两旁开满了各式各样的商店，晚上依然灯火通明，人潮涌动。
+  options:
+    - 繁华
+    - 热闹
+    - 繁荣
+    - 兴旺
+  correct: 繁华
+- questionID: TX-Q158
+  lessonIds:
+    - 16
+  question: 我从小在这里长大，对这个地方的大街小巷都非常 ___ ，即使闭着眼睛也不会迷路。
+  options:
+    - 熟悉
+    - 了解
+    - 熟识
+    - 清楚
+  correct: 熟悉
+- questionID: TX-Q159
+  lessonIds:
+    - 16
+  question: 收到朋友送的生日礼物后，他等不及回到家才拆，就在门口 ___ 地打开了包装。
+  options:
+    - 迫不及待
+    - 兴高采烈
+    - 迫在眉睫
+    - 迫切
+  correct: 迫不及待
+- questionID: TX-Q160
+  lessonIds:
+    - 16
+  question: 大家都 ___ 在这美妙的音乐声中。
+  options:
+    - 陶醉
+    - 生气
+    - 着迷
+    - 享受
+  correct: 陶醉
+- questionID: TX-Q161
+  lessonIds:
+    - 17
+  question: 这座桥梁建造得非常 ___ 。
+  options:
+    - 坚固
+    - 坚硬
+    - 美观
+    - 昂贵
+  correct: 坚固
+- questionID: TX-Q162
+  lessonIds:
+    - 17
+  question: 这座古老的 ___ 是一座宏伟的佛塔，已经有几百年的历史了，是当地重要的文化遗产。
+  options:
+    - 建筑
+    - 建设
+    - 房屋
+    - 建造
+  correct: 建筑
+- questionID: TX-Q163
+  lessonIds:
+    - 17
+  question: 工人们花了几个月的时间，用钢筋和木材一根一根地 ___ 起这座桥梁的骨架。
+  options:
+    - 搭建
+    - 建造
+    - 搭盖
+    - 建设
+  correct: 搭建
+- questionID: TX-Q164
+  lessonIds:
+    - 17
+  question: 我们应该 ___ 使用塑料袋。
+  options:
+    - 减少
+    - 减低
+    - 降低
+    - 缩减
+  correct: 减少
+- questionID: TX-Q165
+  lessonIds:
+    - 17
+  question: 昨晚这个地区发生了一场轻微的 ___ ，地面摇晃了几秒钟，屋子里的灯饰跟着轻轻晃动，但没有造成任何损失。
+  options:
+    - 地震
+    - 海啸
+    - 台风
+    - 火山
+  correct: 地震
+- questionID: TX-Q166
+  lessonIds:
+    - 17
+  question: 这是一场严重的车祸，但幸运的是，警方证实没有造成任何人员 ___ ，车上的乘客都平安无事。
+  options:
+    - 伤亡
+    - 损失
+    - 受伤
+    - 伤害
+  correct: 伤亡
+- questionID: TX-Q167
+  lessonIds:
+    - 17
+  question: 爸爸这个假期打算带我们去 ___ 旅行，参观法国的埃菲尔铁塔和意大利的比萨斜塔，还要去瑞士滑雪。
+  options:
+    - 欧洲
+    - 亚洲
+    - 非洲
+    - 美洲
+  correct: 欧洲
+- questionID: TX-Q168
+  lessonIds:
+    - 17
+  question: 看着火山喷发、地震海啸这些景象，我不禁感叹：大自然的力量真是 ___ 又美妙，让人类在它面前显得如此渺小。
+  options:
+    - 神奇
+    - 奇妙
+    - 神秘
+    - 奇特
+  correct: 神奇
+- questionID: TX-Q169
+  lessonIds:
+    - 17
+  question: 北方的冬天十分 ___ ，经常下雪。
+  options:
+    - 寒冷
+    - 冰冷
+    - 燥热
+    - 冷清
+  correct: 寒冷
+- questionID: TX-Q170
+  lessonIds:
+    - 17
+  question: 考古学家发现，人类的 ___ 早在几十万年前就已经学会了使用火来取暖和烹饪食物。
+  options:
+    - 祖先
+    - 先人
+    - 古人
+    - 前辈
+  correct: 祖先

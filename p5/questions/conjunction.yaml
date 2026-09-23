@@ -1,0 +1,330 @@
+- questionID: CH-Q9
+  lessonIds:
+    - 1
+  question: ___ 你不要穿这些旧衣服，___ 把它们捐给老人院吧。
+  options:
+    - 要是……就
+    - 不管……都
+    - 虽然……但
+    - 不仅……也
+  correct: 要是……就
+- questionID: CH-Q10
+  lessonIds:
+    - 1
+  question: 这家餐馆卖的螃蟹 ___ 好吃，___ 一点也不贵。
+  options:
+    - 不是……而是
+    - 因为……所以
+    - 不但……而且
+    - 反正……不如
+  correct: 不但……而且
+- questionID: NH-Q9
+  lessonIds:
+    - 2
+  question: 他 ___ 会主动帮助邻居，___ 还会到老人院陪伴老人家。
+  options:
+    - 不是……而是
+    - 不但……而且
+    - 因为……所以
+    - 虽然……但是
+  correct: 不但……而且
+- questionID: NH-Q10
+  lessonIds:
+    - 2
+  question: 我常常说谎，这次 ___ 我怎么解释，他 ___ 不再相信我了。
+  options:
+    - 不管……都
+    - 不仅……还
+    - 假如……就
+    - 只有……才
+  correct: 不管……都
+- questionID: ACSJ-Q9
+  lessonIds:
+    - 3
+  question: ___ 我推开家门，我的小狗 ___ 会飞快地向我跑来。
+  options:
+    - 自从……就
+    - 每当……都
+    - 就算……也
+    - 已经……还
+  correct: 每当……都
+- questionID: ACSJ-Q10
+  lessonIds:
+    - 3
+  question: ___ 你要去图书馆，___ 顺便帮我还书吧。
+  options:
+    - 不管……仍然
+    - 由于……因此
+    - 反正……不如
+    - 不但……而且
+  correct: 反正……不如
+- questionID: HP-Q9
+  lessonIds:
+    - 4
+  question: ___ 我已经完成作业，可以陪你去看电影。
+  options:
+    - 如果
+    - 即使
+    - 为了
+    - 反正
+  correct: 反正
+- questionID: HP-Q10
+  lessonIds:
+    - 4
+  question: ___ 明天的天气好，我们就去海边玩耍。
+  options:
+    - 除了
+    - 要是
+    - 因为
+    - 尽管
+  correct: 要是
+- questionID: MB-Q9
+  lessonIds:
+    - 5
+  question: ___ 这位作家写的书，我都看过。
+  options:
+    - 为了
+    - 假如
+    - 凡是
+    - 尽管
+  correct: 凡是
+- questionID: MB-Q10
+  lessonIds:
+    - 5
+  question: 打乒乓球 ___ 好玩，___ 能让身体更强壮。
+  options:
+    - 如果……就
+    - 不仅……还
+    - 虽然……但
+    - 不管……都
+  correct: 不仅……还
+- questionID: NY-Q9
+  lessonIds:
+    - 6
+  question: 他 ___ 随便作答，___ 仔细地读每一道题目。
+  options:
+    - 就算……还是
+    - 不是……而是
+    - 因为……所以
+    - 不仅……而且
+  correct: 不是……而是
+- questionID: NY-Q10
+  lessonIds:
+    - 6
+  question: ___ 五岁以下的孩童，___ 可以免费入场。
+  options:
+    - 既然……就
+    - 除了……还
+    - 虽然……却
+    - 凡是……都
+  correct: 凡是……都
+- questionID: RG-Q9
+  lessonIds:
+    - 7
+  question: ___ 有好吃的东西，姐姐 ___ 会留给我。
+  options:
+    - 凡是……就
+    - 不管……都
+    - 虽然……却
+    - 除了……还
+  correct: 凡是……就
+- questionID: RG-Q10
+  lessonIds:
+    - 7
+  question: 哥哥 ___ 学业成绩好，___ 喜欢帮助别人。
+  options:
+    - 一边……一边
+    - 不是……而是
+    - 因为……所以
+    - 不仅……而且
+  correct: 不仅……而且
+- questionID: RS-Q9
+  lessonIds:
+    - 8
+  question: ___ 老师给的任务，我 ___ 会努力完成。
+  options:
+    - 凡是……都
+    - 为了……才
+    - 除了……还
+    - 如果……就
+  correct: 凡是……都
+- questionID: RS-Q10
+  lessonIds:
+    - 8
+  question: 这条路 ___ 很远，___ 难走。
+  options:
+    - 不是……就是
+    - 虽然……但是
+    - 不仅……而且
+    - 因为……所以
+  correct: 不仅……而且
+- questionID: RO-Q9
+  lessonIds:
+    - 9
+  question: 他___不要浪费食物，___把剩下的食物都吃完。
+  options:
+    - 除了……还有
+    - 反正……不如
+    - 为了……只好
+    - 不是……而是
+  correct: 为了……只好
+- questionID: RO-Q10
+  lessonIds:
+    - 9
+  question: 小华___长大了，妈妈___叫他"宝宝"。
+  options:
+    - 已经……还
+    - 不但……还
+    - 如果……就
+    - 自从……就
+  correct: 已经……还
+- questionID: TN-Q9
+  lessonIds:
+    - 10
+  question: ___ 大家齐心协力，___ 能顺利完成任务。
+  options:
+    - 只要……就……
+    - 不仅……也……
+    - 凡是……都……
+    - 尽管……还……
+  correct: 只要……就……
+- questionID: TN-Q10
+  lessonIds:
+    - 10
+  question: 这本书 ___ 内容丰富，___ 图案漂亮，适合学生们阅读。
+  options:
+    - 由于……因此……
+    - 不但……而且……
+    - 因为……所以……
+    - 虽然……但是……
+  correct: 不但……而且……
+- questionID: RL-Q9
+  lessonIds:
+    - 11
+  question: ___ 行人不遵守交通规则，交通 ___ 会受到影响。
+  options:
+    - 假如……就……
+    - 除了……也……
+    - 尽管……还……
+    - 不但……还……
+  correct: 假如……就……
+- questionID: RL-Q10
+  lessonIds:
+    - 11
+  question: 奶奶问妹妹 ___ 把功课做完了。
+  options:
+    - 是否
+    - 如果
+    - 已经
+    - 只好
+  correct: 是否
+- questionID: SH-Q9
+  lessonIds:
+    - 12
+  question: 他的成绩 ___ 进步很大了，你还批评他。
+  options:
+    - 还没
+    - 不管
+    - 已经
+    - 自从
+  correct: 已经
+- questionID: SH-Q10
+  lessonIds:
+    - 12
+  question: ___ 一连几天都没下雨，花草___ 容易干枯。
+  options:
+    - 假如……就……
+    - 不但……还……
+    - 即使……也……
+    - 尽管……但……
+  correct: 假如……就……
+- questionID: PL-Q10
+  lessonIds:
+    - 13
+  question: 她平时不认真学习，但在这次的听写中 ___ 得了满分。
+  options:
+    - 不然
+    - 由于
+    - 竟然
+    - 因为
+  correct: 竟然
+- questionID: NY24-Q9
+  lessonIds:
+    - 6
+  question: 这部电影 ___ 精彩， ___ 十分感人。
+  options:
+    - 不但……而且
+    - 无论……都是
+    - 不是……就是
+    - 由于……所以
+  correct: 不但……而且
+- questionID: NY24-Q10
+  lessonIds:
+    - 6
+  question: ___ 你身体不舒服，今天 ___ 别去练球了。
+  options:
+    - 不管……都
+    - 就算……也
+    - 要是……就
+    - 只有……才
+  correct: 要是……就
+- questionID: NY24EOY-Q9
+  lessonIds:
+    - 6
+  question: ___ 进入决赛的参赛者，___ 要参加这次的彩排。
+  options:
+    - 如果……就……
+    - 凡是……都……
+    - 除了……还……
+    - 无论……也……
+  correct: 凡是……都……
+- questionID: NY24EOY-Q10
+  lessonIds:
+    - 6
+  question: ___ 弟弟不专心学习，哥哥 ___ 耐心地教导他。
+  options:
+    - 虽然……但是……
+    - 因为……所以……
+    - 尽管……还是……
+    - 反正……不如……
+  correct: 尽管……还是……
+- questionID: HP24EOY-Q9
+  lessonIds:
+    - 4
+  question: 今天天气真好，我们 ___ 去公园野餐吧！
+  options:
+    - 到底
+    - 因为
+    - 只好
+    - 不如
+  correct: 不如
+- questionID: HP24EOY-Q10
+  lessonIds:
+    - 4
+  question: 这本故事书很有趣， ___ 里面有很多美丽的图案。
+  options:
+    - 所以
+    - 或者
+    - 而且
+    - 但是
+  correct: 而且
+- questionID: MB24SA2-Q9
+  lessonIds:
+    - 5
+  question: ___ 天气多么恶劣，救护人员都坚持前往救援。
+  options:
+    - 虽然
+    - 除非
+    - 即使
+    - 不管
+  correct: 不管
+- questionID: MB24SA2-Q10
+  lessonIds:
+    - 5
+  question: 小明 ___ 聪明，___ 学习非常努力。
+  options:
+    - 因为……所以……
+    - 不仅……而且……
+    - 虽然……但是……
+    - 与其……不如……
+  correct: 不仅……而且……

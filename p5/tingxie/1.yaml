@@ -1,0 +1,342 @@
+title: 第一课 (Lesson 1)
+vocab:
+  - word: 露营
+    pinyin: lù yíng
+    meaning: Camping
+    example: 我们全家去年去森林露营。
+    sentenceBank:
+      - zh: 我们打算周末去山里露营。
+        en: We plan to go camping in the mountains this weekend.
+      - zh: 露营需要准备帐篷和睡袋。
+        en: Camping requires preparing a tent and a sleeping bag.
+      - zh: 孩子们在露营活动中学会了照顾自己。
+        en: The children learned to take care of themselves during the camping activity.
+      - zh: 昨晚露营时，我们在屋外看了星星。
+        en: Last night while camping, we watched the stars outside.
+      - zh: 他第一次参加露营，感到非常兴奋。
+        en: He was very excited as it was his first time participating in camping.
+  - word: 一顿饭
+    pinyin: yí dùn fàn
+    meaning: A meal
+    example: 妈妈为我们准备了一顿饭。
+    sentenceBank:
+      - zh: 妈妈做了一顿饭给我们吃。
+        en: Mom made a meal for us to eat.
+      - zh: 吃完这一顿饭后，我们就要出发了。
+        en: After finishing this meal, we will depart.
+      - zh: 这一顿饭虽然简单，但大家吃得很开心。
+        en: Although this meal was simple, everyone enjoyed it very much.
+      - zh: 请朋友吃一顿饭表示感谢。
+        en: Treat a friend to a meal to express gratitude.
+      - zh: 他匆忙吃了一顿饭就去上学了。
+        en: He hurriedly ate a meal and left for school.
+  - word: 单独
+    pinyin: dān dú
+    meaning: Alone / Individually
+    example: 他不习惯单独一个人呆在家里。
+    sentenceBank:
+      - zh: 老师想找你单独谈谈。
+        en: The teacher wants to speak with you individually.
+      - zh: 小明敢一个人单独留在家里。
+        en: Xiao Ming dares to stay at home all alone.
+      - zh: 晚上不要单独在黑夜里走。
+        en: Do not walk alone at night in the dark.
+      - zh: 这个任务需要你单独去完成。
+        en: This task requires you to complete it individually.
+      - zh: 他喜欢单独一个人安静地看书。
+        en: He likes reading quietly by himself.
+  - word: 绑
+    pinyin: bǎng
+    meaning: Tie / Bind
+    example: 他用绳子把木头绑在一起。
+    sentenceBank:
+      - zh: 请把这两个鞋带绑在一起。
+        en: Please tie these two shoelaces together.
+      - zh: 他的双手被绳子绑住了。
+        en: His hands were tied by the rope.
+      - zh: 妈妈给妹妹绑了一个漂亮的发型。
+        en: Mom tied a nice hairstyle for my younger sister.
+      - zh: 我们要把垃圾袋绑紧再扔掉。
+        en: We need to tie the garbage bag tightly before throwing it away.
+      - zh: 医生用纱布把他的伤口绑好。
+        en: The doctor wrapped and bound his wound with gauze.
+  - word: 集合
+    pinyin: jí hé
+    meaning: Gather / Assemble
+    example: 老师叫大家在操场集合。
+    sentenceBank:
+      - zh: 同学们早上八点在操场集合。
+        en: Students gather on the sports field at eight in the morning.
+      - zh: 听到响声后，大家快速集合。
+        en: Upon hearing the sound, everyone gathered quickly.
+      - zh: 老师正在点名，请集合好队伍。
+        en: The teacher is taking attendance, please line up and gather nicely.
+      - zh: 我们在校门口集合，准备一起出发。
+        en: We gathered at the school gate, getting ready to depart together.
+      - zh: 队长发出了集合的指令。
+        en: The captain issued the directive to gather.
+  - word: 狼吞虎咽
+    pinyin: láng tūn hǔ yàn
+    meaning: Wolf down / Gobble up
+    example: 他太饿了，一下子就狼吞虎咽地吃完了。
+    sentenceBank:
+      - zh: 他饿坏了，吃起东西来狼吞虎咽。
+        en: He was starving, devouring his food wolfishly.
+      - zh: 看到桌上的美食，大家开始狼吞虎咽。
+        en: Seeing the delicious food on the table, everyone began wolfing it down.
+      - zh: 吃饭时狼吞虎咽对胃不好。
+        en: Gobbling up food during meals is bad for the stomach.
+      - zh: 弟弟狼吞虎咽地把面包吃光了。
+        en: Little brother wolfed down the bread completely.
+      - zh: 运动完后，他狼吞虎咽地喝干了一大碗汤。
+        en: After exercising, he wolfed down and finished a large bowl of soup.
+  - word: 贵重
+    pinyin: guì zhòng
+    meaning: Valuable / Precious
+    example: 这些是贵重物品，要小心保管。
+    sentenceBank:
+      - zh: 离开房间时请带好贵重物品。
+        en: Please take your valuable belongings with you when leaving the room.
+      - zh: 这件礼物非常贵重，我要好好保存。
+        en: This gift is very precious, so I must keep it safe.
+      - zh: 不要把贵重的东西放在显眼的地方。
+        en: Do not put valuable things in noticeable places.
+      - zh: 这块手表是他收到的最贵重的生日礼物。
+        en: This watch is the most valuable birthday present he received.
+      - zh: 钱包里有贵重的证书和现金。
+        en: There are valuable certificates and cash inside the wallet.
+  - word: 摔倒
+    pinyin: shuāi dǎo
+    meaning: Fall down
+    example: 他不小心摔倒在地上。
+    sentenceBank:
+      - zh: 地太滑了，我不小心摔倒了。
+        en: The ground was too slippery and I accidentally fell over.
+      - zh: 小朋友摔倒后坚强地站了起来。
+        en: After falling over, the child stood up bravely.
+      - zh: 跑步时要小心，防止摔倒。
+        en: Be careful when running to prevent falling over.
+      - zh: 爷爷在楼梯口不小心摔倒了。
+        en: Grandpa accidentally fell down at the entrance of the stairs.
+      - zh: 摔倒了不要紧，擦干眼泪继续往前走。
+        en: It's okay to fall down; dry your tears and keep going forward.
+  - word: 袜子
+    pinyin: wà zi
+    meaning: Socks
+    example: 你应该每天换干净的袜子。
+    sentenceBank:
+      - zh: 天冷了，记得穿上厚袜子。
+        en: The weather is getting cold, remember to put on thick socks.
+      - zh: 弟弟的袜子开了一个小洞。
+        en: Little brother's socks have a small hole in them.
+      - zh: 洗完袜子后要把它们晾干。
+        en: After washing the socks, they should be hung out to dry.
+      - zh: 我今天穿了一双红色的袜子。
+        en: I am wearing a pair of red socks today.
+      - zh: 抽屉里收拾得整整齐齐，全是袜子。
+        en: The drawer is neatly organized, full of socks.
+  - word: 感到充实
+    pinyin: gǎn dào chōng shí
+    meaning: Feel fulfilled
+    example: 今天帮邻居做家务，我感到很充实。
+    sentenceBank:
+      - zh: 充实地过好每一天让我感到很高兴。
+        en: Living every day fruitfully makes me feel very happy.
+      - zh: 参加完志愿服务后，我感到充实。
+        en: After participating in volunteer service, I felt fulfilled.
+      - zh: 读了一下午的书，他心里感到充实。
+        en: Having read books for an entire afternoon, he felt enriched in his heart.
+      - zh: 丰富的假期生活让我们感到充实。
+        en: A rich vacation life makes us feel fulfilled.
+      - zh: 学到了新知识后，我觉得生活感到充实。
+        en: Having learned new knowledge, I feel that life is fulfilling.
+  - word: 冠军
+    pinyin: guàn jūn
+    meaning: Champion
+    example: 他在长跑比赛中得了冠军。
+    sentenceBank:
+      - zh: 他在游泳比赛中夺得了冠军。
+        en: He won the championship in the swimming competition.
+      - zh: 我们的团队拿下了今年的冠军。
+        en: Our team secured this year's championship.
+      - zh: 经过刻苦训练，她终于成为了冠军。
+        en: After hard training, she finally became a champion.
+      - zh: 大家都在为获得冠军的队伍欢呼。
+        en: Everyone was cheering for the winning champion team.
+      - zh: 冠军站在领奖台上，流下了激动的眼泪。
+        en: The champion stood on the podium and shed tears of excitement.
+  - word: 轮
+    pinyin: lún
+    meaning: Turn / Wheel
+    example: 现在轮到你上场表演了。
+    sentenceBank:
+      - zh: 这一轮比赛马上就要开始了。
+        en: This round of the game is about to start.
+      - zh: 下一个轮到谁上场表演了？
+        en: Whose turn is it next to perform on stage?
+      - zh: 我们轮流照顾病床上的同学。
+        en: We take turns taking care of the student in the sickbed.
+      - zh: 新一轮的测试将于下周举行。
+        en: A new round of testing will be held next week.
+      - zh: 月亮像一轮明镜高挂在空中。
+        en: The moon hangs high in the sky like a bright round mirror.
+  - word: 探险
+    pinyin: tàn xiǎn
+    meaning: Explore / Adventure
+    example: 孩子们喜欢在后山探险。
+    sentenceBank:
+      - zh: 他们打算去神秘的森林里探险。
+        en: They intend to go on an adventure in the mysterious forest.
+      - zh: 探险队员们克服了重重困难。
+        en: The team of adventurers overcame numerous difficulties.
+      - zh: 这本童话书讲的是一个去海底探险的故事。
+        en: This fairy tale book is about an underwater adventure story.
+      - zh: 户外探险需要带足安全装备。
+        en: Outdoor adventure requires bringing sufficient safety gear.
+      - zh: 哥哥从小就梦想着去沙漠探险。
+        en: My elder brother has dreamed of going on a desert adventure since he was young.
+  - word: 齐心协力
+    pinyin: qí xīn xié lì
+    meaning: Work together
+    example: 大家齐心协力，终于完成了任务。
+    sentenceBank:
+      - zh: 只要大家齐心协力，就能战胜困难。
+        en: As long as everyone works together as one, we can overcome difficulties.
+      - zh: 同学们齐心协力完成了大扫除。
+        en: The students joined forces and completed the general cleanup.
+      - zh: 队员们齐心协力，最终赢得了比赛。
+        en: The team members cooperated with united effort and ultimately won the match.
+      - zh: 在灾难面前，全国人民齐心协力度过难关。
+        en: In the face of disaster, the whole nation works together to tide over the crisis.
+      - zh: 齐心协力的团队往往能创造奇迹。
+        en: A team working with united hearts and efforts can often create miracles.
+  - word: 禁止
+    pinyin: jìn zhǐ
+    meaning: Prohibit / Ban
+    example: 这里禁止吸烟。
+    sentenceBank:
+      - zh: 这里是公共场所，禁止吸烟。
+        en: This is a public area where smoking is prohibited.
+      - zh: 图书馆里禁止大声喧哗。
+        en: Making loud noises is strictly forbidden in the library.
+      - zh: 标识上写着"禁止攀爬"。
+        en: The sign reads "No Climbing".
+      - zh: 游泳池附近禁止追逐打闹。
+        en: Chasing and playing around near the swimming pool is prohibited.
+      - zh: 危险区域，禁止他人进入。
+        en: Dangerous area; entry by others is forbidden.
+  - word: 配合
+    pinyin: pèi hé
+    meaning: Coordinate / Cooperate
+    example: 这次活动需要大家的紧密配合。
+    sentenceBank:
+      - zh: 队员之间的默契配合是获胜的关键。
+        en: Tacit cooperation among team members is the key to victory.
+      - zh: 请大家积极配合医生的检查。
+        en: Please actively cooperate with the doctor's checkup.
+      - zh: 这个节目需要两个人互相配合才能完成。
+        en: This performance requires two people to coordinate with each other to complete.
+      - zh: 只要我们好好配合，很快就能做好。
+        en: As long as we cooperate well, we can get it done quickly.
+      - zh: 老师赞扬了大家在活动中的良好配合。
+        en: The teacher praised everyone's good coordination during the activity.
+  - word: 擦
+    pinyin: cā
+    meaning: Wipe / Rub
+    example: 他用毛巾擦了擦脸上的汗。
+    sentenceBank:
+      - zh: 请用湿抹布把桌子擦干净。
+        en: Please wipe the table clean with a wet rag.
+      - zh: 他用手擦掉了脸上的汗水。
+        en: He wiped away the sweat on his face with his hand.
+      - zh: 妹妹不小心擦伤了膝盖。
+        en: Younger sister accidentally scraped her knee.
+      - zh: 老师在黑板上擦掉了写错的字。
+        en: The teacher erased the misspelled words on the blackboard.
+      - zh: 鞋子上落了灰尘，需要擦一擦。
+        en: Dust has settled on the shoes, so they need to be wiped.
+  - word: 防止
+    pinyin: fáng zhǐ
+    meaning: Prevent
+    example: 洗手可以防止病菌传播。
+    sentenceBank:
+      - zh: 关好门窗可以防止小偷进入。
+        en: Locking doors and windows can prevent thieves from breaking in.
+      - zh: 出门戴口罩可以防止感冒传染。
+        en: Wearing a mask when going out can prevent the spread of colds.
+      - zh: 走路看路可以防止摔倒。
+        en: Looking where you walk can prevent you from falling.
+      - zh: 我们要采取措施防止水土流失。
+        en: We need to take measures to prevent soil erosion.
+      - zh: 食物放在冰箱里可以防止变质。
+        en: Storing food in the refrigerator can prevent it from spoiling.
+sentences:
+  - text: 听到喊声，他不管三七二十一，跳下水救人。
+    segments:
+      - 听到
+      - 喊声
+      - ，
+      - 他
+      - 不管三七二十一
+      - ，
+      - 跳下水
+      - 救人
+      - 。
+    icon: activity
+    description: Regardless of consequences, jumping in to save someone.
+  - text: 回到家里，我虽然很累，但是却感到很充实。
+    segments:
+      - 回到
+      - 家里
+      - ，
+      - 我
+      - 虽然
+      - 很累
+      - ，
+      - 但是
+      - 却
+      - 感到很充实
+      - 。
+    icon: smile
+    description: Tired but feeling fulfilled after a long day.
+  - text: 我心跳开始加快，手心开始冒汗，心像在打鼓一样。
+    segments:
+      - 我
+      - 心跳
+      - 开始加快
+      - ，
+      - 手心
+      - 开始冒汗
+      - ，
+      - 心像在打鼓一样
+      - 。
+    icon: activity
+    description: Heart racing and palms sweating like a drum.
+  - text: 碧蓝的天空万里无云，今天又是风和日丽的好天气。
+    segments:
+      - 碧蓝的
+      - 天空
+      - 万里无云
+      - ，
+      - 今天
+      - 又是
+      - 风和日丽的
+      - 好天气
+      - 。
+    icon: sun
+    description: Clear blue sky and beautiful sunny weather.
+  - text: 天空本来是晴朗的，但过了不久却乌云密布，雷声隆隆。
+    segments:
+      - 天空
+      - 本来是
+      - 晴朗的
+      - ，
+      - 但
+      - 过了不久
+      - 却
+      - 乌云密布
+      - ，
+      - 雷声隆隆
+      - 。
+    icon: cloud-rain
+    description: Sudden dark clouds and thunder.

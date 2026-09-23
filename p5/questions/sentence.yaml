@@ -1,0 +1,330 @@
+- questionID: CH-Q11
+  lessonIds:
+    - 1
+  question: 表哥因为挑食而营养不良，___________ 。
+  options:
+    - 因此天天做运动
+    - 所以经常会生病
+    - 不然上学会迟到
+    - 结果把钱都花完
+  correct: 所以经常会生病
+- questionID: CH-Q12
+  lessonIds:
+    - 1
+  question: ___________ ，终于完成了小组任务。
+  options:
+    - 同学们齐心协力
+    - 家长们不约而同
+    - 老师们胸有成竹
+    - 朋友们狼吞虎咽
+  correct: 同学们齐心协力
+- questionID: NH-Q11
+  lessonIds:
+    - 2
+  question: ___，不如留在家里看书吧。
+  options:
+    - 反正我们都喜欢画画
+    - 反正外面正在下大雨
+    - 反正这本书我刚看完
+    - 反正朋友叫我下楼玩
+  correct: 反正外面正在下大雨
+- questionID: NH-Q12
+  lessonIds:
+    - 2
+  question: 他很自私，___。
+  options:
+    - 从来不会对别人说真话
+    - 都会慢慢学会原谅他人
+    - 总是尽力帮助其他同学
+    - 邻居们都不想和他来往
+  correct: 邻居们都不想和他来往
+- questionID: ACSJ-Q11
+  lessonIds:
+    - 3
+  question: 小明低着头偷看故事书，___________ 。
+  options:
+    - 视力就下降了许多
+    - 是大家学习的榜样
+    - 没发现老师正盯着他
+    - 不知不觉做完了功课
+  correct: 没发现老师正盯着他
+- questionID: ACSJ-Q12
+  lessonIds:
+    - 3
+  question: ___________ ，真想找个地洞钻进去。
+  options:
+    - 黄叔叔发现骂错了人
+    - 林老师气得火冒三丈
+    - 他的家被大雨冲倒了
+    - 小明喜欢阴凉的地方
+  correct: 黄叔叔发现骂错了人
+- questionID: HP-Q11
+  lessonIds:
+    - 4
+  question: 小安被老师狠狠地批评后，___________ 。
+  options:
+    - 好不容易哇哇大哭
+    - 便禁不住手舞足蹈
+    - 一整天都沉默不语
+    - 依依不舍地离开了
+  correct: 一整天都沉默不语
+- questionID: HP-Q12
+  lessonIds:
+    - 4
+  question: ___________ ，是个有孝心的好孩子。
+  options:
+    - 哥哥常在听写中得到满分
+    - 明利睡觉前都会读一本书
+    - 姐姐用存下的钱买礼物给妈妈
+    - 小乐安静地等着爸爸接她回家
+  correct: 姐姐用存下的钱买礼物给妈妈
+- questionID: MB-Q11
+  lessonIds:
+    - 5
+  question: 哥哥才运动了一会儿，___________ 。
+  options:
+    - 放松了不少
+    - 就累得直喘气
+    - 跑了一圈又一圈
+    - 身体变得非常健康
+  correct: 就累得直喘气
+- questionID: MB-Q12
+  lessonIds:
+    - 5
+  question: ___________ ，爷爷的笑脸就浮现在我的脑海里。
+  options:
+    - 妹妹画了一幅画
+    - 刚戴上新的眼镜
+    - 电脑连上网络后
+    - 一说起这件往事
+  correct: 一说起这件往事
+- questionID: NY-Q11
+  lessonIds:
+    - 6
+  question: 他回到家时全身湿透了，___________ 。
+  options:
+    - 妈妈一直不停地观察着他
+    - 实际上刚刚才恢复了健康
+    - 偏偏今天早上忘记带雨伞
+    - 不久后额头就微微地发烫
+  correct: 不久后额头就微微地发烫
+- questionID: NY-Q12
+  lessonIds:
+    - 6
+  question: ___________ ，我感到无比自豪。
+  options:
+    - 看到别人需要帮助
+    - 演讲比赛准时开始了
+    - 被选中代表全校参与比赛
+    - 因为得到了偶像的签名照片
+  correct: 被选中代表全校参与比赛
+- questionID: RG-Q11
+  lessonIds:
+    - 7
+  question: ___________ ，偏偏就下起了大雨。
+  options:
+    - 小明今早出门时忘了带作业
+    - 爸爸刚到操场准备开始跑步
+    - 阿姨收到的礼物是一把雨伞
+    - 弟弟准备好下周露营的东西
+  correct: 爸爸刚到操场准备开始跑步
+- questionID: RG-Q12
+  lessonIds:
+    - 7
+  question: 等了好久，巴士终于来了，___________ 。
+  options:
+    - 很多路人都挤上前来围观
+    - 车窗外的景色变得模糊了
+    - 乘客们争先恐后地上了车
+    - 文华连忙向同学们打招呼
+  correct: 乘客们争先恐后地上了车
+- questionID: RS-Q11
+  lessonIds:
+    - 8
+  question: 在妈妈的细心培育下，___________ 。
+  options:
+    - 爷爷恢复了健康
+    - 晚餐很快就做好了
+    - 花园里的花全都枯了
+    - 果树结出了甜甜的果子
+  correct: 果树结出了甜甜的果子
+- questionID: RS-Q12
+  lessonIds:
+    - 8
+  question: ___________ ，你把它们丢进垃圾桶吧！
+  options:
+    - 这些早餐很有营养
+    - 食物都已经腐烂了
+    - 我们应该废物利用
+    - 购物时使用环保袋
+  correct: 食物都已经腐烂了
+- questionID: RO-Q11
+  lessonIds:
+    - 9
+  question: 他深深地吸了一口气，___________。
+  options:
+    - 把想要说的话说出来
+    - 不小心地摔倒在地上
+    - 把自己房间收拾干净
+    - 看到门外有很多叶子
+  correct: 把想要说的话说出来
+- questionID: RO-Q12
+  lessonIds:
+    - 9
+  question: ___________，我可能来不及完成这份功课。
+  options:
+    - 听到了这个坏消息后
+    - 想到老师生气的样子
+    - 要是没有哥哥的帮忙
+    - 平时都没有好好学习
+  correct: 要是没有哥哥的帮忙
+- questionID: TN-Q11
+  lessonIds:
+    - 10
+  question: ___________ ，身体比较瘦弱。
+  options:
+    - 他长期缺少营养
+    - 他每天早睡早起
+    - 他平时工作轻松
+    - 他经常练习游泳
+  correct: 他长期缺少营养
+- questionID: TN-Q12
+  lessonIds:
+    - 10
+  question: 班长发现自己做错了事，___________ 。
+  options:
+    - 感动得说不出话来
+    - 勇敢地向老师道歉
+    - 心中感到无比骄傲
+    - 赢得了大家的掌声
+  correct: 勇敢地向老师道歉
+- questionID: RL-Q11
+  lessonIds:
+    - 11
+  question: ___________ ，大家齐心协力地完成任务。
+  options:
+    - 今天天气恶劣
+    - 在野外露营时
+    - 经过这次比赛
+    - 报名截止之前
+  correct: 在野外露营时
+- questionID: RL-Q12
+  lessonIds:
+    - 11
+  question: 弟弟知道自己犯了错，___________ 。
+  options:
+    - 不知为什么而生气
+    - 不顾一切地冲过去
+    - 不好意思地低下头
+    - 不管怎么做都不对
+  correct: 不好意思地低下头
+- questionID: SH-Q11
+  lessonIds:
+    - 12
+  question: 文文知道自己被选为班长时，___________ 。
+  options:
+    - 生气地看着她
+    - 我感到非常惊喜
+    - 对他感到非常失望
+    - 脸上露出了惊奇的表情
+  correct: 脸上露出了惊奇的表情
+- questionID: SH-Q12
+  lessonIds:
+    - 12
+  question: ___________ ，我相信她不会动手打人。
+  options:
+    - 因为丽丽经常发脾气
+    - 丽丽平时对人很温柔
+    - 她常对父母表达孝心
+    - 她是个很顽皮的孩子
+  correct: 丽丽平时对人很温柔
+- questionID: PL-Q11
+  lessonIds:
+    - 13
+  question: 听了妈妈的劝告后，___________ 。
+  options:
+    - 他和妹妹大吵了起来
+    - 他做了功课才出门玩
+    - 他狠狠地瞪了妈妈一眼
+    - 他生气地把手机丢一旁
+  correct: 他做了功课才出门玩
+- questionID: PL-Q12
+  lessonIds:
+    - 13
+  question: 老师常提醒我们要爱护环境，___________ 。
+  options:
+    - 帮助身边的人
+    - 不要乱丢垃圾
+    - 把玩具捐出去
+    - 要多出门散步
+  correct: 不要乱丢垃圾
+- questionID: NY24-Q11
+  lessonIds:
+    - 6
+  question: 哥哥下个月要去外国读大学，___________ 。
+  options:
+    - 妈妈很舍不得他
+    - 他非常想念家人
+    - 妹妹伤心地哭起来
+    - 爸爸把他送上飞机
+  correct: 妈妈很舍不得他
+- questionID: NY24-Q12
+  lessonIds:
+    - 6
+  question: ___________ ，老师露出满意的笑容。
+  options:
+    - 看到小明的听写不及格
+    - 看到美美早餐吃了很多
+    - 看到伟明在马路边踢球
+    - 看到明华热心帮助同学
+  correct: 看到明华热心帮助同学
+- questionID: NY24EOY-Q11
+  lessonIds:
+    - 6
+  question: 林老师风趣幽默，___________ 。
+  options:
+    - 难怪大家一直都那么关心他
+    - 大家上课时都不敢举手发问
+    - 总是把同学们逗得哈哈大笑
+    - 经常出一些难题来考同学们
+  correct: 总是把同学们逗得哈哈大笑
+- questionID: HP24EOY-Q11
+  lessonIds:
+    - 4
+  question: ___________ ，看起来就像一只只小动物。
+  options:
+    - 动物园管理员打扫园地
+    - 小华一直在白纸上彩色
+    - 我昨晚做了一场很奇怪的梦
+    - 天空中各种各样的云朵形状
+  correct: 天空中各种各样的云朵形状
+- questionID: HP24EOY-Q12
+  lessonIds:
+    - 4
+  question: ___________ ，无意间打翻了桌上的花瓶。
+  options:
+    - 李伯伯说话太大声
+    - 弟弟伸手拿东西时
+    - 明华傻傻地站在原地
+    - 他安静地蹲在角落里
+  correct: 弟弟伸手拿东西时
+- questionID: MB24SA2-Q11
+  lessonIds:
+    - 5
+  question: 我们要学会控制自己的脾气，___________ 。
+  options:
+    - 不开心要向老师报告
+    - 不要因为小事就生气
+    - 告诉家长写信给校长
+    - 应该生气地责骂对方
+  correct: 不要因为小事就生气
+- questionID: MB24SA2-Q12
+  lessonIds:
+    - 5
+  question: ___________ ，依依不舍地和家人说再见。
+  options:
+    - 文文准备去外国读书那天
+    - 乐乐终于回到了奶奶的家
+    - 家明参加校园篮球比赛时
+    - 英文老师在家长会开始前
+  correct: 文文准备去外国读书那天

@@ -1,0 +1,295 @@
+- questionID: CH-Q7
+  lessonIds: []
+  question: 夜空里的星星一闪一闪的，多得__数不清__。（选出与画线词语意思最接近的选项）
+  options:
+    - 大小不一
+    - 变化很大
+    - 越来越多
+    - 难以计算
+  correct: 难以计算
+- questionID: CH-Q8
+  lessonIds:
+    - 6
+  question: 爸爸看见弟弟想从玩具车上跳下来，连忙上前__阻拦__。（选出与画线词语意思最接近的选项）
+  options:
+    - 一起做
+    - 不让做
+    - 帮忙做
+    - 以后做
+  correct: 不让做
+- questionID: NH-Q7
+  lessonIds:
+    - 11
+  question: 他把事情的经过说得很__详细__。（选出与画线词语意思最接近的选项）
+  options:
+    - 十分清楚
+    - 内容正确
+    - 非常细心
+    - 说话温柔
+  correct: 十分清楚
+- questionID: NH-Q8
+  lessonIds:
+    - 9
+  question: 文康突然生病了，欢欢__代替__他参加比赛。（选出与画线词语意思最接近的选项）
+  options:
+    - 做原本另一个人要做的事
+    - 和另一个人一起做一件事
+    - 把事情交给另一个人去做
+    - 请另一个人帮忙自己做事
+  correct: 做原本另一个人要做的事
+- questionID: ACSJ-Q7
+  lessonIds: []
+  question: 轮到妹妹表演了，她__胸有成竹__地走上了舞台。 (选出与画线词语意思最接近的选项)
+  options:
+    - 非常自信
+    - 十分自豪
+    - 无比激动
+    - 特别开心
+  correct: 非常自信
+- questionID: ACSJ-Q8
+  lessonIds: []
+  question: 哥哥最近__沉迷__于电脑游戏，常常不做功课。 (选出与画线词语意思最接近的选项)
+  options:
+    - 舍不得离开
+    - 认真地完成
+    - 非常用心做
+    - 对事物上瘾
+  correct: 对事物上瘾
+- questionID: HP-Q7
+  lessonIds: []
+  question: 运动对我们的健康有很大的__作用__。 (选出与画线词语意思最接近的选项)
+  options:
+    - 对人或事物产生影响
+    - 事件发生的最后结果
+    - 整件事情是如何发生
+    - 让每个人有不同看法
+  correct: 对人或事物产生影响
+- questionID: HP-Q8
+  lessonIds:
+    - 5
+    - 14
+  question: 明华__积极__参加学校举办的各种活动。 (选出与画线词语意思最接近的选项)
+  options:
+    - 心中有着非常强烈的感觉
+    - 自己相信自己能够做得到
+    - 表现出热心和努力的行为
+    - 做事只顾自己而不顾别人
+  correct: 表现出热心和努力的行为
+- questionID: MB-Q7
+  lessonIds:
+    - 14
+  question: 有了家人们的鼓励，小丽很快就__恢复__了自信。 (选出与画线词语意思最接近的选项)
+  options:
+    - 变成原来的样子
+    - 变成更好的样子
+    - 变成更差的样子
+    - 变成以后的样子
+  correct: 变成原来的样子
+- questionID: MB-Q8
+  lessonIds:
+    - 8
+  question: 战斗机从空中飞过，__一眨眼__就不见了。 (选出与画线词语意思最接近的选项)
+  options:
+    - 动作迅速
+    - 睁大眼睛
+    - 感到惊讶
+    - 时间很短
+  correct: 时间很短
+- questionID: NY-Q7
+  lessonIds:
+    - 12
+    - 15
+  question: 如果你们在__宽阔__的操场上踢球，就不会发生意外了。 (选出与画线词语意思最接近的选项)
+  options:
+    - 空间很大
+    - 数量变多
+    - 连续不断
+    - 没有限制
+  correct: 空间很大
+- questionID: NY-Q8
+  lessonIds:
+    - 5
+    - 14
+  question: 为了参加全国讲故事比赛，同学们都__积极__训练。 (选出与画线词语意思最接近的选项)
+  options:
+    - 快速地解决问题
+    - 耐心地完成任务
+    - 努力把事情做好
+    - 认真考取好成绩
+  correct: 努力把事情做好
+- questionID: RG-Q7
+  lessonIds: []
+  question: 能和同学一起参加比赛，真是个__宝贵__的机会！ (选出与画线词语意思最接近的选项)
+  options:
+    - 非常精彩，大家都爱看
+    - 非常美丽，有很多颜色
+    - 非常充足，完全没缺少
+    - 非常重要，不容易得到
+  correct: 非常重要，不容易得到
+- questionID: RG-Q8
+  lessonIds:
+    - 10
+  question: 妈妈每天在我耳边__唠叨__，要我早点儿上床睡觉。 (选出与画线词语意思最接近的选项)
+  options:
+    - 只说不重要的话
+    - 说话慢又很小声
+    - 一直说同样的话
+    - 喜欢说很多谎话
+  correct: 一直说同样的话
+- questionID: RS-Q7
+  lessonIds:
+    - 7
+  question: __大概__二十分钟，我就能做完功课。 (选出与画线词语意思最接近的选项)
+  options:
+    - 只要
+    - 超过
+    - 不多过
+    - 差不多
+  correct: 差不多
+- questionID: RS-Q8
+  lessonIds:
+    - 15
+  question: 虽然她的生活过得并不好，但对朋友却总是很__慷慨__。 (选出与画线词语意思最接近的选项)
+  options:
+    - 幽默有趣
+    - 温柔善良
+    - 诚实友善
+    - 乐于分享
+  correct: 乐于分享
+- questionID: RO-Q7
+  lessonIds:
+    - 6
+  question: 我__阻拦__他把水瓶丢下楼，因为这样做不安全。 (选出与画线词语意思最接近的选项)
+  options:
+    - 帮助别人做事情
+    - 勇敢地面对问题
+    - 不让一些事情发生
+    - 让人感到不好意思
+  correct: 不让一些事情发生
+- questionID: RO-Q8
+  lessonIds:
+    - 11
+  question: 弟弟刚开始学踢足球，他只会一些__基本__知识。 (选出与画线词语意思最接近的选项)
+  options:
+    - 简单的
+    - 专心的
+    - 好玩的
+    - 认真的
+  correct: 简单的
+- questionID: TN-Q7
+  lessonIds:
+    - 7
+  question: 爬山队__大概__还需要一天的时间才能登上山顶。（选出与画线词语意思最接近的选项）
+  options:
+    - 差不多
+    - 不太可能
+    - 完全一样
+    - 比想象的多
+  correct: 差不多
+- questionID: TN-Q8
+  lessonIds:
+    - 11
+  question: 海洋馆里的导览员向大家__详细__地介绍了各种鲸鱼的特点。（选出与画线词语意思最接近的选项）
+  options:
+    - 简单、容易
+    - 完整、清楚
+    - 认真、专心
+    - 热情、积极
+  correct: 完整、清楚
+- questionID: RL-Q7
+  lessonIds:
+    - 14
+  question: __凡是__甜食，妹妹都很喜欢吃。（选出与画线词语意思最接近的选项）
+  options:
+    - 所有；全部
+    - 许多；不少
+    - 大概；大约
+    - 拥有；具有
+  correct: 所有；全部
+- questionID: RL-Q8
+  lessonIds:
+    - 14
+  question: 哥哥正要出门时，__偏偏__下起了大雨。（选出与画线词语意思最接近的选项）
+  options:
+    - 完全没想到的事
+    - 对事情感到惊讶
+    - 事实跟愿望相反
+    - 想不到任何办法
+  correct: 事实跟愿望相反
+- questionID: SH-Q7
+  lessonIds:
+    - 12
+    - 15
+  question: 我们家门前有一条__宽阔__的街道。（选出与画线词语意思最接近的选项）
+  options:
+    - 宽度不大
+    - 盖住或关闭
+    - 曲折；不直
+    - 面积大；不拥挤
+  correct: 面积大；不拥挤
+- questionID: SH-Q8
+  lessonIds: []
+  question: 这段相声__风趣幽默__，逗得大家哈哈大笑。（选出与画线词语意思最接近的选项）
+  options:
+    - 形容言行有趣或可笑而意味深长
+    - 表示藏起来使不露出的思想情感
+    - 没有声音或存在感非常低的声音
+    - 不用言语表示而内心同意或承认
+  correct: 形容言行有趣或可笑而意味深长
+- questionID: NY24-Q7
+  lessonIds:
+    - 2
+  question: 蔬果放进冰箱里，可以__保持__新鲜。（选出画线词语的意思）
+  options:
+    - 使吸收更多的营养
+    - 使不消失或不改变
+    - 使受到伤害或破坏
+    - 使比原来的更加好
+  correct: 使不消失或不改变
+- questionID: NY24-Q8
+  lessonIds:
+    - 3
+  question: 老师刚提出问题，同学们就__异口同声__地喊出答案。（选出画线词语的意思）
+  options:
+    - 很多人同时不停地说话
+    - 很多人同时说一样的话
+    - 很多人争着抢着要说话
+    - 很多人按顺序轮流说话
+  correct: 很多人同时说一样的话
+- questionID: NY24EOY-Q8
+  lessonIds:
+    - 10
+  question: 听到奶奶又在__唠叨__，叫我多吃水果，我忍不住叹了口气。（选出与画线词语意思最接近的选项）
+  options:
+    - 让人注意健康
+    - 叫人赶快去做
+    - 不停地反复说
+    - 耐心地讲道理
+  correct: 不停地反复说
+- questionID: HP24EOY-Q8
+  lessonIds: []
+  question: 我们要学会控制 ___ ，不要轻易发脾气。
+  options:
+    - 心情
+    - 态度
+    - 情绪
+    - 想法
+  correct: 情绪
+- questionID: MB24SA2-Q7
+  lessonIds: []
+  question: 这场演唱会非常__精彩__，观众们都不停地拍手叫好。（选出与画线词语意思最接近的选项）
+  options:
+    - 出色；特别好
+    - 热闹；气氛好
+    - 好看；画面美
+    - 成功；结果好
+  correct: 出色；特别好
+- questionID: MB24SA2-Q8
+  lessonIds: []
+  question: 他不听大人的劝告，硬是要在马路上玩耍，结果__吃亏__了。（选出与画线词语意思最接近的选项）
+  options:
+    - 得到教训
+    - 受到伤害或遭受损失
+    - 感到难过
+    - 被大人责备
+  correct: 受到伤害或遭受损失

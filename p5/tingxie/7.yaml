@@ -1,0 +1,352 @@
+title: 第七课 (Chapter 7)
+vocab:
+  - word: 头顶
+    pinyin: tóu dǐng
+    meaning: Top of head
+    example: 他头顶上顶着一个大西瓜。
+    sentenceBank:
+      - zh: 烈日当空，头顶的太阳晒得皮肤发疼。
+        en: Strong sun overhead, the sun above my head burned my skin painfully.
+      - zh: 一鸟飞过，停在了他的头顶上。
+        en: A bird flew past and perched on top of his head.
+      - zh: 请注意头顶安全，防止高空落物。
+        en: Please pay attention to overhead safety to prevent falling objects.
+      - zh: 抬头看，头顶是一片蓝天白云。
+        en: Look up, above our head is blue sky and white clouds.
+      - zh: 顶着头顶的帽子防晒。
+        en: Wear the hat atop your head for sun protection.
+  - word: 浮出
+    pinyin: fú chū
+    meaning: Emerge / Float up
+    example: 鲸鱼浮出水面呼吸空气。
+    sentenceBank:
+      - zh: 潜水员缓缓从水底浮出水面。
+        en: The diver slowly surfaced out of the water from the bottom.
+      - zh: 鲸鱼隔一段时间就要浮出水面呼吸。
+        en: Whales need to surface out of water at intervals to breathe.
+      - zh: 经过调查，事情的真相终于浮出水面。
+        en: After investigation, the truth of the matter finally surfaced.
+      - zh: 小鱼纷纷浮出水面吐泡泡。
+        en: Small fish surfaced one after another to blow bubbles.
+      - zh: 冰山在海面上浮出了巨大的一角。
+        en: The iceberg surfaced a huge tip above sea level.
+  - word: 水柱
+    pinyin: shuǐ zhù
+    meaning: Water column
+    example: 鲸鱼喷出的水柱非常壮观。
+    sentenceBank:
+      - zh: 喷泉喷出了高达十米的水柱。
+        en: The fountain shot out a water column as high as ten meters.
+      - zh: 鲸鱼换气时会喷出强烈的水柱。
+        en: Whales shoot out strong water columns when blowing air.
+      - zh: 消防员用高压水柱扑灭了大火。
+        en: Firefighters extinguished the large fire using high-pressure water jets.
+      - zh: 巨大的水柱从破损的水管冲天而起。
+        en: A huge water column rushed skyward from the damaged pipe.
+      - zh: 水柱在阳光照射下形成了绚丽的彩虹。
+        en: The water column formed a gorgeous rainbow under sunlight illumination.
+  - word: 层
+    pinyin: céng
+    meaning: Layer
+    example: 蛋糕外面涂了一层厚厚的奶油。
+    sentenceBank:
+      - zh: 这栋大楼一共有二十六层。
+        en: This building has twenty-six floors in total.
+      - zh: 蛋糕上面涂了厚厚的一层奶油。
+        en: A thick layer of cream was spread over the cake.
+      - zh: 经过努力，他的学习成绩更上一层楼。
+        en: Through effort, his academic performance scaled a higher level.
+      - zh: 桌子上落满了一层薄薄的灰尘。
+        en: The table was covered with a thin layer of dust.
+      - zh: 剥开一层又一层的包装纸。
+        en: Peel open layer upon layer of wrapping paper.
+  - word: 厚厚
+    pinyin: hòu hòu
+    meaning: Thick
+    example: 冬天，地上积了一层厚厚的雪。
+    sentenceBank:
+      - zh: 冬天到了，地上积了厚厚的一层雪。
+        en: Winter has arrived, and a thick layer of snow accumulated on the ground.
+      - zh: 天冷了，妈妈让我穿上厚厚的羽绒服。
+        en: It's cold; Mom asked me to put on a thick down jacket.
+      - zh: 桌子上放着一本厚厚的字典。
+        en: A thick dictionary lay on the table.
+      - zh: 墙上挂着厚厚的窗帘遮挡阳光。
+        en: Thick curtains hung on the wall to block out sunlight.
+      - zh: 踩在厚厚的地毯上感觉非常舒适。
+        en: Stepping on a thick carpet feels very comfortable.
+  - word: 公斤
+    pinyin: gōng jīn
+    meaning: Kilogram
+    example: 这袋大米重十公斤。
+    sentenceBank:
+      - zh: 这袋大米的重量是十公斤。
+        en: The weight of this bag of rice is ten kilograms.
+      - zh: 医生建议他每天增加一公斤的运动负荷。
+        en: The doctor suggested he increase daily exercise load by one kilogram.
+      - zh: 妈妈在菜市场买了三公斤苹果。
+        en: Mom bought three kilograms of apples at the food market.
+      - zh: 乘坐飞机时行李不能超过规定公斤数。
+        en: Luggage cannot exceed specified kilograms when flying.
+      - zh: 经过一个月锻炼，他成功减轻了两公斤。
+        en: After a month of exercise, he successfully reduced two kilograms.
+  - word: 深海
+    pinyin: shēn hǎi
+    meaning: Deep sea
+    example: 深海里有很多神秘的生物。
+    sentenceBank:
+      - zh: 深海里生活着许多稀奇古怪的生物。
+        en: Many strange and bizarre creatures live in the deep sea.
+      - zh: 潜水艇可以潜入数千米的深海探险。
+        en: Submarines can submerge into deep sea thousands of meters deep for exploration.
+      - zh: 深海世界幽暗而神秘。
+        en: The deep sea world is dark and mysterious.
+      - zh: 科学家正在研究深海生态环境。
+        en: Scientists are studying the deep sea ecological environment.
+      - zh: 强烈的海水压力是深海探测的难题。
+        en: Intense seawater pressure is a difficult problem in deep sea exploration.
+  - word: 浅海
+    pinyin: qiǎn hǎi
+    meaning: Shallow sea
+    example: 浅海处适合游泳和浮潜。
+    sentenceBank:
+      - zh: 许多小鱼和小虾喜欢生活在浅海区域。
+        en: Many small fish and shrimps like living in shallow sea areas.
+      - zh: 游客们在安全的浅海里游泳玩耍。
+        en: Tourists swim and play in the safe shallow waters.
+      - zh: 浅海地区阳光充足，适合珊瑚生长。
+        en: Shallow sea areas have ample sunlight, suitable for coral growth.
+      - zh: 退潮后，浅海摊上留下了许多贝壳。
+        en: After the tide ebbed, many shells were left on the shallow sea beach.
+      - zh: 这片浅海清澈见底。
+        en: This shallow sea area is crystal clear to the bottom.
+  - word: 死掉
+    pinyin: sǐ diào
+    meaning: Die
+    example: 如果不浇水，这棵花会死掉。
+    sentenceBank:
+      - zh: 如果长期不浇水，植物就会死掉。
+        en: If left unwatered for long, plants will die off.
+      - zh: 养在水缸里的小金鱼不小心死掉了。
+        en: The little goldfish raised in the tank accidentally died.
+      - zh: 及时救治受伤的小鸟，防止它死掉。
+        en: Treat the injured bird promptly to prevent it from dying off.
+      - zh: 严寒的冬季导致许多害虫死掉。
+        en: Severe winter cold causes many pest insects to die off.
+      - zh: 看到树苗死掉，大家感到很可惜。
+        en: Seeing the sapling die off, everyone felt it was a pity.
+  - word: 大概
+    pinyin: dà gài
+    meaning: About / Probably
+    example: 我大概需要一个小时完成作业。
+    sentenceBank:
+      - zh: 我大概需要半个小时才能完成作业。
+        en: I probably need about half an hour to complete the homework.
+      - zh: 他大概还不知道这个消息吧。
+        en: He probably doesn't know this news yet, right?
+      - zh: 这篇文章的大概意思是倡导环保。
+        en: The rough idea of this article is advocating environmental protection.
+      - zh: 参加这次活动的同学大概有五十人。
+        en: Students attending this activity number roughly around fifty.
+      - zh: 了解事情的大概经过后，他做出了判断。
+        en: After understanding the general course of events, he made a judgment.
+  - word: 盖
+    pinyin: gài
+    meaning: Cover / Lid
+    example: 请把杯子的盖盖好。
+    sentenceBank:
+      - zh: 睡觉时要盖好被子，小心着凉。
+        en: Cover yourself well with the quilt while sleeping, be careful not to catch cold.
+      - zh: 城市里盖起了许许多多的高楼大厦。
+        en: Many high-rise buildings were built in the city.
+      - zh: 请把汤锅的盖子盖严实。
+        en: Please cover the soup pot lid tightly.
+      - zh: 文件上盖了一个红色的印章。
+        en: A red official stamp was stamped on the document.
+      - zh: 大雪盖住了整座大山。
+        en: Heavy snow covered the entire mountain.
+  - word: 载
+    pinyin: zài
+    meaning: Carry / Load
+    example: 这辆货车载满了货物。
+    sentenceBank:
+      - zh: 这辆卡车可以载满重达数吨的货物。
+        en: This truck can carry a full load of goods weighing several tons.
+      - zh: 校车每天负责安全接载学生上下学。
+        en: The school bus is responsible for safely carrying students to and from school daily.
+      - zh: 满载而归的渔船缓缓靠岸。
+        en: The fishing boat returning fully loaded slowly berthed.
+      - zh: 这艘轮船最大能够载客一千人。
+        en: This vessel can carry a maximum of one thousand passengers.
+      - zh: 载着梦想的飞船升上了太空。
+        en: The spacecraft carrying dreams ascended into space.
+  - word: 波
+    pinyin: bō
+    meaning: Wave
+    example: 海浪一波接一波地拍打着沙滩。
+    sentenceBank:
+      - zh: 微风吹过，湖面荡起一阵阵波浪。
+        en: A gentle breeze blew past, and waves rippled across the lake surface.
+      - zh: 新一波的冷空气即将来袭。
+        en: A new wave of cold air is coming soon.
+      - zh: 随手扔下一块石头，水面泛起了微波。
+        en: Tossing a stone casually, subtle waves rippled on the water surface.
+      - zh: 电波将信号传送到世界各地。
+        en: Radio waves transmit signals to all parts of the world.
+      - zh: 这一波人潮涌进了展览馆。
+        en: This wave of crowd surged into the exhibition hall.
+  - word: 激动
+    pinyin: jī dòng
+    meaning: Excited
+    example: 听到获奖的消息，他激动地跳了起来。
+    sentenceBank:
+      - zh: 听到自己获奖的消息，他激动得流下了眼泪。
+        en: Hearing the news that he won an award, he wept with excitement.
+      - zh: 比赛进入决胜阶段，观众们十分激动。
+        en: The match reached deciding stages, and the audience was extremely excited.
+      - zh: 请控制好情绪，不要太激动。
+        en: Please control your emotions and don't be overly excited.
+      - zh: 队员们拥抱在一起，庆祝激动的时刻。
+        en: Team members hugged together, celebrating the exciting moment.
+      - zh: 激动的心情久久不能平静下来。
+        en: Excited emotions could not calm down for a long time.
+  - word: 渐渐
+    pinyin: jiàn jiàn
+    meaning: Gradually
+    example: 天色渐渐暗了下来。
+    sentenceBank:
+      - zh: 太阳落山了，天色渐渐暗了下来。
+        en: The sun set, and the sky gradually darkened.
+      - zh: 经过一段时间适应，他渐渐喜欢上了新环境。
+        en: After adapting for a period, he gradually grew fond of the new environment.
+      - zh: 雨过天晴，天空渐渐放晴了。
+        en: Rain passed and sun shone, sky gradually cleared up.
+      - zh: 随着时间的推移，伤口渐渐痊愈了。
+        en: With the passage of time, the wound gradually healed.
+      - zh: 远去的火车渐渐消失在视线中。
+        en: The departing train gradually vanished from line of sight.
+  - word: 巨大
+    pinyin: jù dà
+    meaning: Huge
+    example: 蓝鲸是一种体型巨大的动物。
+    sentenceBank:
+      - zh: 广场上立着一座巨大的雕像。
+        en: A huge statue stands in the plaza.
+      - zh: 这项发明对人类社会产生了巨大的影响。
+        en: This invention produced a huge impact on human society.
+      - zh: 面对巨大的压力，他依然没有放弃。
+        en: Facing huge pressure, he still did not give up.
+      - zh: 救援人员克服了巨大的困难完成了任务。
+        en: Rescue personnel overcome huge difficulties to complete the task.
+      - zh: 现场发出了巨大的爆炸声响。
+        en: A huge explosion sound echoed at the site.
+  - word: 随着
+    pinyin: suí zhe
+    meaning: Along with
+    example: 随着科学的发展，生活越来越便利。
+    sentenceBank:
+      - zh: 随着音乐的节奏，大家翩翩起舞。
+        en: Following the rhythm of the music, everyone danced lightly.
+      - zh: 随着科技的发展，人们的生活越来越便利。
+        en: Along with the development of technology, people's lives are increasingly convenient.
+      - zh: 随着气温升高，冰雪开始融化。
+        en: As temperatures rise, ice and snow begin to melt.
+      - zh: 随着年龄增长，我们要学会承担责任。
+        en: As age grows, we need to learn to bear responsibility.
+      - zh: 随着一声令下，比赛正式开始。
+        en: Along with the order given, the game officially began.
+  - word: 依依不舍
+    pinyin: yī yī bù shě
+    meaning: Reluctant to part
+    example: 同学们依依不舍地告别了老师。
+    sentenceBank:
+      - zh: 毕业时，同学们依依不舍地互相道别。
+        en: Upon graduation, classmates reluctantly bade farewell to each other.
+      - zh: 假期结束了，我依依不舍地离开了老家。
+        en: The vacation ended, and I reluctantly left my hometown.
+      - zh: 看着父母远去的背影，她眼中充满了依依不舍。
+        en: Watching her parents' departing figures, her eyes were filled with reluctance.
+      - zh: 大家依依不舍地挥手向老师告别。
+        en: Everyone reluctantly waved goodbye to the teacher.
+      - zh: 欢快的时光总是让人感到依依不舍。
+        en: Joyful times always make people feel reluctant to part.
+  - word: 消失
+    pinyin: xiāo shí
+    meaning: Vanish
+    example: 魔术师的手一挥，硬币就消失了。
+    sentenceBank:
+      - zh: 太阳落山后，霞光渐渐消失在天边。
+        en: After the sun set, glowing clouds gradually vanished over the horizon.
+      - zh: 魔法师的手帕在众目睽睽下消失了。
+        en: The magician's handkerchief vanished under everyone's gaze.
+      - zh: 随着误会解开，心中的顾虑完全消失了。
+        en: As the misunderstanding was resolved, inner misgivings vanished completely.
+      - zh: 恐龙在数千万年前就从地球上消失了。
+        en: Dinosaurs vanished from the earth tens of millions of years ago.
+      - zh: 欢呼声渐渐弱下去，最终完全消失。
+        en: Cheers faded gradually, ultimately vanishing completely.
+sentences:
+  - text: 鲸鱼浮出水面，喷出高高的水柱。
+    segments:
+      - 鲸鱼
+      - 浮出
+      - 水面
+      - ，
+      - 喷出
+      - 高高的
+      - 水柱
+      - 。
+    icon: waves
+    description: A whale emerging and spraying water.
+  - text: 蓝鲸是世界上最大的动物，身体非常巨大。
+    segments:
+      - 蓝鲸
+      - 是
+      - 世界上
+      - 最大的
+      - 动物
+      - ，
+      - 身体
+      - 非常
+      - 巨大
+      - 。
+    icon: activity
+    description: The blue whale is a massive animal.
+  - text: 随着音乐的响起，大家激动地跳起舞来。
+    segments:
+      - 随着
+      - 音乐
+      - 的
+      - 响起
+      - ，
+      - 大家
+      - 激动地
+      - 跳起
+      - 舞来
+      - 。
+    icon: smile
+    description: Dancing excitedly to the music.
+  - text: 我们依依不舍地告别了朋友，踏上了归途。
+    segments:
+      - 我们
+      - 依依不舍地
+      - 告别了
+      - 朋友
+      - ，
+      - 踏上了
+      - 归途
+      - 。
+    icon: users
+    description: Saying goodbye reluctantly to friends.
+  - text: 渐渐地，那只小船在海面上消失了。
+    segments:
+      - 渐渐地
+      - ，
+      - 那只
+      - 小船
+      - 在
+      - 海面上
+      - 消失了
+      - 。
+    icon: sunset
+    description: A small boat vanishing gradually on the sea.

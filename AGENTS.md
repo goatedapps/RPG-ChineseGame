@@ -1,7 +1,7 @@
 # Word Spirit Quest
 
-The current playable game is the self-contained `prototype/index.html`; `gameplan.md` specifies the larger rebuild.
-Keep the embedded vocabulary and Hanzi Writer character data intact when changing prototype logic.
+The current playable game starts at `prototype/index.html`; styles, game logic, generated audio, curriculum data, character data, and the Hanzi Writer vendor build live in separate files under `prototype/`.
+Keep the external vocabulary and Hanzi Writer character data intact when changing prototype logic.
 Run `npm test` for the prototype's DOM and save/progression regression checks.
 
 ## Approved review decisions

@@ -6,23 +6,32 @@ const vm = require('node:vm');
 const { JSDOM, VirtualConsole } = require('jsdom');
 
 const root = path.resolve(__dirname, '..');
-const html = fs.readFileSync(path.join(root, 'prototype', 'index.html'), 'utf8');
+const prototypeRoot = path.join(root, 'prototype');
+const html = fs.readFileSync(path.join(prototypeRoot, 'index.html'), 'utf8');
+const css = fs.readFileSync(path.join(prototypeRoot, 'styles.css'), 'utf8');
+const gameSource = fs.readFileSync(path.join(prototypeRoot, 'app.js'), 'utf8');
+const audioSource = fs.readFileSync(path.join(prototypeRoot, 'audio.js'), 'utf8');
+const contentSource = fs.readFileSync(path.join(prototypeRoot, 'data', 'content.js'), 'utf8');
+const hanziSource = fs.readFileSync(path.join(prototypeRoot, 'data', 'hanzi.js'), 'utf8');
+const vendorSource = fs.readFileSync(path.join(prototypeRoot, 'vendor', 'hanzi-writer.min.js'), 'utf8');
 const dom = new JSDOM(html);
-const scripts = [...dom.window.document.querySelectorAll('script')];
-const gameSource = scripts.at(-1).textContent;
 
-function jsonConstant(source, declaration, followingMarker) {
-  const start = source.indexOf(declaration) + declaration.length;
-  const end = source.indexOf(followingMarker, start);
-  assert.ok(start >= declaration.length && end > start, `found ${declaration}`);
-  return JSON.parse(source.slice(start, end).trim().replace(/;$/, ''));
+function assignedJson(source, declaration) {
+  assert.ok(source.startsWith(declaration), `found ${declaration}`);
+  return JSON.parse(source.slice(declaration.length).trim().replace(/;$/, ''));
 }
 
-test('prototype HTML and embedded game script parse successfully', () => {
+test('prototype shell and modular scripts parse successfully', () => {
   assert.equal(dom.window.document.querySelector('#cv')?.tagName, 'CANVAS');
   assert.ok(dom.window.document.querySelector('#objectiveText'));
   assert.ok(dom.window.document.querySelector('#hXpT'));
+  assert.ok(dom.window.document.querySelector('#joystick'));
   assert.doesNotThrow(() => new vm.Script(gameSource));
+  assert.doesNotThrow(() => new vm.Script(audioSource));
+  assert.deepEqual(
+    [...dom.window.document.querySelectorAll('script[src]')].map(script => script.getAttribute('src')),
+    ['vendor/hanzi-writer.min.js', 'data/content.js', 'data/hanzi.js', 'audio.js', 'app.js'],
+  );
 });
 
 test('prototype reaches the level picker without a startup error', async () => {
@@ -30,7 +39,7 @@ test('prototype reaches the level picker without a startup error', async () => {
   const virtualConsole = new VirtualConsole();
   virtualConsole.on('jsdomError', error => errors.push(error));
   const runtime = new JSDOM(html, {
-    runScripts: 'dangerously',
+    runScripts: 'outside-only',
     url: 'http://localhost/',
     pretendToBeVisual: true,
     virtualConsole,
@@ -55,15 +64,20 @@ test('prototype reaches the level picker without a startup error', async () => {
       });
     },
   });
+  runtime.window.eval(vendorSource);
+  runtime.window.eval(contentSource);
+  runtime.window.eval(hanziSource);
+  runtime.window.eval(audioSource);
+  runtime.window.eval(gameSource);
   await new Promise(resolve => setImmediate(resolve));
-  assert.match(runtime.window.document.querySelector('#ov').textContent, /Choose your level/);
   assert.deepEqual(errors.map(error => error.message), []);
+  assert.match(runtime.window.document.querySelector('#ov').textContent, /Choose your level/);
   runtime.window.close();
 });
 
-test('all regional vocabulary and handwriting data remain embedded', () => {
-  const data = jsonConstant(gameSource, 'const DATA = ', '\n/* ================= constants');
-  const charData = jsonConstant(gameSource, 'const CHARDATA=', '\nconst REVIEW_DAYS');
+test('all regional vocabulary and handwriting data remain available externally', () => {
+  const data = assignedJson(contentSource, 'window.GAME_DATA=');
+  const charData = assignedJson(hanziSource, 'window.HANZI_DATA=');
   assert.equal(data.words.length, 54);
   assert.deepEqual([...new Set(data.words.map(word => word.l))], [1, 2, 3]);
   for (const word of data.words) {
@@ -143,8 +157,21 @@ test('approved progression and reward rules are wired into the prototype', () =>
 });
 
 test('primary controls meet the 44 pixel touch target baseline', () => {
-  const css = [...dom.window.document.querySelectorAll('style')].map(node => node.textContent).join('\n');
   assert.match(css, /\.hbtn\{[^}]*min-height:44px/);
   assert.match(css, /\.close\{[^}]*width:44px;height:44px/);
   assert.match(css, /\.speak\{[^}]*min-height:44px/);
+});
+
+test('tablet joystick, expanded world, and scene audio are connected', () => {
+  assert.equal(dom.window.document.querySelectorAll('#dpad button').length, 0);
+  assert.ok(dom.window.document.querySelector('#joystickKnob'));
+  assert.match(css, /\.joystick\{[^}]*touch-action:none/);
+  assert.match(gameSource, /MW=52, MH=38/);
+  assert.match(gameSource, /rect\(29,6,MW-31,MH-8,'b'\)/);
+  assert.match(gameSource, /GameAudio\.setScene\('battle'\)/);
+  assert.match(gameSource, /GameAudio\.setScene\('boss'\)/);
+  assert.match(gameSource, /GameAudio\.setScene\('village'\)/);
+  assert.match(audioSource, /village:/);
+  assert.match(audioSource, /battle:/);
+  assert.match(audioSource, /boss:/);
 });

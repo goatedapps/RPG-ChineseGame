@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1b2430">
+  <title>Word Spirit Quest — Learning Lab</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/lab.css">
+</head>
+<body>
+  <main class="lab-shell">
+    <header class="lab-header">
+      <div>
+        <p class="lab-kicker">P2 Learning Core</p>
+        <h1>Content Lab <span>学习工坊</span></h1>
+        <p>Run every reusable learning task against the real P2 and P5 curriculum.</p>
+      </div>
+      <a class="secondary" href="./">Return to village</a>
+    </header>
+
+    <section class="lab-controls" aria-label="Learning task controls">
+      <label>Curriculum<select id="lab-level"><option value="p5">Primary 5</option><option value="p2">Primary 2</option></select></label>
+      <label>Lesson<select id="lab-lesson"></select></label>
+      <label class="lab-word-control">Word<input id="lab-word-search" type="search" placeholder="Search Hanzi, pinyin, or meaning" autocomplete="off"><select id="lab-word" size="1"></select></label>
+      <label>Task<select id="lab-task"></select></label>
+      <button class="primary" id="lab-run" type="button">Run task</button>
+    </section>
+
+    <section class="lab-summary" id="lab-summary" aria-live="polite"></section>
+    <section class="lab-workspace" id="lab-workspace" aria-live="polite">
+      <div class="lab-loading"><h2>Opening the learning lab…</h2><p>Loading curriculum and local writing data.</p></div>
+    </section>
+  </main>
+  <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
+  <script type="module" src="../src/content-lab.js"></script>
+</body>
+</html>
+

@@ -6,7 +6,7 @@ Primary 5 has the reference prototype and detailed campaign specification; Prima
 This document is the full specification for building the game.
 It is written so that a coding agent (Claude Code, Codex, etc.) can build it from scratch in a fresh repository without having seen the design conversation.
 
-**Status:** a working P5 Region 1 prototype exists at `prototype/index.html`.
+**Status:** a working P5 Region 1 prototype exists at `prototype/index.html`, and rebuild phases P0–P2 are complete under `game/`.
 It already includes the level picker, encoded saves, the Reading Hall passage quests and the weekly Exam Day described below.
 Treat it as a frozen reference for look and feel and for the already-tested writing and battle logic.
 P2 and P5 source packs now live in `content/source/` and pass the structural validator.
@@ -1359,7 +1359,7 @@ The P2 slice deliberately happens before P5 Region 2 so that level-specific assu
 |---|---|---|
 | **P0 Setup — complete** | repo layout (15), `package.json`, vendor Hanzi Writer, `build-content`, `build-chars`, `validate-content` | `npm run build:content` produces normalized P2 and P5 JSON; validation passes; the missing-character lists are empty |
 | **P1 Engine — complete** | modular shell under `game/`, CSS tokens, state/save/migrations/events, **level picker and per-level encoded preview saves**, shared map loading and rendering, movement, D-pad, interactions, overlay, dialogue box, toasts, HUD | P5 loads from data; the player can walk around `r1-hub`, talk to villagers and signs, and reload at the saved position; edited saves carry the tamper flag; prototype saves are copied without being overwritten |
-| **P2 Learning core** | questions (all 4 MCQ skills plus exam adapters), mastery, selection, audio, writing module (3 stages, pass/fail, Show me how, I don't know) | unit tests pass; a content-lab page can run any supported question or writing task for any P2 or P5 word; disabled question types never appear |
+| **P2 Learning core — complete** | questions (all 4 MCQ skills plus exam adapters), mastery, selection, audio, writing module (3 stages, pass/fail, Show me how, I don't know) | unit tests pass; `game/lab.html` can run any supported question or writing task for any P2 or P5 word; disabled question types never appear |
 | **P3 Region 1 parity** | wild battles (5.1–5.5), enemy turn, creatures, Spirit Book, School (quiz, tingxie, Exam Day), Inn, Shop (Rice Ball), Storyteller, **Reading Hall passage quests (11.4)**, energy cap, parent panel (basic, with written answers) | everything the prototype does works, split into modules; the e2e writing test passes; a full passage chain can be finished and gives the Cave Lantern |
 | **P4 Items and gear** | consumables, gear slots, materials drops, Craft Table, Character screen, player sprite shows gear | each item in 7.1 and 7.2 has a working effect; hint items suppress ticks |
 | **P5 Collection** | partners (8.2), Spirit Sets and map patches (8.3), milestones (8.4), player room (9.5) | completing the Campfire set visibly lights the campfire; partner bonuses apply; milestones grant rewards once |

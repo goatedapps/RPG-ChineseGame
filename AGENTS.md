@@ -104,7 +104,8 @@ After P5 Region 1 parity, run P2 Lessons 1–3 through the same Region 1 before 
 
 P0 is complete: both source packs validate and generate normalized content plus local Hanzi data.
 P1 is complete under `game/`: the modular preview loads shared Region 1 data, supports movement and interactions, and keeps isolated encoded preview saves.
-P2 is next: migrate mastery, question selection, answer feedback, writing and audio into pure learning modules plus a content-lab screen.
+P2 is complete under `game/lab.html`: both content packs can run generated questions, supported exam questions, speech and local three-stage handwriting through shared learning modules.
+P3 is next: migrate Region 1 battles, School, Reading Hall, collection, services and basic parent controls until the modular build reaches prototype parity.
 
 ## Development workflow
 

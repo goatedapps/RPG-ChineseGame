@@ -150,7 +150,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Modular build status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0 is complete. P1 now loads a shared JSON map through a level-independent engine and keeps preview saves separate from the stable prototype.</p>
+    <p>P0–P2 are complete. The shared engine now includes reusable mastery, selection, questions, exam adapters, speech and three-stage writing for both curriculum packs.</p>
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
@@ -159,7 +159,7 @@ function showBuildStatus() {
       <div>Position<b>${state.player.x}, ${state.player.y}</b></div>
       <div>Save integrity<b>${state.tampered ? 'Edited' : 'Verified'}</b></div>
     </div>
-    <div class="button-row"><button class="primary" data-switch-level>Switch curriculum</button><a class="secondary" href="../prototype/">Open stable prototype</a></div>
+    <div class="button-row"><a class="primary" href="./lab.html">Open learning lab</a><button class="secondary" data-switch-level>Switch curriculum</button><a class="secondary" href="../prototype/">Open stable prototype</a></div>
   </div>`);
   $('[data-switch-level]').addEventListener('click', showLevelPicker, { once: true });
 }

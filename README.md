@@ -10,7 +10,8 @@ Serve the repository with any static HTTP server and open `prototype/`.
 The published reference remains available through GitHub Pages while the rebuild reaches parity.
 
 The current modular engine preview is served from `game/`.
-It covers shared-world loading, movement, interactions and isolated saves while later gameplay systems are migrated.
+It covers shared-world loading, movement, interactions, isolated saves and the reusable Learning Core.
+The content lab at `game/lab.html` runs P2 and P5 questions, speech and local handwriting tasks against real curriculum data.
 On GitHub Pages it is available at `/RPG-ChineseGame/game/`; the main project URL continues to open the stable prototype.
 
 ## Build curriculum content
@@ -32,7 +33,7 @@ Each level supplies its own lesson mapping, supported question types and tuning 
 npm test
 ```
 
-The test suite covers the playable prototype and the generated multi-level content foundation.
+The test suite covers the playable prototype, generated multi-level content, modular engine and Learning Core.
 
 ## Project references
 

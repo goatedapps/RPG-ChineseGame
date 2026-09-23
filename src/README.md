@@ -14,3 +14,6 @@ The intended module boundaries are:
 
 Engine modules must not contain P2 or P5 constants.
 The content loader combines one shared campaign with the selected level package.
+
+P2 Learning Core is implemented in `learning/`.
+`game/lab.html` exercises generated Meaning, Pinyin, Hanzi and Usage questions, enabled real-exam adapters, speech and all three local Hanzi Writer stages for either curriculum.

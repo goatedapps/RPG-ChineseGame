@@ -1,0 +1,367 @@
+title: 第八课 (Lesson 8)
+vocab:
+  - word: 医生
+    pinyin: yī shēng
+    meaning: Doctor
+    example: 医生每天帮助很多生病的人恢复健康。
+    sentenceBank:
+      - zh: 医生每天帮助很多生病的人恢复健康。
+        en: Doctors help many sick people recover every day.
+      - zh: 我生病的时候，妈妈带我去看医生。
+        en: When I was sick, Mum took me to see the doctor.
+      - zh: 医生认真地听我说身体哪里不舒服。
+        en: The doctor carefully listened to me describe where I felt uncomfortable.
+      - zh: 这位医生每天都很认真地工作。
+        en: This doctor works very hard every day.
+      - zh: 我长大以后想成为一名帮助别人的医生。
+        en: I want to become a doctor who helps others when I grow up.
+  - word: 看病
+    pinyin: kàn bìng
+    meaning: To examine a patient
+    example: 生病以后，我们应该早点去医院看病。
+    sentenceBank:
+      - zh: 生病以后，我们应该早点去医院看病。
+        en: After getting sick, we should go to the hospital to see a doctor early.
+      - zh: 妈妈陪爷爷去医院看病和拿药。
+        en: Mum accompanied Grandpa to the hospital to see the doctor and get medicine.
+      - zh: 医生每天要帮助很多病人看病。
+        en: Doctors have to examine many patients every day.
+      - zh: 我身体不舒服，所以爸爸带我去看病。
+        en: I felt unwell, so Dad took me to see a doctor.
+      - zh: 看病以后，医生告诉我要多休息喝水。
+        en: After examining me, the doctor told me to rest and drink more water.
+  - word: 护士
+    pinyin: hù shi
+    meaning: Nurse
+    example: 护士每天都认真地照顾医院里的病人。
+    sentenceBank:
+      - zh: 护士每天都认真地照顾医院里的病人。
+        en: Nurses carefully take care of patients in the hospital every day.
+      - zh: 护士帮医生准备看病需要的东西。
+        en: The nurse helps the doctor prepare the things needed for examining patients.
+      - zh: 我住院的时候，护士每天来看我。
+        en: When I was in the hospital, the nurse came to see me every day.
+      - zh: 护士很有耐心地回答病人的问题。
+        en: The nurse patiently answered the patient's questions.
+      - zh: 我很感谢护士每天对大家的帮助。
+        en: I am very thankful for the nurses' help every day.
+  - word: 照顾
+    pinyin: zhào gù
+    meaning: To take care of
+    example: 妈妈每天都会照顾我们一家人的生活。
+    sentenceBank:
+      - zh: 妈妈每天都会照顾我们一家人的生活。
+        en: Mum takes care of our family's daily life every day.
+      - zh: 护士在医院里认真照顾生病的孩子。
+        en: The nurse carefully takes care of sick children in the hospital.
+      - zh: 姐姐会帮助妈妈照顾年幼的弟弟。
+        en: My older sister helps Mum take care of our younger brother.
+      - zh: 我们应该学会照顾自己的身体和生活。
+        en: We should learn to take care of our bodies and daily lives.
+      - zh: 爷爷生病以后，大家一起照顾他。
+        en: After Grandpa became sick, everyone took care of him together.
+  - word: 爷爷
+    pinyin: yé ye
+    meaning: Paternal grandfather
+    example: 爷爷每天早上都会到公园散步运动。
+    sentenceBank:
+      - zh: 爷爷每天早上都会到公园散步运动。
+        en: Grandpa goes to the park for a walk and exercise every morning.
+      - zh: 我很喜欢听爷爷说以前的故事。
+        en: I really like listening to Grandpa tell stories about the past.
+      - zh: 爷爷生病的时候，我们会陪他看病。
+        en: When Grandpa is sick, we accompany him to see the doctor.
+      - zh: 爷爷常常教我种花和照顾植物。
+        en: Grandpa often teaches me to plant flowers and take care of plants.
+      - zh: 周末的时候，我会和爷爷一起吃饭。
+        en: At the weekend, I have meals with Grandpa.
+  - word: 小贩
+    pinyin: xiǎo fàn
+    meaning: Hawker
+    example: 小贩每天在小贩中心卖好吃的食物。
+    sentenceBank:
+      - zh: 小贩每天在小贩中心卖好吃的食物。
+        en: Hawkers sell delicious food at the hawker centre every day.
+      - zh: 我们常常向熟悉的小贩买早餐。
+        en: We often buy breakfast from a familiar hawker.
+      - zh: 小贩很早就开始准备当天的食物。
+        en: The hawker starts preparing the day's food very early.
+      - zh: 爸爸喜欢向小贩买一碗热热的面。
+        en: Dad likes buying a bowl of hot noodles from the hawker.
+      - zh: 我很感谢每天辛苦工作的那些小贩。
+        en: I am thankful for the hawkers who work hard every day.
+  - word: 卖
+    pinyin: mài
+    meaning: To sell
+    example: 小贩每天卖很多不同的食物给客人。
+    sentenceBank:
+      - zh: 小贩每天卖很多不同的食物给客人。
+        en: Hawkers sell many different kinds of food to customers every day.
+      - zh: 妈妈在市场买菜，阿姨在那里卖菜。
+        en: Mum buys vegetables at the market, and the aunt sells vegetables there.
+      - zh: 这家商店卖很多漂亮的衣服和鞋子。
+        en: This shop sells many beautiful clothes and shoes.
+      - zh: 小贩每天早上卖新鲜的面包和食物。
+        en: The hawker sells fresh bread and food every morning.
+      - zh: 爸爸问小贩这里卖什么好吃的食物。
+        en: Dad asked the hawker what delicious food was sold here.
+  - word: 教师
+    pinyin: jiào shī
+    meaning: Teacher
+    example: 教师每天认真教导学生学习新的知识。
+    sentenceBank:
+      - zh: 教师每天认真教导学生学习新的知识。
+        en: Teachers carefully teach students new knowledge every day.
+      - zh: 我很感谢教师教我们读书和写字。
+        en: I am very thankful to teachers for teaching us to read and write.
+      - zh: 学校里的教师都很关心学生的学习。
+        en: The teachers in the school care about the students' learning.
+      - zh: 我的教师常常鼓励我们努力学习。
+        en: My teacher often encourages us to study hard.
+      - zh: 教师除了教书，也会帮助我们解决问题。
+        en: Teachers not only teach, but also help us solve problems.
+
+  - word: 种
+    pinyin: zhòng
+    meaning: To plant
+    example: 爷爷喜欢在家里的花园种很多植物。
+    sentenceBank:
+      - zh: 爷爷喜欢在家里的花园种很多植物。
+        en: Grandpa likes planting many plants in the garden at home.
+      - zh: 春天的时候，我们一起种小花和小树。
+        en: In spring, we plant flowers and small trees together.
+      - zh: 老师带我们到学校花园种蔬菜。
+        en: The teacher brought us to the school garden to plant vegetables.
+      - zh: 妹妹每天帮妈妈种花和浇水。
+        en: My younger sister helps Mum plant flowers and water them every day.
+      - zh: 种植物需要阳光、水和我们的耐心。
+        en: Planting plants needs sunlight, water, and our patience.
+  - word: 阿姨
+    pinyin: ā yí
+    meaning: Aunt
+    example: 阿姨每天都会在学校门口帮助小朋友。
+    sentenceBank:
+      - zh: 阿姨每天都会在学校门口帮助小朋友。
+        en: The auntie helps children at the school gate every day.
+      - zh: 我很感谢阿姨平时对我的帮助。
+        en: I am very thankful for the help the auntie gives me.
+      - zh: 阿姨在医院工作，每天照顾很多病人。
+        en: The auntie works in a hospital and takes care of many patients every day.
+      - zh: 周末的时候，我会和阿姨一起吃饭。
+        en: At the weekend, I have a meal with my aunt.
+      - zh: 阿姨看到我以后，开心地和我打招呼。
+        en: When my aunt saw me, she happily greeted me.
+  - word: 演员
+    pinyin: yǎn yuán
+    meaning: Actor
+    example: 演员在舞台上表演精彩的故事和节目。
+    sentenceBank:
+      - zh: 演员在舞台上表演精彩的故事和节目。
+        en: Actors perform wonderful stories and shows on stage.
+      - zh: 我很喜欢看演员在电视上的表演。
+        en: I really like watching actors' performances on television.
+      - zh: 演员每天需要练习自己的说话和动作。
+        en: Actors need to practise their speech and movements every day.
+      - zh: 妹妹长大以后想成为一名演员。
+        en: My younger sister wants to become an actor when she grows up.
+      - zh: 演员认真地表演，让大家都很开心。
+        en: The actors performed seriously and made everyone very happy.
+  - word: 消防员
+    pinyin: xiāo fáng yuán
+    meaning: Firefighter
+    example: 消防员每天努力工作保护大家的安全。
+    sentenceBank:
+      - zh: 消防员每天努力工作保护大家的安全。
+        en: Firefighters work hard every day to protect everyone's safety.
+      - zh: 发生火灾的时候，消防员马上赶到现场。
+        en: When a fire happens, firefighters immediately rush to the scene.
+      - zh: 消防员穿上特别的衣服去灭火。
+        en: Firefighters put on special clothing to put out fires.
+      - zh: 我很感谢消防员保护我们的家和城市。
+        en: I am very thankful to firefighters for protecting our homes and city.
+      - zh: 消防员需要勇敢地面对危险的火灾。
+        en: Firefighters need to bravely face dangerous fires.
+  - word: 发生
+    pinyin: fā shēng
+    meaning: To occur
+    example: 如果发生火灾，我们一定要马上离开。
+    sentenceBank:
+      - zh: 如果发生火灾，我们一定要马上离开。
+        en: If a fire occurs, we must leave immediately.
+      - zh: 昨天学校发生了一件有趣的事情。
+        en: Something interesting happened at school yesterday.
+      - zh: 发生问题的时候，我们应该告诉老师。
+        en: When a problem occurs, we should tell the teacher.
+      - zh: 如果发生意外，大家不要害怕和大叫。
+        en: If an accident happens, everyone should not be afraid or scream.
+      - zh: 老师告诉我们发生事情以后要保持冷静。
+        en: The teacher told us to stay calm after something happens.
+  - word: 火灾
+    pinyin: huǒ zāi
+    meaning: Fire disaster
+    example: 发生火灾的时候，消防员马上来灭火。
+    sentenceBank:
+      - zh: 发生火灾的时候，消防员马上来灭火。
+        en: When a fire occurs, firefighters immediately come to put it out.
+      - zh: 我们学习了发生火灾时应该怎样保护自己。
+        en: We learned how to protect ourselves when a fire happens.
+      - zh: 火灾发生以后，大家要马上离开房子。
+        en: After a fire happens, everyone must leave the house immediately.
+      - zh: 消防员每天学习怎样处理危险的火灾。
+        en: Firefighters learn how to deal with dangerous fires every day.
+      - zh: 我们不能在家里玩火，以免发生火灾。
+        en: We must not play with fire at home to prevent fires.
+  - word: 灭火
+    pinyin: miè huǒ
+    meaning: To put out a fire
+    example: 消防员赶到以后马上开始灭火工作。
+    sentenceBank:
+      - zh: 消防员赶到以后马上开始灭火工作。
+        en: After the firefighters arrived, they immediately started putting out the fire.
+      - zh: 消防员用水帮助大家把大火灭掉。
+        en: The firefighters used water to help put out the big fire.
+      - zh: 发生火灾时，只有专业人员可以灭火。
+        en: When a fire occurs, only professionals should put it out.
+      - zh: 消防员穿着安全的衣服去灭火。
+        en: The firefighters wore safety clothing to put out the fire.
+      - zh: 大家离开以后，消防员继续努力灭火。
+        en: After everyone left, the firefighters continued working hard to put out the fire.
+  - word: 保护
+    pinyin: bǎo hù
+    meaning: To protect
+    example: 消防员努力保护大家和我们的房子。
+    sentenceBank:
+      - zh: 消防员努力保护大家和我们的房子。
+        en: Firefighters work hard to protect everyone and our homes.
+      - zh: 爸爸妈妈每天都会保护我们和照顾我们。
+        en: Dad and Mum protect and take care of us every day.
+      - zh: 我们应该保护学校里的植物和动物。
+        en: We should protect the plants and animals in our school.
+      - zh: 戴头盔可以保护我们的头部安全。
+        en: Wearing a helmet can protect our heads.
+      - zh: 我们要一起保护环境，让世界更加美丽。
+        en: We should protect the environment together and make the world more beautiful.
+  - word: 坏人
+    pinyin: huài rén
+    meaning: Bad person
+    example: 警察努力保护大家，不让坏人伤害别人。
+    sentenceBank:
+      - zh: 警察努力保护大家，不让坏人伤害别人。
+        en: The police work hard to protect everyone and stop bad people from hurting others.
+      - zh: 如果看到坏人，我们应该马上告诉大人。
+        en: If we see a bad person, we should tell an adult immediately.
+      - zh: 小朋友不能跟不认识的坏人一起走。
+        en: Children must not go with bad people they do not know.
+      - zh: 警察很勇敢地把坏人抓起来了。
+        en: The police bravely caught the bad person.
+      - zh: 爸爸告诉我要学会保护自己远离坏人。
+        en: Dad told me to learn how to protect myself from bad people.
+  - word: 抓
+    pinyin: zhuā
+    meaning: To catch
+    example: 警察很快就把做坏事的人抓住了。
+    sentenceBank:
+      - zh: 警察很快就把做坏事的人抓住了。
+        en: The police quickly caught the person who did something bad.
+      - zh: 小猫喜欢在家里抓小虫子玩。
+        en: The cat likes catching little insects at home.
+      - zh: 消防员帮助大家抓住逃跑的小动物。
+        en: The firefighter helped everyone catch the animal that ran away.
+      - zh: 我们不能随便去抓公园里的小动物。
+        en: We should not catch small animals in the park carelessly.
+      - zh: 警察每天保护城市，也会抓坏人。
+        en: The police protect the city every day and also catch bad people.
+  - word: 怕
+    pinyin: pà
+    meaning: To be afraid of
+    example: 妹妹很怕黑，所以晚上要开灯睡觉。
+    sentenceBank:
+      - zh: 妹妹很怕黑，所以晚上要开灯睡觉。
+        en: My younger sister is afraid of the dark, so she sleeps with the light on.
+      - zh: 小朋友看到大火的时候都会有一点怕。
+        en: Children may feel a little afraid when they see a big fire.
+      - zh: 我不怕困难，因为爸爸妈妈会帮助我。
+        en: I am not afraid of difficulties because Dad and Mum will help me.
+      - zh: 弟弟很怕一个人走进黑黑的房间。
+        en: My younger brother is afraid of walking into a dark room alone.
+      - zh: 我们不要害怕学习新的东西和知识。
+        en: We should not be afraid of learning new things and knowledge.
+  - word: 建筑师
+    pinyin: jiàn zhù shī
+    meaning: Architect
+    example: 建筑师设计漂亮又安全的房子给大家住。
+    sentenceBank:
+      - zh: 建筑师设计漂亮又安全的房子给大家住。
+        en: Architects design beautiful and safe houses for people to live in.
+      - zh: 建筑师每天需要画很多房子的图画。
+        en: Architects need to draw many house plans every day.
+      - zh: 爸爸告诉我建筑师是一份有趣的工作。
+        en: Dad told me that being an architect is an interesting job.
+      - zh: 建筑师要想办法让房子更加安全。
+        en: Architects need to find ways to make houses safer.
+      - zh: 我长大以后想成为一名建筑师。
+        en: I want to become an architect when I grow up.
+  - word: 房子
+    pinyin: fáng zi
+    meaning: House
+    example: 我们一家人住在一间温暖的房子里。
+    sentenceBank:
+      - zh: 我们一家人住在一间温暖的房子里。
+        en: Our whole family lives in a warm house.
+      - zh: 爸爸妈妈一起把房子打扫得很干净。
+        en: Dad and Mum cleaned the house very well together.
+      - zh: 建筑师正在设计一间漂亮的新房子。
+        en: The architect is designing a beautiful new house.
+      - zh: 这间房子有三个房间和一个大客厅。
+        en: This house has three rooms and a big living room.
+      - zh: 我希望将来可以住在一个大房子里。
+        en: I hope I can live in a big house in the future.
+  - word: 住
+    pinyin: zhù
+    meaning: To live
+    example: 我和家人一起住在新加坡的一个房子里。
+    sentenceBank:
+      - zh: 我和家人一起住在新加坡的一个房子里。
+        en: My family and I live in a house in Singapore.
+      - zh: 爷爷奶奶住在离我们家不远的地方。
+        en: Grandpa and Grandma live not far from our house.
+      - zh: 我的朋友住在学校附近的公寓里面。
+        en: My friend lives in an apartment near the school.
+      - zh: 我们喜欢住在安静又安全的地方。
+        en: We like living in a quiet and safe place.
+      - zh: 建筑师设计房子给人们安心地住。
+        en: Architects design houses for people to live in comfortably and safely.
+  - word: 都
+    pinyin: dōu
+    meaning: All
+    example: 我们都很感谢身边帮助我们的人。
+    sentenceBank:
+      - zh: 我们都很感谢身边帮助我们的人。
+        en: We are all thankful to the people around us who help us.
+      - zh: 爸爸妈妈和老师都很关心我们的学习。
+        en: Dad, Mum, and the teacher all care about our learning.
+      - zh: 医生和护士每天都努力帮助病人。
+        en: Doctors and nurses all work hard to help patients every day.
+      - zh: 我们班的同学都喜欢参加学校活动。
+        en: All the students in our class like taking part in school activities.
+      - zh: 消防员和警察都努力保护大家的安全。
+        en: Firefighters and police officers all work hard to protect everyone's safety.
+sentences:
+  - text: 爸爸把坏人抓住了。
+    segments:
+      - 爸爸
+      - 把
+      - 坏人
+      - 抓住了
+      - 。
+    icon: hand
+    description: Dad caught the bad person.
+  - text: 爷爷在花园里种花。
+    segments:
+      - 爷爷
+      - 在
+      - 花园里
+      - 种花
+      - 。
+    icon: sun
+    description: Grandpa plants flowers in the garden.

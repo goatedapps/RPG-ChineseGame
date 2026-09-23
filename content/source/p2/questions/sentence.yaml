@@ -1,0 +1,20 @@
+- questionID: P2-SEN1
+  lessonIds:
+    - 1
+  question: 太阳出来了，天气___。
+  options:
+    - 很冷
+    - 下雨
+    - 暖和
+    - 下雪
+  correct: 暖和
+- questionID: P2-SEN2
+  lessonIds:
+    - 3
+  question: 弟弟肚子饿了，他想___。
+  options:
+    - 睡觉
+    - 吃饭
+    - 洗澡
+    - 看书
+  correct: 吃饭

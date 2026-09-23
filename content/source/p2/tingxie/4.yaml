@@ -1,0 +1,420 @@
+title: 第四课 (Lesson 4)
+vocab:
+  - word: 棵
+    pinyin: kē
+    meaning: Measure word for tree
+    example: 学校门口有一棵很大的树。
+    sentenceBank:
+      - zh: 学校门口有一棵很大的树。
+        en: There is a very big tree at the school entrance.
+      - zh: 公园里有一棵漂亮的老树。
+        en: There is a beautiful old tree in the park.
+      - zh: 爸爸在家门前种了一棵小树。
+        en: Dad planted a small tree in front of our house.
+      - zh: 那一棵树上有很多绿色的叶子。
+        en: That tree has many green leaves.
+      - zh: 我们一起在花园里种一棵小树。
+        en: We planted a small tree in the garden together.
+
+  - word: 树
+    pinyin: shù
+    meaning: Tree
+    example: 公园里的树又高又大又漂亮。
+    sentenceBank:
+      - zh: 公园里的树又高又大又漂亮。
+        en: The trees in the park are tall, big, and beautiful.
+      - zh: 我喜欢坐在大树下面看故事书。
+        en: I like sitting under a big tree and reading storybooks.
+      - zh: 学校里种了很多不同的树。
+        en: Many different trees have been planted in the school.
+      - zh: 小鸟喜欢站在树上唱歌。
+        en: Birds like standing on trees and singing.
+      - zh: 下雨的时候，我们可以站在树下躲雨。
+        en: When it rains, we can stand under a tree to shelter from the rain.
+
+  - word: 剪出
+    pinyin: jiǎn chū
+    meaning: To cut
+    example: 我用彩色纸剪出一朵漂亮的小花。
+    sentenceBank:
+      - zh: 我用彩色纸剪出一朵漂亮的小花。
+        en: I used coloured paper to cut out a beautiful little flower.
+      - zh: 老师教我们剪出不同形状的图画。
+        en: The teacher taught us to cut out pictures of different shapes.
+      - zh: 妹妹用剪刀剪出一只可爱的小动物。
+        en: My younger sister used scissors to cut out a cute little animal.
+      - zh: 我们一起剪出很多绿色的小树。
+        en: We cut out many little green trees together.
+      - zh: 哥哥可以用纸剪出一个大大的圆形。
+        en: My older brother can cut a big circle out of paper.
+
+  - word: 排
+    pinyin: pái
+    meaning: Measure word (row)
+    example: 学校门口种了一排漂亮的小树。
+    sentenceBank:
+      - zh: 学校门口种了一排漂亮的小树。
+        en: A row of beautiful little trees was planted at the school entrance.
+      - zh: 教室外面有一排绿色的大树。
+        en: There is a row of big green trees outside the classroom.
+      - zh: 同学们坐成一排听老师说话。
+        en: The students sat in a row and listened to the teacher.
+      - zh: 花园里有一排不同颜色的花。
+        en: There is a row of flowers in different colours in the garden.
+      - zh: 我们把画纸一排一排地放在桌上。
+        en: We put the drawing paper in rows on the table.
+
+  - word: 片
+    pinyin: piàn
+    meaning: Measure word (a grove of)
+    example: 山上有一片绿色的树林非常漂亮。
+    sentenceBank:
+      - zh: 山上有一片绿色的树林非常漂亮。
+        en: There is a beautiful green forest on the mountain.
+      - zh: 公园里有一片大大的绿色草地。
+        en: There is a large green patch of grass in the park.
+      - zh: 远处有一片树林，里面住着小鸟。
+        en: There is a forest in the distance where birds live.
+      - zh: 我们在一片树林里看到很多小动物。
+        en: We saw many small animals in a forest.
+      - zh: 学校后面有一片安静的树林。
+        en: There is a quiet forest behind the school.
+
+  - word: 树林
+    pinyin: shù lín
+    meaning: Forest
+    example: 小鸟喜欢在树林里面快乐地唱歌。
+    sentenceBank:
+      - zh: 小鸟喜欢在树林里面快乐地唱歌。
+        en: Birds like happily singing in the forest.
+      - zh: 我们和老师一起走进学校后面的树林。
+        en: We walked into the forest behind the school with our teacher.
+      - zh: 树林里面有很多高大的绿色树木。
+        en: There are many tall green trees in the forest.
+      - zh: 我们在树林里发现了一只可爱的小兔子。
+        en: We found a cute little rabbit in the forest.
+      - zh: 下雨以后，树林里的空气非常清新。
+        en: After it rains, the air in the forest is very fresh.
+
+  - word: 圆形
+    pinyin: yuán xíng
+    meaning: Circle
+    example: 我用彩色笔画了一个大大的圆形。
+    sentenceBank:
+      - zh: 我用彩色笔画了一个大大的圆形。
+        en: I used coloured pencils to draw a big circle.
+      - zh: 太阳看起来像一个红色的圆形。
+        en: The sun looks like a red circle.
+      - zh: 老师教我们怎样画出漂亮的圆形。
+        en: The teacher taught us how to draw a beautiful circle.
+      - zh: 妹妹剪出了一个黄色的圆形纸片。
+        en: My younger sister cut out a yellow circular piece of paper.
+      - zh: 我们在图画里画了很多不同的圆形。
+        en: We drew many different circles in the picture.
+
+  - word: 三角形
+    pinyin: sān jiǎo xíng
+    meaning: Triangle
+    example: 我在纸上画了一个绿色的三角形。
+    sentenceBank:
+      - zh: 我在纸上画了一个绿色的三角形。
+        en: I drew a green triangle on the paper.
+      - zh: 老师教我们找出图画里的三角形。
+        en: The teacher taught us to find the triangles in the picture.
+      - zh: 妹妹用纸剪出了一个漂亮的三角形。
+        en: My younger sister cut out a beautiful triangle from paper.
+      - zh: 这个三角形有三个尖尖的角。
+        en: This triangle has three sharp corners.
+      - zh: 我们用不同颜色画了很多三角形。
+        en: We drew many triangles using different colours.
+
+  - word: 然后
+    pinyin: rán hòu
+    meaning: After that
+    example: 我先画一棵树，然后再画天空。
+    sentenceBank:
+      - zh: 我先画一棵树，然后再画天空。
+        en: I first draw a tree, and then I draw the sky.
+      - zh: 我们先剪纸，然后把图画贴起来。
+        en: We first cut the paper, and then put the pictures together.
+      - zh: 妈妈先准备早餐，然后叫我们起床。
+        en: Mum prepares breakfast first, and then wakes us up.
+      - zh: 我先完成功课，然后才可以出去玩。
+        en: I finish my homework first, and then I can go out to play.
+      - zh: 老师先教我们画画，然后让我们自己试。
+        en: The teacher first taught us how to draw, and then let us try ourselves.
+
+  - word: 拉
+    pinyin: lā
+    meaning: To pull
+    example: 哥哥拉着我的手一起走进树林。
+    sentenceBank:
+      - zh: 哥哥拉着我的手一起走进树林。
+        en: My older brother held my hand and walked into the forest with me.
+      - zh: 爸爸拉开窗帘让阳光照进房间。
+        en: Dad pulled open the curtains to let sunlight into the room.
+      - zh: 妹妹拉着妈妈的手一起过马路。
+        en: My younger sister held Mum's hand while crossing the road.
+      - zh: 我用力拉着绳子帮助朋友一起玩。
+        en: I pulled the rope hard to help my friend play.
+      - zh: 老师请我们拉开椅子坐下来画画。
+        en: The teacher asked us to pull out our chairs and sit down to draw.
+
+  - word: 森
+    pinyin: sēn
+    meaning: Forest
+    example: 这个字里面有三个木字组成森。
+    sentenceBank:
+      - zh: 老师告诉我们森字里面有三个木字。
+        en: The teacher told us that the character 森 contains three 木 characters.
+      - zh: 我们学习了森这个字和森林的意思。
+        en: We learned the character 森 and the meaning of forest.
+      - zh: 森字看起来像有很多树木在一起。
+        en: The character 森 looks like many trees together.
+      - zh: 我在中文课上认真学习森这个汉字。
+        en: I carefully learned the Chinese character 森 in Chinese class.
+      - zh: 妹妹第一次看到森字觉得非常有趣。
+        en: My younger sister thought the character 森 was very interesting when she first saw it.
+
+  - word: 从
+    pinyin: cóng
+    meaning: From
+    example: 我们从学校一起走到附近的公园。
+    sentenceBank:
+      - zh: 我们从学校一起走到附近的公园。
+        en: We walked from school to the nearby park together.
+      - zh: 妈妈从厨房拿出很多好吃的水果。
+        en: Mum took many delicious fruits from the kitchen.
+      - zh: 小鸟从树上飞到天空里面。
+        en: The bird flew from the tree into the sky.
+      - zh: 我从书包里拿出我的彩色笔。
+        en: I took my coloured pencils out of my school bag.
+      - zh: 爸爸从商店买了一些新的画纸回来。
+        en: Dad bought some new drawing paper from the shop.
+
+  - word: 众人
+    pinyin: zhòng rén
+    meaning: Everyone
+    example: 众人一起完成了一幅漂亮的大图画。
+    sentenceBank:
+      - zh: 众人一起完成了一幅漂亮的大图画。
+        en: Everyone worked together to complete a beautiful big picture.
+      - zh: 众人看到精彩的表演以后开心地鼓掌。
+        en: Everyone happily applauded after seeing the wonderful performance.
+      - zh: 众人一起帮助老师把教室整理干净。
+        en: Everyone helped the teacher clean and tidy the classroom.
+      - zh: 众人听完故事以后都觉得非常有趣。
+        en: Everyone thought the story was very interesting after hearing it.
+      - zh: 众人一起参加学校的艺术活动和比赛。
+        en: Everyone took part in the school's art activities and competition.
+
+  - word: 颜色
+    pinyin: yán sè
+    meaning: Colour
+    example: 这幅图画有很多漂亮的颜色。
+    sentenceBank:
+      - zh: 这幅图画有很多漂亮的颜色。
+        en: This picture has many beautiful colours.
+      - zh: 妹妹喜欢用不同的颜色画画。
+        en: My younger sister likes using different colours to draw.
+      - zh: 老师教我们认识红色和绿色的颜色。
+        en: The teacher taught us about the colours red and green.
+      - zh: 我想选择一些明亮的颜色来画天空。
+        en: I want to choose some bright colours to draw the sky.
+      - zh: 这些花有很多不同的颜色，非常漂亮。
+        en: These flowers have many different colours and are very beautiful.
+
+  - word: 一共
+    pinyin: yí gòng
+    meaning: In total
+    example: 我们一共画了十棵不同颜色的小树。
+    sentenceBank:
+      - zh: 我们一共画了十棵不同颜色的小树。
+        en: We drew ten small trees in different colours in total.
+      - zh: 桌子上一共有五盒彩色笔可以使用。
+        en: There are five boxes of coloured pencils on the table in total.
+      - zh: 今天我们一共完成了三幅漂亮的图画。
+        en: We completed three beautiful pictures in total today.
+      - zh: 班上一共有二十个学生参加比赛。
+        en: There are twenty students in the class taking part in the competition in total.
+      - zh: 我一共用了六种不同的颜色画画。
+        en: I used six different colours to draw in total.
+
+  - word: 页
+    pinyin: yè
+    meaning: Page
+    example: 请大家打开课本的第十页一起学习。
+    sentenceBank:
+      - zh: 请大家打开课本的第十页一起学习。
+        en: Please open page ten of the textbook and study together.
+      - zh: 我今天读了故事书的五页内容。
+        en: I read five pages of the storybook today.
+      - zh: 老师请我们翻到下一页继续画画。
+        en: The teacher asked us to turn to the next page and continue drawing.
+      - zh: 妹妹正在认真地看故事书的每一页。
+        en: My younger sister is carefully looking at every page of the storybook.
+      - zh: 这一本书一共有很多页，内容很有趣。
+        en: This book has many pages and the content is very interesting.
+
+  - word: 天空
+    pinyin: tiān kōng
+    meaning: Sky
+    example: 今天的天空又蓝又漂亮，非常晴朗。
+    sentenceBank:
+      - zh: 今天的天空又蓝又漂亮，非常晴朗。
+        en: Today's sky is blue and beautiful, and it is very clear.
+      - zh: 小鸟在天空中自由自在地飞翔。
+        en: Birds fly freely in the sky.
+      - zh: 我喜欢看天空中的白色云朵。
+        en: I like looking at the white clouds in the sky.
+      - zh: 太阳慢慢地从天空中升起来了。
+        en: The sun slowly rose into the sky.
+      - zh: 下雨以前，天空会慢慢变得很暗。
+        en: Before it rains, the sky slowly becomes dark.
+
+  - word: 太阳
+    pinyin: tài yáng
+    meaning: Sun
+    example: 早上的太阳照在我们的窗户上。
+    sentenceBank:
+      - zh: 早上的太阳照在我们的窗户上。
+        en: The morning sun shines through our window.
+      - zh: 天空中的太阳又大又亮非常漂亮。
+        en: The sun in the sky is big, bright, and beautiful.
+      - zh: 天气很热的时候，太阳非常晒。
+        en: When the weather is hot, the sun is very strong.
+      - zh: 我们可以用黄色彩色笔画一个太阳。
+        en: We can use a yellow coloured pencil to draw a sun.
+      - zh: 太阳下山以后，天空慢慢变暗了。
+        en: After the sun set, the sky slowly became dark.
+
+  - word: 云朵
+    pinyin: yún duǒ
+    meaning: Cloud
+    example: 天空中有很多白白的云朵在飘。
+    sentenceBank:
+      - zh: 天空中有很多白白的云朵在飘。
+        en: There are many white clouds floating in the sky.
+      - zh: 妹妹喜欢把云朵画成可爱的小动物。
+        en: My younger sister likes drawing clouds as cute little animals.
+      - zh: 今天的云朵看起来像一只小兔子。
+        en: Today's cloud looks like a little rabbit.
+      - zh: 风吹过以后，天空中的云朵慢慢移动。
+        en: After the wind blew, the clouds in the sky slowly moved.
+      - zh: 我用白色的笔画了几朵漂亮云朵。
+        en: I used a white pencil to draw several beautiful clouds.
+
+  - word: 彩色笔
+    pinyin: cǎi sè bǐ
+    meaning: Colour pencil
+    example: 我用彩色笔画了一幅漂亮的图画。
+    sentenceBank:
+      - zh: 我用彩色笔画了一幅漂亮的图画。
+        en: I used coloured pencils to draw a beautiful picture.
+      - zh: 妹妹有一盒彩色笔可以用来画画。
+        en: My younger sister has a box of coloured pencils for drawing.
+      - zh: 老师叫我们带自己的彩色笔来学校。
+        en: The teacher asked us to bring our own coloured pencils to school.
+      - zh: 我喜欢用彩色笔画不同颜色的树。
+        en: I like using coloured pencils to draw trees in different colours.
+      - zh: 我的彩色笔有红色、蓝色和绿色。
+        en: My coloured pencils include red, blue, and green.
+
+  - word: 蓝色
+    pinyin: lán sè
+    meaning: Blue
+    example: 我用蓝色彩色笔画美丽的天空。
+    sentenceBank:
+      - zh: 我用蓝色彩色笔画美丽的天空。
+        en: I used a blue coloured pencil to draw the beautiful sky.
+      - zh: 妈妈给我买了一件蓝色的新衣服。
+        en: Mum bought me a new blue piece of clothing.
+      - zh: 天空通常是蓝色的，看起来很漂亮。
+        en: The sky is usually blue and looks beautiful.
+      - zh: 哥哥最喜欢蓝色，因为他觉得很好看。
+        en: My older brother likes blue the most because he thinks it looks nice.
+      - zh: 我们用蓝色把图画里的水画出来。
+        en: We used blue to draw the water in the picture.
+
+  - word: 红色
+    pinyin: hóng sè
+    meaning: Red
+    example: 新年时，家里有很多红色的装饰。
+    sentenceBank:
+      - zh: 新年时，家里有很多红色的装饰。
+        en: During Chinese New Year, there are many red decorations at home.
+      - zh: 我用红色彩色笔画了一朵小花。
+        en: I used a red coloured pencil to draw a little flower.
+      - zh: 妹妹喜欢穿红色的裙子去参加活动。
+        en: My younger sister likes wearing a red dress to activities.
+      - zh: 太阳看起来像一个红色的大圆形。
+        en: The sun looks like a big red circle.
+      - zh: 老师请我们找出图画里的红色部分。
+        en: The teacher asked us to find the red parts in the picture.
+
+  - word: 绿色
+    pinyin: lǜ sè
+    meaning: Green
+    example: 我喜欢用绿色画树和青草。
+    sentenceBank:
+      - zh: 我喜欢用绿色画树和青草。
+        en: I like using green to draw trees and grass.
+      - zh: 公园里的树都是绿色的，非常漂亮。
+        en: The trees in the park are green and very beautiful.
+      - zh: 妈妈买了一件绿色的漂亮衣服给我。
+        en: Mum bought me a beautiful green piece of clothing.
+      - zh: 我用绿色彩色笔画了一片树林。
+        en: I used a green coloured pencil to draw a forest.
+      - zh: 下雨以后，青草变得更加绿色漂亮。
+        en: After it rained, the grass became even greener and more beautiful.
+
+  - word: 黄色
+    pinyin: huáng sè
+    meaning: Yellow
+    example: 我用黄色彩色笔画了一个大太阳。
+    sentenceBank:
+      - zh: 我用黄色彩色笔画了一个大太阳。
+        en: I used a yellow coloured pencil to draw a big sun.
+      - zh: 妹妹最喜欢黄色，因为她觉得很开心。
+        en: My younger sister likes yellow the most because it makes her feel happy.
+      - zh: 秋天的时候，有些树叶会变成黄色。
+        en: In autumn, some tree leaves become yellow.
+      - zh: 老师请我们用黄色画图画里的太阳。
+        en: The teacher asked us to use yellow to draw the sun in the picture.
+      - zh: 桌上有一盒彩色笔，其中有黄色的笔。
+        en: There is a box of coloured pencils on the table, including a yellow pencil.
+
+  - word: 想
+    pinyin: xiǎng
+    meaning: To think
+    example: 我想画一幅有天空和树林的图画。
+    sentenceBank:
+      - zh: 我想画一幅有天空和树林的图画。
+        en: I want to draw a picture with the sky and a forest.
+      - zh: 妹妹想用彩色笔画很多漂亮的花。
+        en: My younger sister wants to use coloured pencils to draw many beautiful flowers.
+      - zh: 我想先画太阳，然后再画白色云朵。
+        en: I want to draw the sun first, and then draw white clouds.
+      - zh: 老师想看看我们今天完成的图画。
+        en: The teacher wants to see the pictures we completed today.
+      - zh: 我想成为一名喜欢画画的小艺术家。
+        en: I want to become a little artist who likes drawing.
+sentences:
+  - text: 早上，太阳出来了。
+    segments:
+      - 早上
+      - "，"
+      - 太阳
+      - 出来了
+      - 。
+    icon: sun
+    description: In the morning, the sun came out.
+  - text: 哥哥画了白色的云朵。
+    segments:
+      - 哥哥
+      - 画了
+      - 白色的
+      - 云朵
+      - 。
+    icon: cloud
+    description: My older brother drew a white cloud.

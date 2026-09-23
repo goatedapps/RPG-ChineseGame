@@ -1,0 +1,454 @@
+title: 第十三课 (Lesson 13)
+vocab:
+  - word: 小猫
+    pinyin: xiǎo māo
+    meaning: Kitten
+    example: 妹妹最喜欢抱着可爱的小猫一起玩。
+    sentenceBank:
+      - zh: 妹妹最喜欢抱着可爱的小猫一起玩。
+        en: My younger sister likes hugging and playing with the cute kitten the most.
+      - zh: 小猫每天早上都会在家里跑来跑去。
+        en: The kitten runs around the house every morning.
+      - zh: 我看到一只小猫正在花园里面睡觉。
+        en: I saw a kitten sleeping in the garden.
+      - zh: 妈妈买了一些食物给小猫吃。
+        en: Mum bought some food for the kitten to eat.
+      - zh: 这只小猫很乖，也非常喜欢和我们玩。
+        en: This kitten is well-behaved and also really likes playing with us.
+
+  - word: 爱
+    pinyin: ài
+    meaning: To love
+    example: 我很爱我的家人和家里的小动物。
+    sentenceBank:
+      - zh: 我很爱我的家人和家里的小动物。
+        en: I love my family and the small animals at home very much.
+      - zh: 妹妹很爱她的小狗，每天都会照顾它。
+        en: My younger sister loves her puppy and takes care of it every day.
+      - zh: 爸爸妈妈爱我们，也会保护我们的安全。
+        en: Dad and Mum love us and also protect our safety.
+      - zh: 我爱小动物，所以想养一只小猫。
+        en: I love small animals, so I want to keep a kitten.
+      - zh: 我们要爱护动物，不可以随便欺负它们。
+        en: We should care for animals and must not bully them.
+
+  - word: 洗澡
+    pinyin: xǐ zǎo
+    meaning: To take a bath
+    example: 小狗每天晚上都要洗澡和休息。
+    sentenceBank:
+      - zh: 小狗每天晚上都要洗澡和休息。
+        en: The puppy needs to take a bath and rest every evening.
+      - zh: 妈妈帮小猫洗澡以后，把它擦干净。
+        en: Mum helped the kitten take a bath and dried it afterwards.
+      - zh: 小狗不太喜欢洗澡，但是还是很乖。
+        en: The puppy does not really like taking a bath, but it is still well-behaved.
+      - zh: 给宠物洗澡以前，我们要准备好毛巾。
+        en: Before bathing a pet, we need to prepare a towel.
+      - zh: 洗澡以后，小猫的身体变得干净又漂亮。
+        en: After taking a bath, the kitten's body became clean and beautiful.
+
+  - word: 睡觉
+    pinyin: shuì jiào
+    meaning: To sleep
+    example: 小猫吃完东西以后就回去睡觉了。
+    sentenceBank:
+      - zh: 小猫吃完东西以后就回去睡觉了。
+        en: The kitten went back to sleep after finishing its food.
+      - zh: 妹妹每天晚上九点就要上床睡觉。
+        en: My younger sister has to go to bed at nine every night.
+      - zh: 小狗喜欢在温暖的地方安静地睡觉。
+        en: The puppy likes sleeping quietly in a warm place.
+      - zh: 我睡觉以前会先把书包整理好。
+        en: Before sleeping, I first tidy up my school bag.
+      - zh: 小猫正在沙发上舒服地睡觉呢。
+        en: The kitten is sleeping comfortably on the sofa.
+
+  - word: 羽毛
+    pinyin: yǔ máo
+    meaning: Feather
+    example: 小鸟的羽毛又软又漂亮，非常可爱。
+    sentenceBank:
+      - zh: 小鸟的羽毛又软又漂亮，非常可爱。
+        en: The bird's feathers are soft and beautiful, and it is very cute.
+      - zh: 我在地上发现了一根漂亮的羽毛。
+        en: I found a beautiful feather on the ground.
+      - zh: 小鸟用自己的羽毛保护身体和保持温暖。
+        en: The bird uses its feathers to protect its body and keep warm.
+      - zh: 妹妹看到彩色羽毛以后觉得非常漂亮。
+        en: My younger sister thought the colourful feathers were very beautiful.
+      - zh: 我们不应该随便拔小鸟身上的羽毛。
+        en: We should not pluck feathers from birds carelessly.
+
+  - word: 小狗
+    pinyin: xiǎo gǒu
+    meaning: Puppy
+    example: 小狗每天都会开心地陪我们一起玩。
+    sentenceBank:
+      - zh: 小狗每天都会开心地陪我们一起玩。
+        en: The puppy happily plays with us every day.
+      - zh: 妹妹很喜欢家里的小狗和小猫。
+        en: My younger sister really likes the puppy and kitten at home.
+      - zh: 这只小狗很乖，也非常听主人的话。
+        en: This puppy is well-behaved and listens to its owner very well.
+      - zh: 小狗看到我们回家就马上跑过来。
+        en: The puppy immediately runs over when it sees us come home.
+      - zh: 爸爸每天都会带小狗出去散步。
+        en: Dad takes the puppy out for a walk every day.
+
+  - word: 乖
+    pinyin: guāi
+    meaning: Well-behaved
+    example: 这只小狗很乖，从来不会乱跑出去。
+    sentenceBank:
+      - zh: 这只小狗很乖，从来不会乱跑出去。
+        en: This puppy is very well-behaved and never runs outside.
+      - zh: 妹妹今天很乖，自己完成了所有功课。
+        en: My younger sister was very well-behaved today and finished all her homework herself.
+      - zh: 小猫安静地坐在那里，真的非常乖。
+        en: The kitten sat quietly there and was really well-behaved.
+      - zh: 妈妈说只要我乖，就可以养宠物。
+        en: Mum said that if I behave well, I can keep a pet.
+      - zh: 这只小狗听到主人说话以后马上变乖。
+        en: The puppy became well-behaved immediately after hearing its owner speak.
+
+  - word: 总是
+    pinyin: zǒng shì
+    meaning: Always
+    example: 妹妹总是喜欢和小猫一起玩游戏。
+    sentenceBank:
+      - zh: 妹妹总是喜欢和小猫一起玩游戏。
+        en: My younger sister always likes playing games with the kitten.
+      - zh: 小狗总是在我们回家时跑过来欢迎我们。
+        en: The puppy always runs over to welcome us when we come home.
+      - zh: 妈妈总是提醒我要好好照顾宠物。
+        en: Mum always reminds me to take good care of pets.
+      - zh: 哥哥总是把自己的玩具整理得很整齐。
+        en: My older brother always keeps his toys very neatly arranged.
+      - zh: 小猫总是喜欢睡在温暖的地方。
+        en: The kitten always likes sleeping in warm places.
+
+  - word: 聪明
+    pinyin: cōng míng
+    meaning: Smart
+    example: 这只小狗非常聪明，很快学会了坐下。
+    sentenceBank:
+      - zh: 这只小狗非常聪明，很快学会了坐下。
+        en: This puppy is very smart and quickly learned how to sit.
+      - zh: 妹妹觉得小猫很聪明，会自己找食物。
+        en: My younger sister thinks the kitten is smart and can find food by itself.
+      - zh: 哥哥很聪明，每天都会认真学习功课。
+        en: My older brother is smart and studies hard every day.
+      - zh: 这只小狗可以听懂主人说的话。
+        en: This puppy can understand what its owner says.
+      - zh: 我觉得养宠物可以让我们变得更聪明。
+        en: I think keeping pets can make us smarter.
+
+  - word: 金鱼
+    pinyin: jīn yú
+    meaning: Goldfish
+    example: 妹妹喜欢看金鱼在水里慢慢游泳。
+    sentenceBank:
+      - zh: 妹妹喜欢看金鱼在水里慢慢游泳。
+        en: My younger sister likes watching goldfish slowly swim in the water.
+      - zh: 爸爸买了两条漂亮的金鱼回家。
+        en: Dad bought two beautiful goldfish and brought them home.
+      - zh: 我每天都会给金鱼换干净的水。
+        en: I change the water for the goldfish every day.
+      - zh: 金鱼在鱼缸里面快乐地游来游去。
+        en: The goldfish happily swim around in the fish tank.
+      - zh: 我们不能给金鱼吃太多的食物。
+        en: We must not give the goldfish too much food.
+
+  - word: 漂亮
+    pinyin: piào liang
+    meaning: Beautiful
+    example: 妹妹有一只漂亮的小白兔做宠物。
+    sentenceBank:
+      - zh: 妹妹有一只漂亮的小白兔做宠物。
+        en: My younger sister has a beautiful little white rabbit as a pet.
+      - zh: 花园里的花开得漂亮又香甜。
+        en: The flowers in the garden are beautiful and fragrant.
+      - zh: 这只金鱼的颜色真的非常漂亮。
+        en: The colour of this goldfish is really beautiful.
+      - zh: 妈妈买了一条漂亮的裙子给妹妹。
+        en: Mum bought a beautiful dress for my younger sister.
+      - zh: 小猫洗完澡以后看起来更加漂亮了。
+        en: The kitten looked even more beautiful after taking a bath.
+
+  - word: 吐
+    pinyin: tǔ
+    meaning: To vomit
+    example: 小狗吃了太多食物以后开始吐了。
+    sentenceBank:
+      - zh: 小狗吃了太多食物以后开始吐了。
+        en: The puppy started vomiting after eating too much food.
+      - zh: 妈妈发现小猫一直吐，所以马上带它看医生。
+        en: Mum noticed that the kitten kept vomiting, so she immediately took it to the doctor.
+      - zh: 如果宠物一直吐，我们应该告诉爸爸妈妈。
+        en: If a pet keeps vomiting, we should tell Dad and Mum.
+      - zh: 小狗吃完不适合的食物以后突然吐了。
+        en: The puppy suddenly vomited after eating unsuitable food.
+      - zh: 兽医检查以后说小猫已经不再吐了。
+        en: After checking the kitten, the veterinarian said that it had stopped vomiting.
+
+  - word: 兽医
+    pinyin: shòu yī
+    meaning: Veterinarian
+    example: 小狗生病了，妈妈带它去看兽医。
+    sentenceBank:
+      - zh: 小狗生病了，妈妈带它去看兽医。
+        en: The puppy was sick, so Mum took it to see the veterinarian.
+      - zh: 兽医每天都会帮助很多生病的动物。
+        en: Veterinarians help many sick animals every day.
+      - zh: 金鱼不舒服的时候，我们也可以问兽医。
+        en: When a goldfish is unwell, we can also ask a veterinarian.
+      - zh: 兽医检查小猫以后告诉我们应该怎么办。
+        en: After checking the kitten, the veterinarian told us what we should do.
+      - zh: 我长大以后想当一名帮助动物的兽医。
+        en: When I grow up, I want to become a veterinarian who helps animals.
+
+  - word: 宠物
+    pinyin: chǒng wù
+    meaning: Pet
+    example: 我很喜欢宠物，希望以后可以养一只。
+    sentenceBank:
+      - zh: 我很喜欢宠物，希望以后可以养一只。
+        en: I really like pets and hope to keep one in the future.
+      - zh: 养宠物以前，我们要学习怎样照顾它。
+        en: Before keeping a pet, we need to learn how to take care of it.
+      - zh: 妹妹每天都会帮家里的宠物准备食物。
+        en: My younger sister prepares food for our pet every day.
+      - zh: 宠物也是我们的朋友，我们应该爱护它们。
+        en: Pets are also our friends, so we should care for them.
+      - zh: 爸爸说养宠物需要花时间和心思照顾。
+        en: Dad says keeping pets requires time and care.
+
+  - word: 岛
+    pinyin: dǎo
+    meaning: Island
+    example: 我梦见自己去了一个有很多动物的岛。
+    sentenceBank:
+      - zh: 我梦见自己去了一个有很多动物的岛。
+        en: I dreamed that I went to an island with many animals.
+      - zh: 那个小岛上住着许多可爱的小动物。
+        en: Many cute little animals live on that island.
+      - zh: 我希望有一天可以和家人一起去小岛。
+        en: I hope that one day I can go to an island with my family.
+      - zh: 岛上有漂亮的花和许多绿色的树。
+        en: There are beautiful flowers and many green trees on the island.
+      - zh: 小白兔在岛上的草地快乐地玩耍。
+        en: The little white rabbit happily plays on the grass of the island.
+
+  - word: 欺负
+    pinyin: qī fu
+    meaning: To bully
+    example: 我们不应该欺负小动物和其他朋友。
+    sentenceBank:
+      - zh: 我们不应该欺负小动物和其他朋友。
+        en: We should not bully small animals or other friends.
+      - zh: 哥哥告诉我不可以欺负家里的小猫。
+        en: My older brother told me that I must not bully the kitten at home.
+      - zh: 老师提醒大家不要欺负学校里的同学。
+        en: The teacher reminded everyone not to bully classmates at school.
+      - zh: 小狗看到小猫被欺负以后马上跑过去。
+        en: The puppy ran over immediately after seeing the kitten being bullied.
+      - zh: 我们应该帮助别人，不可以随便欺负别人。
+        en: We should help others and must not bully them carelessly.
+
+  - word: 丢
+    pinyin: diū
+    meaning: To throw
+    example: 我们不可以随便丢食物和垃圾在地上。
+    sentenceBank:
+      - zh: 我们不可以随便丢食物和垃圾在地上。
+        en: We must not throw food and rubbish on the ground.
+      - zh: 妹妹不小心把玩具丢到了地上。
+        en: My younger sister accidentally threw the toy onto the ground.
+      - zh: 爸爸提醒我不要把东西随便丢掉。
+        en: Dad reminded me not to throw things away carelessly.
+      - zh: 小朋友不应该丢石头去伤害小动物。
+        en: Children should not throw stones to hurt small animals.
+      - zh: 我们吃完东西以后要把垃圾丢进垃圾桶。
+        en: After eating, we should throw the rubbish into the bin.
+
+  - word: 梦见
+    pinyin: mèng jiàn
+    meaning: To dream of
+    example: 昨天晚上我梦见了一只可爱的小狗。
+    sentenceBank:
+      - zh: 昨天晚上我梦见了一只可爱的小狗。
+        en: Last night I dreamed of a cute puppy.
+      - zh: 妹妹昨天梦见自己养了一只小猫。
+        en: My younger sister dreamed yesterday that she had a kitten.
+      - zh: 我梦见和朋友一起去了一个小岛。
+        en: I dreamed that I went to an island with my friends.
+      - zh: 哥哥梦见许多小动物一起快乐玩耍。
+        en: My older brother dreamed of many small animals playing happily together.
+      - zh: 妈妈说她小时候常常梦见漂亮的花园。
+        en: Mum says that when she was young, she often dreamed of beautiful gardens.
+
+  - word: 那里
+    pinyin: nà lǐ
+    meaning: There
+    example: 那里有很多可爱的小动物一起生活。
+    sentenceBank:
+      - zh: 那里有很多可爱的小动物一起生活。
+        en: There are many cute little animals living together there.
+      - zh: 我们看到小猫以后就走到那里看看。
+        en: After seeing the kitten, we walked over there to have a look.
+      - zh: 那里有一个漂亮的花园和小池塘。
+        en: There is a beautiful garden and a small pond there.
+      - zh: 妈妈说那里不可以随便进去玩耍。
+        en: Mum said that we cannot simply go in there to play.
+      - zh: 小狗喜欢每天坐在那里看我们回家。
+        en: The puppy likes sitting there every day and watching us come home.
+
+  - word: 围
+    pinyin: wéi
+    meaning: To surround
+    example: 小朋友们围在小白兔旁边一起看它。
+    sentenceBank:
+      - zh: 小朋友们围在小白兔旁边一起看它。
+        en: The children gathered around the little white rabbit to look at it.
+      - zh: 大家围着小狗开心地一起拍照。
+        en: Everyone gathered around the puppy and happily took photos together.
+      - zh: 我们不要围住小动物，让它觉得害怕。
+        en: We should not surround small animals and make them feel afraid.
+      - zh: 小朋友们围在老师身边认真听故事。
+        en: The children gathered around the teacher and listened carefully to the story.
+      - zh: 花园里的小花被许多蝴蝶围在中间。
+        en: The little flowers in the garden were surrounded by many butterflies.
+
+  - word: 欢迎
+    pinyin: huān yíng
+    meaning: To welcome
+    example: 小狗每天都会跑到门口欢迎我们回家。
+    sentenceBank:
+      - zh: 小狗每天都会跑到门口欢迎我们回家。
+        en: The puppy runs to the door every day to welcome us home.
+      - zh: 我们一起欢迎新同学来到我们的班级。
+        en: We welcomed the new classmate to our class together.
+      - zh: 妈妈开心地欢迎客人来到我们家里。
+        en: Mum happily welcomed the guests into our home.
+      - zh: 小动物们好像很欢迎我们来到这个地方。
+        en: The small animals seem to welcome us to this place.
+      - zh: 老师欢迎大家参加今天的有趣活动。
+        en: The teacher welcomes everyone to today's interesting activity.
+
+  - word: 小白兔
+    pinyin: xiǎo bái tù
+    meaning: Little white rabbit
+    example: 妹妹最喜欢看小白兔在草地上玩。
+    sentenceBank:
+      - zh: 妹妹最喜欢看小白兔在草地上玩。
+        en: My younger sister likes watching the little white rabbit play on the grass the most.
+      - zh: 小白兔有一对长长的耳朵非常可爱。
+        en: The little white rabbit has a pair of long ears and is very cute.
+      - zh: 我们在花园里看到一只小白兔。
+        en: We saw a little white rabbit in the garden.
+      - zh: 小白兔喜欢吃青草和新鲜的蔬菜。
+        en: The little white rabbit likes eating grass and fresh vegetables.
+      - zh: 妈妈教我怎样温柔地照顾小白兔。
+        en: Mum taught me how to gently take care of the little white rabbit.
+
+  - word: 认识
+    pinyin: rèn shi
+    meaning: To know
+    example: 我很高兴认识这个可爱的小动物。
+    sentenceBank:
+      - zh: 我很高兴认识这个可爱的小动物。
+        en: I am very happy to know this cute little animal.
+      - zh: 妹妹第一次认识小狗的时候非常开心。
+        en: My younger sister was very happy when she first met the puppy.
+      - zh: 我在学校认识了一个喜欢动物的朋友。
+        en: I met a friend at school who likes animals.
+      - zh: 老师让我们认识不同种类的小动物。
+        en: The teacher let us learn about different kinds of small animals.
+      - zh: 我希望以后可以认识更多新的朋友。
+        en: I hope to meet more new friends in the future.
+
+  - word: 醒来
+    pinyin: xǐng lái
+    meaning: To wake up
+    example: 今天早上醒来以后，我马上想起了小狗。
+    sentenceBank:
+      - zh: 今天早上醒来以后，我马上想起了小狗。
+        en: After waking up this morning, I immediately thought of the puppy.
+      - zh: 妹妹每天醒来都会先看看自己的小猫。
+        en: My younger sister looks at her kitten first after waking up every day.
+      - zh: 小狗醒来以后就跑去找主人玩。
+        en: The puppy ran to find its owner to play after waking up.
+      - zh: 我昨天晚上很晚睡，所以今天很难醒来。
+        en: I slept very late last night, so it was difficult to wake up today.
+      - zh: 小白兔醒来以后开始在草地上吃草。
+        en: After waking up, the little white rabbit started eating grass on the field.
+
+  - word: 以前
+    pinyin: yǐ qián
+    meaning: In the past
+    example: 我以前没有养过任何宠物和小动物。
+    sentenceBank:
+      - zh: 我以前没有养过任何宠物和小动物。
+        en: I have never kept any pets or small animals before.
+      - zh: 妹妹以前很害怕小狗，现在已经不怕了。
+        en: My younger sister used to be afraid of puppies, but she is not afraid now.
+      - zh: 爸爸以前养过一只很可爱的小猫。
+        en: Dad used to have a very cute kitten.
+      - zh: 我以前常常和朋友一起去动物园。
+        en: I used to go to the zoo with my friends often.
+      - zh: 以前这里没有这么多漂亮的小动物。
+        en: There were not so many beautiful small animals here before.
+
+  - word: 晚上
+    pinyin: wǎn shang
+    meaning: Night
+    example: 晚上回家以后，我会帮小狗准备食物。
+    sentenceBank:
+      - zh: 晚上回家以后，我会帮小狗准备食物。
+        en: After going home at night, I help prepare food for the puppy.
+      - zh: 小猫晚上喜欢安静地睡在我的房间。
+        en: The kitten likes sleeping quietly in my room at night.
+      - zh: 妈妈每天晚上都会提醒我早点睡觉。
+        en: Mum reminds me to sleep early every night.
+      - zh: 我们晚上一起照顾家里的宠物。
+        en: We take care of the pet at home together at night.
+      - zh: 昨天晚上我梦见了一只可爱的小白兔。
+        en: Last night I dreamed of a cute little white rabbit.
+
+  - word: 觉得
+    pinyin: jué de
+    meaning: To feel
+    example: 我觉得养小动物是一件开心的事情。
+    sentenceBank:
+      - zh: 我觉得养小动物是一件开心的事情。
+        en: I think keeping small animals is a happy thing.
+      - zh: 妹妹觉得小猫非常可爱和聪明。
+        en: My younger sister thinks the kitten is very cute and smart.
+      - zh: 爸爸觉得养宠物需要很多时间照顾。
+        en: Dad thinks keeping pets requires a lot of time and care.
+      - zh: 我觉得小白兔的耳朵非常漂亮。
+        en: I think the little white rabbit's ears are very beautiful.
+      - zh: 妈妈觉得我们已经可以学习照顾宠物。
+        en: Mum thinks we can now learn to take care of pets.
+sentences:
+  - text: 那只小白兔是姐姐的。
+    segments:
+      - 那只
+      - 小白兔
+      - 是
+      - 姐姐的
+      - 。
+    icon: smile
+    description: That little white rabbit belongs to my older sister.
+  - text: 我们带小狗去看医生。
+    segments:
+      - 我们
+      - 带
+      - 小狗
+      - 去
+      - 看
+      - 医生
+      - 。
+    icon: heart
+    description: We take the puppy to see the doctor.

@@ -1,0 +1,390 @@
+title: 第二课 (Lesson 2)
+vocab:
+  - word: 大吉大利
+    pinyin: dà jí dà lì
+    meaning: Good luck
+    example: 新年到了，祝大家大吉大利，天天开心。
+    sentenceBank:
+      - zh: 新年到了，祝大家大吉大利，天天开心。
+        en: The Chinese New Year has arrived. Wishing everyone good luck and happiness every day.
+      - zh: 我们全家一起说大吉大利，祝大家新年快乐。
+        en: Our whole family said “good luck” and wished everyone a Happy New Year.
+      - zh: 妈妈希望新的一年大吉大利，家人平平安安。
+        en: Mum hopes the new year will bring good luck and peace to the family.
+      - zh: 过年的时候，我们都会说大吉大利这句话。
+        en: During Chinese New Year, we always say “good luck”.
+      - zh: 爸爸祝爷爷奶奶大吉大利，身体健康。
+        en: Dad wishes Grandpa and Grandma good luck and good health.
+
+  - word: 岁岁平安
+    pinyin: suì suì píng ān
+    meaning: To have peace every year
+    example: 新年时，我们祝家人岁岁平安，身体健康。
+    sentenceBank:
+      - zh: 新年时，我们祝家人岁岁平安，身体健康。
+        en: During Chinese New Year, we wish our family peace and good health every year.
+      - zh: 我祝外婆岁岁平安，每天都开开心心。
+        en: I wish Grandma peace every year and happiness every day.
+      - zh: 爸爸妈妈希望我们一家人岁岁平安。
+        en: Dad and Mum hope our whole family will have peace every year.
+      - zh: 拜年的时候，我对爷爷说岁岁平安。
+        en: When wishing Grandpa a Happy New Year, I said “peace every year”.
+      - zh: 新年祝福里常常可以听到岁岁平安。
+        en: We can often hear “peace every year” in New Year greetings.
+
+  - word: 年年有余
+    pinyin: nián nián yǒu yú
+    meaning: To have more than enough every year
+    example: 新年里，我们祝大家年年有余，生活快乐。
+    sentenceBank:
+      - zh: 新年里，我们祝大家年年有余，生活快乐。
+        en: During Chinese New Year, we wish everyone more than enough every year and a happy life.
+      - zh: 妈妈说年年有余是很好的新年祝福。
+        en: Mum says “more than enough every year” is a good New Year blessing.
+      - zh: 吃鱼的时候，爸爸说年年有余。
+        en: When we ate fish, Dad said “more than enough every year”.
+      - zh: 我希望我们家年年有余，天天都开心。
+        en: I hope our family will have more than enough every year and be happy every day.
+      - zh: 新年祝福中常常会说年年有余这句话。
+        en: The phrase “more than enough every year” is often used in New Year greetings.
+
+  - word: 全家
+    pinyin: quán jiā
+    meaning: Whole family
+    example: 新年第一天，全家一起吃团圆饭。
+    sentenceBank:
+      - zh: 新年第一天，全家一起吃团圆饭。
+        en: On the first day of Chinese New Year, the whole family eats a reunion meal together.
+      - zh: 今天晚上，全家一起到外婆家拜年。
+        en: Tonight, the whole family is going to Grandma's house to wish her a Happy New Year.
+      - zh: 全家一起大扫除，把家里打扫得很干净。
+        en: The whole family did spring cleaning and made the house very clean.
+      - zh: 过年的时候，全家都会穿上漂亮的新衣服。
+        en: During Chinese New Year, the whole family wears beautiful new clothes.
+      - zh: 我最喜欢全家一起过新年的热闹时间。
+        en: I like the lively time when the whole family celebrates Chinese New Year together.
+
+  - word: 大扫除
+    pinyin: dà sǎo chú
+    meaning: Spring cleaning
+    example: 新年前，我们全家一起做大扫除。
+    sentenceBank:
+      - zh: 新年前，我们全家一起做大扫除。
+        en: Before Chinese New Year, our whole family does spring cleaning together.
+      - zh: 妈妈叫我一起帮忙做家里的大扫除。
+        en: Mum asked me to help with the spring cleaning at home.
+      - zh: 大扫除以后，家里的每一个地方都很干净。
+        en: After the spring cleaning, every part of the house was very clean.
+      - zh: 哥哥负责扫地，我负责把桌子擦干净。
+        en: My older brother swept the floor, and I cleaned the table.
+      - zh: 每年过年前，我们都会一起做大扫除。
+        en: Every year before Chinese New Year, we do spring cleaning together.
+
+  - word: 贴
+    pinyin: tiē
+    meaning: To paste
+    example: 我们一起把红色的福字贴在门上。
+    sentenceBank:
+      - zh: 我们一起把红色的福字贴在门上。
+        en: We pasted a red “fortune” character on the door together.
+      - zh: 妈妈教我怎样把春联贴得整整齐齐。
+        en: Mum taught me how to paste the New Year couplets neatly.
+      - zh: 哥哥帮爸爸把窗户上的装饰贴好。
+        en: My older brother helped Dad paste the decorations on the windows.
+      - zh: 新年以前，我们要把漂亮的年画贴起来。
+        en: Before Chinese New Year, we need to put up the beautiful New Year pictures.
+      - zh: 妹妹小心地把红色的纸贴在墙上。
+        en: My younger sister carefully pasted the red paper on the wall.
+
+  - word: 福
+    pinyin: fú
+    meaning: Good fortune
+    example: 过年的时候，家家户户都会贴福字。
+    sentenceBank:
+      - zh: 过年的时候，家家户户都会贴福字。
+        en: During Chinese New Year, every family puts up the “fortune” character.
+      - zh: 妈妈买了一个漂亮的福字贴在门上。
+        en: Mum bought a beautiful “fortune” character to put on the door.
+      - zh: 爸爸说福字可以带来好运和幸福。
+        en: Dad said the “fortune” character can bring good luck and happiness.
+      - zh: 我帮奶奶把福字贴在家里的门上。
+        en: I helped Grandma put the “fortune” character on the door.
+      - zh: 新年时，我们希望家里充满福气和快乐。
+        en: During Chinese New Year, we hope our home is filled with good fortune and happiness.
+
+  - word: 年花
+    pinyin: nián huā
+    meaning: Flower for Chinese New Year
+    example: 妈妈买了漂亮的年花放在客厅里。
+    sentenceBank:
+      - zh: 妈妈买了漂亮的年花放在客厅里。
+        en: Mum bought beautiful New Year flowers and put them in the living room.
+      - zh: 过年前，爸爸和妈妈一起买年花。
+        en: Before Chinese New Year, Dad and Mum bought New Year flowers together.
+      - zh: 家里的年花开得很漂亮，大家都喜欢。
+        en: The New Year flowers at home are blooming beautifully, and everyone likes them.
+      - zh: 我帮妈妈把年花放在桌子旁边。
+        en: I helped Mum put the New Year flowers beside the table.
+      - zh: 新年的时候，很多人都会在家里放年花。
+        en: During Chinese New Year, many people put New Year flowers at home.
+
+  - word: 时
+    pinyin: shí
+    meaning: At the time
+    example: 吃团圆饭时，全家人都坐在一起。
+    sentenceBank:
+      - zh: 吃团圆饭时，全家人都坐在一起。
+        en: When eating the reunion meal, the whole family sits together.
+      - zh: 表演开始时，大家都安静地看节目。
+        en: When the performance starts, everyone watches the show quietly.
+      - zh: 拜年时，我会向长辈说新年快乐。
+        en: When wishing others a Happy New Year, I say Happy New Year to the elders.
+      - zh: 吃饭时，我们一家人喜欢一起聊天。
+        en: When eating, our family likes chatting together.
+      - zh: 回到外婆家时，我马上向她拜年。
+        en: When I returned to Grandma's house, I immediately wished her a Happy New Year.
+
+  - word: 表演
+    pinyin: biǎo yǎn
+    meaning: To perform
+    example: 学校的新年活动有很多精彩的表演。
+    sentenceBank:
+      - zh: 学校的新年活动有很多精彩的表演。
+        en: The school's New Year event has many wonderful performances.
+      - zh: 哥哥在学校表演了一首好听的歌曲。
+        en: My older brother performed a nice song at school.
+      - zh: 我们班准备表演一个有趣的新年节目。
+        en: Our class is preparing to perform an interesting New Year show.
+      - zh: 表演开始以后，大家都认真地看节目。
+        en: After the performance started, everyone watched the show carefully.
+      - zh: 弟弟第一次上台表演，心里非常紧张。
+        en: My younger brother was very nervous when performing on stage for the first time.
+
+  - word: 舞龙
+    pinyin: wǔ lóng
+    meaning: Dragon dance
+    example: 新年时，我们在社区看精彩的舞龙表演。
+    sentenceBank:
+      - zh: 新年时，我们在社区看精彩的舞龙表演。
+        en: During Chinese New Year, we watched an exciting dragon dance performance in the community.
+      - zh: 舞龙表演开始以后，大家都开心地鼓掌。
+        en: After the dragon dance performance started, everyone clapped happily.
+      - zh: 哥哥最喜欢看热闹的舞龙表演节目。
+        en: My older brother likes watching lively dragon dance performances the most.
+      - zh: 我第一次看到舞龙，觉得非常有趣。
+        en: I thought it was very interesting when I saw a dragon dance for the first time.
+      - zh: 新年活动中有精彩的舞龙和舞狮表演。
+        en: There were exciting dragon and lion dance performances at the New Year event.
+
+  - word: 外婆
+    pinyin: wài pó
+    meaning: Maternal grandmother
+    example: 新年到了，我们一起到外婆家拜年。
+    sentenceBank:
+      - zh: 新年到了，我们一起到外婆家拜年。
+        en: Chinese New Year has arrived, and we are going to Grandma's house to wish her a Happy New Year.
+      - zh: 外婆准备了很多好吃的食物给我们。
+        en: Grandma prepared lots of delicious food for us.
+      - zh: 我很喜欢在新年的时候去看外婆。
+        en: I really like visiting Grandma during Chinese New Year.
+      - zh: 外婆看到我们来了，开心地笑了起来。
+        en: Grandma smiled happily when she saw us arrive.
+      - zh: 我祝外婆身体健康，每天都开心快乐。
+        en: I wish Grandma good health and happiness every day.
+
+  - word: 拜年
+    pinyin: bài nián
+    meaning: To wish someone Happy New Year
+    example: 新年第一天，我们去外婆家拜年。
+    sentenceBank:
+      - zh: 新年第一天，我们去外婆家拜年。
+        en: On the first day of Chinese New Year, we went to Grandma's house to wish her a Happy New Year.
+      - zh: 我们见到爷爷奶奶时，先向他们拜年。
+        en: When we see Grandpa and Grandma, we first wish them a Happy New Year.
+      - zh: 每年新年，我们都会跟亲戚朋友拜年。
+        en: Every Chinese New Year, we wish our relatives and friends a Happy New Year.
+      - zh: 拜年的时候，我们要有礼貌地说祝福话。
+        en: When wishing people a Happy New Year, we should politely say words of blessing.
+      - zh: 我穿上新衣服，跟爸爸妈妈一起拜年。
+        en: I put on my new clothes and went to wish people a Happy New Year with Dad and Mum.
+
+  - word: 拿着
+    pinyin: ná zhe
+    meaning: Holding
+    example: 哥哥拿着一盒鸡蛋卷走进了客厅。
+    sentenceBank:
+      - zh: 哥哥拿着一盒鸡蛋卷走进了客厅。
+        en: My older brother walked into the living room holding a box of egg rolls.
+      - zh: 妹妹拿着红包，开心地向大家拜年。
+        en: My younger sister held a red packet and happily wished everyone a Happy New Year.
+      - zh: 爸爸拿着年花，小心地走进家里。
+        en: Dad carefully walked into the house holding the New Year flowers.
+      - zh: 我拿着礼物，跟妈妈一起去外婆家。
+        en: I held the present and went to Grandma's house with Mum.
+      - zh: 他拿着一张漂亮的新年卡片给我看。
+        en: He held up a beautiful New Year card for me to see.
+
+  - word: 说
+    pinyin: shuō
+    meaning: To say
+    example: 我向外婆说新年快乐和身体健康。
+    sentenceBank:
+      - zh: 我向外婆说新年快乐和身体健康。
+        en: I wished Grandma a Happy New Year and good health.
+      - zh: 爸爸说新年到了，大家都要开心。
+        en: Dad said Chinese New Year has arrived and everyone should be happy.
+      - zh: 老师说过年的时候要有礼貌待人。
+        en: The teacher said that we should be polite to others during Chinese New Year.
+      - zh: 妈妈说今天全家要一起吃团圆饭。
+        en: Mum said that the whole family would eat a reunion meal together today.
+      - zh: 我不知道应该说什么祝福话才好。
+        en: I did not know what words of blessing I should say.
+
+  - word: 您
+    pinyin: nín
+    meaning: You (with respect)
+    example: 外婆，祝您新年快乐，身体健康。
+    sentenceBank:
+      - zh: 外婆，祝您新年快乐，身体健康。
+        en: Grandma, I wish you a Happy New Year and good health.
+      - zh: 爷爷，祝您每天开心，身体健康。
+        en: Grandpa, I wish you happiness and good health every day.
+      - zh: 老师，祝您新年快乐，天天都有好心情。
+        en: Teacher, I wish you a Happy New Year and a happy mood every day.
+      - zh: 外公，祝您岁岁平安，生活开心快乐。
+        en: Grandpa, I wish you peace every year and a happy life.
+      - zh: 奶奶，希望您每天都身体健康和开开心心。
+        en: Grandma, I hope you are healthy and happy every day.
+
+  - word: 身体
+    pinyin: shēn tǐ
+    meaning: Body
+    example: 我希望外婆新年身体健康，天天开心。
+    sentenceBank:
+      - zh: 我希望外婆新年身体健康，天天开心。
+        en: I hope Grandma is healthy and happy every day in the new year.
+      - zh: 爷爷每天早上都会做运动，让身体更健康。
+        en: Grandpa exercises every morning to keep his body healthy.
+      - zh: 天气很冷的时候，我们要照顾好身体。
+        en: When the weather is cold, we need to take good care of our bodies.
+      - zh: 妈妈常常提醒我要多运动，让身体健康。
+        en: Mum often reminds me to exercise more to keep healthy.
+      - zh: 新年时，我们祝长辈身体健康，生活快乐。
+        en: During Chinese New Year, we wish the elders good health and a happy life.
+
+  - word: 学业
+    pinyin: xué yè
+    meaning: School work
+    example: 爸爸妈妈希望我的学业越来越好。
+    sentenceBank:
+      - zh: 爸爸妈妈希望我的学业越来越好。
+        en: Dad and Mum hope that my school work will get better and better.
+      - zh: 我祝哥哥新年学业进步，天天开心。
+        en: I wish my older brother good progress in his school work and happiness every day.
+      - zh: 外婆祝我新年学业进步，身体健康。
+        en: Grandma wishes me good progress in my school work and good health in the new year.
+      - zh: 我会认真学习，希望自己的学业进步。
+        en: I will study hard and hope to improve in my school work.
+      - zh: 新年时，我们也会祝朋友学业进步。
+        en: During Chinese New Year, we also wish our friends progress in their school work.
+
+  - word: 接过
+    pinyin: jiē guò
+    meaning: To receive
+    example: 我开心地接过外婆送给我的红包。
+    sentenceBank:
+      - zh: 我开心地接过外婆送给我的红包。
+        en: I happily received the red packet Grandma gave me.
+      - zh: 妹妹接过妈妈送来的新年礼物。
+        en: My younger sister received the New Year present from Mum.
+      - zh: 我接过爸爸手里的鸡蛋卷并说谢谢。
+        en: I received the egg rolls from Dad and said thank you.
+      - zh: 哥哥接过老师送来的新年卡片。
+        en: My older brother received the New Year card from the teacher.
+      - zh: 我有礼貌地接过长辈送来的红包。
+        en: I politely received the red packet from the elder.
+
+  - word: 鸡蛋卷
+    pinyin: jī dàn juǎn
+    meaning: Egg roll
+    example: 妈妈准备了一盒香香的鸡蛋卷给大家吃。
+    sentenceBank:
+      - zh: 妈妈准备了一盒香香的鸡蛋卷给大家吃。
+        en: Mum prepared a box of fragrant egg rolls for everyone to eat.
+      - zh: 外婆家的桌上放着很多鸡蛋卷和水果。
+        en: There were many egg rolls and fruits on the table at Grandma's house.
+      - zh: 我最喜欢吃新年时准备的鸡蛋卷。
+        en: I like eating the egg rolls prepared during Chinese New Year the most.
+      - zh: 妹妹开心地接过一盒美味的鸡蛋卷。
+        en: My younger sister happily received a box of delicious egg rolls.
+      - zh: 我们一家人一边聊天一边吃鸡蛋卷。
+        en: Our whole family chatted while eating egg rolls.
+
+  - word: 真
+    pinyin: zhēn
+    meaning: Really
+    example: 今天的新年活动真是热闹又有趣。
+    sentenceBank:
+      - zh: 今天的新年活动真是热闹又有趣。
+        en: Today's New Year activity is really lively and interesting.
+      - zh: 外婆准备的鸡蛋卷真好吃，我很喜欢。
+        en: The egg rolls Grandma prepared are really delicious, and I like them very much.
+      - zh: 哥哥今天的表演真精彩，大家都很开心。
+        en: My older brother's performance today was really wonderful, and everyone was happy.
+      - zh: 今年的新年花真漂亮，家里更好看了。
+        en: This year's New Year flowers are really beautiful, making the house look even nicer.
+      - zh: 我收到新年礼物的时候真开心。
+        en: I was really happy when I received my New Year present.
+
+  - word: 新年
+    pinyin: xīn nián
+    meaning: Chinese New Year
+    example: 新年到了，我们全家一起庆祝这个节日。
+    sentenceBank:
+      - zh: 新年到了，我们全家一起庆祝这个节日。
+        en: Chinese New Year has arrived, and our whole family celebrates this festival together.
+      - zh: 新年的时候，我们会穿上漂亮的新衣服。
+        en: During Chinese New Year, we wear beautiful new clothes.
+      - zh: 我最喜欢新年，因为可以和家人团聚。
+        en: I like Chinese New Year the most because I can reunite with my family.
+      - zh: 新年期间，我们会到亲戚家拜年。
+        en: During Chinese New Year, we visit our relatives to wish them a Happy New Year.
+      - zh: 每年新年，家里都会准备很多好吃的食物。
+        en: Every Chinese New Year, our family prepares lots of delicious food.
+
+  - word: 祝
+    pinyin: zhù
+    meaning: To wish
+    example: 我祝大家新年快乐，身体健康，天天开心。
+    sentenceBank:
+      - zh: 我祝大家新年快乐，身体健康，天天开心。
+        en: I wish everyone a Happy New Year, good health, and happiness every day.
+      - zh: 我祝外婆岁岁平安，天天都有好心情。
+        en: I wish Grandma peace every year and a happy mood every day.
+      - zh: 爸爸祝我们全家新年大吉大利。
+        en: Dad wishes our whole family good luck in the new year.
+      - zh: 我祝哥哥学业进步，每天都认真学习。
+        en: I wish my older brother good progress in his school work and that he studies hard every day.
+      - zh: 新年到了，我们祝亲朋好友生活幸福快乐。
+        en: Chinese New Year has arrived, and we wish our relatives and friends a happy life.
+sentences:
+  - text: 外公说我长大了。
+    segments:
+      - 外公
+      - 说
+      - 我
+      - 长大了
+      - 。
+    icon: smile
+    description: Grandpa said that I have grown up.
+  - text: 我和妈妈去买年花。
+    segments:
+      - 我
+      - 和
+      - 妈妈
+      - 去
+      - 买
+      - 年花
+      - 。
+    icon: shopping-bag
+    description: My mother and I go to buy new year flowers.

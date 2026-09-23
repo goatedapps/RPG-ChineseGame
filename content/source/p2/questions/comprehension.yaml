@@ -1,0 +1,890 @@
+- groupId: P2-COMP1
+  subject: Chinese
+  passage:
+    title: 小猴子摘香蕉
+    text: |-
+      森林里住着一只小猴子，名叫皮皮。皮皮最喜欢吃又香又甜的香蕉。
+
+      有一天，皮皮看见树上长满了黄色的香蕉，他非常开心，马上爬到树上去摘。可是，树太高了，皮皮不小心摔了下来，跌得他哇哇大哭。
+
+      这时，一只大猴子走过来，帮皮皮把香蕉摘下来，还教他要小心一点。皮皮谢过大猴子，开开心心地吃起香蕉来。
+  questions:
+    - format: MCQ
+      text: 皮皮最喜欢吃什么？
+      options:
+        - 苹果
+        - 香蕉
+        - 西瓜
+        - 葡萄
+      correct: 香蕉
+    - format: MCQ
+      text: 皮皮为什么摔了下来？
+      options:
+        - 因为树太高了
+        - 因为下雨了
+        - 因为他睡着了
+        - 因为大猴子推了他
+      correct: 因为树太高了
+    - marks: 4
+      format: Long-Answer
+      text: 大猴子帮了皮皮什么忙？他还对皮皮说了什么？
+      displayAnswer: 大猴子帮皮皮把香蕉摘下来（2分），还教他要小心一点（2分）。
+- groupId: P2-COMP2
+  subject: Chinese
+  passage:
+    title: 乐乐的故事书
+    text: |-
+      乐乐借了一本故事书给欢欢。欢欢高兴极了，在休息的时候看。丽丽看到了，想要和欢欢一起看这本故事书。
+
+      欢欢说："这本书是乐乐借给我看的，你走开！"
+
+      丽丽很生气，只好去找同学们玩游戏。欢欢看完了故事书，想要和同学们一起玩游戏。丽丽说："你不要和我一起看故事书，我也不要和你一起玩游戏，你走开！"
+
+      欢欢难过得哭了起来。坐在一旁画画的乐乐看见了，说："你们不要吵架了！我们都是同学，大家一起玩游戏，一起看故事书，才快乐。"
+
+      丽丽和欢欢听了，就互相说"对不起"。
+  questions:
+    - format: MCQ
+      text: 欢欢高兴极了，因为 ___。
+      options:
+        - 乐乐借了一本故事书给她
+        - 丽丽要和她一起看故事书
+        - 她要和同学们一起玩游戏
+      correct: 乐乐借了一本故事书给她
+    - format: MCQ
+      text: 丽丽在休息的时候做什么？
+      options:
+        - 她和乐乐一起画画。
+        - 她和欢欢看故事书。
+        - 她和同学们玩游戏。
+      correct: 她和欢欢看故事书。
+    - format: MCQ
+      text: 听了乐乐的话，丽丽和欢欢做什么？
+      options:
+        - 他们互相说"对不起"。
+        - 他们说"不要吵架了"。
+        - 他们说"一起休息吧"。
+      correct: 他们互相说"对不起"。
+- groupId: P2-COMP3
+  subject: Chinese
+  passage:
+    title: 文文上课不专心
+    text: |-
+      老师在上英文课。文文没有专心听老师上课，手里玩着桌子上的文具。
+
+      老师很生气，问文文："你到学校是来玩文具的吗？"文文听了，马上把文具收拾好，然后专心听老师上课。
+
+      下课了，老师对文文说："以后老师上课时，你把文具都收进文具盒里，不可以拿出来玩。"文文点点头，说："老师，我以后一定用心学习，上课时不会再这样了。"
+  questions:
+    - format: Long-Answer
+      text: 老师为什么会生气？
+      displayAnswer: 因为文文没有专心听老师上课，手里玩着桌上的文具。
+    - format: Long-Answer
+      text: 文文向老师说他以后会怎么样？
+      displayAnswer: 文文向老师说他以后一定用心学习，上课时不会再玩文具。
+- groupId: P2-COMP4
+  subject: Chinese
+  passage:
+    title: 小林拾到小盒子
+    text: |-
+      上个星期六，小林到公园去和朋友们一起跑步。小林跑步时，在一棵大树下找到了一个小盒子，小盒子里还有几块彩色的小石头。小林觉得这些五颜六色的小石头很好看。
+
+      这时，小林看到大树旁边有一个小男孩在哭。小林走过去问："你怎么哭了？"小男孩说："奶奶送给我的小盒子不见了，里面还有奶奶送给我的彩色石头。"
+
+      小林听了，就把手里的小盒子拿给小男孩。小男孩一看到那个小盒子，马上就不哭了，还开心地笑了。小男孩接过小盒子，还对小林说了谢谢。看到小男孩那么开心，小林也很开心。小林心想：帮助别人真好！
+  questions:
+    - format: Long-Answer
+      text: 上个星期六，小林到公园去做了什么？
+      displayAnswer: 小林到公园去和朋友们一起跑步。
+    - format: Long-Answer
+      text: 小林在大树下找到了什么？
+      displayAnswer: 小林在大树下找到一个小盒子，小盒子里还有几块彩色的小石头。
+    - format: Long-Answer
+      text: 小男孩为什么哭了？
+      displayAnswer: 因为小男孩的小盒子不见了，里面还有奶奶送给小男孩的彩色石头。
+    - format: Long-Answer
+      text: 从哪里可以看出小男孩看到小盒子后很高兴？
+      displayAnswer: 小男孩一看到那个小盒子，马上就不哭了，还开心地笑了。
+    - format: Long-Answer
+      text: 为什么小林会说"帮助别人真好"？
+      displayAnswer: 看到小男孩那么开心，小林也很开心。
+- groupId: P2-COMP5
+  subject: Chinese
+  passage:
+    title: 动物园里的国王
+    text: |-
+      老师带同学去参观动物园。同学们除了拍照，还看了动物表演。老师也告诉同学们各种动物有趣的地方。
+
+      回到学校后，老师问："哪只动物是树林里的国王？为什么？"
+
+      小康举手说："是大象。因为它的力气最大了。"
+
+      小乐不同意："不对，是爪子又长又尖的狮子！"
+
+      同学们都互相抢着要回答，只有文文一句话也不说。老师看到了，就问他："文文，你说谁是动物里的国王？"
+
+      "动物园的工作人员，"文文说，"因为动物们都怕他。"
+  questions:
+    - format: MCQ
+      text: 老师带同学们去了 ___。
+      options:
+        - 树林
+        - 动物园
+        - 学校
+      correct: 动物园
+    - format: Long-Answer
+      text: 同学们在动物园里做了什么？
+      displayAnswer: 同学们除了拍照，还看了动物表演。
+    - marks: 4
+      format: Long-Answer
+      text: 小乐觉得哪一只动物是国王？为什么？
+      displayAnswer: 小乐觉得狮子是国王，因为它的爪子又长又尖。
+    - marks: 4
+      format: Long-Answer
+      text: 文文的答案是什么？为什么他这么说？
+      displayAnswer: 文文的答案是大象，因为动物们都怕他。
+- groupId: P2-COMP6
+  subject: Higher Chinese
+  passage:
+    title: 小黄鸟唱歌
+    text: |-
+      树林里的鸟儿都爱唱歌，小黄鸟也喜欢唱歌。可是大家都说它唱歌不好听，小黄鸟听了很不开心。
+
+      一天，小黄鸟在回家的路上找到一块肉。它飞到一棵树上，就想坐在树上吃肉。一只花狗看见了，也想吃那块肉。花狗想了想，就笑着对小黄鸟说："黄鸟妹妹，你唱歌非常好听，现在可以唱给我听吗？"
+
+      小黄鸟听了，就高兴地唱起歌来。可是，它的口一张开，肉就掉在地上，花狗马上跑过去把肉吃了。
+  questions:
+    - format: MCQ
+      text: 小黄鸟不开心，因为鸟儿都 ___。
+      options:
+        - 说自己唱歌好听
+        - 不让它大声唱歌
+        - 说它唱歌不好听
+      correct: 说它唱歌不好听
+    - format: MCQ
+      text: 小黄鸟想在 ___ 吃肉。
+      options:
+        - 树上
+        - 地上
+        - 路上
+      correct: 树上
+    - format: Fill-in
+      text: 最后，___ 吃了那块肉。
+      accepted:
+        - 花狗
+      displayAnswer: 花狗
+    - format: Long-Answer
+      text: 为什么小黄鸟没有吃到那块肉？
+      displayAnswer: 小黄鸟高兴地唱起歌来。可是，它的口一张开，肉就掉在地上，花狗马上跑过去把肉吃了。
+- groupId: P2-COMP7
+  subject: Chinese
+  passage:
+    title: 小丽和小华的笔
+    text: |-
+      一天，小丽上学时忘了带盒子。上课时，老师要她们写字。小丽的笔在桌上用不好，因为她没有盒子，她从文具盒里拿出一支笔。
+
+      小华回来的时候，发现自己的一支笔不见了，就生气地说是小丽偷了他的笔。小丽听了，很生气地把笔还了回去。坐在前边的小林和美美都看到了，可是他们没有说话。
+
+      老师知道了事情的经过后，对他们说："你们都不对。小华没有弄清楚事情就生气地说是小丽拿了他的笔。小丽如果没有拿别人的东西，也应该说清楚，而不是默默地把笔还回去。"
+  questions:
+    - format: MCQ
+      text: 小丽的同桌同学是 ___。
+      options:
+        - 小米
+        - 美美
+        - 小华
+      correct: 小华
+    - format: MCQ
+      text: 小丽为什么要拿小华的笔？
+      options:
+        - 因为小华有很多笔。
+        - 因为小丽没有带笔。
+        - 因为小丽的笔不见了。
+      correct: 因为小丽的笔不见了。
+    - format: MCQ
+      text: 小丽有什么不对的地方？
+      options:
+        - 她偷了小华的笔。
+        - 她听了小华的话就去上学。
+        - 她没有说明事情就默默地把笔还了。
+      correct: 她没有说明事情就默默地把笔还了。
+    - format: MCQ
+      text: 小华有什么不对的地方？
+      options:
+        - 他不要把笔借给小丽。
+        - 他带了很多支笔去学校。
+        - 他没有弄清楚就说小丽偷了笔。
+      correct: 他没有弄清楚就说小丽偷了笔。
+    - format: MCQ
+      text: 听了老师的话，小丽和小华 ___。
+      options:
+        - 谁也不讲话。
+        - 互相大声说话。
+        - 知道自己错了。
+      correct: 知道自己错了。
+- groupId: P2-COMP8
+  subject: Chinese
+  passage:
+    title: 小黄鸟与木瓜树
+    text: |-
+      小黄鸟喜欢飞来飞去。有时，它会飞到屋子前听人们讲话。有时，它会飞到学校和学生们写字。
+
+      一天，小黄鸟飞到了小河边，看到一棵木瓜树。它飞过这棵木瓜树时，看到花朵里有几条虫子。它想："我要吃这些虫子。"
+
+      可是，小黄鸟一飞到花朵上，木瓜树就对它说："你不可以动我的花。"小黄鸟听见了，生气地飞走了。
+
+      过了几个月，木瓜树上都是虫子，花朵也没了，它大哭了起来。
+  questions:
+    - format: MCQ
+      text: 小黄鸟在哪里看到木瓜树？
+      options:
+        - 小河边
+        - 学校里
+        - 组屋前
+      correct: 小河边
+    - format: Long-Answer
+      text: 小黄鸟看到花朵里有什么？
+      displayAnswer: 几条虫子。
+    - format: Long-Answer
+      text: 为什么木瓜树大哭了起来？
+      displayAnswer: 因为木瓜树上都是虫子，花朵也没有了。
+- groupId: P2-COMP9
+  subject: Chinese
+  passage:
+    title: 小文买纸巾
+    text: |-
+      一天中午，小文一家人去咖啡店吃午餐。咖啡店里的人很多，他们等了很久才有位子坐。
+
+      妈妈先带小文去买炒面和鸡饭。过后，小文就跟着爸爸去买豆浆。天气好热，爸爸和小文就走回座位。
+
+      这时，一位老奶奶走了过来。她问爸爸要不要买纸巾。小文心想：奶奶这么老了还要出来卖纸巾，我应该跟她买。小文跟着奶奶买了三包纸巾，老奶奶笑着对他说："小弟弟，谢谢你。"爸爸妈妈看着小文，开心地笑了。
+  questions:
+    - format: MCQ
+      text: 小文一家人去咖啡店里买了什么？
+      options:
+        - 炒面、鸭饭、豆浆和纸巾。
+        - 炒面、鸡饭、奶茶和纸巾。
+        - 炒面、鸡饭、豆浆和纸巾。
+      correct: 炒面、鸡饭、豆浆和纸巾。
+    - format: Long-Answer
+      text: 一天中午，小文一家人去哪里吃午餐？
+      displayAnswer: 咖啡店。
+    - format: Long-Answer
+      text: 为什么老奶奶对小文说"谢谢"？
+      displayAnswer: 因为小文跟着奶奶买了三包纸巾。
+- groupId: P2-COMP10
+  subject: Chinese
+  passage:
+    title: 文文和小白狗
+    text: |-
+      文文八岁那年，爸爸妈妈说："你长大了，学业也进步了，我们送一只小白狗给你。"文文很喜欢小白狗，他们成了好朋友。
+
+      小白狗有长长的尾巴，大大的眼睛，真可爱。文文每天都会给小白狗吃东西，每个星期天，他也会带它去冲凉。
+
+      妈妈看见文文只照顾小白狗，没有好好地读书，就生气地说："我要把小白狗送给别人！"妈妈把小白狗送走后，文文每天都很难过。过了几天，文文开始努力读书。妈妈看见小白狗回来后，文文开心极了！
+  questions:
+    - format: Long-Answer
+      text: 小白狗长得怎么样？
+      displayAnswer: 有长长的尾巴、大大的眼睛，很可爱。
+    - format: Long-Answer
+      text: 为什么爸爸妈妈送小白狗给文文？
+      displayAnswer: 因为文文长大了，学业也进步了。
+    - format: MCQ
+      text: 文文是一个怎样的孩子？
+      options:
+        - 喜欢读书
+        - 关心妈妈
+        - 知错能改
+      correct: 知错能改
+- groupId: P2-COMP11
+  subject: Higher Chinese
+  passage:
+    title: 抱小狗拍照
+    text: |-
+      今天，妈妈和小安去游乐园玩。走到行人天桥时，我看见我的朋友小安和他的妈妈从对面走过来。小安正抱着一只小狗。小狗身上长着长长的毛，一双眼睛大大的，样子很可爱。
+
+      我的眼睛一直看着小狗。这时，小安妈妈就让小狗亲我的脸，她把小狗抱过来，放在我的手上。我抱着小狗站在天桥的旁边，让妈妈给我拍了一张照片，然后我才把小狗还给小安。
+
+      到了公园，我就一直想那只可爱的小狗，不停地看着我和小狗的照片。妈妈说如果我生日时，一定会送我一只小狗，我听了开心地跳了起来。
+  questions:
+    - format: MCQ
+      text: 小安和他的妈妈刚从公园回来。
+      options:
+        - 正确
+        - 错误
+      correct: 正确
+    - format: MCQ
+      text: 小安和他的妈妈在路上看到我们。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: Long-Answer
+      text: 小安怎么知道"我"爱他的小狗？
+      displayAnswer: 小安看到"我"的眼睛一直看着小狗，就知道"我"爱他的小狗。
+    - format: Long-Answer
+      text: 小安看到"我"也爱他的小狗后，他怎么做？
+      displayAnswer: 他把小狗抱过来，放在"我"的手上。
+    - format: Long-Answer
+      text: 从哪些事情可以看出"我"很喜欢小狗？
+      displayAnswer: '"我"的眼睛一直看着小狗；"我"抱着小狗拍照；"我"不停地看着"我"和小狗的照片。'
+- groupId: P2-COMP12
+  subject: Higher Chinese
+  passage:
+    title: 长大后要做什么
+    text: |-
+      上课时，老师问大家："你们长大了要做什么？"
+
+      "我要做护士，照顾病人。"美美说。
+
+      "我要做建筑师，和工人们一起建高高的组屋给大家住。"阿木说。
+
+      张明说："我要做园丁，种很多很多花草树木，让新加坡变得更美丽。"
+
+      欢欢说："我要做演员。"
+
+      老师说："欢欢，你为什么要做演员？"
+
+      欢欢开心地说："我的爷爷和奶奶都爱看戏，我要做演员，演好看的戏给爷爷和奶奶看。"
+
+      老师听了说："欢欢真是个懂事的好孩子。"
+  questions:
+    - format: Long-Answer
+      text: 建筑师的工作是什么？
+      displayAnswer: 和工人们一起建高高的组屋给大家住。
+    - marks: 4
+      format: Long-Answer
+      text: 新加坡需要园丁吗？为什么？
+      displayAnswer: 需要，因为园丁可以种很多很多花草树木，让新加坡更美丽。
+    - format: Long-Answer
+      text: 为什么老师说欢欢是个懂事的孩子？
+      displayAnswer: 因为她的爷爷和奶奶都爱看戏，她想做演员，演好看的戏给爷爷和奶奶看。
+- groupId: P2-COMP13
+  subject: Higher Chinese
+  passage:
+    title: 公园里的发现
+    text: |-
+      一天早上，小文和爸爸一起到公园。小文看到树上的小鸟，问："爸爸，那是什么？"
+
+      爸爸说："那是小鸟，它们在飞高高。"
+
+      小文又看了看地上，问："这又是什么呢？"
+
+      爸爸说："这是蚂蚁，它们在搬东西。"
+
+      小文看着公园里的花朵，说："爸爸，花儿真美丽！我可以采一朵花给妈妈吗？"
+
+      爸爸说："公园里的花儿不能采，没有了花，蝴蝶就不能来采花蜜，人们也看不到美丽的花了。"
+
+      小文点点头，说："好，那我们把看到的小动物说给妈妈听吧！"爸爸开心地说："小文，你长大了！"
+  questions:
+    - format: MCQ
+      text: 小文在公园里的地上看到了什么？
+      options:
+        - 花朵
+        - 鸟窝
+        - 小鸟
+        - 蚂蚁
+      correct: 蚂蚁
+    - format: MCQ
+      text: 以下哪一个句子是正确的？
+      options:
+        - 小文想要捉一只蝴蝶。
+        - 小文想要采花给妈妈。
+        - 小文要帮小鸟建鸟窝。
+        - 小文要帮蚂蚁搬东西。
+      correct: 小文想要采花给妈妈。
+    - format: MCQ
+      text: 小鸟在地上走走。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 小文看见蚂蚁在采花蜜。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - marks: 4
+      format: Long-Answer
+      text: 爸爸说公园里的花可以采吗？为什么？
+      displayAnswer: 不能。因为没有了花，蝴蝶就不能来采花蜜，人们也看不到美丽的花了。
+    - marks: 4
+      format: Long-Answer
+      text: 你认为小文是个怎样的孩子？为什么？
+      displayAnswer: 小文是个懂事的孩子，因为他听了爸爸的话后不采花给妈妈，而且会主动把看到的小动物说给妈妈听。
+- groupId: P2-COMP14
+  subject: Higher Chinese
+  passage:
+    title: 自己种的白菜
+    text: |-
+      山羊公公在菜园里收白菜，小狗和小兔也来帮忙。过后，山羊公公送给它们一些白菜。小狗拿过白菜就说："谢谢你！"可是小兔没有拿白菜，它说："请给我更多的种子。"山羊公公说："好的。"
+
+      小兔回家后，马上去种白菜。它天天浇水、捉虫。过了一些日子，白菜长得又大又好看。
+
+      小狗什么都不做，饿了就吃山羊公公给它的白菜。等到家里没有东西吃了，小狗又去向山羊公公要白菜。
+
+      这时，小狗看到小兔拿着一篮白菜来到山羊公公的家。小狗问："你怎么会有这么多菜呢？"小兔说："这是我自己种的，不花心思，是不会有吃的！"
+  questions:
+    - format: MCQ
+      text: 小兔的家有吃不完的白菜。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 小狗每天给白菜浇水和捉虫。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 小狗收下了山羊公公给的白菜。
+      options:
+        - 正确
+        - 错误
+      correct: 正确
+    - format: MCQ
+      text: 小兔给山羊公公的白菜是怎样来的？
+      options:
+        - 是买来的
+        - 是它吃不完的
+        - 是它自己种的
+        - 是它去菜园里拿的
+      correct: 是它自己种的
+    - format: Long-Answer
+      text: 谁帮山羊公公收白菜？
+      displayAnswer: 小狗和小兔。
+- groupId: P2-COMP15
+  subject: Higher Chinese
+  passage:
+    title: 小黄鸟不能带回家
+    text: |-
+      早上，爸爸带我去咖啡店吃早餐。我们经过公园时，我看见大树上有一只小鸟。
+
+      小黄鸟的眼睛圆圆的，好像会说话。我觉得小黄鸟很可爱，就对爸爸说："我很喜欢小黄鸟，我们把它抓起来，放到盒子里，然后带回家好吗？"
+
+      爸爸说："这样做不好，小黄鸟就不能在高高的树上唱歌，再也看不到草地和美丽的花，它会不开心吗？"
+
+      我想了想，对爸爸说："它会不开心，我们不能这样做！"爸爸听了，也满意地说："你长大了！"
+  questions:
+    - format: MCQ
+      text: 下午，爸爸带"我"去咖啡店吃早餐。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 小黄鸟会说话。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 知道"我"想抓小鸟，爸爸很不开心。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: '"我"是在哪里发现小黄鸟的？'
+      options:
+        - 家门口
+        - 公园里
+        - 青草地上
+        - 咖啡店里
+      correct: 公园里
+    - format: Long-Answer
+      text: '"我"想对小黄鸟做什么？'
+      displayAnswer: '"我"想把小黄鸟抓起来，放到盒子里，然后带回家。'
+- groupId: P2-COMP16
+  subject: Higher Chinese
+  passage:
+    title: 儿童节的约定
+    text: |-
+      儿童节那天，吃完了午饭，小安的妈妈要带他去看电影。小安知道后，高兴极了！
+
+      要去换衣服时，小安才想起他答应小亮的事情。小安急忙去找妈妈，他说："妈妈，我答应了小亮，不能去看电影了。等我做完功课，我再去看电影好吗？"
+
+      妈妈正要回答时，电话响了。小安接起电话，原来是小亮打来的。小亮对小安说："对不起，我昨天在公园玩时不小心把脚弄伤了，不能去看电影了。"小安说："没关系，你好好休息，等你好了我们再去，祝你儿童节快乐！"
+
+      放下电话后，小安说："妈妈，我们现在就去看电影吧。"妈妈笑着说："我们还是一起去看小亮吧，电影明天再看也来得及。"小安点了点头，然后他们就出门去了。
+  questions:
+    - format: MCQ
+      text: 为了庆祝儿童节，妈妈想带小安去看电影。
+      options:
+        - 正确
+        - 错误
+      correct: 正确
+    - format: MCQ
+      text: 妈妈让小安先去做功课。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 最后，小安下午去做了什么？
+      options:
+        - 去看电影
+        - 去看小亮
+        - 去游乐场玩玩
+        - 去图书馆做功课
+      correct: 去看小亮
+    - format: Long-Answer
+      text: 小安答应小亮去做什么？
+      displayAnswer: 小安答应小亮一起去看电影。
+    - format: Long-Answer
+      text: 为什么小亮的脚受伤了？
+      displayAnswer: 因为小亮前一天在公园玩时不小心把脚弄伤了。
+- groupId: P2-COMP17
+  subject: Higher Chinese
+  passage:
+    title: 小丽画的画
+    text: |-
+      一天，小丽要给爸爸画一幅画送给他。她先画了一只小猪和一只小狗，可是她想起爸爸不喜欢动物的画，那该怎么办呢？
+
+      她画了一个红灯，一张大大的桌子。桌子上有很多吃的食物，有鸡蛋、炸鸡，还有一个大蛋糕。
+
+      小丽还想画西瓜，可是找不到绿色的彩色笔，所以很难过。爸爸看到了，对小丽说："没关系，你用黄色的彩色笔画西瓜吧！"小丽觉得很奇怪，心想：难道爸爸喜欢黄色的西瓜？
+
+      小丽画好后，只见爸爸又用蓝色的彩色笔给黄色的西瓜上色，西瓜就变绿色了。小丽看着和爸爸一起完成的美丽图画，开心极了。
+  questions:
+    - format: MCQ
+      text: 小丽画了一张有小动物的画，送给了爸爸。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 爸爸喜欢黄色的西瓜。
+      options:
+        - 正确
+        - 错误
+      correct: 错误
+    - format: MCQ
+      text: 小丽为什么会难过？
+      options:
+        - 因为她爸爸不喜欢她送的礼物。
+        - 因为她找不到黄色的彩色笔。
+        - 因为她找不到绿色的彩色笔。
+        - 因为她不喜欢她画的西瓜。
+      correct: 因为她找不到绿色的彩色笔。
+    - format: Long-Answer
+      text: 爸爸是怎么帮助小丽画西瓜的？
+      displayAnswer: 小丽画好西瓜后，爸爸又用蓝色的彩色笔给黄色的西瓜上色，西瓜就变绿色了。
+    - format: Long-Answer
+      text: 从哪里可以看出小丽很喜欢这张画？
+      displayAnswer: 小丽看着和爸爸一起完成的美丽图画，开心极了。
+- groupId: P2-COMP18
+  subject: Chinese
+  passage:
+    title: 乐乐学会关心别人
+    text: |-
+      一天早上，乐乐和妈妈去巴刹买菜。妈妈说："我们买些鱼片、鸡蛋和青菜，午餐可以做鱼片汤。"
+
+      到了那里，妈妈教乐乐怎么选青菜。后来，走到卖水果的地方，妈妈要买西瓜。乐乐问："妈妈，你不是不爱吃西瓜吗？"妈妈回答："天气热，我想买给你们吃呀！"乐乐想到同学们也说天气很热，就问："那我们可以多买一个吗？我也想带去学校分给同学吃。"妈妈说："好，你长大了，学会关心别人了。"
+
+      回家后，爸爸看到他们回来，问乐乐今天做了什么。乐乐开心地说："今天，我学会了怎么选青菜。""他还学会了主动关心别人。"妈妈笑着说。
+  questions:
+    - format: MCQ
+      text: 妈妈和乐乐去巴刹买了什么？
+      options:
+        - 青菜和午餐
+        - 鸡蛋和西瓜
+        - 青菜和鱼片汤
+        - 鸡蛋和鱼片汤
+      correct: 鸡蛋和西瓜
+    - format: Long-Answer
+      text: 为什么乐乐想要多买一个西瓜？
+      displayAnswer: 因为乐乐的同学说天气很热，所以他想多买一个西瓜，带去学校分给同学吃。
+    - format: Long-Answer
+      text: 乐乐跟妈妈去巴刹买菜后学会了什么？
+      displayAnswer: 学会了怎么选青菜，也学会了主动关心别人。
+- groupId: P2-COMP19
+  subject: Higher Chinese
+  passage:
+    title: 小狗的生日会
+    text: |-
+      小狗生日，请小猫、小羊和小鸟来家里做客。小狗准备了小鱼、青草和小虫子。小猫喜欢小鱼，小羊喜欢青草，小鸟喜欢小虫子。大家一起唱生日歌、吃蛋糕。
+  questions:
+    - format: Long-Answer
+      text: 小狗请谁到家里做客？
+      displayAnswer: 小猫、小羊和小鸟。
+    - format: Long-Answer
+      text: 小狗请朋友们吃什么？
+      displayAnswer: 小猫喜欢小鱼，小羊喜欢青草，小鸟喜欢小虫子。
+    - format: Long-Answer
+      text: 朋友们和小狗一起做什么？
+      displayAnswer: 一起唱生日歌，一起吃蛋糕。
+- groupId: P2-COMP20
+  subject: Higher Chinese
+  passage:
+    title: 长大后的职业
+    text: |-
+      外婆生日，家人谈到长大后想做的职业。弟弟想当消防员救人，妹妹想当医生，"我"想当演员，演好看的戏给外婆看。
+  questions:
+    - format: Long-Answer
+      text: 消防员是做什么的？
+      displayAnswer: 哪里发生火灾，就开消防车去灭火，并把人从大火里救出来。
+    - format: Long-Answer
+      text: 弟弟、妹妹和"我"长大后想做什么？
+      displayAnswer: 弟弟想当消防员，妹妹想当医生，"我"想当演员。
+    - format: Long-Answer
+      text: 外婆为什么说"我"是个好孩子？
+      displayAnswer: 因为"我"知道外婆喜欢看戏，想当演员演好看的戏给外婆看。
+- groupId: P2-COMP21
+  subject: Chinese
+  passage:
+    title: 帮助迷路的老公公
+    text: |-
+      小安去接妹妹回家，途中遇到一位迷路的老公公。老公公要过马路却没有看车。小安和妹妹教他使用红绿灯，并送他回家。因为他们回家晚了，妈妈一开始生气，后来知道事情经过后，称赞他们是懂事的好孩子。
+  questions:
+    - format: Long-Answer
+      text: 老公公哪里不对？
+      displayAnswer: 他过马路时没有看车子。
+    - format: Long-Answer
+      text: 妈妈为什么会生气？
+      displayAnswer: 因为妈妈在家等小安和妹妹等了很久。
+    - format: Long-Answer
+      text: 老公公后来是怎样过马路的？
+      displayAnswer: 老公公后来学会用红绿灯过马路。
+- groupId: P2-COMP22
+  subject: Chinese
+  passage:
+    title: 走天桥回家
+    text: |-
+      一家人在咖啡店吃早餐。弟弟想吃炸鸡，姐姐提醒他少吃油炸食物、多吃青菜。之后"我"带弟弟回家，并按照妈妈的提醒走行人天桥。回到家后打电话告诉妈妈，妈妈称赞"我"长大了。
+  questions:
+    - format: Long-Answer
+      text: '"我"的家在哪里？'
+      displayAnswer: 公园旁边。
+    - format: Long-Answer
+      text: '"我"怎样回家？'
+      displayAnswer: 走行人天桥回家。
+    - format: Long-Answer
+      text: 妈妈为什么说弟弟懂事了？
+      displayAnswer: 因为弟弟听妈妈的话，少吃油炸食物、多吃青菜。
+- groupId: P2-COMP23
+  subject: Chinese
+  passage:
+    title: 安安的第一天上学
+    text: |-
+      安安第一天上学，妈妈检查他的书包，提醒他带齐书本和文具。安安还带了剪刀、铅笔和彩色笔，因为他要做一张卡给老师。爸爸出门时提醒他带雨伞，安安把雨伞也放进书包。
+  questions:
+    - format: Long-Answer
+      text: 安安第一天上学，爸爸要他带什么？
+      displayAnswer: 雨伞。
+    - format: MCQ
+      text: 妈妈要安安带什么？
+      options:
+        - 文具和卡
+        - 书本和卡
+        - 书本和文具
+      correct: 书本和文具
+    - format: MCQ
+      text: 安安的好帮手是什么？
+      options:
+        - 铅笔、雨伞、彩色笔
+        - 剪刀、铅笔、彩色笔
+        - 雨伞、剪刀、彩色笔
+      correct: 剪刀、铅笔、彩色笔
+    - format: MCQ
+      text: 安安要把卡送给谁？
+      options:
+        - 爸爸
+        - 妈妈
+        - 老师
+      correct: 老师
+- groupId: P2-COMP24
+  subject: Chinese
+  passage:
+    title: 小马的新衣服
+    text: |-
+      小马的旧衣服穿了很久，想做一件新衣服。小猫建议做黑色的，小兔建议做白色的。妈妈想了几天，最后做了一件同时有黑色和白色、大家都喜欢的新衣服。
+  questions:
+    - format: MCQ
+      text: 故事里有几只动物？
+      options:
+        - 三只
+        - 四只
+        - 五只
+      correct: 四只
+    - format: MCQ
+      text: 小马要做新衣服，因为：
+      options:
+        - 它身上的衣服已经穿了很久。
+        - 它的好朋友喜欢黑色和白色。
+        - 妈妈会做大家都喜欢的衣服。
+      correct: 它身上的衣服已经穿了很久。
+    - format: MCQ
+      text: 动物们在说什么事？
+      options:
+        - 小马妈妈会做新衣服。
+        - 黑色和白色最美丽。
+        - 新衣服要做什么样子。
+      correct: 新衣服要做什么样子。
+    - format: MCQ
+      text: 马妈妈用了多少天做好新衣服？
+      options:
+        - 一天
+        - 几天
+        - 很久
+      correct: 几天
+    - format: MCQ
+      text: 马妈妈做了一件怎样的新衣服？
+      options:
+        - 有斑马图画
+        - 大家都喜欢的样子
+        - 有黑色和白色两种颜色
+      correct: 有黑色和白色两种颜色
+    - format: Long-Answer
+      text: 小猫和小兔子看了新衣服后，说了什么？
+      displayAnswer: 它们说小马好像一只小斑马。
+- groupId: P2-COMP25
+  subject: Chinese
+  passage:
+    title: 小白猫
+    text: |-
+      小白是一只毛又长又白的小猫。它喜欢玩玩具，害怕打雷；听到雷声会跑到主人身边，主人会摸它的头安慰它。小白是主人的好朋友。
+  questions:
+    - format: Fill-in
+      text: 小白 ___ 玩玩具。
+      accepted:
+        - 喜欢
+      displayAnswer: 喜欢
+    - format: Fill-in
+      text: 小白很 ___ 打雷。
+      accepted:
+        - 害怕
+      displayAnswer: 害怕
+    - format: Fill-in
+      text: 听到雷声，主人会 ___ 它的头安慰它。
+      accepted:
+        - 摸
+      displayAnswer: 摸
+    - format: Fill-in
+      text: 小白是主人 ___ 好的朋友。
+      accepted:
+        - 最
+      displayAnswer: 最
+- groupId: P2-COMP26
+  subject: Chinese
+  passage:
+    title: 小明和小狗
+    text: |-
+      小明在组屋楼下遇到一只可爱的小狗。他和小狗很快就成了好朋友，想把小狗带回家。妈妈要求他每天喂小狗吃肉，好好照顾它。后来，小狗总是跟着小明，成为小明最重要的家人。
+  questions:
+    - format: Fill-in
+      text: 他们很 ___ 就成了好朋友。
+      accepted:
+        - 快
+      displayAnswer: 快
+    - format: Fill-in
+      text: 小明想要 ___ 小狗回家。
+      accepted:
+        - 带
+      displayAnswer: 带
+    - format: Fill-in
+      text: 妈妈说每天要 ___ 给小狗吃肉。
+      accepted:
+        - 喂
+      displayAnswer: 喂
+    - format: Fill-in
+      text: 小狗都坐在小明 ___。
+      accepted:
+        - 身边
+      displayAnswer: 身边
+    - format: Fill-in
+      text: 小狗对小明来说很 ___。
+      accepted:
+        - 重要
+      displayAnswer: 重要
+- groupId: P2-COMP27
+  subject: Higher Chinese
+  passage:
+    title: 文文捡到小狗
+    text: |-
+      文文在回家路上听见狗叫声，在河边找到一只小狗。他问了很多人，可是没有人知道这是谁的小狗，只好先把小狗带回家。几天后，哥哥告诉他小狗是小丽的，文文就把小狗送回小丽家。
+  questions:
+    - format: MCQ
+      text: 文文在哪里找到小狗？
+      options:
+        - 家里
+        - 路上
+        - 河边
+      correct: 河边
+    - format: MCQ
+      text: 谁的小狗不见了？
+      options:
+        - 哥哥
+        - 小丽
+        - 大家
+      correct: 小丽
+    - format: Long-Answer
+      text: 文文为什么要抱着小狗回家？
+      displayAnswer: 因为他问了很多人，大家都说小狗不是他们的，所以他只好先把小狗带回家。
+    - format: Long-Answer
+      text: 文文听了哥哥的话后怎么做？
+      displayAnswer: 他抱起小狗，把它送回小丽的家。
+- groupId: P2-COMP28
+  subject: Higher Chinese
+  passage:
+    title: 送给妈妈的画
+    text: |-
+      母亲节快到了，大象老师让同学们画一张图画送给妈妈。小羊画青草，小狗画牛奶，小鸡画虫子。小猫本来想画大鱼，后来不小心在白纸上点了两个黑点，就把黑点画成一双又大又亮的眼睛。小猫说，妈妈天黑时要捉老鼠，所以需要一双明亮的眼睛。
+  questions:
+    - format: MCQ
+      text: 母亲节要到了，大象老师要同学们做什么？
+      options:
+        - 在纸上点黑点
+        - 送妈妈一杯牛奶
+        - 画一张图画送给妈妈
+      correct: 画一张图画送给妈妈
+    - format: MCQ
+      text: 小猫的妈妈爱吃什么？
+      options:
+        - 青草
+        - 大鱼
+        - 老鼠
+      correct: 大鱼
+    - format: Long-Answer
+      text: 小鸡画了什么送给妈妈？
+      displayAnswer: 一条虫子。
+    - format: Long-Answer
+      text: 为什么小猫觉得妈妈要有一双明亮的眼睛？
+      displayAnswer: 因为妈妈天黑时要捉老鼠。
+- groupId: P2-COMP29
+  subject: Higher Chinese
+  passage:
+    title: 送给妈妈的生日卡
+    text: |-
+      妈妈生日快到了，哥哥和弟弟一起去书店买礼物。弟弟想买玩具车，哥哥说妈妈不是小孩子，不会玩玩具车，建议做一张生日卡给妈妈。妈妈收到生日卡后，称赞他们是懂事的好孩子，兄弟俩都很开心。
+  questions:
+    - format: MCQ
+      text: 弟弟和哥哥在书店里看到什么？
+      options:
+        - 图书、玩具车、文具
+        - 生日卡、文具、玩具车
+        - 图书、玩具车、生日卡
+      correct: 图书、玩具车、文具
+    - format: Long-Answer
+      text: 为什么哥哥不让弟弟买玩具车送给妈妈？
+      displayAnswer: 因为妈妈不是小孩子，不玩玩具车。
+    - format: Long-Answer
+      text: 为什么哥哥和弟弟送生日卡后很开心？
+      displayAnswer: 因为妈妈收到生日卡后称赞他们都是好孩子。
+- groupId: P2-COMP30
+  subject: Higher Chinese
+  passage:
+    title: 大象的生日会
+    text: |-
+      大象生日，请了很多客人到家里做客。它为小羊准备青草，为小白兔准备胡萝卜，为小花猫准备鱼。动物们吃得很开心，都感谢大象为它们准备了各自喜欢吃的食物。
+  questions:
+    - format: Long-Answer
+      text: 哪些动物到大象的家做客？
+      displayAnswer: 小羊、小白兔和小花猫。
+    - marks: 4
+      format: Long-Answer
+      text: 你觉得动物们喜欢大象吗？为什么？
+      displayAnswer: 喜欢，因为大象为它们准备了各自喜欢吃的东西，让大家吃得很开心。

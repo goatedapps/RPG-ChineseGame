@@ -1,0 +1,406 @@
+title: 第十九课 (Lesson 19)
+vocab:
+  - word: 洗
+    pinyin: xǐ
+    meaning: To wash
+    example: 我们每天早上起来都要先洗脸刷牙。
+    sentenceBank:
+      - zh: 我们每天早上起来都要先洗脸刷牙。
+        en: Every morning when we wake up, we wash our faces and brush our teeth first.
+      - zh: 妈妈叫我吃饭以前一定要洗手。
+        en: Mum tells me that I must wash my hands before eating.
+      - zh: 弟弟喜欢自己洗澡，不需要妈妈帮忙。
+        en: My younger brother likes bathing by himself and does not need Mum's help.
+      - zh: 我们用水洗衣服以后要记得关水龙头。
+        en: After washing clothes with water, we must remember to turn off the tap.
+      - zh: 回家以后，我马上去洗手和换衣服。
+        en: After going home, I immediately washed my hands and changed my clothes.
+
+  - word: 浇
+    pinyin: jiāo
+    meaning: To water (plant)
+    example: 每天早上，爸爸都会帮家里的花浇水。
+    sentenceBank:
+      - zh: 每天早上，爸爸都会帮家里的花浇水。
+        en: Every morning, Dad waters the flowers at home.
+      - zh: 妹妹喜欢用小水壶帮植物浇水。
+        en: My younger sister likes using a small watering can to water the plants.
+      - zh: 天气很热的时候，我们要记得给花浇水。
+        en: When the weather is hot, we must remember to water the flowers.
+      - zh: 老师教我们每天给学校的植物浇水。
+        en: The teacher taught us to water the plants at school every day.
+      - zh: 我们浇水的时候不要把水浪费掉。
+        en: When we water the plants, we should not waste the water.
+
+  - word: 冲
+    pinyin: chōng
+    meaning: To flush
+    example: 上完厕所以后，我们一定要记得冲马桶。
+    sentenceBank:
+      - zh: 上完厕所以后，我们一定要记得冲马桶。
+        en: After using the toilet, we must remember to flush it.
+      - zh: 妈妈告诉弟弟上完厕所要马上冲水。
+        en: Mum told my younger brother to flush immediately after using the toilet.
+      - zh: 我们不能一直冲水，因为这样会浪费水。
+        en: We should not keep flushing because this wastes water.
+      - zh: 老师教我们正确使用厕所里的马桶。
+        en: The teacher taught us how to use the toilet bowl correctly.
+      - zh: 看到马桶没有冲干净，我们要再冲一次。
+        en: If we see that the toilet bowl is not clean, we should flush it again.
+
+  - word: 马桶
+    pinyin: mǎ tǒng
+    meaning: Toilet bowl
+    example: 上完厕所以后，我们要记得冲马桶。
+    sentenceBank:
+      - zh: 上完厕所以后，我们要记得冲马桶。
+        en: After using the toilet, we must remember to flush the toilet bowl.
+      - zh: 妈妈教我怎样正确使用家里的马桶。
+        en: Mum taught me how to use the toilet bowl at home correctly.
+      - zh: 马桶坏了以后，爸爸马上请人来修理。
+        en: After the toilet bowl broke, Dad immediately got someone to repair it.
+      - zh: 我们不能把纸巾丢进不适合的马桶里。
+        en: We should not throw tissues into an unsuitable toilet bowl.
+      - zh: 使用马桶以后，我们一定要保持厕所干净。
+        en: After using the toilet bowl, we must keep the toilet clean.
+
+  - word: 厕所
+    pinyin: cè suǒ
+    meaning: Toilet
+    example: 妹妹上完厕所以后记得把手洗干净。
+    sentenceBank:
+      - zh: 妹妹上完厕所以后记得把手洗干净。
+        en: My younger sister remembers to wash her hands after using the toilet.
+      - zh: 学校的厕所每天都有人打扫和清洁。
+        en: The school toilets are cleaned every day.
+      - zh: 我们使用厕所以后要保持里面干净。
+        en: We should keep the toilet clean after using it.
+      - zh: 弟弟急着找厕所，所以马上跑了过去。
+        en: My younger brother urgently needed the toilet, so he ran over immediately.
+      - zh: 老师告诉我们不要在厕所里浪费水。
+        en: The teacher told us not to waste water in the toilet.
+
+  - word: 告诉
+    pinyin: gào su
+    meaning: To tell
+    example: 妈妈告诉我们一定要珍惜生活中的水。
+    sentenceBank:
+      - zh: 妈妈告诉我们一定要珍惜生活中的水。
+        en: Mum told us that we must cherish the water we use in daily life.
+      - zh: 老师告诉大家为什么水对我们很重要。
+        en: The teacher told everyone why water is important to us.
+      - zh: 爸爸告诉我洗手以后要关好水龙头。
+        en: Dad told me to turn off the tap after washing my hands.
+      - zh: 妹妹告诉外婆今天学校发生的事情。
+        en: My younger sister told Grandma what happened at school today.
+      - zh: 我想告诉朋友不要浪费干净的水。
+        en: I want to tell my friend not to waste clean water.
+
+  - word: 珍惜
+    pinyin: zhēn xī
+    meaning: To cherish
+    example: 我们应该珍惜水，不要随便浪费水。
+    sentenceBank:
+      - zh: 我们应该珍惜水，不要随便浪费水。
+        en: We should cherish water and not waste it carelessly.
+      - zh: 老师教我们要珍惜生活中的每一滴水。
+        en: The teacher taught us to cherish every drop of water in our daily lives.
+      - zh: 爸爸说我们一定要珍惜大自然的资源。
+        en: Dad said that we must cherish the resources of nature.
+      - zh: 妈妈希望我们从小就学会珍惜东西。
+        en: Mum hopes that we learn to cherish things from a young age.
+      - zh: 我们要珍惜水资源，让大家都有水喝。
+        en: We should cherish water resources so everyone has water to drink.
+
+  - word: 滴
+    pinyin: dī
+    meaning: Drop (measure word for water)
+    example: 每一滴水都很重要，我们不能随便浪费。
+    sentenceBank:
+      - zh: 每一滴水都很重要，我们不能随便浪费。
+        en: Every drop of water is important, and we must not waste it carelessly.
+      - zh: 水龙头没有关好，一滴一滴的水流出来。
+        en: The tap was not turned off properly, and water was dripping out.
+      - zh: 妹妹用一滴水把手上的灰尘洗掉。
+        en: My younger sister used a drop of water to wash the dirt off her hand.
+      - zh: 老师告诉我们要珍惜每一滴干净的水。
+        en: The teacher told us to cherish every drop of clean water.
+      - zh: 看到一滴滴水流出来，我马上关水龙头。
+        en: When I saw drops of water flowing out, I immediately turned off the tap.
+
+  - word: 生活
+    pinyin: shēng huó
+    meaning: Life
+    example: 水在我们的生活中是非常重要的东西。
+    sentenceBank:
+      - zh: 水在我们的生活中是非常重要的东西。
+        en: Water is a very important thing in our lives.
+      - zh: 我们每天的生活都少不了干净的水。
+        en: Our daily lives cannot do without clean water.
+      - zh: 学校生活让我学会了很多新的东西。
+        en: School life has taught me many new things.
+      - zh: 妈妈希望我们过着健康快乐的生活。
+        en: Mum hopes that we live healthy and happy lives.
+      - zh: 我们应该从小养成节约水的生活习惯。
+        en: We should develop the habit of saving water from a young age.
+
+  - word: 节约
+    pinyin: jié yuē
+    meaning: To save
+    example: 我们应该节约用水，不要让水一直流。
+    sentenceBank:
+      - zh: 我们应该节约用水，不要让水一直流。
+        en: We should save water and not let it keep flowing.
+      - zh: 妈妈教我们洗手的时候要节约用水。
+        en: Mum taught us to save water when washing our hands.
+      - zh: 学校举行活动教大家怎样节约水资源。
+        en: The school held an activity to teach everyone how to save water resources.
+      - zh: 我们每天都可以做小事来节约用水。
+        en: We can do small things every day to save water.
+      - zh: 节约用水是每个人都应该做到的事情。
+        en: Saving water is something everyone should do.
+
+  - word: 浪费
+    pinyin: làng fèi
+    meaning: To waste
+    example: 我们不应该一直开着水龙头浪费水。
+    sentenceBank:
+      - zh: 我们不应该一直开着水龙头浪费水。
+        en: We should not leave the tap running and waste water.
+      - zh: 妈妈提醒我洗澡的时候不要浪费水。
+        en: Mum reminded me not to waste water while showering.
+      - zh: 吃饭的时候，我们也不应该浪费食物。
+        en: We should not waste food while eating either.
+      - zh: 老师告诉我们浪费水会影响很多人。
+        en: The teacher told us that wasting water can affect many people.
+      - zh: 我们要学会节约，不可以随便浪费东西。
+        en: We should learn to save things and not waste them carelessly.
+
+  - word: 流
+    pinyin: liú
+    meaning: To flow
+    example: 水龙头没有关好，水一直不停地流。
+    sentenceBank:
+      - zh: 水龙头没有关好，水一直不停地流。
+        en: The tap was not turned off properly, so the water kept flowing.
+      - zh: 小河里的水慢慢地流到大海里面。
+        en: The water in the stream slowly flows into the sea.
+      - zh: 洗手以后不要让水一直流下去。
+        en: After washing your hands, do not let the water keep flowing.
+      - zh: 下大雨的时候，雨水会流到路边。
+        en: When it rains heavily, the rainwater flows to the side of the road.
+      - zh: 我看到水一直流出来就马上关水龙头。
+        en: I saw the water flowing out, so I immediately turned off the tap.
+
+  - word: 连忙
+    pinyin: lián máng
+    meaning: Immediately
+    example: 看到水龙头没关，我连忙跑过去关水。
+    sentenceBank:
+      - zh: 看到水龙头没关，我连忙跑过去关水。
+        en: When I saw the tap was not turned off, I immediately ran over to turn it off.
+      - zh: 妹妹看到杯子倒了，连忙拿布来擦。
+        en: When my younger sister saw the cup spill, she immediately got a cloth to wipe it.
+      - zh: 爸爸听到水声以后，连忙走进厕所查看。
+        en: After Dad heard the sound of water, he immediately went into the toilet to check.
+      - zh: 弟弟发现自己很渴，连忙拿水来喝。
+        en: My younger brother realised he was thirsty and immediately got some water to drink.
+      - zh: 老师看到地上有水，连忙提醒大家小心。
+        en: When the teacher saw water on the floor, she immediately reminded everyone to be careful.
+
+  - word: 线
+    pinyin: xiàn
+    meaning: Thread
+    example: 妹妹用一条长线把漂亮的东西绑起来。
+    sentenceBank:
+      - zh: 妹妹用一条长线把漂亮的东西绑起来。
+        en: My younger sister used a long thread to tie the pretty things together.
+      - zh: 风筝的线突然断了，弟弟非常伤心。
+        en: The kite string suddenly broke, and my younger brother was very sad.
+      - zh: 妈妈用一条线把衣服上的小洞缝好。
+        en: Mum used a thread to sew up a small hole in the clothes.
+      - zh: 我们小心地拉着风筝的线一起跑。
+        en: We carefully held the kite string and ran together.
+      - zh: 这条线太细了，所以很容易断掉。
+        en: This thread is too thin, so it breaks easily.
+
+  - word: 断
+    pinyin: duàn
+    meaning: To break
+    example: 风太大了，风筝的线突然断了。
+    sentenceBank:
+      - zh: 风太大了，风筝的线突然断了。
+        en: The wind was too strong, so the kite string suddenly broke.
+      - zh: 妹妹不小心把铅笔弄断了，非常伤心。
+        en: My younger sister accidentally broke her pencil and was very sad.
+      - zh: 这条旧线很容易断，我们要小心使用。
+        en: This old thread breaks easily, so we need to use it carefully.
+      - zh: 水管断了以后，水一直流到地上。
+        en: After the water pipe broke, water kept flowing onto the ground.
+      - zh: 爸爸发现水管断了以后马上请人来修。
+        en: Dad immediately got someone to repair the broken water pipe.
+
+  - word: 猜
+    pinyin: cāi
+    meaning: To guess
+    example: 你能猜一猜水为什么一直不停地流吗？
+    sentenceBank:
+      - zh: 你能猜一猜水为什么一直不停地流吗？
+        en: Can you guess why the water keeps flowing?
+      - zh: 老师让我们猜一猜今天要学习什么。
+        en: The teacher asked us to guess what we would learn today.
+      - zh: 妹妹让我猜她手里拿着什么东西。
+        en: My younger sister asked me to guess what she was holding.
+      - zh: 我猜外婆今天晚上会来我们家吃饭。
+        en: I guess Grandma will come to our house for dinner tonight.
+      - zh: 哥哥猜不到答案，所以请我一起帮忙。
+        en: My older brother could not guess the answer, so he asked me to help.
+
+  - word: 摇
+    pinyin: yáo
+    meaning: To shake (one's head)
+    example: 妹妹摇摇头，说她不知道答案是什么。
+    sentenceBank:
+      - zh: 妹妹摇摇头，说她不知道答案是什么。
+        en: My younger sister shook her head and said she did not know the answer.
+      - zh: 老师问弟弟问题，他马上摇摇头说不知道。
+        en: The teacher asked my younger brother a question, and he immediately shook his head and said he did not know.
+      - zh: 妈妈问我想不想喝水，我摇摇头说不用。
+        en: Mum asked if I wanted to drink water, and I shook my head and said no.
+      - zh: 哥哥摇摇头表示自己不喜欢这个游戏。
+        en: My older brother shook his head to show that he did not like this game.
+      - zh: 看到这么多食物，妹妹摇摇头不想吃。
+        en: Seeing so much food, my younger sister shook her head and did not want to eat.
+
+  - word: 渴
+    pinyin: kě
+    meaning: Thirsty
+    example: 运动以后，我觉得很渴，马上喝了一杯水。
+    sentenceBank:
+      - zh: 运动以后，我觉得很渴，马上喝了一杯水。
+        en: After exercising, I felt very thirsty and immediately drank a cup of water.
+      - zh: 天气很热的时候，我们很容易觉得口渴。
+        en: When the weather is hot, we can easily feel thirsty.
+      - zh: 弟弟跑步回来以后又热又渴。
+        en: My younger brother was hot and thirsty after running.
+      - zh: 妈妈提醒我们口渴的时候要喝干净的水。
+        en: Mum reminded us to drink clean water when we are thirsty.
+      - zh: 我今天没有带水，所以现在觉得特别渴。
+        en: I did not bring water today, so I feel especially thirsty now.
+
+  - word: 冲凉
+    pinyin: chōng liáng
+    meaning: To take a shower
+    example: 天气很热，哥哥回家以后马上去冲凉。
+    sentenceBank:
+      - zh: 天气很热，哥哥回家以后马上去冲凉。
+        en: The weather was hot, so my older brother took a shower immediately after going home.
+      - zh: 运动以后我们满身是汗，需要去冲凉。
+        en: After exercising, we were covered in sweat and needed to take a shower.
+      - zh: 妈妈提醒我们冲凉的时候不要浪费水。
+        en: Mum reminded us not to waste water when taking a shower.
+      - zh: 弟弟每天晚上睡觉以前都会先冲凉。
+        en: My younger brother takes a shower every night before going to bed.
+      - zh: 冲凉的时候关小水量也可以节约用水。
+        en: Reducing the amount of water while showering can also save water.
+
+  - word: 脸
+    pinyin: liǎn
+    meaning: Face
+    example: 每天早上起床以后，我都会先洗脸。
+    sentenceBank:
+      - zh: 每天早上起床以后，我都会先洗脸。
+        en: Every morning after waking up, I wash my face first.
+      - zh: 妹妹用干净的毛巾把脸擦干净了。
+        en: My younger sister used a clean towel to wipe her face.
+      - zh: 运动以后，哥哥的脸上都是汗水。
+        en: After exercising, my older brother's face was covered in sweat.
+      - zh: 妈妈提醒我洗脸的时候不要浪费水。
+        en: Mum reminded me not to waste water when washing my face.
+      - zh: 弟弟洗完脸以后看起来精神多了。
+        en: My younger brother looked much more refreshed after washing his face.
+
+  - word: 低下
+    pinyin: dī xià
+    meaning: To lower (one's head)
+    example: 弟弟低下头认真地看着地上的水。
+    sentenceBank:
+      - zh: 弟弟低下头认真地看着地上的水。
+        en: My younger brother lowered his head and looked carefully at the water on the floor.
+      - zh: 妹妹低下头把鞋子上的泥沙擦干净。
+        en: My younger sister lowered her head and cleaned the sand off her shoes.
+      - zh: 老师请我们低下头看看书上的图片。
+        en: The teacher asked us to lower our heads and look at the pictures in the book.
+      - zh: 哥哥低下头想了很久才找到答案。
+        en: My older brother lowered his head and thought for a long time before finding the answer.
+      - zh: 弟弟低下头以后发现水还在不停地流。
+        en: After lowering his head, my younger brother noticed that the water was still flowing.
+
+  - word: 喝
+    pinyin: hē
+    meaning: To drink
+    example: 天气很热的时候，我们要记得多喝水。
+    sentenceBank:
+      - zh: 天气很热的时候，我们要记得多喝水。
+        en: When the weather is hot, we should remember to drink more water.
+      - zh: 运动以后，哥哥拿了一杯水慢慢地喝。
+        en: After exercising, my older brother took a cup of water and drank it slowly.
+      - zh: 妈妈告诉妹妹每天都要喝干净的水。
+        en: Mum told my younger sister to drink clean water every day.
+      - zh: 我很渴，所以连忙拿水来喝。
+        en: I was very thirsty, so I immediately got some water to drink.
+      - zh: 外婆喜欢每天早上喝一杯温水。
+        en: Grandma likes drinking a cup of warm water every morning.
+
+  - word: 外婆
+    pinyin: wài pó
+    meaning: Grandmother
+    example: 外婆常常告诉我们要珍惜身边的每一样东西。
+    sentenceBank:
+      - zh: 外婆常常告诉我们要珍惜身边的每一样东西。
+        en: Grandma often tells us to cherish everything around us.
+      - zh: 外婆每天都会提醒我们不要浪费食物和水。
+        en: Grandma reminds us every day not to waste food and water.
+      - zh: 周末的时候，我们一家人去外婆家吃饭。
+        en: On weekends, our whole family goes to Grandma's house for a meal.
+      - zh: 外婆看到水龙头没关就连忙走过去关水。
+        en: When Grandma saw that the tap was not turned off, she immediately went over to turn it off.
+      - zh: 我很喜欢听外婆讲她小时候的故事。
+        en: I really like listening to Grandma tell stories about when she was young.
+
+  - word: 重要
+    pinyin: zhòng yào
+    meaning: Important
+    example: 水对我们的生活来说是非常重要的。
+    sentenceBank:
+      - zh: 水对我们的生活来说是非常重要的。
+        en: Water is very important to our lives.
+      - zh: 老师告诉我们节约用水是一件重要的事情。
+        en: The teacher told us that saving water is an important thing.
+      - zh: 每一滴干净的水对我们来说都很重要。
+        en: Every drop of clean water is very important to us.
+      - zh: 健康对每一个人的生活都是非常重要的。
+        en: Health is very important to everyone's life.
+      - zh: 我们要记住保护水资源是大家的重要责任。
+        en: We must remember that protecting water resources is everyone's important responsibility.
+sentences:
+  - text: 小狗很快乐地跑来跑去。
+    segments:
+      - 小狗
+      - 很
+      - 快乐地
+      - 跑来跑去
+      - 。
+    icon: smile
+    description: The little dog happily runs around.
+  - text: 我和朋友一起分享苹果。
+    segments:
+      - 我
+      - 和
+      - 朋友
+      - 一起
+      - 分享
+      - 苹果
+      - 。
+    icon: activity
+    description: Sharing an apple together with a friend.

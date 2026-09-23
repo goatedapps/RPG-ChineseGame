@@ -1,0 +1,20 @@
+- groupId: P2-EC1
+  subject: Chinese
+  lessonIds: []
+  passage:
+    title: 我的一天
+    source: 老师自编
+    text: |-
+      今天早上，我 [Q1](很快) 起床，然后刷牙洗脸。吃完早餐后，我背着书包去上学。
+
+      上课的时候，我 [Q2](认针) 听老师讲课。下课后，我和同学们一起在操场上玩游戏，玩得非常开心。
+  questions:
+    - text: 我 (很快) 起床，然后刷牙洗脸。—— 括号里的词语用得不恰当，请写出正确的词语。
+      accepted:
+        - 立刻
+        - 马上
+      displayAnswer: 立刻 / 马上
+    - text: 我 (认针) 听老师讲课。—— 括号里的字是写错的字，请写出正确的词语。
+      accepted:
+        - 认真
+      displayAnswer: 认真

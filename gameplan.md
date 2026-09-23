@@ -1,8 +1,16 @@
 # Word Spirit Quest (字灵) — Game Plan
 
-A Pokémon-style exploration RPG that teaches primary-school Chinese vocabulary and reading: meaning, pinyin, characters (hanzi), usage, writing and comprehension. It supports several school **levels** (P3, P4, P5, P6 …), each a separate game built from its own content folder. Primary 5 is the first level and the one specified in detail here. This document is the full specification for building the game. It is written so that a coding agent (Claude Code, Codex, etc.) can build it from scratch in a fresh repository without having seen the design conversation.
+A Pokémon-style exploration RPG that teaches primary-school Chinese vocabulary and reading: meaning, pinyin, characters (hanzi), usage, writing and comprehension.
+It supports several school **levels** as curriculum variants of the same world and storyline.
+Primary 5 has the reference prototype and detailed campaign specification; Primary 2 source content is also present and will be the first proof that the rebuilt engine is level-independent.
+This document is the full specification for building the game.
+It is written so that a coding agent (Claude Code, Codex, etc.) can build it from scratch in a fresh repository without having seen the design conversation.
 
-**Status:** a working single-file prototype of Region 1 exists at `prototype/index.html`. It already includes the level picker, encoded saves, the Reading Hall passage quests and the weekly Exam Day described below. Treat it as a reference for look and feel and for the already-tested writing and battle logic. The goal of this plan is a properly structured rebuild of the full game.
+**Status:** a working P5 Region 1 prototype exists at `prototype/index.html`.
+It already includes the level picker, encoded saves, the Reading Hall passage quests and the weekly Exam Day described below.
+Treat it as a frozen reference for look and feel and for the already-tested writing and battle logic.
+P2 and P5 source packs now live in `content/source/` and pass the structural validator.
+The next development stage is the properly structured shared-engine rebuild described in sections 14–20.
 
 ---
 
@@ -37,7 +45,9 @@ When this document and the prototype disagree, **this document wins**.
 3. **Spaced, not crammed.** Stars need correct answers on *different days*. Daily battle limits and resting Gold words stop grinding.
 4. **Always fair, never shaming.** Wrong answers teach (show the answer, example and audio). Fainting costs nothing. Streaks have automatic forgiveness. No timers.
 5. **Every item and villager has a job.** No decorative-only systems. Cosmetics are rewards for achievement, not the main use of coins.
-6. **Built on real school content, one level at a time.** Each level (P5, P6 …) is a content pack built from that level's YAML folder. The engine is shared; a new level means a new content folder plus that level's campaign files (section 2.5).
+6. **Built on real school content, one level at a time.** Each level (P2, P5 …) is a content pack built from that level's YAML folder.
+   The engine, seven-region world, villagers, quests, bosses and main storyline are shared.
+   A new level adds curriculum data and a small mapping/configuration file, not another world.
 
 ### Healthy-engagement rules (hard requirements)
 
@@ -135,14 +145,33 @@ The file starts with `# 《Title》`, followed by `## Page 1` … `## Page 6`, e
 
 ### 2.5 Levels (content packs)
 
-- **A level is a separate game.** When the game first starts, the child picks a level on a **Choose your level** screen. Levels whose content isn't installed yet show as "Coming soon". After choosing, the child stays on that level until they finish it.
-- **Each level has its own save** (section 18). Starting P6 is a fresh game and never changes the P5 save.
+- **A level is a curriculum version of the same adventure.** When the game first starts, the child picks a level on a **Choose your level** screen. Levels whose content isn't installed yet show as "Coming soon". After choosing, the child stays on that level until they finish it.
+- **Each level has its own save** (section 18). Starting another level begins the same storyline with that level's learning content and never changes the first level's save.
 - **Only a parent can switch levels,** from the parent panel (behind the PIN). Switching keeps every level's progress and loads the other level's save.
 - **Finishing a level** (beating its final boss) shows a completion certificate and gives a trophy. The trophy is also shown in every other level's player room. Nothing else carries over: no stats, items or coins.
-- **Shared by all levels:** the engine, creatures, items, gear, recipes, balance defaults, the UI strings and the overall premise (the Great Forgetter and the Spirit Brush).
-- **Per level:** the source YAML; the campaign (regions, maps, villagers, dialogue, Spirit Sets, bosses, idioms and word tags); and a small `level.json`. The number of regions follows the level's lesson count (roughly 2–3 lessons per region), not a fixed 7. Each level is a new land in the same world, for example "Book of P5: the Scholar Lands" and "Book of P6: the Jade Coast".
-- **`level.json` switches features on or off** for levels that lack some content. For example, a lower-primary level might have no idioms or no practical passages. Boss phases, Reading Hall chains, Exam Day and daily quests only use question types the level actually has. The content validator warns when a campaign asks for content the level doesn't have.
-- **Adding a level:** copy its YAML into `content/source/<level>/`, write its campaign files under `content/authored/levels/<level>/`, set `"ready": true` in `level.json` and run `npm run build:content`.
+- **Shared by all levels:** the engine, seven regions, maps, buildings, villagers, quests, bosses, Great Forgetter storyline, creatures, items, gear, recipes, UI strings and visual assets.
+- **Per level:** the source YAML and a small `level.json` containing lesson-to-region assignments, supported question types, age-appropriate text density and difficulty tuning.
+  Level-specific lesson stories and passages appear inside the same Reading Halls and quest structure.
+- The campaign always has seven regions.
+  A level's lessons are distributed across those regions, usually as consecutive groups of two or three lessons.
+  P5 uses the assignments in section 13; P2 should initially use `[1–3]`, `[4–6]`, `[7–9]`, `[10–12]`, `[13–15]`, `[16–17]`, `[18–19]`, subject to content review.
+- **`level.json` switches learning features on or off** for levels that lack some content.
+  For example, a lower-primary level might have too little conjunction or practical content for a recurring required activity.
+  Boss phases, Reading Hall chains, Exam Day and daily quests only use question types the selected level actually has.
+  The content validator warns when a shared campaign activity asks for content the level does not support.
+- **Adding a level:** copy its YAML into `content/source/<level>/`, create one `content/authored/levels/<level>/level.json`, review the lesson-to-region mapping and tuning, set `"ready": true`, and run `npm run build:content`.
+  Do not create new maps, villagers, quests or bosses for a school level.
+
+### 2.6 Current source packs
+
+- **P2:** 19 lessons, 460 words, 19 stories, 608 single questions, 39 passage groups and 153 passage questions.
+  Its large pools are vocabulary, pinyin, usage and comprehension.
+  Conjunction, sentence, phrase, dialogue, practical and error-correction currently have small pools, so P2 must use feature flags and must not make those categories recurring required gates until more content exists.
+- **P5:** 17 lessons, 327 words, 17 stories, 414 single questions, 113 passage groups and 581 passage questions.
+  It remains the reference campaign because Region 1 already has a playable prototype and detailed authored story plan.
+- `npm run validate:content` checks every source pack for required lesson files, vocabulary fields, six-page stories, unique question IDs, valid lesson references and answer-option consistency.
+- Source readiness and world-mapping readiness are separate.
+  A level must not appear as playable merely because its curriculum source passes validation.
 
 ---
 
@@ -959,7 +988,8 @@ core/     = state, save, events, time, rng, config
 │
 ├─ content/
 │  ├─ source/                 # ORIGINAL YAML per level: copy as-is, never edit by hand
-│  │  ├─ p5/                  # tingxie/, stories/, questions/, meta.yaml
+│  │  ├─ p2/                  # 19 lessons; source-ready, campaign not yet authored
+│  │  ├─ p5/                  # 17 lessons; source-ready, Region 1 prototype exists
 │  │  └─ p6/ …                # future levels
 │  ├─ authored/               # hand-written game data (JSON), edited by humans
 │  │  ├─ shared/              # used by every level
@@ -968,16 +998,12 @@ core/     = state, save, events, time, rng, config
 │  │  │  ├─ creatures.json  items.json  gear.json  recipes.json  materials.json
 │  │  │  ├─ milestones.json  quest-templates.json
 │  │  │  └─ levels.json       # list of levels: id, label, ready
+│  │  ├─ campaign/             # shared seven-region world and Great Forgetter story
+│  │  │  ├─ regions.json  maps/  villagers/  dialogue/  bosses.json
+│  │  │  └─ sets/  idioms.json  word-tags.json  word-notes.json
 │  │  └─ levels/
-│  │     └─ p5/               # the P5 campaign
-│  │        ├─ level.json     # features on/off, region count, final boss (section 2.5)
-│  │        ├─ regions.json
-│  │        ├─ maps/          # one file per map: r1-hub.json, r1-camping.json, …
-│  │        ├─ idioms.json  word-tags.json  word-notes.json
-│  │        ├─ sets/r1.json …       # Spirit Sets per region
-│  │        ├─ villagers/r1.json …  # villagers, request chains, passageVillagers per region
-│  │        ├─ dialogue/r1.json …   # cutscenes and dialogue scripts per region
-│  │        └─ bosses.json
+│  │     ├─ p2/level.json      # lesson mapping, feature flags and younger-player tuning
+│  │     └─ p5/level.json      # lesson mapping, feature flags and tuning
 │  └─ generated/              # written by tools/*; git-ignored or committed, never hand-edited
 │     ├─ p5.content.json      # normalised words, sentences, stories, questions for P5
 │     └─ p5.chars.json        # Hanzi Writer stroke data for P5's characters only
@@ -994,7 +1020,8 @@ core/     = state, save, events, time, rng, config
    └─ e2e/                    # boot, walk, battle, writing (simulated strokes), save/reload
 ```
 
-**Rule:** if something is text a person could want to change (dialogue, names, prices, numbers, map layout, word tags), it belongs in `content/authored/`, not in `src/`. Nothing in `src/` may mention a specific level: the loader reads the chosen level's files by id.
+**Rule:** if something is text a person could want to change (dialogue, names, prices, numbers, map layout, word tags), it belongs in `content/authored/`, not in `src/`.
+Nothing in `src/` may mention a specific level: the loader combines the shared campaign with the chosen level's curriculum and configuration.
 
 ---
 
@@ -1322,26 +1349,34 @@ The decoded save looks like this:
 
 ## 20. Build phases (in order, with acceptance criteria)
 
-Each phase ends with a playable build and passing tests. Do not start a phase before the previous one's acceptance criteria are met.
+Each phase ends with a reviewable build and passing tests.
+Do not start a phase before the previous phase's acceptance criteria are met.
+
+The recommended sequence is shared foundation, P5 Region 1 parity, a P2 Lessons 1–3 vertical slice, real-device pilots, and only then broad campaign expansion.
+The P2 slice deliberately happens before P5 Region 2 so that level-specific assumptions are found while the architecture is still easy to correct.
 
 | Phase | Scope | Acceptance criteria |
 |---|---|---|
-| **P0 Setup** | repo layout (15), `package.json`, vendor Hanzi Writer, `build-content`, `build-chars`, `validate-content` | `npm run build:content` produces JSON for all 17 lessons; validation passes; the missing-characters list is empty |
-| **P1 Engine** | `index.html` shell, CSS tokens, state/save/migrations/events, **level picker and per-level encoded saves**, map loading and rendering, movement, D-pad, interactions, overlay, dialogue box, toasts, HUD | pick P5; walk around an r1-hub map loaded from JSON on desktop and iPad; talk to a sign; save and reload restores the position; an edited save loads with the tamper flag |
-| **P2 Learning core** | questions (all 4 MCQ skills plus exam adapters), mastery, selection, audio, writing module (3 stages, pass/fail, Show me how, I don't know) | unit tests pass; a dev page can run any question or writing task for any word |
+| **P0 Setup — complete** | repo layout (15), `package.json`, vendor Hanzi Writer, `build-content`, `build-chars`, `validate-content` | `npm run build:content` produces normalized P2 and P5 JSON; validation passes; the missing-character lists are empty |
+| **P1 Engine** | `index.html` shell, CSS tokens, state/save/migrations/events, **level picker and per-level encoded saves**, map loading and rendering, movement, D-pad, interactions, overlay, dialogue box, toasts, HUD | load a level from data; walk around an r1-hub map on desktop and iPad; talk to a sign; save and reload restores the correct level and position; an edited save loads with the tamper flag |
+| **P2 Learning core** | questions (all 4 MCQ skills plus exam adapters), mastery, selection, audio, writing module (3 stages, pass/fail, Show me how, I don't know) | unit tests pass; a content-lab page can run any supported question or writing task for any P2 or P5 word; disabled question types never appear |
 | **P3 Region 1 parity** | wild battles (5.1–5.5), enemy turn, creatures, Spirit Book, School (quiz, tingxie, Exam Day), Inn, Shop (Rice Ball), Storyteller, **Reading Hall passage quests (11.4)**, energy cap, parent panel (basic, with written answers) | everything the prototype does works, split into modules; the e2e writing test passes; a full passage chain can be finished and gives the Cave Lantern |
 | **P4 Items and gear** | consumables, gear slots, materials drops, Craft Table, Character screen, player sprite shows gear | each item in 7.1 and 7.2 has a working effect; hint items suppress ticks |
 | **P5 Collection** | partners (8.2), Spirit Sets and map patches (8.3), milestones (8.4), player room (9.5) | completing the Campfire set visibly lights the campfire; partner bonuses apply; milestones grant rewards once |
 | **P6 Daily loops** | quest board and chest, Lantern Streak with freeze, Daily Scroll and Scroll Library | with a faked date: quests reset at midnight, the streak counts, a freeze applies silently once a week |
 | **P7 Region 1 story** | dialogue engine (script commands), villagers and requests (Xiaoqiang, Mr Lin, Chef Mei), rival duel, tutorial battle, gate, Muddle King boss with 4 phases, reform scene, Dawn Stroke, hidden grove, next-region Gold gate | Region 1 can be played start to finish as a story; all requests complete; the boss is beatable and gives the fragment |
 | **P8 Parent** | PIN, goals, weekly summary, export/import, unlock region, speech rate | a parent can set a goal and see progress in the room; import restores the save |
-| **P9–P14 Regions 2–7** | one region per phase, following 13.4, including new creature looks, idioms, sets, villagers, boss and fragment ability | each region is completable; the previous fragment opens that region's secret area |
-| **P15 Notice Board and dialogue chains** | practical and dialogue villager chains (11.5) | each chain can be finished; rewards given once |
-| **P16 Polish** | bundle to `dist/index.html`, sound effects (optional), performance on an older iPad, accessibility pass, content proofreading | a single file runs offline by double-click; Lighthouse accessibility ≥ 90 on the menu screens |
+| **P9 P2 vertical slice** | run P2 Lessons 1–3 through the same Scholar Village, villagers, quests and Muddle King storyline; tune text density, battle difficulty and feature flags for younger children | P2 starts a separate save in the shared world, teaches its first words, completes one story and one battle loop, and never exposes unavailable content types; switching back to P5 restores the P5 save |
+| **P10 Pilot and hardening** | child-and-parent sessions on the target tablet with both P2 and P5; accessibility, recovery, offline and performance fixes | observed blockers are resolved; save recovery is tested; a child can identify the next action without explanation; the team records a go/no-go decision for campaign expansion |
+| **P11–P16 Shared Regions 2–7** | build each world region once, following 13.4, including new creature looks, sets, villagers, relevant passage chains, boss and fragment ability; map both levels' lessons into it | each region is completable with P2 and P5 content; the previous fragment opens that region's secret area; every required question type has enough reviewed content for the selected level |
+| **P17 Multi-level completion** | finish and review every P2 and P5 lesson-to-region mapping, story insertion and level-specific tuning across the shared campaign | both levels can complete the same seven-region storyline; every lesson belongs to one region; sparse content types remain optional unless their pools are expanded and reviewed |
+| **P18 Release polish** | bundle to `dist/index.html`, performance on an older iPad, accessibility pass, audio and content proofreading | a single file runs offline by double-click; Lighthouse accessibility is at least 90 on menu screens; P2 and P5 saves remain isolated through export, import and level switching |
 
-**Scope guard:** if time is short, ship P0–P8 (the complete Region 1 experience) before adding any new regions.
+**Scope guard:** complete P0–P10 before adding Region 2 to the shared world.
 
-**Adding a new level later** (after P16): copy the YAML, write that level's campaign files (regions, maps, villagers, dialogue, sets, bosses), set it `ready`, and run the validator. No engine changes should be needed; if any are, the engine has level-specific code that should be moved into content.
+**Adding another level:** copy the YAML, create its lesson mapping, feature flags and tuning file, set it `ready`, and run the validator.
+Do not duplicate or replace the shared world data.
+No engine or campaign changes should be needed; if any are, the dependency should be moved into shared data or the level configuration.
 
 ---
 
@@ -1370,7 +1405,13 @@ Each phase ends with a playable build and passing tests. Do not start a phase be
 
 ## Appendix A: Kickoff prompt for a coding agent
 
-> You are building **Word Spirit Quest**, an educational RPG in plain HTML, CSS and ES-module JavaScript. Read `gameplan.md` fully before writing code; it is the spec, and it overrides the reference prototype in `prototype/index.html`. The school content is in `content/source/<level>/` (YAML); P5 is the first level, and nothing in `src/` may be specific to it. Work phase by phase from section 20, starting with **P0**. For each phase: (1) list the files you will create or change, (2) implement, (3) add or extend the unit and e2e tests named in section 19, (4) run `npm run build:content && npm test`, and (5) summarise what works and what is left. Hard rules: all UI and dialogue in English, with Chinese only for learning content (pillar 2); all game text, numbers, maps and dialogue in `content/authored/*.json`, never in `src/`; no answers, stars or unlocks purchasable with coins; no timers; no guilt-based streak messages. Ask before changing any rule in sections 1, 3 or 10.
+> You are building **Word Spirit Quest**, an educational RPG in plain HTML, CSS and ES-module JavaScript.
+> Read `gameplan.md` fully before writing code; it is the spec, and it overrides the reference prototype in `prototype/index.html`.
+> The P2 and P5 school content is in `content/source/<level>/` as YAML, and nothing in `src/` may be specific to either level.
+> Work phase by phase from section 20, starting with **P0**.
+> For each phase: list the files you will create or change, implement, add or extend the tests named in section 19, run `npm run build:content && npm test`, and summarise what works and what remains.
+> Hard rules: all UI and dialogue is in English, with Chinese only for learning content; all game text, numbers, maps and dialogue belongs in `content/authored/*.json`, never in `src/`; no answers, stars or unlocks are purchasable with coins; there are no timers or guilt-based streak messages.
+> Ask before changing any rule in sections 1, 3 or 10.
 
 ## Appendix B: Glossary
 
@@ -1381,5 +1422,5 @@ Each phase ends with a playable build and passing tests. Do not start a phase be
 - **成语 (chengyu):** four-character idiom; these become special moves.
 - **Brush Fragment:** a key item from each boss that grants a map ability.
 - **Review mode:** a cleared region's state, with fewer, mostly review, encounters.
-- **Level:** a school year's content pack (P5, P6 …); a separate game with its own save.
+- **Level:** a school year's curriculum pack (P2, P5 …) played through the shared campaign with its own save.
 - **Passage Scroll / passage villagers:** the Reading Hall's current passage and the villagers who each ask one of its questions.

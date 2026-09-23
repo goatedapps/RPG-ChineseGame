@@ -1,0 +1,18 @@
+:root {
+  --ink: #1b2430;
+  --ink-2: #273445;
+  --ink-3: #3a4b60;
+  --paper: #f4efe2;
+  --paper-2: #e9e1cc;
+  --line: #cbbf9f;
+  --jade: #2f8a66;
+  --seal: #c63f2b;
+  --gold: #d9a62e;
+  --silver: #8e9baa;
+  --bronze: #b06c35;
+  --mist: #7f7aa6;
+  --font-ui: "Baloo 2", system-ui, sans-serif;
+  --font-hanzi: "Ma Shan Zheng", KaiTi, serif;
+  --font-chinese: "Noto Sans SC", system-ui, sans-serif;
+  --touch-target: 44px;
+}

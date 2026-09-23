@@ -1,0 +1,375 @@
+title: 第十四课 (Lesson 14)
+vocab:
+  - word: 难
+    pinyin: nán
+    meaning: Difficult
+    example: 这个游戏看起来很难，但是我想试试看。
+    sentenceBank:
+      - zh: 这个游戏看起来很难，但是我想试试看。
+        en: This game looks difficult, but I want to try it.
+      - zh: 这道题很难，我们一起想办法解决吧。
+        en: This question is difficult, so let's think of a way to solve it together.
+      - zh: 学习新的汉字有时候很难，但是不要放弃。
+        en: Learning new Chinese characters is sometimes difficult, but don't give up.
+      - zh: 弟弟觉得骑脚踏车很难，所以需要帮助。
+        en: My younger brother finds riding a bicycle difficult, so he needs help.
+      - zh: 只要每天练习，再难的事情也会变容易。
+        en: As long as we practise every day, even difficult things will become easier.
+
+  - word: 易
+    pinyin: yì
+    meaning: Easy
+    example: 这个游戏看起来不难，其实很容易学会。
+    sentenceBank:
+      - zh: 这个游戏看起来不难，其实很容易学会。
+        en: This game does not look difficult; it is actually easy to learn.
+      - zh: 这道题很容易，我们很快就完成了。
+        en: This question is easy, and we finished it quickly.
+      - zh: 只要认真听老师说话，学习就不会太难易。
+        en: As long as we listen carefully to the teacher, learning will not be too difficult.
+      - zh: 哥哥觉得骑脚踏车很容易，不需要别人帮助。
+        en: My older brother thinks riding a bicycle is easy and does not need help.
+      - zh: 做好准备以后，参加比赛就会容易很多。
+        en: After preparing well, taking part in the competition will become much easier.
+
+  - word: 粗
+    pinyin: cū
+    meaning: Thick
+    example: 这棵大树的树干又粗又高。
+    sentenceBank:
+      - zh: 这棵大树的树干又粗又高。
+        en: The trunk of this big tree is thick and tall.
+      - zh: 哥哥用一支很粗的蜡笔画大树。
+        en: My older brother used a thick crayon to draw a big tree.
+      - zh: 这根绳子太粗了，我的手拿不住。
+        en: This rope is too thick, and I cannot hold it.
+      - zh: 爸爸找到一根粗木头帮助我们做东西。
+        en: Dad found a thick piece of wood to help us make something.
+      - zh: 这支粗蜡笔可以画出很大的线条。
+        en: This thick crayon can draw very big lines.
+
+  - word: 细
+    pinyin: xì
+    meaning: Thin
+    example: 妹妹用一支很细的笔画小花。
+    sentenceBank:
+      - zh: 妹妹用一支很细的笔画小花。
+        en: My younger sister used a thin pen to draw little flowers.
+      - zh: 这根绳子太细了，很容易弄破。
+        en: This rope is too thin and can easily break.
+      - zh: 哥哥喜欢用细蜡笔画漂亮的小图画。
+        en: My older brother likes using thin crayons to draw beautiful little pictures.
+      - zh: 这条小路又细又长，大家要慢慢走。
+        en: This small path is thin and long, so everyone should walk slowly.
+      - zh: 妈妈找到一根细线帮助我做手工。
+        en: Mum found a thin thread to help me with my craft.
+
+  - word: 抢
+    pinyin: qiǎng
+    meaning: To snatch
+    example: 两个孩子不应该为了玩具互相抢东西。
+    sentenceBank:
+      - zh: 两个孩子不应该为了玩具互相抢东西。
+        en: The two children should not snatch things from each other over toys.
+      - zh: 弟弟看到哥哥的玩具以后想要抢走。
+        en: My younger brother wanted to snatch the toy away after seeing it.
+      - zh: 我们应该一起分享玩具，不可以互相抢。
+        en: We should share toys together and must not snatch them from each other.
+      - zh: 妹妹没有抢我的蜡笔，而是先问我。
+        en: My younger sister did not snatch my crayons but asked me first.
+      - zh: 老师提醒大家不要抢别人的东西。
+        en: The teacher reminded everyone not to snatch other people's things.
+
+  - word: 推
+    pinyin: tuī
+    meaning: To push
+    example: 我们不应该因为生气就推自己的朋友。
+    sentenceBank:
+      - zh: 我们不应该因为生气就推自己的朋友。
+        en: We should not push our friends just because we are angry.
+      - zh: 弟弟不小心推了哥哥，让哥哥很伤心。
+        en: My younger brother accidentally pushed my older brother and made him sad.
+      - zh: 老师提醒我们排队时不要推前面的同学。
+        en: The teacher reminded us not to push the classmates in front while queuing.
+      - zh: 小朋友一起玩游戏时不能用力推别人。
+        en: Children must not push others hard when playing games together.
+      - zh: 他轻轻推开门，然后走进教室里面。
+        en: He gently pushed the door open and then entered the classroom.
+
+  - word: 讨厌
+    pinyin: tǎo yàn
+    meaning: To dislike
+    example: 我不讨厌弟弟，只是不喜欢他抢东西。
+    sentenceBank:
+      - zh: 我不讨厌弟弟，只是不喜欢他抢东西。
+        en: I do not dislike my younger brother; I just do not like him snatching things.
+      - zh: 妹妹很讨厌别人不经过同意拿东西。
+        en: My younger sister dislikes it when others take things without permission.
+      - zh: 我不讨厌朋友，只是希望大家不要争吵。
+        en: I do not dislike my friends; I just hope everyone will not quarrel.
+      - zh: 哥哥最讨厌别人弄破他的图画。
+        en: My older brother dislikes it most when others tear his drawings.
+      - zh: 我们不应该因为小事情就讨厌朋友。
+        en: We should not dislike our friends because of small matters.
+
+  - word: 争吵
+    pinyin: zhēng chǎo
+    meaning: To quarrel
+    example: 两个好朋友因为一支蜡笔开始争吵了。
+    sentenceBank:
+      - zh: 两个好朋友因为一支蜡笔开始争吵了。
+        en: Two good friends started quarrelling over a crayon.
+      - zh: 我们不应该为了小事情和朋友争吵。
+        en: We should not quarrel with friends over small matters.
+      - zh: 他们争吵以后都觉得自己的心里很难过。
+        en: After quarrelling, they both felt very sad.
+      - zh: 老师希望大家不要争吵，要一起合作。
+        en: The teacher hopes everyone will not quarrel and will cooperate.
+      - zh: 只要大家愿意说清楚，就不会一直争吵。
+        en: As long as everyone is willing to explain things clearly, they will not keep quarrelling.
+
+  - word: 弄破
+    pinyin: nòng pò
+    meaning: To break; tear
+    example: 弟弟不小心把我的图画弄破了。
+    sentenceBank:
+      - zh: 弟弟不小心把我的图画弄破了。
+        en: My younger brother accidentally tore my drawing.
+      - zh: 请小心拿这张纸，不要把它弄破。
+        en: Please handle this paper carefully and do not tear it.
+      - zh: 妹妹玩蜡笔的时候把画纸弄破了。
+        en: My younger sister tore the drawing paper while playing with crayons.
+      - zh: 哥哥很伤心，因为他的作品被弄破了。
+        en: My older brother was very sad because his work was torn.
+      - zh: 我们应该小心保护自己的图画不被弄破。
+        en: We should carefully protect our drawings from being torn.
+
+  - word: 撞倒
+    pinyin: zhuàng dǎo
+    meaning: To knock down
+    example: 弟弟跑得太快，不小心撞倒了椅子。
+    sentenceBank:
+      - zh: 弟弟跑得太快，不小心撞倒了椅子。
+        en: My younger brother ran too fast and accidentally knocked over the chair.
+      - zh: 哥哥走路的时候不小心撞倒了花盆。
+        en: My older brother accidentally knocked over the flower pot while walking.
+      - zh: 我们在教室里面不能跑来跑去撞倒别人。
+        en: We must not run around the classroom and knock others over.
+      - zh: 小朋友不小心撞倒同学以后马上道歉。
+        en: The child immediately apologised after accidentally knocking over a classmate.
+      - zh: 他跑过去的时候差一点撞倒了桌子。
+        en: He almost knocked over the table when he ran over.
+
+  - word: 伤心
+    pinyin: shāng xīn
+    meaning: Sad
+    example: 朋友弄破我的图画，我觉得非常伤心。
+    sentenceBank:
+      - zh: 朋友弄破我的图画，我觉得非常伤心。
+        en: My friend tore my drawing, so I felt very sad.
+      - zh: 妹妹看到小狗受伤以后非常伤心。
+        en: My younger sister was very sad after seeing the puppy get hurt.
+      - zh: 哥哥因为和朋友争吵，所以心里很伤心。
+        en: My older brother felt very sad because he quarrelled with his friend.
+      - zh: 老师安慰伤心的孩子，让他慢慢冷静下来。
+        en: The teacher comforted the sad child and helped him calm down.
+      - zh: 朋友愿意道歉以后，我就没有那么伤心了。
+        en: After my friend apologised, I was not as sad anymore.
+
+  - word: 蜡笔
+    pinyin: là bǐ
+    meaning: Crayon
+    example: 妹妹用蜡笔画了一片漂亮的彩虹。
+    sentenceBank:
+      - zh: 妹妹用蜡笔画了一片漂亮的彩虹。
+        en: My younger sister used crayons to draw a beautiful rainbow.
+      - zh: 我的蜡笔有很多不同的颜色可以选择。
+        en: My crayons have many different colours to choose from.
+      - zh: 哥哥和我一起用蜡笔画了一幅图。
+        en: My older brother and I used crayons to draw a picture together.
+      - zh: 请不要抢我的蜡笔，我们可以一起使用。
+        en: Please do not snatch my crayons; we can use them together.
+      - zh: 老师提醒我们用完蜡笔以后要收拾好。
+        en: The teacher reminded us to tidy up the crayons after using them.
+
+  - word: 容易
+    pinyin: róng yì
+    meaning: Easy
+    example: 只要认真练习，这个游戏就很容易学会。
+    sentenceBank:
+      - zh: 只要认真练习，这个游戏就很容易学会。
+        en: As long as we practise carefully, this game is easy to learn.
+      - zh: 这道题很容易，我们可以自己完成。
+        en: This question is easy, and we can complete it ourselves.
+      - zh: 这张纸很容易弄破，所以要小心使用。
+        en: This paper tears easily, so we need to use it carefully.
+      - zh: 和朋友合作以后，做事情会更容易。
+        en: Things become easier after cooperating with friends.
+      - zh: 只要大家一起帮忙，困难的事情也会容易。
+        en: As long as everyone helps together, difficult things will become easier.
+
+  - word: 能
+    pinyin: néng
+    meaning: Can
+    example: 我们合作以后就能一起完成这幅画。
+    sentenceBank:
+      - zh: 我们合作以后就能一起完成这幅画。
+        en: After cooperating, we can complete this picture together.
+      - zh: 你能帮我找回刚才的蜡笔吗？
+        en: Can you help me find the crayon from earlier?
+      - zh: 只要每天练习，我就能画得越来越好。
+        en: As long as I practise every day, I can draw better and better.
+      - zh: 哥哥能一个人完成这道很难的题。
+        en: My older brother can complete this difficult question by himself.
+      - zh: 我们能不能一起把弄破的纸修好呢？
+        en: Can we repair the torn paper together?
+
+  - word: 亮晶晶
+    pinyin: liàng jīng jīng
+    meaning: Sparkling
+    example: 天上的星星亮晶晶，看起来非常漂亮。
+    sentenceBank:
+      - zh: 天上的星星亮晶晶，看起来非常漂亮。
+        en: The stars in the sky are sparkling and look very beautiful.
+      - zh: 雨后的草地上有亮晶晶的小水珠。
+        en: There are sparkling drops of water on the grass after the rain.
+      - zh: 彩虹出现以后，天空看起来亮晶晶的。
+        en: After the rainbow appeared, the sky looked sparkling.
+      - zh: 妹妹画了一颗亮晶晶的大星星。
+        en: My younger sister drew a big sparkling star.
+      - zh: 阳光照在水面上，水面亮晶晶的。
+        en: The sunlight shines on the water, making it sparkle.
+
+  - word: 合作
+    pinyin: hé zuò
+    meaning: To cooperate
+    example: 我们一起合作，很快就完成了图画。
+    sentenceBank:
+      - zh: 我们一起合作，很快就完成了图画。
+        en: We cooperated together and quickly completed the drawing.
+      - zh: 老师说同学之间应该学会互相合作。
+        en: The teacher said classmates should learn to cooperate with each other.
+      - zh: 哥哥和我合作把房间整理干净了。
+        en: My older brother and I cooperated to clean up the room.
+      - zh: 大家愿意合作，就能把困难的事情做好。
+        en: If everyone is willing to cooperate, we can do difficult things well.
+      - zh: 我和朋友合作画了一道漂亮的彩虹。
+        en: My friend and I cooperated to draw a beautiful rainbow.
+
+  - word: 草地
+    pinyin: cǎo dì
+    meaning: Grass
+    example: 我们在绿色的草地上一起画彩虹。
+    sentenceBank:
+      - zh: 我们在绿色的草地上一起画彩虹。
+        en: We drew a rainbow together on the green grass.
+      - zh: 小朋友们喜欢在草地上一起玩游戏。
+        en: The children like playing games together on the grass.
+      - zh: 下雨以后，草地上的小草变得很漂亮。
+        en: After the rain, the grass became very beautiful.
+      - zh: 我们坐在草地上聊天和吃午餐。
+        en: We sat on the grass chatting and eating lunch.
+      - zh: 彩虹出现在天空以后，草地看起来更美了。
+        en: After the rainbow appeared in the sky, the grass looked even more beautiful.
+
+  - word: 道
+    pinyin: dào
+    meaning: Measure word for rainbow
+    example: 雨后天空出现了一道漂亮的彩虹。
+    sentenceBank:
+      - zh: 雨后天空出现了一道漂亮的彩虹。
+        en: A beautiful rainbow appeared in the sky after the rain.
+      - zh: 我们在草地上看见了一道大彩虹。
+        en: We saw a big rainbow on the grass.
+      - zh: 天空中有一道亮晶晶的彩虹非常漂亮。
+        en: There was a sparkling rainbow in the sky that was very beautiful.
+      - zh: 妹妹看到一道彩虹以后开心地笑了起来。
+        en: My younger sister smiled happily after seeing a rainbow.
+      - zh: 太阳出来以后，天空出现了一道彩虹。
+        en: After the sun came out, a rainbow appeared in the sky.
+
+  - word: 彩虹
+    pinyin: cǎi hóng
+    meaning: Rainbow
+    example: 雨停以后，天空中出现了一道美丽的彩虹。
+    sentenceBank:
+      - zh: 雨停以后，天空中出现了一道美丽的彩虹。
+        en: After the rain stopped, a beautiful rainbow appeared in the sky.
+      - zh: 我们看到彩虹以后都开心地拍照留念。
+        en: We were all happy to take photos after seeing the rainbow.
+      - zh: 妹妹用很多颜色的蜡笔画了一道彩虹。
+        en: My younger sister drew a rainbow with crayons of many colours.
+      - zh: 彩虹有很多漂亮的颜色，看起来很美。
+        en: A rainbow has many beautiful colours and looks lovely.
+      - zh: 我希望每天放学都能看到漂亮的彩虹。
+        en: I hope I can see a beautiful rainbow every day after school.
+
+  - word: 应该
+    pinyin: yīng gāi
+    meaning: Should
+    example: 我们应该互相帮助，不应该一直争吵。
+    sentenceBank:
+      - zh: 我们应该互相帮助，不应该一直争吵。
+        en: We should help each other and should not keep quarrelling.
+      - zh: 做错事情以后，我们应该主动说对不起。
+        en: After doing something wrong, we should apologise on our own.
+      - zh: 和朋友发生问题时，我们应该好好说话。
+        en: When we have a problem with a friend, we should talk properly.
+      - zh: 我们应该学会合作，一起完成困难的事情。
+        en: We should learn to cooperate and complete difficult things together.
+      - zh: 玩游戏的时候，我们应该遵守游戏规则。
+        en: When playing games, we should follow the game rules.
+
+  - word: 呢
+    pinyin: ne
+    meaning: An emotionally expressive particle used at the end of a sentence
+    example: 你还在生我的气呢？我们已经和好了。
+    sentenceBank:
+      - zh: 你还在生我的气呢？我们已经和好了。
+        en: Are you still angry with me? We have already made up.
+      - zh: 你怎么还没有开始画画呢？大家都在等你。
+        en: Why have you not started drawing yet? Everyone is waiting for you.
+      - zh: 我的蜡笔在哪里呢？我刚才还看见它。
+        en: Where is my crayon? I just saw it a moment ago.
+      - zh: 这么漂亮的彩虹，你看见了吗呢？
+        en: Did you see such a beautiful rainbow?
+      - zh: 我们一起合作画画，不是更好吗呢？
+        en: Wouldn't it be better for us to draw together and cooperate?
+
+  - word: 脸
+    pinyin: liǎn
+    meaning: Face
+    example: 妹妹开心地笑了，脸上都是笑容。
+    sentenceBank:
+      - zh: 妹妹开心地笑了，脸上都是笑容。
+        en: My younger sister smiled happily, and her face was full of smiles.
+      - zh: 弟弟哭了以后，脸上还有很多眼泪。
+        en: After my younger brother cried, there were still many tears on his face.
+      - zh: 朋友向我道歉以后，我的脸上露出了笑容。
+        en: After my friend apologised to me, a smile appeared on my face.
+      - zh: 太阳出来以后，孩子们的脸都红红的。
+        en: After the sun came out, the children's faces were all red.
+      - zh: 妈妈看到我们和好以后脸上很开心。
+        en: Mum looked very happy after seeing that we had made up.
+sentences:
+  - text: 我们合作画了一个太阳。
+    segments:
+      - 我们
+      - 合作
+      - 画了
+      - 一个
+      - 太阳
+      - 。
+    icon: sun
+    description: We worked together to draw a sun.
+  - text: 小猫不见了，弟弟很伤心。
+    segments:
+      - 小猫
+      - 不见了
+      - "，"
+      - 弟弟
+      - 很
+      - 伤心
+      - 。
+    icon: frown
+    description: The kitten went missing, and my younger brother is very sad.

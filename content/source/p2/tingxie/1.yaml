@@ -1,0 +1,437 @@
+title: 第一课 (Lesson 1)
+vocab:
+  - word: 外
+    pinyin: wài
+    meaning: Outside
+    example: 妈妈在外面等我一起回家。
+    sentenceBank:
+      - zh: 下课以后，我们一起到外面玩游戏。
+        en: After class, we went outside to play games together.
+      - zh: 爸爸在外面工作，晚上才回家。
+        en: Dad works outside and only comes home at night.
+      - zh: 今天外面的天气很好，大家都很开心。
+        en: The weather outside is very nice today, and everyone is happy.
+      - zh: 妹妹一个人在外面玩，我不太放心。
+        en: My younger sister is playing outside alone, so I am a little worried.
+      - zh: 吃饭以前，我们要先把手洗干净。
+        en: Before eating, we must wash our hands clean.
+
+  - word: 美
+    pinyin: měi
+    meaning: Beautiful
+    example: 新加坡是一个很美的国家。
+    sentenceBank:
+      - zh: 花园里的花开得很美，大家都喜欢看。
+        en: The flowers in the garden are very beautiful, and everyone likes looking at them.
+      - zh: 妈妈穿上这件新衣服，看起来很美。
+        en: Mum looks very beautiful in this new piece of clothing.
+      - zh: 我觉得学校的花园每天都很美丽。
+        en: I think the school garden is beautiful every day.
+      - zh: 天上的彩虹又大又美，孩子们都在看。
+        en: The rainbow in the sky is big and beautiful, and all the children are watching it.
+      - zh: 姐姐画了一幅很美的图画送给妈妈。
+        en: My older sister drew a beautiful picture for Mum.
+
+  - word: 丑
+    pinyin: chǒu
+    meaning: Ugly
+    example: 这只小怪兽看起来一点也不丑。
+    sentenceBank:
+      - zh: 弟弟说这只小猫一点也不丑。
+        en: My younger brother says this little cat is not ugly at all.
+      - zh: 我画的小怪兽虽然丑，但是大家都喜欢。
+        en: Although the little monster I drew is ugly, everyone likes it.
+      - zh: 不要因为东西不好看就说它很丑。
+        en: Do not say something is ugly just because it does not look nice.
+      - zh: 那个旧玩具看起来有一点丑。
+        en: That old toy looks a little ugly.
+      - zh: 妹妹觉得自己的画很丑，所以不想给我看。
+        en: My younger sister thinks her drawing is ugly, so she does not want to show it to me.
+
+  - word: 新
+    pinyin: xīn
+    meaning: New
+    example: 我今天穿了一件新的校服。
+    sentenceBank:
+      - zh: 妈妈昨天买了一双新的运动鞋给我。
+        en: Mum bought me a new pair of sports shoes yesterday.
+      - zh: 我很喜欢我的新书包，因为它很好看。
+        en: I really like my new school bag because it looks nice.
+      - zh: 学校旁边开了一家新的书店。
+        en: A new bookshop opened next to the school.
+      - zh: 哥哥第一次用这个新的电脑做功课。
+        en: My older brother used this new computer for homework for the first time.
+      - zh: 新学期开始以后，我认识了很多新朋友。
+        en: After the new school term began, I met many new friends.
+
+  - word: 卖
+    pinyin: mài
+    meaning: To sell
+    example: 妈妈在商店里卖很多漂亮的衣服。
+    sentenceBank:
+      - zh: 叔叔在市场里卖新鲜的水果和蔬菜。
+        en: Uncle sells fresh fruits and vegetables at the market.
+      - zh: 这家商店每天都卖很多不同的东西。
+        en: This shop sells many different things every day.
+      - zh: 妈妈想买一些水果，老板正在卖水果。
+        en: Mum wants to buy some fruit, and the shopkeeper is selling fruit.
+      - zh: 夜市里有很多小摊卖好吃的食物。
+        en: There are many stalls selling delicious food at the night market.
+      - zh: 那位阿姨在学校附近卖漂亮的文具。
+        en: That aunt sells pretty stationery near the school.
+
+  - word: 加
+    pinyin: jiā
+    meaning: To add
+    example: 妈妈叫我给汤里加一点盐。
+    sentenceBank:
+      - zh: 请你帮我在水里加一些糖。
+        en: Please help me add some sugar to the water.
+      - zh: 老师叫我们在答案后面加上一个句号。
+        en: The teacher told us to add a full stop after the answer.
+      - zh: 我喜欢在牛奶里面加一点巧克力。
+        en: I like adding a little chocolate to my milk.
+      - zh: 做这道题时，我们要先加这两个数字。
+        en: When doing this question, we first need to add these two numbers.
+      - zh: 妈妈说天气很热，可以加一些冰块。
+        en: Mum said the weather is hot, so we can add some ice cubes.
+
+  - word: 父亲
+    pinyin: fù qīn
+    meaning: Father
+    example: 我的父亲每天都会送我去学校。
+    sentenceBank:
+      - zh: 我的父亲每天早上都会送我上学。
+        en: My father sends me to school every morning.
+      - zh: 周末的时候，我喜欢和父亲一起运动。
+        en: At the weekend, I like exercising with my father.
+      - zh: 我的父亲下班以后常常陪我做功课。
+        en: My father often accompanies me to do homework after work.
+      - zh: 父亲生日的时候，我们一起吃了一顿饭。
+        en: On Father's birthday, we had a meal together.
+      - zh: 我的父亲教我怎样安全地过马路。
+        en: My father taught me how to cross the road safely.
+
+  - word: 母亲
+    pinyin: mǔ qīn
+    meaning: Mother
+    example: 我的母亲每天都会为我们准备早餐。
+    sentenceBank:
+      - zh: 我的母亲每天早上都会准备早餐给我。
+        en: My mother prepares breakfast for me every morning.
+      - zh: 放学以后，我会帮母亲做一些家务。
+        en: After school, I help my mother with some housework.
+      - zh: 我的母亲很关心我的学习和生活。
+        en: My mother cares a lot about my studies and life.
+      - zh: 母亲节的时候，我送了一张卡片给母亲。
+        en: On Mother's Day, I gave my mother a card.
+      - zh: 我的母亲常常告诉我要做一个好孩子。
+        en: My mother often tells me to be a good child.
+
+  - word: 兄弟
+    pinyin: xiōng dì
+    meaning: Brothers
+    example: 我的兄弟每天放学以后一起玩耍。
+    sentenceBank:
+      - zh: 我们兄弟每天放学以后一起回家。
+        en: My brothers and I go home together after school every day.
+      - zh: 我和兄弟喜欢在家里一起玩积木。
+        en: My brothers and I like playing with building blocks at home.
+      - zh: 兄弟之间应该互相帮助和互相照顾。
+        en: Brothers should help and take care of each other.
+      - zh: 我的两个兄弟都喜欢踢足球运动。
+        en: Both of my brothers like playing football.
+      - zh: 周末时，我和兄弟一起去公园玩。
+        en: At the weekend, my brothers and I went to the park together.
+
+  - word: 过去
+    pinyin: guò qù
+    meaning: In the past
+    example: 过去的生活和现在有很多不同。
+    sentenceBank:
+      - zh: 过去我每天都要走路去学校上课。
+        en: In the past, I had to walk to school every day.
+      - zh: 过去这里没有这么多高高的大楼。
+        en: In the past, there were not so many tall buildings here.
+      - zh: 过去我们常常在公园里一起玩耍。
+        en: In the past, we often played together in the park.
+      - zh: 爷爷告诉我过去的生活没有现在方便。
+        en: Grandpa told me that life in the past was not as convenient as it is now.
+      - zh: 过去我不会游泳，现在已经学会了。
+        en: In the past I could not swim, but now I have learned.
+
+  - word: 现在
+    pinyin: xiàn zài
+    meaning: Now
+    example: 我现在正在房间里做我的功课。
+    sentenceBank:
+      - zh: 我现在正在教室里认真听老师说话。
+        en: I am now listening carefully to the teacher in the classroom.
+      - zh: 妈妈现在正在厨房里准备晚餐。
+        en: Mum is now preparing dinner in the kitchen.
+      - zh: 现在的天气很热，我们要多喝水。
+        en: The weather is very hot now, so we need to drink more water.
+      - zh: 哥哥现在已经会自己骑自行车了。
+        en: My older brother can now ride a bicycle by himself.
+      - zh: 我现在每天都会按时完成学校功课。
+        en: I now complete my school homework on time every day.
+
+  - word: 这些
+    pinyin: zhè xiē
+    meaning: These
+    example: 这些书都是老师借给我的。
+    sentenceBank:
+      - zh: 这些水果都是妈妈今天早上买的。
+        en: These fruits were all bought by Mum this morning.
+      - zh: 这些书是老师昨天发给我们的。
+        en: These books were given to us by the teacher yesterday.
+      - zh: 你可以把这些玩具放回自己的房间。
+        en: You can put these toys back in your room.
+      - zh: 这些孩子每天一起在操场上玩耍。
+        en: These children play together on the school field every day.
+      - zh: 我很喜欢这些漂亮的彩色铅笔。
+        en: I really like these beautiful coloured pencils.
+
+  - word: 合适
+    pinyin: hé shì
+    meaning: Suitable
+    example: 这件衣服很合适，我决定买下来。
+    sentenceBank:
+      - zh: 这双鞋大小合适，我穿起来很舒服。
+        en: These shoes are the right size and feel comfortable.
+      - zh: 妈妈帮我找到了一件合适的衣服。
+        en: Mum helped me find a suitable piece of clothing.
+      - zh: 这个时间很合适，我们可以一起出发。
+        en: This time is suitable, so we can leave together.
+      - zh: 老师帮我选择了一本合适的故事书。
+        en: The teacher helped me choose a suitable storybook.
+      - zh: 这张桌子的高度很合适我来做功课。
+        en: The height of this table is suitable for me to do homework.
+
+  - word: 试
+    pinyin: shì
+    meaning: To try
+    example: 这件衣服很好看，我想试一试。
+    sentenceBank:
+      - zh: 我想先试一试这双新的运动鞋。
+        en: I want to try on these new sports shoes first.
+      - zh: 这道题不会做，你可以再试一次。
+        en: If you cannot do this question, you can try again.
+      - zh: 妈妈让我试一试这个新的食物。
+        en: Mum asked me to try this new food.
+      - zh: 我第一次学骑自行车，很想试试看。
+        en: I am learning to ride a bicycle for the first time and really want to try.
+      - zh: 如果你喜欢这件衣服，可以试穿一下。
+        en: If you like this piece of clothing, you can try it on.
+
+  - word: 很
+    pinyin: hěn
+    meaning: Very
+    example: 今天的天气很热，大家都想喝水。
+    sentenceBank:
+      - zh: 今天的天气很热，我们要多喝水。
+        en: Today's weather is very hot, so we need to drink more water.
+      - zh: 妹妹看到小狗以后很开心地笑了。
+        en: My younger sister smiled happily after seeing the puppy.
+      - zh: 这本故事书很有趣，我很喜欢看。
+        en: This storybook is very interesting, and I like reading it.
+      - zh: 爸爸今天很忙，没有时间陪我玩。
+        en: Dad is very busy today and has no time to play with me.
+      - zh: 学校的花园里有很多很漂亮的花。
+        en: There are many beautiful flowers in the school garden.
+
+  - word: 拿出
+    pinyin: ná chū
+    meaning: To take out
+    example: 老师叫我拿出课本准备上课。
+    sentenceBank:
+      - zh: 老师叫我们拿出课本准备开始上课。
+        en: The teacher told us to take out our textbooks and get ready for class.
+      - zh: 我从书包里拿出一本新的故事书。
+        en: I took a new storybook out of my school bag.
+      - zh: 妈妈让我拿出水瓶放在桌子上。
+        en: Mum asked me to take out the water bottle and put it on the table.
+      - zh: 哥哥从盒子里拿出自己的玩具车。
+        en: My older brother took his toy car out of the box.
+      - zh: 吃饭以前，爸爸拿出水果放在桌上。
+        en: Before eating, Dad took out the fruit and put it on the table.
+
+  - word: 对
+    pinyin: duì
+    meaning: Directed at
+    example: 老师对我说要认真听课和做功课。
+    sentenceBank:
+      - zh: 老师对我们说上课的时候要认真听。
+        en: The teacher told us to listen carefully during class.
+      - zh: 妈妈对弟弟说不要在家里跑来跑去。
+        en: Mum told my younger brother not to run around the house.
+      - zh: 爸爸对我说做错事情要勇敢承认。
+        en: Dad told me that we should bravely admit our mistakes.
+      - zh: 老师对全班同学说要保持教室安静。
+        en: The teacher told the whole class to keep the classroom quiet.
+      - zh: 姐姐对我说每天都要早点睡觉。
+        en: My older sister told me to sleep early every day.
+
+  - word: 今年
+    pinyin: jīn nián
+    meaning: This year
+    example: 今年我已经读小学二年级了。
+    sentenceBank:
+      - zh: 今年我已经是小学二年级的学生了。
+        en: This year I am already a Primary 2 student.
+      - zh: 今年春节的时候，我们全家一起吃饭。
+        en: During Chinese New Year this year, my whole family ate together.
+      - zh: 今年我的生日会和家人一起庆祝。
+        en: This year I will celebrate my birthday with my family.
+      - zh: 今年学校举办了很多有趣的活动。
+        en: The school held many interesting activities this year.
+      - zh: 今年我希望自己可以学会游泳。
+        en: This year I hope I can learn how to swim.
+
+  - word: 读
+    pinyin: dú
+    meaning: To study
+    example: 我每天晚上都会读故事书。
+    sentenceBank:
+      - zh: 我每天晚上都会读一本故事书。
+        en: I read a storybook every night.
+      - zh: 姐姐喜欢每天早上读中文课本。
+        en: My older sister likes reading her Chinese textbook every morning.
+      - zh: 老师叫我们大声读出课文内容。
+        en: The teacher asked us to read the text aloud.
+      - zh: 我在家里认真读书，为考试做准备。
+        en: I study hard at home to prepare for the exam.
+      - zh: 弟弟每天都会读一些简单的中文故事。
+        en: My younger brother reads some simple Chinese stories every day.
+
+  - word: 年级
+    pinyin: nián jí
+    meaning: Grade; year
+    example: 我的姐姐现在读小学六年级。
+    sentenceBank:
+      - zh: 我今年读小学二年级，姐姐读六年级。
+        en: I am in Primary 2 this year, and my sister is in Primary 6.
+      - zh: 不同年级的学生在不同的教室上课。
+        en: Students from different grades have lessons in different classrooms.
+      - zh: 哥哥比我大，所以他的年级也比我高。
+        en: My older brother is older than me, so he is also in a higher grade.
+      - zh: 学校为每个年级安排了不同的活动。
+        en: The school arranged different activities for each grade.
+      - zh: 我希望明年可以升到更高的年级。
+        en: I hope I can move to a higher grade next year.
+
+  - word: 班
+    pinyin: bān
+    meaning: Class
+    example: 我们班的同学都很喜欢一起玩。
+    sentenceBank:
+      - zh: 我们班的同学每天一起学习和玩耍。
+        en: The students in our class study and play together every day.
+      - zh: 老师正在教我们班的学生写汉字。
+        en: The teacher is teaching the students in our class to write Chinese characters.
+      - zh: 我们班今天要参加一个有趣的活动。
+        en: Our class is going to take part in an interesting activity today.
+      - zh: 我很喜欢我们班的老师和同学们。
+        en: I really like the teacher and classmates in our class.
+      - zh: 下课以后，我们班的同学一起去食堂吃饭。
+        en: After class, the students in our class went to the canteen together to eat.
+
+  - word: 折
+    pinyin: zhé
+    meaning: To fold
+    example: 妈妈教我怎样把纸折成一只小鸟。
+    sentenceBank:
+      - zh: 老师教我们把纸折成一只小鸟。
+        en: The teacher taught us to fold paper into a little bird.
+      - zh: 我喜欢用彩色纸折漂亮的小动物。
+        en: I like using coloured paper to fold pretty little animals.
+      - zh: 请你把这张纸折好以后放进书里。
+        en: Please fold this piece of paper and put it into the book.
+      - zh: 妹妹正在认真地折一朵漂亮的小花。
+        en: My younger sister is carefully folding a pretty little flower.
+      - zh: 做完手工以后，我们把纸慢慢折起来。
+        en: After finishing the craft, we slowly folded the paper up.
+
+  - word: 帮
+    pinyin: bāng
+    meaning: To help
+    example: 妈妈每天都会帮我准备上学的东西。
+    sentenceBank:
+      - zh: 妈妈每天早上都会帮我准备早餐。
+        en: Mum helps me prepare breakfast every morning.
+      - zh: 老师常常帮我们解决不会做的题目。
+        en: The teacher often helps us solve questions we cannot do.
+      - zh: 我会帮弟弟把玩具放回盒子里面。
+        en: I will help my younger brother put the toys back into the box.
+      - zh: 放学以后，我帮妈妈一起收拾房间。
+        en: After school, I help Mum tidy the room.
+      - zh: 同学不会做这道题，我主动过去帮他。
+        en: My classmate could not do this question, so I went over to help him.
+
+  - word: 专心
+    pinyin: zhuān xīn
+    meaning: To concentrate
+    example: 上课的时候，我们一定要专心听老师说话。
+    sentenceBank:
+      - zh: 上课的时候，我们要专心听老师说话。
+        en: During class, we should concentrate on listening to the teacher.
+      - zh: 做功课的时候，我会专心完成每一道题。
+        en: When doing homework, I concentrate on completing every question.
+      - zh: 哥哥正在专心看书，没有听见我叫他。
+        en: My older brother was concentrating on reading and did not hear me call him.
+      - zh: 如果你专心学习，就可以学得更好。
+        en: If you concentrate on studying, you can learn better.
+      - zh: 妹妹很专心地画画，一直没有说话。
+        en: My younger sister concentrated on drawing and did not speak for a long time.
+
+  - word: 听
+    pinyin: tīng
+    meaning: To listen
+    example: 上课时，我们要认真听老师讲课。
+    sentenceBank:
+      - zh: 上课的时候，我们要认真听老师说话。
+        en: During class, we should listen carefully to the teacher.
+      - zh: 我喜欢每天晚上听妈妈讲故事。
+        en: I like listening to Mum tell stories every night.
+      - zh: 请大家安静下来，认真听老师讲话。
+        en: Everyone, please be quiet and listen carefully to the teacher.
+      - zh: 弟弟喜欢听音乐，也喜欢唱歌跳舞。
+        en: My younger brother likes listening to music and also likes singing and dancing.
+      - zh: 我没有听清楚，请老师再说一次。
+        en: I did not hear clearly, so I asked the teacher to say it again.
+
+  - word: 帮助
+    pinyin: bāng zhù
+    meaning: To help
+    example: 谢谢你昨天帮助我完成学校的功课。
+    sentenceBank:
+      - zh: 老师每天都会帮助我们学习新的知识。
+        en: The teacher helps us learn new knowledge every day.
+      - zh: 我喜欢帮助爸爸妈妈做一些家务。
+        en: I like helping Mum and Dad with some housework.
+      - zh: 同学遇到困难时，我们应该主动帮助他。
+        en: When a classmate has difficulties, we should take the initiative to help him.
+      - zh: 谢谢你帮助我找到不见的铅笔。
+        en: Thank you for helping me find my missing pencil.
+      - zh: 哥哥帮助妹妹学习怎样写汉字。
+        en: My older brother helps my younger sister learn how to write Chinese characters.
+sentences:
+  - text: 我会专心听课。
+    segments:
+      - 我
+      - 会
+      - 专心
+      - 听课
+      - 。
+    icon: brain
+    description: I will listen attentively in class.
+  - text: 我和父亲一起出去。
+    segments:
+      - 我
+      - 和
+      - 父亲
+      - 一起
+      - 出去
+      - 。
+    icon: users
+    description: I go out together with my father.

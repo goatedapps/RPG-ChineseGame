@@ -1,0 +1,2419 @@
+- questionID: CHATGPT-Vocab-1
+  lessonIds:
+    - 13
+  question: 一听见主人打开猫罐头，那只___就马上喵喵叫起来了。
+  options:
+    - 小猫
+    - 小狗
+    - 小兔
+    - 小鸟
+  correct: 小猫
+
+- questionID: CHATGPT-Vocab-2
+  lessonIds:
+    - 13
+  question: 我非常___家里的小猫，因为它每天都会安静地陪着我。
+  options:
+    - 爱
+    - 恨
+    - 怕
+    - 急
+  correct: 爱
+
+- questionID: CHATGPT-Vocab-3
+  lessonIds:
+    - 13
+  question: 小狗在泥水里跑了很久，回家以后必须马上___才可以进屋。
+  options:
+    - 洗澡
+    - 睡觉
+    - 吃饭
+    - 喝水
+  correct: 洗澡
+
+- questionID: CHATGPT-Vocab-4
+  lessonIds:
+    - 13
+  question: 每天晚上关灯以后，小猫都会回到自己的小床上___。
+  options:
+    - 睡觉
+    - 洗澡
+    - 吃饭
+    - 跑步
+  correct: 睡觉
+
+- questionID: CHATGPT-Vocab-5
+  lessonIds:
+    - 13
+  question: 孔雀开屏的时候，它漂亮的___会吸引很多游客拍照。
+  options:
+    - 羽毛
+    - 皮毛
+    - 头发
+    - 指甲
+  correct: 羽毛
+
+- questionID: CHATGPT-Vocab-6
+  lessonIds:
+    - 13
+  question: 每次主人回家，那只___都会汪汪叫着跑到门口迎接他。
+  options:
+    - 小狗
+    - 小猫
+    - 小兔
+    - 小鸟
+  correct: 小狗
+
+- questionID: CHATGPT-Vocab-7
+  lessonIds:
+    - 13
+  question: 主人说什么它都会听，也从来不会乱跑，这只小狗真的很___。
+  options:
+    - 乖
+    - 怪
+    - 快
+    - 高
+  correct: 乖
+
+- questionID: CHATGPT-Vocab-8
+  lessonIds:
+    - 13
+  question: 这只小狗每天都在门口等主人，从来没有一天例外，它___在那里等着。
+  options:
+    - 总是
+    - 有时
+    - 偶尔
+    - 很少
+  correct: 总是
+
+- questionID: CHATGPT-Vocab-9
+  lessonIds:
+    - 13
+  question: 这只小狗只看了两遍就学会开门，大家都说它特别___。
+  options:
+    - 聪明
+    - 漂亮
+    - 安静
+    - 干净
+  correct: 聪明
+
+- questionID: CHATGPT-Vocab-10
+  lessonIds:
+    - 13
+  question: 鱼缸里的___每天都在水里游来游去，金色身体特别漂亮。
+  options:
+    - 金鱼
+    - 金鸟
+    - 金猫
+    - 金兔
+  correct: 金鱼
+
+- questionID: CHATGPT-Vocab-11
+  lessonIds:
+    - 13
+  question: 妈妈买了一条颜色鲜艳的新裙子，妹妹觉得它特别___。
+  options:
+    - 漂亮
+    - 聪明
+    - 乖
+    - 安静
+  correct: 漂亮
+
+- questionID: CHATGPT-Vocab-12
+  lessonIds:
+    - 13
+  question: 小狗吃了不干净的食物以后，肚子很难受，开始不停地___。
+  options:
+    - 吐
+    - 咬
+    - 舔
+    - 吞
+  correct: 吐
+
+- questionID: CHATGPT-Vocab-13
+  lessonIds:
+    - 13
+  question: 小猫生病了，爸爸把它带到专门给动物看病的___那里。
+  options:
+    - 兽医
+    - 老师
+    - 厨师
+    - 律师
+  correct: 兽医
+
+- questionID: CHATGPT-Vocab-14
+  lessonIds:
+    - 13
+  question: 很多人喜欢在家里养___，让这些动物陪伴自己的生活。
+  options:
+    - 宠物
+    - 植物
+    - 食物
+    - 礼物
+  correct: 宠物
+
+- questionID: CHATGPT-Vocab-15
+  lessonIds:
+    - 13
+  question: 那座___四面都是大海，只有坐船才能到达那里。
+  options:
+    - 岛
+    - 鸟
+    - 到
+    - 道
+  correct: 岛
+
+- questionID: CHATGPT-Vocab-16
+  lessonIds:
+    - 13
+  question: 小朋友不应该故意打小动物或者___它们，因为动物也会感到害怕。
+  options:
+    - 欺负
+    - 保护
+    - 帮助
+    - 照顾
+  correct: 欺负
+
+- questionID: CHATGPT-Vocab-17
+  lessonIds:
+    - 13
+  question: 这个玩具已经坏了，妈妈让我把它直接___进垃圾桶里面。
+  options:
+    - 丢
+    - 拿
+    - 收
+    - 穿
+  correct: 丢
+
+- questionID: CHATGPT-Vocab-18
+  lessonIds:
+    - 13
+  question: 昨天晚上睡着以后，我___自己住在一个有很多小动物的岛上。
+  options:
+    - 梦见
+    - 看见
+    - 听见
+    - 碰见
+  correct: 梦见
+
+- questionID: CHATGPT-Vocab-19
+  lessonIds:
+    - 13
+  question: 我已经去过那个地方了，你可以把自行车放在___，不用带回来。
+  options:
+    - 那里
+    - 这里
+    - 哪里
+    - 哪儿
+  correct: 那里
+
+- questionID: CHATGPT-Vocab-20
+  lessonIds:
+    - 13
+  question: 小朋友们站在老师的四周，大家一起___着老师听故事。
+  options:
+    - 围
+    - 唯
+    - 为
+    - 喂
+  correct: 围
+
+- questionID: CHATGPT-Vocab-21
+  lessonIds:
+    - 13
+  question: 新同学第一次来到我们的班级，老师笑着___他加入大家一起学习。
+  options:
+    - 欢迎
+    - 欢送
+    - 拒绝
+    - 赶走
+  correct: 欢迎
+
+- questionID: CHATGPT-Vocab-22
+  lessonIds:
+    - 13
+  question: 草地上的___有一身白色的毛和两只长长的耳朵。
+  options:
+    - 小白兔
+    - 小白猫
+    - 小白狗
+    - 小白鸟
+  correct: 小白兔
+
+- questionID: CHATGPT-Vocab-23
+  lessonIds:
+    - 13
+  question: 第一次见到新同学以后，我很快就___了他，并和他成为了朋友。
+  options:
+    - 认识
+    - 忘记
+    - 离开
+    - 失去
+  correct: 认识
+
+- questionID: CHATGPT-Vocab-24
+  lessonIds:
+    - 13
+  question: 小猫睡了一整个下午，听见主人回家以后才慢慢地___。
+  options:
+    - 醒来
+    - 睡着
+    - 坐下
+    - 跑远
+  correct: 醒来
+
+- questionID: CHATGPT-Vocab-25
+  lessonIds:
+    - 13
+  question: 我___从来没有养过宠物，所以这是第一次照顾一只小狗。
+  options:
+    - 以前
+    - 以后
+    - 现在
+    - 将来
+  correct: 以前
+
+- questionID: CHATGPT-Vocab-26
+  lessonIds:
+    - 13
+  question: 太阳已经下山了，今天___回家以后我要先给小狗喂饭。
+  options:
+    - 晚上
+    - 早上
+    - 中午
+    - 上午
+  correct: 晚上
+
+- questionID: CHATGPT-Vocab-27
+  lessonIds:
+    - 13
+  question: 看见这只小猫主动跑过来以后，我___它一定很喜欢和人玩。
+  options:
+    - 觉得
+    - 忘记
+    - 需要
+    - 购买
+  correct: 觉得
+
+- questionID: CHATGPT-Vocab-28
+  lessonIds:
+    - 2
+  question: 新年到了，我们祝亲戚朋友___，运气越来越好。
+  options:
+    - 大吉大利
+    - 岁岁平安
+    - 年年有余
+    - 学业进步
+  correct: 大吉大利
+
+- questionID: CHATGPT-Vocab-29
+  lessonIds:
+    - 2
+  question: 过年的时候，我祝外公外婆___，希望他们平平安安过日子。
+  options:
+    - 岁岁平安
+    - 大吉大利
+    - 年年有余
+    - 学业进步
+  correct: 岁岁平安
+
+- questionID: CHATGPT-Vocab-30
+  lessonIds:
+    - 2
+  question: 吃鱼的时候，爸爸说了___这句话，希望我们家什么都不缺，一直都很富足。
+  options:
+    - 年年有余
+    - 大吉大利
+    - 岁岁平安
+    - 学业进步
+  correct: 年年有余
+
+- questionID: CHATGPT-Vocab-31
+  lessonIds:
+    - 2
+  question: 新年第一天，___一起吃团圆饭，非常热闹。
+  options:
+    - 全家
+    - 全班
+    - 全场
+    - 全体
+  correct: 全家
+
+- questionID: CHATGPT-Vocab-32
+  lessonIds:
+    - 2
+  question: 新年前，我们全家一起做___，把家里打扫得干干净净。
+  options:
+    - 大扫除
+    - 打扫
+    - 扫地
+    - 大清早
+  correct: 大扫除
+
+- questionID: CHATGPT-Vocab-33
+  lessonIds:
+    - 2
+  question: 我们一起把红色的福字___在门上。
+  options:
+    - 贴
+    - 挂
+    - 画
+    - 拿
+  correct: 贴
+
+- questionID: CHATGPT-Vocab-34
+  lessonIds:
+    - 2
+  question: 过年的时候，家家户户都会在门上贴___字，希望好运气来到家里。
+  options:
+    - 福
+    - 春
+    - 喜
+    - 寿
+  correct: 福
+
+- questionID: CHATGPT-Vocab-35
+  lessonIds:
+    - 2
+  question: 过年前，爸爸和妈妈一起去买___，准备摆在家里，迎接新年。
+  options:
+    - 年花
+    - 年糕
+    - 年画
+    - 年历
+  correct: 年花
+
+- questionID: CHATGPT-Vocab-36
+  lessonIds:
+    - 2
+  question: 拜年___，我们要有礼貌地说祝福语。
+  options:
+    - 时
+    - 前
+    - 后
+    - 中
+  correct: 时
+
+- questionID: CHATGPT-Vocab-37
+  lessonIds:
+    - 2
+  question: 新年活动上，哥哥在台上___了一首好听的歌。
+  options:
+    - 表演
+    - 唱歌
+    - 表现
+    - 表情
+  correct: 表演
+
+- questionID: CHATGPT-Vocab-38
+  lessonIds:
+    - 2
+  question: 新年时，我们在广场看热闹的___表演，非常精彩。
+  options:
+    - 舞龙
+    - 舞狮
+    - 跳舞
+    - 唱歌
+  correct: 舞龙
+
+- questionID: CHATGPT-Vocab-39
+  lessonIds:
+    - 2
+  question: 新年到了，我们一起去___家拜年，她准备了很多好吃的东西。
+  options:
+    - 外婆
+    - 奶奶
+    - 外公
+    - 姑姑
+  correct: 外婆
+
+- questionID: CHATGPT-Vocab-40
+  lessonIds:
+    - 2
+  question: 新年第一天，我们全家去外婆家___，祝她身体健康。
+  options:
+    - 拜年
+    - 拜访
+    - 访问
+    - 参观
+  correct: 拜年
+
+- questionID: CHATGPT-Vocab-41
+  lessonIds:
+    - 2
+  question: 妹妹___一个红包，开心地跑来给我看。
+  options:
+    - 拿着
+    - 抱着
+    - 提着
+    - 举着
+  correct: 拿着
+
+- questionID: CHATGPT-Vocab-42
+  lessonIds:
+    - 2
+  question: 我看到外婆，就___了一声：「新年快乐！」
+  options:
+    - 说
+    - 讲
+    - 叫
+    - 问
+  correct: 说
+
+- questionID: CHATGPT-Vocab-43
+  lessonIds:
+    - 2
+  question: 老师，祝___新年快乐，天天开心！
+  options:
+    - 您
+    - 你
+    - 他
+    - 我
+  correct: 您
+
+- questionID: CHATGPT-Vocab-44
+  lessonIds:
+    - 2
+  question: 新年时，我祝外婆___健康，天天快乐。
+  options:
+    - 身体
+    - 身材
+    - 心情
+    - 头发
+  correct: 身体
+
+- questionID: CHATGPT-Vocab-45
+  lessonIds:
+    - 2
+  question: 新年时，爸爸妈妈祝我___进步，天天认真学习。
+  options:
+    - 学业
+    - 作业
+    - 功课
+    - 事业
+  correct: 学业
+
+- questionID: CHATGPT-Vocab-46
+  lessonIds:
+    - 2
+  question: 我___外婆给我的红包，开心地说了谢谢。
+  options:
+    - 接过
+    - 拿走
+    - 丢掉
+    - 送给
+  correct: 接过
+
+- questionID: CHATGPT-Vocab-47
+  lessonIds:
+    - 2
+  question: 妈妈准备了一盒香香的___，大家都很喜欢吃。
+  options:
+    - 鸡蛋卷
+    - 年糕
+    - 瓜子
+    - 饼干
+  correct: 鸡蛋卷
+
+- questionID: CHATGPT-Vocab-48
+  lessonIds:
+    - 2
+  question: 外婆做的鸡蛋卷___好吃，我一口气吃了好多！
+  options:
+    - 真
+    - 很
+    - 太
+    - 最
+  correct: 真
+
+- questionID: CHATGPT-Vocab-49
+  lessonIds:
+    - 2
+  question: ___到了，我们全家一起穿上新衣服，非常开心。
+  options:
+    - 新年
+    - 生日
+    - 假期
+    - 周末
+  correct: 新年
+
+- questionID: CHATGPT-Vocab-50
+  lessonIds:
+    - 2
+  question: 见到外婆的时候，我___她新年快乐，身体健康。
+  options:
+    - 祝
+    - 问
+    - 教
+    - 谢
+  correct: 祝
+
+- questionID: CHATGPT-Vocab-51
+  lessonIds:
+    - 1
+  question: 花园里的花开得很___，大家都很喜欢看。
+  options:
+    - 美
+    - 丑
+    - 老
+    - 脏
+  correct: 美
+
+- questionID: CHATGPT-Vocab-52
+  lessonIds:
+    - 1
+  question: 叔叔在市场里___新鲜的水果和蔬菜给客人。
+  options:
+    - 卖
+    - 买
+    - 送
+    - 存
+  correct: 卖
+
+- questionID: CHATGPT-Vocab-53
+  lessonIds:
+    - 1
+  question: 请你帮我在水里___一些糖。
+  options:
+    - 加
+    - 减
+    - 家
+    - 咖
+  correct: 加
+
+- questionID: CHATGPT-Vocab-54
+  lessonIds:
+    - 1
+  question: ___我每天都要走路去学校上课，现在可以坐车了。
+  options:
+    - 过去
+    - 现在
+    - 将来
+    - 以后
+  correct: 过去
+
+- questionID: CHATGPT-Vocab-55
+  lessonIds:
+    - 1
+  question: 这双鞋大小___，我穿起来很舒服。
+  options:
+    - 合适
+    - 舒服
+    - 漂亮
+    - 便宜
+  correct: 合适
+
+- questionID: CHATGPT-Vocab-56
+  lessonIds:
+    - 1
+  question: 老师叫我们___课本准备开始上课。
+  options:
+    - 拿出
+    - 放进
+    - 带走
+    - 收起
+  correct: 拿出
+
+- questionID: CHATGPT-Vocab-57
+  lessonIds:
+    - 1
+  question: 老师叫我们大声___出课文内容。
+  options:
+    - 读
+    - 看
+    - 写
+    - 听
+  correct: 读
+
+- questionID: CHATGPT-Vocab-58
+  lessonIds:
+    - 1
+  question: 老师教我们把纸___成一只小鸟。
+  options:
+    - 折
+    - 撕
+    - 洗
+    - 送
+  correct: 折
+
+- questionID: CHATGPT-Vocab-59
+  lessonIds:
+    - 1
+  question: 上课的时候，我们要___听老师说话。
+  options:
+    - 专心
+    - 关心
+    - 小心
+    - 开心
+  correct: 专心
+
+- questionID: CHATGPT-Vocab-60
+  lessonIds:
+    - 1
+  question: 我喜欢每天晚上___妈妈讲故事。
+  options:
+    - 听
+    - 看
+    - 说
+    - 闻
+  correct: 听
+
+- questionID: CHATGPT-Vocab-61
+  lessonIds:
+    - 3
+  question: 妈妈___给外婆一份漂亮的新年礼物。
+  options:
+    - 送
+    - 拿
+    - 卖
+    - 借
+  correct: 送
+
+- questionID: CHATGPT-Vocab-62
+  lessonIds:
+    - 3
+  question: ___热情地请客人坐下来一起吃饭。
+  options:
+    - 主人
+    - 客人
+    - 朋友
+    - 邻居
+  correct: 主人
+
+- questionID: CHATGPT-Vocab-63
+  lessonIds:
+    - 3
+  question: 妈妈___给我一杯温水让我喝。
+  options:
+    - 递
+    - 放
+    - 丢
+    - 摆
+  correct: 递
+
+- questionID: CHATGPT-Vocab-64
+  lessonIds:
+    - 3
+  question: 妈妈今天很___，没有时间休息。
+  options:
+    - 忙
+    - 忘
+    - 累
+    - 闲
+  correct: 忙
+
+- questionID: CHATGPT-Vocab-65
+  lessonIds:
+    - 3
+  question: 小狗热的时候会___自己的舌头。
+  options:
+    - 伸出
+    - 缩回
+    - 藏起
+    - 闭上
+  correct: 伸出
+
+- questionID: CHATGPT-Vocab-66
+  lessonIds:
+    - 3
+  question: 妈妈叫我___桌上的新菜，看看好不好吃。
+  options:
+    - 尝
+    - 闻
+    - 摸
+    - 看
+  correct: 尝
+
+- questionID: CHATGPT-Vocab-67
+  lessonIds:
+    - 3
+  question: 我找了很久，___书在我的书包里。
+  options:
+    - 原来
+    - 后来
+    - 现在
+    - 将来
+  correct: 原来
+
+- questionID: CHATGPT-Vocab-68
+  lessonIds:
+    - 3
+  question: 吃完饭以后，大家___回到自己的房间。
+  options:
+    - 各自
+    - 一起
+    - 大家
+    - 互相
+  correct: 各自
+
+- questionID: CHATGPT-Vocab-69
+  lessonIds:
+    - 3
+  question: 明天我___会记得带自己的水壶。
+  options:
+    - 一定
+    - 不会
+    - 可能
+    - 从来
+  correct: 一定
+
+- questionID: CHATGPT-Vocab-70
+  lessonIds:
+    - 3
+  question: 小猫喜欢在晚上___家里的小老鼠。
+  options:
+    - 捉
+    - 放
+    - 喂
+    - 养
+  correct: 捉
+
+- questionID: CHATGPT-Vocab-71
+  lessonIds:
+    - 4
+  question: 我先画一棵树，___再画天空。
+  options:
+    - 然后
+    - 先
+    - 因为
+    - 但是
+  correct: 然后
+
+- questionID: CHATGPT-Vocab-72
+  lessonIds:
+    - 4
+  question: 哥哥___着我的手一起走进树林。
+  options:
+    - 拉
+    - 推
+    - 丢
+    - 打
+  correct: 拉
+
+- questionID: CHATGPT-Vocab-73
+  lessonIds:
+    - 4
+  question: 我们___学校一起走到附近的公园。
+  options:
+    - 从
+    - 到
+    - 在
+    - 往
+  correct: 从
+
+- questionID: CHATGPT-Vocab-74
+  lessonIds:
+    - 4
+  question: 我们___画了十棵不同颜色的小树。
+  options:
+    - 一共
+    - 一起
+    - 一定
+    - 一直
+  correct: 一共
+
+- questionID: CHATGPT-Vocab-75
+  lessonIds:
+    - 4
+  question: 我___画一幅有天空和树林的图画。
+  options:
+    - 想
+    - 会
+    - 能
+    - 让
+  correct: 想
+
+- questionID: CHATGPT-Vocab-76
+  lessonIds:
+    - 4
+  question: 小鸟喜欢在___里面快乐地唱歌。
+  options:
+    - 树林
+    - 花园
+    - 草地
+    - 山坡
+  correct: 树林
+
+- questionID: CHATGPT-Vocab-77
+  lessonIds:
+    - 4
+  question: 太阳看起来像一个红色的___。
+  options:
+    - 圆形
+    - 三角形
+    - 正方形
+    - 长方形
+  correct: 圆形
+
+- questionID: CHATGPT-Vocab-78
+  lessonIds:
+    - 4
+  question: 我用___彩色笔画美丽的天空。
+  options:
+    - 蓝色
+    - 红色
+    - 黄色
+    - 黑色
+  correct: 蓝色
+
+- questionID: CHATGPT-Vocab-79
+  lessonIds:
+    - 4
+  question: 天空中的___又大又亮非常漂亮。
+  options:
+    - 太阳
+    - 月亮
+    - 星星
+    - 云朵
+  correct: 太阳
+
+- questionID: CHATGPT-Vocab-80
+  lessonIds:
+    - 4
+  question: 天空中有很多白白的___在飘。
+  options:
+    - 云朵
+    - 星星
+    - 太阳
+    - 风筝
+  correct: 云朵
+
+- questionID: CHATGPT-Vocab-81
+  lessonIds:
+    - 5
+  question: 你知道音乐室在___吗，我找不到它。
+  options:
+    - 哪里
+    - 那里
+    - 这里
+    - 谁
+  correct: 哪里
+
+- questionID: CHATGPT-Vocab-82
+  lessonIds:
+    - 5
+  question: 音乐室就在美术室的___。
+  options:
+    - 旁边
+    - 里面
+    - 前面
+    - 楼上
+  correct: 旁边
+
+- questionID: CHATGPT-Vocab-83
+  lessonIds:
+    - 5
+  question: 老师一叫我们，我们___马上走过去。
+  options:
+    - 就
+    - 才
+    - 还
+    - 又
+  correct: 就
+
+- questionID: CHATGPT-Vocab-84
+  lessonIds:
+    - 5
+  question: 到了学校大门以后，请向左边___。
+  options:
+    - 转
+    - 走
+    - 停
+    - 坐
+  correct: 转
+
+- questionID: CHATGPT-Vocab-85
+  lessonIds:
+    - 5
+  question: 奶奶家离学校很___，需要坐车过去。
+  options:
+    - 远
+    - 近
+    - 小
+    - 高
+  correct: 远
+
+- questionID: CHATGPT-Vocab-86
+  lessonIds:
+    - 5
+  question: 奶奶第一次来到学校，所以差一点___。
+  options:
+    - 迷路
+    - 迟到
+    - 生病
+    - 摔倒
+  correct: 迷路
+
+- questionID: CHATGPT-Vocab-87
+  lessonIds:
+    - 5
+  question: 我们走了很___，终于到了学校。
+  options:
+    - 久
+    - 快
+    - 慢
+    - 短
+  correct: 久
+
+- questionID: CHATGPT-Vocab-88
+  lessonIds:
+    - 5
+  question: 老师问我问题，我马上举手___。
+  options:
+    - 回答
+    - 问
+    - 听
+    - 想
+  correct: 回答
+
+- questionID: CHATGPT-Vocab-89
+  lessonIds:
+    - 5
+  question: 我们___走到学校的大门口了。
+  options:
+    - 已经
+    - 还没
+    - 正在
+    - 将要
+  correct: 已经
+
+- questionID: CHATGPT-Vocab-90
+  lessonIds:
+    - 5
+  question: 我们___学校里面走，很快就看到老师。
+  options:
+    - 往
+    - 从
+    - 在
+    - 到
+  correct: 往
+
+- questionID: CHATGPT-Vocab-91
+  lessonIds:
+    - 6
+  question: 哥哥每天___脚踏车去学校上课。
+  options:
+    - 骑
+    - 坐
+    - 开
+    - 走
+  correct: 骑
+
+- questionID: CHATGPT-Vocab-92
+  lessonIds:
+    - 6
+  question: 我们过马路的时候___先看清楚。
+  options:
+    - 应该
+    - 可以
+    - 不能
+    - 已经
+  correct: 应该
+
+- questionID: CHATGPT-Vocab-93
+  lessonIds:
+    - 6
+  question: 我们要___绿灯亮了才可以过马路。
+  options:
+    - 等
+    - 看
+    - 找
+    - 走
+  correct: 等
+
+- questionID: CHATGPT-Vocab-94
+  lessonIds:
+    - 6
+  question: 看到红灯的时候，汽车一定要___下来。
+  options:
+    - 停
+    - 开
+    - 转
+    - 跑
+  correct: 停
+
+- questionID: CHATGPT-Vocab-95
+  lessonIds:
+    - 6
+  question: 绿灯亮了，我们___可以走过马路。
+  options:
+    - 才
+    - 就
+    - 也
+    - 还
+  correct: 才
+
+- questionID: CHATGPT-Vocab-96
+  lessonIds:
+    - 6
+  question: 我们过马路的时候要___提醒小心。
+  options:
+    - 互相
+    - 一起
+    - 自己
+    - 大家
+  correct: 互相
+
+- questionID: CHATGPT-Vocab-97
+  lessonIds:
+    - 6
+  question: 早上的阳光___在学校的大树上。
+  options:
+    - 照
+    - 放
+    - 开
+    - 看
+  correct: 照
+
+- questionID: CHATGPT-Vocab-98
+  lessonIds:
+    - 6
+  question: 今天的天气好___了，大家都很开心。
+  options:
+    - 极
+    - 很
+    - 太
+    - 最
+  correct: 极
+
+- questionID: CHATGPT-Vocab-99
+  lessonIds:
+    - 6
+  question: 天黑以后，街上的灯慢慢___起来了。
+  options:
+    - 亮
+    - 暗
+    - 关
+    - 灭
+  correct: 亮
+
+- questionID: CHATGPT-Vocab-100
+  lessonIds:
+    - 6
+  question: 早上的校园在阳光下非常___。
+  options:
+    - 美丽
+    - 安静
+    - 干净
+    - 忙碌
+  correct: 美丽
+
+- questionID: CHATGPT-Vocab-101
+  lessonIds:
+    - 7
+  question: 买早餐的时候，我们要先___等候。
+  options:
+    - 排队
+    - 站立
+    - 睡觉
+    - 跑步
+  correct: 排队
+
+- questionID: CHATGPT-Vocab-102
+  lessonIds:
+    - 7
+  question: 我们走进咖啡店以后先___座位。
+  options:
+    - 找
+    - 买
+    - 坐
+    - 洗
+  correct: 找
+
+- questionID: CHATGPT-Vocab-103
+  lessonIds:
+    - 7
+  question: 今天是星期六，所以早餐___好吃。
+  options:
+    - 特别
+    - 已经
+    - 一定
+    - 从来
+  correct: 特别
+
+- questionID: CHATGPT-Vocab-104
+  lessonIds:
+    - 7
+  question: 我一走进咖啡店就___到食物的香味。
+  options:
+    - 闻
+    - 看
+    - 摸
+    - 吃
+  correct: 闻
+
+- questionID: CHATGPT-Vocab-105
+  lessonIds:
+    - 7
+  question: 我们一起___咖啡店找空的座位。
+  options:
+    - 走进
+    - 走出
+    - 离开
+    - 经过
+  correct: 走进
+
+- questionID: CHATGPT-Vocab-106
+  lessonIds:
+    - 7
+  question: 吃完早餐以后，我们一起___收拾桌子。
+  options:
+    - 分工
+    - 决定
+    - 休息
+    - 睡觉
+  correct: 分工
+
+- questionID: CHATGPT-Vocab-107
+  lessonIds:
+    - 7
+  question: 妹妹年纪虽然小，但是非常___。
+  options:
+    - 懂事
+    - 调皮
+    - 生气
+    - 伤心
+  correct: 懂事
+
+- questionID: CHATGPT-Vocab-108
+  lessonIds:
+    - 7
+  question: 吃完早餐以后，我们一起___桌子。
+  options:
+    - 收拾
+    - 弄脏
+    - 打破
+    - 搬走
+  correct: 收拾
+
+- questionID: CHATGPT-Vocab-109
+  lessonIds:
+    - 7
+  question: 天气很热的时候，我喜欢喝___。
+  options:
+    - 冰水
+    - 温水
+    - 咖啡
+    - 奶茶
+  correct: 冰水
+
+- questionID: CHATGPT-Vocab-110
+  lessonIds:
+    - 7
+  question: 我们___早餐以后一起收拾桌子。
+  options:
+    - 吃完
+    - 开始
+    - 准备
+    - 忘记
+  correct: 吃完
+
+- questionID: CHATGPT-Vocab-111
+  lessonIds:
+    - 8
+  question: 妈妈每天都会___我们一家人的生活。
+  options:
+    - 照顾
+    - 打扰
+    - 忘记
+    - 讨厌
+  correct: 照顾
+
+- questionID: CHATGPT-Vocab-112
+  lessonIds:
+    - 8
+  question: 如果___火灾，我们一定要马上离开。
+  options:
+    - 发生
+    - 结束
+    - 停止
+    - 完成
+  correct: 发生
+
+- questionID: CHATGPT-Vocab-113
+  lessonIds:
+    - 8
+  question: 消防员赶到以后马上开始___工作。
+  options:
+    - 灭火
+    - 点火
+    - 生火
+    - 玩火
+  correct: 灭火
+
+- questionID: CHATGPT-Vocab-114
+  lessonIds:
+    - 8
+  question: 消防员努力___大家和我们的房子。
+  options:
+    - 保护
+    - 伤害
+    - 破坏
+    - 忽略
+  correct: 保护
+
+- questionID: CHATGPT-Vocab-115
+  lessonIds:
+    - 8
+  question: 警察很快就把做坏事的人___住了。
+  options:
+    - 抓
+    - 放
+    - 送
+    - 帮
+  correct: 抓
+
+- questionID: CHATGPT-Vocab-116
+  lessonIds:
+    - 8
+  question: 妹妹很___黑，所以晚上要开灯睡觉。
+  options:
+    - 怕
+    - 爱
+    - 懂
+    - 忘
+  correct: 怕
+
+- questionID: CHATGPT-Vocab-117
+  lessonIds:
+    - 8
+  question: 我和家人一起___在新加坡的一个房子里。
+  options:
+    - 住
+    - 坐
+    - 站
+    - 走
+  correct: 住
+
+- questionID: CHATGPT-Vocab-118
+  lessonIds:
+    - 8
+  question: 我们___很感谢身边帮助我们的人。
+  options:
+    - 都
+    - 只
+    - 也
+    - 又
+  correct: 都
+
+- questionID: CHATGPT-Vocab-119
+  lessonIds:
+    - 8
+  question: 爷爷喜欢在家里的花园___很多植物。
+  options:
+    - 种
+    - 拔
+    - 摘
+    - 剪
+  correct: 种
+
+- questionID: CHATGPT-Vocab-120
+  lessonIds:
+    - 8
+  question: 生病以后，我们应该早点去医院___。
+  options:
+    - 看病
+    - 看书
+    - 看戏
+    - 看家
+  correct: 看病
+
+- questionID: CHATGPT-Vocab-121
+  lessonIds:
+    - 9
+  question: 今天的天气有点___，但是没有下雨。
+  options:
+    - 阴
+    - 晴
+    - 热
+    - 冷
+  correct: 阴
+
+- questionID: CHATGPT-Vocab-122
+  lessonIds:
+    - 9
+  question: 今天是___天，天空又蓝又漂亮。
+  options:
+    - 晴
+    - 阴
+    - 雨
+    - 风
+  correct: 晴
+
+- questionID: CHATGPT-Vocab-123
+  lessonIds:
+    - 9
+  question: 今天的天气很___，我穿了两件衣服。
+  options:
+    - 冷
+    - 热
+    - 湿
+    - 暗
+  correct: 冷
+
+- questionID: CHATGPT-Vocab-124
+  lessonIds:
+    - 9
+  question: 今天的天气很___，我们要多喝水。
+  options:
+    - 热
+    - 冷
+    - 湿
+    - 暗
+  correct: 热
+
+- questionID: CHATGPT-Vocab-125
+  lessonIds:
+    - 9
+  question: 妈妈提醒我___带雨伞去学校。
+  options:
+    - 记得
+    - 忘记
+    - 知道
+    - 决定
+  correct: 记得
+
+- questionID: CHATGPT-Vocab-126
+  lessonIds:
+    - 9
+  question: 我今天___带雨伞，所以被雨淋湿了。
+  options:
+    - 忘记
+    - 记得
+    - 决定
+    - 知道
+  correct: 忘记
+
+- questionID: CHATGPT-Vocab-127
+  lessonIds:
+    - 9
+  question: 今天可能下雨，所以我要___雨伞出门。
+  options:
+    - 带
+    - 买
+    - 借
+    - 丢
+  correct: 带
+
+- questionID: CHATGPT-Vocab-128
+  lessonIds:
+    - 9
+  question: 妈妈看到下大雨以后非常___。
+  options:
+    - 着急
+    - 开心
+    - 骄傲
+    - 轻松
+  correct: 着急
+
+- questionID: CHATGPT-Vocab-129
+  lessonIds:
+    - 9
+  question: 门铃突然___了，妈妈马上走去开门。
+  options:
+    - 响
+    - 坏
+    - 开
+    - 关
+  correct: 响
+
+- questionID: CHATGPT-Vocab-130
+  lessonIds:
+    - 9
+  question: 妈妈___我的头，叫我不要着急。
+  options:
+    - 摸
+    - 打
+    - 拉
+    - 推
+  correct: 摸
+
+- questionID: CHATGPT-Vocab-131
+  lessonIds:
+    - 10
+  question: 小蚂蚁正在慢慢地___上大树。
+  options:
+    - 爬
+    - 飞
+    - 跳
+    - 游
+  correct: 爬
+
+- questionID: CHATGPT-Vocab-132
+  lessonIds:
+    - 10
+  question: 小鸟看到妈妈以后马上___回自己的窝。
+  options:
+    - 飞
+    - 爬
+    - 走
+    - 游
+  correct: 飞
+
+- questionID: CHATGPT-Vocab-133
+  lessonIds:
+    - 10
+  question: 小青蛙从树枝旁边___进了池塘。
+  options:
+    - 跳
+    - 飞
+    - 爬
+    - 走
+  correct: 跳
+
+- questionID: CHATGPT-Vocab-134
+  lessonIds:
+    - 10
+  question: 妈妈___我先观察小动物再说话。
+  options:
+    - 让
+    - 怕
+    - 帮
+    - 求
+  correct: 让
+
+- questionID: CHATGPT-Vocab-135
+  lessonIds:
+    - 10
+  question: 天空黑黑的，___快要下雨了。
+  options:
+    - 好像
+    - 真的
+    - 一定
+    - 已经
+  correct: 好像
+
+- questionID: CHATGPT-Vocab-136
+  lessonIds:
+    - 10
+  question: 一片叶子从树上___了地上。
+  options:
+    - 掉到
+    - 飞到
+    - 走到
+    - 跳到
+  correct: 掉到
+
+- questionID: CHATGPT-Vocab-137
+  lessonIds:
+    - 10
+  question: 小树苗慢慢___了一棵大树。
+  options:
+    - 长成
+    - 变成
+    - 长大
+    - 种成
+  correct: 长成
+
+- questionID: CHATGPT-Vocab-138
+  lessonIds:
+    - 10
+  question: 我很___观察花园里的小动物。
+  options:
+    - 喜欢
+    - 讨厌
+    - 害怕
+    - 忘记
+  correct: 喜欢
+
+- questionID: CHATGPT-Vocab-139
+  lessonIds:
+    - 10
+  question: 青蛙可以___农夫捉田里的害虫。
+  options:
+    - 帮
+    - 让
+    - 怕
+    - 骗
+  correct: 帮
+
+- questionID: CHATGPT-Vocab-140
+  lessonIds:
+    - 10
+  question: 树上结出的水果吃起来又___又好吃。
+  options:
+    - 甜
+    - 苦
+    - 酸
+    - 辣
+  correct: 甜
+
+- questionID: CHATGPT-Vocab-141
+  lessonIds:
+    - 11
+  question: 我喜欢___哥哥一起玩积木游戏。
+  options:
+    - 跟
+    - 在
+    - 到
+    - 从
+  correct: 跟
+
+- questionID: CHATGPT-Vocab-142
+  lessonIds:
+    - 11
+  question: 我喜欢用积木___一座很大的房子。
+  options:
+    - 搭
+    - 买
+    - 找
+    - 洗
+  correct: 搭
+
+- questionID: CHATGPT-Vocab-143
+  lessonIds:
+    - 11
+  question: 公园里有___孩子正在一起玩游戏。
+  options:
+    - 许多
+    - 一点
+    - 一些
+    - 唯一
+  correct: 许多
+
+- questionID: CHATGPT-Vocab-144
+  lessonIds:
+    - 11
+  question: 哥哥比我___喜欢玩魔术方块。
+  options:
+    - 更
+    - 最
+    - 很
+    - 太
+  correct: 更
+
+- questionID: CHATGPT-Vocab-145
+  lessonIds:
+    - 11
+  question: 老鹰在天空中___着小鸟一起飞。
+  options:
+    - 追
+    - 抱
+    - 送
+    - 帮
+  correct: 追
+
+- questionID: CHATGPT-Vocab-146
+  lessonIds:
+    - 11
+  question: 我___喜欢和朋友一起玩游戏。
+  options:
+    - 最
+    - 更
+    - 也
+    - 才
+  correct: 最
+
+- questionID: CHATGPT-Vocab-147
+  lessonIds:
+    - 11
+  question: 妹妹喜欢用泥土___可爱的小动物。
+  options:
+    - 捏
+    - 画
+    - 剪
+    - 写
+  correct: 捏
+
+- questionID: CHATGPT-Vocab-148
+  lessonIds:
+    - 11
+  question: 爷爷喜欢在星期天教我下___。
+  options:
+    - 象棋
+    - 跳棋
+    - 积木
+    - 布娃娃
+  correct: 象棋
+
+- questionID: CHATGPT-Vocab-149
+  lessonIds:
+    - 11
+  question: 小朋友们在公园里玩___捉小鸡。
+  options:
+    - 老鹰
+    - 小狗
+    - 小猫
+    - 小鱼
+  correct: 老鹰
+
+- questionID: CHATGPT-Vocab-150
+  lessonIds:
+    - 11
+  question: 妹妹收到一个___玩具以后非常开心，因为它会走路和说话。
+  options:
+    - 机器人
+    - 布娃娃
+    - 积木
+    - 风筝
+  correct: 机器人
+
+- questionID: CHATGPT-Vocab-151
+  lessonIds:
+    - 12
+  question: 我希望爸爸妈妈___健康快乐。
+  options:
+    - 永远
+    - 已经
+    - 刚才
+    - 从来
+  correct: 永远
+
+- questionID: CHATGPT-Vocab-152
+  lessonIds:
+    - 12
+  question: 爷爷希望自己永远___和身体健康。
+  options:
+    - 年轻
+    - 年老
+    - 生病
+    - 疲倦
+  correct: 年轻
+
+- questionID: CHATGPT-Vocab-153
+  lessonIds:
+    - 12
+  question: 多运动和吃蔬菜可以让身体更___。
+  options:
+    - 健康
+    - 生病
+    - 疲倦
+    - 肥胖
+  correct: 健康
+
+- questionID: CHATGPT-Vocab-154
+  lessonIds:
+    - 12
+  question: 有爸爸妈妈陪伴让我觉得非常___。
+  options:
+    - 幸福
+    - 孤单
+    - 害怕
+    - 生气
+  correct: 幸福
+
+- questionID: CHATGPT-Vocab-155
+  lessonIds:
+    - 12
+  question: 生日的时候，我会对着蛋糕___。
+  options:
+    - 许愿
+    - 生气
+    - 道歉
+    - 睡觉
+  correct: 许愿
+
+- questionID: CHATGPT-Vocab-156
+  lessonIds:
+    - 12
+  question: 妹妹准备___生日蛋糕上的蜡烛了。
+  options:
+    - 吹
+    - 点
+    - 吃
+    - 洗
+  correct: 吹
+
+- questionID: CHATGPT-Vocab-157
+  lessonIds:
+    - 12
+  question: 我在生日卡上___了很多祝福的话。
+  options:
+    - 写
+    - 说
+    - 听
+    - 画
+  correct: 写
+
+- questionID: CHATGPT-Vocab-158
+  lessonIds:
+    - 12
+  question: 今天大家的行为看起来有一点___。
+  options:
+    - 奇怪
+    - 正常
+    - 开心
+    - 认真
+  correct: 奇怪
+
+- questionID: CHATGPT-Vocab-159
+  lessonIds:
+    - 12
+  question: 学校今天举行了一个有趣的生日___。
+  options:
+    - 活动
+    - 考试
+    - 功课
+    - 麻烦
+  correct: 活动
+
+- questionID: CHATGPT-Vocab-160
+  lessonIds:
+    - 12
+  question: 妈妈笑着对我说，我的小___生日快乐。
+  options:
+    - 宝贝
+    - 朋友
+    - 客人
+    - 老师
+  correct: 宝贝
+
+- questionID: CHATGPT-Vocab-161
+  lessonIds:
+    - 14
+  question: 这道题很___，我们一起想办法解决吧。
+  options:
+    - 难
+    - 容易
+    - 简单
+    - 快乐
+  correct: 难
+
+- questionID: CHATGPT-Vocab-162
+  lessonIds:
+    - 14
+  question: 这棵大树的树干又___又高。
+  options:
+    - 粗
+    - 细
+    - 短
+    - 软
+  correct: 粗
+
+- questionID: CHATGPT-Vocab-163
+  lessonIds:
+    - 14
+  question: 妹妹用一支很___的笔画小花。
+  options:
+    - 细
+    - 粗
+    - 长
+    - 重
+  correct: 细
+
+- questionID: CHATGPT-Vocab-164
+  lessonIds:
+    - 14
+  question: 两个孩子不应该为了玩具互相___东西。
+  options:
+    - 抢
+    - 送
+    - 借
+    - 分享
+  correct: 抢
+
+- questionID: CHATGPT-Vocab-165
+  lessonIds:
+    - 14
+  question: 我们不应该因为生气就___自己的朋友。
+  options:
+    - 推
+    - 拉
+    - 抱
+    - 帮
+  correct: 推
+
+- questionID: CHATGPT-Vocab-166
+  lessonIds:
+    - 14
+  question: 哥哥最___别人弄破他的图画。
+  options:
+    - 讨厌
+    - 喜欢
+    - 感谢
+    - 帮助
+  correct: 讨厌
+
+- questionID: CHATGPT-Vocab-167
+  lessonIds:
+    - 14
+  question: 两个好朋友因为一支蜡笔开始___了。
+  options:
+    - 争吵
+    - 合作
+    - 微笑
+    - 拥抱
+  correct: 争吵
+
+- questionID: CHATGPT-Vocab-168
+  lessonIds:
+    - 14
+  question: 弟弟不小心把我的图画___了。
+  options:
+    - 弄破
+    - 修好
+    - 画好
+    - 收好
+  correct: 弄破
+
+- questionID: CHATGPT-Vocab-169
+  lessonIds:
+    - 14
+  question: 朋友弄破我的图画，我觉得非常___。
+  options:
+    - 伤心
+    - 开心
+    - 骄傲
+    - 兴奋
+  correct: 伤心
+
+- questionID: CHATGPT-Vocab-170
+  lessonIds:
+    - 14
+  question: 我们一起___，很快就完成了图画。
+  options:
+    - 合作
+    - 争吵
+    - 睡觉
+    - 争夺
+  correct: 合作
+
+- questionID: CHATGPT-Vocab-171
+  lessonIds:
+    - 15
+  question: 这个玉米又香又___，大家都很喜欢吃。
+  options:
+    - 甜
+    - 苦
+    - 酸
+    - 咸
+  correct: 甜
+
+- questionID: CHATGPT-Vocab-172
+  lessonIds:
+    - 15
+  question: 我觉得玉米___苦瓜甜很多，更好吃。
+  options:
+    - 比
+    - 和
+    - 跟
+    - 对
+  correct: 比
+
+- questionID: CHATGPT-Vocab-173
+  lessonIds:
+    - 15
+  question: 妈妈正在厨房里___一锅好吃的汤。
+  options:
+    - 煮
+    - 洗
+    - 买
+    - 切
+  correct: 煮
+
+- questionID: CHATGPT-Vocab-174
+  lessonIds:
+    - 15
+  question: 午餐你想吃番茄还是白菜___玉米呢？
+  options:
+    - 或者
+    - 而且
+    - 但是
+    - 因为
+  correct: 或者
+
+- questionID: CHATGPT-Vocab-175
+  lessonIds:
+    - 15
+  question: 伯伯教我怎样从泥土里___萝卜出来。
+  options:
+    - 拔
+    - 种
+    - 摘
+    - 浇
+  correct: 拔
+
+- questionID: CHATGPT-Vocab-176
+  lessonIds:
+    - 15
+  question: 我们在菜园里一起___新鲜的番茄。
+  options:
+    - 摘
+    - 拔
+    - 挖
+    - 煮
+  correct: 摘
+
+- questionID: CHATGPT-Vocab-177
+  lessonIds:
+    - 15
+  question: 妹妹拔萝卜的时候太用力，所以开始___了。
+  options:
+    - 哭
+    - 笑
+    - 唱歌
+    - 睡觉
+  correct: 哭
+
+- questionID: CHATGPT-Vocab-178
+  lessonIds:
+    - 15
+  question: 伯伯带我们到菜园里一起___萝卜。
+  options:
+    - 挖
+    - 洗
+    - 煮
+    - 卖
+  correct: 挖
+
+- questionID: CHATGPT-Vocab-179
+  lessonIds:
+    - 15
+  question: 老师明天要___我们今天学习的生词。
+  options:
+    - 考
+    - 教
+    - 玩
+    - 忘
+  correct: 考
+
+- questionID: CHATGPT-Vocab-180
+  lessonIds:
+    - 15
+  question: 放学以后，我___回家帮妈妈洗菜。
+  options:
+    - 就
+    - 才
+    - 也
+    - 还
+  correct: 就
+
+- questionID: CHATGPT-Vocab-181
+  lessonIds:
+    - 16
+  question: 我们在图书馆里要___安静和整洁。
+  options:
+    - 保持
+    - 打扫
+    - 破坏
+    - 忘记
+  correct: 保持
+
+- questionID: CHATGPT-Vocab-182
+  lessonIds:
+    - 16
+  question: 图书馆里面很___，大家都在看书。
+  options:
+    - 安静
+    - 热闹
+    - 大声
+    - 拥挤
+  correct: 安静
+
+- questionID: CHATGPT-Vocab-183
+  lessonIds:
+    - 16
+  question: 在图书馆里，我们不能___说话和唱歌。
+  options:
+    - 大声
+    - 安静
+    - 小声
+    - 慢慢
+  correct: 大声
+
+- questionID: CHATGPT-Vocab-184
+  lessonIds:
+    - 16
+  question: 我想去图书馆___一本有趣的绘本。
+  options:
+    - 借
+    - 买
+    - 还
+    - 丢
+  correct: 借
+
+- questionID: CHATGPT-Vocab-185
+  lessonIds:
+    - 16
+  question: 老师今天讲了一个非常___的故事。
+  options:
+    - 有趣
+    - 无聊
+    - 可怕
+    - 简单
+  correct: 有趣
+
+- questionID: CHATGPT-Vocab-186
+  lessonIds:
+    - 16
+  question: 我想了很久，终于找到了正确的___。
+  options:
+    - 答案
+    - 问题
+    - 故事
+    - 道具
+  correct: 答案
+
+- questionID: CHATGPT-Vocab-187
+  lessonIds:
+    - 16
+  question: 学校___有一个很大的公共图书馆。
+  options:
+    - 附近
+    - 里面
+    - 远方
+    - 中间
+  correct: 附近
+
+- questionID: CHATGPT-Vocab-188
+  lessonIds:
+    - 16
+  question: 活动开始以前，教室里的座位已经___了。
+  options:
+    - 坐满
+    - 坐下
+    - 空着
+    - 站满
+  correct: 坐满
+
+- questionID: CHATGPT-Vocab-189
+  lessonIds:
+    - 16
+  question: 你___这本有趣的故事书在哪里吗？
+  options:
+    - 知道
+    - 忘记
+    - 借
+    - 找
+  correct: 知道
+
+- questionID: CHATGPT-Vocab-190
+  lessonIds:
+    - 16
+  question: 老师正在给我们___一个有趣的故事。
+  options:
+    - 讲
+    - 听
+    - 写
+    - 借
+  correct: 讲
+
+- questionID: CHATGPT-Vocab-191
+  lessonIds:
+    - 17
+  question: 周末晚上，我们一家人一起去___夜市。
+  options:
+    - 逛
+    - 关
+    - 卖
+    - 修
+  correct: 逛
+
+- questionID: CHATGPT-Vocab-192
+  lessonIds:
+    - 17
+  question: 哥哥在夜市玩___气球的有趣游戏。
+  options:
+    - 射
+    - 踢
+    - 咬
+    - 抱
+  correct: 射
+
+- questionID: CHATGPT-Vocab-193
+  lessonIds:
+    - 17
+  question: 弟弟喜欢在楼下和朋友一起___足球。
+  options:
+    - 踢
+    - 射
+    - 丢
+    - 打
+  correct: 踢
+
+- questionID: CHATGPT-Vocab-194
+  lessonIds:
+    - 17
+  question: 夜市很好玩，___晚上回家不能太晚。
+  options:
+    - 但是
+    - 因为
+    - 所以
+    - 而且
+  correct: 但是
+
+- questionID: CHATGPT-Vocab-195
+  lessonIds:
+    - 17
+  question: 周末的夜市非常___，到处都是人。
+  options:
+    - 热闹
+    - 安静
+    - 干净
+    - 危险
+  correct: 热闹
+
+- questionID: CHATGPT-Vocab-196
+  lessonIds:
+    - 17
+  question: 烤香肠的香味___了很多客人。
+  options:
+    - 引来
+    - 赶走
+    - 忘记
+    - 拒绝
+  correct: 引来
+
+- questionID: CHATGPT-Vocab-197
+  lessonIds:
+    - 17
+  question: 妹妹___地坐在旁边看哥哥玩游戏。
+  options:
+    - 安安静静
+    - 高高兴兴
+    - 大大声声
+    - 急急忙忙
+  correct: 安安静静
+
+- questionID: CHATGPT-Vocab-198
+  lessonIds:
+    - 17
+  question: 夜市里挂满了___的漂亮灯光。
+  options:
+    - 五颜六色
+    - 黑白
+    - 单调
+    - 透明
+  correct: 五颜六色
+
+- questionID: CHATGPT-Vocab-199
+  lessonIds:
+    - 17
+  question: 妈妈在___等我们一起去夜市。
+  options:
+    - 楼下
+    - 楼上
+    - 外国
+    - 学校
+  correct: 楼下
+
+- questionID: CHATGPT-Vocab-200
+  lessonIds:
+    - 17
+  question: 夜市里挂着许多五颜六色的漂亮___。
+  options:
+    - 气球
+    - 风筝
+    - 灯光
+    - 贝壳
+  correct: 气球
+
+- questionID: CHATGPT-Vocab-201
+  lessonIds:
+    - 18
+  question: 老师带我们去博物馆___学习。
+  options:
+    - 参观
+    - 离开
+    - 破坏
+    - 打扫
+  correct: 参观
+
+- questionID: CHATGPT-Vocab-202
+  lessonIds:
+    - 18
+  question: 天气很好，我们决定到公园一起___。
+  options:
+    - 野餐
+    - 睡觉
+    - 上课
+    - 打扫
+  correct: 野餐
+
+- questionID: CHATGPT-Vocab-203
+  lessonIds:
+    - 18
+  question: 天气很热的时候，我们喜欢去___。
+  options:
+    - 游泳
+    - 跑步
+    - 爬山
+    - 购物
+  correct: 游泳
+
+- questionID: CHATGPT-Vocab-204
+  lessonIds:
+    - 18
+  question: 妹妹在海边开心地___漂亮的贝壳。
+  options:
+    - 捡
+    - 丢
+    - 买
+    - 藏
+  correct: 捡
+
+- questionID: CHATGPT-Vocab-205
+  lessonIds:
+    - 18
+  question: 我们在公园里___了一只可爱的小鸟。
+  options:
+    - 发现
+    - 忘记
+    - 丢失
+    - 打扰
+  correct: 发现
+
+- questionID: CHATGPT-Vocab-206
+  lessonIds:
+    - 18
+  question: 公园里___都是漂亮的花和绿色的树。
+  options:
+    - 到处
+    - 到底
+    - 有时
+    - 一直
+  correct: 到处
+
+- questionID: CHATGPT-Vocab-207
+  lessonIds:
+    - 18
+  question: 新加坡的公共地方通常都非常___。
+  options:
+    - 干净
+    - 脏
+    - 拥挤
+    - 危险
+  correct: 干净
+
+- questionID: CHATGPT-Vocab-208
+  lessonIds:
+    - 18
+  question: 妈妈把房间里的东西整理得非常___。
+  options:
+    - 整齐
+    - 干净
+    - 漂亮
+    - 简单
+  correct: 整齐
+
+- questionID: CHATGPT-Vocab-209
+  lessonIds:
+    - 18
+  question: 我们吃完午餐以后就一起___餐馆。
+  options:
+    - 离开
+    - 参观
+    - 进入
+    - 打扫
+  correct: 离开
+
+- questionID: CHATGPT-Vocab-210
+  lessonIds:
+    - 18
+  question: 新加坡的___非常干净，也非常整齐。
+  options:
+    - 街道
+    - 餐馆
+    - 公园
+    - 植物园
+  correct: 街道
+
+- questionID: CHATGPT-Vocab-211
+  lessonIds:
+    - 19
+  question: 每天早上，爸爸都会帮家里的花___水。
+  options:
+    - 浇
+    - 喝
+    - 冲
+    - 洗
+  correct: 浇
+
+- questionID: CHATGPT-Vocab-212
+  lessonIds:
+    - 19
+  question: 我们应该___水，不要随便浪费水。
+  options:
+    - 珍惜
+    - 浪费
+    - 忘记
+    - 讨厌
+  correct: 珍惜
+
+- questionID: CHATGPT-Vocab-213
+  lessonIds:
+    - 19
+  question: 我们应该___用水，不要让水一直流。
+  options:
+    - 节约
+    - 浪费
+    - 增加
+    - 忘记
+  correct: 节约
+
+- questionID: CHATGPT-Vocab-214
+  lessonIds:
+    - 19
+  question: 我们不应该一直开着水龙头___水。
+  options:
+    - 浪费
+    - 节约
+    - 珍惜
+    - 关闭
+  correct: 浪费
+
+- questionID: CHATGPT-Vocab-215
+  lessonIds:
+    - 19
+  question: 水龙头没有关好，水一直不停地___。
+  options:
+    - 流
+    - 停
+    - 滴
+    - 关
+  correct: 流
+
+- questionID: CHATGPT-Vocab-216
+  lessonIds:
+    - 19
+  question: 看到水龙头没关，我___跑过去关水。
+  options:
+    - 连忙
+    - 慢慢
+    - 从来
+    - 已经
+  correct: 连忙
+
+- questionID: CHATGPT-Vocab-217
+  lessonIds:
+    - 19
+  question: 风太大了，风筝的线突然___了。
+  options:
+    - 断
+    - 长
+    - 松
+    - 卷
+  correct: 断
+
+- questionID: CHATGPT-Vocab-218
+  lessonIds:
+    - 19
+  question: 你能___水为什么一直不停地流吗？
+  options:
+    - 猜
+    - 知道
+    - 忘记
+    - 讨论
+  correct: 猜
+
+- questionID: CHATGPT-Vocab-219
+  lessonIds:
+    - 19
+  question: 运动以后，我觉得很___，马上喝了一杯水。
+  options:
+    - 渴
+    - 饿
+    - 累
+    - 冷
+  correct: 渴
+
+- questionID: CHATGPT-Vocab-220
+  lessonIds:
+    - 19
+  question: 水对我们的生活来说是非常___的。
+  options:
+    - 重要
+    - 普通
+    - 简单
+    - 便宜
+  correct: 重要

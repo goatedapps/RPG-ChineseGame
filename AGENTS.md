@@ -3,6 +3,8 @@
 Word Spirit Quest is a tablet-friendly exploration RPG for learning primary-school Chinese vocabulary and reading.
 The current playable build is the Primary 5 Region 1 prototype.
 `gameplan.md` is the detailed product and rebuild specification.
+Primary 2 and Primary 5 curriculum sources live under `content/source/`.
+Run `npm run validate:content` after changing either source pack.
 
 ## Current prototype
 
@@ -83,6 +85,10 @@ Move editable text, maps, dialogue, items, prices, encounters and balance values
 Keep curriculum source data separate from authored campaign data.
 Generate normalized level content and local Hanzi data during the build.
 Use one shared engine with separate content packs and saves for each school level.
+Use one shared seven-region world, cast, quest line, boss sequence and Great Forgetter story for every school level.
+A new school level adds curriculum, lesson-to-region mapping, feature flags and tuning; it does not add another world.
+Treat source readiness and world-mapping readiness as separate states.
+Do not expose P2 as playable until its mapping, feature flags and tuning are ready.
 
 Organize runtime code into `core`, `content`, `learning`, `world`, `battle`, `systems` and `ui` modules.
 Keep learning, battle and progression logic pure or state-only wherever possible.
@@ -94,6 +100,10 @@ The target repository structure is described in Sections 14–19 of `gameplan.md
 Begin the structured rebuild before implementing the later regions at full scale.
 Treat the current prototype as the behavioral and visual reference during migration.
 Migrate one working system at a time while preserving save compatibility.
+After P5 Region 1 parity, run P2 Lessons 1–3 through the same Region 1 before building shared Region 2.
+
+P0 is complete: both source packs validate and generate normalized content plus local Hanzi data.
+P1 is next: create the modular shell, core state/save/event modules, content loader, shared Region 1 map loading and isolated level saves.
 
 ## Development workflow
 

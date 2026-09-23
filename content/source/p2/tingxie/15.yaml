@@ -1,0 +1,438 @@
+title: 第十五课 (Lesson 15)
+vocab:
+  - word: 茄子
+    pinyin: qié zi
+    meaning: Brinjal
+    example: 妈妈今天在厨房里煮了一盘好吃的茄子。
+    sentenceBank:
+      - zh: 妈妈今天在厨房里煮了一盘好吃的茄子。
+        en: Mum cooked a plate of delicious brinjal in the kitchen today.
+      - zh: 我喜欢吃茄子，因为它又软又好吃。
+        en: I like eating brinjal because it is soft and tasty.
+      - zh: 菜市场里有很多新鲜又漂亮的茄子。
+        en: There are many fresh and beautiful brinjals at the market.
+      - zh: 妹妹看到紫色的茄子以后觉得很漂亮。
+        en: My younger sister thought the purple brinjal was very beautiful.
+      - zh: 爸爸把茄子切好以后放进锅里煮。
+        en: Dad cut the brinjal and put it into the pot to cook.
+
+  - word: 紫
+    pinyin: zǐ
+    meaning: Purple
+    example: 花园里的紫色小花看起来非常漂亮。
+    sentenceBank:
+      - zh: 花园里的紫色小花看起来非常漂亮。
+        en: The purple flowers in the garden look very beautiful.
+      - zh: 妹妹最喜欢穿紫色的裙子去学校。
+        en: My younger sister likes wearing purple dresses to school the most.
+      - zh: 这个紫色的茄子又新鲜又大又漂亮。
+        en: This purple brinjal is fresh, big, and beautiful.
+      - zh: 我用紫色的蜡笔画了一朵小花。
+        en: I used a purple crayon to draw a little flower.
+      - zh: 天空出现紫色的云朵，看起来很特别。
+        en: Purple clouds appeared in the sky and looked very special.
+
+  - word: 番茄
+    pinyin: fān qié
+    meaning: Tomato
+    example: 妈妈把新鲜的番茄放进汤里一起煮。
+    sentenceBank:
+      - zh: 妈妈把新鲜的番茄放进汤里一起煮。
+        en: Mum put fresh tomatoes into the soup to cook together.
+      - zh: 我喜欢吃红红的番茄和绿色的青菜。
+        en: I like eating red tomatoes and green vegetables.
+      - zh: 菜市场里的番茄又大又红又新鲜。
+        en: The tomatoes at the market are big, red, and fresh.
+      - zh: 妹妹把番茄洗干净以后才开始吃。
+        en: My younger sister washed the tomato before eating it.
+      - zh: 爸爸用番茄做了一碗好吃的汤。
+        en: Dad made a delicious bowl of soup using tomatoes.
+
+  - word: 豆芽
+    pinyin: dòu yá
+    meaning: Bean sprouts
+    example: 妈妈在炒饭里面放了很多新鲜豆芽。
+    sentenceBank:
+      - zh: 妈妈在炒饭里面放了很多新鲜豆芽。
+        en: Mum put many fresh bean sprouts into the fried rice.
+      - zh: 我喜欢吃豆芽，因为它又脆又好吃。
+        en: I like eating bean sprouts because they are crunchy and tasty.
+      - zh: 菜市场里有一大袋新鲜的豆芽。
+        en: There is a big bag of fresh bean sprouts at the market.
+      - zh: 妹妹第一次吃豆芽的时候觉得很好吃。
+        en: My younger sister thought bean sprouts were tasty the first time she ate them.
+      - zh: 爸爸把豆芽洗干净以后放进锅里炒。
+        en: Dad washed the bean sprouts and then put them into the pan to fry.
+
+  - word: 黄
+    pinyin: huáng
+    meaning: Yellow
+    example: 桌上有一根黄黄的玉米看起来很甜。
+    sentenceBank:
+      - zh: 桌上有一根黄黄的玉米看起来很甜。
+        en: There is a yellow corn on the table that looks sweet.
+      - zh: 妹妹喜欢穿黄色的衣服去公园玩耍。
+        en: My younger sister likes wearing yellow clothes to the park.
+      - zh: 秋天到了，树上的叶子慢慢变黄了。
+        en: When autumn comes, the leaves on the trees slowly turn yellow.
+      - zh: 我用黄色的蜡笔画了一颗大太阳。
+        en: I used a yellow crayon to draw a big sun.
+      - zh: 菜市场里有许多黄色和绿色的蔬菜。
+        en: There are many yellow and green vegetables at the market.
+
+  - word: 白菜
+    pinyin: bái cài
+    meaning: Cabbage
+    example: 妈妈今天买了一棵新鲜的大白菜。
+    sentenceBank:
+      - zh: 妈妈今天买了一棵新鲜的大白菜。
+        en: Mum bought a fresh big cabbage today.
+      - zh: 我喜欢吃白菜，因为它又甜又好吃。
+        en: I like eating cabbage because it is sweet and tasty.
+      - zh: 伯伯把白菜洗干净以后放进锅里煮。
+        en: Uncle washed the cabbage and then put it into the pot to cook.
+      - zh: 菜市场里有很多新鲜的大白菜可以选择。
+        en: There are many fresh cabbages to choose from at the market.
+      - zh: 妹妹不太喜欢白菜，但是妈妈叫她吃。
+        en: My younger sister does not really like cabbage, but Mum told her to eat it.
+
+  - word: 扁豆
+    pinyin: biǎn dòu
+    meaning: Dutch bean
+    example: 妈妈把新鲜扁豆煮好以后放在桌上。
+    sentenceBank:
+      - zh: 妈妈把新鲜扁豆煮好以后放在桌上。
+        en: Mum cooked the fresh Dutch beans and put them on the table.
+      - zh: 我第一次吃扁豆的时候觉得味道很好。
+        en: I thought Dutch beans tasted good when I first ate them.
+      - zh: 伯伯在菜市场买了一些新鲜扁豆回家。
+        en: Uncle bought some fresh Dutch beans from the market.
+      - zh: 妹妹帮妈妈把扁豆洗干净准备煮饭。
+        en: My younger sister helped Mum wash the Dutch beans before cooking.
+      - zh: 扁豆可以和其他蔬菜一起煮来吃。
+        en: Dutch beans can be cooked and eaten with other vegetables.
+
+  - word: 苦瓜
+    pinyin: kǔ guā
+    meaning: Bitter gourd
+    example: 妈妈说苦瓜虽然苦，但是对身体很好。
+    sentenceBank:
+      - zh: 妈妈说苦瓜虽然苦，但是对身体很好。
+        en: Mum says that although bitter gourd is bitter, it is good for the body.
+      - zh: 妹妹不喜欢吃苦瓜，因为它的味道很苦。
+        en: My younger sister does not like eating bitter gourd because it tastes bitter.
+      - zh: 伯伯把苦瓜切好以后放进锅里煮。
+        en: Uncle cut the bitter gourd and put it into the pot to cook.
+      - zh: 菜市场里有很多绿色的苦瓜可以选择。
+        en: There are many green bitter gourds to choose from at the market.
+      - zh: 我第一次吃苦瓜时觉得味道有一点特别。
+        en: I thought the taste was a little unusual when I first ate bitter gourd.
+
+  - word: 玉米
+    pinyin: yù mǐ
+    meaning: Corn
+    example: 妈妈今天煮了一根香甜的玉米给我吃。
+    sentenceBank:
+      - zh: 妈妈今天煮了一根香甜的玉米给我吃。
+        en: Mum cooked a sweet corn for me to eat today.
+      - zh: 我喜欢吃黄色的玉米，因为它很甜。
+        en: I like eating yellow corn because it is sweet.
+      - zh: 伯伯在菜市场买了几根新鲜玉米回家。
+        en: Uncle bought several fresh corn cobs from the market.
+      - zh: 妹妹吃完玉米以后还想再吃一根。
+        en: My younger sister wanted another corn cob after finishing one.
+      - zh: 我们一起把玉米煮好以后坐下来吃。
+        en: We cooked the corn together and then sat down to eat.
+
+  - word: 甜
+    pinyin: tián
+    meaning: Sweet
+    example: 这个玉米又香又甜，大家都很喜欢吃。
+    sentenceBank:
+      - zh: 这个玉米又香又甜，大家都很喜欢吃。
+        en: This corn is fragrant and sweet, and everyone likes eating it.
+      - zh: 妈妈买的番茄吃起来又新鲜又甜。
+        en: The tomatoes Mum bought taste fresh and sweet.
+      - zh: 这颗玉米看起来很甜，我想马上吃。
+        en: This corn looks very sweet, and I want to eat it immediately.
+      - zh: 妹妹觉得水果比一些蔬菜更加甜。
+        en: My younger sister thinks fruit is sweeter than some vegetables.
+      - zh: 爸爸煮的玉米很甜，我吃了一大根。
+        en: The corn Dad cooked was very sweet, and I ate a whole large cob.
+
+  - word: 比
+    pinyin: bǐ
+    meaning: To compare
+    example: 妹妹喜欢比较红色和绿色的蔬菜。
+    sentenceBank:
+      - zh: 妹妹喜欢比较红色和绿色的蔬菜。
+        en: My younger sister likes comparing red and green vegetables.
+      - zh: 我觉得玉米比苦瓜甜很多，更好吃。
+        en: I think corn is much sweeter than bitter gourd and tastes better.
+      - zh: 哥哥说番茄比茄子容易煮熟一些。
+        en: My older brother says tomatoes are easier to cook than brinjals.
+      - zh: 妈妈让我们比一比谁的蔬菜更多。
+        en: Mum asked us to compare who has more vegetables.
+      - zh: 我们可以比一比这些蔬菜的颜色和大小。
+        en: We can compare the colours and sizes of these vegetables.
+
+  - word: 伯伯
+    pinyin: bó bo
+    meaning: Uncle (father's elder brother)
+    example: 伯伯今天来到我们家一起吃午餐。
+    sentenceBank:
+      - zh: 伯伯今天来到我们家一起吃午餐。
+        en: Uncle came to our house to have lunch with us today.
+      - zh: 伯伯喜欢种很多不同种类的蔬菜。
+        en: Uncle likes growing many different kinds of vegetables.
+      - zh: 周末的时候，我常常和伯伯一起买菜。
+        en: At weekends, I often go grocery shopping with Uncle.
+      - zh: 伯伯教我怎样拔萝卜和摘番茄。
+        en: Uncle taught me how to pull out radishes and pick tomatoes.
+      - zh: 伯伯煮了一锅好吃的萝卜汤给我们喝。
+        en: Uncle cooked a pot of delicious radish soup for us to drink.
+
+  - word: 萝卜汤
+    pinyin: luó bo tāng
+    meaning: Radish soup
+    example: 伯伯煮了一锅热热的萝卜汤给大家喝。
+    sentenceBank:
+      - zh: 伯伯煮了一锅热热的萝卜汤给大家喝。
+        en: Uncle cooked a pot of hot radish soup for everyone to drink.
+      - zh: 妈妈说萝卜汤很好喝，也对身体有好处。
+        en: Mum says radish soup tastes good and is also good for the body.
+      - zh: 今天的天气很冷，所以我们喝萝卜汤。
+        en: The weather is cold today, so we are drinking radish soup.
+      - zh: 妹妹喝了一碗萝卜汤以后觉得身体暖暖的。
+        en: My younger sister felt warm after drinking a bowl of radish soup.
+      - zh: 伯伯在厨房里认真地准备萝卜汤给大家。
+        en: Uncle carefully prepared radish soup for everyone in the kitchen.
+
+  - word: 煮
+    pinyin: zhǔ
+    meaning: To cook
+    example: 妈妈正在厨房里煮一锅好吃的汤。
+    sentenceBank:
+      - zh: 妈妈正在厨房里煮一锅好吃的汤。
+        en: Mum is cooking a pot of delicious soup in the kitchen.
+      - zh: 伯伯喜欢把新鲜蔬菜放进锅里煮。
+        en: Uncle likes putting fresh vegetables into the pot to cook.
+      - zh: 我们先把白菜洗干净，然后放进锅里煮。
+        en: We first wash the cabbage and then put it into the pot to cook.
+      - zh: 妹妹帮妈妈煮玉米，但是不会用火。
+        en: My younger sister helped Mum cook corn but does not know how to use the stove.
+      - zh: 爸爸煮的萝卜汤又香又好喝又温暖。
+        en: The radish soup Dad cooked was fragrant, tasty, and warm.
+
+  - word: 老鼠
+    pinyin: lǎo shǔ
+    meaning: Mouse
+    example: 小老鼠晚上偷偷跑进厨房找食物。
+    sentenceBank:
+      - zh: 小老鼠晚上偷偷跑进厨房找食物。
+        en: The little mouse secretly ran into the kitchen at night to find food.
+      - zh: 妹妹看到老鼠以后马上跑到妈妈身边。
+        en: My younger sister immediately ran to Mum after seeing the mouse.
+      - zh: 老鼠喜欢在安静的地方寻找可以吃的东西。
+        en: Mice like looking for things to eat in quiet places.
+      - zh: 我们发现厨房有老鼠，所以马上告诉爸爸。
+        en: We found a mouse in the kitchen, so we immediately told Dad.
+      - zh: 小老鼠闻到食物的香味以后跑了过来。
+        en: The little mouse ran over after smelling the food.
+
+  - word: 或者
+    pinyin: huò zhě
+    meaning: Or
+    example: 午餐你想吃番茄还是白菜或者玉米呢？
+    sentenceBank:
+      - zh: 午餐你想吃番茄还是白菜或者玉米呢？
+        en: Do you want to eat tomatoes, cabbage, or corn for lunch?
+      - zh: 我们可以喝萝卜汤或者吃炒饭当午餐。
+        en: We can have radish soup or fried rice for lunch.
+      - zh: 你可以选择茄子或者豆芽一起吃。
+        en: You can choose to eat brinjal or bean sprouts.
+      - zh: 妈妈问我要吃玉米或者番茄蔬菜。
+        en: Mum asked whether I wanted corn or tomatoes and vegetables.
+      - zh: 放学后我们可以回家或者去伯伯家吃饭。
+        en: After school, we can go home or go to Uncle's house to eat.
+
+  - word: 小猪
+    pinyin: xiǎo zhū
+    meaning: Little pig
+    example: 小猪每天在农场里开心地吃东西和玩耍。
+    sentenceBank:
+      - zh: 小猪每天在农场里开心地吃东西和玩耍。
+        en: The little pig happily eats and plays on the farm every day.
+      - zh: 妹妹喜欢看小猪在草地上慢慢走路。
+        en: My younger sister likes watching the little pig slowly walk on the grass.
+      - zh: 小猪看到玉米以后马上跑过去吃东西。
+        en: The little pig ran over to eat when it saw the corn.
+      - zh: 伯伯养了两只可爱的小猪在农场里。
+        en: Uncle keeps two cute little pigs on the farm.
+      - zh: 小猪喜欢吃蔬菜和其他新鲜的食物。
+        en: The little pig likes eating vegetables and other fresh food.
+
+  - word: 拔
+    pinyin: bá
+    meaning: To pull out
+    example: 伯伯教我怎样从泥土里拔萝卜出来。
+    sentenceBank:
+      - zh: 伯伯教我怎样从泥土里拔萝卜出来。
+        en: Uncle taught me how to pull radishes out of the soil.
+      - zh: 我们一起到菜园里拔新鲜的萝卜。
+        en: We went to the vegetable garden to pull out fresh radishes together.
+      - zh: 妹妹用力拔萝卜，可是萝卜还没有出来。
+        en: My younger sister pulled hard, but the radish did not come out yet.
+      - zh: 伯伯说拔萝卜的时候要小心保护叶子。
+        en: Uncle said we should be careful to protect the leaves when pulling out radishes.
+      - zh: 小朋友们一起拔萝卜，大家都觉得很好玩。
+        en: The children pulled out radishes together and everyone thought it was fun.
+
+  - word: 摘
+    pinyin: zhāi
+    meaning: To pick
+    example: 我们在菜园里一起摘新鲜的番茄。
+    sentenceBank:
+      - zh: 我们在菜园里一起摘新鲜的番茄。
+        en: We picked fresh tomatoes together in the vegetable garden.
+      - zh: 伯伯教妹妹怎样小心地摘玉米和蔬菜。
+        en: Uncle taught my younger sister how to carefully pick corn and vegetables.
+      - zh: 妈妈说没有成熟的果实不能随便摘。
+        en: Mum said that unripe fruit should not be picked carelessly.
+      - zh: 我们帮爷爷摘了很多新鲜的果实回家。
+        en: We helped Grandpa pick many fresh fruits to bring home.
+      - zh: 小猪不能自己摘菜园里的蔬菜来吃。
+        en: The little pig cannot pick vegetables from the garden by itself.
+
+  - word: 哭
+    pinyin: kū
+    meaning: To cry
+    example: 妹妹拔萝卜的时候太用力，所以开始哭了。
+    sentenceBank:
+      - zh: 妹妹拔萝卜的时候太用力，所以开始哭了。
+        en: My younger sister pulled the radish too hard and started crying.
+      - zh: 小朋友找不到妈妈的时候会觉得伤心哭泣。
+        en: Children may feel sad and cry when they cannot find their mothers.
+      - zh: 弟弟看到老鼠以后害怕得大声哭了。
+        en: My younger brother was so scared after seeing the mouse that he cried loudly.
+      - zh: 妈妈抱着妹妹，慢慢让她不要再哭。
+        en: Mum hugged my younger sister and slowly helped her stop crying.
+      - zh: 我们不应该笑别人哭，要帮助他们开心起来。
+        en: We should not laugh at people who cry; we should help them feel happy.
+
+  - word: 黑
+    pinyin: hēi
+    meaning: Black
+    example: 晚上天空很黑，我们看不清路了。
+    sentenceBank:
+      - zh: 晚上天空很黑，我们看不清路了。
+        en: The sky was very dark at night, and we could not see the road clearly.
+      - zh: 那只黑色的老鼠跑进厨房里面去了。
+        en: That black mouse ran into the kitchen.
+      - zh: 哥哥穿了一件黑色的衣服去学校。
+        en: My older brother wore a black shirt to school.
+      - zh: 黑色的土里长出了很多新鲜蔬菜。
+        en: Many fresh vegetables grew in the dark soil.
+      - zh: 妹妹用黑色蜡笔画了一只小老鼠。
+        en: My younger sister used a black crayon to draw a little mouse.
+
+  - word: 挖
+    pinyin: wā
+    meaning: To dig
+    example: 伯伯带我们到菜园里一起挖萝卜。
+    sentenceBank:
+      - zh: 伯伯带我们到菜园里一起挖萝卜。
+        en: Uncle took us to the vegetable garden to dig up radishes together.
+      - zh: 小朋友用小铲子挖泥土种下新的种子。
+        en: The children used small spades to dig the soil and plant new seeds.
+      - zh: 我们挖开泥土以后发现很多小根。
+        en: After digging the soil, we found many small roots.
+      - zh: 妹妹第一次挖萝卜，所以觉得非常有趣。
+        en: My younger sister found it very interesting to dig up radishes for the first time.
+      - zh: 伯伯教我们挖土时不要伤害植物的根。
+        en: Uncle taught us not to damage the plant roots when digging the soil.
+
+  - word: 考
+    pinyin: kǎo
+    meaning: To examine; test
+    example: 老师明天要考我们今天学习的生词。
+    sentenceBank:
+      - zh: 老师明天要考我们今天学习的生词。
+        en: The teacher will test us on today's new vocabulary tomorrow.
+      - zh: 妈妈说考试以前一定要认真读书和复习。
+        en: Mum says we must study and revise carefully before the test.
+      - zh: 哥哥每天努力学习，希望考试可以考好。
+        en: My older brother studies hard every day and hopes to do well in the test.
+      - zh: 老师考我们蔬菜的名字和颜色。
+        en: The teacher tested us on the names and colours of vegetables.
+      - zh: 妹妹认真准备以后，考试的时候很有信心。
+        en: After preparing carefully, my younger sister felt confident during the test.
+
+  - word: 根
+    pinyin: gēn
+    meaning: Root
+    example: 萝卜的根长在泥土里面很难看到。
+    sentenceBank:
+      - zh: 萝卜的根长在泥土里面很难看到。
+        en: The root of the radish grows in the soil and is difficult to see.
+      - zh: 伯伯教我们看看植物的根在哪里。
+        en: Uncle taught us where to find the roots of plants.
+      - zh: 这棵树的根又长又粗，非常健康。
+        en: The roots of this tree are long and thick, and very healthy.
+      - zh: 我们挖萝卜的时候发现它的根很大。
+        en: When we dug up the radish, we found that its root was very big.
+      - zh: 植物需要健康的根才能慢慢长大。
+        en: Plants need healthy roots to grow slowly.
+
+  - word: 果实
+    pinyin: guǒ shí
+    meaning: Fruit
+    example: 秋天到了，树上结出了很多甜甜的果实。
+    sentenceBank:
+      - zh: 秋天到了，树上结出了很多甜甜的果实。
+        en: When autumn came, the trees bore many sweet fruits.
+      - zh: 我们在菜园里看到许多成熟的果实。
+        en: We saw many ripe fruits in the vegetable garden.
+      - zh: 伯伯告诉我们不能摘还没有成熟的果实。
+        en: Uncle told us not to pick fruit that is not ripe yet.
+      - zh: 阳光和水可以帮助植物长出果实。
+        en: Sunlight and water can help plants grow fruit.
+      - zh: 妹妹看到树上的果实以后非常开心。
+        en: My younger sister was very happy after seeing the fruit on the tree.
+
+  - word: 就
+    pinyin: jiù
+    meaning: Just
+    example: 放学以后，我就回家帮妈妈洗菜。
+    sentenceBank:
+      - zh: 放学以后，我就回家帮妈妈洗菜。
+        en: After school, I went straight home to help Mum wash vegetables.
+      - zh: 妹妹看到玉米以后就开心地跑过去。
+        en: My younger sister happily ran over as soon as she saw the corn.
+      - zh: 伯伯煮好萝卜汤以后，我们就一起吃饭。
+        en: After Uncle finished cooking the radish soup, we ate together.
+      - zh: 只要认真学习，我就能考到好成绩。
+        en: As long as I study hard, I can get good results in the test.
+      - zh: 雨停以后，我们就一起到菜园里摘菜。
+        en: After the rain stopped, we went to the vegetable garden to pick vegetables together.
+sentences:
+  - text: 爷爷在田里种菜。
+    segments:
+      - 爷爷
+      - 在
+      - 田里
+      - 种菜
+      - 。
+    icon: sun
+    description: Grandpa grows vegetables in the field.
+  - text: 我喜欢吃黄瓜和扁豆。
+    segments:
+      - 我
+      - 喜欢
+      - 吃
+      - 黄瓜
+      - 和
+      - 扁豆
+      - 。
+    icon: smile
+    description: I like eating cucumbers and long beans.

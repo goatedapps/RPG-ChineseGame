@@ -1,0 +1,20 @@
+- questionID: P2-CJ1
+  lessonIds:
+    - 1
+  question: ___ 下雨了，___ 我们不能出去玩。
+  options:
+    - 因为……所以
+    - 虽然……但是
+    - 如果……就
+    - 不但……而且
+  correct: 因为……所以
+- questionID: P2-CJ2
+  lessonIds:
+    - 2
+  question: 妹妹 ___ 很小，___ 已经会自己穿鞋子了。
+  options:
+    - 因为……所以
+    - 虽然……但是
+    - 一……就
+    - 一边……一边
+  correct: 虽然……但是

@@ -1,0 +1,302 @@
+- groupId: P2-CLZ2
+  subject: Chinese
+  passage:
+    title: 小月照顾奶奶
+    text: |-
+      小月的奶奶生病了，不能做饭给小月吃。小月做完了功课，就 [Q26]___ 到楼下的小贩中心去买鱼片汤。小月回到家，把鱼片汤分 [Q27]___ 给奶奶吃。奶奶 [Q28]___ 小月长大了，说："小月，你学会照顾奶奶，真是个 [Q29]___ 的好孩子！"小月说："奶奶，您天天照顾我，现在您生病了，我也 [Q30]___ 照顾您。"
+
+      词语库：1一半 2自己 3觉得 4一排 5聪明 6但是 7懂事 8应该
+  questions:
+    - format: Fill-in
+      text: 小月做完了功课，就 ___ 到楼下的小贩中心去买鱼片汤。
+      accepted:
+        - "2"
+        - 自己
+        - 2自己
+        - 2 自己
+      displayAnswer: 2 自己
+    - format: Fill-in
+      text: 小月回到家，把鱼片汤分 ___ 给奶奶吃。
+      accepted:
+        - "1"
+        - 一半
+        - 1一半
+        - 1 一半
+      displayAnswer: 1 一半
+    - format: Fill-in
+      text: 奶奶 ___ 小月长大了。
+      accepted:
+        - "3"
+        - 觉得
+        - 3觉得
+        - 3 觉得
+      displayAnswer: 3 觉得
+    - format: Fill-in
+      text: 你学会照顾奶奶，真是个 ___ 的好孩子！
+      accepted:
+        - "7"
+        - 懂事
+        - 7懂事
+        - 7 懂事
+      displayAnswer: 7 懂事
+    - format: Fill-in
+      text: 现在您生病了，我也 ___ 照顾您。
+      accepted:
+        - "8"
+        - 应该
+        - 8应该
+        - 8 应该
+      displayAnswer: 8 应该
+- groupId: P2-CLZ3
+  subject: Chinese
+  passage:
+    title: 妹妹不见了
+    text: |-
+      放学了，姐姐和妹妹一起回家。她们走去巴士站。姐姐一边走，一边拿出手机听 [Q23]___。到了巴士站，姐姐等了很久，巴士 [Q24]___ 没来。
+
+      过了一会儿，巴士来了。姐姐急忙跑上巴士。这时，姐姐才发现妹妹不见了。她马上跑下巴士。她听见一位老爷爷大声说："这里有一个小妹妹 [Q25]___ 了！"姐姐一看，[Q26]___ 是妹妹。姐姐脸红了起来，因为她没有好好 [Q27]___ 妹妹。
+
+      词语库：1也是 2保护 3然后 4原来 5还是 6游戏 7音乐 8迷路
+  questions:
+    - format: Fill-in
+      text: 姐姐一边走，一边拿出手机听 ___。
+      accepted:
+        - "7"
+        - 音乐
+        - 7音乐
+        - 7 音乐
+      displayAnswer: 7 音乐
+    - format: Fill-in
+      text: 到了巴士站，姐姐等了很久，巴士 ___ 没来。
+      accepted:
+        - "5"
+        - 还是
+        - 5还是
+        - 5 还是
+      displayAnswer: 5 还是
+    - format: Fill-in
+      text: 这里有一个小妹妹 ___ 了！
+      accepted:
+        - "8"
+        - 迷路
+        - 8迷路
+        - 8 迷路
+      displayAnswer: 8 迷路
+    - format: Fill-in
+      text: 姐姐一看，___ 是妹妹。
+      accepted:
+        - "4"
+        - 原来
+        - 4原来
+        - 4 原来
+      displayAnswer: 4 原来
+    - format: Fill-in
+      text: 姐姐脸红了起来，因为她没有好好 ___ 妹妹。
+      accepted:
+        - "2"
+        - 保护
+        - 2保护
+        - 2 保护
+      displayAnswer: 2 保护
+- groupId: P2-CLZ4
+  subject: Chinese
+  passage:
+    title: 小文买故事书
+    text: |-
+      一天下午，妈妈带小文到他们家 [Q20]___ 的书店去买故事书。他们一走进书店，就看到 [Q21]___ 的书架上放满了故事书。
+
+      小文从书架上拿了几本故事书来看，发现这几本故事书都很 [Q22]___。小文想把这几本故事书都买回家，[Q23]___ 妈妈只给他买一本。最后，小文选了一本最喜欢的故事书买回家，那本书的封面上画着一道美丽的 [Q24]___。
+
+      词语库：1但是 2彩虹 3还是 4一排排 5安静 6附近 7有趣 8一群群
+  questions:
+    - format: Fill-in
+      text: 妈妈带小文到他们家 ___ 的书店去买故事书。
+      accepted:
+        - "6"
+        - 附近
+        - 6附近
+        - 6 附近
+      displayAnswer: 6 附近
+    - format: Fill-in
+      text: 他们一走进书店，就看到 ___ 的书架上放满了故事书。
+      accepted:
+        - "4"
+        - 一排排
+        - 4一排排
+        - 4 一排排
+      displayAnswer: 4 一排排
+    - format: Fill-in
+      text: 小文发现这几本故事书都很 ___。
+      accepted:
+        - "7"
+        - 有趣
+        - 7有趣
+        - 7 有趣
+      displayAnswer: 7 有趣
+    - format: Fill-in
+      text: 小文想把这几本故事书都买回家，___ 妈妈只给他买一本。
+      accepted:
+        - "1"
+        - 但是
+        - 1但是
+        - 1 但是
+      displayAnswer: 1 但是
+    - format: Fill-in
+      text: 那本书的封面上画着一道美丽的 ___。
+      accepted:
+        - "2"
+        - 彩虹
+        - 2彩虹
+        - 2 彩虹
+      displayAnswer: 2 彩虹
+- groupId: P2-CLZ5
+  subject: Chinese
+  passage:
+    title: 美美的笔不见了
+    text: |-
+      上课时，美美（例：1）放在桌上的笔不见了。美美看见坐在 [Q20]___ 的小华正在做功课。她想 [Q21]___ 是小华拿了她的笔，就向小华要回她的笔。小华说他 [Q22]___ 拿美美的笔。
+
+      这时，老师走了过来，美美对老师说小华拿了她的笔。老师叫美美把书包里的 [Q23]___ 拿出来找一找。
+
+      美美在书包里找到了那支笔，她 [Q24]___ 自己做得不对，就向小华说对不起。从那天起，她们成了好朋友。
+
+      词语库：1发现 2东西 3旁边 4认识 5没有 6应该 7帮助 8知道
+  questions:
+    - format: Fill-in
+      text: 美美看见坐在 ___ 的小华正在做功课。
+      accepted:
+        - "3"
+        - 旁边
+        - 3旁边
+        - 3 旁边
+      displayAnswer: 3 旁边
+    - format: Fill-in
+      text: 她想 ___ 是小华拿了她的笔。
+      accepted:
+        - "6"
+        - 应该
+        - 6应该
+        - 6 应该
+      displayAnswer: 6 应该
+    - format: Fill-in
+      text: 小华说他 ___ 拿美美的笔。
+      accepted:
+        - "5"
+        - 没有
+        - 5没有
+        - 5 没有
+      displayAnswer: 5 没有
+    - format: Fill-in
+      text: 老师叫美美把书包里的 ___ 拿出来找一找。
+      accepted:
+        - "2"
+        - 东西
+        - 2东西
+        - 2 东西
+      displayAnswer: 2 东西
+    - format: Fill-in
+      text: 她 ___ 自己做得不对，就向小华说对不起。
+      accepted:
+        - "8"
+        - 知道
+        - 8知道
+        - 8 知道
+      displayAnswer: 8 知道
+- groupId: P2-CLZ6
+  subject: Chinese
+  passage:
+    title: 妈妈出门买东西
+    text: |-
+      一天早上，妈妈要去 [Q21]___ 买东西。出门前，妈妈对我说："妈妈不在家的 [Q22]___，你要好好 [Q23]___ 妹妹。"
+
+      妈妈出去了，我和妹妹在一起读书、写字。我们写了字，[Q24]___ 玩游戏。我们玩得很开心。
+
+      这时，我听到开门的声音，[Q25]___ 是妈妈回来了！妈妈说我是个好姐姐，我好开心！
+
+      词语库：1商店 2照顾 3原来 4让 5应该 6再 7有 8时候
+  questions:
+    - format: Fill-in
+      text: 一天早上，妈妈要去 ___ 买东西。
+      accepted:
+        - "1"
+        - 商店
+        - 1商店
+        - 1 商店
+      displayAnswer: 1 商店
+    - format: Fill-in
+      text: 妈妈不在家的 ___，你要好好照顾妹妹。
+      accepted:
+        - "8"
+        - 时候
+        - 8时候
+        - 8 时候
+      displayAnswer: 8 时候
+    - format: Fill-in
+      text: 妈妈不在家的时候，你要好好 ___ 妹妹。
+      accepted:
+        - "2"
+        - 照顾
+        - 2照顾
+        - 2 照顾
+      displayAnswer: 2 照顾
+    - format: Fill-in
+      text: 我们写了字，___ 玩游戏。
+      accepted:
+        - "6"
+        - 再
+        - 6再
+        - 6 再
+      displayAnswer: 6 再
+    - format: Fill-in
+      text: 我听到开门的声音，___ 是妈妈回来了！
+      accepted:
+        - "3"
+        - 原来
+        - 3原来
+        - 3 原来
+      displayAnswer: 3 原来
+- groupId: P2-CLZ7
+  subject: Chinese
+  passage:
+    title: 窗外的声音
+    text: |-
+      一天晚上，姐姐和妹妹在房里正要 [Q12]___。可是，妹妹听见窗外有 [Q13]___ 的声音。
+
+      妹妹说："姐姐，我很 [Q14]___，是不是有人在外面？"说完，妹妹跳到了姐姐的床上。
+
+      姐姐笑着说："我 [Q15]___ 那只是树叶在动的声音。"妹妹听了，才安心下来。
+
+      词语库：1奇怪 2睡觉 3害怕 4觉得 5讨厌
+  questions:
+    - format: Fill-in
+      text: 姐姐和妹妹在房里正要 ___。
+      accepted:
+        - "2"
+        - 睡觉
+        - 2睡觉
+        - 2 睡觉
+      displayAnswer: 2 睡觉
+    - format: Fill-in
+      text: 妹妹听见窗外有 ___ 的声音。
+      accepted:
+        - "1"
+        - 奇怪
+        - 1奇怪
+        - 1 奇怪
+      displayAnswer: 1 奇怪
+    - format: Fill-in
+      text: 姐姐，我很 ___，是不是有人在外面？
+      accepted:
+        - "3"
+        - 害怕
+        - 3害怕
+        - 3 害怕
+      displayAnswer: 3 害怕
+    - format: Fill-in
+      text: 我 ___ 那只是树叶在动的声音。
+      accepted:
+        - "4"
+        - 觉得
+        - 4觉得
+        - 4 觉得
+      displayAnswer: 4 觉得

@@ -1,0 +1,483 @@
+title: 第十课 (Lesson 10)
+vocab:
+  - word: 蚂蚁
+    pinyin: mǎ yǐ
+    meaning: Ant
+    example: 小蚂蚁在地上慢慢地爬来爬去。
+    sentenceBank:
+      - zh: 小蚂蚁在地上慢慢地爬来爬去。
+        en: The little ants are slowly crawling around on the ground.
+      - zh: 我在花园里看到很多小蚂蚁。
+        en: I saw many little ants in the garden.
+      - zh: 蚂蚁喜欢一起搬东西回自己的家。
+        en: Ants like to carry things back to their home together.
+      - zh: 妹妹看到蚂蚁以后蹲下来观察它们。
+        en: My younger sister squatted down to observe the ants after seeing them.
+      - zh: 小蚂蚁正在寻找可以吃的食物。
+        en: The little ants are looking for food they can eat.
+
+  - word: 爬
+    pinyin: pá
+    meaning: To crawl
+    example: 小蚂蚁正在慢慢地爬上大树。
+    sentenceBank:
+      - zh: 小蚂蚁正在慢慢地爬上大树。
+        en: The little ant is slowly crawling up the big tree.
+      - zh: 小宝宝学会爬以后喜欢到处走动。
+        en: After learning to crawl, the baby likes moving around everywhere.
+      - zh: 小虫子正在树枝上慢慢地爬。
+        en: The little insect is slowly crawling on the branch.
+      - zh: 我看到一只蚂蚁爬进了一个小洞。
+        en: I saw an ant crawl into a small hole.
+      - zh: 小动物可以爬到很高的地方去找食物。
+        en: Small animals can climb to high places to find food.
+
+  - word: 蜜蜂
+    pinyin: mì fēng
+    meaning: Bee
+    example: 蜜蜂每天在花丛中飞来飞去采花蜜。
+    sentenceBank:
+      - zh: 蜜蜂每天在花丛中飞来飞去采花蜜。
+        en: Bees fly around in the flower bed every day collecting nectar.
+      - zh: 我们在花园里看到几只蜜蜂。
+        en: We saw several bees in the garden.
+      - zh: 蜜蜂喜欢在漂亮的花朵旁边飞。
+        en: Bees like flying around beautiful flowers.
+      - zh: 妹妹看到蜜蜂以后马上走到妈妈身边。
+        en: My younger sister immediately walked to Mum after seeing a bee.
+      - zh: 蜜蜂可以帮助花朵传花粉和结果。
+        en: Bees can help flowers with pollination and fruit production.
+
+  - word: 花丛
+    pinyin: huā cóng
+    meaning: Flower bed
+    example: 花丛里有很多蜜蜂和漂亮的蝴蝶。
+    sentenceBank:
+      - zh: 花丛里有很多蜜蜂和漂亮的蝴蝶。
+        en: There are many bees and beautiful butterflies in the flower bed.
+      - zh: 小蜜蜂每天都在花丛里面飞来飞去。
+        en: The little bees fly around in the flower bed every day.
+      - zh: 我们在花丛旁边发现了一只小蚂蚁。
+        en: We found a little ant beside the flower bed.
+      - zh: 花丛里的花开了以后非常漂亮。
+        en: The flowers in the flower bed are very beautiful after they bloom.
+      - zh: 妈妈告诉我不要随便走进花丛里面。
+        en: Mum told me not to walk into the flower bed carelessly.
+
+  - word: 飞
+    pinyin: fēi
+    meaning: To fly
+    example: 小鸟在天空中自由自在地飞来飞去。
+    sentenceBank:
+      - zh: 小鸟在天空中自由自在地飞来飞去。
+        en: The birds fly freely around in the sky.
+      - zh: 蜜蜂从一朵花飞到另一朵花。
+        en: The bee flew from one flower to another.
+      - zh: 小鸟看到妈妈以后马上飞回自己的窝。
+        en: The little bird flew back to its nest after seeing its mother.
+      - zh: 秋天的时候，有些鸟会飞到很远的地方。
+        en: In autumn, some birds fly to very far places.
+      - zh: 我看着天空中的小鸟慢慢飞走了。
+        en: I watched the little bird slowly fly away in the sky.
+
+  - word: 鱼儿
+    pinyin: yú ér
+    meaning: Fish
+    example: 池塘里的鱼儿在清清的水里游来游去。
+    sentenceBank:
+      - zh: 池塘里的鱼儿在清清的水里游来游去。
+        en: The fish in the pond swim around in the clear water.
+      - zh: 我们在池塘边看到很多漂亮的鱼儿。
+        en: We saw many beautiful fish beside the pond.
+      - zh: 鱼儿喜欢在水里寻找可以吃的食物。
+        en: Fish like looking for food they can eat in the water.
+      - zh: 妹妹看到鱼儿以后开心地笑了起来。
+        en: My younger sister smiled happily after seeing the fish.
+      - zh: 小鱼儿在水里一起快乐地游泳。
+        en: The little fish swim happily together in the water.
+
+  - word: 池塘
+    pinyin: chí táng
+    meaning: Pond
+    example: 学校后面的池塘里有很多鱼儿。
+    sentenceBank:
+      - zh: 学校后面的池塘里有很多鱼儿。
+        en: There are many fish in the pond behind the school.
+      - zh: 池塘里的水很清，可以看到小鱼儿。
+        en: The water in the pond is very clear, and we can see the little fish.
+      - zh: 青蛙喜欢坐在池塘旁边的石头上。
+        en: Frogs like sitting on the stones beside the pond.
+      - zh: 我们和老师一起到池塘边观察小动物。
+        en: We went to the pond with our teacher to observe small animals.
+      - zh: 池塘旁边长着很多绿色的小草。
+        en: There is lots of green grass growing beside the pond.
+
+  - word: 树枝
+    pinyin: shù zhī
+    meaning: Branch
+    example: 小鸟站在树枝上快乐地唱歌。
+    sentenceBank:
+      - zh: 小鸟站在树枝上快乐地唱歌。
+        en: The little bird stands on the branch and sings happily.
+      - zh: 一只小蚂蚁正在树枝上慢慢地爬。
+        en: A little ant is slowly crawling on the branch.
+      - zh: 树枝上有几片绿色的叶子。
+        en: There are several green leaves on the branch.
+      - zh: 风吹过来的时候，树枝轻轻地摇动。
+        en: When the wind blows, the branch gently moves.
+      - zh: 小鸟把树枝带回去做自己的窝。
+        en: The little bird brought branches back to make its nest.
+
+  - word: 跳
+    pinyin: tiào
+    meaning: To jump
+    example: 小青蛙从树枝旁边跳进了池塘。
+    sentenceBank:
+      - zh: 小青蛙从树枝旁边跳进了池塘。
+        en: The little frog jumped into the pond from beside the branch.
+      - zh: 青蛙喜欢在池塘边跳来跳去。
+        en: Frogs like jumping around beside the pond.
+      - zh: 妹妹看到小青蛙以后开心地跳起来。
+        en: My younger sister happily jumped up after seeing the little frog.
+      - zh: 小朋友们在操场上一起跳绳和运动。
+        en: The children jump rope and exercise together on the field.
+      - zh: 小鱼儿看到青蛙跳进水里就游走了。
+        en: The little fish swam away when it saw the frog jump into the water.
+
+  - word: 清清
+    pinyin: qīng qīng
+    meaning: Clear
+    example: 池塘里的水清清的，可以看到鱼儿。
+    sentenceBank:
+      - zh: 池塘里的水清清的，可以看到鱼儿。
+        en: The water in the pond is clear, and we can see the fish.
+      - zh: 小河里的水清清的，非常漂亮。
+        en: The water in the stream is clear and very beautiful.
+      - zh: 清清的河水里有很多小鱼儿。
+        en: There are many little fish in the clear river water.
+      - zh: 我们看到清清的池水，觉得非常开心。
+        en: We were very happy when we saw the clear pond water.
+      - zh: 山里的小溪流着清清的水。
+        en: A small stream in the mountains has clear water flowing through it.
+
+  - word: 青蛙
+    pinyin: qīng wā
+    meaning: Frog
+    example: 青蛙喜欢生活在池塘和青草旁边。
+    sentenceBank:
+      - zh: 青蛙喜欢生活在池塘和青草旁边。
+        en: Frogs like living beside ponds and grass.
+      - zh: 我们在池塘边看到一只绿色的青蛙。
+        en: We saw a green frog beside the pond.
+      - zh: 青蛙会跳进水里寻找可以吃的东西。
+        en: Frogs jump into the water to look for things they can eat.
+      - zh: 小青蛙晚上会在池塘旁边叫。
+        en: The little frog calls beside the pond at night.
+      - zh: 青蛙可以帮助我们捉很多害虫。
+        en: Frogs can help us catch many pests.
+
+  - word: 害虫
+    pinyin: hài chóng
+    meaning: Pest
+    example: 青蛙会帮助农夫捉田里的害虫。
+    sentenceBank:
+      - zh: 青蛙会帮助农夫捉田里的害虫。
+        en: Frogs help farmers catch pests in the fields.
+      - zh: 花园里的害虫会吃掉漂亮的花和叶子。
+        en: Pests in the garden will eat beautiful flowers and leaves.
+      - zh: 小鸟也会帮我们捉一些害虫。
+        en: Birds also help us catch some pests.
+      - zh: 农夫想办法保护植物不被害虫吃掉。
+        en: The farmer finds ways to protect plants from being eaten by pests.
+      - zh: 我们不要随便伤害可以捉害虫的小动物。
+        en: We should not hurt small animals that can catch pests.
+
+  - word: 事情
+    pinyin: shì qing
+    meaning: Matter
+    example: 我们一起调查这件有趣的事情。
+    sentenceBank:
+      - zh: 我们一起调查这件有趣的事情。
+        en: We investigated this interesting matter together.
+      - zh: 老师告诉我们发生事情以后不要害怕。
+        en: The teacher told us not to be afraid when something happens.
+      - zh: 妈妈问我今天在学校发生了什么事情。
+        en: Mum asked me what happened at school today.
+      - zh: 这件事情让我学到了很多新的知识。
+        en: This matter taught me a lot of new knowledge.
+      - zh: 我们要认真想办法解决这个事情。
+        en: We need to think carefully about how to solve this matter.
+
+  - word: 请
+    pinyin: qǐng
+    meaning: Please
+    example: 请大家安静地听老师说话和说明。
+    sentenceBank:
+      - zh: 请大家安静地听老师说话和说明。
+        en: Please listen quietly to the teacher's explanation.
+      - zh: 请你帮我看看这只小鸟在哪里。
+        en: Please help me see where this little bird is.
+      - zh: 请不要随便走进花丛里面玩耍。
+        en: Please do not walk into the flower bed to play.
+      - zh: 请大家一起保护学校里的小动物。
+        en: Please everyone help protect the small animals in the school.
+      - zh: 请你告诉我池塘里的鱼儿在哪里。
+        en: Please tell me where the fish in the pond are.
+
+  - word: 让
+    pinyin: ràng
+    meaning: To let
+    example: 妈妈让我先观察小动物再说话。
+    sentenceBank:
+      - zh: 妈妈让我先观察小动物再说话。
+        en: Mum let me observe the small animals before speaking.
+      - zh: 老师让我们一起到池塘边看看。
+        en: The teacher let us go to the pond together to have a look.
+      - zh: 爸爸让我帮助妹妹完成今天的功课。
+        en: Dad let me help my younger sister finish today's homework.
+      - zh: 妈妈让我不要靠近危险的地方。
+        en: Mum told me not to go near dangerous places.
+      - zh: 老师让小朋友一个一个地回答问题。
+        en: The teacher let the children answer the questions one by one.
+
+  - word: 小鸟
+    pinyin: xiǎo niǎo
+    meaning: Bird
+    example: 小鸟在树枝上唱歌和照顾自己的孩子。
+    sentenceBank:
+      - zh: 小鸟在树枝上唱歌和照顾自己的孩子。
+        en: The little bird sings on the branch and takes care of its babies.
+      - zh: 我们看到小鸟从树上飞到天空。
+        en: We saw the little bird fly from the tree into the sky.
+      - zh: 小鸟在花园里寻找可以吃的食物。
+        en: The little bird looks for food it can eat in the garden.
+      - zh: 妹妹喜欢每天观察学校里的小鸟。
+        en: My younger sister likes observing the birds at school every day.
+      - zh: 小鸟看到妈妈以后马上飞回自己的窝。
+        en: The little bird immediately flew back to its nest after seeing its mother.
+
+  - word: 叶子
+    pinyin: yè zi
+    meaning: Leaf
+    example: 秋天到了，树上的叶子慢慢变黄了。
+    sentenceBank:
+      - zh: 秋天到了，树上的叶子慢慢变黄了。
+        en: When autumn came, the leaves on the trees slowly turned yellow.
+      - zh: 小蚂蚁正在一片叶子上慢慢爬行。
+        en: The little ant is slowly crawling on a leaf.
+      - zh: 风吹过来以后，树上的叶子一直在动。
+        en: After the wind blew, the leaves on the tree kept moving.
+      - zh: 小鸟把叶子带回窝里帮助做房子。
+        en: The little bird brought leaves back to the nest to help make a home.
+      - zh: 我们在地上看到很多绿色的叶子。
+        en: We saw many green leaves on the ground.
+
+  - word: 好像
+    pinyin: hǎo xiàng
+    meaning: Seem like
+    example: 天空黑黑的，好像快要下雨了。
+    sentenceBank:
+      - zh: 天空黑黑的，好像快要下雨了。
+        en: The sky is dark, and it seems like it is going to rain.
+      - zh: 那只小鸟好像正在寻找自己的妈妈。
+        en: That little bird seems to be looking for its mother.
+      - zh: 池塘里的鱼儿好像在一起玩游戏。
+        en: The fish in the pond seem to be playing together.
+      - zh: 这只青蛙好像很喜欢吃小害虫。
+        en: This frog seems to like eating small pests.
+      - zh: 树上的小窝好像是小鸟做的。
+        en: The little nest in the tree seems to have been made by a bird.
+
+  - word: 窝
+    pinyin: wō
+    meaning: Nest
+    example: 小鸟在树上做了一个温暖的小窝。
+    sentenceBank:
+      - zh: 小鸟在树上做了一个温暖的小窝。
+        en: The little bird made a warm nest in the tree.
+      - zh: 我们在树枝上看到一个漂亮的小鸟窝。
+        en: We saw a beautiful bird's nest on the branch.
+      - zh: 小鸟每天都会回到自己的窝里面休息。
+        en: The little bird returns to its nest every day to rest.
+      - zh: 妈妈告诉我不要去碰树上的鸟窝。
+        en: Mum told me not to touch the bird's nest in the tree.
+      - zh: 小鸟把树枝和叶子带回窝里。
+        en: The little bird brought branches and leaves back to the nest.
+
+  - word: 捉
+    pinyin: zhuō
+    meaning: To catch
+    example: 青蛙正在池塘边捉很多小害虫。
+    sentenceBank:
+      - zh: 青蛙正在池塘边捉很多小害虫。
+        en: The frog is catching many small pests beside the pond.
+      - zh: 小鸟会帮助农夫捉花园里的害虫。
+        en: Birds help farmers catch pests in the garden.
+      - zh: 我们不能随便捉公园里的小动物。
+        en: We should not catch small animals in the park carelessly.
+      - zh: 青蛙跳起来捉飞过来的小虫子。
+        en: The frog jumped up to catch a small insect flying past.
+      - zh: 弟弟喜欢看青蛙捉虫子的有趣样子。
+        en: My younger brother likes watching frogs catch insects.
+
+  - word: 结出
+    pinyin: jié chū
+    meaning: To bear (fruit)
+    example: 春天开花以后，树上慢慢结出了果实。
+    sentenceBank:
+      - zh: 春天开花以后，树上慢慢结出了果实。
+        en: After flowering in spring, the tree slowly bore fruit.
+      - zh: 这棵树今年结出了很多甜甜的水果。
+        en: This tree bore many sweet fruits this year.
+      - zh: 我们每天给植物浇水，希望它结出果实。
+        en: We water the plants every day and hope they bear fruit.
+      - zh: 花开了以后，慢慢就会结出果实。
+        en: After the flowers bloom, they will slowly bear fruit.
+      - zh: 爷爷种的果树今年终于结出很多果子。
+        en: The fruit tree Grandpa planted finally bore many fruits this year.
+
+  - word: 地方
+    pinyin: dì fang
+    meaning: Place
+    example: 我们找到一个安静的地方观察小动物。
+    sentenceBank:
+      - zh: 我们找到一个安静的地方观察小动物。
+        en: We found a quiet place to observe small animals.
+      - zh: 池塘是鱼儿和青蛙喜欢住的地方。
+        en: The pond is a place where fish and frogs like to live.
+      - zh: 小鸟正在寻找一个安全的地方做窝。
+        en: The little bird is looking for a safe place to make a nest.
+      - zh: 公园里有很多适合孩子玩的地方。
+        en: There are many places in the park suitable for children to play.
+      - zh: 我喜欢学校后面的那个安静地方。
+        en: I like that quiet place behind the school.
+
+  - word: 掉到
+    pinyin: diào dào
+    meaning: To drop
+    example: 一片叶子从树上掉到了地上。
+    sentenceBank:
+      - zh: 一片叶子从树上掉到了地上。
+        en: A leaf fell from the tree onto the ground.
+      - zh: 小苹果从树上掉到了泥土里面。
+        en: The little apple fell from the tree into the soil.
+      - zh: 我的铅笔不小心掉到了桌子下面。
+        en: My pencil accidentally fell under the table.
+      - zh: 小鸟看到食物掉到地上以后飞下来。
+        en: The little bird flew down after seeing food fall onto the ground.
+      - zh: 一颗种子掉到泥土里慢慢长大了。
+        en: A seed fell into the soil and slowly grew.
+
+  - word: 泥土
+    pinyin: ní tǔ
+    meaning: Soil
+    example: 种子掉进泥土以后慢慢长成了一棵树。
+    sentenceBank:
+      - zh: 种子掉进泥土以后慢慢长成了一棵树。
+        en: After the seed fell into the soil, it slowly grew into a tree.
+      - zh: 小花的根长在泥土里面吸收水分。
+        en: The roots of the flower grow in the soil and absorb water.
+      - zh: 下雨以后，花园里的泥土变得很湿。
+        en: After the rain, the soil in the garden became very wet.
+      - zh: 爷爷教我怎样把种子放进泥土里。
+        en: Grandpa taught me how to put seeds into the soil.
+      - zh: 我们一起在泥土里种下小树苗。
+        en: We planted small tree seedlings in the soil together.
+
+  - word: 长成
+    pinyin: zhǎng chéng
+    meaning: To become
+    example: 小树苗慢慢长成了一棵大树。
+    sentenceBank:
+      - zh: 小树苗慢慢长成了一棵大树。
+        en: The little tree seedling slowly grew into a big tree.
+      - zh: 种子在泥土里慢慢长成漂亮的花。
+        en: The seed slowly grew into a beautiful flower in the soil.
+      - zh: 小鸟长大以后会长成健康的大鸟。
+        en: The little bird will grow into a healthy adult bird.
+      - zh: 爷爷希望小树可以长成大大的果树。
+        en: Grandpa hopes the little tree can grow into a big fruit tree.
+      - zh: 我们每天照顾植物，希望它快快长成。
+        en: We take care of the plant every day and hope it grows quickly.
+
+  - word: 喜欢
+    pinyin: xǐ huan
+    meaning: To like
+    example: 我很喜欢观察花园里的小动物。
+    sentenceBank:
+      - zh: 我很喜欢观察花园里的小动物。
+        en: I really like observing the small animals in the garden.
+      - zh: 妹妹喜欢看小鸟在天空中飞。
+        en: My younger sister likes watching birds fly in the sky.
+      - zh: 青蛙喜欢生活在有水的地方。
+        en: Frogs like living in places with water.
+      - zh: 哥哥喜欢和朋友一起到公园观察植物。
+        en: My older brother likes observing plants in the park with his friends.
+      - zh: 我们都喜欢学习有趣的自然知识。
+        en: We all like learning interesting facts about nature.
+
+  - word: 眼睛
+    pinyin: yǎn jīng
+    meaning: Eye
+    example: 我们要保护自己的眼睛和身体健康。
+    sentenceBank:
+      - zh: 我们要保护自己的眼睛和身体健康。
+        en: We should protect our eyes and our health.
+      - zh: 小青蛙的眼睛又大又圆，非常可爱。
+        en: The little frog's eyes are big and round and very cute.
+      - zh: 小鸟用自己的眼睛寻找可以吃的食物。
+        en: The little bird uses its eyes to look for food it can eat.
+      - zh: 妈妈提醒我不要用手摸自己的眼睛。
+        en: Mum reminded me not to touch my eyes with my hands.
+      - zh: 我们用眼睛观察周围有趣的小动物。
+        en: We use our eyes to observe interesting small animals around us.
+
+  - word: 帮
+    pinyin: bāng
+    meaning: To help
+    example: 青蛙可以帮农夫捉田里的害虫。
+    sentenceBank:
+      - zh: 青蛙可以帮农夫捉田里的害虫。
+        en: Frogs can help farmers catch pests in the fields.
+      - zh: 妈妈每天都会帮我准备上学的东西。
+        en: Mum helps me prepare my things for school every day.
+      - zh: 小鸟帮植物传播花粉，让它们结出果实。
+        en: Birds help plants spread pollen so that they can bear fruit.
+      - zh: 哥哥主动帮妹妹完成今天的功课。
+        en: My older brother willingly helps my younger sister finish today's homework.
+      - zh: 我们应该互相帮助，一起解决问题。
+        en: We should help each other and solve problems together.
+
+  - word: 甜
+    pinyin: tián
+    meaning: Sweet
+    example: 树上结出的水果吃起来又甜又好吃。
+    sentenceBank:
+      - zh: 树上结出的水果吃起来又甜又好吃。
+        en: The fruit that grew on the tree tastes sweet and delicious.
+      - zh: 妈妈买了一些又甜又大的西瓜。
+        en: Mum bought some big and sweet watermelons.
+      - zh: 这个苹果很甜，我很喜欢吃它。
+        en: This apple is very sweet, and I like eating it.
+      - zh: 果树结出的果子又新鲜又甜。
+        en: The fruits from the tree are fresh and sweet.
+      - zh: 妹妹吃了一口水果以后说非常甜。
+        en: My younger sister took a bite of the fruit and said it was very sweet.
+sentences:
+  - text: 小鸟在捉虫子。
+    segments:
+      - 小鸟
+      - 在
+      - 捉
+      - 虫子
+      - 。
+    icon: search
+    description: The little bird is catching insects.
+  - text: 哥哥喜欢看书。
+    segments:
+      - 哥哥
+      - 喜欢
+      - 看书
+      - 。
+    icon: book-open
+    description: My older brother likes reading books.

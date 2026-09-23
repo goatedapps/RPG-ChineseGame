@@ -1,0 +1,390 @@
+title: 第六课 (Lesson 6)
+vocab:
+  - word: 坐
+    pinyin: zuò
+    meaning: To sit
+    example: 我每天坐巴士去学校上课。
+    sentenceBank:
+      - zh: 我每天坐巴士去学校上课。
+        en: I take the bus to school every day.
+      - zh: 妈妈坐在我的旁边陪我一起吃饭。
+        en: Mum sits beside me and eats with me.
+      - zh: 上课的时候，我们要坐在自己的座位上。
+        en: During class, we should sit in our own seats.
+      - zh: 爸爸坐汽车送我和妹妹去学校。
+        en: Dad drives us to school by car.
+      - zh: 请大家坐下来，认真听老师说话。
+        en: Everyone, please sit down and listen carefully to the teacher.
+
+  - word: 学校
+    pinyin: xué xiào
+    meaning: School
+    example: 我每天早上都开心地来到学校上课。
+    sentenceBank:
+      - zh: 我每天早上都开心地来到学校上课。
+        en: I happily come to school for lessons every morning.
+      - zh: 我的学校有很多漂亮的树和花。
+        en: My school has many beautiful trees and flowers.
+      - zh: 放学以后，我和朋友一起走出学校。
+        en: After school, my friend and I walk out of school together.
+      - zh: 学校里面有音乐室和美术室。
+        en: There are a music room and an art room in the school.
+      - zh: 爸爸妈妈今天来到学校参加活动。
+        en: Dad and Mum came to school today to attend an activity.
+
+  - word: 骑
+    pinyin: qí
+    meaning: To ride
+    example: 哥哥每天骑脚踏车去学校上课。
+    sentenceBank:
+      - zh: 哥哥每天骑脚踏车去学校上课。
+        en: My older brother rides a bicycle to school every day.
+      - zh: 周末的时候，我喜欢骑脚踏车去公园。
+        en: At the weekend, I like riding my bicycle to the park.
+      - zh: 爸爸教我怎样安全地骑脚踏车。
+        en: Dad taught me how to ride a bicycle safely.
+      - zh: 妹妹还不会骑脚踏车，所以需要帮助。
+        en: My younger sister cannot ride a bicycle yet, so she needs help.
+      - zh: 我们骑脚踏车的时候一定要戴头盔。
+        en: We must wear helmets when riding bicycles.
+
+  - word: 脚踏车
+    pinyin: jiǎo tà chē
+    meaning: Bicycle
+    example: 我的脚踏车停在学校的大门旁边。
+    sentenceBank:
+      - zh: 我的脚踏车停在学校的大门旁边。
+        en: My bicycle is parked beside the school gate.
+      - zh: 哥哥每天骑脚踏车去学校上课。
+        en: My older brother rides a bicycle to school every day.
+      - zh: 爸爸帮我检查脚踏车有没有问题。
+        en: Dad helped me check whether my bicycle had any problems.
+      - zh: 我喜欢骑脚踏车和朋友一起去公园。
+        en: I like riding bicycles to the park with my friends.
+      - zh: 骑脚踏车以前，我们应该先戴好头盔。
+        en: Before riding a bicycle, we should put on our helmets properly.
+
+  - word: 应该
+    pinyin: yīng gāi
+    meaning: Should
+    example: 我们过马路的时候应该先看清楚。
+    sentenceBank:
+      - zh: 我们过马路的时候应该先看清楚。
+        en: We should look carefully before crossing the road.
+      - zh: 上学的时候，我们应该准时来到学校。
+        en: When going to school, we should arrive at school on time.
+      - zh: 骑脚踏车的时候应该戴好安全头盔。
+        en: We should wear a safety helmet when riding a bicycle.
+      - zh: 看见红灯的时候，我们应该马上停下来。
+        en: When we see a red light, we should stop immediately.
+      - zh: 过马路以前，我们应该先看看左右两边。
+        en: Before crossing the road, we should look to both sides first.
+
+  - word: 走
+    pinyin: zǒu
+    meaning: To walk
+    example: 我每天早上和朋友一起走路去学校。
+    sentenceBank:
+      - zh: 我每天早上和朋友一起走路去学校。
+        en: I walk to school with my friend every morning.
+      - zh: 我们走过天桥以后就可以看到学校。
+        en: After walking across the overhead bridge, we can see the school.
+      - zh: 妈妈每天陪我走到学校的大门口。
+        en: Mum walks with me to the school gate every day.
+      - zh: 下课以后，我们一起走到操场运动。
+        en: After class, we walk to the field to exercise together.
+      - zh: 请大家慢慢走，不要在路上跑来跑去。
+        en: Everyone, please walk slowly and do not run around on the road.
+
+  - word: 行人
+    pinyin: xíng rén
+    meaning: Pedestrian
+    example: 行人过马路的时候一定要注意安全。
+    sentenceBank:
+      - zh: 行人过马路的时候一定要注意安全。
+        en: Pedestrians must pay attention to safety when crossing the road.
+      - zh: 看到行人过马路，汽车应该先停下来。
+        en: When cars see pedestrians crossing the road, they should stop first.
+      - zh: 行人应该走在人行道上，不要走在马路中间。
+        en: Pedestrians should walk on the pavement and not in the middle of the road.
+      - zh: 很多行人在早上一起走过天桥。
+        en: Many pedestrians walk across the overhead bridge together in the morning.
+      - zh: 我们要礼貌地让行人先过马路。
+        en: We should politely let pedestrians cross the road first.
+
+  - word: 天桥
+    pinyin: tiān qiáo
+    meaning: Overhead bridge
+    example: 我们每天走过天桥再到学校上课。
+    sentenceBank:
+      - zh: 我们每天走过天桥再到学校上课。
+        en: We cross the overhead bridge every day before going to school.
+      - zh: 妈妈告诉我要走天桥过马路。
+        en: Mum told me to use the overhead bridge to cross the road.
+      - zh: 天桥上有很多行人一起走路。
+        en: There are many pedestrians walking on the overhead bridge.
+      - zh: 我们从天桥上可以看到很多汽车。
+        en: We can see many cars from the overhead bridge.
+      - zh: 过马路的时候，走天桥会更加安全。
+        en: When crossing the road, using the overhead bridge is safer.
+
+  - word: 等
+    pinyin: děng
+    meaning: To wait
+    example: 我们要等绿灯亮了才可以过马路。
+    sentenceBank:
+      - zh: 我们要等绿灯亮了才可以过马路。
+        en: We have to wait until the green light comes on before crossing the road.
+      - zh: 妈妈在学校门口等我一起回家。
+        en: Mum waits for me at the school gate to go home together.
+      - zh: 请大家在这里等老师过来再出发。
+        en: Everyone, please wait here for the teacher before setting off.
+      - zh: 我每天早上都会等朋友一起去学校。
+        en: I wait for my friend to go to school together every morning.
+      - zh: 公共汽车还没有来，我们需要再等一会儿。
+        en: The bus has not arrived yet, so we need to wait a little longer.
+
+  - word: 停
+    pinyin: tíng
+    meaning: To stop
+    example: 看到红灯的时候，汽车一定要停下来。
+    sentenceBank:
+      - zh: 看到红灯的时候，汽车一定要停下来。
+        en: When the car sees a red light, it must stop.
+      - zh: 过马路以前，我们应该先停下来看看。
+        en: Before crossing the road, we should stop and look first.
+      - zh: 爸爸把汽车停在学校旁边的停车场。
+        en: Dad parked the car at the car park beside the school.
+      - zh: 老师叫我们停下来听清楚他的说明。
+        en: The teacher told us to stop and listen carefully to his instructions.
+      - zh: 下雨的时候，我们停在商店里面避雨。
+        en: When it rained, we stopped inside the shop to shelter from the rain.
+
+  - word: 才
+    pinyin: cái
+    meaning: Only then
+    example: 绿灯亮了，我们才可以走过马路。
+    sentenceBank:
+      - zh: 绿灯亮了，我们才可以走过马路。
+        en: Only when the green light comes on can we cross the road.
+      - zh: 妈妈说做完功课以后才可以出去玩。
+        en: Mum said we can only go out to play after finishing our homework.
+      - zh: 等老师来到以后，我们才开始上课。
+        en: We only started class after the teacher arrived.
+      - zh: 我吃完早餐以后才可以去学校。
+        en: I can only go to school after eating breakfast.
+      - zh: 等汽车停下来以后，行人才可以过马路。
+        en: Pedestrians can only cross the road after the cars have stopped.
+
+  - word: 绿灯
+    pinyin: lǜ dēng
+    meaning: Green light
+    example: 绿灯亮了以后，我们才可以过马路。
+    sentenceBank:
+      - zh: 绿灯亮了以后，我们才可以过马路。
+        en: We can only cross the road after the green light comes on.
+      - zh: 看到绿灯以后，爸爸才开车向前走。
+        en: Dad only drove forward after seeing the green light.
+      - zh: 我们要等绿灯亮了才可以走。
+        en: We have to wait for the green light before we can walk.
+      - zh: 过马路时一定要看清楚绿灯和红灯。
+        en: When crossing the road, we must look carefully at the green and red lights.
+      - zh: 绿灯亮的时候，行人可以安全地过马路。
+        en: When the green light is on, pedestrians can safely cross the road.
+
+  - word: 亮
+    pinyin: liàng
+    meaning: To light up
+    example: 天黑以后，街上的灯慢慢亮起来了。
+    sentenceBank:
+      - zh: 天黑以后，街上的灯慢慢亮起来了。
+        en: After it became dark, the street lights slowly lit up.
+      - zh: 绿灯亮了以后，我们才可以过马路。
+        en: After the green light comes on, we can cross the road.
+      - zh: 早上太阳出来以后，天空就亮了。
+        en: After the sun came out in the morning, the sky became bright.
+      - zh: 教室里的灯亮了，大家开始上课。
+        en: The lights in the classroom came on, and everyone started class.
+      - zh: 妈妈打开房间的灯，房间马上亮起来。
+        en: Mum turned on the room light, and the room immediately became bright.
+
+  - word: 邻居
+    pinyin: lín jū
+    meaning: Neighbour
+    example: 我的邻居每天早上都会和我说早安。
+    sentenceBank:
+      - zh: 我的邻居每天早上都会和我说早安。
+        en: My neighbour says good morning to me every morning.
+      - zh: 邻居家的小朋友常常和我一起玩。
+        en: The child who lives next door often plays with me.
+      - zh: 我们和邻居住在同一座大楼里面。
+        en: We live in the same building as our neighbours.
+      - zh: 邻居看到我们过马路时会提醒我们小心。
+        en: Our neighbour reminds us to be careful when crossing the road.
+      - zh: 新邻居搬来以后，我们主动和他们打招呼。
+        en: After the new neighbours moved in, we greeted them first.
+
+  - word: 互相
+    pinyin: hù xiāng
+    meaning: Each other
+    example: 我和朋友每天都会互相帮助和照顾。
+    sentenceBank:
+      - zh: 我和朋友每天都会互相帮助和照顾。
+        en: My friend and I help and take care of each other every day.
+      - zh: 同学们应该互相帮助，一起完成功课。
+        en: Classmates should help each other and complete their homework together.
+      - zh: 我们过马路的时候要互相提醒小心。
+        en: We should remind each other to be careful when crossing the road.
+      - zh: 哥哥和妹妹会互相分享自己的玩具。
+        en: The older brother and younger sister share their toys with each other.
+      - zh: 好朋友之间应该互相尊重和关心。
+        en: Good friends should respect and care for each other.
+
+  - word: 早安
+    pinyin: zǎo ān
+    meaning: Good morning
+    example: 我每天早上都会向老师说一声早安。
+    sentenceBank:
+      - zh: 我每天早上都会向老师说一声早安。
+        en: I say good morning to my teacher every morning.
+      - zh: 今天早上，我看到邻居就说早安。
+        en: This morning, I said good morning when I saw my neighbour.
+      - zh: 妈妈每天都会笑着跟我说早安。
+        en: Mum smiles and says good morning to me every day.
+      - zh: 我们见到朋友的时候应该有礼貌地说早安。
+        en: We should politely say good morning when we see our friends.
+      - zh: 哥哥来到学校以后先向老师说早安。
+        en: After coming to school, my older brother first said good morning to the teacher.
+
+  - word: 阳光
+    pinyin: yáng guāng
+    meaning: Sunlight
+    example: 早上的阳光照进我们的教室里面。
+    sentenceBank:
+      - zh: 早上的阳光照进我们的教室里面。
+        en: The morning sunlight shines into our classroom.
+      - zh: 今天的阳光很好，大家都喜欢出去玩。
+        en: The sunlight is nice today, and everyone likes going outside to play.
+      - zh: 温暖的阳光让花园里的花开得更漂亮。
+        en: The warm sunlight makes the flowers in the garden bloom more beautifully.
+      - zh: 我喜欢坐在阳光下面看我的故事书。
+        en: I like sitting in the sunlight and reading my storybook.
+      - zh: 阳光照在树上，让绿色的叶子发亮。
+        en: The sunlight shines on the tree and makes the green leaves bright.
+
+  - word: 照
+    pinyin: zhào
+    meaning: To shine
+    example: 早上的阳光照在学校的大树上。
+    sentenceBank:
+      - zh: 早上的阳光照在学校的大树上。
+        en: The morning sunlight shines on the big tree at school.
+      - zh: 太阳照在我们的脸上，感觉非常温暖。
+        en: The sun shines on our faces and feels very warm.
+      - zh: 阳光照进房间以后，房间变得很亮。
+        en: After the sunlight shines into the room, the room becomes bright.
+      - zh: 太阳照着大地，让青草变得更绿。
+        en: The sun shines on the ground and makes the grass greener.
+      - zh: 清晨的阳光照着校园里的花和树。
+        en: The morning sunlight shines on the flowers and trees around the school.
+
+  - word: 美丽
+    pinyin: měi lì
+    meaning: Beautiful
+    example: 早上的校园在阳光下非常美丽。
+    sentenceBank:
+      - zh: 早上的校园在阳光下非常美丽。
+        en: The school campus is very beautiful in the morning sunlight.
+      - zh: 公园里的花开得非常美丽和漂亮。
+        en: The flowers in the park are very beautiful.
+      - zh: 妈妈穿上新衣服以后看起来很美丽。
+        en: Mum looks very beautiful after putting on her new clothes.
+      - zh: 我们一起画了一幅美丽的风景图。
+        en: We drew a beautiful scenery picture together.
+      - zh: 天空中的彩虹非常美丽，大家都喜欢看。
+        en: The rainbow in the sky is very beautiful, and everyone likes looking at it.
+
+  - word: 极
+    pinyin: jí
+    meaning: Extremely
+    example: 今天的天气好极了，大家都很开心。
+    sentenceBank:
+      - zh: 今天的天气好极了，大家都很开心。
+        en: Today's weather is extremely good, and everyone is very happy.
+      - zh: 这家餐厅的食物好吃极了，我们都喜欢。
+        en: The food at this restaurant is extremely delicious, and we all like it.
+      - zh: 妹妹看到小狗的时候开心极了。
+        en: My younger sister was extremely happy when she saw the puppy.
+      - zh: 学校开放日的活动有趣极了。
+        en: The school open house activities were extremely interesting.
+      - zh: 今天的阳光温暖极了，很适合出去运动。
+        en: Today's sunlight is extremely warm and is great for exercising outside.
+
+  - word: 跑步
+    pinyin: pǎo bù
+    meaning: To run
+    example: 哥哥每天早上都会到操场跑步运动。
+    sentenceBank:
+      - zh: 哥哥每天早上都会到操场跑步运动。
+        en: My older brother goes to the field to run and exercise every morning.
+      - zh: 我喜欢和朋友一起在公园里面跑步。
+        en: I like running in the park with my friends.
+      - zh: 老师告诉我们跑步以前要先做热身。
+        en: The teacher told us to warm up before running.
+      - zh: 妹妹每天放学以后都会和爸爸跑步。
+        en: My younger sister runs with Dad every day after school.
+      - zh: 跑步可以让我们的身体更加健康和强壮。
+        en: Running can make our bodies healthier and stronger.
+
+  - word: 旁
+    pinyin: páng
+    meaning: Beside
+    example: 学校旁有一个很大的公园可以运动。
+    sentenceBank:
+      - zh: 学校旁有一个很大的公园可以运动。
+        en: There is a big park beside the school where we can exercise.
+      - zh: 我坐在朋友旁边一起完成学校功课。
+        en: I sat beside my friend and completed our school homework together.
+      - zh: 妈妈站在学校大门旁等我回家。
+        en: Mum stood beside the school gate waiting for me to go home.
+      - zh: 足球场旁有很多学生正在跑步运动。
+        en: There are many students running and exercising beside the football field.
+      - zh: 公园旁边有一家小小的便利商店。
+        en: There is a small convenience shop beside the park.
+
+  - word: 想
+    pinyin: xiǎng
+    meaning: To think
+    example: 我想每天走路去学校锻炼身体。
+    sentenceBank:
+      - zh: 我想每天走路去学校锻炼身体。
+        en: I want to walk to school every day to exercise.
+      - zh: 妹妹想骑脚踏车和朋友一起上学。
+        en: My younger sister wants to ride a bicycle to school with her friends.
+      - zh: 我想学会怎样安全地过马路。
+        en: I want to learn how to cross the road safely.
+      - zh: 爸爸想让我每天多做一些运动。
+        en: Dad wants me to exercise more every day.
+      - zh: 我想和邻居一起走过天桥去学校。
+        en: I want to cross the overhead bridge with my neighbour to go to school.
+sentences:
+  - text: 我坐巴士来学校。
+    segments:
+      - 我
+      - 坐
+      - 巴士
+      - 来
+      - 学校
+      - 。
+    icon: activity
+    description: I take the bus to school.
+  - text: 公园里的花很美丽。
+    segments:
+      - 公园
+      - 里的
+      - 花
+      - 很
+      - 美丽
+      - 。
+    icon: smile
+    description: The flowers in the park are very beautiful.

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Word Spirit Quest — Next Stage Plan</title>
+  <style>
+    :root {
+      --ink: #1b2430;
+      --ink-2: #273445;
+      --paper: #f4efe2;
+      --paper-2: #e9e1cc;
+      --line: #cbbf9f;
+      --jade: #2f8a66;
+      --jade-dark: #1e684c;
+      --seal: #c63f2b;
+      --gold: #d9a62e;
+      --mist: #7f7aa6;
+      --shadow: 0 18px 50px rgba(15, 25, 35, .22);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(217,166,46,.16), transparent 27rem),
+        linear-gradient(145deg, #18212d, #293849 58%, #1d2936);
+      font-family: "Trebuchet MS", "Noto Sans SC", system-ui, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    .shell { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0 70px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 6vw, 68px);
+      color: var(--paper);
+      border: 1px solid rgba(244,239,226,.2);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(27,36,48,.98), rgba(47,138,102,.72));
+      box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "字灵";
+      position: absolute;
+      right: -12px;
+      bottom: -82px;
+      color: rgba(244,239,226,.08);
+      font-family: KaiTi, serif;
+      font-size: clamp(150px, 30vw, 320px);
+      line-height: 1;
+      transform: rotate(-8deg);
+    }
+    .eyebrow { margin: 0 0 8px; color: #f0c95a; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1, h2, h3 { line-height: 1.12; }
+    h1 { max-width: 850px; margin: 0; font-size: clamp(38px, 7vw, 76px); letter-spacing: -.04em; }
+    .lead { position: relative; z-index: 1; max-width: 760px; margin: 20px 0 0; color: #e8eadf; font-size: clamp(17px, 2.3vw, 22px); }
+    .seal { display: inline-grid; place-items: center; width: 68px; height: 68px; margin-top: 26px; color: white; border: 3px solid rgba(255,255,255,.8); border-radius: 16px; background: var(--seal); font-weight: 900; transform: rotate(-4deg); box-shadow: 0 7px 0 rgba(75,28,21,.55); }
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 28px; }
+    .nav a { padding: 10px 15px; color: var(--paper); border: 1px solid rgba(244,239,226,.25); border-radius: 999px; text-decoration: none; background: rgba(27,36,48,.55); }
+    section { margin-top: 24px; padding: clamp(22px, 4vw, 42px); border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: var(--shadow); }
+    .section-kicker { margin: 0 0 6px; color: var(--seal); font-size: 13px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 44px); letter-spacing: -.025em; }
+    h3 { margin: 0 0 8px; font-size: 21px; }
+    .muted { color: #5f6872; }
+    .status-grid, .metric-grid, .risk-grid, .options { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 22px; }
+    .card { min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: rgba(255,255,255,.48); }
+    .card strong { display: block; margin-bottom: 7px; font-size: 18px; }
+    .tag { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 12px; padding: 5px 10px; border-radius: 99px; color: white; background: var(--jade); font-size: 12px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; }
+    .tag.gold { color: var(--ink); background: #efc95d; }
+    .tag.mist { background: var(--mist); }
+    .metric { padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: #fffaf0; }
+    .metric b { display: block; color: var(--jade-dark); font-size: 38px; line-height: 1; }
+    .metric span { display: block; margin-top: 8px; color: #59636e; }
+    .table-wrap { overflow-x: auto; margin-top: 20px; border: 1px solid var(--line); border-radius: 16px; }
+    table { width: 100%; border-collapse: collapse; min-width: 720px; background: #fffaf0; }
+    th, td { padding: 13px 15px; text-align: left; border-bottom: 1px solid var(--line); }
+    th { color: var(--paper); background: var(--ink-2); }
+    tr:last-child td { border-bottom: 0; }
+    .good { color: var(--jade-dark); font-weight: 800; }
+    .small { font-size: 13px; }
+    .callout { margin-top: 18px; padding: 18px 20px; border-left: 6px solid var(--gold); border-radius: 10px; background: #fff7d9; }
+    .architecture { margin-top: 24px; padding: 18px; color: var(--ink); border: 1px solid var(--line); border-radius: 18px; background: #fffaf0; }
+    svg { display: block; width: 100%; height: auto; overflow: visible; }
+    .node { fill: var(--paper); stroke: currentColor; stroke-width: 2; }
+    .node-accent { fill: #dbeee5; stroke: var(--jade-dark); stroke-width: 2; }
+    .node-output { fill: #fff0d0; stroke: #98711a; stroke-width: 2; }
+    .edge { fill: none; stroke: #68727d; stroke-width: 2.4; marker-end: url(#arrow); }
+    .svg-title { font-size: 17px; font-weight: 800; fill: var(--ink); }
+    .svg-sub { font-size: 12px; fill: #5f6872; }
+    .roadmap { position: relative; display: grid; gap: 14px; margin-top: 24px; }
+    .step { display: grid; grid-template-columns: 70px minmax(0,1fr) minmax(220px,.72fr); gap: 18px; align-items: start; padding: 20px; border: 1px solid var(--line); border-radius: 16px; background: #fffaf0; }
+    .step-num { display: grid; place-items: center; width: 54px; height: 54px; color: white; border-radius: 50%; background: var(--jade); font-size: 22px; font-weight: 900; box-shadow: 0 5px 0 var(--jade-dark); }
+    .step p { margin: 5px 0 0; }
+    .evidence { padding-left: 15px; border-left: 3px solid var(--gold); color: #58616b; }
+    .recommended { border: 2px solid var(--jade); box-shadow: inset 0 0 0 3px rgba(47,138,102,.10); }
+    .option-label { display: block; cursor: pointer; }
+    .option-label input { margin-right: 7px; accent-color: var(--jade); }
+    .option-label p { margin: 10px 0 0 25px; color: #5e6872; }
+    textarea { width: 100%; min-height: 110px; margin-top: 12px; padding: 14px; color: var(--ink); border: 1px solid var(--line); border-radius: 12px; background: #fffdf7; resize: vertical; }
+    .action { margin-top: 15px; padding: 12px 18px; min-height: 46px; color: white; border: 0; border-radius: 12px; background: var(--jade); font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 var(--jade-dark); }
+    .action:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visible { outline: 4px solid rgba(217,166,46,.55); outline-offset: 3px; }
+    .risk-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .risk { border-top: 5px solid var(--mist); }
+    .done { border-top-color: var(--jade); }
+    code { padding: 2px 6px; border-radius: 5px; background: rgba(39,52,69,.09); }
+    footer { padding: 24px 4px 0; color: rgba(244,239,226,.8); text-align: center; }
+    @media (max-width: 850px) {
+      .status-grid, .metric-grid, .options, .risk-grid { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 58px minmax(0,1fr); }
+      .step .evidence { grid-column: 2; }
+    }
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 16px, 1180px); padding-top: 8px; }
+      .hero, section { border-radius: 18px; }
+      .step { grid-template-columns: 1fr; }
+      .step .evidence { grid-column: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">Development review · September 2026</p>
+      <h1>Move from a successful prototype to a shared game engine.</h1>
+      <p class="lead">The P2 pack is large enough to shape the architecture now. P2 and P5 will play through the same seven-region world, cast, quests, bosses, and Great Forgetter storyline. The safest next move is to preserve the P5 prototype as a reference, rebuild one tested system at a time, and prove that the shared Region 1 works with both curriculum packs before expanding the world.</p>
+      <span class="seal" aria-label="Recommended">GO</span>
+    </header>
+
+    <nav class="nav" aria-label="Plan sections">
+      <a href="#intake">P2 intake</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#sequence">Build sequence</a>
+      <a href="#decision">Choose direction</a>
+      <a href="#risks">Risks</a>
+    </nav>
+
+    <section id="intake">
+      <p class="section-kicker">01 / Content intake</p>
+      <h2>P2 is structurally ready for the build pipeline.</h2>
+      <p class="muted">The source files are now under <code>content/source/p2</code>. The same validator checks P2 and P5 without special cases.</p>
+      <div class="metric-grid">
+        <article class="metric" id="p2-lessons"><b>19</b><span>lessons and six-page stories</span></article>
+        <article class="metric" id="p2-words"><b>460</b><span>vocabulary words</span></article>
+        <article class="metric" id="p2-questions"><b>761</b><span>single and passage questions</span></article>
+      </div>
+      <div class="status-grid">
+        <article class="card" id="source-ready"><span class="tag">Passed</span><strong>Source readiness</strong>Required lesson files, vocabulary fields, story structure, IDs, lesson references, and answer options pass validation.</article>
+        <article class="card" id="mapping-pending"><span class="tag gold">Pending</span><strong>World-mapping readiness</strong>P2 needs lesson-to-region assignments, feature flags, text-density settings, and difficulty tuning before it should appear as playable. It reuses the P5 world and story.</article>
+        <article class="card" id="prototype-status"><span class="tag mist">Reference</span><strong>P5 prototype</strong>The current prototype remains the behavioral and visual reference while its systems move into modules.</article>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Question family</th><th>P2 supply</th><th>Campaign use</th></tr></thead>
+          <tbody>
+            <tr><td>Vocabulary / pinyin / usage</td><td>220 / 192 / 191</td><td class="good">Core battle and school pools</td></tr>
+            <tr><td>Comprehension</td><td>30 groups · 116 questions</td><td class="good">Reading Hall, with Higher Chinese kept optional</td></tr>
+            <tr><td>Cloze</td><td>6 groups · 29 questions</td><td>Occasional authored activity</td></tr>
+            <tr><td>Conjunction / sentence / phrase</td><td>2 / 2 / 1</td><td>Bonus content until expanded</td></tr>
+            <tr><td>Dialogue / practical / error correction</td><td>1 group each</td><td>Do not use as recurring gates yet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Product implication:</strong> “content installed” and “game ready” must remain separate states. The level picker should only enable P2 after its curriculum has been mapped and tuned for the shared world. Adding another level must never require another set of maps, villagers, quests, or bosses.</div>
+    </section>
+
+    <section id="architecture">
+      <p class="section-kicker">02 / Target architecture</p>
+      <h2>One engine and one world, with interchangeable curriculum packs.</h2>
+      <p class="muted">The loader combines the shared campaign with the selected school level’s words, questions, stories, feature flags, and tuning. Maps and story assets are built once.</p>
+      <figure class="architecture">
+        <svg viewBox="0 0 1040 430" role="img" aria-labelledby="arch-title arch-desc">
+          <title id="arch-title">Shared engine architecture for P2 and P5</title>
+          <desc id="arch-desc">P2 and P5 source YAML flow through one validator and builder. The selected curriculum and its small mapping file join one shared world and story in a level loader, which supplies a shared engine. Saves remain separate for each level.</desc>
+          <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#68727d"/></marker></defs>
+          <g id="source-packs"><title>Curriculum source packs</title>
+            <rect class="node" x="20" y="35" width="190" height="72" rx="15"/><text class="svg-title" x="46" y="65">P2 source</text><text class="svg-sub" x="46" y="88">19 lessons · YAML + stories</text>
+            <rect class="node" x="20" y="135" width="190" height="72" rx="15"/><text class="svg-title" x="46" y="165">P5 source</text><text class="svg-sub" x="46" y="188">17 lessons · YAML + stories</text>
+          </g>
+          <g id="content-build"><title>Shared validation and generation</title><rect class="node-accent" x="282" y="70" width="205" height="112" rx="18"/><text class="svg-title" x="316" y="108">Content build</text><text class="svg-sub" x="316" y="134">validate · normalize</text><text class="svg-sub" x="316" y="155">extract Hanzi data</text></g>
+          <path class="edge" d="M210 72 C245 72 247 100 282 105"/><path class="edge" d="M210 171 C245 171 247 149 282 145"/>
+          <g id="level-packages"><title>Selected curriculum and shared world</title>
+            <rect class="node-output" x="560" y="24" width="215" height="72" rx="15"/><text class="svg-title" x="587" y="54">Selected level</text><text class="svg-sub" x="587" y="77">learning · mapping · tuning</text>
+            <rect class="node-output" x="560" y="121" width="215" height="72" rx="15"/><text class="svg-title" x="587" y="151">One shared campaign</text><text class="svg-sub" x="587" y="174">maps · cast · quests · bosses</text>
+          </g>
+          <path class="edge" d="M487 108 C520 100 527 76 560 65"/>
+          <g id="loader"><title>Level loader</title><rect class="node-accent" x="838" y="70" width="178" height="112" rx="18"/><text class="svg-title" x="877" y="110">Level loader</text><text class="svg-sub" x="877" y="137">feature flags</text><text class="svg-sub" x="877" y="158">runtime indexes</text></g>
+          <path class="edge" d="M775 60 C810 60 814 99 838 107"/><path class="edge" d="M775 157 C808 157 816 146 838 143"/>
+          <g id="shared-engine"><title>Level-independent game engine</title><rect class="node-accent" x="338" y="280" width="365" height="108" rx="22"/><text class="svg-title" x="427" y="316">Shared game engine</text><text class="svg-sub" x="383" y="344">learning · battle · world · systems · UI</text><text class="svg-sub" x="423" y="366">no P2 or P5 constants</text></g>
+          <path class="edge" d="M925 182 C925 252 742 253 676 280"/>
+          <g id="isolated-saves"><title>Separate save for each school level</title>
+            <rect class="node" x="55" y="293" width="190" height="64" rx="15"/><text class="svg-title" x="92" y="321">Isolated saves</text><text class="svg-sub" x="91" y="343">wsq-save-p2 · wsq-save-p5</text>
+          </g>
+          <path class="edge" d="M338 333 L245 327"/>
+        </svg>
+      </figure>
+    </section>
+
+    <section id="sequence">
+      <p class="section-kicker">03 / Recommended sequence</p>
+      <h2>Prove reuse before building more world.</h2>
+      <div class="roadmap">
+        <article class="step" id="phase-foundation"><span class="step-num">1</span><div><h3>Foundation and content pipeline</h3><p>Create the modular shell, normalize both source packs, extract local Hanzi data, and establish save migrations, events, time, and deterministic random helpers.</p></div><p class="evidence">Exit: P2 and P5 both load in a content lab; validation and unit tests pass.</p></article>
+        <article class="step" id="phase-learning"><span class="step-num">2</span><div><h3>Learning core</h3><p>Move mastery, spaced review, question selection, writing, audio, and answer feedback into pure modules with feature-aware adapters.</p></div><p class="evidence">Exit: any supported P2 or P5 word can run all enabled skills without the world UI.</p></article>
+        <article class="step" id="phase-parity"><span class="step-num">3</span><div><h3>P5 Region 1 parity</h3><p>Rebuild the existing village, battles, school, Reading Hall, shop, parent controls, and boss against authored data while checking behavior against the prototype.</p></div><p class="evidence">Exit: the new build can replace the prototype for the complete Region 1 loop without losing saves.</p></article>
+        <article class="step" id="phase-p2"><span class="step-num">4</span><div><h3>P2 in the same Region 1</h3><p>Map P2 Lessons 1–3 into Scholar Village, Camping Forest, Misty Path, and Kitchen Garden. Reuse the same villagers, quests, Muddle King story, and maps while adapting learning content, text density, and combat tuning.</p></div><p class="evidence">Exit: switch P2 ↔ P5, play the same Region 1 with the appropriate curriculum, and restore each independent save. No duplicate world assets exist.</p></article>
+        <article class="step" id="phase-pilot"><span class="step-num">5</span><div><h3>Tablet pilot and hardening</h3><p>Observe first-use navigation, writing, battle comprehension, passage reading, parent switching, offline use, and recovery over several sessions.</p></div><p class="evidence">Exit: blockers are fixed and there is evidence to choose which campaign expands first.</p></article>
+        <article class="step" id="phase-expand"><span class="step-num">6</span><div><h3>Expand the shared world</h3><p>Build Regions 2–7 once. Each region reads the active level’s lesson range, stories, questions, and tuning while keeping the same locations, residents, quests, and plot.</p></div><p class="evidence">Exit: every new region works with P2 and P5 without duplicating maps or narrative content.</p></article>
+      </div>
+    </section>
+
+    <section id="decision">
+      <p class="section-kicker">04 / Direction to approve</p>
+      <h2>Which sequence should guide the rebuild?</h2>
+      <form data-lavish-question="rebuild-sequence" onsubmit="queuePlan(event)">
+        <div class="options">
+          <label class="card option-label recommended"><span class="tag">Recommended</span><strong><input type="radio" name="plan" value="balanced" checked>Shared foundation → P5 parity → P2 slice</strong><p>Uses the known prototype to reduce migration risk, then tests level independence before expensive world expansion.</p></label>
+          <label class="card option-label"><span class="tag gold">P2 priority</span><strong><input type="radio" name="plan" value="p2-first">Shared foundation → P2 in Region 1 first</strong><p>Gets younger learners into testing sooner, but has less prototype behavior available as a migration reference.</p></label>
+          <label class="card option-label"><span class="tag mist">World priority</span><strong><input type="radio" name="plan" value="world-first">Build all seven shared regions first</strong><p>Expands the visible world fastest, but postpones proof that the learning and progression systems adapt cleanly across school levels.</p></label>
+        </div>
+        <label for="plan-notes"><strong>Comments or adjustments</strong></label>
+        <textarea id="plan-notes" name="notes" placeholder="For example: keep the order, but make the P2 slice cover Lessons 1–4…"></textarea>
+        <button class="action" type="submit">Queue this direction</button>
+      </form>
+    </section>
+
+    <section id="risks">
+      <p class="section-kicker">05 / Controls and risks</p>
+      <h2>What needs protection during the rebuild.</h2>
+      <div class="risk-grid">
+        <article class="card done risk" id="risk-prototype"><strong>Keep the prototype available</strong>The published P5 prototype remains usable until the modular build reaches feature parity. It supplies the comparison behavior for migration tests.</article>
+        <article class="card risk" id="risk-saves"><strong>Preserve saves explicitly</strong>The new save loader needs tested migration from the current P5 format, separate P2 and P5 keys, backups, checksum validation, and export/import recovery.</article>
+        <article class="card risk" id="risk-sparse-content"><strong>Respect uneven P2 coverage</strong>Feature flags and shared-campaign validation prevent small question pools from becoming repetitive gates or causing missing-content failures.</article>
+        <article class="card risk" id="risk-rewrite"><strong>Avoid a big-bang rewrite</strong>Migrate content, learning, saves, world, battle, and UI in thin working slices. Each slice gets a reviewable page and focused tests before the next system moves.</article>
+      </div>
+      <div class="callout"><strong>Work already incorporated:</strong> P2 and P5 now live under <code>content/source/</code>, <code>levels.json</code> records source and world-mapping readiness separately, and <code>npm run validate:content</code> audits both packs. The specification now makes the seven-region world and main storyline shared across every school level.</div>
+    </section>
+    <footer>Word Spirit Quest · plan matched to the prototype’s ink, paper, jade, seal, gold, and mist design tokens.</footer>
+  </main>
+  <script>
+    function queuePlan(event) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const choice = data.get('plan');
+      const notes = String(data.get('notes') || '').trim();
+      const labels = {
+        balanced: 'Shared foundation, then P5 Region 1 parity, then a P2 Lessons 1–3 slice',
+        'p2-first': 'Shared foundation, then run P2 through shared Region 1 before P5 parity',
+        'world-first': 'Build all seven shared regions before multi-level validation'
+      };
+      const prompt = `Use this approved rebuild sequence: ${labels[choice]}.${notes ? ` Additional direction: ${notes}` : ''} Update the plan and implement the next unfinished milestone.`;
+      window.lavish.queuePrompt(prompt, {
+        tag: 'next-stage-decision',
+        text: `Rebuild sequence: ${labels[choice]}`,
+        element: form,
+        queueKey: 'rebuild-sequence',
+        data: { choice, notes }
+      });
+    }
+  </script>
+</body>
+</html>

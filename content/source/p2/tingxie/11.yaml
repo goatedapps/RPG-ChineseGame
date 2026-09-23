@@ -1,0 +1,389 @@
+title: 第十一课 (Lesson 11)
+vocab:
+  - word: 折过
+    pinyin: zhé guo
+    meaning: Have folded
+    example: 你以前折过纸飞机吗？我还没有试过。
+    sentenceBank:
+      - zh: 你以前折过纸飞机吗？我还没有试过。
+        en: Have you folded a paper aeroplane before? I have not tried it yet.
+      - zh: 我以前折过很多纸飞机，觉得非常有趣。
+        en: I have folded many paper aeroplanes before and found it very interesting.
+      - zh: 哥哥说他折过一只很大的纸船。
+        en: My older brother said he had folded a very big paper boat.
+      - zh: 你折过这样的纸飞机吗？它可以飞很远。
+        en: Have you folded a paper aeroplane like this? It can fly very far.
+      - zh: 妹妹第一次折过纸飞机的时候很开心。
+        en: My younger sister was very happy when she first folded a paper aeroplane.
+
+  - word: 纸飞机
+    pinyin: zhǐ fēi jī
+    meaning: Paper aeroplane
+    example: 我们在学校一起折纸飞机和比赛。
+    sentenceBank:
+      - zh: 我们在学校一起折纸飞机和比赛。
+        en: We folded paper aeroplanes and had a competition at school.
+      - zh: 哥哥教我怎样折一架纸飞机。
+        en: My older brother taught me how to fold a paper aeroplane.
+      - zh: 我的纸飞机飞过了教室前面的桌子。
+        en: My paper aeroplane flew over the desks at the front of the classroom.
+      - zh: 妹妹喜欢把纸飞机涂上很多漂亮的颜色。
+        en: My younger sister likes colouring her paper aeroplane with many beautiful colours.
+      - zh: 我们一起比赛，看谁的纸飞机飞得最远。
+        en: We competed to see whose paper aeroplane could fly the farthest.
+
+  - word: 吗
+    pinyin: ma
+    meaning: Word used at the end of a question
+    example: 你以前玩过这个有趣的游戏吗？
+    sentenceBank:
+      - zh: 你以前玩过这个有趣的游戏吗？
+        en: Have you played this interesting game before?
+      - zh: 你喜欢和朋友一起玩游戏吗？
+        en: Do you like playing games with your friends?
+      - zh: 你会折纸飞机和纸船吗？
+        en: Can you fold paper aeroplanes and paper boats?
+      - zh: 妹妹今天要和我们一起玩吗？
+        en: Is my younger sister going to play with us today?
+      - zh: 你知道这个游戏应该怎么玩吗？
+        en: Do you know how to play this game?
+
+  - word: 魔术方块
+    pinyin: mó shù fāng kuài
+    meaning: Rubik's Cube
+    example: 哥哥喜欢每天玩魔术方块和练习。
+    sentenceBank:
+      - zh: 哥哥喜欢每天玩魔术方块和练习。
+        en: My older brother likes playing with a Rubik's Cube and practising every day.
+      - zh: 我第一次玩魔术方块的时候觉得很难。
+        en: I thought the Rubik's Cube was very difficult the first time I played with it.
+      - zh: 姐姐教我怎样把魔术方块转回原来的样子。
+        en: My older sister taught me how to turn the Rubik's Cube back to its original state.
+      - zh: 弟弟花了很久才完成魔术方块。
+        en: My younger brother took a long time to complete the Rubik's Cube.
+      - zh: 我们比赛看谁可以最快完成魔术方块。
+        en: We competed to see who could complete the Rubik's Cube the fastest.
+
+  - word: 跟
+    pinyin: gēn
+    meaning: And
+    example: 我喜欢跟哥哥一起玩积木游戏。
+    sentenceBank:
+      - zh: 我喜欢跟哥哥一起玩积木游戏。
+        en: I like playing with blocks together with my older brother.
+      - zh: 妈妈跟我一起折了一只漂亮的纸船。
+        en: Mum and I folded a beautiful paper boat together.
+      - zh: 我想跟朋友一起玩跳棋游戏。
+        en: I want to play Chinese checkers with my friend.
+      - zh: 哥哥跟妹妹一起完成了拼图游戏。
+        en: My older brother and younger sister completed the jigsaw puzzle together.
+      - zh: 老师跟我们一起学习这个新的游戏。
+        en: The teacher learned this new game together with us.
+
+  - word: 跳棋
+    pinyin: tiào qí
+    meaning: Chinese checkers
+    example: 周末的时候，我喜欢跟朋友一起玩跳棋。
+    sentenceBank:
+      - zh: 周末的时候，我喜欢跟朋友一起玩跳棋。
+        en: At the weekend, I like playing Chinese checkers with my friends.
+      - zh: 哥哥教我怎样玩跳棋这个有趣的游戏。
+        en: My older brother taught me how to play the interesting game of Chinese checkers.
+      - zh: 我们玩跳棋的时候都要认真想一想。
+        en: We all have to think carefully when playing Chinese checkers.
+      - zh: 妹妹第一次玩跳棋，所以需要我的帮助。
+        en: My younger sister is playing Chinese checkers for the first time, so she needs my help.
+      - zh: 我们一家人晚上一起坐下来玩跳棋。
+        en: Our whole family sat down together to play Chinese checkers in the evening.
+
+  - word: 搭
+    pinyin: dā
+    meaning: To build up
+    example: 我喜欢用积木搭一座很大的房子。
+    sentenceBank:
+      - zh: 我喜欢用积木搭一座很大的房子。
+        en: I like using blocks to build a very big house.
+      - zh: 哥哥和我一起搭了一座漂亮的桥。
+        en: My older brother and I built a beautiful bridge together.
+      - zh: 妹妹用积木搭了一个小小的城堡。
+        en: My younger sister built a small castle with blocks.
+      - zh: 我们一起搭积木，最后做出一辆汽车。
+        en: We built with blocks together and finally made a car.
+      - zh: 搭积木的时候，我们要小心不要把它弄倒。
+        en: When building with blocks, we must be careful not to knock them over.
+
+  - word: 积木
+    pinyin: jī mù
+    meaning: Blocks
+    example: 弟弟喜欢用积木搭各种各样的东西。
+    sentenceBank:
+      - zh: 弟弟喜欢用积木搭各种各样的东西。
+        en: My younger brother likes using blocks to build all kinds of things.
+      - zh: 我们一起用积木搭了一座大房子。
+        en: We used blocks to build a big house together.
+      - zh: 妹妹把积木放在桌子上准备开始玩。
+        en: My younger sister put the blocks on the table and got ready to play.
+      - zh: 哥哥可以用积木搭出一辆很大的汽车。
+        en: My older brother can use blocks to build a very big car.
+      - zh: 玩完积木以后，我们要把它们收拾好。
+        en: After playing with the blocks, we have to tidy them up.
+
+  - word: 布娃娃
+    pinyin: bù wá wa
+    meaning: Rag doll
+    example: 妹妹最喜欢抱着她的布娃娃睡觉。
+    sentenceBank:
+      - zh: 妹妹最喜欢抱着她的布娃娃睡觉。
+        en: My younger sister likes hugging her rag doll while sleeping the most.
+      - zh: 妈妈送给妹妹一个漂亮的布娃娃。
+        en: Mum gave my younger sister a beautiful rag doll.
+      - zh: 妹妹每天都会帮布娃娃换漂亮的衣服。
+        en: My younger sister changes the rag doll's clothes every day.
+      - zh: 我们一起帮布娃娃整理她的小房间。
+        en: We helped the rag doll tidy her little room together.
+      - zh: 妹妹把布娃娃放在床上以后才去玩。
+        en: My younger sister put the rag doll on the bed before going to play.
+
+  - word: 吧
+    pinyin: ba
+    meaning: Word used at the end of a sentence
+    example: 我们一起玩这个有趣的游戏吧。
+    sentenceBank:
+      - zh: 我们一起玩这个有趣的游戏吧。
+        en: Let's play this interesting game together.
+      - zh: 放学以后我们一起去公园玩吧。
+        en: Let's go to the park to play after school.
+      - zh: 今天我们一起折纸飞机吧。
+        en: Let's fold paper aeroplanes together today.
+      - zh: 我们先把玩具收拾好再出去玩吧。
+        en: Let's tidy up the toys first before going out to play.
+      - zh: 你先教我这个游戏怎么玩吧。
+        en: Please teach me how to play this game first.
+
+  - word: 机器人
+    pinyin: jī qì rén
+    meaning: Robot
+    example: 哥哥有一个可以走路的小机器人。
+    sentenceBank:
+      - zh: 哥哥有一个可以走路的小机器人。
+        en: My older brother has a little robot that can walk.
+      - zh: 我喜欢看机器人做很多有趣的事情。
+        en: I like watching robots do many interesting things.
+      - zh: 妹妹收到一个机器人玩具以后非常开心。
+        en: My younger sister was very happy after receiving a robot toy.
+      - zh: 这个机器人可以走路，还可以说话唱歌。
+        en: This robot can walk, and it can also speak and sing.
+      - zh: 我们一起学习怎样让机器人向前走。
+        en: We learned together how to make the robot walk forward.
+
+  - word: 许多
+    pinyin: xǔ duō
+    meaning: Many
+    example: 公园里有许多孩子正在一起玩游戏。
+    sentenceBank:
+      - zh: 公园里有许多孩子正在一起玩游戏。
+        en: There are many children playing games together in the park.
+      - zh: 妈妈买了许多不同的玩具给我们玩。
+        en: Mum bought many different toys for us to play with.
+      - zh: 学校里有许多同学喜欢参加游戏活动。
+        en: Many students in the school like taking part in game activities.
+      - zh: 哥哥有许多积木可以搭房子和汽车。
+        en: My older brother has many blocks for building houses and cars.
+      - zh: 我们在房间里看到许多有趣的玩具。
+        en: We saw many interesting toys in the room.
+
+  - word: 跳跳绳
+    pinyin: tiào tiào shéng
+    meaning: Rope skipping
+    example: 妹妹每天放学以后喜欢和朋友跳跳绳。
+    sentenceBank:
+      - zh: 妹妹每天放学以后喜欢和朋友跳跳绳。
+        en: My younger sister likes skipping rope with her friends after school every day.
+      - zh: 我们在操场上一起跳跳绳和运动。
+        en: We skipped rope and exercised together on the field.
+      - zh: 老师教我们怎样安全地跳跳绳。
+        en: The teacher taught us how to skip rope safely.
+      - zh: 哥哥可以连续跳很久都不会停下来。
+        en: My older brother can keep skipping for a long time without stopping.
+      - zh: 跳跳绳可以让我们的身体更加健康。
+        en: Rope skipping can make our bodies healthier.
+
+  - word: 捏
+    pinyin: niē
+    meaning: To mould
+    example: 妹妹喜欢用泥土捏可爱的小动物。
+    sentenceBank:
+      - zh: 妹妹喜欢用泥土捏可爱的小动物。
+        en: My younger sister likes moulding cute little animals with clay.
+      - zh: 老师教我们怎样捏一个漂亮的小花。
+        en: The teacher taught us how to mould a beautiful little flower.
+      - zh: 我们一起捏了小猫和小狗的样子。
+        en: We moulded the shapes of cats and dogs together.
+      - zh: 哥哥用彩泥捏出一辆小小的汽车。
+        en: My older brother moulded a small car using coloured clay.
+      - zh: 捏东西的时候，我们要慢慢地用手做。
+        en: When moulding things, we should slowly make them with our hands.
+
+  - word: 拼拼图
+    pinyin: pīn pīn tú
+    meaning: To solve a jigsaw puzzle
+    example: 我和妹妹一起拼拼图，最后完成了整幅图。
+    sentenceBank:
+      - zh: 我和妹妹一起拼拼图，最后完成了整幅图。
+        en: My younger sister and I solved the jigsaw puzzle together and finally completed the whole picture.
+      - zh: 哥哥喜欢一个人安静地拼拼图游戏。
+        en: My older brother likes quietly solving jigsaw puzzles by himself.
+      - zh: 这幅拼图有很多小块，需要慢慢拼起来。
+        en: This jigsaw puzzle has many small pieces and needs to be put together slowly.
+      - zh: 我们找了很久才找到最后一块拼图。
+        en: We looked for a long time before finding the last puzzle piece.
+      - zh: 妹妹第一次拼拼图，所以需要爸爸帮助。
+        en: My younger sister is solving a jigsaw puzzle for the first time, so she needs Dad's help.
+
+  - word: 纸船
+    pinyin: zhǐ chuán
+    meaning: Paper boat
+    example: 我们用一张纸折了一只小纸船。
+    sentenceBank:
+      - zh: 我们用一张纸折了一只小纸船。
+        en: We used a piece of paper to fold a little paper boat.
+      - zh: 哥哥把纸船放进水里让它慢慢向前走。
+        en: My older brother put the paper boat in the water and let it move forward slowly.
+      - zh: 妹妹喜欢把纸船涂成很多漂亮的颜色。
+        en: My younger sister likes colouring the paper boat in many beautiful colours.
+      - zh: 我们比赛看谁的纸船可以走得最远。
+        en: We competed to see whose paper boat could go the farthest.
+      - zh: 下雨以后，我们在水坑里放小纸船玩。
+        en: After it rained, we played by putting little paper boats in puddles.
+
+  - word: 象棋
+    pinyin: xiàng qí
+    meaning: Chess
+    example: 爷爷喜欢在星期天教我下象棋。
+    sentenceBank:
+      - zh: 爷爷喜欢在星期天教我下象棋。
+        en: Grandpa likes teaching me how to play chess on Sundays.
+      - zh: 我和爸爸晚上常常一起下象棋。
+        en: Dad and I often play chess together in the evening.
+      - zh: 下象棋的时候，我们都要认真想一想。
+        en: When playing chess, we all need to think carefully.
+      - zh: 哥哥已经学会了很多下象棋的方法。
+        en: My older brother has already learned many ways to play chess.
+      - zh: 妹妹看我们下象棋，也想一起学习。
+        en: My younger sister watched us play chess and also wanted to learn.
+
+  - word: 五石子
+    pinyin: wǔ shí zi
+    meaning: Five Stones
+    example: 妹妹喜欢跟朋友一起玩五石子游戏。
+    sentenceBank:
+      - zh: 妹妹喜欢跟朋友一起玩五石子游戏。
+        en: My younger sister likes playing Five Stones with her friends.
+      - zh: 老师教我们怎样玩五石子这个传统游戏。
+        en: The teacher taught us how to play the traditional game of Five Stones.
+      - zh: 我第一次玩五石子的时候觉得很有趣。
+        en: I thought Five Stones was very interesting the first time I played it.
+      - zh: 我们坐在地上一起玩五石子游戏。
+        en: We sat on the floor and played Five Stones together.
+      - zh: 哥哥玩五石子很厉害，我常常输给他。
+        en: My older brother is very good at Five Stones, and I often lose to him.
+
+  - word: 更
+    pinyin: gèng
+    meaning: More
+    example: 今天我想学会更多有趣的游戏。
+    sentenceBank:
+      - zh: 今天我想学会更多有趣的游戏。
+        en: Today I want to learn more interesting games.
+      - zh: 哥哥比我更喜欢玩魔术方块。
+        en: My older brother likes playing with the Rubik's Cube more than I do.
+      - zh: 多练习以后，我可以玩得更好。
+        en: After practising more, I can play better.
+      - zh: 和朋友一起玩游戏会让我更加开心。
+        en: Playing games with friends makes me even happier.
+      - zh: 妹妹长大以后想学更多新的东西。
+        en: My younger sister wants to learn more new things as she grows up.
+
+  - word: 老鹰
+    pinyin: lǎo yīng
+    meaning: Eagle
+    example: 老鹰在天空中飞得又高又快。
+    sentenceBank:
+      - zh: 老鹰在天空中飞得又高又快。
+        en: The eagle flies very high and fast in the sky.
+      - zh: 我们在动物园看到一只很大的老鹰。
+        en: We saw a very big eagle at the zoo.
+      - zh: 老鹰用自己的眼睛寻找地上的食物。
+        en: The eagle uses its eyes to look for food on the ground.
+      - zh: 小朋友们在公园里玩老鹰捉小鸡。
+        en: The children played Eagle Catches Chickens in the park.
+      - zh: 老鹰飞过高高的山和绿色的树林。
+        en: The eagle flew over the high mountains and green forests.
+
+  - word: 追
+    pinyin: zhuī
+    meaning: To chase
+    example: 老鹰在天空中追着小鸟一起飞。
+    sentenceBank:
+      - zh: 老鹰在天空中追着小鸟一起飞。
+        en: The eagle chased the little bird as they flew in the sky.
+      - zh: 小朋友们一起玩游戏，开心地互相追。
+        en: The children played a game and happily chased each other.
+      - zh: 小狗看到小猫以后马上跑过去追它。
+        en: The dog ran over to chase the cat after seeing it.
+      - zh: 哥哥和弟弟在公园里一起追着跑。
+        en: The older and younger brothers chased each other around the park.
+      - zh: 我们玩老鹰捉小鸡的时候要小心追跑。
+        en: We need to be careful when chasing each other while playing Eagle Catches Chickens.
+
+  - word: 最
+    pinyin: zuì
+    meaning: Most
+    example: 我最喜欢和朋友一起玩游戏。
+    sentenceBank:
+      - zh: 我最喜欢和朋友一起玩游戏。
+        en: I like playing games with my friends the most.
+      - zh: 哥哥最喜欢玩魔术方块和象棋。
+        en: My older brother likes playing with the Rubik's Cube and chess the most.
+      - zh: 妹妹最喜欢她的布娃娃和小机器人。
+        en: My younger sister likes her rag doll and little robot the most.
+      - zh: 今天我最想学习怎样折纸飞机。
+        en: Today I most want to learn how to fold paper aeroplanes.
+      - zh: 在所有游戏里面，我最喜欢五石子。
+        en: Of all the games, I like Five Stones the most.
+
+  - word: 小鸡
+    pinyin: xiǎo jī
+    meaning: Chick
+    example: 小鸡跟着妈妈一起在草地上找食物。
+    sentenceBank:
+      - zh: 小鸡跟着妈妈一起在草地上找食物。
+        en: The chicks follow their mother and look for food on the grass.
+      - zh: 小朋友们喜欢看小鸡在院子里走来走去。
+        en: The children like watching the chicks walk around in the yard.
+      - zh: 小鸡看到妈妈以后马上跑到她身边。
+        en: The chick immediately ran to its mother after seeing her.
+      - zh: 我们在农场里看到很多可爱的小鸡。
+        en: We saw many cute chicks on the farm.
+      - zh: 小鸡正在草地上开心地吃东西和玩耍。
+        en: The chicks are happily eating and playing on the grass.
+sentences:
+  - text: 你玩过五石子吗？
+    segments:
+      - 你
+      - 玩过
+      - 五石子
+      - 吗
+      - "？"
+    icon: activity
+    description: Have you played five stones before?
+  - text: 我跟朋友一起下棋。
+    segments:
+      - 我
+      - 跟
+      - 朋友
+      - 一起
+      - 下棋
+      - 。
+    icon: users
+    description: I play chess together with my friend.

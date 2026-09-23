@@ -1,0 +1,1920 @@
+- questionID: P2-PY1
+  lessonIds:
+    - 1
+  question: 我喜欢吃__苹果__。（选出画线词语的汉语拼音）
+  options:
+    - píng guǒ
+    - píng guó
+    - pín guǒ
+    - pín guó
+  correct: píng guǒ
+- questionID: P2-PY2
+  lessonIds:
+    - 2
+  question: 妹妹每天__快乐__地上学去。（选出画线词语的汉语拼音）
+  options:
+    - kuài lè
+    - kuài lì
+    - guài lè
+    - guài lì
+  correct: kuài lè
+- questionID: P2-PY3
+  lessonIds:
+    - 1
+  question: 我的__父亲__每天都会送我去学校。（选出画线词语的汉语拼音）
+  options:
+    - fù qīn
+    - fǔ qīn
+    - fù qǐn
+    - hù qīn
+  correct: fù qīn
+- questionID: P2-PY4
+  lessonIds:
+    - 1
+  question: 我的__母亲__每天都会为我们准备早餐。（选出画线词语的汉语拼音）
+  options:
+    - mǔ qīn
+    - mù qīn
+    - mǔ qǐn
+    - mù qǐng
+  correct: mǔ qīn
+- questionID: P2-PY5
+  lessonIds:
+    - 1
+  question: 我的__兄弟__每天放学以后一起玩耍。（选出画线词语的汉语拼音）
+  options:
+    - xiōng dì
+    - xióng dì
+    - xiōng tì
+    - xióng tì
+  correct: xiōng dì
+- questionID: P2-PY6
+  lessonIds:
+    - 1
+  question: __过去__的生活和现在有很多不同。（选出画线词语的汉语拼音）
+  options:
+    - guò qù
+    - guó qù
+    - guò qū
+    - guó qū
+  correct: guò qù
+- questionID: P2-PY7
+  lessonIds:
+    - 1
+  question: 我__现在__正在房间里做我的功课。（选出画线词语的汉语拼音）
+  options:
+    - xiàn zài
+    - xiǎn zài
+    - xiàn zǎi
+    - xiǎn zǎi
+  correct: xiàn zài
+- questionID: P2-PY8
+  lessonIds:
+    - 1
+  question: 这件衣服很__合适__，我决定买下来。（选出画线词语的汉语拼音）
+  options:
+    - hé shì
+    - hè shì
+    - hé sì
+    - hè sì
+  correct: hé shì
+- questionID: P2-PY9
+  lessonIds:
+    - 1
+  question: __今年__我已经读小学二年级了。（选出画线词语的汉语拼音）
+  options:
+    - jīn nián
+    - jǐn nián
+    - jīn niǎn
+    - jǐn niǎn
+  correct: jīn nián
+- questionID: P2-PY10
+  lessonIds:
+    - 1
+  question: 我的姐姐现在读小学六__年级__。（选出画线词语的汉语拼音）
+  options:
+    - nián jí
+    - nián jì
+    - niǎn jí
+    - niǎn jì
+  correct: nián jí
+- questionID: P2-PY11
+  lessonIds:
+    - 1
+  question: 上课的时候，我们一定要__专心__听老师说话。（选出画线词语的汉语拼音）
+  options:
+    - zhuān xīn
+    - zhuān xīng
+    - zuān xīn
+    - zuān xīng
+  correct: zhuān xīn
+- questionID: P2-PY12
+  lessonIds:
+    - 1
+  question: 谢谢你昨天__帮助__我完成学校的功课。（选出画线词语的汉语拼音）
+  options:
+    - bāng zhù
+    - bāng zù
+    - báng zhù
+    - báng zù
+  correct: bāng zhù
+- questionID: P2-PY13
+  lessonIds:
+    - 2
+  question: 新年第一天，__全家__一起吃团圆饭。（选出画线词语的汉语拼音）
+  options:
+    - quán jiā
+    - quán jiá
+    - quǎn jiā
+    - quǎn jiá
+  correct: quán jiā
+- questionID: P2-PY14
+  lessonIds:
+    - 2
+  question: 新年前，我们全家一起做__大扫除__。（选出画线词语的汉语拼音）
+  options:
+    - dà sǎo chú
+    - dà sǎo cú
+    - dà sào chú
+    - dà sào cú
+  correct: dà sǎo chú
+- questionID: P2-PY15
+  lessonIds:
+    - 2
+  question: 学校的新年活动有很多精彩的__表演__。（选出画线词语的汉语拼音）
+  options:
+    - biǎo yǎn
+    - biào yǎn
+    - biǎo yán
+    - biào yán
+  correct: biǎo yǎn
+- questionID: P2-PY16
+  lessonIds:
+    - 2
+  question: 新年时，我们在社区看精彩的__舞龙__表演。（选出画线词语的汉语拼音）
+  options:
+    - wǔ lóng
+    - wù lóng
+    - wǔ nóng
+    - wù nóng
+  correct: wǔ lóng
+- questionID: P2-PY17
+  lessonIds:
+    - 2
+  question: 新年到了，我们一起到__外婆__家拜年。（选出画线词语的汉语拼音）
+  options:
+    - wài pó
+    - wài pò
+    - wèi pó
+    - wèi pò
+  correct: wài pó
+- questionID: P2-PY18
+  lessonIds:
+    - 2
+  question: 新年第一天，我们去外婆家__拜年__。（选出画线词语的汉语拼音）
+  options:
+    - bài nián
+    - bài niǎn
+    - bǎi nián
+    - bǎi niǎn
+  correct: bài nián
+- questionID: P2-PY19
+  lessonIds:
+    - 2
+  question: 我希望外婆新年__身体__健康，天天开心。（选出画线词语的汉语拼音）
+  options:
+    - shēn tǐ
+    - sēn tǐ
+    - shēn tí
+    - sēn tí
+  correct: shēn tǐ
+- questionID: P2-PY20
+  lessonIds:
+    - 2
+  question: 爸爸妈妈希望我的__学业__越来越好。（选出画线词语的汉语拼音）
+  options:
+    - xué yè
+    - xuě yè
+    - xué yě
+    - xuě yě
+  correct: xué yè
+- questionID: P2-PY21
+  lessonIds:
+    - 2
+  question: 妈妈准备了一盒香香的__鸡蛋卷__给大家吃。（选出画线词语的汉语拼音）
+  options:
+    - jī dàn juǎn
+    - jī dàn jiǎn
+    - jí dàn juǎn
+    - jí dàn jiǎn
+  correct: jī dàn juǎn
+- questionID: P2-PY22
+  lessonIds:
+    - 2
+  question: __新年__到了，我们全家一起庆祝这个节日。（选出画线词语的汉语拼音）
+  options:
+    - xīn nián
+    - xīn niǎn
+    - xīng nián
+    - xīng niǎn
+  correct: xīn nián
+- questionID: P2-PY23
+  lessonIds:
+    - 3
+  question: 我会自己用__筷子__夹菜和吃饭。（选出画线词语的汉语拼音）
+  options:
+    - kuài zi
+    - guài zi
+    - kuǎi zi
+    - guǎi zi
+  correct: kuài zi
+- questionID: P2-PY24
+  lessonIds:
+    - 3
+  question: 妈妈把__水壶__放在厨房的桌子上。（选出画线词语的汉语拼音）
+  options:
+    - shuǐ hú
+    - shuǐ fú
+    - suǐ hú
+    - suǐ fú
+  correct: shuǐ hú
+- questionID: P2-PY25
+  lessonIds:
+    - 3
+  question: 今天家里来了几位__客人__一起吃饭。（选出画线词语的汉语拼音）
+  options:
+    - kè rén
+    - kè lén
+    - kè rěn
+    - kè lěn
+  correct: kè rén
+- questionID: P2-PY26
+  lessonIds:
+    - 3
+  question: __主人__热情地请客人坐下来一起吃饭。（选出画线词语的汉语拼音）
+  options:
+    - zhǔ rén
+    - zhǔ lén
+    - zǔ rén
+    - zǔ lén
+  correct: zhǔ rén
+- questionID: P2-PY27
+  lessonIds:
+    - 3
+  question: 我的好__朋友__今天来到我家一起玩。（选出画线词语的汉语拼音）
+  options:
+    - péng you
+    - pén you
+    - péng yǒu
+    - pén yǒu
+  correct: péng you
+- questionID: P2-PY28
+  lessonIds:
+    - 3
+  question: 小狗有一双大大的__耳朵__，非常可爱。（选出画线词语的汉语拼音）
+  options:
+    - ěr duo
+    - ěr tuo
+    - ér duo
+    - ér tuo
+  correct: ěr duo
+- questionID: P2-PY29
+  lessonIds:
+    - 3
+  question: 小狗热的时候会伸出自己的__舌头__。（选出画线词语的汉语拼音）
+  options:
+    - shé tou
+    - shé tóu
+    - sé tou
+    - sé tóu
+  correct: shé tou
+- questionID: P2-PY30
+  lessonIds:
+    - 3
+  question: __原来__这只小狗是客人带来的。（选出画线词语的汉语拼音）
+  options:
+    - yuán lái
+    - yuán nái
+    - yuǎn lái
+    - yuǎn nái
+  correct: yuán lái
+- questionID: P2-PY31
+  lessonIds:
+    - 3
+  question: __第二天__早上，我们一起回到学校上课。（选出画线词语的汉语拼音）
+  options:
+    - dì èr tiān
+    - dì èr tián
+    - dí èr tiān
+    - dí èr tián
+  correct: dì èr tiān
+- questionID: P2-PY32
+  lessonIds:
+    - 3
+  question: 今天的天气__非常__好，我们一起去公园玩。（选出画线词语的汉语拼音）
+  options:
+    - fēi cháng
+    - fēi cáng
+    - féi cháng
+    - féi cáng
+  correct: fēi cháng
+- questionID: P2-PY33
+  lessonIds:
+    - 4
+  question: 小鸟喜欢在__树林__里面快乐地唱歌。（选出画线词语的汉语拼音）
+  options:
+    - shù lín
+    - shù nín
+    - sù lín
+    - sù nín
+  correct: shù lín
+- questionID: P2-PY34
+  lessonIds:
+    - 4
+  question: 我用彩色笔画了一个大大的__圆形__。（选出画线词语的汉语拼音）
+  options:
+    - yuán xíng
+    - yuán xín
+    - yuǎn xíng
+    - yuǎn xín
+  correct: yuán xíng
+- questionID: P2-PY35
+  lessonIds:
+    - 4
+  question: 我在纸上画了一个绿色的__三角形__。（选出画线词语的汉语拼音）
+  options:
+    - sān jiǎo xíng
+    - sān jiáo xíng
+    - shān jiǎo xíng
+    - shān jiáo xíng
+  correct: sān jiǎo xíng
+- questionID: P2-PY36
+  lessonIds:
+    - 4
+  question: 我先画一棵树，__然后__再画天空。（选出画线词语的汉语拼音）
+  options:
+    - rán hòu
+    - lán hòu
+    - rán hóu
+    - lán hóu
+  correct: rán hòu
+- questionID: P2-PY37
+  lessonIds:
+    - 4
+  question: 这幅图画有很多漂亮的__颜色__。（选出画线词语的汉语拼音）
+  options:
+    - yán sè
+    - yán shè
+    - yǎn sè
+    - yǎn shè
+  correct: yán sè
+- questionID: P2-PY38
+  lessonIds:
+    - 4
+  question: 今天的__天空__又蓝又漂亮，非常晴朗。（选出画线词语的汉语拼音）
+  options:
+    - tiān kōng
+    - tiān kōn
+    - tián kōng
+    - tián kōn
+  correct: tiān kōng
+- questionID: P2-PY39
+  lessonIds:
+    - 4
+  question: 早上的__太阳__照在我们的窗户上。（选出画线词语的汉语拼音）
+  options:
+    - tài yáng
+    - tǎi yáng
+    - tài yán
+    - tǎi yán
+  correct: tài yáng
+- questionID: P2-PY40
+  lessonIds:
+    - 4
+  question: 天空中有很多白白的__云朵__在飘。（选出画线词语的汉语拼音）
+  options:
+    - yún duǒ
+    - yún tuǒ
+    - yún duō
+    - yún tuō
+  correct: yún duǒ
+- questionID: P2-PY41
+  lessonIds:
+    - 4
+  question: 我用__彩色笔__画了一幅漂亮的图画。（选出画线词语的汉语拼音）
+  options:
+    - cǎi sè bǐ
+    - cǎi shè bǐ
+    - cài sè bǐ
+    - cài shè bǐ
+  correct: cǎi sè bǐ
+- questionID: P2-PY42
+  lessonIds:
+    - 4
+  question: 我用__蓝色__彩色笔画美丽的天空。（选出画线词语的汉语拼音）
+  options:
+    - lán sè
+    - nán sè
+    - lán shè
+    - nán shè
+  correct: lán sè
+- questionID: P2-PY43
+  lessonIds:
+    - 5
+  question: 学校的__音乐室__在三楼的最后一个房间。（选出画线词语的汉语拼音）
+  options:
+    - yīn yuè shì
+    - yīn yuè sì
+    - yīng yuè shì
+    - yīng yuè sì
+  correct: yīn yuè shì
+- questionID: P2-PY44
+  lessonIds:
+    - 5
+  question: 学校的__美术室__里面有很多漂亮的图画。（选出画线词语的汉语拼音）
+  options:
+    - měi shù shì
+    - měi shù sì
+    - měi sù shì
+    - měi sù sì
+  correct: měi shù shì
+- questionID: P2-PY45
+  lessonIds:
+    - 5
+  question: 音乐室就在美术室的__旁边__。（选出画线词语的汉语拼音）
+  options:
+    - páng biān
+    - páng biàn
+    - pán biān
+    - pán biàn
+  correct: páng biān
+- questionID: P2-PY46
+  lessonIds:
+    - 5
+  question: 学校的__足球场__在操场的另一边。（选出画线词语的汉语拼音）
+  options:
+    - zú qiú chǎng
+    - zú qiú cháng
+    - zǔ qiú chǎng
+    - zǔ qiú cháng
+  correct: zú qiú chǎng
+- questionID: P2-PY47
+  lessonIds:
+    - 5
+  question: 学生们每天都会到__操场__做运动。（选出画线词语的汉语拼音）
+  options:
+    - cāo chǎng
+    - cāo cháng
+    - chāo chǎng
+    - chāo cháng
+  correct: cāo chǎng
+- questionID: P2-PY48
+  lessonIds:
+    - 5
+  question: 我每天放学以后都会做一些__运动__。（选出画线词语的汉语拼音）
+  options:
+    - yùn dòng
+    - yùn dòn
+    - yǔn dòng
+    - yǔn dòn
+  correct: yùn dòng
+- questionID: P2-PY49
+  lessonIds:
+    - 5
+  question: 今天__奶奶__来到学校参加开放日活动。（选出画线词语的汉语拼音）
+  options:
+    - nǎi nai
+    - lǎi nai
+    - nǎi lai
+    - lǎi lai
+  correct: nǎi nai
+- questionID: P2-PY50
+  lessonIds:
+    - 5
+  question: 奶奶第一次来到学校，所以差一点__迷路__。（选出画线词语的汉语拼音）
+  options:
+    - mí lù
+    - mí nù
+    - mì lù
+    - mì nù
+  correct: mí lù
+- questionID: P2-PY51
+  lessonIds:
+    - 5
+  question: __山坡__上有很多绿色的树和青草。（选出画线词语的汉语拼音）
+  options:
+    - shān pō
+    - sān pō
+    - shān pó
+    - sān pó
+  correct: shān pō
+- questionID: P2-PY52
+  lessonIds:
+    - 5
+  question: 老师问我问题，我马上举手__回答__。（选出画线词语的汉语拼音）
+  options:
+    - huí dá
+    - huí tá
+    - huì dá
+    - huì tá
+  correct: huí dá
+- questionID: P2-PY53
+  lessonIds:
+    - 6
+  question: 我每天早上都开心地来到__学校__上课。（选出画线词语的汉语拼音）
+  options:
+    - xué xiào
+    - xué xiǎo
+    - xuě xiào
+    - xuě xiǎo
+  correct: xué xiào
+- questionID: P2-PY54
+  lessonIds:
+    - 6
+  question: 我的__脚踏车__停在学校的大门旁边。（选出画线词语的汉语拼音）
+  options:
+    - jiǎo tà chē
+    - jiǎo tà cē
+    - jiào tà chē
+    - jiào tà cē
+  correct: jiǎo tà chē
+- questionID: P2-PY55
+  lessonIds:
+    - 6
+  question: 我们过马路的时候__应该__先看清楚。（选出画线词语的汉语拼音）
+  options:
+    - yīng gāi
+    - yīn gāi
+    - yīng gǎi
+    - yīn gǎi
+  correct: yīng gāi
+- questionID: P2-PY56
+  lessonIds:
+    - 6
+  question: __行人__过马路的时候一定要注意安全。（选出画线词语的汉语拼音）
+  options:
+    - xíng rén
+    - xíng lén
+    - xín rén
+    - xín lén
+  correct: xíng rén
+- questionID: P2-PY57
+  lessonIds:
+    - 6
+  question: 我们每天走过__天桥__再到学校上课。（选出画线词语的汉语拼音）
+  options:
+    - tiān qiáo
+    - tiān qiào
+    - tián qiáo
+    - tián qiào
+  correct: tiān qiáo
+- questionID: P2-PY58
+  lessonIds:
+    - 6
+  question: __绿灯__亮了以后，我们才可以过马路。（选出画线词语的汉语拼音）
+  options:
+    - lǜ dēng
+    - nǜ dēng
+    - lǜ dēn
+    - nǜ dēn
+  correct: lǜ dēng
+- questionID: P2-PY59
+  lessonIds:
+    - 6
+  question: 我的__邻居__每天早上都会和我说早安。（选出画线词语的汉语拼音）
+  options:
+    - lín jū
+    - nín jū
+    - lín jù
+    - nín jù
+  correct: lín jū
+- questionID: P2-PY60
+  lessonIds:
+    - 6
+  question: 早上的__阳光__照进我们的教室里面。（选出画线词语的汉语拼音）
+  options:
+    - yáng guāng
+    - yáng guān
+    - yán guāng
+    - yán guān
+  correct: yáng guāng
+- questionID: P2-PY61
+  lessonIds:
+    - 6
+  question: 早上的校园在阳光下非常__美丽__。（选出画线词语的汉语拼音）
+  options:
+    - měi lì
+    - měi nì
+    - mèi lì
+    - mèi nì
+  correct: měi lì
+- questionID: P2-PY62
+  lessonIds:
+    - 6
+  question: 哥哥每天早上都会到操场__跑步__运动。（选出画线词语的汉语拼音）
+  options:
+    - pǎo bù
+    - pǎo bú
+    - pào bù
+    - pào bú
+  correct: pǎo bù
+- questionID: P2-PY63
+  lessonIds:
+    - 7
+  question: 我最喜欢在咖啡店喝一杯__奶茶__。（选出画线词语的汉语拼音）
+  options:
+    - nǎi chá
+    - lǎi chá
+    - nǎi cá
+    - lǎi cá
+  correct: nǎi chá
+- questionID: P2-PY64
+  lessonIds:
+    - 7
+  question: 妈妈今天早上做了一大盘香喷喷的__炒饭__。（选出画线词语的汉语拼音）
+  options:
+    - chǎo fàn
+    - cǎo fàn
+    - chǎo fǎn
+    - cǎo fǎn
+  correct: chǎo fàn
+- questionID: P2-PY65
+  lessonIds:
+    - 7
+  question: 哥哥最喜欢吃咖啡店里的香脆__炸鸡__。（选出画线词语的汉语拼音）
+  options:
+    - zhá jī
+    - zá jī
+    - zhá jí
+    - zá jí
+  correct: zhá jī
+- questionID: P2-PY66
+  lessonIds:
+    - 7
+  question: 爸爸喜欢早上喝一杯热热的__咖啡__。（选出画线词语的汉语拼音）
+  options:
+    - kā fēi
+    - gā fēi
+    - kā féi
+    - gā féi
+  correct: kā fēi
+- questionID: P2-PY67
+  lessonIds:
+    - 7
+  question: 买早餐的时候，我们要先__排队__等候。（选出画线词语的汉语拼音）
+  options:
+    - pái duì
+    - pái tuì
+    - pǎi duì
+    - pǎi tuì
+  correct: pái duì
+- questionID: P2-PY68
+  lessonIds:
+    - 7
+  question: 我们很快找到了四个空的__座位__。（选出画线词语的汉语拼音）
+  options:
+    - zuò wèi
+    - zuò wéi
+    - zòu wèi
+    - zòu wéi
+  correct: zuò wèi
+- questionID: P2-PY69
+  lessonIds:
+    - 7
+  question: __星期六__早上，我们一起去咖啡店吃早餐。（选出画线词语的汉语拼音）
+  options:
+    - xīng qī liù
+    - xīng qí liù
+    - xīn qī liù
+    - xīn qí liù
+  correct: xīng qī liù
+- questionID: P2-PY70
+  lessonIds:
+    - 7
+  question: 妈妈每天早上都会准备健康的__早餐__。（选出画线词语的汉语拼音）
+  options:
+    - zǎo cān
+    - zǎo càn
+    - zào cān
+    - zào càn
+  correct: zǎo cān
+- questionID: P2-PY71
+  lessonIds:
+    - 7
+  question: 咖啡店里传来食物的__香味__，让我很饿。（选出画线词语的汉语拼音）
+  options:
+    - xiāng wèi
+    - xiān wèi
+    - xiāng wéi
+    - xiān wéi
+  correct: xiāng wèi
+- questionID: P2-PY72
+  lessonIds:
+    - 7
+  question: 吃完早餐以后，我们一起__收拾__桌子。（选出画线词语的汉语拼音）
+  options:
+    - shōu shi
+    - sōu shi
+    - shōu si
+    - sōu si
+  correct: shōu shi
+- questionID: P2-PY73
+  lessonIds:
+    - 8
+  question: __医生__每天帮助很多生病的人恢复健康。（选出画线词语的汉语拼音）
+  options:
+    - yī shēng
+    - yī sēng
+    - yí shēng
+    - yí sēng
+  correct: yī shēng
+- questionID: P2-PY74
+  lessonIds:
+    - 8
+  question: __护士__每天都认真地照顾医院里的病人。（选出画线词语的汉语拼音）
+  options:
+    - hù shi
+    - fù shi
+    - hù si
+    - fù si
+  correct: hù shi
+- questionID: P2-PY75
+  lessonIds:
+    - 8
+  question: 妈妈每天都会__照顾__我们一家人的生活。（选出画线词语的汉语拼音）
+  options:
+    - zhào gù
+    - zào gù
+    - zhào gú
+    - zào gú
+  correct: zhào gù
+- questionID: P2-PY76
+  lessonIds:
+    - 8
+  question: __爷爷__每天早上都会到公园散步运动。（选出画线词语的汉语拼音）
+  options:
+    - yé ye
+    - yé yě
+    - yě ye
+    - yě yě
+  correct: yé ye
+- questionID: P2-PY77
+  lessonIds:
+    - 8
+  question: __消防员__每天努力工作保护大家的安全。（选出画线词语的汉语拼音）
+  options:
+    - xiāo fáng yuán
+    - xiāo háng yuán
+    - xiāo fáng yuǎn
+    - xiāo háng yuǎn
+  correct: xiāo fáng yuán
+- questionID: P2-PY78
+  lessonIds:
+    - 8
+  question: 发生__火灾__的时候，消防员马上来灭火。（选出画线词语的汉语拼音）
+  options:
+    - huǒ zāi
+    - huǒ zhāi
+    - huò zāi
+    - huò zhāi
+  correct: huǒ zāi
+- questionID: P2-PY79
+  lessonIds:
+    - 8
+  question: 消防员努力__保护__大家和我们的房子。（选出画线词语的汉语拼音）
+  options:
+    - bǎo hù
+    - bǎo fù
+    - bào hù
+    - bào fù
+  correct: bǎo hù
+- questionID: P2-PY80
+  lessonIds:
+    - 8
+  question: __建筑师__设计漂亮又安全的房子给大家住。（选出画线词语的汉语拼音）
+  options:
+    - jiàn zhù shī
+    - jiàn zù shī
+    - jiàn zhù sī
+    - jiàn zù sī
+  correct: jiàn zhù shī
+- questionID: P2-PY81
+  lessonIds:
+    - 8
+  question: 我们一家人住在一间温暖的__房子__里。（选出画线词语的汉语拼音）
+  options:
+    - fáng zi
+    - háng zi
+    - fáng zǐ
+    - háng zǐ
+  correct: fáng zi
+- questionID: P2-PY82
+  lessonIds:
+    - 8
+  question: __阿姨__每天都会在学校门口帮助小朋友。（选出画线词语的汉语拼音）
+  options:
+    - ā yí
+    - á yí
+    - ā yǐ
+    - á yǐ
+  correct: ā yí
+- questionID: P2-PY83
+  lessonIds:
+    - 9
+  question: 今天外面一直__刮风__，我们要关好窗户。（选出画线词语的汉语拼音）
+  options:
+    - guā fēng
+    - guā fēn
+    - guà fēng
+    - guà fēn
+  correct: guā fēng
+- questionID: P2-PY84
+  lessonIds:
+    - 9
+  question: 妈妈提醒我__记得__带雨伞去学校。（选出画线词语的汉语拼音）
+  options:
+    - jì de
+    - jí de
+    - jì té
+    - jí té
+  correct: jì de
+- questionID: P2-PY85
+  lessonIds:
+    - 9
+  question: 下雨以前，妈妈把家里的__窗户__关好。（选出画线词语的汉语拼音）
+  options:
+    - chuāng hu
+    - cuāng hu
+    - chuáng hu
+    - cuáng hu
+  correct: chuāng hu
+- questionID: P2-PY86
+  lessonIds:
+    - 9
+  question: 我今天__忘记__带雨伞，所以被雨淋湿了。（选出画线词语的汉语拼音）
+  options:
+    - wàng jì
+    - wàng jí
+    - wǎng jì
+    - wǎng jí
+  correct: wàng jì
+- questionID: P2-PY87
+  lessonIds:
+    - 9
+  question: 下雨的时候，我们要记得带__雨伞__。（选出画线词语的汉语拼音）
+  options:
+    - yǔ sǎn
+    - yǔ sǎng
+    - yù sǎn
+    - yù sǎng
+  correct: yǔ sǎn
+- questionID: P2-PY88
+  lessonIds:
+    - 9
+  question: __放学__以后，我和朋友一起走回家。（选出画线词语的汉语拼音）
+  options:
+    - fàng xué
+    - fàng xuě
+    - fǎng xué
+    - fǎng xuě
+  correct: fàng xué
+- questionID: P2-PY89
+  lessonIds:
+    - 9
+  question: 妈妈看到下大雨以后非常__着急__。（选出画线词语的汉语拼音）
+  options:
+    - zháo jí
+    - záo jí
+    - zháo jì
+    - záo jì
+  correct: zháo jí
+- questionID: P2-PY90
+  lessonIds:
+    - 9
+  question: __门铃__突然响了，妈妈马上走去开门。（选出画线词语的汉语拼音）
+  options:
+    - mén líng
+    - mén níng
+    - mén lín
+    - mén nín
+  correct: mén líng
+- questionID: P2-PY91
+  lessonIds:
+    - 9
+  question: 我忘记带雨伞，所以全身都被雨__淋湿__了。（选出画线词语的汉语拼音）
+  options:
+    - lín shī
+    - nín shī
+    - lín sī
+    - nín sī
+  correct: lín shī
+- questionID: P2-PY92
+  lessonIds:
+    - 9
+  question: 下雨的时候，__孩子__们都留在家里。（选出画线词语的汉语拼音）
+  options:
+    - hái zi
+    - hái zǐ
+    - hǎi zi
+    - hǎi zǐ
+  correct: hái zi
+- questionID: P2-PY93
+  lessonIds:
+    - 10
+  question: 小__蚂蚁__在地上慢慢地爬来爬去。（选出画线词语的汉语拼音）
+  options:
+    - mǎ yǐ
+    - mà yǐ
+    - mǎ yì
+    - mà yì
+  correct: mǎ yǐ
+- questionID: P2-PY94
+  lessonIds:
+    - 10
+  question: __蜜蜂__每天在花丛中飞来飞去采花蜜。（选出画线词语的汉语拼音）
+  options:
+    - mì fēng
+    - mì fēn
+    - mí fēng
+    - mí fēn
+  correct: mì fēng
+- questionID: P2-PY95
+  lessonIds:
+    - 10
+  question: 学校后面的__池塘__里有很多鱼儿。（选出画线词语的汉语拼音）
+  options:
+    - chí táng
+    - cí táng
+    - chí tán
+    - cí tán
+  correct: chí táng
+- questionID: P2-PY96
+  lessonIds:
+    - 10
+  question: 小鸟站在__树枝__上快乐地唱歌。（选出画线词语的汉语拼音）
+  options:
+    - shù zhī
+    - shù zī
+    - sù zhī
+    - sù zī
+  correct: shù zhī
+- questionID: P2-PY97
+  lessonIds:
+    - 10
+  question: __青蛙__喜欢生活在池塘和青草旁边。（选出画线词语的汉语拼音）
+  options:
+    - qīng wā
+    - qīn wā
+    - qíng wā
+    - qín wā
+  correct: qīng wā
+- questionID: P2-PY98
+  lessonIds:
+    - 10
+  question: 青蛙会帮助农夫捉田里的__害虫__。（选出画线词语的汉语拼音）
+  options:
+    - hài chóng
+    - hài cóng
+    - hǎi chóng
+    - hǎi cóng
+  correct: hài chóng
+- questionID: P2-PY99
+  lessonIds:
+    - 10
+  question: 秋天到了，树上的__叶子__慢慢变黄了。（选出画线词语的汉语拼音）
+  options:
+    - yè zi
+    - yè zǐ
+    - yè zì
+    - yé zi
+  correct: yè zi
+- questionID: P2-PY100
+  lessonIds:
+    - 10
+  question: 种子掉进__泥土__以后慢慢长成了一棵树。（选出画线词语的汉语拼音）
+  options:
+    - ní tǔ
+    - lí tǔ
+    - ní tú
+    - lí tú
+  correct: ní tǔ
+- questionID: P2-PY101
+  lessonIds:
+    - 10
+  question: 我们要保护自己的__眼睛__和身体健康。（选出画线词语的汉语拼音）
+  options:
+    - yǎn jīng
+    - yǎn jīn
+    - yàn jīng
+    - yàn jīn
+  correct: yǎn jīng
+- questionID: P2-PY102
+  lessonIds:
+    - 10
+  question: 我很__喜欢__观察花园里的小动物。（选出画线词语的汉语拼音）
+  options:
+    - xǐ huan
+    - xì huan
+    - xǐ fan
+    - xì fan
+  correct: xǐ huan
+- questionID: P2-PY103
+  lessonIds:
+    - 11
+  question: 我们在学校一起折__纸飞机__和比赛。（选出画线词语的汉语拼音）
+  options:
+    - zhǐ fēi jī
+    - zǐ fēi jī
+    - zhǐ fēi jí
+    - zǐ fēi jí
+  correct: zhǐ fēi jī
+- questionID: P2-PY104
+  lessonIds:
+    - 11
+  question: 哥哥喜欢每天玩__魔术方块__和练习。（选出画线词语的汉语拼音）
+  options:
+    - mó shù fāng kuài
+    - mó sù fāng kuài
+    - mó shù fāng guài
+    - mó sù fāng guài
+  correct: mó shù fāng kuài
+- questionID: P2-PY105
+  lessonIds:
+    - 11
+  question: 弟弟喜欢用__积木__搭各种各样的东西。（选出画线词语的汉语拼音）
+  options:
+    - jī mù
+    - jí mù
+    - jī mǔ
+    - jí mǔ
+  correct: jī mù
+- questionID: P2-PY106
+  lessonIds:
+    - 11
+  question: 妹妹最喜欢抱着她的__布娃娃__睡觉。（选出画线词语的汉语拼音）
+  options:
+    - bù wá wa
+    - bù wǎ wa
+    - bú wá wa
+    - bú wǎ wa
+  correct: bù wá wa
+- questionID: P2-PY107
+  lessonIds:
+    - 11
+  question: 哥哥有一个可以走路的小__机器人__。（选出画线词语的汉语拼音）
+  options:
+    - jī qì rén
+    - jī qì lén
+    - jí qì rén
+    - jí qì lén
+  correct: jī qì rén
+- questionID: P2-PY108
+  lessonIds:
+    - 11
+  question: 公园里有__许多__孩子正在一起玩游戏。（选出画线词语的汉语拼音）
+  options:
+    - xǔ duō
+    - xǔ tuō
+    - xù duō
+    - xù tuō
+  correct: xǔ duō
+- questionID: P2-PY109
+  lessonIds:
+    - 11
+  question: 我们用一张纸折了一只小__纸船__。（选出画线词语的汉语拼音）
+  options:
+    - zhǐ chuán
+    - zǐ chuán
+    - zhǐ cuán
+    - zǐ cuán
+  correct: zhǐ chuán
+- questionID: P2-PY110
+  lessonIds:
+    - 11
+  question: 爷爷喜欢在星期天教我下__象棋__。（选出画线词语的汉语拼音）
+  options:
+    - xiàng qí
+    - xiàng qì
+    - xiǎng qí
+    - xiǎng qì
+  correct: xiàng qí
+- questionID: P2-PY111
+  lessonIds:
+    - 11
+  question: __老鹰__在天空中飞得又高又快。（选出画线词语的汉语拼音）
+  options:
+    - lǎo yīng
+    - lǎo yīn
+    - láo yīng
+    - láo yīn
+  correct: lǎo yīng
+- questionID: P2-PY112
+  lessonIds:
+    - 11
+  question: __小鸡__跟着妈妈一起在草地上找食物。（选出画线词语的汉语拼音）
+  options:
+    - xiǎo jī
+    - xiǎo jí
+    - xiào jī
+    - xiào jí
+  correct: xiǎo jī
+- questionID: P2-PY113
+  lessonIds:
+    - 12
+  question: 我希望爸爸妈妈__永远__健康快乐。（选出画线词语的汉语拼音）
+  options:
+    - yǒng yuǎn
+    - yóng yuǎn
+    - yǒng yuán
+    - yóng yuán
+  correct: yǒng yuǎn
+- questionID: P2-PY114
+  lessonIds:
+    - 12
+  question: 爷爷希望自己永远__年轻__和身体健康。（选出画线词语的汉语拼音）
+  options:
+    - nián qīng
+    - nián qīn
+    - niǎn qīng
+    - niǎn qīn
+  correct: nián qīng
+- questionID: P2-PY115
+  lessonIds:
+    - 12
+  question: 多运动和吃蔬菜可以让身体更__健康__。（选出画线词语的汉语拼音）
+  options:
+    - jiàn kāng
+    - jiàn kān
+    - jiǎn kāng
+    - jiǎn kān
+  correct: jiàn kāng
+- questionID: P2-PY116
+  lessonIds:
+    - 12
+  question: 我希望我们一家人永远__幸福__快乐。（选出画线词语的汉语拼音）
+  options:
+    - xìng fú
+    - xìn fú
+    - xìng fǔ
+    - xìn fǔ
+  correct: xìng fú
+- questionID: P2-PY117
+  lessonIds:
+    - 12
+  question: 生日的时候，我会对着蛋糕__许愿__。（选出画线词语的汉语拼音）
+  options:
+    - xǔ yuàn
+    - xǔ yuán
+    - xù yuàn
+    - xù yuán
+  correct: xǔ yuàn
+- questionID: P2-PY118
+  lessonIds:
+    - 12
+  question: 妈妈买了一个漂亮又好吃的生日__蛋糕__。（选出画线词语的汉语拼音）
+  options:
+    - dàn gāo
+    - dàn gǎo
+    - dǎn gāo
+    - dǎn gǎo
+  correct: dàn gāo
+- questionID: P2-PY119
+  lessonIds:
+    - 12
+  question: 我做了一张__生日卡__送给最爱的妈妈。（选出画线词语的汉语拼音）
+  options:
+    - shēng rì kǎ
+    - shēng lì kǎ
+    - sēng rì kǎ
+    - sēng lì kǎ
+  correct: shēng rì kǎ
+- questionID: P2-PY120
+  lessonIds:
+    - 12
+  question: 爸爸送给我两张__电影票__作为生日礼物。（选出画线词语的汉语拼音）
+  options:
+    - diàn yǐng piào
+    - diàn yǐn piào
+    - diàn yǐng piǎo
+    - diàn yǐn piǎo
+  correct: diàn yǐng piào
+- questionID: P2-PY121
+  lessonIds:
+    - 12
+  question: 生日的时候，我收到很多漂亮的__礼物__。（选出画线词语的汉语拼音）
+  options:
+    - lǐ wù
+    - nǐ wù
+    - lǐ wú
+    - nǐ wú
+  correct: lǐ wù
+- questionID: P2-PY122
+  lessonIds:
+    - 12
+  question: 全家人在__客厅__里一起庆祝妈妈生日。（选出画线词语的汉语拼音）
+  options:
+    - kè tīng
+    - kè tīn
+    - gè tīng
+    - gè tīn
+  correct: kè tīng
+- questionID: P2-PY123
+  lessonIds:
+    - 14
+  question: 哥哥最__讨厌__别人弄破他的图画。（选出画线词语的汉语拼音）
+  options:
+    - tǎo yàn
+    - tǎo yán
+    - tào yàn
+    - tào yán
+  correct: tǎo yàn
+- questionID: P2-PY124
+  lessonIds:
+    - 14
+  question: 两个好朋友因为一支蜡笔开始__争吵__了。（选出画线词语的汉语拼音）
+  options:
+    - zhēng chǎo
+    - zēng chǎo
+    - zhēng cǎo
+    - zēng cǎo
+  correct: zhēng chǎo
+- questionID: P2-PY125
+  lessonIds:
+    - 14
+  question: 弟弟跑得太快，不小心__撞倒__了椅子。（选出画线词语的汉语拼音）
+  options:
+    - zhuàng dǎo
+    - zuàng dǎo
+    - zhuàng dào
+    - zuàng dào
+  correct: zhuàng dǎo
+- questionID: P2-PY126
+  lessonIds:
+    - 14
+  question: 朋友弄破我的图画，我觉得非常__伤心__。（选出画线词语的汉语拼音）
+  options:
+    - shāng xīn
+    - sāng xīn
+    - shāng xīng
+    - sāng xīng
+  correct: shāng xīn
+- questionID: P2-PY127
+  lessonIds:
+    - 14
+  question: 妹妹用__蜡笔__画了一片漂亮的彩虹。（选出画线词语的汉语拼音）
+  options:
+    - là bǐ
+    - nà bǐ
+    - là bí
+    - nà bí
+  correct: là bǐ
+- questionID: P2-PY128
+  lessonIds:
+    - 14
+  question: 只要认真练习，这个游戏就很__容易__学会。（选出画线词语的汉语拼音）
+  options:
+    - róng yì
+    - lóng yì
+    - róng yí
+    - lóng yí
+  correct: róng yì
+- questionID: P2-PY129
+  lessonIds:
+    - 14
+  question: 我们一起__合作__，很快就完成了图画。（选出画线词语的汉语拼音）
+  options:
+    - hé zuò
+    - hè zuò
+    - hé zuó
+    - hè zuó
+  correct: hé zuò
+- questionID: P2-PY130
+  lessonIds:
+    - 14
+  question: 我们在绿色的__草地__上一起画彩虹。（选出画线词语的汉语拼音）
+  options:
+    - cǎo dì
+    - chǎo dì
+    - cǎo tì
+    - chǎo tì
+  correct: cǎo dì
+- questionID: P2-PY131
+  lessonIds:
+    - 14
+  question: 雨停以后，天空中出现了一道美丽的__彩虹__。（选出画线词语的汉语拼音）
+  options:
+    - cǎi hóng
+    - chǎi hóng
+    - cǎi hón
+    - chǎi hón
+  correct: cǎi hóng
+- questionID: P2-PY132
+  lessonIds:
+    - 14
+  question: 天上的星星__亮晶晶__，看起来非常漂亮。（选出画线词语的汉语拼音）
+  options:
+    - liàng jīng jīng
+    - liàng jīn jīng
+    - niàng jīng jīng
+    - liàng jīn jīn
+  correct: liàng jīng jīng
+- questionID: P2-PY133
+  lessonIds:
+    - 15
+  question: 妈妈今天在厨房里煮了一盘好吃的__茄子__。（选出画线词语的汉语拼音）
+  options:
+    - qié zi
+    - qié zǐ
+    - jié zi
+    - jié zǐ
+  correct: qié zi
+- questionID: P2-PY134
+  lessonIds:
+    - 15
+  question: 妈妈把新鲜的__番茄__放进汤里一起煮。（选出画线词语的汉语拼音）
+  options:
+    - fān qié
+    - hān qié
+    - fān qiě
+    - hān qiě
+  correct: fān qié
+- questionID: P2-PY135
+  lessonIds:
+    - 15
+  question: 妈妈在炒饭里面放了很多新鲜__豆芽__。（选出画线词语的汉语拼音）
+  options:
+    - dòu yá
+    - dòu yǎ
+    - dǒu yá
+    - dǒu yǎ
+  correct: dòu yá
+- questionID: P2-PY136
+  lessonIds:
+    - 15
+  question: 妈妈说__苦瓜__虽然苦，但是对身体很好。（选出画线词语的汉语拼音）
+  options:
+    - kǔ guā
+    - gǔ guā
+    - kǔ guà
+    - gǔ guà
+  correct: kǔ guā
+- questionID: P2-PY137
+  lessonIds:
+    - 15
+  question: 妈妈今天煮了一根香甜的__玉米__给我吃。（选出画线词语的汉语拼音）
+  options:
+    - yù mǐ
+    - yú mǐ
+    - yù mí
+    - yú mí
+  correct: yù mǐ
+- questionID: P2-PY138
+  lessonIds:
+    - 15
+  question: __伯伯__今天来到我们家一起吃午餐。（选出画线词语的汉语拼音）
+  options:
+    - bó bo
+    - pó bo
+    - bó bó
+    - pó bó
+  correct: bó bo
+- questionID: P2-PY139
+  lessonIds:
+    - 15
+  question: 伯伯煮了一锅热热的__萝卜汤__给大家喝。（选出画线词语的汉语拼音）
+  options:
+    - luó bo tāng
+    - nuó bo tāng
+    - luó bo táng
+    - nuó bo táng
+  correct: luó bo tāng
+- questionID: P2-PY140
+  lessonIds:
+    - 15
+  question: 小__老鼠__晚上偷偷跑进厨房找食物。（选出画线词语的汉语拼音）
+  options:
+    - lǎo shǔ
+    - nǎo shǔ
+    - lǎo sǔ
+    - nǎo sǔ
+  correct: lǎo shǔ
+- questionID: P2-PY141
+  lessonIds:
+    - 15
+  question: __小猪__每天在农场里开心地吃东西和玩耍。（选出画线词语的汉语拼音）
+  options:
+    - xiǎo zhū
+    - xiǎo zū
+    - xiào zhū
+    - xiào zū
+  correct: xiǎo zhū
+- questionID: P2-PY142
+  lessonIds:
+    - 15
+  question: 秋天到了，树上结出了很多甜甜的__果实__。（选出画线词语的汉语拼音）
+  options:
+    - guǒ shí
+    - guǒ sí
+    - guò shí
+    - guò sí
+  correct: guǒ shí
+- questionID: P2-PY143
+  lessonIds:
+    - 16
+  question: 图书馆里面很__安静__，大家都在看书。（选出画线词语的汉语拼音）
+  options:
+    - ān jìng
+    - ān jìn
+    - án jìng
+    - án jìn
+  correct: ān jìng
+- questionID: P2-PY144
+  lessonIds:
+    - 16
+  question: 妹妹每天晚上都喜欢看有趣的__绘本__。（选出画线词语的汉语拼音）
+  options:
+    - huì běn
+    - huì bén
+    - huǐ běn
+    - huǐ bén
+  correct: huì běn
+- questionID: P2-PY145
+  lessonIds:
+    - 16
+  question: 老师今天讲了一个非常__有趣__的故事。（选出画线词语的汉语拼音）
+  options:
+    - yǒu qù
+    - yǒu qǔ
+    - yóu qù
+    - yóu qǔ
+  correct: yǒu qù
+- questionID: P2-PY146
+  lessonIds:
+    - 16
+  question: 图书馆的__书架__上放着很多故事书。（选出画线词语的汉语拼音）
+  options:
+    - shū jià
+    - sū jià
+    - shū jiǎ
+    - sū jiǎ
+  correct: shū jià
+- questionID: P2-PY147
+  lessonIds:
+    - 16
+  question: 老师把很多故事书放进一个大__箱子__里。（选出画线词语的汉语拼音）
+  options:
+    - xiāng zi
+    - xiān zi
+    - xiáng zi
+    - xián zi
+  correct: xiāng zi
+- questionID: P2-PY148
+  lessonIds:
+    - 16
+  question: 桌子上有一个装着彩笔的小__盒子__。（选出画线词语的汉语拼音）
+  options:
+    - hé zi
+    - hè zi
+    - hé zǐ
+    - hè zǐ
+  correct: hé zi
+- questionID: P2-PY149
+  lessonIds:
+    - 16
+  question: 老师问了一个问题，请大家找__答案__。（选出画线词语的汉语拼音）
+  options:
+    - dá àn
+    - dá án
+    - dà àn
+    - dà án
+  correct: dá àn
+- questionID: P2-PY150
+  lessonIds:
+    - 16
+  question: 学校__附近__有一个很大的公共图书馆。（选出画线词语的汉语拼音）
+  options:
+    - fù jìn
+    - hù jìn
+    - fù jìng
+    - hù jìng
+  correct: fù jìn
+- questionID: P2-PY151
+  lessonIds:
+    - 16
+  question: 老师今天给我们讲了一个有趣的__故事__。（选出画线词语的汉语拼音）
+  options:
+    - gù shi
+    - gù si
+    - gú shi
+    - gú si
+  correct: gù shi
+- questionID: P2-PY152
+  lessonIds:
+    - 16
+  question: 老师说故事马上就要__开始__了。（选出画线词语的汉语拼音）
+  options:
+    - kāi shǐ
+    - kāi sǐ
+    - kǎi shǐ
+    - kǎi sǐ
+  correct: kāi shǐ
+- questionID: P2-PY153
+  lessonIds:
+    - 17
+  question: 周末晚上，我们一家人一起去逛__夜市__。（选出画线词语的汉语拼音）
+  options:
+    - yè shì
+    - yè sì
+    - yè shí
+    - yè sí
+  correct: yè shì
+- questionID: P2-PY154
+  lessonIds:
+    - 17
+  question: 夜市里挂着许多五颜六色的漂亮__气球__。（选出画线词语的汉语拼音）
+  options:
+    - qì qiú
+    - qì qiū
+    - qí qiú
+    - qí qiū
+  correct: qì qiú
+- questionID: P2-PY155
+  lessonIds:
+    - 17
+  question: 我和哥哥最喜欢在夜市玩__碰碰车__游戏。（选出画线词语的汉语拼音）
+  options:
+    - pèng pèng chē
+    - pèng pèng cē
+    - pěng pèng chē
+    - pěng pèng cē
+  correct: pèng pèng chē
+- questionID: P2-PY156
+  lessonIds:
+    - 17
+  question: 玩了很久以后，我们一起买__饮料__喝。（选出画线词语的汉语拼音）
+  options:
+    - yǐn liào
+    - yǐn niào
+    - yìn liào
+    - yìn niào
+  correct: yǐn liào
+- questionID: P2-PY157
+  lessonIds:
+    - 17
+  question: 下午天气很好，我们一起到公园放__风筝__。（选出画线词语的汉语拼音）
+  options:
+    - fēng zhēng
+    - fēng zēng
+    - fēn zhēng
+    - fēn zēng
+  correct: fēng zhēng
+- questionID: P2-PY158
+  lessonIds:
+    - 17
+  question: 周末的夜市非常__热闹__，到处都是人。（选出画线词语的汉语拼音）
+  options:
+    - rè nao
+    - lè nao
+    - rè lao
+    - lè lao
+  correct: rè nao
+- questionID: P2-PY159
+  lessonIds:
+    - 17
+  question: 夜市里的__灯光__五颜六色，非常漂亮。（选出画线词语的汉语拼音）
+  options:
+    - dēng guāng
+    - dēn guāng
+    - dēng guān
+    - dēn guān
+  correct: dēng guāng
+- questionID: P2-PY160
+  lessonIds:
+    - 17
+  question: 每个__摊位__都摆着很多好吃的小吃。（选出画线词语的汉语拼音）
+  options:
+    - tān wèi
+    - tān wéi
+    - dān wèi
+    - dān wéi
+  correct: tān wèi
+- questionID: P2-PY161
+  lessonIds:
+    - 17
+  question: 夜市里挂满了__五颜六色__的漂亮灯光。（选出画线词语的汉语拼音）
+  options:
+    - wǔ yán liù sè
+    - wǔ yán liù shè
+    - wǔ yán niù sè
+    - wǔ yán niù shè
+  correct: wǔ yán liù sè
+- questionID: P2-PY162
+  lessonIds:
+    - 17
+  question: 哥哥第一次坐__飞天椅__，觉得又开心又紧张。（选出画线词语的汉语拼音）
+  options:
+    - fēi tiān yǐ
+    - huī tiān yǐ
+    - fēi tián yǐ
+    - huī tián yǐ
+  correct: fēi tiān yǐ
+- questionID: P2-PY163
+  lessonIds:
+    - 18
+  question: 周末的时候，我们一家人一起去__餐馆__吃饭。（选出画线词语的汉语拼音）
+  options:
+    - cān guǎn
+    - chān guǎn
+    - cán guǎn
+    - chán guǎn
+  correct: cān guǎn
+- questionID: P2-PY164
+  lessonIds:
+    - 18
+  question: 星期六下午，爸爸带我们去__电影院__看电影。（选出画线词语的汉语拼音）
+  options:
+    - diàn yǐng yuàn
+    - diàn yǐn yuàn
+    - diàn yǐng yuán
+    - diàn yǐn yuán
+  correct: diàn yǐng yuàn
+- questionID: P2-PY165
+  lessonIds:
+    - 18
+  question: 周末我们一家人一起去__植物园__参观花草。（选出画线词语的汉语拼音）
+  options:
+    - zhí wù yuán
+    - zí wù yuán
+    - zhí wù yuǎn
+    - zí wù yuǎn
+  correct: zhí wù yuán
+- questionID: P2-PY166
+  lessonIds:
+    - 18
+  question: 天气很好，我们决定到公园一起__野餐__。（选出画线词语的汉语拼音）
+  options:
+    - yě cān
+    - yě càn
+    - yè cān
+    - yè càn
+  correct: yě cān
+- questionID: P2-PY167
+  lessonIds:
+    - 18
+  question: 天气很热的时候，我们喜欢去__游泳__。（选出画线词语的汉语拼音）
+  options:
+    - yóu yǒng
+    - yóu yǒn
+    - yòu yǒng
+    - yòu yǒn
+  correct: yóu yǒng
+- questionID: P2-PY168
+  lessonIds:
+    - 18
+  question: 妹妹在海边开心地捡漂亮的__贝壳__。（选出画线词语的汉语拼音）
+  options:
+    - bèi ké
+    - bèi kě
+    - béi ké
+    - béi kě
+  correct: bèi ké
+- questionID: P2-PY169
+  lessonIds:
+    - 18
+  question: 我们在公园里__发现__了一只可爱的小鸟。（选出画线词语的汉语拼音）
+  options:
+    - fā xiàn
+    - huā xiàn
+    - fā xiǎn
+    - huā xiǎn
+  correct: fā xiàn
+- questionID: P2-PY170
+  lessonIds:
+    - 18
+  question: 公园里面有很多高大的绿色__树木__。（选出画线词语的汉语拼音）
+  options:
+    - shù mù
+    - sù mù
+    - shù mǔ
+    - sù mǔ
+  correct: shù mù
+- questionID: P2-PY171
+  lessonIds:
+    - 18
+  question: 新加坡的__街道__非常干净，也非常整齐。（选出画线词语的汉语拼音）
+  options:
+    - jiē dào
+    - jiē tào
+    - jié dào
+    - jié tào
+  correct: jiē dào
+- questionID: P2-PY172
+  lessonIds:
+    - 18
+  question: 妈妈把房间里的东西整理得非常__整齐__。（选出画线词语的汉语拼音）
+  options:
+    - zhěng qí
+    - zěng qí
+    - zhěng qì
+    - zěng qì
+  correct: zhěng qí
+- questionID: P2-PY173
+  lessonIds:
+    - 19
+  question: 妹妹上完__厕所__以后记得把手洗干净。（选出画线词语的汉语拼音）
+  options:
+    - cè suǒ
+    - chè suǒ
+    - cè suō
+    - chè suō
+  correct: cè suǒ
+- questionID: P2-PY174
+  lessonIds:
+    - 19
+  question: 上完厕所以后，我们要记得冲__马桶__。（选出画线词语的汉语拼音）
+  options:
+    - mǎ tǒng
+    - mǎ tǒn
+    - mà tǒng
+    - mà tǒn
+  correct: mǎ tǒng
+- questionID: P2-PY175
+  lessonIds:
+    - 19
+  question: 我们应该__珍惜__水，不要随便浪费水。（选出画线词语的汉语拼音）
+  options:
+    - zhēn xī
+    - zēn xī
+    - zhēn xí
+    - zēn xí
+  correct: zhēn xī
+- questionID: P2-PY176
+  lessonIds:
+    - 19
+  question: 水在我们的__生活__中是非常重要的东西。（选出画线词语的汉语拼音）
+  options:
+    - shēng huó
+    - sēng huó
+    - shēng huò
+    - sēng huò
+  correct: shēng huó
+- questionID: P2-PY177
+  lessonIds:
+    - 19
+  question: 我们应该__节约__用水，不要让水一直流。（选出画线词语的汉语拼音）
+  options:
+    - jié yuē
+    - jié yuè
+    - jiě yuē
+    - jiě yuè
+  correct: jié yuē
+- questionID: P2-PY178
+  lessonIds:
+    - 19
+  question: 我们不应该一直开着水龙头__浪费__水。（选出画线词语的汉语拼音）
+  options:
+    - làng fèi
+    - nàng fèi
+    - làng huì
+    - nàng huì
+  correct: làng fèi
+- questionID: P2-PY179
+  lessonIds:
+    - 19
+  question: 看到水龙头没关，我__连忙__跑过去关水。（选出画线词语的汉语拼音）
+  options:
+    - lián máng
+    - nián máng
+    - lián mán
+    - nián mán
+  correct: lián máng
+- questionID: P2-PY180
+  lessonIds:
+    - 19
+  question: 天气很热，哥哥回家以后马上去__冲凉__。（选出画线词语的汉语拼音）
+  options:
+    - chōng liáng
+    - cōng liáng
+    - chōng niáng
+    - cōng niáng
+  correct: chōng liáng
+- questionID: P2-PY181
+  lessonIds:
+    - 19
+  question: __外婆__常常告诉我们要珍惜身边的每一样东西。（选出画线词语的汉语拼音）
+  options:
+    - wài pó
+    - wài pò
+    - wèi pó
+    - wèi pò
+  correct: wài pó
+- questionID: P2-PY182
+  lessonIds:
+    - 19
+  question: 水对我们的生活来说是非常__重要__的。（选出画线词语的汉语拼音）
+  options:
+    - zhòng yào
+    - zòng yào
+    - zhòng yǎo
+    - zòng yǎo
+  correct: zhòng yào
+- questionID: P2-PY183
+  lessonIds:
+    - 13
+  question: 妈妈帮小猫__洗澡__以后，把它擦干净。（选出画线词语的汉语拼音）
+  options:
+    - xǐ zǎo
+    - xǐ zào
+    - xǐ zhǎo
+    - xǐ zhào
+  correct: xǐ zǎo
+- questionID: P2-PY184
+  lessonIds:
+    - 13
+  question: 小鸟的__羽毛__又软又漂亮，非常可爱。（选出画线词语的汉语拼音）
+  options:
+    - yǔ máo
+    - yù máo
+    - yǔ mó
+    - yù mó
+  correct: yǔ máo
+- questionID: P2-PY185
+  lessonIds:
+    - 13
+  question: 这只小狗非常__聪明__，很快学会了坐下。（选出画线词语的汉语拼音）
+  options:
+    - cōng míng
+    - chōng míng
+    - cōng mín
+    - chōng mín
+  correct: cōng míng
+- questionID: P2-PY186
+  lessonIds:
+    - 13
+  question: 妹妹喜欢看__金鱼__在水里慢慢游泳。（选出画线词语的汉语拼音）
+  options:
+    - jīn yú
+    - jīng yú
+    - jīn yǔ
+    - jīng yǔ
+  correct: jīn yú
+- questionID: P2-PY187
+  lessonIds:
+    - 13
+  question: 妹妹有一只__漂亮__的小白兔做宠物。（选出画线词语的汉语拼音）
+  options:
+    - piào liang
+    - piǎo liang
+    - piào niang
+    - piǎo niang
+  correct: piào liang
+- questionID: P2-PY188
+  lessonIds:
+    - 13
+  question: 小狗生病了，妈妈带它去看__兽医__。（选出画线词语的汉语拼音）
+  options:
+    - shòu yī
+    - sòu yī
+    - shòu yí
+    - sòu yí
+  correct: shòu yī
+- questionID: P2-PY189
+  lessonIds:
+    - 13
+  question: 我很喜欢__宠物__，希望以后可以养一只。（选出画线词语的汉语拼音）
+  options:
+    - chǒng wù
+    - cǒng wù
+    - chǒng wǔ
+    - cǒng wǔ
+  correct: chǒng wù
+- questionID: P2-PY190
+  lessonIds:
+    - 13
+  question: 我们不应该__欺负__小动物和其他朋友。（选出画线词语的汉语拼音）
+  options:
+    - qī fu
+    - qī hu
+    - qí fu
+    - qí hu
+  correct: qī fu
+- questionID: P2-PY191
+  lessonIds:
+    - 13
+  question: 小狗每天都会跑到门口__欢迎__我们回家。（选出画线词语的汉语拼音）
+  options:
+    - huān yíng
+    - huān yín
+    - huán yíng
+    - huán yín
+  correct: huān yíng
+- questionID: P2-PY192
+  lessonIds:
+    - 13
+  question: 我很高兴__认识__这个可爱的小动物。（选出画线词语的汉语拼音）
+  options:
+    - rèn shi
+    - lèn shi
+    - rèn shì
+    - lèn shì
+  correct: rèn shi

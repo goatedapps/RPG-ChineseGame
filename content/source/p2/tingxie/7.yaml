@@ -1,0 +1,392 @@
+title: 第七课 (Lesson 7)
+vocab:
+  - word: 奶茶
+    pinyin: nǎi chá
+    meaning: Milk tea
+    example: 我最喜欢在咖啡店喝一杯奶茶。
+    sentenceBank:
+      - zh: 我最喜欢在咖啡店喝一杯奶茶。
+        en: I like drinking a cup of milk tea at the coffee shop the most.
+      - zh: 妈妈今天早上买了一杯香香的奶茶。
+        en: Mum bought a fragrant cup of milk tea this morning.
+      - zh: 妹妹喜欢喝奶茶，但是不能喝太多。
+        en: My younger sister likes drinking milk tea, but she cannot drink too much.
+      - zh: 爸爸帮我点了一杯少糖的奶茶。
+        en: Dad ordered a less-sweet milk tea for me.
+      - zh: 星期六早上，我们一起去咖啡店喝奶茶。
+        en: On Saturday morning, we went to the coffee shop together to drink milk tea.
+
+  - word: 糖
+    pinyin: táng
+    meaning: Sugar
+    example: 妈妈告诉我喝奶茶不要放太多糖。
+    sentenceBank:
+      - zh: 妈妈告诉我喝奶茶不要放太多糖。
+        en: Mum told me not to put too much sugar in my milk tea.
+      - zh: 我喜欢喝少糖的奶茶，因为比较健康。
+        en: I like drinking less-sweet milk tea because it is healthier.
+      - zh: 妹妹在咖啡里加了一小勺糖。
+        en: My younger sister added a small spoonful of sugar to her coffee.
+      - zh: 爸爸说吃太多糖对身体不好。
+        en: Dad says eating too much sugar is not good for our bodies.
+      - zh: 服务员问我要不要在奶茶里加糖。
+        en: The waiter asked whether I wanted to add sugar to my milk tea.
+
+  - word: 炒饭
+    pinyin: chǎo fàn
+    meaning: Fried rice
+    example: 妈妈今天早上做了一大盘香喷喷的炒饭。
+    sentenceBank:
+      - zh: 妈妈今天早上做了一大盘香喷喷的炒饭。
+        en: Mum made a big plate of delicious fried rice this morning.
+      - zh: 我在咖啡店点了一盘鸡蛋炒饭。
+        en: I ordered a plate of egg fried rice at the coffee shop.
+      - zh: 哥哥喜欢吃炒饭，因为里面有很多鸡蛋。
+        en: My older brother likes fried rice because there are lots of eggs in it.
+      - zh: 妹妹吃完炒饭以后还想吃水果。
+        en: My younger sister wanted to eat fruit after finishing her fried rice.
+      - zh: 这家咖啡店的炒饭闻起来特别香。
+        en: The fried rice at this coffee shop smells especially good.
+
+  - word: 油
+    pinyin: yóu
+    meaning: Cooking oil
+    example: 妈妈炒菜的时候会用一点食油。
+    sentenceBank:
+      - zh: 妈妈炒菜的时候会用一点食油。
+        en: Mum uses a little cooking oil when cooking.
+      - zh: 炒饭里面需要放一点油才会好吃。
+        en: A little oil is needed in fried rice to make it tasty.
+      - zh: 爸爸告诉我不能放太多油来炒菜。
+        en: Dad told me not to use too much oil when cooking.
+      - zh: 厨房里的油用完了，妈妈要去买。
+        en: The cooking oil in the kitchen is finished, so Mum needs to buy some.
+      - zh: 少用一点油可以让食物更加健康。
+        en: Using less oil can make food healthier.
+
+  - word: 炸鸡
+    pinyin: zhá jī
+    meaning: Fried chicken
+    example: 哥哥最喜欢吃咖啡店里的香脆炸鸡。
+    sentenceBank:
+      - zh: 哥哥最喜欢吃咖啡店里的香脆炸鸡。
+        en: My older brother likes eating the crispy fried chicken at the coffee shop the most.
+      - zh: 妹妹闻到炸鸡的香味以后马上跑过来。
+        en: My younger sister came over immediately after smelling the fried chicken.
+      - zh: 爸爸买了一盒炸鸡和大家一起分享。
+        en: Dad bought a box of fried chicken to share with everyone.
+      - zh: 炸鸡很好吃，但是我们不能每天吃。
+        en: Fried chicken is delicious, but we cannot eat it every day.
+      - zh: 今天早餐的时候，我们一起吃了炸鸡。
+        en: We ate fried chicken together during breakfast today.
+
+  - word: 青菜
+    pinyin: qīng cài
+    meaning: Green vegetable
+    example: 妈妈每天都会准备一些新鲜的青菜。
+    sentenceBank:
+      - zh: 妈妈每天都会准备一些新鲜的青菜。
+        en: Mum prepares some fresh green vegetables every day.
+      - zh: 吃炒饭的时候，我也会吃一些青菜。
+        en: When eating fried rice, I also eat some green vegetables.
+      - zh: 青菜里面有很多对身体好的营养。
+        en: Green vegetables contain many nutrients that are good for our bodies.
+      - zh: 妹妹以前不喜欢吃青菜，现在会吃了。
+        en: My younger sister did not like green vegetables before, but now she eats them.
+      - zh: 爸爸请服务员多准备一些青菜给我们。
+        en: Dad asked the waiter to prepare more green vegetables for us.
+
+  - word: 冰水
+    pinyin: bīng shuǐ
+    meaning: Ice water
+    example: 天气很热的时候，我喜欢喝冰水。
+    sentenceBank:
+      - zh: 天气很热的时候，我喜欢喝冰水。
+        en: When the weather is hot, I like drinking ice water.
+      - zh: 妈妈帮我倒了一杯冰水放在桌上。
+        en: Mum poured me a cup of ice water and put it on the table.
+      - zh: 哥哥运动以后喝了一大杯冰水。
+        en: My older brother drank a big cup of ice water after exercising.
+      - zh: 咖啡店里有冰水可以让客人自己拿。
+        en: There is ice water in the coffee shop for customers to take themselves.
+      - zh: 我今天不想喝奶茶，只想喝冰水。
+        en: I do not want milk tea today; I only want ice water.
+
+  - word: 温水
+    pinyin: wēn shuǐ
+    meaning: Warm water
+    example: 妈妈早上给我准备了一杯温水。
+    sentenceBank:
+      - zh: 妈妈早上给我准备了一杯温水。
+        en: Mum prepared a cup of warm water for me in the morning.
+      - zh: 天气很冷的时候，我喜欢喝温水。
+        en: When the weather is cold, I like drinking warm water.
+      - zh: 爸爸叫妹妹喝一些温水再出去玩。
+        en: Dad told my younger sister to drink some warm water before going out to play.
+      - zh: 服务员给客人送来了一杯温水。
+        en: The waiter brought a cup of warm water to the guest.
+      - zh: 我每天早上起床以后都会喝温水。
+        en: I drink warm water every morning after waking up.
+
+  - word: 咖啡
+    pinyin: kā fēi
+    meaning: Coffee
+    example: 爸爸喜欢早上喝一杯热热的咖啡。
+    sentenceBank:
+      - zh: 爸爸喜欢早上喝一杯热热的咖啡。
+        en: Dad likes drinking a cup of hot coffee in the morning.
+      - zh: 妈妈在咖啡店点了一杯咖啡和炒饭。
+        en: Mum ordered a cup of coffee and fried rice at the coffee shop.
+      - zh: 咖啡店里有很多客人在喝咖啡聊天。
+        en: There are many customers drinking coffee and chatting in the coffee shop.
+      - zh: 我闻到咖啡的香味从厨房里飘出来。
+        en: I smelled the fragrance of coffee coming from the kitchen.
+      - zh: 妹妹年纪还小，所以不能喝咖啡。
+        en: My younger sister is still young, so she cannot drink coffee.
+
+  - word: 排队
+    pinyin: pái duì
+    meaning: To queue
+    example: 买早餐的时候，我们要先排队等候。
+    sentenceBank:
+      - zh: 买早餐的时候，我们要先排队等候。
+        en: When buying breakfast, we have to queue first.
+      - zh: 咖啡店里有很多客人在排队买食物。
+        en: Many customers are queuing to buy food in the coffee shop.
+      - zh: 我们应该安静地排队，不可以插队。
+        en: We should queue quietly and must not cut in line.
+      - zh: 妈妈叫我和弟弟一起排队买早餐。
+        en: Mum asked my younger brother and me to queue together to buy breakfast.
+      - zh: 排队以后，我们很快就买到了食物。
+        en: After queuing, we quickly bought our food.
+
+  - word: 找
+    pinyin: zhǎo
+    meaning: To find
+    example: 我们走进咖啡店以后先找座位。
+    sentenceBank:
+      - zh: 我们走进咖啡店以后先找座位。
+        en: After entering the coffee shop, we first looked for seats.
+      - zh: 妹妹正在找自己的水壶和书包。
+        en: My younger sister is looking for her water bottle and school bag.
+      - zh: 爸爸帮我找到了一个空的座位。
+        en: Dad helped me find an empty seat.
+      - zh: 我找了很久，终于找到了我的朋友。
+        en: I looked for a long time and finally found my friend.
+      - zh: 妈妈在厨房里找需要的食物和东西。
+        en: Mum looked for the food and things she needed in the kitchen.
+
+  - word: 座位
+    pinyin: zuò wèi
+    meaning: Seat
+    example: 我们很快找到了四个空的座位。
+    sentenceBank:
+      - zh: 我们很快找到了四个空的座位。
+        en: We quickly found four empty seats.
+      - zh: 妈妈请我先坐在自己的座位上。
+        en: Mum asked me to sit in my seat first.
+      - zh: 咖啡店里的座位今天已经坐满了客人。
+        en: All the seats in the coffee shop are occupied by customers today.
+      - zh: 爸爸帮奶奶找到一个舒服的座位。
+        en: Dad helped Grandma find a comfortable seat.
+      - zh: 我们坐在靠近窗户的座位一起吃早餐。
+        en: We sat at the seats near the window and ate breakfast together.
+
+  - word: 特别
+    pinyin: tè bié
+    meaning: Special
+    example: 今天是星期六，所以早餐特别好吃。
+    sentenceBank:
+      - zh: 今天是星期六，所以早餐特别好吃。
+        en: Today is Saturday, so the breakfast is especially delicious.
+      - zh: 这家咖啡店的炒饭特别香和好吃。
+        en: The fried rice at this coffee shop is especially fragrant and delicious.
+      - zh: 妹妹今天穿了一件特别漂亮的衣服。
+        en: My younger sister is wearing a particularly beautiful outfit today.
+      - zh: 爸爸为我们准备了特别好吃的早餐。
+        en: Dad prepared a particularly delicious breakfast for us.
+      - zh: 今天的早餐时间对我们来说特别开心。
+        en: Breakfast time today was especially happy for us.
+
+  - word: 星期六
+    pinyin: xīng qī liù
+    meaning: Saturday
+    example: 星期六早上，我们一起去咖啡店吃早餐。
+    sentenceBank:
+      - zh: 星期六早上，我们一起去咖啡店吃早餐。
+        en: On Saturday morning, we went to the coffee shop to have breakfast together.
+      - zh: 每个星期六，我都会和家人一起吃早餐。
+        en: Every Saturday, I have breakfast with my family.
+      - zh: 星期六不用上课，所以我可以睡晚一点。
+        en: There is no school on Saturday, so I can sleep a little later.
+      - zh: 爸爸星期六早上喜欢带我们出去吃饭。
+        en: Dad likes taking us out to eat on Saturday mornings.
+      - zh: 这个星期六，我们准备去公园一起运动。
+        en: This Saturday, we plan to go to the park to exercise together.
+
+  - word: 早餐
+    pinyin: zǎo cān
+    meaning: Breakfast
+    example: 妈妈每天早上都会准备健康的早餐。
+    sentenceBank:
+      - zh: 妈妈每天早上都会准备健康的早餐。
+        en: Mum prepares a healthy breakfast every morning.
+      - zh: 我喜欢和家人一起吃早餐聊天。
+        en: I like having breakfast and chatting with my family.
+      - zh: 今天的早餐有炒饭、青菜和水果。
+        en: Today's breakfast has fried rice, green vegetables, and fruit.
+      - zh: 我们星期六一起到咖啡店吃早餐。
+        en: We went to the coffee shop together for breakfast on Saturday.
+      - zh: 吃早餐以前，我会先洗手和喝水。
+        en: Before eating breakfast, I wash my hands and drink water first.
+
+  - word: 闻
+    pinyin: wén
+    meaning: To smell
+    example: 我一走进咖啡店就闻到食物的香味。
+    sentenceBank:
+      - zh: 我一走进咖啡店就闻到食物的香味。
+        en: As soon as I entered the coffee shop, I smelled the fragrance of the food.
+      - zh: 妹妹闻到炸鸡的香味以后非常开心。
+        en: My younger sister was very happy after smelling the fragrance of the fried chicken.
+      - zh: 我在厨房里闻到妈妈做饭的香味。
+        en: I smelled the fragrance of Mum's cooking in the kitchen.
+      - zh: 爸爸闻到咖啡的香味就走进了厨房。
+        en: Dad walked into the kitchen when he smelled the fragrance of coffee.
+      - zh: 这盘炒饭闻起来很香，我很想吃。
+        en: This plate of fried rice smells very good, and I really want to eat it.
+
+  - word: 香味
+    pinyin: xiāng wèi
+    meaning: Fragrance
+    example: 咖啡店里传来食物的香味，让我很饿。
+    sentenceBank:
+      - zh: 咖啡店里传来食物的香味，让我很饿。
+        en: The fragrance of food came from the coffee shop and made me hungry.
+      - zh: 我一走进厨房就闻到炒饭的香味。
+        en: As soon as I entered the kitchen, I smelled the fragrance of fried rice.
+      - zh: 炸鸡的香味从厨房慢慢传到外面。
+        en: The fragrance of fried chicken slowly came from the kitchen to outside.
+      - zh: 妈妈做的饭有一股特别好闻的香味。
+        en: Mum's cooking has a particularly nice fragrance.
+      - zh: 闻到早餐的香味以后，我马上坐下来。
+        en: After smelling the fragrance of breakfast, I immediately sat down.
+
+  - word: 走进
+    pinyin: zǒu jìn
+    meaning: To enter
+    example: 我们一起走进咖啡店找空的座位。
+    sentenceBank:
+      - zh: 我们一起走进咖啡店找空的座位。
+        en: We entered the coffee shop together to look for empty seats.
+      - zh: 妈妈走进厨房以后开始准备早餐。
+        en: Mum entered the kitchen and started preparing breakfast.
+      - zh: 爸爸走进餐厅就闻到了食物的香味。
+        en: Dad smelled the fragrance of food as soon as he entered the restaurant.
+      - zh: 我们走进学校以后马上去自己的教室。
+        en: After entering the school, we immediately went to our classroom.
+      - zh: 客人一个一个地走进咖啡店吃早餐。
+        en: The customers entered the coffee shop one by one to have breakfast.
+
+  - word: 食物
+    pinyin: shí wù
+    meaning: Food
+    example: 咖啡店里有很多好吃的食物可以选择。
+    sentenceBank:
+      - zh: 咖啡店里有很多好吃的食物可以选择。
+        en: There are many delicious foods to choose from in the coffee shop.
+      - zh: 妈妈告诉我们不要浪费桌上的食物。
+        en: Mum told us not to waste the food on the table.
+      - zh: 我喜欢吃不同种类的健康食物。
+        en: I like eating different kinds of healthy food.
+      - zh: 早餐的食物已经准备好了，可以开始吃。
+        en: The breakfast food is ready, so we can start eating.
+      - zh: 爸爸把好吃的食物分给我们一起吃。
+        en: Dad shared the delicious food with us.
+
+  - word: 分工
+    pinyin: fēn gōng
+    meaning: To share out the work
+    example: 吃完早餐以后，我们一起分工收拾桌子。
+    sentenceBank:
+      - zh: 吃完早餐以后，我们一起分工收拾桌子。
+        en: After breakfast, we divided the work and tidied the table together.
+      - zh: 妈妈和爸爸分工一起准备今天的早餐。
+        en: Mum and Dad shared the work of preparing today's breakfast.
+      - zh: 我们分工合作，很快就把家里收拾好了。
+        en: We divided the work and quickly tidied the house.
+      - zh: 哥哥负责洗碗，我负责擦桌子。
+        en: My older brother is responsible for washing the dishes, and I am responsible for wiping the table.
+      - zh: 全家人一起分工做家务，大家都很开心。
+        en: The whole family shared the housework, and everyone was happy.
+
+  - word: 吃完
+    pinyin: chī wán
+    meaning: To finish eating
+    example: 我们吃完早餐以后一起收拾桌子。
+    sentenceBank:
+      - zh: 我们吃完早餐以后一起收拾桌子。
+        en: After finishing breakfast, we tidied the table together.
+      - zh: 妹妹吃完炒饭以后喝了一杯温水。
+        en: After finishing her fried rice, my younger sister drank a cup of warm water.
+      - zh: 爸爸吃完早餐就准备去工作了。
+        en: Dad went to work after finishing breakfast.
+      - zh: 我们吃完食物以后要把自己的东西收好。
+        en: After finishing our food, we should put our things away.
+      - zh: 吃完饭以后，妈妈请我们帮忙收拾。
+        en: After finishing the meal, Mum asked us to help tidy up.
+
+  - word: 懂事
+    pinyin: dǒng shì
+    meaning: Sensible
+    example: 妹妹年纪虽然小，但是非常懂事。
+    sentenceBank:
+      - zh: 妹妹年纪虽然小，但是非常懂事。
+        en: Although my younger sister is young, she is very sensible.
+      - zh: 妈妈说我长大以后变得更加懂事了。
+        en: Mum says I have become more sensible as I have grown up.
+      - zh: 懂事的孩子会主动帮助爸爸妈妈。
+        en: A sensible child will willingly help Dad and Mum.
+      - zh: 哥哥很懂事，吃完饭会主动收拾。
+        en: My older brother is very sensible and tidies up after eating.
+      - zh: 老师称赞我们今天表现得很懂事。
+        en: The teacher praised us for being very sensible today.
+
+  - word: 收拾
+    pinyin: shōu shi
+    meaning: To tidy up
+    example: 吃完早餐以后，我们一起收拾桌子。
+    sentenceBank:
+      - zh: 吃完早餐以后，我们一起收拾桌子。
+        en: After breakfast, we tidied the table together.
+      - zh: 妈妈请我收拾自己的书包和房间。
+        en: Mum asked me to tidy my school bag and room.
+      - zh: 我们分工合作，很快收拾好了厨房。
+        en: We divided the work and quickly tidied the kitchen.
+      - zh: 哥哥吃完饭以后主动收拾自己的碗。
+        en: My older brother tidied up his own bowl after eating.
+      - zh: 离开咖啡店以前，我们要收拾好座位。
+        en: Before leaving the coffee shop, we should tidy up our seats.
+sentences:
+  - text: 星期天，我去外公家。
+    segments:
+      - 星期天
+      - "，"
+      - 我
+      - 去
+      - 外公家
+      - 。
+    icon: calendar
+    description: On Sunday, I go to Grandpa's house.
+  - text: 我打开门，爸爸走了进来。
+    segments:
+      - 我
+      - 打开
+      - 门
+      - "，"
+      - 爸爸
+      - 走了
+      - 进来
+      - 。
+    icon: hand
+    description: I opened the door, and Dad walked in.

@@ -1,0 +1,374 @@
+title: 第十八课 (Lesson 18)
+vocab:
+  - word: 餐馆
+    pinyin: cān guǎn
+    meaning: Restaurant
+    example: 周末的时候，我们一家人一起去餐馆吃饭。
+    sentenceBank:
+      - zh: 周末的时候，我们一家人一起去餐馆吃饭。
+        en: On the weekend, my whole family goes to a restaurant to eat.
+      - zh: 这家餐馆的食物很好吃，服务也很好。
+        en: The food at this restaurant is delicious, and the service is good too.
+      - zh: 爸爸下班以后带我们去餐馆吃晚餐。
+        en: Dad took us to a restaurant for dinner after work.
+      - zh: 餐馆里面有很多客人正在一起吃饭。
+        en: There are many customers eating together inside the restaurant.
+      - zh: 我们吃完饭以后就一起回家休息。
+        en: After eating, we went home together to rest.
+
+  - word: 电影院
+    pinyin: diàn yǐng yuàn
+    meaning: Cinema
+    example: 星期六下午，爸爸带我们去电影院看电影。
+    sentenceBank:
+      - zh: 星期六下午，爸爸带我们去电影院看电影。
+        en: On Saturday afternoon, Dad took us to the cinema to watch a movie.
+      - zh: 电影院里面有很多人在排队买电影票。
+        en: Many people are queuing to buy movie tickets inside the cinema.
+      - zh: 妹妹很喜欢和家人一起去电影院看电影。
+        en: My younger sister likes going to the cinema with her family to watch movies.
+      - zh: 我们买好电影票以后就走进电影院里面。
+        en: After buying the movie tickets, we walked into the cinema.
+      - zh: 看完电影以后，我们一起到附近吃晚餐。
+        en: After watching the movie, we went to eat dinner nearby together.
+
+  - word: 植物园
+    pinyin: zhí wù yuán
+    meaning: Botanical Gardens
+    example: 周末我们一家人一起去植物园参观花草。
+    sentenceBank:
+      - zh: 周末我们一家人一起去植物园参观花草。
+        en: On the weekend, our whole family went to the botanical gardens to see the plants and flowers.
+      - zh: 植物园里面有很多漂亮的花和高大的树木。
+        en: There are many beautiful flowers and tall trees in the botanical gardens.
+      - zh: 妹妹喜欢在植物园里看各种各样的植物。
+        en: My younger sister likes looking at all kinds of plants in the botanical gardens.
+      - zh: 我们在植物园走了很久，也拍了很多照片。
+        en: We walked for a long time in the botanical gardens and took many photos.
+      - zh: 老师带我们去植物园学习植物的名字。
+        en: The teacher took us to the botanical gardens to learn the names of plants.
+
+  - word: 东海岸公园
+    pinyin: Dōng hǎi àn Gōng yuán
+    meaning: East Coast Park
+    example: 星期天我们一家人到东海岸公园野餐。
+    sentenceBank:
+      - zh: 星期天我们一家人到东海岸公园野餐。
+        en: On Sunday, our whole family went to East Coast Park for a picnic.
+      - zh: 东海岸公园有很多树木和宽大的草地。
+        en: East Coast Park has many trees and large grassy areas.
+      - zh: 我们在东海岸公园一起骑脚踏车和跑步。
+        en: We rode bicycles and jogged together at East Coast Park.
+      - zh: 妹妹喜欢在东海岸公园捡漂亮的贝壳。
+        en: My younger sister likes picking up beautiful shells at East Coast Park.
+      - zh: 傍晚的时候，东海岸公园有很多人在玩。
+        en: In the evening, there are many people playing at East Coast Park.
+
+  - word: 参观
+    pinyin: cān guān
+    meaning: To visit
+    example: 老师带我们去国家博物馆参观学习。
+    sentenceBank:
+      - zh: 老师带我们去国家博物馆参观学习。
+        en: The teacher took us to visit and learn at the National Museum.
+      - zh: 周末我们一家人一起去植物园参观。
+        en: On the weekend, our whole family went to visit the botanical gardens.
+      - zh: 妹妹第一次参观博物馆，觉得非常有趣。
+        en: My younger sister visited a museum for the first time and found it very interesting.
+      - zh: 我们参观了很多地方，也认识了新的东西。
+        en: We visited many places and also learned about new things.
+      - zh: 学校安排我们下星期去参观一个博物馆。
+        en: The school arranged for us to visit a museum next week.
+
+  - word: 跑步
+    pinyin: pǎo bù
+    meaning: To jog
+    example: 爸爸每天早上都会去公园跑步运动。
+    sentenceBank:
+      - zh: 爸爸每天早上都会去公园跑步运动。
+        en: Dad goes to the park to jog every morning.
+      - zh: 我和哥哥喜欢放学以后一起跑步。
+        en: My older brother and I like jogging together after school.
+      - zh: 东海岸公园有很长的路可以跑步。
+        en: East Coast Park has a long path where people can jog.
+      - zh: 妈妈说每天跑步可以让身体更健康。
+        en: Mum says jogging every day can make our bodies healthier.
+      - zh: 星期天早上，很多人在公园里跑步。
+        en: Many people jog in the park on Sunday mornings.
+
+  - word: 野餐
+    pinyin: yě cān
+    meaning: Picnic
+    example: 天气很好，我们决定到公园一起野餐。
+    sentenceBank:
+      - zh: 天气很好，我们决定到公园一起野餐。
+        en: The weather is nice, so we decided to have a picnic in the park.
+      - zh: 妈妈准备了很多食物和饮料去野餐。
+        en: Mum prepared lots of food and drinks for the picnic.
+      - zh: 我们坐在草地上一边吃东西一边聊天。
+        en: We sat on the grass eating and chatting.
+      - zh: 妹妹最喜欢和家人一起去野餐玩耍。
+        en: My younger sister likes going on picnics with the family the most.
+      - zh: 野餐结束以后，我们把垃圾全部收拾干净。
+        en: After the picnic, we cleaned up all the rubbish.
+
+  - word: 游泳
+    pinyin: yóu yǒng
+    meaning: To swim
+    example: 天气很热的时候，我们喜欢去游泳。
+    sentenceBank:
+      - zh: 天气很热的时候，我们喜欢去游泳。
+        en: When the weather is hot, we like to go swimming.
+      - zh: 哥哥每个星期都会和朋友一起游泳。
+        en: My older brother goes swimming with his friends every week.
+      - zh: 妹妹已经学会游泳，可以自己下水了。
+        en: My younger sister has learned to swim and can enter the water by herself.
+      - zh: 爸爸提醒我们游泳以前一定要先热身。
+        en: Dad reminds us to warm up before swimming.
+      - zh: 游泳以后，我们一起坐下来喝水休息。
+        en: After swimming, we sat down together to drink water and rest.
+
+  - word: 泥沙
+    pinyin: ní shā
+    meaning: Sand
+    example: 海边的泥沙很软，妹妹喜欢在那里玩。
+    sentenceBank:
+      - zh: 海边的泥沙很软，妹妹喜欢在那里玩。
+        en: The sand at the beach is soft, and my younger sister likes playing there.
+      - zh: 我们在泥沙上画了很多漂亮的图画。
+        en: We drew many beautiful pictures on the sand.
+      - zh: 弟弟的鞋子里面跑进了很多泥沙。
+        en: A lot of sand got inside my younger brother's shoes.
+      - zh: 下雨以后，地上的泥沙变得湿湿的。
+        en: After the rain, the sand on the ground became wet.
+      - zh: 妈妈提醒我们不要把泥沙带回家里。
+        en: Mum reminded us not to bring sand back home.
+
+  - word: 捡
+    pinyin: jiǎn
+    meaning: To pick up
+    example: 妹妹在海边开心地捡漂亮的贝壳。
+    sentenceBank:
+      - zh: 妹妹在海边开心地捡漂亮的贝壳。
+        en: My younger sister happily picked up beautiful shells at the beach.
+      - zh: 我们看到地上的垃圾就一起捡起来。
+        en: When we saw rubbish on the ground, we picked it up together.
+      - zh: 弟弟喜欢在沙滩上捡各种各样的贝壳。
+        en: My younger brother likes picking up all kinds of shells on the beach.
+      - zh: 老师教我们捡垃圾来保护公园环境。
+        en: The teacher taught us to pick up rubbish to protect the park environment.
+      - zh: 我捡到一个漂亮的贝壳，马上给妹妹看。
+        en: I picked up a beautiful shell and immediately showed it to my younger sister.
+
+  - word: 贝壳
+    pinyin: bèi ké
+    meaning: Shell
+    example: 海边有很多漂亮的贝壳可以让我们捡。
+    sentenceBank:
+      - zh: 海边有很多漂亮的贝壳可以让我们捡。
+        en: There are many beautiful shells at the beach for us to pick up.
+      - zh: 妹妹捡了几个五颜六色的贝壳回家。
+        en: My younger sister picked up several colourful shells to take home.
+      - zh: 我们把贝壳洗干净以后放在桌子上。
+        en: We washed the shells clean and put them on the table.
+      - zh: 这个贝壳又白又漂亮，我非常喜欢它。
+        en: This shell is white and beautiful, and I really like it.
+      - zh: 老师告诉我们不要随便破坏海边的贝壳。
+        en: The teacher told us not to damage shells at the beach carelessly.
+
+  - word: 市区
+    pinyin: shì qū
+    meaning: Downtown area
+    example: 市区有很多高楼、商店和热闹的街道。
+    sentenceBank:
+      - zh: 市区有很多高楼、商店和热闹的街道。
+        en: There are many tall buildings, shops, and busy streets in the downtown area.
+      - zh: 爸爸每天坐车去市区上班工作。
+        en: Dad takes a vehicle to the downtown area to work every day.
+      - zh: 周末我们一家人一起去市区吃饭购物。
+        en: On the weekend, our whole family went downtown to eat and shop.
+      - zh: 市区里的街道很干净，也非常整齐。
+        en: The streets in the downtown area are clean and very neat.
+      - zh: 我们在市区发现了一家新的餐馆。
+        en: We discovered a new restaurant in the downtown area.
+
+  - word: 发现
+    pinyin: fā xiàn
+    meaning: To discover
+    example: 我们在公园里发现了一只可爱的小鸟。
+    sentenceBank:
+      - zh: 我们在公园里发现了一只可爱的小鸟。
+        en: We discovered a cute little bird in the park.
+      - zh: 妹妹在沙滩上发现了一个漂亮的贝壳。
+        en: My younger sister discovered a beautiful shell on the beach.
+      - zh: 我们参观植物园时发现很多新的植物。
+        en: We discovered many new plants when visiting the botanical gardens.
+      - zh: 爸爸在市区发现了一家很好吃的餐馆。
+        en: Dad discovered a very good restaurant in the downtown area.
+      - zh: 我发现新加坡有很多好玩的地方可以去。
+        en: I discovered that Singapore has many fun places to visit.
+
+  - word: 到处
+    pinyin: dào chù
+    meaning: Everywhere
+    example: 公园里到处都是漂亮的花和绿色的树。
+    sentenceBank:
+      - zh: 公园里到处都是漂亮的花和绿色的树。
+        en: There are beautiful flowers and green trees everywhere in the park.
+      - zh: 夜市里到处都是热闹的人和明亮的灯光。
+        en: There are lively people and bright lights everywhere in the night market.
+      - zh: 新加坡的街道到处都很干净整齐。
+        en: Singapore's streets are clean and neat everywhere.
+      - zh: 我们到处寻找妹妹刚才捡到的贝壳。
+        en: We looked everywhere for the shell my younger sister had just picked up.
+      - zh: 植物园里到处可以看到各种各样的植物。
+        en: You can see all kinds of plants everywhere in the botanical gardens.
+
+  - word: 树木
+    pinyin: shù mù
+    meaning: Tree
+    example: 公园里面有很多高大的绿色树木。
+    sentenceBank:
+      - zh: 公园里面有很多高大的绿色树木。
+        en: There are many tall green trees in the park.
+      - zh: 植物园里有各种各样漂亮的树木。
+        en: There are all kinds of beautiful trees in the botanical gardens.
+      - zh: 这些树木可以帮助我们遮住炎热的太阳。
+        en: These trees can help protect us from the hot sun.
+      - zh: 我们应该保护树木，不可以随便砍树。
+        en: We should protect trees and must not cut them down carelessly.
+      - zh: 东海岸公园有很多树木和绿色草地。
+        en: East Coast Park has many trees and green grass.
+
+  - word: 街道
+    pinyin: jiē dào
+    meaning: Street
+    example: 新加坡的街道非常干净，也非常整齐。
+    sentenceBank:
+      - zh: 新加坡的街道非常干净，也非常整齐。
+        en: The streets of Singapore are very clean and neat.
+      - zh: 市区的街道上有很多汽车和行人。
+        en: There are many cars and pedestrians on the streets downtown.
+      - zh: 我们沿着街道慢慢走到附近的餐馆。
+        en: We slowly walked along the street to a nearby restaurant.
+      - zh: 下雨以后，街道上的水慢慢变少了。
+        en: After the rain, the water on the streets slowly decreased.
+      - zh: 爸爸告诉我们过街道时一定要小心。
+        en: Dad told us that we must be careful when crossing the street.
+
+  - word: 干净
+    pinyin: gān jìng
+    meaning: Clean
+    example: 新加坡的公共地方通常都非常干净。
+    sentenceBank:
+      - zh: 新加坡的公共地方通常都非常干净。
+        en: Public places in Singapore are usually very clean.
+      - zh: 我们野餐以后要把草地收拾干净。
+        en: We should clean up the grass after our picnic.
+      - zh: 妈妈每天都会把家里的房间打扫干净。
+        en: Mum cleans the rooms at home every day.
+      - zh: 海边的泥沙很干净，大家都喜欢在那里玩。
+        en: The sand at the beach is clean, and everyone likes playing there.
+      - zh: 我们应该一起保护环境，让街道保持干净。
+        en: We should protect the environment together and keep the streets clean.
+
+  - word: 整齐
+    pinyin: zhěng qí
+    meaning: Neat
+    example: 教室里的桌椅排得整整齐齐，非常漂亮。
+    sentenceBank:
+      - zh: 教室里的桌椅排得整整齐齐，非常漂亮。
+        en: The desks and chairs in the classroom are arranged neatly and look very nice.
+      - zh: 妈妈把房间里的东西整理得非常整齐。
+        en: Mum arranged everything in the room very neatly.
+      - zh: 新加坡的街道干净整齐，看起来很舒服。
+        en: Singapore's streets are clean and neat, making them pleasant to look at.
+      - zh: 我们要把自己的书架整理得整齐一些。
+        en: We should arrange our bookshelf more neatly.
+      - zh: 公园里的椅子排得很整齐，没有乱放。
+        en: The benches in the park are arranged neatly and are not scattered around.
+
+  - word: 离开
+    pinyin: lí kāi
+    meaning: To leave
+    example: 我们吃完午餐以后就一起离开餐馆。
+    sentenceBank:
+      - zh: 我们吃完午餐以后就一起离开餐馆。
+        en: After lunch, we left the restaurant together.
+      - zh: 天黑以前，我们要记得离开海边回家。
+        en: Before it gets dark, we should remember to leave the beach and go home.
+      - zh: 妈妈叫我们离开公园以前收拾好东西。
+        en: Mum told us to pack our things before leaving the park.
+      - zh: 参观完博物馆以后，大家一起离开了。
+        en: After visiting the museum, everyone left together.
+      - zh: 我们离开植物园以前拍了一张全家照片。
+        en: Before leaving the botanical gardens, we took a family photo.
+
+  - word: 花园城市
+    pinyin: huā yuán chéng shì
+    meaning: Garden City
+    example: 新加坡是一个美丽又干净的花园城市。
+    sentenceBank:
+      - zh: 新加坡是一个美丽又干净的花园城市。
+        en: Singapore is a beautiful and clean Garden City.
+      - zh: 花园城市里有很多绿色的树木和花朵。
+        en: There are many green trees and flowers in the Garden City.
+      - zh: 我很喜欢花园城市里的公园和植物。
+        en: I really like the parks and plants in the Garden City.
+      - zh: 我们可以在花园城市里看到很多绿色植物。
+        en: We can see many green plants in the Garden City.
+      - zh: 新加坡因为有很多绿色植物而成为花园城市。
+        en: Singapore became known as a Garden City because it has many green plants.
+
+  - word: 国家博物馆
+    pinyin: Guó jiā Bó wù guǎn
+    meaning: National Museum
+    example: 老师带我们去国家博物馆参观和学习。
+    sentenceBank:
+      - zh: 老师带我们去国家博物馆参观和学习。
+        en: The teacher took us to visit and learn at the National Museum.
+      - zh: 国家博物馆里有很多有趣的历史故事。
+        en: There are many interesting historical stories in the National Museum.
+      - zh: 我们在国家博物馆看到了很多旧东西。
+        en: We saw many old things at the National Museum.
+      - zh: 妹妹第一次去国家博物馆，觉得很有趣。
+        en: My younger sister visited the National Museum for the first time and found it interesting.
+      - zh: 参观国家博物馆以后，我们一起回学校。
+        en: After visiting the National Museum, we returned to school together.
+
+  - word: 新加坡
+    pinyin: Xīn jiā pō
+    meaning: Singapore
+    example: 我很喜欢新加坡，因为这里有很多好玩的地方。
+    sentenceBank:
+      - zh: 我很喜欢新加坡，因为这里有很多好玩的地方。
+        en: I really like Singapore because there are many fun places here.
+      - zh: 新加坡有漂亮的公园、花园和干净的街道。
+        en: Singapore has beautiful parks, gardens, and clean streets.
+      - zh: 我们可以在新加坡参观很多有趣的地方。
+        en: We can visit many interesting places in Singapore.
+      - zh: 新加坡的天气很热，但是有很多绿色植物。
+        en: Singapore's weather is hot, but there are many green plants.
+      - zh: 我希望以后可以带朋友一起游玩新加坡。
+        en: I hope I can bring my friends to explore Singapore in the future.
+sentences:
+  - text: 小狗很快乐地跑来跑去。
+    segments:
+      - 小狗
+      - 很
+      - 快乐地
+      - 跑来跑去
+      - 。
+    icon: smile
+    description: The little dog happily runs around.
+  - text: 我和朋友一起分享苹果。
+    segments:
+      - 我
+      - 和
+      - 朋友
+      - 一起
+      - 分享
+      - 苹果
+      - 。
+    icon: activity
+    description: Sharing an apple together with a friend.

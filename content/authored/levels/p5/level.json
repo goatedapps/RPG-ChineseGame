@@ -1,0 +1,26 @@
+{
+  "id": "p5",
+  "label": "Primary 5",
+  "ready": false,
+  "regionLessons": {
+    "r1": [1, 2, 3],
+    "r2": [4, 5, 6],
+    "r3": [7, 8],
+    "r4": [9, 10],
+    "r5": [11, 12],
+    "r6": [13, 14, 15],
+    "r7": [16, 17]
+  },
+  "coreQuestionKinds": ["vocab", "pinyin", "usage", "phrase", "conjunction", "sentence", "cloze", "comprehension"],
+  "optionalQuestionKinds": ["dialogue", "errorcorrect", "practical"],
+  "features": {
+    "writing": true,
+    "higherChinese": true,
+    "idioms": true
+  },
+  "tuning": {
+    "profile": "upper-primary",
+    "dialogueDensity": "standard",
+    "readingChunk": "standard"
+  }
+}

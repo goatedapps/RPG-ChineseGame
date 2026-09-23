@@ -1,0 +1,470 @@
+title: 第三课 (Lesson 3)
+vocab:
+  - word: 碗
+    pinyin: wǎn
+    meaning: Bowl
+    example: 妈妈把热热的汤放进我的碗里。
+    sentenceBank:
+      - zh: 妈妈把热热的汤放进我的碗里。
+        en: Mum put the hot soup into my bowl.
+      - zh: 吃饭以前，我们要先把碗放在桌上。
+        en: Before eating, we should put the bowls on the table.
+      - zh: 妹妹吃完饭以后自己洗自己的碗。
+        en: My younger sister washes her own bowl after eating.
+      - zh: 桌上有几个漂亮的碗可以给客人用。
+        en: There are several beautiful bowls on the table for the guests to use.
+      - zh: 爸爸小心地拿着一个热热的汤碗。
+        en: Dad carefully carried a bowl of hot soup.
+
+  - word: 盘
+    pinyin: pán
+    meaning: Plate
+    example: 妈妈把好吃的水果放在盘子里。
+    sentenceBank:
+      - zh: 妈妈把好吃的水果放在盘子里。
+        en: Mum put the delicious fruit on the plate.
+      - zh: 爸爸把一盘热热的菜放在桌上。
+        en: Dad put a plate of hot food on the table.
+      - zh: 吃完饭以后，我们要把盘子洗干净。
+        en: After eating, we need to wash the plates clean.
+      - zh: 桌上有几个盘子和很多漂亮的碗。
+        en: There are several plates and many beautiful bowls on the table.
+      - zh: 妹妹小心地把盘子拿到厨房里面。
+        en: My younger sister carefully carried the plate into the kitchen.
+
+  - word: 叉
+    pinyin: chā
+    meaning: Fork
+    example: 吃西餐的时候，我们可以用叉子吃饭。
+    sentenceBank:
+      - zh: 吃西餐的时候，我们可以用叉子吃饭。
+        en: When eating Western food, we can use a fork.
+      - zh: 妈妈把叉子放在我的盘子旁边。
+        en: Mum put the fork beside my plate.
+      - zh: 我第一次用叉子吃意大利面。
+        en: I used a fork to eat spaghetti for the first time.
+      - zh: 请把干净的叉子放在桌子上面。
+        en: Please put the clean forks on the table.
+      - zh: 小朋友吃饭时要小心使用叉子。
+        en: Children should be careful when using forks while eating.
+
+  - word: 筷子
+    pinyin: kuài zi
+    meaning: Chopsticks
+    example: 我会自己用筷子夹菜和吃饭。
+    sentenceBank:
+      - zh: 我会自己用筷子夹菜和吃饭。
+        en: I can use chopsticks by myself to pick up food and eat.
+      - zh: 妈妈教妹妹怎样正确地拿筷子。
+        en: Mum taught my younger sister how to hold chopsticks correctly.
+      - zh: 吃饭以前，我们要先拿好自己的筷子。
+        en: Before eating, we should first get our own chopsticks.
+      - zh: 爷爷每天吃饭都会使用自己的筷子。
+        en: Grandpa uses his own chopsticks every day when eating.
+      - zh: 弟弟第一次学用筷子，所以还不太会。
+        en: My younger brother is learning to use chopsticks for the first time, so he is not very good at it yet.
+
+  - word: 杯子
+    pinyin: bēi zi
+    meaning: Cup
+    example: 妈妈把一杯温水放在我的杯子里。
+    sentenceBank:
+      - zh: 妈妈把一杯温水放在我的杯子里。
+        en: Mum put some warm water into my cup.
+      - zh: 桌上有很多不同颜色的漂亮杯子。
+        en: There are many beautiful cups of different colours on the table.
+      - zh: 客人来了以后，爸爸拿出干净的杯子。
+        en: After the guests arrived, Dad took out clean cups.
+      - zh: 我每天都会带自己的水杯去学校。
+        en: I bring my own water bottle to school every day.
+      - zh: 妹妹小心地拿着杯子喝水。
+        en: My younger sister carefully held the cup while drinking water.
+
+  - word: 水壶
+    pinyin: shuǐ hú
+    meaning: Water bottle
+    example: 妈妈把水壶放在厨房的桌子上。
+    sentenceBank:
+      - zh: 妈妈把水壶放在厨房的桌子上。
+        en: Mum put the water bottle on the kitchen table.
+      - zh: 我每天都会带水壶去学校喝水。
+        en: I bring a water bottle to school every day to drink water.
+      - zh: 爸爸把水壶里的水倒进杯子里。
+        en: Dad poured the water from the water bottle into the cup.
+      - zh: 天气很热，所以我们要带着水壶。
+        en: The weather is very hot, so we should bring our water bottles.
+      - zh: 妹妹忘记带水壶，所以妈妈送给她。
+        en: My younger sister forgot her water bottle, so Mum brought it to her.
+
+  - word: 客人
+    pinyin: kè rén
+    meaning: Guest
+    example: 今天家里来了几位客人一起吃饭。
+    sentenceBank:
+      - zh: 今天家里来了几位客人一起吃饭。
+        en: Some guests came to our home to eat together today.
+      - zh: 妈妈准备了很多好吃的食物给客人。
+        en: Mum prepared lots of delicious food for the guests.
+      - zh: 客人来到家里以后，大家开心地聊天。
+        en: After the guests arrived, everyone chatted happily.
+      - zh: 我们应该有礼貌地欢迎来到家里的客人。
+        en: We should politely welcome guests who come to our home.
+      - zh: 爸爸请客人坐下来一起喝水聊天。
+        en: Dad invited the guests to sit down and chat while drinking water.
+
+  - word: 送
+    pinyin: sòng
+    meaning: To give
+    example: 妈妈送给外婆一份漂亮的新年礼物。
+    sentenceBank:
+      - zh: 妈妈送给外婆一份漂亮的新年礼物。
+        en: Mum gave Grandma a beautiful New Year present.
+      - zh: 我想送一张生日卡片给我的好朋友。
+        en: I want to give a birthday card to my good friend.
+      - zh: 爸爸每天早上都会送我去学校上课。
+        en: Dad sends me to school every morning.
+      - zh: 哥哥送给妹妹一个可爱的布娃娃。
+        en: My older brother gave my younger sister a cute rag doll.
+      - zh: 我们准备送一些水果给家里的客人。
+        en: We prepared to give some fruit to the guests at home.
+
+  - word: 主人
+    pinyin: zhǔ rén
+    meaning: Host
+    example: 主人热情地请客人坐下来一起吃饭。
+    sentenceBank:
+      - zh: 主人热情地请客人坐下来一起吃饭。
+        en: The host warmly invited the guests to sit down and eat together.
+      - zh: 客人来了以后，主人马上出来欢迎大家。
+        en: After the guests arrived, the host immediately came out to welcome everyone.
+      - zh: 主人准备了很多好吃的食物给客人。
+        en: The host prepared lots of delicious food for the guests.
+      - zh: 主人请大家喝水，还和客人聊天。
+        en: The host invited everyone to drink water and chatted with the guests.
+      - zh: 客人离开以前，主人向大家说谢谢。
+        en: Before the guests left, the host thanked everyone.
+
+  - word: 递
+    pinyin: dì
+    meaning: To pass
+    example: 妈妈递给我一杯温水让我喝。
+    sentenceBank:
+      - zh: 妈妈递给我一杯温水让我喝。
+        en: Mum passed me a cup of warm water to drink.
+      - zh: 哥哥把筷子递给没有筷子的妹妹。
+        en: My older brother passed chopsticks to my younger sister who did not have any.
+      - zh: 请你把那本故事书递给我好吗？
+        en: Could you please pass that storybook to me?
+      - zh: 爸爸递给客人一杯冰水喝。
+        en: Dad passed a cup of ice water to the guest to drink.
+      - zh: 老师把纸张一张一张地递给我们。
+        en: The teacher passed the pieces of paper to us one by one.
+
+  - word: 汽水
+    pinyin: qì shuǐ
+    meaning: Soft drink
+    example: 今天吃晚饭的时候，爸爸买了汽水。
+    sentenceBank:
+      - zh: 今天吃晚饭的时候，爸爸买了汽水。
+        en: Dad bought soft drinks when we had dinner today.
+      - zh: 客人来了以后，妈妈拿出冰冰的汽水。
+        en: After the guests arrived, Mum took out some cold soft drinks.
+      - zh: 妹妹喜欢喝汽水，但是妈妈不让她喝太多。
+        en: My younger sister likes drinking soft drinks, but Mum does not let her drink too much.
+      - zh: 桌上放着几瓶冰凉的汽水给客人。
+        en: There are several bottles of cold soft drinks on the table for the guests.
+      - zh: 爸爸提醒我汽水不能代替每天喝水。
+        en: Dad reminded me that soft drinks cannot replace drinking water every day.
+
+  - word: 把
+    pinyin: bǎ
+    meaning: Preposition used to shift the object before the verb
+    example: 请把你的书放在桌子上面。
+    sentenceBank:
+      - zh: 请把你的书放在桌子上面。
+        en: Please put your book on the table.
+      - zh: 妈妈把水果放在漂亮的盘子里面。
+        en: Mum put the fruit on the beautiful plate.
+      - zh: 我把自己的书包放在椅子旁边。
+        en: I put my school bag beside the chair.
+      - zh: 爸爸把水倒进干净的杯子里面。
+        en: Dad poured the water into the clean cup.
+      - zh: 吃完饭以后，请把碗放到厨房里。
+        en: After eating, please put the bowl in the kitchen.
+
+  - word: 朋友
+    pinyin: péng you
+    meaning: Friend
+    example: 我的好朋友今天来到我家一起玩。
+    sentenceBank:
+      - zh: 我的好朋友今天来到我家一起玩。
+        en: My good friend came to my house to play today.
+      - zh: 我喜欢和朋友一起做功课和玩游戏。
+        en: I like doing homework and playing games with my friends.
+      - zh: 朋友遇到困难的时候，我们应该帮助他。
+        en: When a friend has difficulties, we should help him.
+      - zh: 我的朋友送给我一张漂亮的生日卡片。
+        en: My friend gave me a beautiful birthday card.
+      - zh: 周末的时候，我和朋友一起去公园玩。
+        en: At the weekend, my friend and I went to the park together.
+
+  - word: 耳朵
+    pinyin: ěr duo
+    meaning: Ear
+    example: 小狗有一双大大的耳朵，非常可爱。
+    sentenceBank:
+      - zh: 小狗有一双大大的耳朵，非常可爱。
+        en: The puppy has a pair of big ears and is very cute.
+      - zh: 妹妹的耳朵很小，看起来非常可爱。
+        en: My younger sister's ears are small and look very cute.
+      - zh: 老师告诉我们不要大声叫喊伤害耳朵。
+        en: The teacher told us not to shout loudly and hurt our ears.
+      - zh: 小猫竖起耳朵认真听外面的声音。
+        en: The kitten raised its ears and listened carefully to the sounds outside.
+      - zh: 天气太冷的时候，我们要保护自己的耳朵。
+        en: When the weather is very cold, we should protect our ears.
+
+  - word: 忙
+    pinyin: máng
+    meaning: Busy
+    example: 妈妈今天很忙，没有时间休息。
+    sentenceBank:
+      - zh: 妈妈今天很忙，没有时间休息。
+        en: Mum is very busy today and has no time to rest.
+      - zh: 爸爸工作很忙，但是晚上还是陪我。
+        en: Dad is very busy with work, but he still spends time with me at night.
+      - zh: 老师最近很忙，每天都有很多事情。
+        en: The teacher has been very busy recently and has many things to do every day.
+      - zh: 新年快到了，全家人都忙着大扫除。
+        en: Chinese New Year is coming, and the whole family is busy with spring cleaning.
+      - zh: 妹妹虽然很忙，但是还是帮助妈妈做家务。
+        en: Although my younger sister is busy, she still helps Mum with housework.
+
+  - word: 肉骨头
+    pinyin: ròu gǔ tou
+    meaning: Bone
+    example: 小狗很喜欢吃妈妈给它的肉骨头。
+    sentenceBank:
+      - zh: 小狗很喜欢吃妈妈给它的肉骨头。
+        en: The puppy likes eating the bone that Mum gave it.
+      - zh: 爸爸把肉骨头放进小狗的碗里面。
+        en: Dad put the bone into the puppy's bowl.
+      - zh: 小狗开心地叼着肉骨头到外面玩。
+        en: The puppy happily carried the bone outside to play.
+      - zh: 我们不能把肉骨头随便丢在地上。
+        en: We must not throw bones carelessly on the ground.
+      - zh: 小狗吃完肉骨头以后就去喝水了。
+        en: After eating the bone, the puppy went to drink water.
+
+  - word: 伸出
+    pinyin: shēn chū
+    meaning: To extend
+    example: 小狗伸出舌头开心地看着我们。
+    sentenceBank:
+      - zh: 小狗伸出舌头开心地看着我们。
+        en: The puppy stuck out its tongue and looked at us happily.
+      - zh: 小朋友伸出手来接住老师给的礼物。
+        en: The child extended his hand to receive the present from the teacher.
+      - zh: 小猫伸出爪子想要拿桌上的食物。
+        en: The kitten stretched out its paw to get the food on the table.
+      - zh: 我伸出手帮助弟弟走过小水沟。
+        en: I stretched out my hand to help my younger brother cross the small ditch.
+      - zh: 妹妹伸出手指指着窗外的小鸟。
+        en: My younger sister pointed at the little bird outside the window.
+
+  - word: 舌头
+    pinyin: shé tou
+    meaning: Tongue
+    example: 小狗热的时候会伸出自己的舌头。
+    sentenceBank:
+      - zh: 小狗热的时候会伸出自己的舌头。
+        en: When the puppy is hot, it sticks out its tongue.
+      - zh: 医生请我伸出舌头看看有没有问题。
+        en: The doctor asked me to stick out my tongue to check if there was a problem.
+      - zh: 妹妹吃了酸酸的水果，舌头觉得很酸。
+        en: My younger sister ate sour fruit, and her tongue felt very sour.
+      - zh: 小狗吃完东西以后用舌头舔自己的嘴。
+        en: The puppy licked its mouth with its tongue after eating.
+      - zh: 我们吃东西的时候要小心自己的舌头。
+        en: We need to be careful of our tongues when eating.
+
+  - word: 尝
+    pinyin: cháng
+    meaning: To taste
+    example: 妈妈叫我尝一尝桌上的新菜。
+    sentenceBank:
+      - zh: 妈妈叫我尝一尝桌上的新菜。
+        en: Mum asked me to taste the new dish on the table.
+      - zh: 我第一次尝这个水果，觉得非常甜。
+        en: I tasted this fruit for the first time and thought it was very sweet.
+      - zh: 外婆请我们尝她亲手做的蛋糕。
+        en: Grandma asked us to taste the cake she made herself.
+      - zh: 弟弟不敢尝新的食物，因为他很害怕。
+        en: My younger brother does not dare to taste new food because he is afraid.
+      - zh: 你可以先尝一点看看自己喜不喜欢。
+        en: You can taste a little first to see if you like it.
+
+  - word: 原来
+    pinyin: yuán lái
+    meaning: Turn out to be
+    example: 原来这只小狗是客人带来的。
+    sentenceBank:
+      - zh: 原来这只小狗是客人带来的。
+        en: It turns out that this puppy was brought by the guest.
+      - zh: 我找了很久，原来书在我的书包里。
+        en: I looked for a long time, but it turned out the book was in my school bag.
+      - zh: 原来今天是外婆的生日，我们都忘记了。
+        en: It turns out today is Grandma's birthday, and we all forgot.
+      - zh: 我不知道原来哥哥已经回到家里了。
+        en: I did not know that my older brother had already returned home.
+      - zh: 原来小猫一直躲在桌子下面睡觉。
+        en: It turns out the kitten had been sleeping under the table all along.
+
+  - word: 各自
+    pinyin: gè zì
+    meaning: Each
+    example: 吃完饭以后，大家各自回到自己的房间。
+    sentenceBank:
+      - zh: 吃完饭以后，大家各自回到自己的房间。
+        en: After eating, everyone went back to their own rooms.
+      - zh: 老师叫我们各自完成自己的功课。
+        en: The teacher told us to complete our own homework.
+      - zh: 客人吃完饭以后各自回家休息。
+        en: After eating, the guests each went home to rest.
+      - zh: 我们拿着自己的东西各自坐下来。
+        en: We took our own things and each sat down.
+      - zh: 活动结束以后，孩子们各自跟家人回家。
+        en: After the activity ended, the children each went home with their families.
+
+  - word: 一定
+    pinyin: yí dìng
+    meaning: Certainly
+    example: 明天我一定会记得带自己的水壶。
+    sentenceBank:
+      - zh: 明天我一定会记得带自己的水壶。
+        en: I will definitely remember to bring my own water bottle tomorrow.
+      - zh: 你今天一定要认真完成学校的功课。
+        en: You must definitely complete your school homework carefully today.
+      - zh: 妈妈说晚上一定会回来陪我们吃饭。
+        en: Mum said she will definitely come back to eat with us tonight.
+      - zh: 我一定会帮助朋友解决这个困难的问题。
+        en: I will definitely help my friend solve this difficult problem.
+      - zh: 新年时，我们一定要向长辈拜年。
+        en: During Chinese New Year, we must definitely wish our elders a Happy New Year.
+
+  - word: 第二天
+    pinyin: dì èr tiān
+    meaning: The next day
+    example: 第二天早上，我们一起回到学校上课。
+    sentenceBank:
+      - zh: 第二天早上，我们一起回到学校上课。
+        en: The next morning, we went back to school together.
+      - zh: 第二天早上，妈妈准备了好吃的早餐。
+        en: The next morning, Mum prepared a delicious breakfast.
+      - zh: 第二天我们发现桌上的食物已经吃完了。
+        en: The next day, we found that the food on the table had already been eaten.
+      - zh: 第二天放学以后，我和朋友一起回家。
+        en: The next day after school, my friend and I went home together.
+      - zh: 第二天早上，小狗又开心地跑出来玩。
+        en: The next morning, the puppy happily ran out to play again.
+
+  - word: 捉
+    pinyin: zhuō
+    meaning: To catch
+    example: 小猫喜欢在晚上捉家里的小老鼠。
+    sentenceBank:
+      - zh: 小猫喜欢在晚上捉家里的小老鼠。
+        en: The cat likes catching little mice in the house at night.
+      - zh: 青蛙会在池塘旁边捉很多小害虫。
+        en: Frogs catch many small pests beside the pond.
+      - zh: 弟弟和朋友一起玩捉迷藏游戏。
+        en: My younger brother played hide-and-seek with his friends.
+      - zh: 小猫正在认真地捉一只小虫子。
+        en: The kitten is carefully catching a little insect.
+      - zh: 我们不能为了好玩去捉小动物。
+        en: We should not catch small animals just for fun.
+
+  - word: 非常
+    pinyin: fēi cháng
+    meaning: Very much
+    example: 今天的天气非常好，我们一起去公园玩。
+    sentenceBank:
+      - zh: 今天的天气非常好，我们一起去公园玩。
+        en: The weather is very nice today, so we went to the park together.
+      - zh: 妹妹看到可爱的小狗以后非常开心。
+        en: My younger sister was very happy after seeing the cute puppy.
+      - zh: 外婆做的鸡蛋卷非常好吃，我很喜欢。
+        en: Grandma's egg rolls are very delicious, and I like them very much.
+      - zh: 这本故事书非常有趣，我每天都看。
+        en: This storybook is very interesting, and I read it every day.
+      - zh: 哥哥今天很忙，但是还是非常有耐心。
+        en: My older brother is busy today, but he is still very patient.
+
+  - word: 请
+    pinyin: qǐng
+    meaning: To invite
+    example: 妈妈请客人坐下来一起吃饭聊天。
+    sentenceBank:
+      - zh: 妈妈请客人坐下来一起吃饭聊天。
+        en: Mum invited the guests to sit down and eat and chat together.
+      - zh: 老师请我们打开课本准备开始上课。
+        en: The teacher asked us to open our textbooks and get ready for class.
+      - zh: 爸爸请爷爷奶奶到我们家吃晚饭。
+        en: Dad invited Grandpa and Grandma to our house for dinner.
+      - zh: 我请朋友到家里一起玩游戏。
+        en: I invited my friend to my house to play games together.
+      - zh: 妈妈请大家先洗手，然后才开始吃饭。
+        en: Mum asked everyone to wash their hands first before starting to eat.
+
+  - word: 爱
+    pinyin: ài
+    meaning: To love
+    example: 我很爱我的家人，也喜欢和他们一起。
+    sentenceBank:
+      - zh: 我很爱我的家人，也喜欢和他们一起生活。
+        en: I love my family very much and like living with them.
+      - zh: 妹妹很爱小狗，每天都会照顾它。
+        en: My younger sister loves the puppy and takes care of it every day.
+      - zh: 爸爸妈妈很爱我们，总是帮助我们。
+        en: Dad and Mum love us very much and always help us.
+      - zh: 我爱吃妈妈做的饭，因为真的很好吃。
+        en: I love eating the food Mum cooks because it is really delicious.
+      - zh: 哥哥很爱运动，每天都会去跑步。
+        en: My older brother loves sports and goes running every day.
+
+  - word: 青草
+    pinyin: qīng cǎo
+    meaning: Grass
+    example: 小兔子喜欢在青草地上开心地吃草。
+    sentenceBank:
+      - zh: 小兔子喜欢在青草地上开心地吃草。
+        en: The little rabbit likes happily eating grass on the green field.
+      - zh: 公园里的青草又绿又漂亮，非常好看。
+        en: The grass in the park is green and beautiful.
+      - zh: 小牛每天都会在青草地上慢慢吃草。
+        en: The calf eats grass slowly on the green field every day.
+      - zh: 下雨以后，公园里的青草变得更绿了。
+        en: After it rained, the grass in the park became greener.
+      - zh: 我们可以在青草地上坐下来一起休息。
+        en: We can sit on the grass and rest together.
+sentences:
+  - text: 我送朋友一本书。
+    segments:
+      - 我
+      - 送
+      - 朋友
+      - 一本
+      - 书
+      - 。
+    icon: gift
+    description: I give my friend a book.
+  - text: 主人给弟弟一杯凉水。
+    segments:
+      - 主人
+      - 给
+      - 弟弟
+      - 一杯
+      - 凉水
+      - 。
+    icon: droplet
+    description: The owner gives my younger brother a cup of cool water.

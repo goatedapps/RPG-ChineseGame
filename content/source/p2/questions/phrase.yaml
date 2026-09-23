@@ -1,0 +1,10 @@
+- questionID: P2-PH1
+  lessonIds:
+    - 1
+  question: 「开心」的意思是___。
+  options:
+    - 难过
+    - 生气
+    - 高兴
+    - 害怕
+  correct: 高兴

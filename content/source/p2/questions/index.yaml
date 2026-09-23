@@ -1,0 +1,3843 @@
+- groupId: P2-CLZ2
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-CLZ3
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-CLZ4
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-CLZ5
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-CLZ6
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-CLZ7
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP1
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP2
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP3
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 2
+- groupId: P2-COMP4
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP5
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP6
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP7
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP8
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP9
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP10
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP11
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP12
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP13
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 6
+- groupId: P2-COMP14
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP15
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP16
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP17
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP18
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP19
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP20
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP21
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP22
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP23
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP24
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 6
+- groupId: P2-COMP25
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP26
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P2-COMP27
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP28
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-COMP29
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P2-COMP30
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 2
+- groupId: P2-CJ1
+  subject: Chinese
+  category: conjunction
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-CJ2
+  subject: Chinese
+  category: conjunction
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-DLG1
+  subject: Chinese
+  category: dialogue
+  lessonIds: []
+  questionCount: 4
+- groupId: P2-EC1
+  subject: Chinese
+  category: errorcorrect
+  lessonIds: []
+  questionCount: 2
+- groupId: P2-PH1
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY1
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY2
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY3
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY4
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY5
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY6
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY7
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY8
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY9
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY10
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY11
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY12
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-PY13
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY14
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY15
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY16
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY17
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY18
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY19
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY20
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY21
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY22
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-PY23
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY24
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY25
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY26
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY27
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY28
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY29
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY30
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY31
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY32
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-PY33
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY34
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY35
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY36
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY37
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY38
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY39
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY40
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY41
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY42
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-PY43
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY44
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY45
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY46
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY47
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY48
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY49
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY50
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY51
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY52
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-PY53
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY54
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY55
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY56
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY57
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY58
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY59
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY60
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY61
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY62
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-PY63
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY64
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY65
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY66
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY67
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY68
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY69
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY70
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY71
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY72
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-PY73
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY74
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY75
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY76
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY77
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY78
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY79
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY80
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY81
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY82
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-PY83
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY84
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY85
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY86
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY87
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY88
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY89
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY90
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY91
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY92
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-PY93
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY94
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY95
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY96
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY97
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY98
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY99
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY100
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY101
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY102
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-PY103
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY104
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY105
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY106
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY107
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY108
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY109
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY110
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY111
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY112
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-PY113
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY114
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY115
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY116
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY117
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY118
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY119
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY120
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY121
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY122
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-PY123
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY124
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY125
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY126
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY127
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY128
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY129
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY130
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY131
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY132
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-PY133
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY134
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY135
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY136
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY137
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY138
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY139
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY140
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY141
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY142
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-PY143
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY144
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY145
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY146
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY147
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY148
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY149
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY150
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY151
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY152
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-PY153
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY154
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY155
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY156
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY157
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY158
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY159
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY160
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY161
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY162
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-PY163
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY164
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY165
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY166
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY167
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY168
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY169
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY170
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY171
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY172
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-PY173
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY174
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY175
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY176
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY177
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY178
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY179
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY180
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY181
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY182
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-PY183
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY184
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY185
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY186
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY187
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY188
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY189
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY190
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY191
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PY192
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-PRAC1
+  subject: Chinese
+  category: practical
+  lessonIds: []
+  questionCount: 2
+- groupId: P2-SEN1
+  subject: Chinese
+  category: sentence
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-SEN2
+  subject: Chinese
+  category: sentence
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE1
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE2
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE3
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE4
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE5
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE6
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE7
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE8
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE9
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P2-USE12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P2-USE22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE26
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE27
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE28
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE29
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE30
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE31
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P2-USE32
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE33
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE34
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE35
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE36
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE37
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE38
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE39
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE40
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE41
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P2-USE42
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE43
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE44
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE45
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE46
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE47
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE48
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE49
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE50
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE51
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P2-USE52
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE53
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE54
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE55
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE56
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE57
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE58
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE59
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE60
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE61
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P2-USE62
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE63
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE64
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE65
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE66
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE67
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE68
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE69
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE70
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE71
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P2-USE72
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE73
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE74
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE75
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE76
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE77
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE78
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE79
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE80
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE81
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P2-USE82
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE83
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE84
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE85
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE86
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE87
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE88
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE89
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE90
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE91
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P2-USE92
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE93
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE94
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE95
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE96
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE97
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE98
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE99
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE100
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE101
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P2-USE102
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE103
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE104
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE105
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE106
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE107
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE108
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE109
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE110
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE111
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P2-USE112
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE113
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE114
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE115
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE116
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE117
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE118
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE119
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE120
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE121
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P2-USE122
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE123
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE124
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE125
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE126
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE127
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE128
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE129
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE130
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE131
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P2-USE132
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE133
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE134
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE135
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE136
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE137
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE138
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE139
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE140
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE141
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P2-USE142
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE143
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE144
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE145
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE146
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE147
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE148
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE149
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE150
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE151
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P2-USE152
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE153
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE154
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE155
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE156
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE157
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE158
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE159
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE160
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE161
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P2-USE162
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE163
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE164
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE165
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE166
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE167
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE168
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE169
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE170
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE171
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P2-USE172
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE173
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE174
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE175
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE176
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE177
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE178
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE179
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE180
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE181
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: P2-USE182
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE183
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE184
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE185
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE186
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE187
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE188
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE189
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE190
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: P2-USE191
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-9
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-12
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-13
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-15
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-16
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-17
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-19
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-20
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-21
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-22
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-23
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-24
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-25
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-26
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-27
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: CHATGPT-Vocab-28
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-29
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-30
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-31
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-32
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-33
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-34
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-35
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-36
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-37
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-38
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-39
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-40
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-41
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-42
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-43
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-44
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-45
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-46
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-47
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-48
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-49
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-50
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: CHATGPT-Vocab-51
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-52
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-53
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-54
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-55
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-56
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-57
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-58
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-59
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-60
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: CHATGPT-Vocab-61
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-62
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-63
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-64
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-65
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-66
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-67
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-68
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-69
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-70
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: CHATGPT-Vocab-71
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-72
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-73
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-74
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-75
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-76
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-77
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-78
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-79
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-80
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: CHATGPT-Vocab-81
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-82
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-83
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-84
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-85
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-86
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-87
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-88
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-89
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-90
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: CHATGPT-Vocab-91
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-92
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-93
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-94
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-95
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-96
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-97
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-98
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-99
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-100
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: CHATGPT-Vocab-101
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-102
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-103
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-104
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-105
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-106
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-107
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-108
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-109
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-110
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: CHATGPT-Vocab-111
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-112
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-113
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-114
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-115
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-116
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-117
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-118
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-119
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-120
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: CHATGPT-Vocab-121
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-122
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-123
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-124
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-125
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-126
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-127
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-128
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-129
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-130
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: CHATGPT-Vocab-131
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-132
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-133
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-134
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-135
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-136
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-137
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-138
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-139
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-140
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: CHATGPT-Vocab-141
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-142
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-143
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-144
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-145
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-146
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-147
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-148
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-149
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-150
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: CHATGPT-Vocab-151
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-152
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-153
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-154
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-155
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-156
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-157
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-158
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-159
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-160
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: CHATGPT-Vocab-161
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-162
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-163
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-164
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-165
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-166
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-167
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-168
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-169
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-170
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: CHATGPT-Vocab-171
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-172
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-173
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-174
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-175
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-176
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-177
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-178
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-179
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-180
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: CHATGPT-Vocab-181
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-182
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-183
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-184
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-185
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-186
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-187
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-188
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-189
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-190
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: CHATGPT-Vocab-191
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-192
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-193
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-194
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-195
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-196
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-197
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-198
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-199
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-200
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: CHATGPT-Vocab-201
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-202
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-203
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-204
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-205
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-206
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-207
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-208
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-209
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-210
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 18
+  questionCount: 1
+- groupId: CHATGPT-Vocab-211
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-212
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-213
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-214
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-215
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-216
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-217
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-218
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-219
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1
+- groupId: CHATGPT-Vocab-220
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 19
+  questionCount: 1

@@ -1,0 +1,9 @@
+[
+  { "id": "r1", "name": "Scholar Village", "lessonSlots": 3, "boss": "muddle-king", "fragment": "dawn-stroke" },
+  { "id": "r2", "name": "Harvest Crossing", "lessonSlots": 3, "boss": "doubt-serpent", "fragment": "truth-stroke" },
+  { "id": "r3", "name": "Tidewater Bay and Clock Tower", "lessonSlots": 3, "boss": "idle-clock", "fragment": "current-stroke" },
+  { "id": "r4", "name": "Lantern Theatre and Farm Fields", "lessonSlots": 3, "boss": "mocking-mirror", "fragment": "courage-stroke" },
+  { "id": "r5", "name": "Festival City", "lessonSlots": 3, "boss": "grudge-dragon", "fragment": "harmony-stroke" },
+  { "id": "r6", "name": "Ancient Grove", "lessonSlots": 3, "boss": "give-up-ghost", "fragment": "memory-stroke" },
+  { "id": "r7", "name": "Treehouse Summit and the Great Dictionary Tree", "lessonSlots": 3, "boss": "great-forgetter", "fragment": "final-stroke" }
+]

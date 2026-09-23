@@ -15,6 +15,7 @@ The prototype starts at `prototype/index.html` and is published from the reposit
 `prototype/data/hanzi.js` contains the local Hanzi Writer character data.
 `prototype/vendor/hanzi-writer.min.js` is the vendored writing library.
 `prototype/sounds/` contains external music and sound assets.
+`prototype/assets/` contains generated visual assets such as the shop item icon atlas.
 `tests/prototype.test.cjs` contains DOM, startup, save, content and progression regression checks.
 `.lavish/` contains the annotated review and its pre-feedback plan snapshot.
 
@@ -24,6 +25,8 @@ All three lesson areas are accessible from the start.
 Creature levels and combat difficulty guide the intended order: Lesson 1, then Lesson 2, then Lesson 3.
 Tablet movement uses a D-pad overlaid on the play area.
 The objective banner rotates through incomplete activities every 60 seconds.
+Selected flavor villagers wander within the town while quest and passage villagers remain fixed.
+Wild battles use a staged encounter transition, and creature damage plays a packaged impact sound.
 
 ## Current gameplay rules
 
@@ -36,6 +39,7 @@ Keep the parent battle cap and the first three rewarded School sessions per day.
 Preserve the 30–60 minute intended session range without adding a mandatory timer.
 Preserve old saves through validated migrations and recovery.
 Do not silently reset invalid saves.
+Protect the Parent Panel with a changeable PIN stored as a salted code rather than plain text.
 Keep player and creature HP, attack, defense and evasion visible where relevant.
 Damage must use attacker stats, defender stats, move bonuses and a small random roll.
 The shop offers lesson-specific bait that targets an exact selected word spirit.

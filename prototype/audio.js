@@ -13,6 +13,7 @@
     level: 'sounds/level-up.mp3',
     improve: 'sounds/need-improvement.mp3',
     purchase: 'sounds/purchase.mp3',
+    hit: 'sounds/creature-hit.wav',
     wrong: 'sounds/wrong-answer.mp3',
   };
 

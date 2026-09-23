@@ -76,6 +76,19 @@ test('prototype reaches the level picker without a startup error', async () => {
   runtime.window.document.querySelector('[data-l="p5"]').click();
   assert.match(runtime.window.document.querySelector('#ov').textContent, /Grandma Wang/);
   assert.equal(runtime.window.document.querySelector('#hLevel').textContent, 'P5');
+  runtime.window.document.querySelector('#bParent').click();
+  assert.match(runtime.window.document.querySelector('#ov').textContent, /Parent PIN/);
+  runtime.window.document.querySelector('#parentPin').value = '1056';
+  runtime.window.document.querySelector('#unlockParent').click();
+  assert.match(runtime.window.document.querySelector('#ov').textContent, /Parent Panel/);
+  runtime.window.document.querySelector('#chgPin').click();
+  runtime.window.document.querySelector('#oldPin').value = '1056';
+  runtime.window.document.querySelector('#newPin').value = '2468';
+  runtime.window.document.querySelector('#confirmPin').value = '2468';
+  runtime.window.document.querySelector('#savePin').click();
+  const storedPin = runtime.window.localStorage.getItem('wsq-parent-pin-v1');
+  assert.match(storedPin, /^PIN1\.[0-9a-f]{8}$/);
+  assert.doesNotMatch(storedPin, /1056|2468/);
   assert.deepEqual(errors.map(error => error.message), []);
   runtime.window.close();
 });
@@ -211,6 +224,44 @@ test('Scholar Village has a larger lore and guidance cast', () => {
   assert.match(gameSource, /Muddle King once forgot his birthday/);
   assert.match(gameSource, /S\.boss&&AMBIENT_AFTER_BOSS\[n\.id\]/);
   assert.match(gameSource, /if\(ambient\)dialog\(n\.n,pick\(ambient\)\)/);
+  assert.match(gameSource, /wander:true/);
+  assert.match(gameSource, /function updateNPCs\(\)/);
+  assert.match(gameSource, /n\.step\+=\.04/);
+});
+
+test('shop uses the generated item icon atlas', () => {
+  const atlas = fs.readFileSync(path.join(prototypeRoot, 'assets', 'item-icons.png'));
+  assert.equal(atlas.subarray(1, 4).toString(), 'PNG');
+  assert.equal(atlas[25], 6, 'atlas uses RGBA transparency');
+  assert.ok(atlas.length > 500_000);
+  assert.match(css, /background-image:url\('assets\/item-icons\.png'\)/);
+  assert.match(gameSource, /item-icon rice/);
+  assert.match(gameSource, /item-icon noodles/);
+  assert.match(gameSource, /item-icon bait-\$\{zone\}/);
+  assert.match(gameSource, /item-icon hat-\$\{k\}/);
+  for (const name of ['rice', 'noodles', 'bait-a', 'bait-b', 'bait-c', 'hat-red', 'hat-bamboo', 'hat-crown'])assert.match(css,new RegExp(`\\.item-icon\\.${name}`));
+});
+
+test('parent panel requires an encoded changeable PIN', () => {
+  assert.match(gameSource, /DEFAULT_PARENT_PIN='1056'/);
+  assert.match(gameSource, /encodeParentPin=pin=>'PIN1\.'\+fnv\(PARENT_PIN_SALT\+pin\)/);
+  assert.match(gameSource, /function openParentGate\(\)/);
+  assert.match(gameSource, /function openChangeParentPin\(\)/);
+  assert.match(gameSource, /localStorage\.setItem\(PARENT_PIN_KEY,encodeParentPin\(pin\)\)/);
+});
+
+test('wild encounters transition into battle and creature hits have audio feedback', () => {
+  assert.match(gameSource, /function playEncounterTransition\(type,onReady\)/);
+  assert.match(gameSource, /encounter-callout/);
+  assert.match(gameSource, /playEncounterTransition\(type,\(\)=>\{openOv/);
+  assert.match(css, /@keyframes encounter-open/);
+  assert.match(css, /@keyframes encounter-pop/);
+  assert.match(gameSource, /function hitMon\(\)\{GameAudio\.sfx\('hit'\)/);
+  assert.match(audioSource, /hit: 'sounds\/creature-hit\.wav'/);
+  const hit = fs.readFileSync(path.join(prototypeRoot, 'sounds', 'creature-hit.wav'));
+  assert.equal(hit.subarray(0, 4).toString(), 'RIFF');
+  assert.equal(hit.subarray(8, 12).toString(), 'WAVE');
+  assert.ok(hit.length > 20_000);
 });
 
 test('agent guidance documents the prototype and future architecture concisely', () => {

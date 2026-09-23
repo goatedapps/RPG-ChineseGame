@@ -68,6 +68,7 @@ const LEVELS=[
   {id:'p3',label:'Primary 3',ready:false},{id:'p4',label:'Primary 4',ready:false},
   {id:'p5',label:'Primary 5',ready:true},{id:'p6',label:'Primary 6',ready:false}];
 const PROFILE_KEY='wsq-profile', LEGACY_KEY='zilin-save-v1';
+const PARENT_PIN_KEY='wsq-parent-pin-v1', DEFAULT_PARENT_PIN='1056', PARENT_PIN_SALT='word-spirit-parent|v1|';
 const saveKey=lvl=>'wsq-save-'+lvl;
 const backupKey=lvl=>saveKey(lvl)+'-backup';
 const recoveryKey=lvl=>saveKey(lvl)+'-recovery';
@@ -87,6 +88,10 @@ function decodeSave(raw){
   if(raw.startsWith('{'))return JSON.parse(raw);   // older plain-JSON saves
   return null;
 }
+const encodeParentPin=pin=>'PIN1.'+fnv(PARENT_PIN_SALT+pin);
+function ensureParentPin(){try{if(!localStorage.getItem(PARENT_PIN_KEY))localStorage.setItem(PARENT_PIN_KEY,encodeParentPin(DEFAULT_PARENT_PIN))}catch(e){}}
+function parentPinMatches(pin){try{return(localStorage.getItem(PARENT_PIN_KEY)||encodeParentPin(DEFAULT_PARENT_PIN))===encodeParentPin(pin)}catch(e){return pin===DEFAULT_PARENT_PIN}}
+function storeParentPin(pin){try{localStorage.setItem(PARENT_PIN_KEY,encodeParentPin(pin));return true}catch(e){return false}}
 let profile=null;try{profile=JSON.parse(localStorage.getItem(PROFILE_KEY)||'null')}catch(e){}
 let LEVEL=profile?.level||null;
 let S=freshState();
@@ -235,12 +240,12 @@ function defineWorld(){
     {id:'lin',x:26,y:12,n:'Mr Lin',c:'#4A6FA5'},
     {id:'mei',x:27,y:20,n:'Chef Mei',c:'#E8E1D0'},
     {id:'dong',x:13,y:13,n:'Ah Dong',c:'#3F7A4A'},
-    {id:'bao',x:18,y:15,n:'Auntie Bao',c:'#B05C74'},
-    {id:'chen',x:22,y:14,n:'Old Chen',c:'#7A6748',hat:'bamboo'},
+    {id:'bao',x:18,y:15,n:'Auntie Bao',c:'#B05C74',wander:true},
+    {id:'chen',x:22,y:14,n:'Old Chen',c:'#7A6748',hat:'bamboo',wander:true},
     {id:'rui',x:14,y:15,n:'Ranger Rui',c:'#365F46',hat:'red'},
-    {id:'bo',x:19,y:20,n:'Postman Bo',c:'#3E6D91'},
-    {id:'min',x:27,y:15,n:'Little Min',c:'#B06C35'},
-    {id:'lan',x:21,y:13,n:'Gardener Lan',c:'#5E7E3E',hat:'bamboo'},
+    {id:'bo',x:19,y:20,n:'Postman Bo',c:'#3E6D91',wander:true},
+    {id:'min',x:27,y:15,n:'Little Min',c:'#B06C35',wander:true},
+    {id:'lan',x:21,y:13,n:'Gardener Lan',c:'#5E7E3E',hat:'bamboo',wander:true},
     {id:'jun',x:12,y:18,n:'Apprentice Jun',c:'#75528A'}
   ];
   // the order in which a passage's questions are handed out to villagers (up to 7 questions)
@@ -268,7 +273,7 @@ defineWorld();
   BUILDINGS.forEach(b=>{rect(b.x,b.y,b.w,b.h,'B');map[b.y+b.h-1][b.dx]='D'});
   for(let y=11;y<16;y++){map[y][15]='=';map[y][24]='='}
   rect(13,22,3,1,'~');
-  NPCS.forEach(n=>map[n.y][n.x]='N');
+  NPCS.forEach(n=>{n.px=n.x*TS;n.py=n.y*TS;n.dir='down';n.step=0;n.moving=false;n.nextMove=90+rnd(180)});
   SIGNS.forEach(s=>map[s.y][s.x]='S');
 })();
 const zoneAt=(x,y)=>{const c=map[y][x];if(ZONES[c])return c;if(x<12&&y>5)return'a';if(x>28&&y>5)return'b';if(y>22)return'c';return null};
@@ -338,7 +343,7 @@ function render(){
     if(c==='K'){g.fillStyle='#6E6A64';g.beginPath();g.arc(sx+16,sy+22,20,Math.PI,0);g.fill();g.fillStyle='#111';g.beginPath();g.arc(sx+16,sy+30,11,Math.PI,0);g.fill();g.fillRect(sx+5,sy+30,22,2);if(S.boss){g.fillStyle='#E2B23C';g.fillRect(sx+13,sy+4,6,6)}}
   }
   BUILDINGS.forEach(b=>drawBuilding(b,ox,oy));
-  NPCS.forEach(n=>{const sx=n.x*TS-ox,sy=n.y*TS-oy;drawPerson(sx,sy,n.c,'down',0,n.hat||(n.id==='guard'?'red':null));
+  NPCS.forEach(n=>{const sx=n.px-ox,sy=n.py-oy;drawPerson(sx,sy,n.c,n.dir,n.moving?n.step:0,n.hat||(n.id==='guard'?'red':null));
     if(pendingFor(n.id)!=null){const bob=Math.sin(tick/12)*2;g.fillStyle='#FFFFFF';g.strokeStyle='#1B2430';g.lineWidth=2;g.beginPath();g.arc(sx+16,sy-10+bob,8,0,7);g.fill();g.stroke();g.fillStyle='#C63F2B';g.font='700 13px "Baloo 2", sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('?',sx+16,sy-9+bob)}});
   drawPerson(P.px-ox,P.py-oy,'#2F6F8F',P.dir,P.moving?P.step:0,S.hat);
   const z=zoneAt(P.x,P.y);
@@ -359,6 +364,7 @@ const solid=c=>['T','~','B','R','N','S','D','G','K'].includes(c);
 function tryMove(d){
   P.dir=d;const [dx,dy]=DIRS[d];const nx=P.x+dx,ny=P.y+dy;
   if(nx<0||ny<0||nx>=MW||ny>=MH)return;
+  const npc=NPCS.find(n=>n.x===nx&&n.y===ny);if(npc){held=null;talk(npc);return}
   const c=map[ny][nx];
   if(c==='G'&&gateOpen()){startMoveTo(nx,ny);return}
   if(solid(c)){held=null;bump(c,nx,ny);return}
@@ -367,12 +373,33 @@ function tryMove(d){
 function startMoveTo(nx,ny){P.moving=true;P.tx=nx;P.ty=ny;P.step=0}
 function update(){
   if(!$('#ov').hidden){render();return}
+  if(locked){render();return}
+  updateNPCs();
   if(P.moving){
     P.step+=0.125;
     P.px=(P.x+(P.tx-P.x)*P.step)*TS;P.py=(P.y+(P.ty-P.y)*P.step)*TS;
     if(P.step>=1){P.x=P.tx;P.y=P.ty;P.px=P.x*TS;P.py=P.y*TS;P.moving=false;S.x=P.x;S.y=P.y;S.dir=P.dir;arrived()}
   } else if(held){tryMove(held)}
   render();
+}
+function updateNPCs(){
+  NPCS.filter(n=>n.wander).forEach(n=>{
+    if(n.moving){
+      n.step+=.04;n.px=(n.fx+(n.x-n.fx)*n.step)*TS;n.py=(n.fy+(n.y-n.fy)*n.step)*TS;
+      if(n.step>=1){n.px=n.x*TS;n.py=n.y*TS;n.step=0;n.moving=false;n.nextMove=tick+100+rnd(220)}
+      return;
+    }
+    if(tick<n.nextMove)return;
+    const dirs=shuffle(Object.keys(DIRS));let moved=false;
+    for(const dir of dirs){
+      const [dx,dy]=DIRS[dir],nx=n.x+dx,ny=n.y+dy,c=map[ny]?.[nx];
+      const occupied=NPCS.some(other=>other!==n&&other.x===nx&&other.y===ny)||(P.x===nx&&P.y===ny);
+      if(nx>=12&&nx<=28&&ny>=6&&ny<=21&&!occupied&&!solid(c)){
+        n.fx=n.x;n.fy=n.y;n.x=nx;n.y=ny;n.dir=dir;n.step=0;n.moving=true;moved=true;break;
+      }
+    }
+    if(!moved)n.nextMove=tick+80+rnd(140);
+  });
 }
 function arrived(){
   const z=zoneAt(P.x,P.y);
@@ -454,7 +481,6 @@ setInterval(()=>{if(LEVEL)updateObjective(true)},60000);
 function bump(c,x,y){
   if(c==='D'){const b=BUILDINGS.find(b=>b.dx===x&&b.y+b.h-1===y);if(b)enterBuilding(b.id);return}
   if(c==='S'){const s=SIGNS.find(s=>s.x===x&&s.y===y);dialog('Sign',[esc(s.t)]);return}
-  if(c==='N'){const n=NPCS.find(n=>n.x===x&&n.y===y);talk(n);return}
   if(c==='G'){talk(NPCS.find(n=>n.id==='guard'));return}
   if(c==='K'){if(S.boss)dialog('Muddle Cave',['The cave is quiet. You already beat the Muddle King!']);else bossIntro();return}
 }
@@ -735,6 +761,13 @@ function writeWord(container,W,opts,onDone){
 
 /* ================= wild battle ================= */
 let B=null;
+function playEncounterTransition(type,onReady){
+  locked=true;held=null;
+  const layer=document.createElement('div');layer.className='encounter-transition';layer.setAttribute('aria-hidden','true');
+  layer.innerHTML=`<div class="encounter-rays"></div><div class="encounter-creature">${monSVG(type)}</div><div class="encounter-callout">A creature approaches!</div>`;
+  $('#stage').appendChild(layer);
+  setTimeout(()=>{layer.classList.add('closing');setTimeout(()=>{layer.remove();locked=false;onReady()},220)},720);
+}
 function pickWord(zone){
   const baitIndex=S.baits.findIndex(b=>b.zone===zone&&WMAP[b.word]);
   if(baitIndex>=0){const bait=S.baits.splice(baitIndex,1)[0];return{word:WMAP[bait.word],baited:true}}
@@ -757,14 +790,15 @@ function startBattle(zone){
   energyLeft();S.energy.used++;
   const review=tierOf(word.w)==='gold';
   B={zone,word,type,hp:monster.hp,max:monster.hp,level:monster.level,attack:monster.attack,defense:monster.defense,bid:++S.battles,streak:0,used:{},double:false,shield:false,review,reviewFailed:false,baited,recommended:recommendedSkill(word),skillBonus:0};
-  openOv(`<div class="battle ${ZONES[zone].cls}" id="bt">
+  playEncounterTransition(type,()=>{openOv(`<div class="battle ${ZONES[zone].cls}" id="bt">
     <div class="arena">
       <div class="fighter"><div class="pcard"><b>You</b> Lv${S.lvl}<div class="weak">ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion*100)}%</div><div class="hpbar"><i id="bHp"></i></div><span id="bHpT"></span></div></div>
       <div class="fighter"><div class="nameplate"><div class="n">Lv${B.level} ${TYPES[type].n}</div><div class="weak">ATK ${B.attack} · DEF ${B.defense} · Weak to ${SKILLS[TYPES[type].weak].n}</div><div class="hpbar enemy"><i id="eHp"></i></div><span id="eHpT"></span></div><div id="monBox">${monSVG(type)}</div></div>
     </div>
     <div class="console" id="con"></div></div>`);
-  bRefresh();
-  bSay(baited?`Your bait worked! A <b>${TYPES[type].n}</b> appeared carrying the exact spirit you chose.`:review?`A <b>${TYPES[type].n}</b> has woken up one of your Gold spirits for a review!`:`A wild <b>${TYPES[type].n}</b> appeared! It has a word spirit sealed inside.`,[{t:'Fight!',f:bMenu}]);
+    bRefresh();
+    bSay(baited?`Your bait worked! A <b>${TYPES[type].n}</b> appeared carrying the exact spirit you chose.`:review?`A <b>${TYPES[type].n}</b> has woken up one of your Gold spirits for a review!`:`A wild <b>${TYPES[type].n}</b> appeared! It has a word spirit sealed inside.`,[{t:'Fight!',f:bMenu}]);
+  });
   return true;
 }
 function bRefresh(){
@@ -845,7 +879,7 @@ function takeHit(dmg,msg){
   if(S.hp<=0)return bLose();
   bSay(msg+(S.hp<=6?' <b style="color:var(--seal)">Your HP is low!</b>':''),[{t:'Next',f:bMenu}]);
 }
-function hitMon(){const m=document.querySelector('#monBox .mon');if(!m)return;m.classList.remove('hit');void m.offsetWidth;m.classList.add('hit')}
+function hitMon(){GameAudio.sfx('hit');const m=document.querySelector('#monBox .mon');if(!m)return;m.classList.remove('hit');void m.offsetWidth;m.classList.add('hit')}
 function bIdiom(w){
   askQuestion($('#con'),idiomQ(w),w,ok=>{
     B.used[w]=true;record(w,'u',ok,B.bid);
@@ -989,10 +1023,10 @@ function innRest(){
 function openShop(){
   openOv(`<div class="panel"><div class="phead"><h2>Shop</h2><button class="close" id="x" aria-label="Close">✕</button></div>
    <p class="sub">You have <b>${S.coins}</b> coins. Bait lets you choose the next word spirit you encounter in that lesson.</p>
-    <div class="shopitem"><span class="nm">Rice Ball<small>+10 HP in battle · you have ${S.potions}</small></span><button class="btn" data-buy="potion" ${S.coins<25?'disabled':''}>25 coins</button></div>
-    <div class="shopitem"><span class="nm">Instant Noodles<small>+20 HP in battle · you have ${S.noodles}</small></span><button class="btn" data-buy="noodles" ${S.coins<50?'disabled':''}>50 coins</button></div>
-   ${Object.entries(BAITS).map(([zone,b])=>{const queued=S.baits.filter(x=>x.zone===zone).length;return`<div class="shopitem"><span class="nm">${b.n}<small>${b.d}${queued?` · ${queued} ready`:''}</small></span><button class="btn" data-bait="${zone}" ${S.coins<b.p?'disabled':''}>${b.p} coins</button></div>`}).join('')}
-   ${Object.entries(HATS).map(([k,h])=>`<div class="shopitem"><span class="nm">${h.n}<small>${S.hats.includes(k)?(S.hat===k?'Wearing':'Owned'):'Just for looks'}</small></span>${S.hats.includes(k)?`<button class="btn alt" data-wear="${k}">${S.hat===k?'Take off':'Wear'}</button>`:`<button class="btn" data-buy="${k}" ${S.coins<h.p?'disabled':''}>${h.p} coins</button>`}</div>`).join('')}
+    <div class="shopitem"><span class="item-icon rice" aria-hidden="true"></span><span class="nm">Rice Ball<small>+10 HP in battle · you have ${S.potions}</small></span><button class="btn" data-buy="potion" ${S.coins<25?'disabled':''}>25 coins</button></div>
+    <div class="shopitem"><span class="item-icon noodles" aria-hidden="true"></span><span class="nm">Instant Noodles<small>+20 HP in battle · you have ${S.noodles}</small></span><button class="btn" data-buy="noodles" ${S.coins<50?'disabled':''}>50 coins</button></div>
+   ${Object.entries(BAITS).map(([zone,b])=>{const queued=S.baits.filter(x=>x.zone===zone).length;return`<div class="shopitem"><span class="item-icon bait-${zone}" aria-hidden="true"></span><span class="nm">${b.n}<small>${b.d}${queued?` · ${queued} ready`:''}</small></span><button class="btn" data-bait="${zone}" ${S.coins<b.p?'disabled':''}>${b.p} coins</button></div>`}).join('')}
+   ${Object.entries(HATS).map(([k,h])=>`<div class="shopitem"><span class="item-icon hat-${k}" aria-hidden="true"></span><span class="nm">${h.n}<small>${S.hats.includes(k)?(S.hat===k?'Wearing':'Owned'):'Just for looks'}</small></span>${S.hats.includes(k)?`<button class="btn alt" data-wear="${k}">${S.hat===k?'Take off':'Wear'}</button>`:`<button class="btn" data-buy="${k}" ${S.coins<h.p?'disabled':''}>${h.p} coins</button>`}</div>`).join('')}
   </div>`);
   $('#x').onclick=closeOv;
   ov.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{const k=b.dataset.buy;if(k==='potion'){S.coins-=25;S.potions++}else if(k==='noodles'){S.coins-=50;S.noodles++}else{S.coins-=HATS[k].p;S.hats.push(k);S.hat=k}GameAudio.sfx('purchase');save();refreshHud();openShop()});
@@ -1130,6 +1164,34 @@ function bossWin(){
 }
 
 /* ================= parent panel ================= */
+let parentUnlocked=false;
+function openParentGate(){
+  if(parentUnlocked)return openParent();
+  openOv(`<div class="panel pin-panel"><div class="phead"><h2>Parent PIN</h2><button class="close" id="x" aria-label="Close">✕</button></div>
+    <p class="msg">Enter the four-digit PIN to open parent settings and progress reports.</p>
+    <label class="pin-label" for="parentPin">PIN</label><input id="parentPin" class="pin-input" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="current-password">
+    <div id="pinFeedback"></div><div class="row"><button class="btn" id="unlockParent">Unlock</button></div></div>`);
+  $('#x').onclick=closeOv;
+  const submit=()=>{const input=$('#parentPin');if(parentPinMatches(input.value)){parentUnlocked=true;openParent()}else{$('#pinFeedback').innerHTML='<div class="feedback bad"><b>That PIN is not correct.</b></div>';input.value='';input.focus()}};
+  $('#unlockParent').onclick=submit;$('#parentPin').onkeydown=e=>{if(e.key==='Enter')submit()};$('#parentPin').focus();
+}
+function openChangeParentPin(){
+  openOv(`<div class="panel pin-panel"><div class="phead"><h2>Change parent PIN</h2><button class="close" id="x" aria-label="Back">←</button></div>
+    <p class="msg">Use four to eight digits. The PIN is stored as a salted code in this browser.</p>
+    <label class="pin-label" for="oldPin">Current PIN</label><input id="oldPin" class="pin-input" type="password" inputmode="numeric" maxlength="8" autocomplete="current-password">
+    <label class="pin-label" for="newPin">New PIN</label><input id="newPin" class="pin-input" type="password" inputmode="numeric" maxlength="8" autocomplete="new-password">
+    <label class="pin-label" for="confirmPin">Confirm new PIN</label><input id="confirmPin" class="pin-input" type="password" inputmode="numeric" maxlength="8" autocomplete="new-password">
+    <div id="pinFeedback"></div><div class="row"><button class="btn" id="savePin">Save new PIN</button><button class="btn alt" id="back">Cancel</button></div></div>`);
+  $('#x').onclick=openParent;$('#back').onclick=openParent;
+  $('#savePin').onclick=()=>{
+    const oldPin=$('#oldPin').value,newPin=$('#newPin').value,confirm=$('#confirmPin').value,feedback=$('#pinFeedback');
+    if(!parentPinMatches(oldPin)){feedback.innerHTML='<div class="feedback bad"><b>The current PIN is not correct.</b></div>';return}
+    if(!/^\d{4,8}$/.test(newPin)){feedback.innerHTML='<div class="feedback bad"><b>Use four to eight digits.</b></div>';return}
+    if(newPin!==confirm){feedback.innerHTML='<div class="feedback bad"><b>The new PINs do not match.</b></div>';return}
+    if(!storeParentPin(newPin)){feedback.innerHTML='<div class="feedback bad"><b>The PIN could not be saved in this browser.</b></div>';return}
+    openParent();toast('Parent PIN changed.');
+  };
+}
 function downloadProgress(raw,name){
   const blob=new Blob([raw],{type:'text/plain'}),url=URL.createObjectURL(blob),a=document.createElement('a');
   a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -1187,6 +1249,7 @@ function openParent(){
     <div class="row" style="align-items:center"><label for="len" style="font-size:14px">Writing check</label>
      <select id="len" style="font:inherit;padding:6px 8px;border-radius:8px;border:2px solid var(--ink)"><option value="1" ${S.settings.lenient?'selected':''}>Gentle (accepts wobbly and backwards strokes)</option><option value="0" ${S.settings.lenient?'':'selected'}>Strict</option></select></div>
      <p class="sub" style="margin:0">Stroke order is always checked. Stars need correct answers on two different days. Gold spirits first return after ${REVIEW_DAYS} days; successful reviews extend the interval up to ${REVIEW_MAX_DAYS} days, so extra play on one day can't fill up the Spirit Book.</p>
+     <div class="row"><button class="btn alt" id="chgPin">Change parent PIN</button><button class="btn alt" id="lockParent">Lock Parent Panel</button></div>
    </div>
     <div><p class="sub" style="margin-bottom:6px">Backup and recovery</p><div class="row"><button class="btn alt" id="exp">Export progress</button><button class="btn alt" id="impBtn">Import progress</button>${hasBackup?'<button class="btn alt" id="restore">Restore last valid backup</button>':''}${saveRecovery?'<button class="btn alt" id="raw">Download damaged save</button>':''}</div></div>
    <div class="row"><button class="btn alt" id="gt">Test mode: ${S.gateTest?'close':'open'} the boss gate</button><button class="btn alt" id="gl">Test mode: give Cave Lantern</button><button class="btn alt" id="en">Give 5 more battles today</button><button class="btn seal" id="rs">Reset progress</button></div>
@@ -1198,6 +1261,7 @@ function openParent(){
   $('#gl').onclick=()=>{if(!hasLantern())S.keyItems.push('cave-lantern');save();openParent()};
   $('#sw').onchange=e=>{S.settings.sendWritten=e.target.value==='1';save()};
   $('#swl').onclick=()=>openLevelPicker(true);
+  $('#chgPin').onclick=openChangeParentPin;$('#lockParent').onclick=()=>{parentUnlocked=false;closeOv();toast('Parent Panel locked.')};
   $('#exp').onclick=exportProgress;$('#impBtn').onclick=openImport;
   if($('#restore'))$('#restore').onclick=restoreBackup;
   if($('#raw'))$('#raw').onclick=()=>downloadProgress(saveRecovery,`word-spirit-${LEVEL}-recovery-${today()}.txt`);
@@ -1208,12 +1272,12 @@ function openParent(){
 
 /* ================= boot ================= */
 $('#bDex').onclick=()=>{if(!B||ov.hidden||!ov.querySelector('#bt'))openDex()};
-$('#bParent').onclick=()=>{if(ov.hidden||!ov.querySelector('#bt'))openParent()};
+$('#bParent').onclick=()=>{if(ov.hidden||!ov.querySelector('#bt'))openParentGate()};
 $('#bAudio').onclick=()=>{GameAudio.unlock();GameAudio.toggle();refreshHud()};
 addEventListener('click',e=>{const button=e.target.closest('button');if(button&&!button.matches('.opt,[data-buy],#bDex,#bAudio'))GameAudio.sfx('button')});
 addEventListener('pointerdown',()=>GameAudio.unlock(),{once:true});
 addEventListener('keydown',()=>GameAudio.unlock(),{once:true});
-refreshHud();
+ensureParentPin();refreshHud();
 lastZone=zoneAt(P.x,P.y);
 loop();
 function openLevelPicker(fromParent){

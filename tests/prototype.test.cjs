@@ -174,4 +174,26 @@ test('tablet joystick, expanded world, and scene audio are connected', () => {
   assert.match(audioSource, /village:/);
   assert.match(audioSource, /battle:/);
   assert.match(audioSource, /boss:/);
+  assert.doesNotMatch(audioSource, /createOscillator|setInterval\(musicTick/);
+});
+
+test('packaged sound effects and mixed music loops are available', () => {
+  const sounds = path.join(prototypeRoot, 'sounds');
+  const effects = [
+    'bag-open.mp3', 'button.mp3', 'correct.mp3', 'enter-shop.mp3', 'good-result.mp3',
+    'level-up.mp3', 'need-improvement.mp3', 'purchase.mp3', 'wrong-answer.mp3',
+  ];
+  for (const name of effects) {
+    const file = path.join(sounds, name);
+    assert.ok(fs.statSync(file).size > 4000, `${name} is a non-empty packaged effect`);
+    assert.match(audioSource, new RegExp(name.replace('.', '\\.')));
+  }
+  for (const name of ['music-village.wav', 'music-battle.wav', 'music-boss.wav']) {
+    const file = path.join(sounds, name);
+    const buffer = fs.readFileSync(file);
+    assert.equal(buffer.subarray(0, 4).toString(), 'RIFF');
+    assert.equal(buffer.subarray(8, 12).toString(), 'WAVE');
+    assert.ok(buffer.length > 1_000_000, `${name} contains the full mixed loop`);
+    assert.match(audioSource, new RegExp(name.replace('.', '\\.')));
+  }
 });

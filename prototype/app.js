@@ -473,7 +473,7 @@ function askPassageQ(i){
   const qa=$('#qa'),fb=$('#fb');
   const finish=(how,shown)=>{
     S.reading.results[i]={how,day:today()};S.stats.c[1]++;if(how==='right'||how==='got')S.stats.c[0]++;
-    const coins={right:10,got:10,partly:6,help:3}[how];S.coins+=coins;const xp=how==='help'?2:5,up=gainXp(xp);save();refreshHud();
+    const coins={right:10,got:10,partly:6,help:3}[how];S.coins+=coins;const xp=how==='help'?2:5,up=gainXp(xp);GameAudio.sfx(how==='right'||how==='got'?'correct':how==='partly'?'improve':'wrong');save();refreshHud();
     fb.innerHTML=`<div class="feedback ${how==='help'?'bad':'good'}"><b>${{right:'Correct! Well read.',got:'Great! You matched the model answer.',partly:'Good try! Remember the parts you missed.',help:'That\'s OK. Now you know where the answer is.'}[how]}</b>
       ${shown?`<div>Answer: <b>${esc(shown)}</b></div>`:''}<div class="sub">+${coins} coins · +${xp} XP</div><div class="row"><button class="btn" id="fbGo">Next ▸</button></div></div>`;
     qa.querySelectorAll('button,input,textarea').forEach(b=>b.disabled=true);
@@ -681,7 +681,7 @@ function recommendedSkill(word){
 }
 function startBattle(zone){
   const word=pickWord(zone);if(!word)return;const type=pick(Object.keys(TYPES));
-  GameAudio.setScene('battle');GameAudio.sfx('encounter');
+  GameAudio.setScene('battle');
   energyLeft();S.energy.used++;
   const review=tierOf(word.w)==='gold';
   B={zone,word,type,hp:3,max:3,bid:++S.battles,streak:0,used:{},double:false,shield:false,review,reviewFailed:false,recommended:recommendedSkill(word),skillBonus:0};
@@ -721,7 +721,7 @@ function dealDamage(k,base){
   if(k===TYPES[B.type].weak){dmg++;notes.push('Super effective!')}
   if(B.streak>=3){dmg++;notes.push('Streak bonus!')}
   if(B.double){dmg*=2;B.double=false;notes.push('Teamwork ×2!')}
-  B.hp=Math.max(0,B.hp-dmg);GameAudio.sfx('hit');hitMon();bRefresh();
+  B.hp=Math.max(0,B.hp-dmg);hitMon();bRefresh();
   if(B.hp<=0){bWin();return}
   enemyTurn(`${SKILLS[k].t} hits for <b>${dmg}</b> damage! ${notes.join(' ')}`,true);
 }
@@ -766,7 +766,7 @@ function enemyTurn(prefix,wasCorrect){
   }
 }
 function takeHit(dmg,msg){
-  S.hp=Math.max(0,S.hp-dmg);GameAudio.sfx('hurt');$('#bt').classList.add('flash');setTimeout(()=>$('#bt')?.classList.remove('flash'),400);bRefresh();
+  S.hp=Math.max(0,S.hp-dmg);$('#bt').classList.add('flash');setTimeout(()=>$('#bt')?.classList.remove('flash'),400);bRefresh();
   if(S.hp<=0)return bLose();
   bSay(msg+(S.hp<=6?' <b style="color:var(--seal)">Your HP is low!</b>':''),[{t:'Next',f:bMenu}]);
 }
@@ -819,6 +819,7 @@ function bigCard(w){
 }
 let dexLesson=1;
 function openDex(){
+  GameAudio.sfx('bag');
   const tierHz={bronze:'B',silver:'S',gold:'G'};
   const list=WORDS.filter(w=>w.l===dexLesson);
   const cnt=l=>WORDS.filter(w=>w.l===l&&S.words[w.w]?.c).length;
@@ -858,7 +859,7 @@ function enterBuilding(id){
   if(id==='school'){const paid=schoolPaid();dialog('Teacher Li',['Welcome to the School!',`Take a <b>quiz</b> with questions from real exam papers, or try <b>tingxie</b>: I say a word and you write it.${paid?' You earn <b>5 coins</b> for each correct answer.':' You have used up today\'s coin rewards, but practice still helps your stars!'}`],[{t:'Exam quiz',f:schoolQuiz},{t:'Tingxie (dictation)',cls:'jade',f:schoolDictation},...(S.school.examWeek!==weekKey()?[{t:'Exam Day (weekly)',cls:'seal',f:examDay}]:[]),{t:'Maybe later',cls:'alt',f:closeOv}]);}
   if(id==='hall')enterHall();
   if(id==='inn')dialog('Innkeeper',[`Time for a rest! ${collectedCount()?'Before bed, let\'s review your 3 weakest spirits. Then your HP will be full.':'Your HP will be restored.'}`],[{t:'Rest',f:innRest},{t:'No thanks',cls:'alt',f:closeOv}]);
-  if(id==='shop')openShop();
+  if(id==='shop'){GameAudio.sfx('enterShop');openShop()}
 }
 const SCHOOL_PAID_RUNS=3; // coin rewards for the first 3 school sessions each day
 function schoolPaid(){if(S.school.day!==today())S.school={...S.school,day:today(),runs:0};return S.school.runs<SCHOOL_PAID_RUNS}
@@ -918,7 +919,7 @@ function openShop(){
    ${Object.entries(HATS).map(([k,h])=>`<div class="shopitem"><span class="nm">${h.n}<small>${S.hats.includes(k)?(S.hat===k?'Wearing':'Owned'):'Just for looks'}</small></span>${S.hats.includes(k)?`<button class="btn alt" data-wear="${k}">${S.hat===k?'Take off':'Wear'}</button>`:`<button class="btn" data-buy="${k}" ${S.coins<h.p?'disabled':''}>${h.p} coins</button>`}</div>`).join('')}
   </div>`);
   $('#x').onclick=closeOv;
-  ov.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{const k=b.dataset.buy;if(k==='potion'){S.coins-=25;S.potions++}else if(k==='noodles'){S.coins-=50;S.noodles++}else{S.coins-=HATS[k].p;S.hats.push(k);S.hat=k}save();refreshHud();openShop()});
+  ov.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{const k=b.dataset.buy;if(k==='potion'){S.coins-=25;S.potions++}else if(k==='noodles'){S.coins-=50;S.noodles++}else{S.coins-=HATS[k].p;S.hats.push(k);S.hat=k}GameAudio.sfx('purchase');save();refreshHud();openShop()});
   ov.querySelectorAll('[data-wear]').forEach(b=>b.onclick=()=>{const k=b.dataset.wear;S.hat=S.hat===k?null:k;save();openShop()});
 }
 
@@ -957,7 +958,7 @@ function bossIntro(){
 }
 function mergePunct(seg){const out=[];seg.forEach(s=>{if(/^[，。！？、；：“”‘’…,.!?]+$/.test(s)&&out.length)out[out.length-1]+=s;else out.push(s)});return out}
 function startBoss(){
-  GameAudio.setScene('boss');GameAudio.sfx('encounter');
+  GameAudio.setScene('boss');
   const conj=shuffle(DATA.conj).slice(0,3).map(q=>({kind:'conj',q}));
   const ord=shuffle(DATA.lessonSentences).slice(0,2).map(s=>({kind:'order',s}));
   const cz=DATA.cloze.qs.map((q,i)=>({kind:'cloze',q,i}));
@@ -1118,6 +1119,7 @@ function openParent(){
 $('#bDex').onclick=()=>{if(!B||ov.hidden||!ov.querySelector('#bt'))openDex()};
 $('#bParent').onclick=()=>{if(ov.hidden||!ov.querySelector('#bt'))openParent()};
 $('#bAudio').onclick=()=>{GameAudio.unlock();GameAudio.toggle();refreshHud()};
+addEventListener('click',e=>{const button=e.target.closest('button');if(button&&!button.matches('.opt,[data-buy],#bDex,#bAudio'))GameAudio.sfx('button')});
 addEventListener('pointerdown',()=>GameAudio.unlock(),{once:true});
 addEventListener('keydown',()=>GameAudio.unlock(),{once:true});
 refreshHud();

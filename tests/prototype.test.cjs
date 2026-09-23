@@ -14,6 +14,7 @@ const audioSource = fs.readFileSync(path.join(prototypeRoot, 'audio.js'), 'utf8'
 const contentSource = fs.readFileSync(path.join(prototypeRoot, 'data', 'content.js'), 'utf8');
 const hanziSource = fs.readFileSync(path.join(prototypeRoot, 'data', 'hanzi.js'), 'utf8');
 const vendorSource = fs.readFileSync(path.join(prototypeRoot, 'vendor', 'hanzi-writer.min.js'), 'utf8');
+const agentsSource = fs.readFileSync(path.join(root, 'AGENTS.md'), 'utf8');
 const dom = new JSDOM(html);
 
 function assignedJson(source, declaration) {
@@ -198,6 +199,26 @@ test('tablet d-pad, expanded world, and scene audio are connected', () => {
   assert.match(audioSource, /battle:/);
   assert.match(audioSource, /boss:/);
   assert.doesNotMatch(audioSource, /createOscillator|setInterval\(musicTick/);
+});
+
+test('Scholar Village has a larger lore and guidance cast', () => {
+  for (const name of ['Auntie Bao', 'Old Chen', 'Ranger Rui', 'Postman Bo', 'Little Min', 'Gardener Lan', 'Apprentice Jun']) {
+    assert.match(gameSource, new RegExp(name));
+  }
+  assert.match(gameSource, /const AMBIENT_DIALOGUE=/);
+  assert.match(gameSource, /const AMBIENT_AFTER_BOSS=/);
+  assert.match(gameSource, /seven great settlements/);
+  assert.match(gameSource, /Muddle King once forgot his birthday/);
+  assert.match(gameSource, /S\.boss&&AMBIENT_AFTER_BOSS\[n\.id\]/);
+  assert.match(gameSource, /if\(ambient\)dialog\(n\.n,pick\(ambient\)\)/);
+});
+
+test('agent guidance documents the prototype and future architecture concisely', () => {
+  assert.ok(agentsSource.split(/\r?\n/).length <= 200);
+  assert.match(agentsSource, /## Current prototype/);
+  assert.match(agentsSource, /## Future campaign/);
+  assert.match(agentsSource, /## Planned rebuild/);
+  assert.match(agentsSource, /core`, `content`, `learning`, `world`, `battle`, `systems` and `ui/);
 });
 
 test('packaged sound effects and mixed music loops are available', () => {

@@ -179,6 +179,47 @@ function gainXp(n){S.xp+=n;let levels=0;while(S.xp>=S.lvl*30){S.xp-=S.lvl*30;S.l
 const map=[];
 function hash(x,y){let h=x*374761393+y*668265263;h=(h^(h>>>13))*1274126177;return ((h^(h>>>16))>>>0)%100}
 var BUILDINGS,NPCS,SIGNS,QUESTION_VILLAGERS;
+const AMBIENT_DIALOGUE={
+  bao:[
+    ['Scholar Village is the first of <b>seven great settlements</b> around the Dictionary Tree.','Harvest Crossing comes next. Its market is much larger than ours.'],
+    ['Every settlement protects a different part of the old Spirit Brush.','People say its seven strokes can wake the Great Dictionary Tree.']
+  ],
+  chen:[
+    ['A useless fact about the Muddle King: he owns seventeen left socks and no right ones.'],
+    ['The Muddle King once forgot his birthday. He celebrated it three days in a row.'],
+    ['He shouts orders at his cave echo. Then he gets cross when it copies him.']
+  ],
+  rui:[
+    ['The paths are open, but their creatures are not equally strong.','Camping Forest is safest. Misty Path starts at Level 5, and Kitchen Garden starts at Level 9.'],
+    ['Check a creature’s ATK and DEF before fighting. Running away never costs coins.']
+  ],
+  bo:[
+    ['Letters from the other settlements keep arriving with words missing.','Whatever muddled our village is spreading.'],
+    ['A message from Harvest Crossing says neighbours are hiding food from one another. That does not sound like them.']
+  ],
+  min:[
+    ['The shopkeeper can prepare bait for one exact word spirit.','Choose a missing spirit, then explore the matching lesson area.'],
+    ['Gold spirits like to rest. When they wake later, they may need a review battle.']
+  ],
+  lan:[
+    ['The Great Dictionary Tree once had leaves shaped like words.','Now its branches are almost bare.'],
+    ['Chef Mei planted the Kitchen Garden. The cucumbers survived her sugar soup somehow.']
+  ],
+  jun:[
+    ['Attack power is only half the story. A creature’s defense reduces every hit.'],
+    ['Weak attacks, writing moves and answer streaks add power before defense is counted.'],
+    ['Defense softens damage, while evasion can avoid an attack completely. Both improve as you level up.']
+  ]
+};
+const AMBIENT_AFTER_BOSS={
+  bao:[['One settlement is clear, but six still need help.','The road to Harvest Crossing begins beyond the hidden grove.']],
+  chen:[['The Muddle King is curating a Mistake Museum now.','He labelled the exit “entrance,” so he is still learning.']],
+  rui:[['The forest fog is lifting. The Dawn Stroke may reveal paths that were hidden before.']],
+  bo:[['Good news travels quickly. Harvest Crossing has already heard what you did.','They are asking for the Spirit Brush hero by name.']],
+  min:[['You really beat the Muddle King! I knew all those word spirits would help.']],
+  lan:[['A new leaf appeared on the Great Dictionary Tree when the Muddle King changed his ways.']],
+  jun:[['The next region will test more than strength. Keep improving every word skill.']]
+};
 function defineWorld(){
   BUILDINGS=[
     {id:'school',n:'School',x:13,y:8,w:5,h:3,dx:15,roof:'#2F6F8F'},
@@ -193,7 +234,14 @@ function defineWorld(){
     {id:'xiaoqiang',x:18,y:11,n:'Xiaoqiang',c:'#D98A3A'},
     {id:'lin',x:26,y:12,n:'Mr Lin',c:'#4A6FA5'},
     {id:'mei',x:27,y:20,n:'Chef Mei',c:'#E8E1D0'},
-    {id:'dong',x:13,y:13,n:'Ah Dong',c:'#3F7A4A'}
+    {id:'dong',x:13,y:13,n:'Ah Dong',c:'#3F7A4A'},
+    {id:'bao',x:18,y:15,n:'Auntie Bao',c:'#B05C74'},
+    {id:'chen',x:22,y:14,n:'Old Chen',c:'#7A6748',hat:'bamboo'},
+    {id:'rui',x:14,y:15,n:'Ranger Rui',c:'#365F46',hat:'red'},
+    {id:'bo',x:19,y:20,n:'Postman Bo',c:'#3E6D91'},
+    {id:'min',x:27,y:15,n:'Little Min',c:'#B06C35'},
+    {id:'lan',x:21,y:13,n:'Gardener Lan',c:'#5E7E3E',hat:'bamboo'},
+    {id:'jun',x:12,y:18,n:'Apprentice Jun',c:'#75528A'}
   ];
   // the order in which a passage's questions are handed out to villagers (up to 7 questions)
   QUESTION_VILLAGERS=['grandma','teller','xiaoqiang','lin','mei','dong','guard'];
@@ -290,7 +338,7 @@ function render(){
     if(c==='K'){g.fillStyle='#6E6A64';g.beginPath();g.arc(sx+16,sy+22,20,Math.PI,0);g.fill();g.fillStyle='#111';g.beginPath();g.arc(sx+16,sy+30,11,Math.PI,0);g.fill();g.fillRect(sx+5,sy+30,22,2);if(S.boss){g.fillStyle='#E2B23C';g.fillRect(sx+13,sy+4,6,6)}}
   }
   BUILDINGS.forEach(b=>drawBuilding(b,ox,oy));
-  NPCS.forEach(n=>{const sx=n.x*TS-ox,sy=n.y*TS-oy;drawPerson(sx,sy,n.c,'down',0,n.id==='guard'?'red':null);
+  NPCS.forEach(n=>{const sx=n.x*TS-ox,sy=n.y*TS-oy;drawPerson(sx,sy,n.c,'down',0,n.hat||(n.id==='guard'?'red':null));
     if(pendingFor(n.id)!=null){const bob=Math.sin(tick/12)*2;g.fillStyle='#FFFFFF';g.strokeStyle='#1B2430';g.lineWidth=2;g.beginPath();g.arc(sx+16,sy-10+bob,8,0,7);g.fill();g.stroke();g.fillStyle='#C63F2B';g.font='700 13px "Baloo 2", sans-serif';g.textAlign='center';g.textBaseline='middle';g.fillText('?',sx+16,sy-9+bob)}});
   drawPerson(P.px-ox,P.py-oy,'#2F6F8F',P.dir,P.moving?P.step:0,S.hat);
   const z=zoneAt(P.x,P.y);
@@ -423,6 +471,8 @@ function talk(n){
   if(n.id==='mei')dialog('Chef Mei',['Salt or sugar, salt or sugar… I always mix them up!','Collect the Lesson 3 food words for me, will you?']);
   if(n.id==='dong')dialog('Ah Dong',['I\'m collecting word spirits too. Bet I get more than you!','Let\'s see who reaches Gold first.']);
   if(n.id==='grandma')dialog('Grandma Wang',['Every creature in the tall grass has a word spirit sealed inside it.','Each attack tests a different part of the word: its meaning, its pinyin, its characters, how to use it, or writing it yourself.','Check the creature\'s <b>weak spot</b>. The matching attack does extra damage!','Be careful: creatures attack back after every turn, and some cast spells you have to answer to block. Rest at the Inn when your HP is low.']);
+  const ambient=S.boss&&AMBIENT_AFTER_BOSS[n.id]?AMBIENT_AFTER_BOSS[n.id]:AMBIENT_DIALOGUE[n.id];
+  if(ambient)dialog(n.n,pick(ambient));
 }
 
 /* ================= Reading Hall: one passage, questions spread across villagers ================= */

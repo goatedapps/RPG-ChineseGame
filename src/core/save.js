@@ -1,4 +1,4 @@
-import { migrateState } from './state.js';
+import { migrateState } from './state.js?p8';
 
 const SAVE_PREFIX = 'WSQ2';
 const SAVE_SALT = 'word-spirit-quest|modular|v2|';
@@ -100,4 +100,14 @@ export function loadProfile(storage) {
 
 export function saveProfile(storage, level) {
   storage.setItem(PROFILE_KEY, JSON.stringify({ level }));
+}
+
+export function exportSaveEnvelope(state) {
+  return { format: 'word-spirit-quest-save', version: 1, level: state.level, exportedAt: new Date().toISOString(), encodedSave: encodeSave(state) };
+}
+
+export function importSaveEnvelope(envelope, levelPackage) {
+  if (!envelope || envelope.format !== 'word-spirit-quest-save' || envelope.version !== 1) throw new Error('This is not a supported Word Spirit Quest export.');
+  if (envelope.level !== levelPackage.id) throw new Error(`Choose a ${levelPackage.id.toUpperCase()} Word Spirit Quest export.`);
+  return migrateState(decodeSave(envelope.encodedSave), levelPackage);
 }

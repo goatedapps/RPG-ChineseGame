@@ -1,3 +1,5 @@
+import { zoneAt } from './encounters.js?p8';
+
 const TILE = 32;
 
 function drawTree(context, x, y) {
@@ -27,6 +29,19 @@ function drawTile(context, map, tile, x, y, column, row, tick) {
     context.beginPath();
     context.arc(x + 7 + hash % 18, y + 8 + hash % 13, tile === 'f' ? 3 : 2, 0, Math.PI * 2);
     context.fill();
+    const zone = tile === 'g' ? zoneAt(map, column, row) : null;
+    if (zone) {
+      context.fillStyle = `${zone.tint}b8`;
+      for (let blade = 0; blade < 4; blade += 1) {
+        const bx = x + 4 + ((column * 11 + row * 7 + blade * 8) % 25);
+        const by = y + 19 + ((column + blade * 3) % 8);
+        context.beginPath();
+        context.moveTo(bx, by + 8);
+        context.quadraticCurveTo(bx - 3, by, bx - 1, by - 7);
+        context.quadraticCurveTo(bx + 4, by, bx + 2, by + 8);
+        context.fill();
+      }
+    }
   }
   if (tile === 'p') {
     context.fillStyle = 'rgba(105,76,34,.16)';

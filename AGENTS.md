@@ -109,7 +109,9 @@ P3 is complete: the modular Region 1 has stat-based wild battles, School activit
 P4 and P5 are complete: the modular build has consumables, gear, crafting, partner skills, Restoration Sets, milestones and the player room.
 P6 is complete: daily quests, the chest, Lantern Streak, weekly freeze, Mystery Scrolls and the Scroll Library use local dates.
 P7 is complete: Region 1 has its authored story, tutorial, Storyteller, villager requests, rival duels, gate, four-phase boss, Dawn Stroke, hidden grove and next-region progress gate.
-P8 is next: expand parent goals, summaries, save transfer and region controls.
+The Region 1 parity correction is complete: authored tall-grass zones trigger random encounters with cooldowns, procedural creature art, staged transitions and packaged scene audio.
+P8 is complete: the parent panel includes goals, weekly summaries, save transfer, region and test controls, speech speed, sound and PIN changes.
+P9 is next: run P2 Lessons 1–3 through the shared Region 1 vertical slice.
 
 ## Development workflow
 

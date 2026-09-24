@@ -7,12 +7,13 @@ import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js';
 import { showWritingTask } from './ui/writingView.js';
 import { localDay } from './core/time.js';
+import { recordActivity } from './systems/parent.js?p8';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
 }
 
-export function createAdventure({ overlay, getActive, persist, render, toast, gameplay }) {
+export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
 
@@ -35,6 +36,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     ensureDaily();
     const before = game.state.progress.daily;
     game.state.progress.daily = recordDailyEvent(before, event);
+    game.state.progress.activity = recordActivity(game.state.progress.activity, localDay(), event);
     if (!before.completedToday && game.state.progress.daily.completedToday) {
       const advanced = advanceLanternStreak(game.state.progress.streak, localDay());
       game.state.progress.streak = advanced.streak;
@@ -238,14 +240,16 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const story = normalizeStory(game.state.progress.story);
     if (story.bossDefeated) return nextRegionGate();
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateSilverPct);
+    const open = gate.open || game.state.settings.testMode;
     const percent = Math.round(gate.silver / gate.total * 100);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Muddle Cave gate</p><h1>${gate.open ? 'The gate is open' : 'Build your strength'}</h1><p>Silver or better: <b>${gate.silver}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>Cave Lantern: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.</p><div class="button-row">${gate.open ? '<button class="primary" data-boss-start>Challenge Muddle King</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Muddle Cave gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>Silver or better: <b>${gate.silver}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>Cave Lantern: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? '<button class="primary" data-boss-start>Challenge Muddle King</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
     document.querySelector('[data-boss-start]')?.addEventListener('click', startBoss, { once: true });
   }
 
   function startBoss() {
     const queue = bossGateQueue(active().levelPackage.content);
     const battle = { queue, hp: queue.length * 4, maxHp: queue.length * 4, index: 0 };
+    audio?.setScene('boss');
     const next = () => {
       if (battle.hp <= 0) return bossWin();
       if (!battle.queue.length) battle.queue = bossGateQueue(active().levelPackage.content);
@@ -259,6 +263,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
           if (game.state.player.hp === 0) {
             game.state.player.hp = game.state.player.maxHp;
             commit();
+            audio?.setScene('village');
             return overlay.open('<div class="panel result-panel"><h1>The Muddle King overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button></div>');
           }
         }
@@ -287,6 +292,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   }
 
   function bossWin() {
+    audio?.sfx('win');
+    audio?.setScene('village');
     playScene('reform', () => overlay.open('<div class="panel result-panel boss-victory"><p class="panel-kicker">Region 1 restored</p><h1>Dawn Stroke obtained!</h1><p>The hidden grove is open, and the Muddle King now runs the Mistake Museum.</p><button class="primary" data-close-overlay>Return to Scholar Village</button></div>'));
   }
 
@@ -295,7 +302,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const words = regionWords(game.levelPackage);
     const gold = words.filter(word => tierOf(game.state.progress.words[word.w]) === 'gold').length;
     const required = Math.ceil(words.length * game.levelPackage.regionStory.nextRegionGoldPct);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Gold spirits: <b>${gold}/${words.length}</b> · Need 70% (${required}) before Region 2.</p><p>Region 2 will be built after the P2 vertical slice and device pilot.</p><button class="secondary" data-close-overlay>Return</button></div>`);
+    const parentUnlocked = game.state.settings.testMode || game.state.settings.unlockedRegions >= 2;
+    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Gold spirits: <b>${gold}/${words.length}</b> · Need 70% (${required}) before Region 2.</p><p>${parentUnlocked ? 'A parent has unlocked Region 2 for testing. ' : ''}Region 2 will be built after the P2 vertical slice and device pilot.</p><button class="secondary" data-close-overlay>Return</button></div>`);
   }
 
   function mistakeMuseum() {

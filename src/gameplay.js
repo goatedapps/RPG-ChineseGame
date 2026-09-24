@@ -1,11 +1,14 @@
 import { createBattleState, enemyAttack, gainBattleRewards, playerAttack } from './battle/battle.js';
 import { createCreature } from './battle/creatures.js';
+import { creatureSvg } from './battle/creatureArt.js?p8';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
 import { partnerBonuses, partnerMove } from './systems/partners.js';
 import { battlesLeft, useBattle } from './systems/energy.js';
-import { ensureParentPin, parentPinMatches } from './systems/parent.js';
+import { ensureParentPin, goalProgress, parentPinMatches, setParentPin, weeklySummary } from './systems/parent.js?p8';
+import { weightedCreature } from './world/encounters.js?p8';
+import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p8';
 import { checkPassageAnswer, completePassage, normalizeReading, selectPassage } from './systems/reading.js';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
@@ -16,6 +19,7 @@ import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js';
 import { showWritingTask } from './ui/writingView.js';
+import { createSpeechController } from './learning/audio.js';
 
 function addXp(player, amount, { xpMultiplier = 1, maxHpBonus = 0 } = {}) {
   let level = player.level;
@@ -34,9 +38,10 @@ function accuracyRecord(accuracy, skill, ok) {
   return { ...accuracy, [skill]: { correct: current.correct + (ok ? 1 : 0), total: current.total + 1 } };
 }
 
-export function createGameplay({ overlay, storage, getActive, persist, render, toast, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
+export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
   ensureParentPin(storage);
   const active = () => getActive();
+  const speech = createSpeechController();
   const wordsForLesson = lesson => active().levelPackage.content.words.filter(word => word.lesson === lesson);
   const commit = () => { persist(); render(); };
 
@@ -52,6 +57,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const recorded = recordAnswer(game.state.progress.words[word.w], { skill, correct: ok, day: localDay(), assisted });
     game.state.progress.words[word.w] = recorded.progress;
     game.state.progress.accuracy = accuracyRecord(game.state.progress.accuracy, skill, ok);
+    audio?.sfx(ok ? 'correct' : 'wrong');
     if (skill === 'w' && ok) onProgressEvent('writing-success', { word: word.w, lesson: word.lesson });
     return recorded;
   }
@@ -94,7 +100,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     overlay.open(`<article class="panel battle-panel">
       <p class="panel-kicker">Wild word spirit · Lesson ${battle.word.lesson}</p>
       <div class="battle-grid">
-        <div class="creature-card" style="--creature:${battle.creature.color}"><div class="creature-face">${escapeHtml(battle.word.w)}</div><h2>${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</h2><p>${escapeHtml(battle.word.p)} · ${escapeHtml(battle.word.m)}</p><b>HP ${battle.enemyHp}/${battle.creature.maxHp}</b></div>
+        <div class="creature-card" style="--creature:${battle.creature.color}"><div class="creature-art">${creatureSvg(battle.creature.id, escapeHtml(battle.word.w))}</div><h2>${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</h2><p>${escapeHtml(battle.word.p)} · ${escapeHtml(battle.word.m)}</p><p>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</p><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><b>HP ${battle.enemyHp}/${battle.creature.maxHp}</b></div>
         <div><h2>Your turn</h2><p>HP <b>${game.state.player.hp}/${game.state.player.maxHp}</b> · ATK ${3 + game.state.player.level * 3} · DEF ${game.state.player.level * 2}</p>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : ''}
           <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}</span></button>`).join('')}</div>
           <div class="button-row"><button class="secondary" data-bag type="button">Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button">${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button">Run safely</button></div>
@@ -103,6 +109,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     </article>`, { dismissible: false });
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
       const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.partnerBoost || 0), damageMultiplier: battle.doubleHit ? 2 : 1 });
+      if (playerResult.damage > 0) audio?.sfx('hit');
       battle.partnerBoost = 0;
       battle.doubleHit = false;
       battle = playerResult.battle;
@@ -117,7 +124,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       const attackMessage = ok ? `You dealt ${playerResult.damage} damage. ` : 'Your attack missed. ';
       showBattle(battle, `${attackMessage}${enemyResult.evaded ? 'You dodged the counterattack!' : `${battle.creature.name} dealt ${enemyResult.damage} damage.`}`);
     }), { once: true });
-    document.querySelector('[data-run]').addEventListener('click', () => { overlay.close(); commit(); toast('You returned safely to the village.'); }, { once: true });
+    document.querySelector('[data-run]').addEventListener('click', () => { overlay.close(); commit(); audio?.setScene('village'); toast('You returned safely to the village.'); }, { once: true });
     document.querySelector('[data-bag]').addEventListener('click', () => battleBag(battle), { once: true });
     document.querySelector('[data-partner-skill]')?.addEventListener('click', () => {
       battle.partnerUsed = true;
@@ -150,7 +157,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (item.effect === 'remove-option') battle.lantern = true;
       if (item.effect === 'writing-retry') battle.inkRetry = true;
       if (item.effect === 'double-coins') battle.doubleCoins = true;
-      if (item.effect === 'escape') { commit(); overlay.close(); toast('The Smoke Ball carried you safely home.'); return; }
+      if (item.effect === 'escape') { commit(); overlay.close(); audio?.setScene('village'); toast('The Smoke Ball carried you safely home.'); return; }
       commit();
       showBattle(battle, `${item.name} is ready.`);
     });
@@ -172,6 +179,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     onProgressEvent('battle-win', { creature: battle.creature.id, word: battle.word.w });
     onCollectionChanged();
     commit();
+    audio?.sfx('win');
+    audio?.setScene('village');
     overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${escapeHtml(battle.word.w)} joined your Spirit Book!</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${game.levelPackage.balance.combat.battleCoins * (battle.doubleCoins ? 2 : 1)} coins.</p><button class="primary" data-close-overlay type="button">Return to village</button></div>`);
   }
 
@@ -181,30 +190,48 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.player.x = game.levelPackage.map.spawn.x;
     game.state.player.y = game.levelPackage.map.spawn.y;
     commit();
+    audio?.setScene('village');
     overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you home. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`);
   }
 
-  function startBattle(lesson) {
+  function startBattle(zoneOrLesson) {
     const game = active();
+    const zone = typeof zoneOrLesson === 'object' ? zoneOrLesson : null;
+    const lesson = zone?.lesson || zoneOrLesson;
     const cap = game.state.settings.dailyBattles;
     const energy = useBattle(game.state.progress.energy, localDay(), cap);
     if (!energy.allowed) return toast(game.levelPackage.strings.battleCap);
-    const word = selectWord(wordsForLesson(lesson), game.state.progress.words, { day: localDay() });
+    const baitIndex = game.state.progress.baits.findIndex(bait => bait.lesson === lesson);
+    const bait = baitIndex >= 0 ? game.state.progress.baits.splice(baitIndex, 1)[0] : null;
+    const word = bait ? wordsForLesson(lesson).find(candidate => candidate.w === bait.word) : selectWord(wordsForLesson(lesson), game.state.progress.words, { day: localDay() });
     if (!word) return toast(game.levelPackage.strings.peaceful);
-    const creature = createCreature(lesson, game.levelPackage.balance);
+    const creature = createCreature(lesson, game.levelPackage.balance, Math.random, weightedCreature(zone?.encounter?.types));
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
     commit();
-    showBattle(battle, `A level ${battle.creature.level} ${battle.creature.name} appeared!`);
+    audio?.setScene('battle');
+    const transition = document.createElement('div');
+    transition.className = 'encounter-transition';
+    transition.innerHTML = `<div class="encounter-rays"></div><div class="encounter-creature">${creatureSvg(creature.id, escapeHtml(word.w))}</div><div class="encounter-callout">A creature approaches!</div>`;
+    document.querySelector('.stage').appendChild(transition);
+    setTimeout(() => {
+      transition.classList.add('closing');
+      setTimeout(() => {
+        transition.remove();
+        showBattle(battle, bait ? `Your bait worked! ${battle.creature.name} carries ${word.w}.` : `A wild level ${battle.creature.level} ${battle.creature.name} appeared!`);
+      }, 220);
+    }, 720);
+    return true;
   }
 
   function tutorialBattle(onDone) {
     const game = active();
+    audio?.setScene('battle');
     const word = game.levelPackage.content.words.find(candidate => candidate.w === '露营') || wordsForLesson(1)[0];
     const creature = createCreature(1, game.levelPackage.balance, () => 0);
     const ask = () => {
-      overlay.open(`<article class="panel battle-panel"><p class="panel-kicker">First Spirit Brush battle</p><div class="battle-grid"><div class="creature-card" style="--creature:${creature.color}"><div class="creature-face">${escapeHtml(word.w)}</div><h2>${escapeHtml(creature.name)}</h2><b>HP 1/1</b></div><div><h2>Use Meaning Strike</h2><p>Answer the question to free your first Word Spirit.</p><button class="primary" data-tutorial-attack>Meaning Strike</button></div></div></article>`, { dismissible: false });
+      overlay.open(`<article class="panel battle-panel"><p class="panel-kicker">First Spirit Brush battle</p><div class="battle-grid"><div class="creature-card" style="--creature:${creature.color}"><div class="creature-art">${creatureSvg(creature.id, escapeHtml(word.w))}</div><h2>${escapeHtml(creature.name)}</h2><b>HP 1/1</b></div><div><h2>Use Meaning Strike</h2><p>Answer the question to free your first Word Spirit.</p><button class="primary" data-tutorial-attack>Meaning Strike</button></div></div></article>`, { dismissible: false });
       document.querySelector('[data-tutorial-attack]').addEventListener('click', () => {
         showQuestion(overlay, makeQuestion(word, 'm', game.levelPackage.content.words), word, result => {
           recordWord(word, 'm', result.ok);
@@ -212,6 +239,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
           const progress = normalizeWordProgress(game.state.progress.words[word.w]);
           game.state.progress.words[word.w] = { ...progress, collected: true };
           game.state.player.coins += 5;
+          audio?.sfx('win');
+          audio?.setScene('village');
           onCollectionChanged();
           commit();
           overlay.open(`<div class="panel result-panel"><h1>${escapeHtml(word.w)} is free!</h1><p>The Spirit Book has appeared. Every spirit grows through Meaning, Pinyin, Hanzi, Usage and Writing.</p><button class="primary" data-tutorial-done>Continue</button></div>`, { dismissible: false });
@@ -312,8 +341,14 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const reading = normalizeReading(game.state.progress.reading);
     const group = selectPassage(groups, reading);
     if (!group) return overlay.open('<div class="panel"><h1>Reading Hall</h1><p>You have completed every available standard passage.</p><button class="secondary" data-close-overlay>Leave</button></div>');
-    overlay.open(`<article class="panel reading-panel"><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}</p><h1>${escapeHtml(group.passage.title)}</h1><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div><p>${group.items.length} questions follow. Open answers are completed by comparing with a model answer, without automatic marking.</p><div class="button-row"><button class="primary" data-reading-start>Begin passage chain</button><button class="secondary" data-close-overlay>Read later</button></div></article>`);
+    overlay.open(`<article class="panel reading-panel"><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}</p><h1>${escapeHtml(group.passage.title)}</h1><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div><p>${group.items.length} questions follow. Open answers are completed by comparing with a model answer, without automatic marking.</p><div class="button-row"><button class="primary" data-reading-start>Begin passage chain</button><button class="secondary" data-read-aloud>Read aloud</button><button class="secondary" data-close-overlay>Read later</button></div></article>`);
     document.querySelector('[data-reading-start]').addEventListener('click', () => runPassage(group, 0, 0), { once: true });
+    document.querySelector('[data-close-overlay]').addEventListener('click', speech.stop, { once: true });
+    document.querySelector('[data-read-aloud]').addEventListener('click', event => {
+      if (speech.isSpeaking) { speech.stop(); event.currentTarget.textContent = 'Read aloud'; return; }
+      event.currentTarget.textContent = 'Stop';
+      speech.speak(group.passage.text, { rate: game.state.settings.speechRate, onEnd: () => { if (event.currentTarget.isConnected) event.currentTarget.textContent = 'Read aloud'; } });
+    });
   }
 
   function runPassage(group, index, correct) {
@@ -379,7 +414,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const game = active();
     const shopItems = game.levelPackage.items;
     const redCap = game.levelPackage.gear.find(gear => gear.id === 'red-cap');
-    overlay.open(`<div class="panel"><p class="panel-kicker">Scholar Village Shop</p><h1>Supplies and gear</h1><div class="shop-grid">${shopItems.map(item => `<article><b>${escapeHtml(item.name)}</b><span>${escapeHtml(item.effect)} · ${item.price} coins · Own ${game.state.progress.inventory[item.id] || 0}</span><button data-buy="${item.id}">Buy</button></article>`).join('')}<article><b>${escapeHtml(redCap.name)}</b><span>+3 max HP · ${redCap.price} coins</span><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div><div class="button-row"><button class="secondary" data-close-overlay>Leave Shop</button></div></div>`);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Scholar Village Shop</p><h1>Supplies, bait and gear</h1><div class="shop-grid">${shopItems.map(item => `<article><b>${escapeHtml(item.name)}</b><span>${escapeHtml(item.effect)} · ${item.price} coins · Own ${game.state.progress.inventory[item.id] || 0}</span><button data-buy="${item.id}">Buy</button></article>`).join('')}${game.levelPackage.map.zones.map(zone => `<article><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter · 35 coins</span><button data-bait-lesson="${zone.lesson}">Choose spirit</button></article>`).join('')}<article><b>${escapeHtml(redCap.name)}</b><span>+3 max HP · ${redCap.price} coins</span><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div><div class="button-row"><button class="secondary" data-close-overlay>Leave Shop</button></div></div>`);
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
       const bought = buyItem(game.state.player, game.state.progress.inventory, item.id, item);
@@ -388,14 +423,33 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       game.state.progress.inventory = bought.inventory;
       commit();
       toast(`${item.name} added to your bag.`);
+      audio?.sfx('purchase');
       shop();
     });
+    for (const button of document.querySelectorAll('[data-bait-lesson]')) button.addEventListener('click', () => baitPicker(Number(button.dataset.baitLesson)));
     document.querySelector('[data-buy-gear]:not([disabled])')?.addEventListener('click', () => {
       if (game.state.player.coins < redCap.price) return toast('Not enough coins.');
       game.state.player.coins -= redCap.price;
       game.state.progress.equipment.owned.push(redCap.id);
+      audio?.sfx('purchase');
       commit(); shop();
     });
+  }
+
+  function baitPicker(lesson) {
+    const game = active();
+    const words = wordsForLesson(lesson).sort((a, b) => Number(Boolean(game.state.progress.words[a.w]?.collected)) - Number(Boolean(game.state.progress.words[b.w]?.collected)));
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Lesson ${lesson} bait</p><h1>Choose a Word Spirit</h1></div><button class="secondary" data-back-shop>Back</button></div><p>The chosen spirit will appear in your next encounter in this lesson's zone.</p><div class="spirit-grid">${words.map(word => `<button class="spirit-card" data-bait-word="${escapeHtml(word.w)}"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span><small>${game.state.progress.words[word.w]?.collected ? 'Collected' : 'Missing spirit'}</small></button>`).join('')}</div></div>`);
+    document.querySelector('[data-back-shop]').addEventListener('click', shop);
+    for (const button of document.querySelectorAll('[data-bait-word]')) button.addEventListener('click', () => {
+      if (game.state.player.coins < 35) return toast('Not enough coins.');
+      game.state.player.coins -= 35;
+      game.state.progress.baits.push({ lesson, word: button.dataset.baitWord });
+      audio?.sfx('purchase');
+      commit();
+      toast(`Bait prepared for ${button.dataset.baitWord}.`);
+      shop();
+    }, { once: true });
   }
 
   function spiritBook() {
@@ -423,8 +477,36 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const progressWords = Object.values(game.state.progress.words);
     const written = game.state.progress.reading.written || [];
     const energy = game.state.progress.energy;
-    overlay.open(`<div class="panel parent-panel"><div class="panel-header"><div><p class="panel-kicker">Parent Panel</p><h1>Learning summary</h1></div><button class="secondary" data-close-overlay>Lock</button></div><div class="status-grid"><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Gold spirits<b>${progressWords.filter(value => tierOf(value) === 'gold').length}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div></div><label class="answer-field">Daily creature battles<select data-daily-cap>${[10,15,20,30,0].map(value => `<option value="${value}" ${game.state.settings.dailyBattles === value ? 'selected' : ''}>${value || 'No limit'}</option>`).join('')}</select></label><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button></div><h2>Written Reading Hall answers</h2>${written.length ? written.slice(0, 10).map(entry => `<article class="written-review"><b>${escapeHtml(entry.day)} · ${escapeHtml(entry.title)} · ${escapeHtml(entry.rating)}</b><p>${escapeHtml(entry.question)}</p><small>Child: ${escapeHtml(entry.answer || '(No answer)')}</small><small>Model: ${escapeHtml(entry.model)}</small></article>`).join('') : '<p>No written answers yet.</p>'}</div>`);
+    const gold = progressWords.filter(value => tierOf(value) === 'gold').length;
+    const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
+    const accuracy = Object.entries(game.state.progress.accuracy || {});
+    overlay.open(`<div class="panel parent-panel"><div class="panel-header"><div><p class="panel-kicker">Parent Panel</p><h1>Learning summary</h1></div><button class="secondary" data-close-overlay>Lock</button></div>
+      <div class="status-grid"><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Gold spirits<b>${gold}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div><div>Unlocked regions<b>${game.state.settings.unlockedRegions}</b></div></div>
+      ${goal ? `<section class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : '<p>No real-world goal has been set.</p>'}
+      <h2>Accuracy by skill</h2><div class="accuracy-grid">${accuracy.map(([skill, value]) => `<div><b>${escapeHtml(skill.toUpperCase())}</b><span>${value.correct}/${value.total}</span><i><em style="width:${Math.round(value.correct / Math.max(1, value.total) * 100)}%"></em></i></div>`).join('') || '<p>Answer data will appear after the first activity.</p>'}</div>
+      <h2>Settings</h2><div class="parent-settings">
+        <label class="answer-field">Daily creature battles<select data-daily-cap>${[10,15,20,30,0].map(value => `<option value="${value}" ${game.state.settings.dailyBattles === value ? 'selected' : ''}>${value || 'No limit'}</option>`).join('')}</select></label>
+        <label class="answer-field">Writing check<select data-writing-check><option value="gentle" ${game.state.settings.lenientWriting ? 'selected' : ''}>Gentle</option><option value="strict" ${!game.state.settings.lenientWriting ? 'selected' : ''}>Strict</option></select></label>
+        <label class="answer-field">Speech speed<select data-speech-rate>${[[.7,'Slow'],[.85,'Normal'],[1,'Fast']].map(([value,label]) => `<option value="${value}" ${Number(game.state.settings.speechRate) === value ? 'selected' : ''}>${label}</option>`).join('')}</select></label>
+        <label class="answer-field">Sound<select data-sound><option value="on" ${game.state.settings.sound ? 'selected' : ''}>On</option><option value="off" ${!game.state.settings.sound ? 'selected' : ''}>Off</option></select></label>
+        <label class="answer-field">Unlock through region<select data-region-unlock>${[1,2,3,4,5,6,7].map(value => `<option value="${value}" ${game.state.settings.unlockedRegions === value ? 'selected' : ''}>Region ${value}</option>`).join('')}</select></label>
+        <label class="check-setting"><input type="checkbox" data-test-mode ${game.state.settings.testMode ? 'checked' : ''}> Test mode: open all gates</label>
+      </div>
+      <h2>Real-world goal</h2><div class="goal-editor"><input data-goal-label value="${escapeHtml(goal?.label || '')}" placeholder="20 Gold words → ice-cream trip"><select data-goal-type><option value="gold" ${goal?.type === 'gold' ? 'selected' : ''}>Gold words</option><option value="streak" ${goal?.type === 'streak' ? 'selected' : ''}>Streak days</option><option value="region" ${goal?.type === 'region' ? 'selected' : ''}>Region cleared</option></select><input data-goal-target type="number" min="1" value="${goal?.target || 20}"><button data-goal-save>Save goal</button></div>
+      <div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-weekly>Weekly summary</button><button class="secondary" data-export-save>Export save</button><button class="secondary" data-import-trigger>Import save</button><input data-import-save type="file" accept="application/json,.json" hidden></div>
+      <details><summary>Change parent PIN</summary><label class="answer-field">New 4–8 digit PIN<input data-new-pin type="password" inputmode="numeric" maxlength="8"></label><button data-change-pin>Change PIN</button></details>
+      <h2>Written Reading Hall answers</h2>${written.length ? written.slice(0, 10).map(entry => `<article class="written-review"><b>${escapeHtml(entry.day)} · ${escapeHtml(entry.title)} · ${escapeHtml(entry.rating)}</b><p>${escapeHtml(entry.question)}</p><small>Child: ${escapeHtml(entry.answer || '(No answer)')}</small><small>Model: ${escapeHtml(entry.model)}</small></article>`).join('') : '<p>No written answers yet.</p>'}</div>`);
     document.querySelector('[data-daily-cap]').addEventListener('change', event => { game.state.settings.dailyBattles = Number(event.target.value); commit(); });
+    document.querySelector('[data-writing-check]').addEventListener('change', event => { game.state.settings.lenientWriting = event.target.value === 'gentle'; commit(); });
+    document.querySelector('[data-speech-rate]').addEventListener('change', event => { game.state.settings.speechRate = Number(event.target.value); commit(); });
+    document.querySelector('[data-sound]').addEventListener('change', event => { game.state.settings.sound = event.target.value === 'on'; audio?.setEnabled(game.state.settings.sound); commit(); });
+    document.querySelector('[data-region-unlock]').addEventListener('change', event => { game.state.settings.unlockedRegions = Number(event.target.value); commit(); });
+    document.querySelector('[data-test-mode]').addEventListener('change', event => { game.state.settings.testMode = event.target.checked; commit(); });
+    document.querySelector('[data-goal-save]').addEventListener('click', () => {
+      const type = document.querySelector('[data-goal-type]').value;
+      game.state.progress.parent.goal = { label: document.querySelector('[data-goal-label]').value.trim() || 'Learning goal', type, target: type === 'region' ? 1 : Math.max(1, Number(document.querySelector('[data-goal-target]').value) || 1), celebrated: false };
+      commit(); toast('Goal saved. It is now visible in the player room.'); showParentDashboard();
+    });
     document.querySelector('[data-energy-add]').addEventListener('click', () => {
       if (game.state.progress.energy.day !== localDay()) game.state.progress.energy = { day: localDay(), used: 0 };
       game.state.progress.energy.used = Math.max(0, game.state.progress.energy.used - 5);
@@ -432,6 +514,31 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       toast('Five battles were added for today.');
       showParentDashboard();
     });
+    document.querySelector('[data-weekly]').addEventListener('click', showWeeklySummary);
+    document.querySelector('[data-export-save]').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify(exportSaveEnvelope(game.state), null, 2)], { type: 'application/json' });
+      const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `word-spirit-quest-${game.state.level}-${localDay()}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 0);
+    });
+    const fileInput = document.querySelector('[data-import-save]');
+    document.querySelector('[data-import-trigger]').addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', async () => {
+      try {
+        const envelope = JSON.parse(await fileInput.files[0].text());
+        game.state = importSaveEnvelope(envelope, game.levelPackage);
+        commit(); toast('Save imported successfully.'); showParentDashboard();
+      } catch (error) { toast(error.message); }
+    });
+    document.querySelector('[data-change-pin]').addEventListener('click', () => {
+      if (!setParentPin(storage, document.querySelector('[data-new-pin]').value)) return toast('Use 4–8 digits for the new PIN.');
+      toast('Parent PIN changed.');
+    });
+  }
+
+  function showWeeklySummary() {
+    const rows = weeklySummary(active().state.progress.activity, localDay());
+    const totals = rows.reduce((sum, row) => ({ battles: sum.battles + row.battles, school: sum.school + row.school, reading: sum.reading + row.reading, writing: sum.writing + row.writing, minutes: sum.minutes + row.minutes }), { battles: 0, school: 0, reading: 0, writing: 0, minutes: 0 });
+    overlay.open(`<div class="panel weekly-panel"><div class="panel-header"><div><p class="panel-kicker">Last seven days</p><h1>Weekly Learning Summary</h1></div><button class="secondary" data-parent-back>Back</button></div><div class="status-grid"><div>Battles won<b>${totals.battles}</b></div><div>School sessions<b>${totals.school}</b></div><div>Reading answers<b>${totals.reading}</b></div><div>Words written<b>${totals.writing}</b></div><div>Play time<b>${totals.minutes} min</b></div></div><div class="weekly-table">${rows.map(row => `<div><b>${escapeHtml(row.day)}</b><span>⚔ ${row.battles}</span><span>🏫 ${row.school}</span><span>📖 ${row.reading}</span><span>✍ ${row.writing}</span><span>⏱ ${row.minutes}m</span></div>`).join('')}</div></div>`);
+    document.querySelector('[data-parent-back]').addEventListener('click', showParentDashboard);
   }
 
   function handleInteraction(object) {
@@ -439,10 +546,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       'school-door': school,
       'inn-door': inn,
       'hall-door': readingHall,
-      'shop-door': shop,
-      'forest-sign': () => startBattle(1),
-      'mist-sign': () => startBattle(2),
-      'garden-sign': () => startBattle(3)
+      'shop-door': () => { audio?.sfx('enterShop'); shop(); }
     };
     if (handlers[object.id]) { handlers[object.id](); return true; }
     return false;

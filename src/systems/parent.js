@@ -19,3 +19,31 @@ export function parentPinMatches(storage, pin) {
   return storage.getItem(PIN_KEY) === `PIN1.${hash(pin)}`;
 }
 
+export function setParentPin(storage, pin) {
+  if (!/^\d{4,8}$/.test(pin)) return false;
+  storage.setItem(PIN_KEY, `PIN1.${hash(pin)}`);
+  return true;
+}
+
+export function recordActivity(activity, day, event, amount = 1) {
+  const current = activity?.[day] || { battles: 0, school: 0, reading: 0, writing: 0, minutes: 0 };
+  const field = event === 'battle-win' ? 'battles' : event === 'school-run' ? 'school' : event === 'reading-answer' ? 'reading' : event === 'writing-success' ? 'writing' : null;
+  if (!field) return activity || {};
+  return { ...(activity || {}), [day]: { ...current, [field]: current[field] + amount } };
+}
+
+export function weeklySummary(activity, today) {
+  const end = new Date(`${today}T12:00:00`);
+  return Array.from({ length: 7 }, (_, offset) => {
+    const date = new Date(end); date.setDate(end.getDate() - (6 - offset));
+    const day = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    return { day, battles: 0, school: 0, reading: 0, writing: 0, minutes: 0, ...(activity?.[day] || {}) };
+  });
+}
+
+export function goalProgress(goal, state, goldCount = 0) {
+  if (!goal) return null;
+  const value = goal.type === 'gold' ? goldCount : goal.type === 'streak' ? (state.progress.streak?.count || 0) : (state.progress.story?.bossDefeated ? 1 : 0);
+  return { ...goal, value, complete: value >= goal.target, percent: Math.min(100, Math.round(value / Math.max(1, goal.target) * 100)) };
+}
+

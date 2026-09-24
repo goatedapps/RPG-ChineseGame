@@ -6,10 +6,10 @@ export const CREATURES = Object.freeze([
   { id: 'ink-imp', name: 'Ink Imp', color: '#3b3f55', weak: 'w', attackSkill: 'h' }
 ]);
 
-export function createCreature(lesson, balance, random = Math.random) {
+export function createCreature(lesson, balance, random = Math.random, typeId = null) {
   const [minimum, maximum] = balance.combat.lessonLevels[String(lesson)];
   const level = minimum + Math.floor(random() * (maximum - minimum + 1));
-  const type = CREATURES[Math.floor(random() * CREATURES.length)];
+  const type = CREATURES.find(candidate => candidate.id === typeId) || CREATURES[Math.floor(random() * CREATURES.length)];
   return {
     ...type,
     level,

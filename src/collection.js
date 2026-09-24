@@ -5,6 +5,7 @@ import { eligiblePartners, partnerBonuses, setPartners } from './systems/partner
 import { offerSet, setProgress } from './systems/sets.js';
 import { tierOf } from './learning/mastery.js';
 import { escapeHtml } from './ui/dom.js';
+import { goalProgress } from './systems/parent.js?p8';
 
 export function createCollection({ overlay, getActive, persist, render, toast }) {
   const active = () => getActive();
@@ -115,7 +116,10 @@ export function createCollection({ overlay, getActive, persist, render, toast })
     const game = active();
     applyMilestones();
     const partners = game.state.progress.partners.map(id => game.levelPackage.content.words.find(word => word.id === id)).filter(Boolean);
-    overlay.open(`<div class="panel room-panel"><div class="panel-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>Your Room</h1></div><button class="secondary" data-close-overlay>Leave room</button></div><p><b>Lantern Streak: ${game.state.progress.streak?.count || 0} days</b></p><div class="room-scene"><div class="room-shelf">${game.state.progress.room.trophies.length ? game.state.progress.room.trophies.map(() => '<span>🏆</span>').join('') : '<span class="empty">Trophy shelf</span>'}</div><div class="room-bed">Rest</div><div class="room-partners">${partners.length ? partners.map(word => `<i>${escapeHtml(word.w)}</i>`).join('') : '<span>Partner spirits will rest here.</span>'}</div><div class="room-decor">${game.state.progress.room.decorations.map(item => `<b>${escapeHtml(item)}</b>`).join(' ')}</div></div><div class="button-row"><button class="primary" data-board-open>Restoration Board</button><button class="secondary" data-room-partners>Partners</button></div></div>`);
+    const gold = Object.values(game.state.progress.words).filter(value => tierOf(value) === 'gold').length;
+    const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
+    if (goal?.complete && !game.state.progress.parent.goal.celebrated) { game.state.progress.parent.goal.celebrated = true; commit(); toast(`Goal reached: ${goal.label}!`); }
+    overlay.open(`<div class="panel room-panel"><div class="panel-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>Your Room</h1></div><button class="secondary" data-close-overlay>Leave room</button></div><p><b>Lantern Streak: ${game.state.progress.streak?.count || 0} days</b></p>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : ''}<div class="room-scene"><div class="room-shelf">${game.state.progress.room.trophies.length ? game.state.progress.room.trophies.map(() => '<span>🏆</span>').join('') : '<span class="empty">Trophy shelf</span>'}</div><div class="room-bed">Rest</div><div class="room-partners">${partners.length ? partners.map(word => `<i>${escapeHtml(word.w)}</i>`).join('') : '<span>Partner spirits will rest here.</span>'}</div><div class="room-decor">${game.state.progress.room.decorations.map(item => `<b>${escapeHtml(item)}</b>`).join(' ')}</div></div><div class="button-row"><button class="primary" data-board-open>Restoration Board</button><button class="secondary" data-room-partners>Partners</button></div></div>`);
     document.querySelector('[data-board-open]').addEventListener('click', restorationBoard);
     document.querySelector('[data-room-partners]').addEventListener('click', partners);
   }

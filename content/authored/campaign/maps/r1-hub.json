@@ -66,6 +66,32 @@
     "tgggggggggggggggggggpggggggggggggggggggt",
     "tttttttttttttttttttttttttttttttttttttttt"
   ],
+  "zones": [
+    {
+      "id": "camping-forest",
+      "name": "Camping Forest",
+      "lesson": 1,
+      "tint": "#4d8b51",
+      "rect": { "x": 1, "y": 1, "width": 9, "height": 26 },
+      "encounter": { "rate": 0.16, "cooldown": 3, "types": { "fogling": 4, "jumble-bug": 3, "echo-bat": 1 } }
+    },
+    {
+      "id": "misty-path",
+      "name": "Misty Path",
+      "lesson": 2,
+      "tint": "#7776a1",
+      "rect": { "x": 30, "y": 1, "width": 9, "height": 26 },
+      "encounter": { "rate": 0.16, "cooldown": 3, "types": { "twin-shade": 4, "fogling": 2, "echo-bat": 2 } }
+    },
+    {
+      "id": "kitchen-garden",
+      "name": "Kitchen Garden",
+      "lesson": 3,
+      "tint": "#879f49",
+      "rect": { "x": 10, "y": 23, "width": 20, "height": 4 },
+      "encounter": { "rate": 0.16, "cooldown": 3, "types": { "ink-imp": 4, "jumble-bug": 3, "twin-shade": 1 } }
+    }
+  ],
   "objects": [
     {
       "id": "school",

@@ -6,7 +6,7 @@ Primary 5 has the reference prototype and detailed campaign specification; Prima
 This document is the full specification for building the game.
 It is written so that a coding agent (Claude Code, Codex, etc.) can build it from scratch in a fresh repository without having seen the design conversation.
 
-**Status:** a working P5 Region 1 prototype exists at `prototype/index.html`, and rebuild phases P0–P7 are complete under `game/`.
+**Status:** a working P5 Region 1 prototype exists at `prototype/index.html`, and rebuild phases P0–P8 are complete under `game/`.
 It already includes the level picker, encoded saves, the Reading Hall passage quests and the weekly Exam Day described below.
 Treat it as a frozen reference for look and feel and for the already-tested writing and battle logic.
 P2 and P5 source packs now live in `content/source/` and pass the structural validator.
@@ -1365,7 +1365,7 @@ The P2 slice deliberately happens before P5 Region 2 so that level-specific assu
 | **P5 Collection — complete** | partners (8.2), Spirit Sets and map patches (8.3), milestones (8.4), player room (9.5) | completing the Campfire set visibly lights the campfire; partner bonuses apply; milestones grant rewards once |
 | **P6 Daily loops — complete** | quest board and chest, Lantern Streak with freeze, Daily Scroll and Scroll Library | with a faked date: quests reset at midnight, the streak counts, a freeze applies silently once a week |
 | **P7 Region 1 story — complete** | dialogue engine (script commands), villagers and requests (Xiaoqiang, Mr Lin, Chef Mei), rival duel, tutorial battle, gate, Muddle King boss with 4 phases, reform scene, Dawn Stroke, hidden grove, next-region Gold gate | Region 1 can be played start to finish as a story; all requests complete; the boss is beatable and gives the fragment |
-| **P8 Parent** | PIN, goals, weekly summary, export/import, unlock region, speech rate | a parent can set a goal and see progress in the room; import restores the save |
+| **P8 Parent — complete** | PIN, goals, weekly summary, export/import, unlock region, speech rate | a parent can set a goal and see progress in the room; import restores the save |
 | **P9 P2 vertical slice** | run P2 Lessons 1–3 through the same Scholar Village, villagers, quests and Muddle King storyline; tune text density, battle difficulty and feature flags for younger children | P2 starts a separate save in the shared world, teaches its first words, completes one story and one battle loop, and never exposes unavailable content types; switching back to P5 restores the P5 save |
 | **P10 Pilot and hardening** | child-and-parent sessions on the target tablet with both P2 and P5; accessibility, recovery, offline and performance fixes | observed blockers are resolved; save recovery is tested; a child can identify the next action without explanation; the team records a go/no-go decision for campaign expansion |
 | **P11–P16 Shared Regions 2–7** | build each world region once, following 13.4, including new creature looks, sets, villagers, relevant passage chains, boss and fragment ability; map both levels' lessons into it | each region is completable with P2 and P5 content; the previous fragment opens that region's secret area; every required question type has enough reviewed content for the selected level |

@@ -1,4 +1,4 @@
-export const SAVE_SCHEMA_VERSION = 4;
+export const SAVE_SCHEMA_VERSION = 5;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -33,6 +33,10 @@ export function createFreshState(levelPackage) {
       inventory: { 'rice-ball': 1, keyItems: [] },
       equipment: { owned: ['bamboo-brush'], equipped: { brush: 'bamboo-brush', charm: null, hat: null } },
       materials: {},
+      baits: [],
+      encounter: { cooldown: 3, zone: null, capNoticeDay: '' },
+      activity: {},
+      parent: { goal: null },
       partners: [],
       sets: {},
       milestones: [],
@@ -52,6 +56,9 @@ export function createFreshState(levelPackage) {
       dailyBattles: 15,
       lenientWriting: true,
       sound: true,
+      speechRate: 0.85,
+      unlockedRegions: 1,
+      testMode: false,
       sendWrittenAnswers: true
     },
     session: {
@@ -97,6 +104,10 @@ export function migrateState(candidate, levelPackage) {
         inventory: { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) },
         equipment: { ...fresh.progress.equipment, ...(candidate.progress?.equipment || {}) },
         materials: { ...fresh.progress.materials, ...(candidate.progress?.materials || {}) },
+        baits: Array.isArray(candidate.progress?.baits) ? candidate.progress.baits : [],
+        encounter: { ...fresh.progress.encounter, ...(candidate.progress?.encounter || {}) },
+        activity: { ...fresh.progress.activity, ...(candidate.progress?.activity || {}) },
+        parent: { ...fresh.progress.parent, ...(candidate.progress?.parent || {}) },
         partners: Array.isArray(candidate.progress?.partners) ? candidate.progress.partners : [],
         sets: { ...fresh.progress.sets, ...(candidate.progress?.sets || {}) },
         milestones: Array.isArray(candidate.progress?.milestones) ? candidate.progress.milestones : [],

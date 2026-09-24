@@ -2,7 +2,7 @@
 
 Word Spirit Quest is a tablet-friendly exploration RPG for learning primary-school Chinese.
 The current playable reference is the Primary 5 Region 1 prototype under `prototype/`.
-The modular rebuild is being developed alongside it and now completes phases P0–P7.
+The modular rebuild is being developed alongside it and now completes phases P0–P8.
 
 ## Run the reference prototype
 

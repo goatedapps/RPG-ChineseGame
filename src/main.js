@@ -1,21 +1,25 @@
 import { createEventBus } from './core/events.js';
-import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js';
-import { listLevels, loadLevelPackage } from './content/loader.js?p7';
+import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js?p8';
+import { listLevels, loadLevelPackage } from './content/loader.js?p8';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js';
+import { createRenderer } from './world/renderer.js?p8';
 import { bindInput } from './world/input.js';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js';
-import { createCollection } from './collection.js';
-import { createAdventure } from './adventure.js';
+import { createGameplay } from './gameplay.js?p8';
+import { createCollection } from './collection.js?p8';
+import { createAdventure } from './adventure.js?p8';
+import { createAudioManager } from './core/audio.js?p8';
+import { localDay } from './core/time.js';
+import { encounterStep } from './world/encounters.js?p8';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
 const toast = createToast($('#toast'));
 const events = createEventBus();
+const audio = createAudioManager();
 const hud = {
   level: $('#hud-level'),
   location: $('#hud-location'),
@@ -63,9 +67,21 @@ function move(direction) {
   active.state = { ...active.state, player: result.player };
   if (result.moved) {
     events.emit('player:moved', { ...result.player });
-    persist();
     const spot = adventure?.scrollSpot();
     if (spot && result.player.x === spot.x && result.player.y === spot.y) adventure.collectDailyScroll();
+    const encounter = encounterStep(active.state.progress.encounter, active.levelPackage.map, result.player);
+    active.state.progress.encounter = encounter.state;
+    if (encounter.entered) toast(`${encounter.entered.name} · Lesson ${encounter.entered.lesson}`);
+    persist();
+    if (encounter.encounter) {
+      if (gameplay.battlesLeft() === 0) {
+        if (active.state.progress.encounter.capNoticeDay !== localDay()) {
+          active.state.progress.encounter.capNoticeDay = localDay();
+          persist();
+          overlay.dialogue({ title: 'The creatures are asleep', lines: ['You have reached today’s battle limit. Stories, writing, School and the Scroll Library are still open. A parent can add five battles from the Parent Panel.'] });
+        } else toast(active.levelPackage.strings.battleCap);
+      } else gameplay.startBattle(encounter.zone);
+    }
   } else if (result.interaction) {
     events.emit('world:interaction', result.interaction);
     if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
@@ -78,6 +94,9 @@ function startAutosave() {
   autosave = setInterval(() => {
     if (!active || overlay.isOpen) return;
     active.state.session.playMs += 5000;
+    const today = localDay();
+    const entry = active.state.progress.activity[today] || { battles: 0, school: 0, reading: 0, writing: 0, minutes: 0 };
+    active.state.progress.activity[today] = { ...entry, minutes: entry.minutes + 1 / 12 };
     persist();
   }, 5000);
 }
@@ -121,13 +140,15 @@ async function startLevel(levelId) {
       saveBlocked: Boolean(loadResult.blocked)
     };
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
-    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
+    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio });
     adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
     unbindInput = bindInput({ dpad: $('#dpad'), onMove: move });
     startAutosave();
+    audio.setEnabled(active.state.settings.sound);
+    audio.setScene('village');
     render();
     if (!active.state.session.seenWelcome || loadResult.migrated || loadResult.warning) showWelcome(loadResult);
     else overlay.close();
@@ -165,7 +186,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Modular build status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P7 are complete. Region 1 now has daily quests and scrolls, the full village story, requests, rival duels, the Muddle Cave gate and the four-phase Muddle King battle.</p>
+    <p>P0–P8 are complete. Region 1 now has random tall-grass encounters, full creature presentation and audio, daily quests, the complete village story, and parent goals, summaries and save transfer.</p>
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
@@ -188,6 +209,9 @@ async function boot() {
   $('#story-button').addEventListener('click', () => adventure?.storyJournal());
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
   events.on('world:interaction', interaction => console.debug('Interaction', interaction.id));
+  addEventListener('pointerdown', () => audio.unlock(), { once: true });
+  addEventListener('keydown', () => audio.unlock(), { once: true });
+  addEventListener('click', event => { if (event.target.closest('button')) audio.sfx('button'); });
   try {
     levels = await listLevels();
     const requestedLevel = new URLSearchParams(location.search).get('level');

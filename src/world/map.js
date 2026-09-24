@@ -52,5 +52,8 @@ export function validateMap(map) {
     for (const tile of row) if (!map.legend[tile]) errors.push(`Row ${index} uses unknown tile ${tile}.`);
   });
   if (!isWalkable(map, map.spawn.x, map.spawn.y)) errors.push('The spawn tile is not walkable.');
+  for (const zone of map.zones || []) {
+    if (!zone.id || !zone.lesson || !zone.rect || !zone.encounter?.types) errors.push('Every wild zone needs an id, lesson, rectangle and creature mix.');
+  }
   return errors;
 }

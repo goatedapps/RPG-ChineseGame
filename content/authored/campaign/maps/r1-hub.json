@@ -231,6 +231,80 @@
       }
     },
     {
+      "id": "quest-board",
+      "type": "sign",
+      "x": 18,
+      "y": 13,
+      "solid": true,
+      "interaction": { "kind": "daily", "title": "Daily Quest Board", "lines": ["Three new requests appear here each day."] }
+    },
+    {
+      "id": "storyteller",
+      "type": "npc",
+      "name": "Storyteller",
+      "x": 22,
+      "y": 12,
+      "solid": true,
+      "color": "#6b4e8e",
+      "interaction": { "kind": "story", "title": "Storyteller", "lines": ["Every lesson leaves a story behind."] }
+    },
+    {
+      "id": "xiaoqiang",
+      "type": "npc",
+      "name": "Xiaoqiang",
+      "x": 12,
+      "y": 13,
+      "solid": true,
+      "color": "#d98a3a",
+      "interaction": { "kind": "request", "title": "Xiaoqiang", "lines": ["Where did my valuable treasure go?"] }
+    },
+    {
+      "id": "mr-lin",
+      "type": "npc",
+      "name": "Mr Lin",
+      "x": 28,
+      "y": 13,
+      "solid": true,
+      "color": "#2f6f8f",
+      "interaction": { "kind": "request", "title": "Mr Lin", "lines": ["I cannot find the glasses on my… where are they?"] }
+    },
+    {
+      "id": "chef-mei",
+      "type": "npc",
+      "name": "Chef Mei",
+      "x": 18,
+      "y": 17,
+      "solid": true,
+      "color": "#c9804b",
+      "interaction": { "kind": "request", "title": "Chef Mei", "lines": ["Was that salt or sugar? Everything tastes muddled."] }
+    },
+    {
+      "id": "ah-dong",
+      "type": "npc",
+      "name": "Ah Dong",
+      "x": 22,
+      "y": 17,
+      "solid": true,
+      "color": "#3f7a4a",
+      "interaction": { "kind": "duel", "title": "Ah Dong", "lines": ["Collect enough spirits and face me in a quiz duel!"] }
+    },
+    {
+      "id": "treasure-chest",
+      "type": "sign",
+      "x": 5,
+      "y": 14,
+      "solid": true,
+      "interaction": { "kind": "request", "title": "Treasure box", "lines": ["A small box is hidden beside the forest path."] }
+    },
+    {
+      "id": "hidden-grove",
+      "type": "sign",
+      "x": 4,
+      "y": 8,
+      "solid": true,
+      "interaction": { "kind": "story", "title": "Hidden Grove", "lines": ["Thick fog covers a secret clearing."] }
+    },
+    {
       "id": "forest-sign",
       "type": "sign",
       "x": 9,

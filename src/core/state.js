@@ -1,4 +1,4 @@
-export const SAVE_SCHEMA_VERSION = 3;
+export const SAVE_SCHEMA_VERSION = 4;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -37,6 +37,14 @@ export function createFreshState(levelPackage) {
       sets: {},
       milestones: [],
       room: { decorations: [], trophies: [] },
+      daily: { day: '', quests: [], chestClaimed: false, completedToday: false },
+      streak: { count: 0, lastDay: '', freezeWeek: '' },
+      scrolls: { day: '', found: false, unlocked: [] },
+      story: {
+        flags: {}, bossDefeated: false, fragment: null, rivalDuels: 0,
+        requests: { xiaoqiang: 0, 'mr-lin': 0, 'chef-mei': 0 },
+        counters: { creatures: {}, writing: {}, tingxieLesson3: 0 }, storiesRead: []
+      },
       reading: { completed: [], active: null, index: 0, results: {}, written: [] },
       accuracy: {}
     },
@@ -93,6 +101,22 @@ export function migrateState(candidate, levelPackage) {
         sets: { ...fresh.progress.sets, ...(candidate.progress?.sets || {}) },
         milestones: Array.isArray(candidate.progress?.milestones) ? candidate.progress.milestones : [],
         room: { ...fresh.progress.room, ...(candidate.progress?.room || {}) },
+        daily: { ...fresh.progress.daily, ...(candidate.progress?.daily || {}) },
+        streak: { ...fresh.progress.streak, ...(candidate.progress?.streak || {}) },
+        scrolls: { ...fresh.progress.scrolls, ...(candidate.progress?.scrolls || {}) },
+        story: {
+          ...fresh.progress.story,
+          ...(candidate.progress?.story || {}),
+          flags: { ...fresh.progress.story.flags, ...(candidate.progress?.story?.flags || {}) },
+          requests: { ...fresh.progress.story.requests, ...(candidate.progress?.story?.requests || {}) },
+          counters: {
+            ...fresh.progress.story.counters,
+            ...(candidate.progress?.story?.counters || {}),
+            creatures: { ...fresh.progress.story.counters.creatures, ...(candidate.progress?.story?.counters?.creatures || {}) },
+            writing: { ...fresh.progress.story.counters.writing, ...(candidate.progress?.story?.counters?.writing || {}) }
+          },
+          storiesRead: Array.isArray(candidate.progress?.story?.storiesRead) ? candidate.progress.story.storiesRead : []
+        },
         reading: { ...fresh.progress.reading, ...(candidate.progress?.reading || {}) },
         accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
       },

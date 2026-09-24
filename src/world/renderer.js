@@ -124,6 +124,17 @@ function drawSign(context, x, y) {
   context.fillRect(x + 8, y + 14, 12, 2);
 }
 
+function drawScroll(context, x, y) {
+  context.fillStyle = '#f4efe2';
+  context.strokeStyle = '#c63f2b';
+  context.lineWidth = 2;
+  context.fillRect(x + 7, y + 9, 18, 14);
+  context.strokeRect(x + 7, y + 9, 18, 14);
+  context.fillStyle = '#e2b23c';
+  context.fillRect(x + 4, y + 7, 5, 18);
+  context.fillRect(x + 23, y + 7, 5, 18);
+}
+
 export function createRenderer(canvas, map) {
   const context = canvas.getContext('2d');
   let tick = 0;
@@ -162,6 +173,13 @@ export function createRenderer(canvas, map) {
       else drawPerson(context, x, y, '#2f6f8f', state.player.direction, true, state.progress?.equipment?.equipped);
     }
     if (state.progress?.sets?.campfire) drawCampfire(context, 20 * TILE - offsetX, 16 * TILE - offsetY);
+    const scroll = state.progress?.scrolls;
+    if (scroll?.spot && !scroll.found) drawScroll(context, scroll.spot.x * TILE - offsetX, scroll.spot.y * TILE - offsetY);
+    if (state.progress?.story?.flags?.hiddenGrove) {
+      context.fillStyle = 'rgba(244,211,79,.5)';
+      context.beginPath(); context.arc(4 * TILE - offsetX, 8 * TILE - offsetY, 24, 0, Math.PI * 2); context.fill();
+      context.fillStyle = '#f4efe2'; context.font = '700 11px system-ui'; context.fillText('Hidden Grove', 4 * TILE - offsetX, 8 * TILE - offsetY);
+    }
     const partner = state.progress?.partners?.[0];
     if (partner) {
       const glyph = partner.split('-').slice(2).join('-').slice(0, 1);

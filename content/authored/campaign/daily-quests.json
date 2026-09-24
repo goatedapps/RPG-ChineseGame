@@ -1,0 +1,7 @@
+[
+  { "id": "battle", "event": "battle-win", "target": 1, "text": "Free one word spirit in battle." },
+  { "id": "school", "event": "school-run", "target": 1, "text": "Complete one School activity." },
+  { "id": "writing", "event": "writing-success", "target": 2, "text": "Write two words correctly." },
+  { "id": "reading", "event": "reading-answer", "target": 2, "text": "Answer two Reading Hall questions." },
+  { "id": "helper", "event": "villager-help", "target": 1, "text": "Complete one step of a villager request." }
+]

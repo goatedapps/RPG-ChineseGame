@@ -151,6 +151,17 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .room-partners { position: absolute; left: 35px; bottom: 50px; display: flex; gap: 10px; }
 .room-partners i { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: var(--ink); background: var(--paper); box-shadow: 0 3px 8px #735f4c; font: 24px var(--font-chinese); }
 .room-decor { position: absolute; top: 105px; left: 35px; }
+.quest-list, .scroll-grid, .story-timeline { display: grid; gap: 9px; margin: 14px 0; }
+.quest-card, .scroll-grid article, .story-timeline p { margin: 0; padding: 12px; border: 2px solid var(--line); border-radius: 10px; background: white; }
+.quest-card { display: flex; justify-content: space-between; gap: 14px; }
+.quest-card.complete, .story-timeline .done { border-color: var(--jade); background: #dff3e8; }
+.quest-card.paused { opacity: .58; border-style: dashed; }
+.scroll-grid { max-height: 390px; overflow: auto; }
+.scroll-grid article { display: grid; gap: 5px; }
+.scroll-grid article p { margin: 3px 0 0; font: 15px/1.55 var(--font-chinese); }
+.scroll-grid small { color: #647180; }
+.story-page { min-height: 150px; padding: 20px; border-radius: 12px; background: white; font: 19px/1.8 var(--font-chinese); }
+.boss-victory { border-color: var(--gold); background: linear-gradient(145deg,var(--paper),#fff3bd); }
 @media (max-width: 600px) {
   .dpad { right: 9px; bottom: 9px; grid-template-columns: repeat(3,47px); grid-template-rows: repeat(3,47px); }
   .level-grid, .status-grid { grid-template-columns: 1fr; }

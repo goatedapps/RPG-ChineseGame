@@ -107,7 +107,9 @@ P1 is complete under `game/`: the modular preview loads shared Region 1 data, su
 P2 is complete under `game/lab.html`: both content packs can run generated questions, supported exam questions, speech and local three-stage handwriting through shared learning modules.
 P3 is complete: the modular Region 1 has stat-based wild battles, School activities, Reading Hall passage chains, Spirit Book, Inn, Shop, daily energy and a PIN-protected parent summary.
 P4 and P5 are complete: the modular build has consumables, gear, crafting, partner skills, Restoration Sets, milestones and the player room.
-P6 is next: add the daily quest board, chest, Lantern Streak, freeze, Daily Scroll and Scroll Library.
+P6 is complete: daily quests, the chest, Lantern Streak, weekly freeze, Mystery Scrolls and the Scroll Library use local dates.
+P7 is complete: Region 1 has its authored story, tutorial, Storyteller, villager requests, rival duels, gate, four-phase boss, Dawn Stroke, hidden grove and next-region progress gate.
+P8 is next: expand parent goals, summaries, save transfer and region controls.
 
 ## Development workflow
 

@@ -1,6 +1,6 @@
 import { createEventBus } from './core/events.js';
 import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js';
-import { listLevels, loadLevelPackage } from './content/loader.js?p5';
+import { listLevels, loadLevelPackage } from './content/loader.js?p7';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js';
 import { bindInput } from './world/input.js';
@@ -10,6 +10,7 @@ import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
 import { createGameplay } from './gameplay.js';
 import { createCollection } from './collection.js';
+import { createAdventure } from './adventure.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -23,6 +24,8 @@ const hud = {
   hp: $('#hud-hp'),
   hpBar: $('#hud-hp-bar'),
   coins: $('#hud-coins'),
+  battles: $('#hud-battles'),
+  streak: $('#hud-streak'),
   status: $('#save-status')
 };
 
@@ -32,6 +35,7 @@ let unbindInput = null;
 let autosave = null;
 let gameplay = null;
 let collection = null;
+let adventure = null;
 
 function render() {
   if (!active) return;
@@ -60,9 +64,11 @@ function move(direction) {
   if (result.moved) {
     events.emit('player:moved', { ...result.player });
     persist();
+    const spot = adventure?.scrollSpot();
+    if (spot && result.player.x === spot.x && result.player.y === spot.y) adventure.collectDailyScroll();
   } else if (result.interaction) {
     events.emit('world:interaction', result.interaction);
-    if (!gameplay?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
+    if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
   }
   render();
 }
@@ -80,11 +86,11 @@ function showWelcome(loadResult) {
   const messages = [];
   if (loadResult.migrated) messages.push('Your existing P5 prototype progress was copied into this preview. The original prototype save was left untouched.');
   if (loadResult.warning) messages.push(`Save recovery notice: ${loadResult.warning}`);
-  messages.push('Walk with the keyboard arrows, WASD, or the on-screen arrows. Village signs lead to lesson battles, and each building now provides its full learning service.');
+  messages.push('Walk with the keyboard arrows, WASD, or the on-screen arrows. Open Adventure to begin the Region 1 story, or explore the village in any order.');
   overlay.open(`<div class="panel">
     <h1>Scholar Village engine preview</h1>
     ${messages.map(message => `<p>${message}</p>`).join('')}
-    <p>Collect word spirits in battle, practise at School, complete a Reading Hall passage for the Cave Lantern, rest at the Inn, and buy Rice Balls at the Shop.</p>
+    <p>Collect word spirits, help the muddled villagers, complete daily quests, earn the Cave Lantern, and challenge the Muddle King.</p>
     <button class="primary" data-enter-world>Enter the village</button>
   </div>`, { dismissible: false });
   $('[data-enter-world]').addEventListener('click', () => {
@@ -115,7 +121,9 @@ async function startLevel(levelId) {
       saveBlocked: Boolean(loadResult.blocked)
     };
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, onCollectionChanged: () => collection.applyMilestones() });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
+    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay });
+    adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
     unbindInput = bindInput({ dpad: $('#dpad'), onMove: move });
@@ -157,7 +165,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Modular build status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P5 are complete. Region 1 now includes items, gear, crafting, partners, Restoration Sets, milestones and the player room on top of the complete learning loop.</p>
+    <p>P0–P7 are complete. Region 1 now has daily quests and scrolls, the full village story, requests, rival duels, the Muddle Cave gate and the four-phase Muddle King battle.</p>
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
@@ -176,6 +184,8 @@ async function boot() {
   $('#book-button').addEventListener('click', () => gameplay?.spiritBook());
   $('#character-button').addEventListener('click', () => collection?.character());
   $('#room-button').addEventListener('click', () => collection?.room());
+  $('#daily-button').addEventListener('click', () => adventure?.questBoard());
+  $('#story-button').addEventListener('click', () => adventure?.storyJournal());
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
   events.on('world:interaction', interaction => console.debug('Interaction', interaction.id));
   try {
@@ -192,5 +202,5 @@ async function boot() {
 }
 
 window.addEventListener('beforeunload', persist);
-window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, events, startLevel };
+window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, get adventure() { return adventure; }, events, startLevel };
 boot();

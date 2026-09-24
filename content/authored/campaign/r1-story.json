@@ -1,0 +1,37 @@
+{
+  "gateSilverPct": 0.22,
+  "nextRegionGoldPct": 0.7,
+  "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "gatekeeper"],
+  "scrollSpots": [{"x": 7, "y": 13}, {"x": 32, "y": 13}, {"x": 18, "y": 24}, {"x": 25, "y": 15}],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Grandma Wang", "say": "Welcome to Scholar Village! Everyone has been mixing up their words since the Muddle King arrived." },
+      { "speaker": "Grandma Wang", "say": "Long ago, Word Spirits helped people speak, read and write clearly. The Great Forgetter scattered them across the land." },
+      { "speaker": "Grandma Wang", "say": "Come upstairs. Something in the attic has been waiting for you." },
+      { "setFlag": "arrival" }
+    ],
+    "attic": [
+      { "speaker": "Grandma Wang", "say": "This is the handle of the Spirit Brush. It glows when someone truly knows a word." },
+      { "speaker": "Fogling", "say": "A Fogling bursts from an old scroll. The word spirit 露营 is trapped inside!" },
+      { "setFlag": "attic" }
+    ],
+    "reform": [
+      { "speaker": "Muddle King", "say": "I surrender! The Great Forgetter told me that mistakes should make people give up." },
+      { "speaker": "Grandma Wang", "say": "Mistakes help us learn when we look at them carefully." },
+      { "speaker": "Muddle King", "say": "Then I shall open a Mistake Museum and display the funniest muddles we have fixed!" },
+      { "speaker": "Spirit Brush", "say": "Dawn Stroke restored. Thick fog can now be cleared." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "dawn-stroke" }
+    ]
+  },
+  "stories": [
+    { "lesson": 1, "title": "The Missing Treasure", "pages": ["The class camps in the forest and learns never to explore alone.", "Xiaoqiang falls during a team race, but everyone works together and finishes.", "His missing ‘valuable treasure’ turns out to be one of his mother’s pork ribs."] },
+    { "lesson": 2, "title": "Dad Cannot See", "pages": ["Mr Lin stares at his computer until his eyes become tired and blurry.", "The whole family searches for his glasses everywhere.", "A doctor points out that the glasses have been sitting on his head all along."] },
+    { "lesson": 3, "title": "The Most Special Birthday Gift", "pages": ["The family prepares a birthday meal and card for Grandma.", "Sugar is added instead of salt, and everyone falls silent.", "Grandma says that working together is the best gift, and the family celebrates."] }
+  ],
+  "requests": {
+    "xiaoqiang": { "name": "Xiaoqiang", "steps": ["Collect 贵重 and 探险.", "Find the treasure box in Camping Forest.", "Raise 狼吞虎咽 to Silver."], "reward": "Jade Brush recipe" },
+    "mr-lin": { "name": "Mr Lin", "steps": ["Raise 模糊 and 眼圈 to Silver.", "Defeat three Twin Shades.", "Practise writing 距离 successfully."], "reward": "Grandma's Lantern" },
+    "chef-mei": { "name": "Chef Mei", "steps": ["Raise 调味料 and 材料 to Silver.", "Defeat two Ink Imps.", "Complete a clean Lesson 3 tingxie."], "reward": "Mooncake recipe" }
+  }
+}

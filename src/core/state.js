@@ -34,7 +34,7 @@ export function createFreshState(levelPackage) {
       equipment: { owned: ['bamboo-brush'], equipped: { brush: 'bamboo-brush', charm: null, hat: null } },
       materials: {},
       baits: [],
-      encounter: { cooldown: 3, zone: null, capNoticeDay: '' },
+      encounter: { cooldown: 3, zone: null, capNoticeDay: '', repellentSteps: 0 },
       npcs: {},
       activity: {},
       parent: { goal: null },
@@ -54,7 +54,7 @@ export function createFreshState(levelPackage) {
       accuracy: {}
     },
     settings: {
-      dailyBattles: 15,
+      dailyBattles: 30,
       lenientWriting: true,
       sound: true,
       speechRate: 0.85,

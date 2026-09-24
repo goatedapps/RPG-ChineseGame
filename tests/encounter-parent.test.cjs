@@ -14,6 +14,16 @@ test('wild zones trigger deterministic step encounters with a three-step cooldow
   assert.equal(weightedCreature({ fogling: 4, 'echo-bat': 1 }, () => 0), 'fogling');
 });
 
+test('forest repellent suppresses encounters and counts down only in encounter grass', async () => {
+  const { encounterStep } = await import('../src/world/encounters.js');
+  const map = JSON.parse(fs.readFileSync('content/authored/campaign/maps/r1-hub.json', 'utf8'));
+  const protectedStep = encounterStep({ cooldown: 0, zone: null, repellentSteps: 2 }, map, { x: 2, y: 2 }, () => 0);
+  assert.equal(protectedStep.encounter, false);
+  assert.equal(protectedStep.state.repellentSteps, 1);
+  const villageStep = encounterStep(protectedStep.state, map, { x: 20, y: 14 }, () => 0);
+  assert.equal(villageStep.state.repellentSteps, 1);
+});
+
 test('parent goals, weekly summaries and activity tracking are state-only', async () => {
   const { giftSpiritCard, goalProgress, recordActivity, weeklySummary } = await import('../src/systems/parent.js');
   let activity = recordActivity({}, '2026-09-24', 'battle-win');
@@ -51,6 +61,6 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-spirit', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
-  assert.match(shell, /P10 tablet pilot/);
+  assert.match(shell, /Scholar Village/);
   for (const file of ['music-village.wav', 'music-battle.wav', 'music-boss.wav', 'creature-hit.wav']) assert.equal(fs.existsSync(`assets/audio/${file}`), true);
 });

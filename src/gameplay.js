@@ -21,7 +21,22 @@ import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p10m';
 import { showWritingTask } from './ui/writingView.js?p10m';
 import { createSpeechController } from './learning/audio.js';
-import { heroPortrait } from './ui/heroPortrait.js?p10h';
+import { heroPortrait } from './ui/heroPortrait.js?p10n';
+
+const SHOP_ITEM_COPY = Object.freeze({
+  heal: item => `Restore ${item.amount} HP during battle`,
+  'full-heal': () => 'Restore all HP during battle',
+  'remove-option': () => 'Remove one wrong answer choice',
+  'writing-retry': () => 'Retry one writing challenge safely',
+  escape: () => 'Guarantee a safe escape from battle',
+  'double-coins': () => 'Double the coins from one battle',
+  'attack-boost': item => `Add ${item.amount} attack damage for one battle`,
+  'defense-boost': item => `Reduce incoming damage by ${item.amount} for one battle`,
+  repellent: item => `Prevent forest encounters for ${item.amount} forest steps`
+});
+
+const itemDescription = item => (SHOP_ITEM_COPY[item.effect]?.(item) || item.effect);
+const itemIcon = id => `../assets/images/shop/${id}.png`;
 
 function addXp(player, amount, { xpMultiplier = 1, maxHpBonus = 0 } = {}) {
   let level = player.level;
@@ -124,7 +139,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       </div>
     </article>`, { dismissible: false });
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
-      const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.partnerBoost || 0), damageMultiplier: battle.doubleHit ? 2 : 1 });
+      const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.partnerBoost || 0) + (battle.attackBoost || 0), damageMultiplier: battle.doubleHit ? 2 : 1 });
       if (playerResult.damage > 0) audio?.sfx('hit');
       if (!ok && battle.review) battle.reviewFailed = true;
       battle.partnerBoost = 0;
@@ -135,7 +150,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       const blocksMiss = !ok && battle.ignoreMiss;
       if (blocksMiss) battle.ignoreMiss = false;
       if (Math.random() < 0.4) return enemySpell(battle, ok, bonuses, blocksMiss);
-      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion + (ok ? battle.streak >= 3 ? 0.3 : 0.18 : 0), damageReduction: bonuses.spellDefense + (battle.partnerShield || blocksMiss ? 999 : 0), damageMultiplier: ok ? 1 : 1.5 });
+      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion + (ok ? battle.streak >= 3 ? 0.3 : 0.18 : 0), damageReduction: bonuses.spellDefense + (battle.defenseBoost || 0) + (battle.partnerShield || blocksMiss ? 999 : 0), damageMultiplier: ok ? 1 : 1.5 });
       battle.partnerShield = false;
       game.state.player = enemyResult.player;
       if (game.state.player.hp <= 0) return faint(battle);
@@ -152,7 +167,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         toast('You escaped and returned to the village.');
         return;
       }
-      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion });
+      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: battle.defenseBoost || 0 });
       game.state.player = enemyResult.player;
       if (game.state.player.hp <= 0) return faint(battle);
       commit();
@@ -190,7 +205,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (result.ok) { commit(); showBattle(battle, `You blocked ${battle.creature.name}’s ${spell}!`); return; }
       const shielded = battle.partnerShield || blocksMiss;
       battle.partnerShield = false;
-      const hit = enemyAttack(battle, game.state.player, () => 1, { damageReduction: bonuses.spellDefense + (shielded ? 999 : 0), damageMultiplier: lastCorrect ? 1 : 1.5 });
+      const hit = enemyAttack(battle, game.state.player, () => 1, { damageReduction: bonuses.spellDefense + (battle.defenseBoost || 0) + (shielded ? 999 : 0), damageMultiplier: lastCorrect ? 1 : 1.5 });
       game.state.player = hit.player;
       if (game.state.player.hp <= 0) return faint(battle);
       commit();
@@ -206,8 +221,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function battleBag(battle) {
     const game = active();
-    const owned = game.levelPackage.items.filter(item => game.state.progress.inventory[item.id] > 0);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Battle bag</p><h1>Choose an item</h1><div class="service-grid">${owned.map(item => `<button data-use-item="${item.id}"><b>${escapeHtml(item.name)} × ${game.state.progress.inventory[item.id]}</b><span>${escapeHtml(item.effect)}</span></button>`).join('') || '<p>Your bag is empty.</p>'}</div><div class="button-row"><button class="secondary" data-back-battle>Back</button></div></div>`, { dismissible: false });
+    const owned = game.levelPackage.items.filter(item => item.effect !== 'repellent' && game.state.progress.inventory[item.id] > 0);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Battle bag</p><h1>Choose an item</h1><div class="service-grid">${owned.map(item => `<button data-use-item="${item.id}"><b>${escapeHtml(item.name)} × ${game.state.progress.inventory[item.id]}</b><span>${escapeHtml(itemDescription(item))}</span></button>`).join('') || '<p>Your battle bag is empty.</p>'}</div><div class="button-row"><button class="secondary" data-back-battle>Back</button></div></div>`, { dismissible: false });
     document.querySelector('[data-back-battle]').addEventListener('click', () => showBattle(battle));
     for (const button of document.querySelectorAll('[data-use-item]')) button.addEventListener('click', () => {
       const item = game.levelPackage.items.find(candidate => candidate.id === button.dataset.useItem);
@@ -218,6 +233,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (item.effect === 'remove-option') battle.lantern = true;
       if (item.effect === 'writing-retry') battle.inkRetry = true;
       if (item.effect === 'double-coins') battle.doubleCoins = true;
+      if (item.effect === 'attack-boost') battle.attackBoost = Math.max(battle.attackBoost || 0, item.amount || 1);
+      if (item.effect === 'defense-boost') battle.defenseBoost = Math.max(battle.defenseBoost || 0, item.amount || 1);
       if (item.effect === 'escape') { commit(); overlay.close(); audio?.setScene('village'); toast('The Smoke Ball carried you safely home.'); return; }
       commit();
       showBattle(battle, `${item.name} is ready.`);
@@ -579,8 +596,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const game = active();
     const shopItems = game.levelPackage.items;
     const redCap = game.levelPackage.gear.find(gear => gear.id === 'red-cap');
-    const icons = { 'rice-ball': '🍙', 'ink-pot': '🫙', lantern: '🏮', bandage: '🩹', tea: '🍵', compass: '🧭', charm: '🧿' };
-    overlay.open(`<div class="panel"><p class="panel-kicker">Scholar Village Shop</p><h1>Supplies, bait and gear</h1><div class="shop-grid">${shopItems.map(item => `<article class="shop-item"><i class="item-icon" aria-hidden="true">${icons[item.id] || '🎒'}</i><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(item.effect)} · ${item.price} coins · Own ${game.state.progress.inventory[item.id] || 0}</span></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`).join('')}${game.levelPackage.map.zones.map(zone => `<article class="shop-item"><i class="item-icon" aria-hidden="true">🪱</i><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter · 35 coins</span></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < 35 ? 'disabled' : ''}>Choose spirit</button></article>`).join('')}<article class="shop-item"><i class="item-icon" aria-hidden="true">🧢</i><div><b>${escapeHtml(redCap.name)}</b><span>+3 max HP · ${redCap.price} coins</span></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div><div class="button-row"><button class="secondary" data-close-overlay>Leave Shop</button></div></div>`);
+    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>Scholar Village Shop</p><h1>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${shopItems.map(item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>35 coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < 35 ? 'disabled' : ''}>Choose</button></article>`).join('')}<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`);
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
       const bought = buyItem(game.state.player, game.state.progress.inventory, item.id, item);

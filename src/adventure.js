@@ -10,7 +10,7 @@ import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { heroStats } from './battle/damage.js';
 import { creatureSvg } from './battle/creatureArt.js?p10m';
-import { heroPortrait } from './ui/heroPortrait.js?p10h';
+import { heroPortrait } from './ui/heroPortrait.js?p10n';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);

@@ -2,18 +2,18 @@ import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10d';
 import { listLevels, loadLevelPackage } from './content/loader.js?p10d';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p10d';
-import { bindInput } from './world/input.js';
+import { createRenderer } from './world/renderer.js?p10n';
+import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p10m';
-import { createCollection } from './collection.js?p10l';
+import { createGameplay } from './gameplay.js?p10n';
+import { createCollection } from './collection.js?p10n';
 import { createAdventure } from './adventure.js?p10m';
 import { createAudioManager } from './core/audio.js?p10d';
 import { localDay } from './core/time.js';
-import { encounterStep } from './world/encounters.js?p10d';
+import { encounterStep } from './world/encounters.js?p10n';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
 import { tierOf } from './learning/mastery.js?p10f';
 
@@ -44,12 +44,18 @@ let autosave = null;
 let wanderTimer = null;
 let objectiveTimer = null;
 let objectiveIndex = 0;
+let stageObserver = null;
 let gameplay = null;
 let collection = null;
 let adventure = null;
 
 function render() {
   if (!active) return;
+  const canvas = $('#world');
+  const stage = $('#game-stage');
+  const width = Math.max(320, Math.round(stage.clientWidth));
+  const height = Math.max(320, Math.round(stage.clientHeight));
+  if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
   active.renderer.render(active.state);
   updateHud(hud, active.levelPackage, active.state);
   updateObjective();
@@ -222,11 +228,16 @@ async function startLevel(levelId) {
     collection.refreshMaxHp();
     unbindInput?.();
     unbindInput = bindInput({ dpad: $('#dpad'), onMove: move });
+    stageObserver?.disconnect();
+    if ('ResizeObserver' in window) {
+      stageObserver = new ResizeObserver(() => render());
+      stageObserver.observe($('#game-stage'));
+    }
     startAutosave();
     startWorldTimers();
     audio.setEnabled(active.state.settings.sound);
     audio.setScene('village');
-    $('#sound-button').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
+    $('#sound-button span').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
     $('#sound-button').setAttribute('aria-pressed', String(active.state.settings.sound));
     render();
     if (!active.state.session.seenWelcome || loadResult.migrated || loadResult.warning) showWelcome(loadResult);
@@ -303,7 +314,7 @@ async function boot() {
     if (!active) return;
     active.state.settings.sound = !active.state.settings.sound;
     audio.setEnabled(active.state.settings.sound);
-    event.currentTarget.textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
+    event.currentTarget.querySelector('span').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
     event.currentTarget.setAttribute('aria-pressed', String(active.state.settings.sound));
     persist();
   });

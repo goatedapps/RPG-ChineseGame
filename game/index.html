@@ -8,14 +8,14 @@
   <link rel="manifest" href="../manifest.webmanifest">
   <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="../css/tokens.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/stage.css?p10m">
+  <link rel="stylesheet" href="../css/base.css?p10n">
+  <link rel="stylesheet" href="../css/stage.css?p10o">
 </head>
 <body>
   <a class="skip-link" href="#game-stage">Skip to the game</a>
   <main class="game-shell">
     <header class="hud" aria-label="Player status">
-      <div class="brand">Word Spirit Quest <span>字灵</span><small>P10 tablet pilot</small></div>
+      <div class="hud-overview"><div class="brand">Word Spirit Quest <span>字灵</span><small>Scholar Village</small></div><div class="hud-status">
       <div class="hud-stat"><span>Curriculum</span><b id="hud-level">—</b></div>
       <div class="hud-stat"><span>Location</span><b id="hud-location">—</b></div>
       <div class="hud-stat"><span>Level</span><b id="hud-player-level">1</b></div>
@@ -23,18 +23,21 @@
       <div class="hud-stat hp"><span>HP</span><i><em id="hud-hp-bar"></em></i><b id="hud-hp">20/20</b></div>
       <div class="hud-stat"><span>Coins</span><b id="hud-coins">20</b></div>
       <div class="hud-stat"><span>Spirits</span><b id="hud-spirits">0</b></div>
-      <div class="hud-stat"><span>Battles</span><b id="hud-battles">15 left</b></div>
+      <div class="hud-stat"><span>Battles</span><b id="hud-battles">30 left</b></div>
       <div class="hud-stat"><span>Lantern streak</span><b id="hud-streak">0 days</b></div>
-      <button class="hud-button" id="book-button" type="button">Spirit Book</button>
-      <button class="hud-button" id="character-button" type="button">Hero Status</button>
-      <button class="hud-button" id="bag-button" type="button">Bag</button>
-      <button class="hud-button" id="room-button" type="button">My Room</button>
-      <button class="hud-button" id="daily-button" type="button">Daily Board</button>
-      <button class="hud-button" id="story-button" type="button">Adventure</button>
-      <button class="hud-button" id="parent-button" type="button">Parent</button>
-      <button class="hud-button" id="sound-button" type="button" aria-pressed="true">Sound on</button>
+      </div></div>
+      <nav class="hud-actions" aria-label="Game menus">
+      <button class="hud-button" id="book-button" type="button"><i aria-hidden="true">册</i><span>Spirit Book</span></button>
+      <button class="hud-button" id="character-button" type="button"><i aria-hidden="true">人</i><span>Hero Status</span></button>
+      <button class="hud-button" id="bag-button" type="button"><i aria-hidden="true">袋</i><span>Bag</span></button>
+      <button class="hud-button" id="room-button" type="button"><i aria-hidden="true">屋</i><span>My Room</span></button>
+      <button class="hud-button" id="daily-button" type="button"><i aria-hidden="true">日</i><span>Daily Board</span></button>
+      <button class="hud-button" id="story-button" type="button"><i aria-hidden="true">卷</i><span>Adventure</span></button>
+      <button class="hud-button utility" id="parent-button" type="button"><i aria-hidden="true">⚙</i><span>Parent</span></button>
+      <button class="hud-button utility" id="sound-button" type="button" aria-pressed="true"><i aria-hidden="true">♪</i><span>Sound on</span></button>
       <a class="hud-button debug-only" href="./lab.html" hidden>Learning lab</a>
       <button class="hud-button debug-only" id="status-button" type="button" hidden>Build status</button>
+      </nav>
     </header>
 
     <div class="objective" aria-live="polite"><b>Next step</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status" role="status">Save verified</small></div>
@@ -50,10 +53,9 @@
       </div>
       <div class="overlay" id="overlay" hidden></div>
     </section>
-    <p class="preview-note">Follow the Next step banner, explore the village, and learn with each Word Spirit.</p>
   </main>
   <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p10m"></script>
+  <script type="module" src="../src/main.js?p10n"></script>
 </body>
 </html>

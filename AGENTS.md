@@ -38,6 +38,7 @@ Production URLs:
 - Keep Higher Chinese disabled by default and make its Reading Hall availability parent-controlled.
 - Keep School XP after the first three rewarded daily runs.
 - Keep the parent battle cap and the intended 30–60 minute session without a mandatory timer.
+- Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
 - Keep battle vocabulary sealed until the child answers; reveal pinyin and meaning in feedback.
@@ -45,6 +46,7 @@ Production URLs:
 - Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.
 - Keep all three Region 1 lesson areas open, with difficulty guiding the intended order.
 - Keep exact-word lesson bait in the shop.
+- Keep battle boosts consumable in battle and forest repellent active only while walking through encounter grass.
 - Keep the percentage-based Bronze Muddle Cave gate plus Cave Lantern requirement, and use Silver rather than Gold for onward region progression.
 - Preserve old saves through validated migrations, last-known-good recovery and explicit fresh-start confirmation.
 - Never silently discard an invalid or future-version save.

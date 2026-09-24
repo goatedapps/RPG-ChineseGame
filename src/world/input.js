@@ -43,6 +43,8 @@ export function bindInput({ target = window, dpad, onMove }) {
     button.addEventListener('pointerup', release);
     button.addEventListener('pointercancel', release);
     button.addEventListener('lostpointercapture', release);
+    button.addEventListener('contextmenu', event => event.preventDefault());
+    button.addEventListener('dblclick', event => event.preventDefault());
     cleanups.push(() => {
       button.removeEventListener('pointerdown', onPointer);
       button.removeEventListener('pointerup', release);

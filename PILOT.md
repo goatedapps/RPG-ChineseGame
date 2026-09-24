@@ -18,6 +18,9 @@ Region 2 must not begin until a child and parent complete the physical-device ch
 - Reduced-motion mode disables gameplay animation, controls retain 44-pixel targets, and status changes use live regions.
 - Automated content, progression, save, accessibility and offline checks pass.
 - Browser smoke tests cover both curricula at tablet and narrow-phone widths without runtime errors.
+- Portrait tablet layout fills the available viewport, groups the top-bar controls and suppresses selection and expansion gestures on the movement pad.
+- The illustrated shop exposes readable item effects, battle attack and defense boosts, and a step-based forest repellent.
+- The main hero has distinct illustrated artwork across the character and battle views.
 
 ## Physical tablet session still required
 

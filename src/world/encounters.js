@@ -10,6 +10,8 @@ export function encounterStep(value, map, player, random = Math.random) {
   if (!zone || tileAt(map, player.x, player.y) !== 'g') return { state: { ...previous, zone: null }, zone: null, entered: null, encounter: false };
   const entered = previous.zone === zone.id ? null : zone;
   const cooldown = Math.max(0, Number(previous.cooldown || 0) - 1);
+  const repellentSteps = Math.max(0, Number(previous.repellentSteps || 0));
+  if (repellentSteps > 0) return { state: { ...previous, zone: zone.id, cooldown, repellentSteps: repellentSteps - 1 }, zone, entered, encounter: false };
   const encounter = cooldown === 0 && random() < (zone.encounter?.rate ?? 0.16);
   return {
     state: { ...previous, zone: zone.id, cooldown: encounter ? Math.max(3, zone.encounter?.cooldown || 3) : cooldown },

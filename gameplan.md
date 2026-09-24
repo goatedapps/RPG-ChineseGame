@@ -35,7 +35,7 @@ Wrong answers reveal the answer, example and available audio without penalties o
 Questions have no countdown timer.
 
 4. Engagement is healthy.
-The parent sets the daily battle cap, which defaults to 15.
+The parent sets the daily battle cap, which defaults to 30 for fresh saves while preserving an existing custom cap.
 Only the first three School sessions per day award coins, but later sessions still award XP.
 The weekly streak has one automatic silent freeze.
 Avoid paid randomness, hidden loot odds and guilt-based prompts.

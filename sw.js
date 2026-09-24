@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p10-v16';
+const CACHE = 'word-spirit-quest-p10-v17';
 const CORE = [
   './game/', './game/index.html', './manifest.webmanifest',
   './css/tokens.css', './css/base.css', './css/stage.css',
@@ -20,6 +20,8 @@ const RUNTIME = [
   './src/ui/dom.js', './src/ui/hud.js', './src/ui/overlay.js', './src/ui/questionView.js', './src/ui/toast.js', './src/ui/writingView.js',
   './src/world/encounters.js', './src/world/input.js', './src/world/map.js', './src/world/npcs.js', './src/world/renderer.js',
   './assets/images/creatures/muddle-king.png', './assets/images/creatures/fogling.png', './assets/images/creatures/echo-bat.png', './assets/images/creatures/twin-shade.png', './assets/images/creatures/jumble-bug.png', './assets/images/creatures/ink-imp.png',
+  './assets/images/hero/main-hero.png', './assets/images/shop/shop-background.png',
+  './assets/images/shop/rice-ball.png', './assets/images/shop/instant-noodles.png', './assets/images/shop/mooncake.png', './assets/images/shop/scholars-lantern.png', './assets/images/shop/ink-pot.png', './assets/images/shop/smoke-ball.png', './assets/images/shop/lucky-knot.png', './assets/images/shop/power-tea.png', './assets/images/shop/guardian-talisman.png', './assets/images/shop/forest-repellent.png', './assets/images/shop/spirit-bait.png', './assets/images/shop/red-cap.png',
   './assets/audio/bag-open.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/level-up.mp3', './assets/audio/music-battle.wav', './assets/audio/music-boss.wav', './assets/audio/music-village.wav', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
 ];
 

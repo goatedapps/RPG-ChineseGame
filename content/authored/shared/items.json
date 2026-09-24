@@ -5,6 +5,8 @@
   { "id": "scholars-lantern", "name": "Scholar's Lantern", "price": 30, "effect": "remove-option" },
   { "id": "ink-pot", "name": "Ink Pot", "price": 40, "effect": "writing-retry" },
   { "id": "smoke-ball", "name": "Smoke Ball", "price": 20, "effect": "escape" },
-  { "id": "lucky-knot", "name": "Lucky Knot 中国结", "price": 50, "effect": "double-coins" }
+  { "id": "lucky-knot", "name": "Lucky Knot 中国结", "price": 50, "effect": "double-coins" },
+  { "id": "power-tea", "name": "Power Tea 力量茶", "price": 45, "effect": "attack-boost", "amount": 2 },
+  { "id": "guardian-talisman", "name": "Guardian Talisman 护身符", "price": 45, "effect": "defense-boost", "amount": 2 },
+  { "id": "forest-repellent", "name": "Forest Repellent 驱兽香", "price": 30, "effect": "repellent", "amount": 40 }
 ]
-

@@ -98,12 +98,29 @@ test('tablet shell exposes accessibility landmarks and an offline application ca
   assert.equal(dom.window.document.querySelector('#save-status').getAttribute('role'), 'status');
   assert.ok(dom.window.document.querySelector('link[rel="manifest"]'));
   assert.ok(dom.window.document.querySelector('#hud-xp-bar'));
+  assert.ok(dom.window.document.querySelector('.hud-actions'));
+  assert.equal(dom.window.document.querySelector('.preview-note'), null);
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   for (const asset of [...serviceWorker.matchAll(/'\.\/([^']+)'/g)].map(match => match[1]).filter(asset => asset !== 'game/')) {
     assert.equal(fs.existsSync(path.join(root, asset)), true, asset);
   }
   assert.match(serviceWorker, /self\.clients\.claim/);
   assert.doesNotMatch(serviceWorker, /ignoreSearch: true/);
+});
+
+test('shop has illustrated supplies, battle boosts and forest repellent', () => {
+  const items = JSON.parse(fs.readFileSync(path.join(root, 'content/authored/shared/items.json'), 'utf8'));
+  const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
+  const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
+  const css = fs.readFileSync(path.join(root, 'css/stage.css'), 'utf8');
+  assert.ok(items.some(item => item.effect === 'attack-boost'));
+  assert.ok(items.some(item => item.effect === 'defense-boost'));
+  assert.ok(items.some(item => item.effect === 'repellent' && item.amount >= 20));
+  assert.match(css, /shop-background\.png/);
+  assert.match(gameplay, /battle\.attackBoost/);
+  assert.match(gameplay, /battle\.defenseBoost/);
+  assert.match(collection, /data-use-repellent/);
+  assert.match(fs.readFileSync(path.join(root, 'src/ui/heroPortrait.js'), 'utf8'), /main-hero\.png/);
 });
 
 test('tablet fixes hide unavailable help actions and memory-writing answers', () => {
@@ -140,7 +157,7 @@ test('Hero Status shows the main character and leaves partner selection in My Ro
   const html = fs.readFileSync(path.join(root, 'game/index.html'), 'utf8');
   const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
   const dom = new JSDOM(html);
-  assert.equal(dom.window.document.querySelector('#character-button').textContent, 'Hero Status');
+  assert.equal(dom.window.document.querySelector('#character-button span').textContent, 'Hero Status');
   assert.match(collection, /<h1>Hero Status<\/h1>/);
   assert.match(collection, /hero-stat-grid/);
   assert.match(collection, /XP to Level/);
@@ -150,7 +167,7 @@ test('Hero Status shows the main character and leaves partner selection in My Ro
   assert.doesNotMatch(collection, /paper-hero[^>]*>勇/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8'), /battle-hero[^>]*>勇/);
   assert.match(collection, /function bag\(\)/);
-  for (const section of ['Battle items', 'Special items', 'Equipment', 'Materials', 'Spirit bait', 'Scrolls']) assert.match(collection, new RegExp(section));
+  for (const section of ['Supplies', 'Special items', 'Equipment', 'Materials', 'Spirit bait', 'Scrolls']) assert.match(collection, new RegExp(section));
 });
 
 test('Spirit Book separates regional vocabulary into lesson tabs', () => {

@@ -1,8 +1,8 @@
 .stage {
   position: relative;
   width: 100%;
+  min-height: 320px;
   overflow: hidden;
-  aspect-ratio: 10 / 7;
   border: 3px solid var(--ink-3);
   border-radius: 14px;
   background: #0e151b;
@@ -44,7 +44,9 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
   backdrop-filter: blur(3px);
 }
 .dpad button.is-active { background: rgba(198,63,43,.92); transform: translateY(1px); }
@@ -181,9 +183,21 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .passage-scroll summary { cursor: pointer; font-weight: 900; }
 .answer-field { display: grid; gap: 6px; margin: 12px 0; font-weight: 800; }
 .answer-field input, .answer-field textarea, .answer-field select { min-height: 44px; padding: 9px; border: 2px solid var(--line); border-radius: 8px; font: 16px var(--font-ui); }
-.shop-item { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; padding: 16px; border-radius: 12px; background: white; }
+.shop-panel { width: min(900px,100%); max-height: 100%; overflow: auto; padding: 0 18px 18px; background: #e9d5a6 url('../assets/images/shop/shop-background.png') center top / cover; }
+.shop-banner { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; min-height: 180px; margin: 0 -18px 18px; padding: 22px; color: white; background: linear-gradient(90deg,rgba(22,28,34,.9),rgba(22,28,34,.18)); text-shadow: 0 2px 3px rgba(0,0,0,.75); }
+.shop-banner p, .shop-banner h1, .shop-banner span { margin: 0; }
+.shop-banner p { color: #f0ca62; font-weight: 900; }
+.shop-banner span { display: block; max-width: 50ch; margin-top: 5px; }
+.shop-banner strong { flex: 0 0 auto; padding: 9px 13px; border: 2px solid #f0ca62; border-radius: 8px; background: rgba(27,36,48,.84); }
+.shop-shelf { margin: 12px 0; padding: 12px; border: 3px solid #65452c; border-radius: 10px; background: rgba(244,239,226,.94); box-shadow: 0 8px 0 rgba(75,45,26,.5); }
+.shop-shelf > h2 { margin: 0 0 10px; color: #65452c; }
+.shop-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
+.shop-item { display: grid; grid-template-columns: 66px 1fr auto; align-items: center; gap: 11px; min-height: 94px; padding: 10px; border: 2px solid #c7ae7e; border-radius: 9px; background: rgba(255,255,255,.92); }
 .shop-item h2, .shop-item p { margin: 2px 0; }
-.item-icon { font-size: 50px; }
+.shop-item b, .shop-item span, .shop-item small { display: block; }
+.shop-item span { color: #536171; font: 13px/1.35 system-ui; }
+.shop-item small { margin-top: 4px; color: #8a5525; font-weight: 800; }
+.item-icon { width: 64px; height: 64px; object-fit: contain; filter: drop-shadow(0 3px 2px rgba(55,34,20,.22)); }
 .book-summary { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 13px; }
 .book-summary b { padding: 7px 10px; border-radius: 99px; background: white; }
 .lesson-tabs { display: flex; gap: 8px; margin: 4px 0 16px; overflow-x: auto; padding: 2px 2px 5px; }
@@ -252,13 +266,9 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .gear-grid button, .set-card button, .shop-grid button { min-height: 40px; border: 0; border-radius: 8px; font-weight: 800; }
 .set-card.complete { border: 2px solid var(--jade); }
 .character-preview { display: flex; align-items: center; gap: 18px; margin: 12px 0; padding: 14px; border-radius: 12px; background: white; }
-.paper-hero { width: 82px; height: 96px; }
+.paper-hero { width: 112px; height: 132px; }
 .hero-avatar { position: relative; flex: 0 0 auto; overflow: hidden; border: 4px solid var(--ink); border-radius: 35px 35px 18px 18px; background: #dce9e1; }
-.hero-avatar-body { position: absolute; left: 16%; bottom: 5%; width: 68%; height: 48%; border: 2px solid var(--paper); border-radius: 45% 45% 12% 12%; background: #263f70; }
-.hero-avatar-body::after { content: ''; position: absolute; width: 75%; height: 4px; top: 45%; left: 14%; border-radius: 4px; background: var(--gold); transform: rotate(38deg); }
-.hero-avatar-head { position: absolute; z-index: 2; top: 11%; left: 29%; width: 42%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 65%, var(--ink) 0 2px, transparent 2.5px), radial-gradient(circle at 65% 65%, var(--ink) 0 2px, transparent 2.5px), linear-gradient(#172a4b 0 34%,#c63f2b 34% 45%,#f2cfa6 45%); }
-.hero-avatar-brush { position: absolute; z-index: 3; right: 14%; bottom: 8%; width: 4px; height: 57%; border-radius: 4px; background: #6e492d; transform: rotate(-18deg); transform-origin: bottom; }
-.hero-avatar-brush::after { content: ''; position: absolute; left: -3px; top: -5px; border-right: 5px solid transparent; border-bottom: 10px solid var(--ink); border-left: 5px solid transparent; }
+.hero-avatar-image { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 5px 3px rgba(27,36,48,.25)); }
 .hero-avatar-hat { display: none; position: absolute; z-index: 4; top: 6%; left: 22%; width: 56%; height: 10%; border: 2px solid var(--ink); border-radius: 50% 50% 15% 15%; background: #c9a45c; }
 .hero-avatar.red-cap .hero-avatar-hat, .hero-avatar.bamboo-hat .hero-avatar-hat, .hero-avatar.scholar-cap .hero-avatar-hat, .hero-avatar.gold-crown .hero-avatar-hat { display: block; }
 .hero-avatar.red-cap .hero-avatar-hat { background: #c63f2b; }
@@ -331,18 +341,21 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   .battle-grid, .writing-layout, .question-options, .attack-grid, .service-grid, .spirit-grid, .gear-grid, .set-grid, .shop-grid { grid-template-columns: 1fr; }
   .shop-item { grid-template-columns: auto 1fr; }
   .shop-item button { grid-column: 1 / -1; }
+  .shop-banner { min-height: 145px; }
   .battle-scene { min-height: 520px; }
   .battle-arena { min-height: 190px; }
   .battle-player { left: 8px; }
   .battle-enemy { right: 8px; }
   .battle-nameplate { min-width: 140px; max-width: 180px; font-size: 11px; }
   .battle-hero { width: 58px; height: 70px; }
-  .battle-enemy .creature-svg { width: 112px; height: 88px; }
+  .battle-enemy .creature-portrait { width: 112px; height: 88px; }
   .battle-console .attack-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .battle-console .button-row { margin-top: 10px; }
 }
 @media (min-width: 761px) and (max-width: 1050px) {
-  .hud { gap: 8px; }
-  .hud-button { padding-inline: 10px; }
+  .hud-status { grid-template-columns: repeat(5,minmax(62px,1fr)); }
+  .hud-stat.hp, .hud-stat.xp { grid-template-columns: minmax(34px,1fr) auto; column-gap: 4px; }
+  .hud-stat.hp b, .hud-stat.xp b { font-size: 12px; }
+  .hud-actions { grid-template-columns: repeat(4,minmax(0,1fr)); }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }

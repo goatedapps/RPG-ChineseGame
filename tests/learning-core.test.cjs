@@ -16,18 +16,18 @@ test('content lab exposes both curricula and local Hanzi Writer', () => {
   assert.equal(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), '../src/content-lab.js');
 });
 
-test('mastery awards one tick per skill per day and reaches Gold across days', async () => {
+test('one clean correct answer fills a skill circle and five skills reach Gold', async () => {
   const { recordAnswer, starsOf, tierOf } = await import('../src/learning/mastery.js');
   let progress = { collected: true };
   for (const skill of ['m', 'p', 'h', 'u', 'w']) {
     progress = recordAnswer(progress, { skill, correct: true, day: '2026-09-23' }).progress;
     const duplicate = recordAnswer(progress, { skill, correct: true, day: '2026-09-23' });
     assert.equal(duplicate.tickEarned, false);
-    progress = recordAnswer(duplicate.progress, { skill, correct: true, day: '2026-09-24' }).progress;
+    progress = duplicate.progress;
   }
   assert.equal(starsOf(progress), 5);
   assert.equal(tierOf(progress), 'gold');
-  assert.equal(progress.reviewDay, '2026-09-24');
+  assert.equal(progress.reviewDay, '2026-09-23');
 });
 
 test('due reviews drop the failed skill and successful reviews double their interval', async () => {
@@ -41,7 +41,7 @@ test('due reviews drop the failed skill and successful reviews double their inte
   assert.equal(isReviewDue(gold, '2026-09-23'), true);
   const failed = recordAnswer(gold, { skill: 'p', correct: false, day: '2026-09-23' });
   assert.equal(failed.reviewFailed, true);
-  assert.equal(failed.progress.ticks.p, 1);
+  assert.equal(failed.progress.ticks.p, 0);
   assert.equal(tierOf(failed.progress), 'silver');
   const reviewed = completeReview(gold, '2026-09-23');
   assert.equal(reviewed.reviewInterval, 6);

@@ -1,4 +1,5 @@
 export const SKILL_KEYS = Object.freeze(['m', 'p', 'h', 'u', 'w']);
+export const SKILL_TICKS_REQUIRED = 1;
 export const REVIEW_START_DAYS = 3;
 export const REVIEW_MAX_DAYS = 30;
 
@@ -13,7 +14,7 @@ export const SKILLS = Object.freeze({
 export function normalizeWordProgress(value = {}) {
   return {
     collected: Boolean(value.collected ?? value.c),
-    ticks: Object.fromEntries(SKILL_KEYS.map(skill => [skill, Math.max(0, Math.min(2, Number(value.ticks?.[skill] ?? value.st?.[skill]) || 0))])),
+    ticks: Object.fromEntries(SKILL_KEYS.map(skill => [skill, Number(value.ticks?.[skill] ?? value.st?.[skill]) > 0 ? SKILL_TICKS_REQUIRED : 0])),
     lastTickDay: { ...(value.lastTickDay || value.ld || {}) },
     correct: Math.max(0, Number(value.correct ?? value.r) || 0),
     misses: Math.max(0, Number(value.misses ?? value.x) || 0),
@@ -24,7 +25,7 @@ export function normalizeWordProgress(value = {}) {
 
 export function starsOf(value) {
   const progress = normalizeWordProgress(value);
-  return SKILL_KEYS.filter(skill => progress.ticks[skill] >= 2).length;
+  return SKILL_KEYS.filter(skill => progress.ticks[skill] >= SKILL_TICKS_REQUIRED).length;
 }
 
 export function tierOf(value) {
@@ -67,8 +68,8 @@ export function recordAnswer(value, { skill, correct, day, assisted = false }) {
   let tickEarned = false;
   let reviewFailed = false;
 
-  if (correct && !assisted && progress.lastTickDay[skill] !== day && progress.ticks[skill] < 2) {
-    progress.ticks[skill] += 1;
+  if (correct && !assisted && progress.ticks[skill] < SKILL_TICKS_REQUIRED) {
+    progress.ticks[skill] = SKILL_TICKS_REQUIRED;
     progress.lastTickDay[skill] = day;
     tickEarned = true;
   } else if (!correct && previousTier === 'gold' && isReviewDue(before, day)) {
@@ -95,4 +96,3 @@ export function completeReview(value, day) {
     reviewInterval: Math.min(REVIEW_MAX_DAYS, progress.reviewInterval * 2)
   };
 }
-

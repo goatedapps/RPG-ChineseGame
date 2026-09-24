@@ -26,7 +26,9 @@ test('P2 is playable with younger tuning and curriculum-specific Region 1 story 
   assert.equal(p2.config.ready, true);
   assert.equal(p2.config.region1.tutorialWord, '帮助');
   assert.ok(p2.content.words.some(word => word.w === p2.config.region1.tutorialWord && word.lesson === 1));
-  assert.equal(p2.regionStory.stories[0].title, 'Who Folded It Best?');
+  assert.equal(p2.regionStory.stories[0].title, '谁折得最美？');
+  assert.match(p2.regionStory.stories[0].pages[0], /今年，我读二年级了/);
+  assert.equal(p2.regionStory.stories[0].pages.length, 6);
   assert.ok(p2.balance.combat.lessonLevels['2'][0] < p5.balance.combat.lessonLevels['2'][0]);
   assert.equal(p2.balance.school.questionsPerQuiz, 4);
 });
@@ -95,12 +97,28 @@ test('tablet shell exposes accessibility landmarks and an offline application ca
   assert.equal(dom.window.document.querySelector('#objective-text').parentElement.getAttribute('aria-live'), 'polite');
   assert.equal(dom.window.document.querySelector('#save-status').getAttribute('role'), 'status');
   assert.ok(dom.window.document.querySelector('link[rel="manifest"]'));
+  assert.ok(dom.window.document.querySelector('#hud-xp-bar'));
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   for (const asset of [...serviceWorker.matchAll(/'\.\/([^']+)'/g)].map(match => match[1]).filter(asset => asset !== 'game/')) {
     assert.equal(fs.existsSync(path.join(root, asset)), true, asset);
   }
   assert.match(serviceWorker, /self\.clients\.claim/);
   assert.doesNotMatch(serviceWorker, /ignoreSearch: true/);
+});
+
+test('tablet fixes hide unavailable help actions and memory-writing answers', () => {
+  const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
+  const writing = fs.readFileSync(path.join(root, 'src/ui/writingView.js'), 'utf8');
+  const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
+  const css = fs.readFileSync(path.join(root, 'css/stage.css'), 'utf8');
+  assert.match(adventure, /ready \? `<button class="primary" data-request-complete/);
+  assert.match(writing, /memoryTask[\s\S]*dictation-clue/);
+  assert.match(gameplay, /if \(skill === 'h'\) question\.prompt = battle\.word\.m/);
+  assert.match(gameplay, /data-higher-chinese/);
+  assert.match(gameplay, /Give a Spirit card/);
+  assert.match(gameplay, /accuracyLabel\(skill\)/);
+  assert.match(css, /-webkit-tap-highlight-color: transparent/);
+  assert.match(css, /\.pin-settings/);
 });
 
 test('battle presentation keeps the spirit sealed and questions reveal details only after an answer', async () => {

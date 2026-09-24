@@ -26,9 +26,9 @@
   "region1": {
     "tutorialWord": "露营",
     "requests": {
-      "xiaoqiang": { "collect": ["贵重", "探险"], "silver": "狼吞虎咽" },
-      "mr-lin": { "silver": ["模糊", "眼圈"], "write": "距离" },
-      "chef-mei": { "silver": ["调味料", "材料"] }
+      "xiaoqiang": { "collect": ["贵重", "探险"], "bronze": "狼吞虎咽" },
+      "mr-lin": { "bronze": ["模糊", "眼圈"], "write": "距离" },
+      "chef-mei": { "bronze": ["调味料", "材料"] }
     }
   }
 }

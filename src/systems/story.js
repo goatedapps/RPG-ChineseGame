@@ -1,4 +1,4 @@
-import { tierOf } from '../learning/mastery.js';
+import { tierOf } from '../learning/mastery.js?p10f';
 
 export function createStoryState() {
   return {
@@ -36,36 +36,36 @@ export function regionWords(levelPackage) {
 
 export function gateStatus(levelPackage, progress, inventory, requiredPct = 0.22) {
   const words = regionWords(levelPackage);
-  const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(progress.words[word.w]))).length;
+  const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(progress.words[word.w]))).length;
   const required = Math.ceil(new Set(words.map(word => word.w)).size * requiredPct);
   const lantern = (inventory.keyItems || []).includes('cave-lantern');
-  return { silver, total: words.length, required, requiredPct, lantern, open: silver >= required && lantern };
+  return { bronze, total: words.length, required, requiredPct, lantern, open: bronze >= required && lantern };
 }
 
 function collected(progress, word) {
   return Boolean(progress.words[word]?.collected || progress.words[word]?.c);
 }
 
-function silver(progress, word) {
-  return ['silver', 'gold'].includes(tierOf(progress.words[word]));
+function bronze(progress, word) {
+  return ['bronze', 'silver', 'gold'].includes(tierOf(progress.words[word]));
 }
 
 export function requestReady(id, step, progress, story, bindings = {}) {
-  const xiaoqiang = bindings.xiaoqiang || { collect: ['贵重', '探险'], silver: '狼吞虎咽' };
-  const mrLin = bindings['mr-lin'] || { silver: ['模糊', '眼圈'], write: '距离' };
-  const chefMei = bindings['chef-mei'] || { silver: ['调味料', '材料'] };
+  const xiaoqiang = bindings.xiaoqiang || { collect: ['贵重', '探险'], bronze: '狼吞虎咽' };
+  const mrLin = bindings['mr-lin'] || { bronze: ['模糊', '眼圈'], write: '距离' };
+  const chefMei = bindings['chef-mei'] || { bronze: ['调味料', '材料'] };
   if (id === 'xiaoqiang') {
     if (step === 0) return xiaoqiang.collect.every(word => collected(progress, word));
     if (step === 1) return Boolean(story.flags.treasureFound);
-    if (step === 2) return silver(progress, xiaoqiang.silver);
+    if (step === 2) return bronze(progress, xiaoqiang.bronze || xiaoqiang.silver);
   }
   if (id === 'mr-lin') {
-    if (step === 0) return mrLin.silver.every(word => silver(progress, word));
+    if (step === 0) return (mrLin.bronze || mrLin.silver).every(word => bronze(progress, word));
     if (step === 1) return (story.counters.creatures['twin-shade'] || 0) >= 3;
     if (step === 2) return (story.counters.writing[mrLin.write] || 0) >= 1;
   }
   if (id === 'chef-mei') {
-    if (step === 0) return chefMei.silver.every(word => silver(progress, word));
+    if (step === 0) return (chefMei.bronze || chefMei.silver).every(word => bronze(progress, word));
     if (step === 1) return (story.counters.creatures['ink-imp'] || 0) >= 2;
     if (step === 2) return story.counters.tingxieLesson3 >= 3;
   }

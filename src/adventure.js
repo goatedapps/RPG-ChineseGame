@@ -1,13 +1,13 @@
 import { makeExamQuestion } from './learning/questions.js';
-import { tierOf } from './learning/mastery.js';
-import { checkPassageAnswer } from './systems/reading.js';
+import { tierOf } from './learning/mastery.js?p10f';
+import { checkPassageAnswer } from './systems/reading.js?p10f';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
-import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js';
+import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p10f';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p10d';
 import { showWritingTask } from './ui/writingView.js';
 import { localDay } from './core/time.js';
-import { recordActivity } from './systems/parent.js?p10d';
+import { recordActivity } from './systems/parent.js?p10f';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -145,8 +145,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       commit();
       overlay.open('<div class="panel result-panel"><h1>The adventure begins</h1><p>Visit the Storyteller to hear the first village story, then explore Camping Forest.</p><button class="primary" data-close-overlay>Explore</button></div>');
     });
-    const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateSilverPct);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>${gate.open ? '✓ Muddle Cave gate ready' : `○ Muddle Cave: ${gate.silver}/${gate.required} Silver · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p></div><div class="button-row"><button class="primary" data-storyteller>Visit Storyteller</button>${story.bossDefeated ? '<button class="secondary" data-museum>Mistake Museum</button>' : ''}</div></div>`);
+    const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>${gate.open ? '✓ Muddle Cave gate ready' : `○ Muddle Cave: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p></div><div class="button-row"><button class="primary" data-storyteller>Visit Storyteller</button>${story.bossDefeated ? '<button class="secondary" data-museum>Mistake Museum</button>' : ''}</div></div>`);
     document.querySelector('[data-storyteller]').addEventListener('click', storyteller);
     document.querySelector('[data-museum]')?.addEventListener('click', mistakeMuseum);
   }
@@ -186,15 +186,15 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const bindings = game.levelPackage.config.region1?.requests || {};
     const bound = bindings[id] || {};
     const steps = id === 'xiaoqiang'
-      ? [`Collect ${(bound.collect || ['贵重', '探险']).join(' and ')}.`, 'Find the treasure box in Camping Forest.', `Raise ${bound.silver || '狼吞虎咽'} to Silver.`]
+      ? [`Collect ${(bound.collect || ['贵重', '探险']).join(' and ')}.`, 'Find the treasure box in Camping Forest.', `Raise ${bound.bronze || bound.silver || '狼吞虎咽'} to Bronze.`]
       : id === 'mr-lin'
-        ? [`Raise ${(bound.silver || ['模糊', '眼圈']).join(' and ')} to Silver.`, 'Defeat three Twin Shades.', `Practise writing ${bound.write || '距离'} successfully.`]
-        : [`Raise ${(bound.silver || ['调味料', '材料']).join(' and ')} to Silver.`, 'Defeat two Ink Imps.', 'Complete a clean Lesson 3 tingxie.'];
+        ? [`Raise ${(bound.bronze || bound.silver || ['模糊', '眼圈']).join(' and ')} to Bronze.`, 'Defeat three Twin Shades.', `Practise writing ${bound.write || '距离'} successfully.`]
+        : [`Raise ${(bound.bronze || bound.silver || ['调味料', '材料']).join(' and ')} to Bronze.`, 'Defeat two Ink Imps.', 'Complete a clean Lesson 3 tingxie.'];
     const step = story.requests[id] || 0;
     if (step >= steps.length) return overlay.dialogue({ title: data.name, lines: [id === 'mr-lin' ? 'Rest your eyes every 30 minutes!' : id === 'chef-mei' ? 'Salt and sugar finally have their proper labels.' : 'My pork-rib treasure is safe. Adventure is better with friends!'] });
     const ready = requestReady(id, step, game.state.progress, story, bindings);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Villager request · ${step + 1}/${steps.length}</p><h1>${escapeHtml(data.name)}</h1><p>${escapeHtml(steps[step])}</p><p>${ready ? 'You have completed this step.' : 'Come back when this step is complete.'}</p><div class="button-row"><button class="primary" data-request-complete ${ready ? '' : 'disabled'}>Help ${escapeHtml(data.name)}</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
-    document.querySelector('[data-request-complete]:not([disabled])')?.addEventListener('click', () => {
+    overlay.open(`<div class="panel"><p class="panel-kicker">Villager request · ${step + 1}/${steps.length}</p><h1>${escapeHtml(data.name)}</h1><p>${escapeHtml(steps[step])}</p><p>${ready ? 'You have completed this step.' : 'Come back when this step is complete.'}</p><div class="button-row">${ready ? `<button class="primary" data-request-complete>Help ${escapeHtml(data.name)}</button>` : ''}<button class="secondary" data-close-overlay>Later</button></div></div>`);
+    document.querySelector('[data-request-complete]')?.addEventListener('click', () => {
       story.requests[id] = step + 1;
       game.state.progress.story = story;
       if (story.requests[id] === steps.length) grantRequestReward(id, game);
@@ -246,10 +246,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const game = active();
     const story = normalizeStory(game.state.progress.story);
     if (story.bossDefeated) return nextRegionGate();
-    const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateSilverPct);
+    const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
-    const percent = Math.round(gate.silver / gate.total * 100);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Muddle Cave gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>Silver or better: <b>${gate.silver}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>Cave Lantern: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? '<button class="primary" data-boss-start>Challenge Muddle King</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    const percent = Math.round(gate.bronze / gate.total * 100);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Muddle Cave gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>Bronze or better: <b>${gate.bronze}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>Cave Lantern: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? '<button class="primary" data-boss-start>Challenge Muddle King</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
     document.querySelector('[data-boss-start]')?.addEventListener('click', startBoss, { once: true });
   }
 
@@ -307,10 +307,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function nextRegionGate() {
     const game = active();
     const words = regionWords(game.levelPackage);
-    const gold = words.filter(word => tierOf(game.state.progress.words[word.w]) === 'gold').length;
-    const required = Math.ceil(words.length * game.levelPackage.regionStory.nextRegionGoldPct);
+    const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
+    const required = Math.ceil(words.length * game.levelPackage.regionStory.nextRegionSilverPct);
     const parentUnlocked = game.state.settings.testMode || game.state.settings.unlockedRegions >= 2;
-    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Gold spirits: <b>${gold}/${words.length}</b> · Need 70% (${required}) before Region 2.</p><p>${parentUnlocked ? 'A parent has unlocked Region 2 for testing. ' : ''}Region 2 will be built after the P2 vertical slice and device pilot.</p><button class="secondary" data-close-overlay>Return</button></div>`);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region 2. Gold spirits are optional bonuses.</p><p>${parentUnlocked ? 'A parent has unlocked Region 2 for testing. ' : ''}Region 2 will be built after the P2 vertical slice and device pilot.</p><button class="secondary" data-close-overlay>Return</button></div>`);
   }
 
   function mistakeMuseum() {

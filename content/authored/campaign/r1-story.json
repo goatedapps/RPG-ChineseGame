@@ -1,6 +1,6 @@
 {
-  "gateSilverPct": 0.22,
-  "nextRegionGoldPct": 0.7,
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
   "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "gatekeeper"],
   "scrollSpots": [{"x": 7, "y": 13}, {"x": 32, "y": 13}, {"x": 18, "y": 24}, {"x": 25, "y": 15}],
   "scenes": {
@@ -30,8 +30,8 @@
     { "lesson": 3, "title": "The Most Special Birthday Gift", "pages": ["The family prepares a birthday meal and card for Grandma.", "Sugar is added instead of salt, and everyone falls silent.", "Grandma says that working together is the best gift, and the family celebrates."] }
   ],
   "requests": {
-    "xiaoqiang": { "name": "Xiaoqiang", "steps": ["Collect 贵重 and 探险.", "Find the treasure box in Camping Forest.", "Raise 狼吞虎咽 to Silver."], "reward": "Jade Brush recipe" },
-    "mr-lin": { "name": "Mr Lin", "steps": ["Raise 模糊 and 眼圈 to Silver.", "Defeat three Twin Shades.", "Practise writing 距离 successfully."], "reward": "Grandma's Lantern" },
-    "chef-mei": { "name": "Chef Mei", "steps": ["Raise 调味料 and 材料 to Silver.", "Defeat two Ink Imps.", "Complete a clean Lesson 3 tingxie."], "reward": "Mooncake recipe" }
+    "xiaoqiang": { "name": "Xiaoqiang", "steps": ["Collect 贵重 and 探险.", "Find the treasure box in Camping Forest.", "Raise 狼吞虎咽 to Bronze."], "reward": "Jade Brush recipe" },
+    "mr-lin": { "name": "Mr Lin", "steps": ["Raise 模糊 and 眼圈 to Bronze.", "Defeat three Twin Shades.", "Practise writing 距离 successfully."], "reward": "Grandma's Lantern" },
+    "chef-mei": { "name": "Chef Mei", "steps": ["Raise 调味料 and 材料 to Bronze.", "Defeat two Ink Imps.", "Complete a clean Lesson 3 tingxie."], "reward": "Mooncake recipe" }
   }
 }

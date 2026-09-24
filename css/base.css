@@ -31,8 +31,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .hud-stat b { color: var(--paper); font-size: 14px; }
 .hud-stat.hp { grid-template-columns: auto 82px auto; align-items: center; column-gap: 6px; }
 .hud-stat.hp span { grid-column: 1 / -1; }
-.hud-stat.hp i { height: 10px; overflow: hidden; border-radius: 8px; background: #101720; }
-.hud-stat.hp em { display: block; height: 100%; background: var(--jade); transition: width .2s; }
+.hud-stat.xp { grid-template-columns: 82px auto; align-items: center; column-gap: 6px; }
+.hud-stat.xp span { grid-column: 1 / -1; }
+.hud-stat.hp i, .hud-stat.xp i { height: 10px; overflow: hidden; border-radius: 8px; background: #101720; }
+.hud-stat.hp em, .hud-stat.xp em { display: block; height: 100%; transition: width .2s; }
+.hud-stat.hp em { background: var(--jade); }
+.hud-stat.xp em { background: var(--gold); }
 .hud-button, .secondary, .primary {
   padding: 9px 14px;
   color: var(--ink);

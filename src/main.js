@@ -8,14 +8,14 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p10d';
-import { createCollection } from './collection.js?p10d';
-import { createAdventure } from './adventure.js?p10d';
+import { createGameplay } from './gameplay.js?p10f';
+import { createCollection } from './collection.js?p10f';
+import { createAdventure } from './adventure.js?p10f';
 import { createAudioManager } from './core/audio.js?p10d';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p10d';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
-import { tierOf } from './learning/mastery.js';
+import { tierOf } from './learning/mastery.js?p10f';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -27,6 +27,7 @@ const hud = {
   location: $('#hud-location'),
   playerLevel: $('#hud-player-level'),
   xp: $('#hud-xp'),
+  xpBar: $('#hud-xp-bar'),
   hp: $('#hud-hp'),
   hpBar: $('#hud-hp-bar'),
   coins: $('#hud-coins'),
@@ -126,9 +127,9 @@ function objectiveTasks() {
   const unread = game.levelPackage.regionStory.stories.length - game.state.progress.story.storiesRead.length;
   if (unread > 0) tasks.push(`Hear an unread story from the Storyteller (${unread} left).`);
   if (game.state.player.hp < game.state.player.maxHp / 2) tasks.push('Your HP is low. Rest and review at the Inn.');
-  const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
-  const required = Math.ceil(words.length * game.levelPackage.regionStory.gateSilverPct);
-  if (!game.state.progress.story.bossDefeated && silver < required) tasks.push(`Raise ${required - silver} more spirits to Silver for the Muddle Cave gate.`);
+  const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
+  const required = Math.ceil(words.length * game.levelPackage.regionStory.gateBronzePct);
+  if (!game.state.progress.story.bossDefeated && bronze < required) tasks.push(`Collect ${required - bronze} more Bronze spirits for the Muddle Cave gate.`);
   else if (!game.state.progress.story.bossDefeated) tasks.push('The Muddle Cave gate is ready. Challenge the Muddle King!');
   return tasks.length ? tasks : ['Region 1 is clear. Keep turning spirits Gold while the next region is built.'];
 }

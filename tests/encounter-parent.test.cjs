@@ -15,7 +15,7 @@ test('wild zones trigger deterministic step encounters with a three-step cooldow
 });
 
 test('parent goals, weekly summaries and activity tracking are state-only', async () => {
-  const { goalProgress, recordActivity, weeklySummary } = await import('../src/systems/parent.js');
+  const { giftSpiritCard, goalProgress, recordActivity, weeklySummary } = await import('../src/systems/parent.js');
   let activity = recordActivity({}, '2026-09-24', 'battle-win');
   activity = recordActivity(activity, '2026-09-24', 'school-run');
   const rows = weeklySummary(activity, '2026-09-24');
@@ -24,6 +24,11 @@ test('parent goals, weekly summaries and activity tracking are state-only', asyn
   const state = { progress: { streak: { count: 5 }, story: { bossDefeated: true } } };
   assert.equal(goalProgress({ label: 'Five days', type: 'streak', target: 5 }, state).complete, true);
   assert.equal(goalProgress({ label: 'Clear village', type: 'region', target: 1 }, state).percent, 100);
+  const available = [{ w: '露营' }, { w: '集合' }];
+  const gifted = giftSpiritCard({}, '露营', available);
+  assert.equal(gifted.ok, true);
+  assert.equal(gifted.words['露营'].collected, true);
+  assert.equal(giftSpiritCard(gifted.words, '区域外', available).ok, false);
 });
 
 test('P8 export envelopes restore the matching curriculum save', async () => {
@@ -43,7 +48,7 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const css = fs.readFileSync('css/stage.css', 'utf8');
   const shell = fs.readFileSync('game/index.html', 'utf8');
-  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
+  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-spirit', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
   assert.match(shell, /P10 tablet pilot/);

@@ -37,6 +37,38 @@ test('combat damage uses attacker, defender, move bonus, and a roll', async () =
   assert.equal(calculateDamage({ attack: 1, defense: 99, roll: 0 }), 1);
 });
 
+test('battle escape uses the authored percentage chance', async () => {
+  const { escapeSucceeded } = await import('../src/battle/battle.js');
+  const chance = readJson('content/authored/shared/balance.json').combat.escapeChance;
+  assert.equal(chance, 0.65);
+  assert.equal(escapeSucceeded(() => 0.64, chance), true);
+  assert.equal(escapeSucceeded(() => 0.65, chance), false);
+});
+
+test('battle rewards rise for stronger creatures and collapse for weak farming', async () => {
+  const { battleRewardAmounts, relativeRewardMultiplier } = await import('../src/battle/battle.js');
+  const balance = readJson('content/authored/shared/balance.json');
+  assert.equal(relativeRewardMultiplier(4, 7), 4);
+  assert.equal(relativeRewardMultiplier(7, 4), 0.2);
+  const stronger = battleRewardAmounts(4, 7, balance);
+  const equal = battleRewardAmounts(4, 4, balance);
+  const weaker = battleRewardAmounts(7, 4, balance);
+  assert.ok(stronger.xp > equal.xp && equal.xp > weaker.xp);
+  assert.ok(stronger.coins > equal.coins && equal.coins > weaker.coins);
+});
+
+test('tablet controls do not capture typing in form fields', async () => {
+  const dom = new JSDOM('<input id="goal"><div id="dpad"><button data-direction="up">Up</button></div>');
+  const { bindInput } = await import('../src/world/input.js');
+  const moves = [];
+  const unbind = bindInput({ target: dom.window, dpad: dom.window.document.querySelector('#dpad'), onMove: direction => moves.push(direction) });
+  dom.window.document.querySelector('#goal').dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'w', bubbles: true }));
+  assert.deepEqual(moves, []);
+  dom.window.document.body.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'ArrowUp', bubbles: true }));
+  assert.deepEqual(moves, ['up']);
+  unbind();
+});
+
 test('daily energy blocks only battles after the parent cap', async () => {
   const { battlesLeft, useBattle } = await import('../src/systems/energy.js');
   let energy = { day: '', used: 99 };

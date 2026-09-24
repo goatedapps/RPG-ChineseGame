@@ -42,6 +42,9 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   background: rgba(27,36,48,.8);
   font-size: 23px;
   touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
   backdrop-filter: blur(3px);
 }
 .dpad button.is-active { background: rgba(198,63,43,.92); transform: translateY(1px); }
@@ -88,6 +91,9 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .question-word { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; }
 .question-word b { font: 900 38px var(--font-chinese); }
 .question-word span, .question-instruction { color: #647180; }
+.dictation-clue { display: grid; gap: 4px; padding: 13px 16px; border-left: 5px solid var(--gold); border-radius: 8px; background: white; }
+.dictation-clue b { font-size: 21px; }
+.dictation-clue span { color: #536171; font: 700 18px var(--font-chinese); }
 .question-options, .attack-grid, .service-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 15px; }
 .question-options button, .attack-grid button, .service-grid button {
   min-height: 58px;
@@ -180,6 +186,11 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .written-review p { margin: 2px 0; }
 .written-review small { display: block; }
 .parent-panel { max-height: 100%; overflow: auto; }
+.pin-settings { margin-top: 20px; padding: 14px; border: 2px solid var(--line); border-radius: 10px; background: white; }
+.pin-settings summary { min-height: 44px; padding: 10px 4px; cursor: pointer; font-weight: 900; }
+.pin-editor { display: grid; grid-template-columns: minmax(220px,1fr) auto; gap: 16px; align-items: end; padding-top: 8px; }
+.pin-editor .answer-field { margin: 0; }
+.pin-editor button { min-height: 48px; padding-inline: 20px; }
 .parent-tables { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin: 14px 0; }
 .parent-tables section { padding: 12px; border-radius: 10px; background: white; }
 .parent-tables section h2 { margin-top: 0; }
@@ -192,6 +203,10 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .parent-goal div, .room-goal div { grid-column: 1 / -1; margin: 0; }
 .parent-goal i, .room-goal i { background: var(--jade); }
 .room-goal.complete { box-shadow: 0 0 0 4px rgba(217,166,46,.28); }
+.parent-gift { margin: 18px 0; padding: 14px; border: 2px solid var(--jade); border-radius: 10px; background: #e8f5ed; }
+.parent-gift h2, .parent-gift p { margin-top: 0; }
+.parent-gift div { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; }
+.parent-gift select { min-height: 48px; min-width: 0; padding: 9px; border: 2px solid var(--line); border-radius: 8px; background: white; font: 16px var(--font-ui); }
 .accuracy-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
 .accuracy-grid div { display: grid; grid-template-columns: 1fr auto; gap: 5px 8px; padding: 9px; background: white; border-radius: 8px; }
 .accuracy-grid i { grid-column: 1 / -1; height: 8px; overflow: hidden; border-radius: 9px; background: #d8cfc0; }
@@ -212,6 +227,8 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .room-partners { position: absolute; left: 35px; bottom: 50px; display: flex; gap: 10px; }
 .room-partners i { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; color: var(--ink); background: var(--paper); box-shadow: 0 3px 8px #735f4c; font: 24px var(--font-chinese); }
 .room-decor { position: absolute; top: 105px; left: 35px; }
+.room-help { display: grid; gap: 4px; margin-top: 12px; padding: 12px 14px; border-left: 5px solid var(--jade); border-radius: 8px; background: white; }
+.room-help span { color: #536171; font: 14px/1.5 system-ui; }
 .quest-list, .scroll-grid, .story-timeline { display: grid; gap: 9px; margin: 14px 0; }
 .quest-card, .scroll-grid article, .story-timeline p { margin: 0; padding: 12px; border: 2px solid var(--line); border-radius: 10px; background: white; }
 .quest-card { display: flex; justify-content: space-between; gap: 14px; }
@@ -227,6 +244,8 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   .dpad { right: 9px; bottom: 9px; grid-template-columns: repeat(3,47px); grid-template-rows: repeat(3,47px); }
   .level-grid, .status-grid, .parent-settings, .accuracy-grid, .parent-tables { grid-template-columns: 1fr; }
   .goal-editor, .weekly-table div { grid-template-columns: 1fr; }
+  .pin-editor { grid-template-columns: 1fr; }
+  .parent-gift div { grid-template-columns: 1fr; }
   .battle-grid, .writing-layout, .question-options, .attack-grid, .service-grid, .spirit-grid, .gear-grid, .set-grid, .shop-grid { grid-template-columns: 1fr; }
   .shop-item { grid-template-columns: auto 1fr; }
   .shop-item button { grid-column: 1 / -1; }

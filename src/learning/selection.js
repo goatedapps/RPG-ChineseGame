@@ -1,4 +1,4 @@
-import { isReviewDue, normalizeWordProgress, starsOf, tierOf } from './mastery.js';
+import { isReviewDue, normalizeWordProgress, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './mastery.js?p10f';
 
 export function wordWeight(progressValue, day) {
   const progress = normalizeWordProgress(progressValue);
@@ -22,8 +22,7 @@ export function selectWord(words, progressByWord, { day, random = Math.random } 
 
 export function recommendedSkill(progressValue, day) {
   const progress = normalizeWordProgress(progressValue);
-  const available = Object.keys(progress.ticks).filter(skill => progress.ticks[skill] < 2 && progress.lastTickDay[skill] !== day);
+  const available = Object.keys(progress.ticks).filter(skill => progress.ticks[skill] < SKILL_TICKS_REQUIRED);
   if (available.length) return available[0];
   return Object.keys(progress.ticks).reduce((best, skill) => progress.ticks[skill] < progress.ticks[best] ? skill : best, 'm');
 }
-

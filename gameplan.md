@@ -23,12 +23,13 @@ Production URLs:
 Attacks, defense, quests and unlocks depend on answering, reading or writing Chinese.
 Coins may buy support items and equipment, but never answers, mastery stars or progression gates.
 
-2. The world is in English.
-Chinese appears as learning content, examples, source passages and idioms.
+2. The interface and campaign dialogue are in English.
+Storyteller chapters use the original Chinese curriculum stories without English translation.
+Chinese also appears as learning content, examples, source passages and idioms.
 Introduce story-specific Chinese with an English gloss.
 
 3. Practice is spaced and forgiving.
-A skill star requires correct work on two different local-calendar days.
+One correct unassisted answer fills a vocabulary skill circle.
 Gold words rest before review.
 Wrong answers reveal the answer, example and available audio without penalties or shame.
 Questions have no countdown timer.
@@ -43,7 +44,7 @@ Avoid paid randomness, hidden loot odds and guilt-based prompts.
 A new level adds source curriculum, lesson mappings, feature flags and tuning.
 It must not duplicate the engine or shared world.
 Unsupported or sparse question categories remain optional.
-Higher Chinese remains optional.
+Higher Chinese is disabled by default and can only be made available by a parent from the Parent Panel.
 
 ## Learning and battle rules
 
@@ -54,17 +55,21 @@ Open written answers are completed by comparing with a model and self-rating; th
 Every open response offers “I don’t know.”
 
 Battle questions show only the information needed by the selected attack.
+Dictation hides the target Hanzi and shows only its meaning and pinyin.
+Battle Hanzi-selection questions show the English meaning without pinyin.
 The creature art stays sealed with `？` until the answer is submitted or the spirit is won.
 Pinyin, meaning and examples appear in answer feedback.
 The battle arena places the player at lower left and the creature at upper right.
 Show exact HP and relevant attack, defense and evasion values.
 Damage uses attacker stats, defender stats, move bonuses and a small random roll.
 Creature levels and stats rise across Lesson 1, Lesson 2 and Lesson 3 areas.
+Battle XP and coins scale with the creature’s level relative to the player, sharply reducing rewards from weaker creatures.
 All three areas remain accessible from the start so difficulty, rather than a lock, guides progression.
 
 The shop includes consumables, gear and lesson bait.
 Lesson bait lets the player select the exact missing spirit to attract.
-The Muddle Cave gate requires the configured percentage of distinct Silver-or-better regional words plus the Cave Lantern.
+The Muddle Cave gate requires the configured percentage of distinct Bronze-or-better regional words plus the Cave Lantern.
+Onward region progression uses Silver-or-better words; Gold is an optional mastery bonus.
 
 ## Region 1 gameplay
 
@@ -78,7 +83,7 @@ Wild encounters are random, use a staged transition and play scene music and hit
 The Region 1 story includes the tutorial battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.
-Parent tools include the PIN, goals, weekly summary, save transfer, curriculum switching, region/test controls, speech speed and sound.
+Parent tools include the PIN, goals, current-region Spirit-card gifting, weekly summary, save transfer, curriculum switching, region/test controls, speech speed and sound.
 
 ## Architecture
 

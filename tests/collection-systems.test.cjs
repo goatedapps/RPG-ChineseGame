@@ -86,6 +86,27 @@ test('collection milestones are claimed once and battle XP supports gear multipl
   assert.equal(player.xp, 8);
 });
 
+test('collecting each lesson once keeps player level near the next lesson band', async () => {
+  const { gainBattleRewards } = await import('../src/battle/battle.js');
+  const shared = readJson('content/authored/shared/balance.json');
+  const expected = { p2: [4, 6], p5: [4, 7] };
+  for (const level of ['p2', 'p5']) {
+    const content = readJson(`content/generated/${level}.content.json`);
+    const config = readJson(`content/authored/levels/${level}/level.json`);
+    const combat = { ...shared.combat, ...(config.tuning?.balance?.combat || {}) };
+    const balance = { ...shared, combat };
+    let player = { level: 1, xp: 0, hp: 20, maxHp: 20, coins: 0 };
+    for (const lesson of [1, 2]) {
+      const [minimum, maximum] = combat.lessonLevels[String(lesson)];
+      const count = content.words.filter(word => word.lesson === lesson).length;
+      for (let index = 0; index < count; index += 1) {
+        player = gainBattleRewards(player, balance, { creatureLevel: minimum + index % (maximum - minimum + 1) });
+      }
+      assert.equal(player.level, expected[level][lesson - 1], `${level} lesson ${lesson}`);
+    }
+  }
+});
+
 test('fresh saves and the game shell expose the P4 and P5 collection surfaces', async () => {
   const { createFreshState } = await import('../src/core/state.js');
   const state = createFreshState({ id: 'p5', content: { contentVersion: 'test' }, map: { id: 'r1-hub', spawn: { x: 1, y: 1 } } });

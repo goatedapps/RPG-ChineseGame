@@ -21,9 +21,44 @@ export function enemyAttack(battle, player, random = Math.random, { evasionBonus
   return { player: { ...player, hp: Math.max(0, player.hp - damage) }, damage, evaded: false };
 }
 
-export function gainBattleRewards(player, balance, { xpMultiplier = 1, maxHpBonus = 0 } = {}) {
+export function escapeSucceeded(random = Math.random, chance = 0.65) {
+  return random() < Math.max(0, Math.min(1, chance));
+}
+
+export function relativeRewardMultiplier(playerLevel, creatureLevel) {
+  const difference = creatureLevel - playerLevel;
+  if (difference >= 3) return 4;
+  if (difference === 2) return 3;
+  if (difference === 1) return 2;
+  if (difference === 0) return 1;
+  if (difference === -1) return 0.7;
+  if (difference === -2) return 0.4;
+  return 0.2;
+}
+
+function relativeCoinMultiplier(playerLevel, creatureLevel) {
+  const difference = creatureLevel - playerLevel;
+  if (difference >= 3) return 2;
+  if (difference === 2) return 1.75;
+  if (difference === 1) return 1.35;
+  if (difference === 0) return 1;
+  if (difference === -1) return 0.65;
+  if (difference === -2) return 0.35;
+  return 0.15;
+}
+
+export function battleRewardAmounts(playerLevel, creatureLevel, balance, { xpMultiplier = 1 } = {}) {
+  const relative = relativeRewardMultiplier(playerLevel, creatureLevel);
+  return {
+    xp: Math.max(1, Math.round(balance.combat.battleXp * relative * xpMultiplier)),
+    coins: Math.max(1, Math.round(balance.combat.battleCoins * relativeCoinMultiplier(playerLevel, creatureLevel)))
+  };
+}
+
+export function gainBattleRewards(player, balance, { creatureLevel = player.level, xpMultiplier = 1, maxHpBonus = 0 } = {}) {
   let level = player.level;
-  const xpAwarded = Math.round(balance.combat.battleXp * xpMultiplier);
+  const rewards = battleRewardAmounts(player.level, creatureLevel, balance, { xpMultiplier });
+  const xpAwarded = rewards.xp;
   let xp = player.xp + xpAwarded;
   let maxHp = player.maxHp;
   while (xp >= level * 30) {
@@ -37,7 +72,6 @@ export function gainBattleRewards(player, balance, { xpMultiplier = 1, maxHpBonu
     xp,
     maxHp,
     hp: level > player.level ? maxHp : player.hp,
-    coins: player.coins + balance.combat.battleCoins
+    coins: player.coins + rewards.coins
   };
 }
-

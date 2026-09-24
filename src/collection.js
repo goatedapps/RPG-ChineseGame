@@ -1,11 +1,11 @@
 import { craft } from './systems/crafting.js';
 import { equipGear, gearBonuses, normalizeEquipment } from './systems/gear.js';
 import { claimMilestones } from './systems/milestones.js';
-import { eligiblePartners, partnerBonuses, setPartners } from './systems/partners.js';
-import { offerSet, setProgress } from './systems/sets.js';
-import { tierOf } from './learning/mastery.js';
+import { eligiblePartners, partnerBonuses, setPartners } from './systems/partners.js?p10f';
+import { offerSet, setProgress } from './systems/sets.js?p10f';
+import { tierOf } from './learning/mastery.js?p10f';
 import { escapeHtml } from './ui/dom.js';
-import { goalProgress } from './systems/parent.js?p10d';
+import { goalProgress } from './systems/parent.js?p10f';
 
 export function createCollection({ overlay, getActive, persist, render, toast }) {
   const active = () => getActive();
@@ -120,11 +120,10 @@ export function createCollection({ overlay, getActive, persist, render, toast })
     const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
     if (goal?.complete && !game.state.progress.parent.goal.celebrated) { game.state.progress.parent.goal.celebrated = true; commit(); toast(`Goal reached: ${goal.label}!`); }
     const hasSets = game.levelPackage.sets.some(set => setProgress(set, game.state.progress.words, game.levelPackage.content.words).words.length >= 3);
-    overlay.open(`<div class="panel room-panel"><div class="panel-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>Your Room</h1></div><button class="secondary" data-close-overlay>Leave room</button></div><p><b>Lantern Streak: ${game.state.progress.streak?.count || 0} days</b></p>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : ''}<div class="room-scene"><div class="room-shelf">${game.state.progress.room.trophies.length ? game.state.progress.room.trophies.map(() => '<span>🏆</span>').join('') : '<span class="empty">Trophy shelf</span>'}</div><div class="room-bed">Rest</div><div class="room-partners">${partners.length ? partners.map(word => `<i>${escapeHtml(word.w)}</i>`).join('') : '<span>Partner spirits will rest here.</span>'}</div><div class="room-decor">${game.state.progress.room.decorations.map(item => `<b>${escapeHtml(item)}</b>`).join(' ')}</div></div><div class="button-row">${hasSets ? '<button class="primary" data-board-open>Restoration Board</button>' : ''}<button class="secondary" data-room-partners>Partners</button></div></div>`);
+    overlay.open(`<div class="panel room-panel"><div class="panel-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>Your Room</h1></div><button class="secondary" data-close-overlay>Leave room</button></div><p><b>Lantern Streak: ${game.state.progress.streak?.count || 0} days</b></p>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : ''}<div class="room-scene"><div class="room-shelf">${game.state.progress.room.trophies.length ? game.state.progress.room.trophies.map(() => '<span>🏆</span>').join('') : '<span class="empty">Trophy shelf</span>'}</div><div class="room-bed">Rest</div><div class="room-partners">${partners.length ? partners.map(word => `<i>${escapeHtml(word.w)}</i>`).join('') : '<span>Partner spirits will rest here.</span>'}</div><div class="room-decor">${game.state.progress.room.decorations.map(item => `<b>${escapeHtml(item)}</b>`).join(' ')}</div></div><aside class="room-help"><b>What are Partner Spirits?</b><span>Choose up to three Silver or Gold Spirit cards to travel with you. They increase your maximum HP, and Gold partners can also unlock a special battle move.</span></aside><div class="button-row">${hasSets ? '<button class="primary" data-board-open>Restoration Board</button>' : ''}<button class="secondary" data-room-partners>Choose Partner Spirits</button></div></div>`);
     document.querySelector('[data-board-open]')?.addEventListener('click', restorationBoard);
     document.querySelector('[data-room-partners]').addEventListener('click', partners);
   }
 
   return { character, crafting, partners, restorationBoard, room, applyMilestones, refreshMaxHp };
 }
-

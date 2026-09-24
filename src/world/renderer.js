@@ -122,6 +122,68 @@ function drawPerson(context, x, y, color, direction = 'down', isPlayer = false, 
   }
 }
 
+function drawHero(context, x, y, direction = 'down', equipment = {}) {
+  context.fillStyle = 'rgba(15,25,30,.28)';
+  context.beginPath();
+  context.ellipse(x + 16, y + 29, 11, 4, 0, 0, Math.PI * 2);
+  context.fill();
+
+  context.strokeStyle = '#f4efe2';
+  context.lineWidth = 2;
+  context.fillStyle = '#263f70';
+  context.beginPath();
+  context.moveTo(x + 8, y + 15);
+  context.lineTo(x + 24, y + 15);
+  context.lineTo(x + 27, y + 29);
+  context.lineTo(x + 5, y + 29);
+  context.closePath();
+  context.fill();
+  context.stroke();
+
+  context.strokeStyle = '#e2b23c';
+  context.lineWidth = 4;
+  context.beginPath();
+  context.moveTo(x + 10, y + 16);
+  context.lineTo(x + 22, y + 27);
+  context.stroke();
+
+  context.fillStyle = '#f2cfa6';
+  context.beginPath();
+  context.arc(x + 16, y + 10, 7, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = '#172a4b';
+  context.beginPath();
+  context.arc(x + 16, y + 7, 7, Math.PI, 0);
+  context.fill();
+  context.fillStyle = '#c63f2b';
+  context.fillRect(x + 8, y + 5, 16, 3);
+
+  if (direction !== 'up') {
+    const glance = direction === 'left' ? -2 : direction === 'right' ? 2 : 0;
+    context.fillStyle = '#1b2430';
+    context.fillRect(x + 12 + glance, y + 10, 2, 2);
+    context.fillRect(x + 18 + glance, y + 10, 2, 2);
+  }
+
+  context.strokeStyle = equipment.brush === 'jade-brush' ? '#2f8a66' : '#6e492d';
+  context.lineWidth = 3;
+  context.beginPath();
+  context.moveTo(x + 25, y + 13);
+  context.lineTo(x + 29, y + 28);
+  context.stroke();
+  context.fillStyle = '#1b2430';
+  context.beginPath();
+  context.moveTo(x + 27, y + 27);
+  context.lineTo(x + 31, y + 30);
+  context.lineTo(x + 28, y + 22);
+  context.fill();
+
+  if (equipment.hat) {
+    context.fillStyle = equipment.hat === 'gold-crown' ? '#e2b23c' : equipment.hat === 'red-cap' ? '#c63f2b' : '#c9a45c';
+    context.fillRect(x + 8, y + 1, 16, 5);
+  }
+}
+
 function drawCampfire(context, x, y) {
   context.strokeStyle = '#68482d'; context.lineWidth = 4;
   context.beginPath(); context.moveTo(x + 8, y + 27); context.lineTo(x + 25, y + 21); context.moveTo(x + 8, y + 21); context.lineTo(x + 25, y + 27); context.stroke();
@@ -195,7 +257,7 @@ export function createRenderer(canvas, map) {
           context.fillStyle = '#c63f2b'; context.font = '900 14px system-ui'; context.textAlign = 'center'; context.textBaseline = 'middle'; context.fillText('?', x + 16, y - 4 + bob);
         }
       }
-      else drawPerson(context, x, y, '#2f6f8f', state.player.direction, true, state.progress?.equipment?.equipped);
+      else drawHero(context, x, y, state.player.direction, state.progress?.equipment?.equipped);
     }
     if (state.progress?.sets?.campfire) drawCampfire(context, 20 * TILE - offsetX, 16 * TILE - offsetY);
     const scroll = state.progress?.scrolls;

@@ -31,8 +31,8 @@ test('battle variants and answer streaks change combat behavior', async () => {
   assert.equal(playerAttack(three.battle, player, 'm', { correct: false }).battle.streak, 0);
 });
 
-test('passages are selected randomly and reset their active villager chain on completion', async () => {
-  const { completePassage, selectPassage } = await import('../src/systems/reading.js');
+test('passages are selected randomly, repair stale counts, and reset their villager chain', async () => {
+  const { completePassage, repairActiveReading, selectPassage } = await import('../src/systems/reading.js');
   const groups = [
     { id: 'standard-a', subject: 'Chinese', items: [{}] },
     { id: 'standard-b', subject: 'Chinese', items: [{}] },
@@ -40,6 +40,9 @@ test('passages are selected randomly and reset their active villager chain on co
   ];
   assert.equal(selectPassage(groups, {}, { random: () => 0.99 }).id, 'standard-b');
   assert.equal(selectPassage(groups, { completed: ['standard-a'] }, { random: () => 0 }).id, 'standard-b');
+  const repaired = repairActiveReading({ active: 'standard-a', questionCount: 0, results: { 0: {}, 1: {}, 9: {} } }, { id: 'standard-a', items: [{}, {}, {}] }, 7);
+  assert.equal(repaired.questionCount, 3);
+  assert.deepEqual(Object.keys(repaired.results), ['0', '1']);
   const completed = completePassage({ active: 'standard-a', questionCount: 3, results: { 0: {} } }, 'standard-a', 'cave-lantern', { keyItems: [] });
   assert.equal(completed.reading.active, null);
   assert.equal(completed.reading.questionCount, 0);

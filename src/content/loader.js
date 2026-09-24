@@ -47,7 +47,8 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
   if (!region) throw new Error(`Map ${map.id} refers to missing region ${map.region}.`);
   const tunedBalance = mergeObjects(balance, config.tuning?.balance);
   const tunedStory = JSON.parse(JSON.stringify(regionStory));
-  if (config.region1?.stories?.length) tunedStory.stories = JSON.parse(JSON.stringify(config.region1.stories));
+  const regionLessons = new Set(config.regionLessons.r1);
+  tunedStory.stories = JSON.parse(JSON.stringify(content.stories.filter(story => regionLessons.has(story.lesson))));
   if (config.region1?.atticLine) {
     const line = tunedStory.scenes.attic.find(command => command.speaker === 'Fogling');
     if (line) line.say = config.region1.atticLine;

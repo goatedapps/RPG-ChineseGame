@@ -1,4 +1,4 @@
-import { tierOf } from '../learning/mastery.js';
+import { tierOf } from '../learning/mastery.js?p10f';
 
 export function eligiblePartners(words, progressByWord) {
   return words.filter(word => ['silver', 'gold'].includes(tierOf(progressByWord[word.w])));
@@ -39,4 +39,3 @@ export function partnerMove(word, progress, wordTags = {}) {
   };
   return moves[element] || moves.Actions;
 }
-

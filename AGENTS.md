@@ -32,17 +32,18 @@ Production URLs:
 ## Product invariants
 
 - Keep one shared engine, world and campaign with separate curriculum packs and saves.
-- Keep English for interface and story text; use Chinese for learning content and gloss new Chinese in dialogue.
+- Keep English for interface and campaign dialogue; present Storyteller chapters from the original Chinese curriculum stories without English translation.
 - Keep Meaning, Pinyin, Hanzi, Usage and Writing as the five vocabulary skills.
-- Keep the four-miss handwriting help threshold and require correct work on two different days for a full skill star.
-- Keep Higher Chinese and sparse question categories optional unless reviewed content supports them.
+- Keep the four-miss handwriting help threshold; one correct unassisted answer fills a skill circle.
+- Keep Higher Chinese disabled by default and make its Reading Hall availability parent-controlled.
 - Keep School XP after the first three rewarded daily runs.
 - Keep the parent battle cap and the intended 30–60 minute session without a mandatory timer.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep battle vocabulary sealed until the child answers; reveal pinyin and meaning in feedback.
+- Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.
 - Keep all three Region 1 lesson areas open, with difficulty guiding the intended order.
 - Keep exact-word lesson bait in the shop.
-- Keep the percentage-based Silver gate plus Cave Lantern requirement.
+- Keep the percentage-based Bronze Muddle Cave gate plus Cave Lantern requirement, and use Silver rather than Gold for onward region progression.
 - Preserve old saves through validated migrations, last-known-good recovery and explicit fresh-start confirmation.
 - Never silently discard an invalid or future-version save.
 - Store the changeable parent PIN as a salted code rather than plain text.

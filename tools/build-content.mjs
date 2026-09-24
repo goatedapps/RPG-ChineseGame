@@ -34,11 +34,10 @@ function sourceVersion(root) {
 
 function parseStory(markdown, lesson) {
   const title = markdown.match(/^#\s+(.+)$/m)?.[1]?.trim() || `Lesson ${lesson}`;
-  const pageMatches = [...markdown.matchAll(/^## Page \d+\s*$([\s\S]*?)(?=^## Page \d+\s*$|\s*$)/gm)];
   return {
     lesson,
     title,
-    pages: pageMatches.map(match => match[1].trim())
+    pages: markdown.split(/^## Page \d+\s*$/m).slice(1).map(page => page.trim()).filter(Boolean)
   };
 }
 

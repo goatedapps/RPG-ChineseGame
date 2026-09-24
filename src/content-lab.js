@@ -2,7 +2,7 @@ import { loadLevelPackage } from './content/loader.js';
 import { localDay } from './core/time.js';
 import { createSpeechController } from './learning/audio.js';
 import { filterSupportedQuestions, EXAM_INSTRUCTIONS } from './learning/examAdapters.js';
-import { normalizeWordProgress, recordAnswer, SKILLS, starsOf, tierOf } from './learning/mastery.js';
+import { normalizeWordProgress, recordAnswer, SKILLS, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './learning/mastery.js?p10f';
 import { checkAnswer, makeExamQuestion, makeQuestion } from './learning/questions.js';
 import { AUTO_COMPLETE_AFTER_MISSES, recordCharacter, WRITING_STAGES, writingResult } from './learning/writing.js';
 import { $, escapeHtml } from './ui/dom.js';
@@ -99,7 +99,7 @@ function hearButton(text) {
 
 function masteryMarkup(word) {
   const progress = normalizeWordProgress(wordProgress.get(word.w));
-  return `<div class="lab-stars">${Object.entries(SKILLS).map(([key, skill]) => `<span>${skill.name} <b>${'●'.repeat(progress.ticks[key])}${'○'.repeat(2 - progress.ticks[key])}</b></span>`).join('')}</div>`;
+  return `<div class="lab-stars">${Object.entries(SKILLS).map(([key, skill]) => `<span>${skill.name} <b>${progress.ticks[key] >= SKILL_TICKS_REQUIRED ? '●' : '○'}</b></span>`).join('')}</div>`;
 }
 
 function renderQuestion(question, word, skill = null) {
@@ -285,4 +285,3 @@ elements.run.addEventListener('click', runTask);
 window.addEventListener('beforeunload', stopActivity);
 window.__WSQ_LEARNING_LAB__ = { get levelPackage() { return levelPackage; }, runTask, wordProgress, characterProgress };
 loadLevel();
-

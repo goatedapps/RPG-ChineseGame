@@ -1,4 +1,4 @@
-import { tierOf } from '../learning/mastery.js';
+import { tierOf } from '../learning/mastery.js?p10f';
 
 export function setProgress(set, progressByWord, availableWords) {
   const available = new Set(availableWords.map(word => word.w));
@@ -11,4 +11,3 @@ export function offerSet(set, state) {
   if (!state.ready || state.completed) return { ...state };
   return { ...state, completed: true, restoration: set.restoration };
 }
-

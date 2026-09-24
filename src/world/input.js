@@ -15,6 +15,8 @@ export function bindInput({ target = window, dpad, onMove }) {
     onMove(direction);
   };
   const onKeyDown = event => {
+    const editable = event.target?.closest?.('input, textarea, select, [contenteditable="true"]');
+    if (editable) return;
     const direction = KEY_DIRECTIONS.get(event.key);
     if (!direction) return;
     event.preventDefault();
@@ -31,7 +33,12 @@ export function bindInput({ target = window, dpad, onMove }) {
       clearInterval(repeatTimer);
       repeatTimer = setInterval(() => move(button.dataset.direction), 130);
     };
-    const release = () => { clearInterval(repeatTimer); repeatTimer = null; button.classList.remove('is-active'); };
+    const release = event => {
+      clearInterval(repeatTimer);
+      repeatTimer = null;
+      button.classList.remove('is-active');
+      if (event?.pointerType === 'touch') button.blur();
+    };
     button.addEventListener('pointerdown', onPointer);
     button.addEventListener('pointerup', release);
     button.addEventListener('pointercancel', release);

@@ -44,9 +44,9 @@
       { "lesson": 3, "title": "A Special Guest", "pages": ["A hungry dog appears while the family prepares cups, bowls and food for guests.", "The children carefully give it water and ask an adult for help.", "They find its owner and learn how to welcome every guest safely."] }
     ],
     "requests": {
-      "xiaoqiang": { "collect": ["外", "帮助"], "silver": "专心" },
-      "mr-lin": { "silver": ["读", "听"], "write": "年级" },
-      "chef-mei": { "silver": ["碗", "盘"] }
+      "xiaoqiang": { "collect": ["外", "帮助"], "bronze": "专心" },
+      "mr-lin": { "bronze": ["读", "听"], "write": "年级" },
+      "chef-mei": { "bronze": ["碗", "盘"] }
     }
   }
 }

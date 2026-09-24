@@ -9,6 +9,15 @@ export function normalizeReading(value = {}) {
   };
 }
 
+export function repairActiveReading(value, group, villagerCount) {
+  const state = normalizeReading(value);
+  if (!group || state.active !== group.id) return state;
+  const questionCount = Math.min(group.items?.length || 0, Math.max(0, villagerCount));
+  if (!questionCount) return { ...state, active: null, index: 0, questionCount: 0, results: {} };
+  const results = Object.fromEntries(Object.entries(state.results).filter(([index]) => Number(index) < questionCount));
+  return { ...state, questionCount, results };
+}
+
 export function selectPassage(groups, reading, { includeHigherChinese = false, random = Math.random } = {}) {
   const state = normalizeReading(reading);
   const eligible = groups.filter(group => (
@@ -33,4 +42,3 @@ export function completePassage(reading, groupId, keyItem, inventory) {
     inventory: { ...inventory, keyItems: [...new Set([...(inventory.keyItems || []), keyItem])] }
   };
 }
-

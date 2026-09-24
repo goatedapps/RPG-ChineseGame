@@ -47,3 +47,8 @@ export function goalProgress(goal, state, goldCount = 0) {
   return { ...goal, value, complete: value >= goal.target, percent: Math.min(100, Math.round(value / Math.max(1, goal.target) * 100)) };
 }
 
+export function giftSpiritCard(progressByWord, word, availableWords) {
+  if (!availableWords.some(candidate => candidate.w === word)) return { ok: false, words: progressByWord };
+  const current = progressByWord[word] || {};
+  return { ok: true, words: { ...progressByWord, [word]: { ...current, collected: true } } };
+}

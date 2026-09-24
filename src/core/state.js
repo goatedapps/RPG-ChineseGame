@@ -58,6 +58,7 @@ export function createFreshState(levelPackage) {
       lenientWriting: true,
       sound: true,
       speechRate: 0.85,
+      higherChinese: false,
       unlockedRegions: 1,
       testMode: false,
       sendWrittenAnswers: true

@@ -8,11 +8,11 @@
     "baseEnemyDefense": 1,
     "defensePerLevel": 2,
     "battleXp": 12,
-    "battleCoins": 8
+    "battleCoins": 8,
+    "escapeChance": 0.65
   },
   "school": { "questionsPerQuiz": 5, "paidRunsPerDay": 3, "coinsPerCorrect": 5, "xpPerCorrect": 4 },
   "energy": { "defaultDailyBattles": 15 },
   "items": { "rice-ball": { "name": "Rice Ball", "price": 25, "heal": 10 } },
   "reading": { "completionCoins": 20, "keyItem": "cave-lantern" }
 }
-

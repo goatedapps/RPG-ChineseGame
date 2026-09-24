@@ -15,15 +15,18 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
   const draw = () => {
     const character = characters[index];
     const stage = WRITING_STAGES[stages[index]];
+    const memoryTask = forceMemory || stage.id === 2;
     let helped = false;
     overlay.open(`<article class="panel writing-panel">
       <p class="panel-kicker">Writing · ${escapeHtml(stage.name)}</p>
-      <div class="question-word"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span></div>
+      ${memoryTask
+        ? `<div class="dictation-clue"><b>${escapeHtml(word.m)}</b><span>${escapeHtml(word.p)}</span></div>`
+        : `<div class="question-word"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span></div>`}
       <p>Clue: ${escapeHtml(word.ex).replace(escapeHtml(word.w), '＿'.repeat(characters.length))}</p>
       <div class="writing-layout"><div class="writing-box" data-writing-box></div><div>
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>
-        <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
+        <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${memoryTask ? (itemIndex === index ? '✎' : '') : itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
         <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button><button class="secondary" data-writing-skip type="button">I don't know</button></div>
       </div></div>
     </article>`, { dismissible: false });
@@ -67,4 +70,3 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
   };
   draw();
 }
-

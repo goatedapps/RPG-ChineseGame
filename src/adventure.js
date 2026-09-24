@@ -4,10 +4,13 @@ import { checkPassageAnswer } from './systems/reading.js?p10f';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p10f';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js?p10d';
-import { showWritingTask } from './ui/writingView.js';
+import { showQuestion } from './ui/questionView.js?p10m';
+import { showWritingTask } from './ui/writingView.js?p10m';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
+import { heroStats } from './battle/damage.js';
+import { creatureSvg } from './battle/creatureArt.js?p10m';
+import { heroPortrait } from './ui/heroPortrait.js?p10h';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -256,6 +259,15 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function startBoss() {
     const queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config);
     const battle = { queue, hp: queue.length * 4, maxHp: queue.length * 4, index: 0 };
+    const arena = () => {
+      const game = active();
+      const hero = heroStats(game.state.player.level);
+      return `<div class="boss-battle-arena">
+        <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense}</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
+        <div class="battle-enemy boss-enemy"><div class="battle-nameplate"><b>Muddle King · Boss</b><small>Break every muddling spell</small><div class="enemy-hp"><i style="width:${battle.hp / battle.maxHp * 100}%"></i></div><strong>HP ${battle.hp}/${battle.maxHp}</strong></div><div class="creature-art">${creatureSvg('muddle-king', '')}</div></div>
+      </div>`;
+    };
+    const bossPanel = content => `<article class="battle-scene boss-battle-scene">${arena()}<div class="battle-console">${content}</div></article>`;
     audio?.setScene('boss');
     const next = () => {
       if (battle.hp <= 0) return bossWin();
@@ -271,11 +283,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
             game.state.player.hp = game.state.player.maxHp;
             commit();
             audio?.setScene('village');
-            return overlay.open('<div class="panel result-panel"><h1>The Muddle King overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button></div>');
+            return overlay.open(bossPanel('<h1>The Muddle King overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>'));
           }
         }
         commit();
-        overlay.open(`<div class="panel result-panel"><p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>Muddle King HP ${battle.hp}/${battle.maxHp}${correct ? '' : ' · You lost 3 HP'}.</p><button class="primary" data-boss-next>Next spell</button></div>`, { dismissible: false });
+        overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>Muddle King HP ${battle.hp}/${battle.maxHp}${correct ? '' : ' · You lost 3 HP'}.</p><button class="primary" data-boss-next>Next spell</button>`), { dismissible: false });
         document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
       };
       if (task.kind === 'writing') {
@@ -283,17 +295,17 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         showWritingTask(overlay, task.word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
           game.state.progress.characters = characters;
           finish(result.ok);
-        }, { runId: `boss-${Date.now()}-${battle.hp}`, lenient: game.state.settings.lenientWriting, forceMemory: true });
+        }, { runId: `boss-${Date.now()}-${battle.hp}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: arena() });
         return;
       }
       if (task.item.format === 'Fill-in') {
-        overlay.open(`<article class="panel question-panel"><p class="panel-kicker">${escapeHtml(task.phase)} · Muddle King HP ${battle.hp}/${battle.maxHp}</p><h2>${escapeHtml(task.item.q)}</h2><label class="answer-field">Your answer<input data-boss-answer></label><div class="button-row"><button class="primary" data-boss-check>Break spell</button><button class="secondary" data-boss-giveup>I don't know</button></div></article>`, { dismissible: false });
+        overlay.open(`<article class="panel question-panel boss-question">${arena()}<p class="panel-kicker">${escapeHtml(task.phase)} · Muddle King HP ${battle.hp}/${battle.maxHp}</p><h2>${escapeHtml(task.item.q)}</h2><label class="answer-field">Your answer<input data-boss-answer autocomplete="off"></label><div class="button-row"><button class="primary" data-boss-check>Break spell</button><button class="secondary" data-boss-giveup>I don't know</button></div></article>`, { dismissible: false });
         const check = answer => finish(checkPassageAnswer(task.item, answer));
         document.querySelector('[data-boss-check]').addEventListener('click', () => check(document.querySelector('[data-boss-answer]').value), { once: true });
         document.querySelector('[data-boss-giveup]').addEventListener('click', () => check(''), { once: true });
         return;
       }
-      showQuestion(overlay, makeExamQuestion(task.item), null, result => finish(result.ok), { title: `${task.phase} · Muddle King HP ${battle.hp}/${battle.maxHp}` });
+      showQuestion(overlay, makeExamQuestion(task.item), null, result => finish(result.ok), { title: `${task.phase} · Muddle King HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() });
     };
     next();
   }

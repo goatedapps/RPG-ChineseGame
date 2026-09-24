@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "2e74b5c46904",
+  "contentVersion": "8320ac8c3cad",
   "level": "p5",
   "label": "Primary 5",
   "lessons": [
@@ -27069,76 +27069,6 @@
             "c": null,
             "accepted": null,
             "displayAnswer": "李阿姨，我知道您一向对制作糕点很有兴趣。我今天看到常青公园中秋节的活动海报，建议您参加他们的月饼制作课。您可以晚上6点半之前到东门去上课。",
-            "marks": 4,
-            "context": null
-          }
-        ]
-      },
-      {
-        "id": "PL-G2",
-        "kind": "practical",
-        "lessons": [],
-        "subject": "Chinese",
-        "category": "practical",
-        "passage": {
-          "title": "儿童歌唱训练班",
-          "source": "Paya Lebar Methodist Girls' School (Primary), 2024 P5 WA2",
-          "text": "（本题根据相关通告/海报内容作答）"
-        },
-        "optionBank": null,
-        "items": [
-          {
-            "format": "MCQ",
-            "q": "举办儿童歌唱训练班的目的是什么？",
-            "o": [
-              "让学生对音乐更有兴趣。",
-              "让学生对各国歌手更了解。",
-              "让学生12月假期有事情做。",
-              "让学生有机会得到本地歌手签名照片。"
-            ],
-            "c": "让学生对音乐更有兴趣。",
-            "accepted": null,
-            "displayAnswer": null,
-            "marks": null,
-            "context": null
-          },
-          {
-            "format": "MCQ",
-            "q": "有兴趣参加的同学可以在哪一天报名？",
-            "o": [
-              "9月1日-9月31日",
-              "10月1日-10月31日",
-              "11月1日-11月21日",
-              "12月1日-12月5日"
-            ],
-            "c": "10月1日-10月31日",
-            "accepted": null,
-            "displayAnswer": null,
-            "marks": null,
-            "context": null
-          },
-          {
-            "format": "MCQ",
-            "q": "以下哪一项是正确的？",
-            "o": [
-              "首两位学生能以半价报名。",
-              "有兴趣的学生只能上网报名。",
-              "只要是学生就能参加这个活动。",
-              "报名的学生都有机会见到林明华。"
-            ],
-            "c": "有兴趣的学生只能上网报名。",
-            "accepted": null,
-            "displayAnswer": null,
-            "marks": null,
-            "context": null
-          },
-          {
-            "format": "Writing-Constrained",
-            "q": "假如你是心心，你想邀请小文一起报名参加“儿童歌唱训练班”。请你写一则手机短信给小文，告诉她报名参加歌唱训练班的一个原因，并告诉她课程的详情。",
-            "o": [],
-            "c": null,
-            "accepted": null,
-            "displayAnswer": "小文，欢乐民众俱乐部将在十二月假期举办“儿童歌唱训练班”，我想请你和我一起报名参加。儿童歌唱训练班能激发我对音乐的兴趣。课程的日期是12月1日至12月5日，上午9点至下午2点在欢乐民众俱乐部2楼音乐室上课。如果你想和我一起去，请尽快回复我！",
             "marks": 4,
             "context": null
           }

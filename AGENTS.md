@@ -39,7 +39,9 @@ Production URLs:
 - Keep School XP after the first three rewarded daily runs.
 - Keep the parent battle cap and the intended 30–60 minute session without a mandatory timer.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
+- Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
 - Keep battle vocabulary sealed until the child answers; reveal pinyin and meaning in feedback.
+- Keep writing-from-memory prompts free of the target Hanzi; show only meaning, Hanyu Pinyin and a blanked example sentence.
 - Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.
 - Keep all three Region 1 lesson areas open, with difficulty guiding the intended order.
 - Keep exact-word lesson bait in the shop.

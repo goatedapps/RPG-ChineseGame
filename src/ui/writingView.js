@@ -1,7 +1,7 @@
 import { escapeHtml } from './dom.js';
 import { AUTO_COMPLETE_AFTER_MISSES, normalizeCharacterProgress, recordCharacter, WRITING_STAGES, writingResult } from '../learning/writing.js';
 
-export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false } = {}) {
+export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, headerHtml = '' } = {}) {
   const characters = [...word.w].filter(character => /\p{Script=Han}/u.test(character));
   let index = 0;
   let anyHelp = false;
@@ -16,13 +16,16 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
     const character = characters[index];
     const stage = WRITING_STAGES[stages[index]];
     const memoryTask = forceMemory || stage.id === 2;
+    const blank = '＿'.repeat(characters.length);
+    const example = String(word.ex || 'Example sentence unavailable.').split(word.w).join(blank);
     let helped = false;
     overlay.open(`<article class="panel writing-panel">
+      ${headerHtml}
       <p class="panel-kicker">Writing · ${escapeHtml(stage.name)}</p>
       ${memoryTask
-        ? `<div class="dictation-clue"><b>${escapeHtml(word.m)}</b><span>${escapeHtml(word.p)}</span></div>`
+        ? `<div class="dictation-clue"><p><small>Meaning</small><b>${escapeHtml(word.m)}</b></p><p><small>Hanyu Pinyin</small><span>${escapeHtml(word.p)}</span></p><p><small>Example sentence</small><span>${escapeHtml(example)}</span></p></div>`
         : `<div class="question-word"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span></div>`}
-      <p>Clue: ${escapeHtml(word.ex).replace(escapeHtml(word.w), '＿'.repeat(characters.length))}</p>
+      ${memoryTask ? '' : `<p>Example: ${escapeHtml(word.ex)}</p>`}
       <div class="writing-layout"><div class="writing-box" data-writing-box></div><div>
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>

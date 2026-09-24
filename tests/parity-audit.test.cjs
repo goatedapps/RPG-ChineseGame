@@ -5,6 +5,14 @@ const fs = require('node:fs');
 const read = file => fs.readFileSync(file, 'utf8');
 const readJson = file => JSON.parse(read(file));
 
+test('P5 practical content excludes passages whose source poster is missing', () => {
+  const source = read('content/source/p5/questions/practical.yaml');
+  const generated = read('content/generated/p5.content.json');
+  assert.doesNotMatch(source, /儿童歌唱训练班/);
+  assert.doesNotMatch(generated, /儿童歌唱训练班/);
+  assert.doesNotMatch(generated, /本题根据相关通告\/海报内容作答/);
+});
+
 test('battle variants and answer streaks change combat behavior', async () => {
   const { createCreature } = await import('../src/battle/creatures.js');
   const { createBattleState, playerAttack } = await import('../src/battle/battle.js');

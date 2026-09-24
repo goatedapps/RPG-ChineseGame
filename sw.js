@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p10-v9';
+const CACHE = 'word-spirit-quest-p10-v16';
 const CORE = [
   './game/', './game/index.html', './manifest.webmanifest',
   './css/tokens.css', './css/base.css', './css/stage.css',
@@ -19,6 +19,7 @@ const RUNTIME = [
   './src/systems/crafting.js', './src/systems/daily.js', './src/systems/economy.js', './src/systems/energy.js', './src/systems/gear.js', './src/systems/inventory.js', './src/systems/milestones.js', './src/systems/parent.js', './src/systems/partners.js', './src/systems/reading.js', './src/systems/school.js', './src/systems/sets.js', './src/systems/story.js',
   './src/ui/dom.js', './src/ui/hud.js', './src/ui/overlay.js', './src/ui/questionView.js', './src/ui/toast.js', './src/ui/writingView.js',
   './src/world/encounters.js', './src/world/input.js', './src/world/map.js', './src/world/npcs.js', './src/world/renderer.js',
+  './assets/images/creatures/muddle-king.png', './assets/images/creatures/fogling.png', './assets/images/creatures/echo-bat.png', './assets/images/creatures/twin-shade.png', './assets/images/creatures/jumble-bug.png', './assets/images/creatures/ink-imp.png',
   './assets/audio/bag-open.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/level-up.mp3', './assets/audio/music-battle.wav', './assets/audio/music-boss.wav', './assets/audio/music-village.wav', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
 ];
 

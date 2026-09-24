@@ -1,8 +1,9 @@
 import { escapeHtml } from './dom.js';
 import { checkAnswer } from '../learning/questions.js';
 
-export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge', revealWord = word } = {}) {
+export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge', revealWord = word, headerHtml = '' } = {}) {
   overlay.open(`<article class="panel question-panel">
+    ${headerHtml}
     <p class="panel-kicker">${escapeHtml(title)}</p>
     <h2>${escapeHtml(question.prompt)}</h2>
     <p class="question-instruction">${escapeHtml(question.instruction)}</p>
@@ -28,4 +29,3 @@ export function showQuestion(overlay, question, word, onDone, { title = 'Learnin
     }, { once: true });
   }, { once: true }));
 }
-

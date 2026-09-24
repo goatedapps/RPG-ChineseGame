@@ -113,12 +113,71 @@ test('tablet fixes hide unavailable help actions and memory-writing answers', ()
   const css = fs.readFileSync(path.join(root, 'css/stage.css'), 'utf8');
   assert.match(adventure, /ready \? `<button class="primary" data-request-complete/);
   assert.match(writing, /memoryTask[\s\S]*dictation-clue/);
+  assert.match(writing, /Hanyu Pinyin/);
+  assert.match(writing, /Example sentence/);
+  assert.match(writing, /split\(word\.w\)\.join\(blank\)/);
   assert.match(gameplay, /if \(skill === 'h'\) question\.prompt = battle\.word\.m/);
   assert.match(gameplay, /data-higher-chinese/);
   assert.match(gameplay, /Give a Spirit card/);
   assert.match(gameplay, /accuracyLabel\(skill\)/);
   assert.match(css, /-webkit-tap-highlight-color: transparent/);
   assert.match(css, /\.pin-settings/);
+});
+
+test('Muddle King and creature encounters use illustrated battle presentation', () => {
+  const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
+  const creatureArt = fs.readFileSync(path.join(root, 'src/battle/creatureArt.js'), 'utf8');
+  assert.match(adventure, /boss-battle-arena/);
+  assert.match(adventure, /creatureSvg\('muddle-king', ''\)/);
+  assert.match(adventure, /forceMemory: true, headerHtml: arena\(\)/);
+  for (const name of ['muddle-king', 'fogling', 'echo-bat', 'twin-shade', 'jumble-bug', 'ink-imp']) {
+    assert.match(creatureArt, new RegExp(`${name.replace('-', '\\-')}\\.png`));
+    assert.equal(fs.existsSync(path.join(root, `assets/images/creatures/${name}.png`)), true);
+  }
+});
+
+test('Hero Status shows the main character and leaves partner selection in My Room', () => {
+  const html = fs.readFileSync(path.join(root, 'game/index.html'), 'utf8');
+  const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
+  const dom = new JSDOM(html);
+  assert.equal(dom.window.document.querySelector('#character-button').textContent, 'Hero Status');
+  assert.match(collection, /<h1>Hero Status<\/h1>/);
+  assert.match(collection, /hero-stat-grid/);
+  assert.match(collection, /XP to Level/);
+  assert.match(collection, /heroPortrait\(equipment\.equipped, 'paper-hero'\)/);
+  assert.doesNotMatch(collection, /data-partners-open/);
+  assert.match(collection, /data-room-partners>Choose Partner Spirits/);
+  assert.doesNotMatch(collection, /paper-hero[^>]*>勇/);
+  assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8'), /battle-hero[^>]*>勇/);
+  assert.match(collection, /function bag\(\)/);
+  for (const section of ['Battle items', 'Special items', 'Equipment', 'Materials', 'Spirit bait', 'Scrolls']) assert.match(collection, new RegExp(section));
+});
+
+test('Spirit Book separates regional vocabulary into lesson tabs', () => {
+  const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
+  const css = fs.readFileSync(path.join(root, 'css/stage.css'), 'utf8');
+  assert.match(gameplay, /lessonNumbers/);
+  assert.match(gameplay, /role="tablist" aria-label="Spirit Book lessons"/);
+  assert.match(gameplay, /data-book-lesson/);
+  assert.match(gameplay, /lessonWords\.map/);
+  assert.match(css, /\.lesson-tabs button\[aria-selected="true"\]/);
+});
+
+test('Parent Mode defaults to Settings and separates its Learning Summary', () => {
+  const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
+  assert.match(gameplay, /showParentDashboard\(selectedTab = 'settings'\)/);
+  assert.match(gameplay, /role="tablist" aria-label="Parent Mode sections"/);
+  assert.match(gameplay, /data-parent-tab="settings">Settings/);
+  assert.match(gameplay, /data-parent-tab="summary">Learning Summary/);
+  assert.match(gameplay, /tab === 'settings' \? settingsHtml : summaryHtml/);
+});
+
+test('Your Room explains the Restoration Board before opening it', () => {
+  const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
+  assert.match(collection, /What is the Restoration Board\?/);
+  assert.match(collection, /Offering a set does not use up your cards/);
+  assert.match(collection, /View Restoration Board/);
+  assert.match(collection, /Your Spirit cards are never consumed/);
 });
 
 test('battle presentation keeps the spirit sealed and questions reveal details only after an answer', async () => {

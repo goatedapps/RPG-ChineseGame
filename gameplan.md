@@ -168,7 +168,7 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | P1 | Modular shell, level picker, shared map, movement, interactions and isolated encoded saves. |
 | P2 | Shared questions, mastery, selection, speech and three-stage writing lab. |
 | P3 | Region 1 battles, School, Reading Hall, Inn, Shop, Spirit Book, energy and parent summary. |
-| P4 | Consumables, equipment, materials, crafting and Character screen. |
+| P4 | Consumables, equipment, materials, crafting, a unified Bag and the Hero Status screen. |
 | P5 | Partners, Restoration Sets, milestones and player room. |
 | P6 | Daily quests, chest, streak, freeze and Scroll Library. |
 | P7 | Complete Region 1 story, requests, rival, gate, boss, fragment and hidden grove. |

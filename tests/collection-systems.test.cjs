@@ -114,5 +114,6 @@ test('fresh saves and the game shell expose the P4 and P5 collection surfaces', 
   assert.equal(state.progress.equipment.equipped.brush, 'bamboo-brush');
   const dom = new JSDOM(fs.readFileSync(path.join(root, 'game', 'index.html'), 'utf8'));
   assert.ok(dom.window.document.querySelector('#character-button'));
+  assert.equal(dom.window.document.querySelector('#bag-button').textContent, 'Bag');
   assert.ok(dom.window.document.querySelector('#room-button'));
 });

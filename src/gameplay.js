@@ -1,15 +1,15 @@
 import { createBattleState, enemyAttack, gainBattleRewards, playerAttack } from './battle/battle.js';
 import { createCreature } from './battle/creatures.js';
 import { heroStats } from './battle/damage.js';
-import { creatureSvg } from './battle/creatureArt.js?p8b';
+import { creatureSvg } from './battle/creatureArt.js?p10d';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
 import { partnerBonuses, partnerMove } from './systems/partners.js';
 import { battlesLeft, useBattle } from './systems/energy.js';
-import { ensureParentPin, goalProgress, parentPinMatches, setParentPin, weeklySummary } from './systems/parent.js?p8b';
-import { weightedCreature } from './world/encounters.js?p8b';
-import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p8b';
+import { ensureParentPin, goalProgress, parentPinMatches, setParentPin, weeklySummary } from './systems/parent.js?p10d';
+import { weightedCreature } from './world/encounters.js?p10d';
+import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10d';
 import { checkPassageAnswer, completePassage, normalizeReading, selectPassage } from './systems/reading.js';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
@@ -18,7 +18,7 @@ import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILL
 import { recommendedSkill, selectWord } from './learning/selection.js';
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js';
+import { showQuestion } from './ui/questionView.js?p10d';
 import { showWritingTask } from './ui/writingView.js';
 import { createSpeechController } from './learning/audio.js';
 
@@ -94,25 +94,26 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       question.options = question.options.filter(option => option !== wrong);
       battle.lantern = false;
     }
-    showQuestion(overlay, question, battle.word, result => {
+    showQuestion(overlay, question, null, result => {
       recordWord(battle.word, skill, result.ok, assisted);
       done(result.ok, skill);
-    }, { title: SKILLS[skill].action });
+    }, { title: SKILLS[skill].action, revealWord: battle.word });
   }
 
   function showBattle(battle, message = '') {
     const game = active();
     const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
+    const hero = heroStats(game.state.player.level);
     const lead = game.levelPackage.content.words.find(word => word.id === game.state.progress.partners[0]);
     const move = partnerMove(lead, lead && game.state.progress.words[lead.w], game.levelPackage.wordTags);
-    overlay.open(`<article class="panel battle-panel">
-      <p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p>
-      <div class="battle-grid">
-        <div class="creature-card ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="creature-art">${creatureSvg(battle.creature.id, escapeHtml(battle.word.w))}</div><h2>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</h2><p>${escapeHtml(battle.word.p)} · ${escapeHtml(battle.word.m)}</p><p>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</p><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><b>HP ${battle.enemyHp}/${battle.creature.maxHp}</b></div>
-        <div><h2>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2><p>HP <b>${game.state.player.hp}/${game.state.player.maxHp}</b> · ATK ${3 + game.state.player.level * 3} · DEF ${game.state.player.level * 2}</p>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : ''}
-          <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak || key === battle.recommended ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.recommended ? ' · recommended' : ''}</span></button>`).join('')}</div>
-          <div class="button-row"><button class="secondary" data-bag type="button">Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button">${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button">Run safely</button></div>
-        </div>
+    overlay.open(`<article class="battle-scene lesson-${battle.word.lesson}">
+      <div class="battle-arena">
+        <div class="battle-player"><div class="battle-hero" aria-hidden="true">勇</div><div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion * 100)}%</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
+        <div class="battle-enemy ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="battle-nameplate"><b>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</b><small>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</small><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><strong>HP ${battle.enemyHp}/${battle.creature.maxHp}</strong></div><div class="creature-art">${creatureSvg(battle.creature.id, '？')}</div></div>
+      </div>
+      <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
+        <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === battle.recommended ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === battle.recommended ? ' · useful now' : ''}</span></button>`).join('')}</div>
+        <div class="button-row"><button class="secondary" data-bag type="button">Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button">${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button">Run safely</button></div>
       </div>
     </article>`, { dismissible: false });
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
@@ -258,13 +259,13 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     audio?.setScene('battle');
     const transition = document.createElement('div');
     transition.className = 'encounter-transition';
-    transition.innerHTML = `<div class="encounter-rays"></div><div class="encounter-creature">${creatureSvg(creature.id, escapeHtml(word.w))}</div><div class="encounter-callout">A creature approaches!</div>`;
+    transition.innerHTML = `<div class="encounter-rays"></div><div class="encounter-creature">${creatureSvg(creature.id, '？')}</div><div class="encounter-callout">A creature approaches!</div>`;
     document.querySelector('.stage').appendChild(transition);
     setTimeout(() => {
       transition.classList.add('closing');
       setTimeout(() => {
         transition.remove();
-        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, escapeHtml(word.w))}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? `Your bait worked. It carries ${escapeHtml(word.w)}.` : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
+        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, '？')}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? 'Your bait worked. It carries the exact spirit you chose.' : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
         document.querySelector('[data-fight]').addEventListener('click', () => showBattle(battle), { once: true });
       }, 220);
     }, 720);
@@ -274,10 +275,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   function tutorialBattle(onDone) {
     const game = active();
     audio?.setScene('battle');
-    const word = game.levelPackage.content.words.find(candidate => candidate.w === '露营') || wordsForLesson(1)[0];
+    const tutorialWord = game.levelPackage.config.region1?.tutorialWord;
+    const word = game.levelPackage.content.words.find(candidate => candidate.w === tutorialWord) || wordsForLesson(1)[0];
     const creature = createCreature(1, game.levelPackage.balance, () => 0);
     const ask = () => {
-      overlay.open(`<article class="panel battle-panel"><p class="panel-kicker">First Spirit Brush battle</p><div class="battle-grid"><div class="creature-card" style="--creature:${creature.color}"><div class="creature-art">${creatureSvg(creature.id, escapeHtml(word.w))}</div><h2>${escapeHtml(creature.name)}</h2><b>HP 1/1</b></div><div><h2>Use Meaning Strike</h2><p>Answer the question to free your first Word Spirit.</p><button class="primary" data-tutorial-attack>Meaning Strike</button></div></div></article>`, { dismissible: false });
+      overlay.open(`<article class="battle-scene lesson-1"><div class="battle-arena"><div class="battle-player"><div class="battle-hero" aria-hidden="true">勇</div><div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><div class="enemy-hp player-hp"><i style="width:100%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div><div class="battle-enemy"><div class="battle-nameplate"><b>${escapeHtml(creature.name)} · Lv ${creature.level}</b><div class="enemy-hp"><i style="width:100%"></i></div><strong>HP 1/1</strong></div><div class="creature-art">${creatureSvg(creature.id, '？')}</div></div></div><div class="battle-console"><p class="panel-kicker">First Spirit Brush battle</p><h2>Use Meaning Strike</h2><p>The Word Spirit stays sealed until you defeat the creature.</p><button class="primary" data-tutorial-attack>Meaning Strike</button></div></article>`, { dismissible: false });
       document.querySelector('[data-tutorial-attack]').addEventListener('click', () => {
         showQuestion(overlay, makeQuestion(word, 'm', game.levelPackage.content.words), word, result => {
           recordWord(word, 'm', result.ok);

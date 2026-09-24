@@ -3,16 +3,16 @@
     "id": "p2",
     "label": "Primary 2",
     "sourceReady": true,
-    "worldMappingReady": false,
-    "playableBuild": null,
-    "modularPreviewReady": false
+    "worldMappingReady": true,
+    "playableBuild": "modular",
+    "modularPreviewReady": true
   },
   {
     "id": "p5",
     "label": "Primary 5",
     "sourceReady": true,
     "worldMappingReady": true,
-    "playableBuild": "prototype",
+    "playableBuild": "modular",
     "modularPreviewReady": true
   }
 ]

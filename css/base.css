@@ -9,7 +9,9 @@ body {
   font-family: var(--font-ui);
 }
 button { min-width: var(--touch-target); min-height: var(--touch-target); font: inherit; cursor: pointer; }
-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; padding: 10px 14px; color: white; background: var(--jade); border-radius: 8px; transform: translateY(-160%); }
+.skip-link:focus { transform: none; }
 .game-shell { width: min(980px, 100%); margin: 0 auto; display: grid; gap: 10px; }
 .hud {
   display: flex;

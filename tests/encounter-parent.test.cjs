@@ -46,6 +46,6 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
-  assert.match(shell, /P8 Parent tools/);
+  assert.match(shell, /P10 tablet pilot/);
   for (const file of ['music-village.wav', 'music-battle.wav', 'music-boss.wav', 'creature-hit.wav']) assert.equal(fs.existsSync(`assets/audio/${file}`), true);
 });

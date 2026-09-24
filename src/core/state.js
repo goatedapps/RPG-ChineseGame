@@ -76,6 +76,7 @@ function numberOr(value, fallback, minimum = 0) {
 export function migrateState(candidate, levelPackage) {
   const fresh = createFreshState(levelPackage);
   if (!candidate || typeof candidate !== 'object') return fresh;
+  if (Number(candidate.schemaVersion) > SAVE_SCHEMA_VERSION) throw new Error(`Save version ${candidate.schemaVersion} is newer than this game supports.`);
 
   if (candidate.schemaVersion >= 2) {
     if (candidate.level !== levelPackage.id) throw new Error(`This save belongs to ${candidate.level}, not ${levelPackage.id}.`);

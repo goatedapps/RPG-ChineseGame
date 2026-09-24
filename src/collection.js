@@ -5,7 +5,7 @@ import { eligiblePartners, partnerBonuses, setPartners } from './systems/partner
 import { offerSet, setProgress } from './systems/sets.js';
 import { tierOf } from './learning/mastery.js';
 import { escapeHtml } from './ui/dom.js';
-import { goalProgress } from './systems/parent.js?p8b';
+import { goalProgress } from './systems/parent.js?p10d';
 
 export function createCollection({ overlay, getActive, persist, render, toast }) {
   const active = () => getActive();
@@ -97,8 +97,8 @@ export function createCollection({ overlay, getActive, persist, render, toast })
   function restorationBoard() {
     const game = active();
     const completed = game.state.progress.sets;
-    const states = game.levelPackage.sets.map(set => ({ set, ...setProgress(set, game.state.progress.words, game.levelPackage.content.words), completed: Boolean(completed[set.id]) }));
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Scholar Village</p><h1>Restoration Board</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="set-grid">${states.map(state => `<article class="set-card ${state.completed ? 'complete' : ''}"><h2>${escapeHtml(state.set.name)}</h2><p>${state.words.map(word => `${['silver','gold'].includes(tierOf(game.state.progress.words[word])) ? '✓' : '○'} ${escapeHtml(word)}`).join(' · ') || 'This set belongs to another curriculum.'}</p><small>${escapeHtml(state.set.restoration)}</small><button data-offer="${state.set.id}" ${state.ready && !state.completed ? '' : 'disabled'}>${state.completed ? 'Restored' : state.ready ? 'Offer set' : 'Keep learning'}</button></article>`).join('')}</div></div>`);
+    const states = game.levelPackage.sets.map(set => ({ set, ...setProgress(set, game.state.progress.words, game.levelPackage.content.words), completed: Boolean(completed[set.id]) })).filter(state => state.words.length >= 3);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Scholar Village</p><h1>Restoration Board</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="set-grid">${states.map(state => `<article class="set-card ${state.completed ? 'complete' : ''}"><h2>${escapeHtml(state.set.name)}</h2><p>${state.words.map(word => `${['silver','gold'].includes(tierOf(game.state.progress.words[word])) ? '✓' : '○'} ${escapeHtml(word)}`).join(' · ')}</p><small>${escapeHtml(state.set.restoration)}</small><button data-offer="${state.set.id}" ${state.ready && !state.completed ? '' : 'disabled'}>${state.completed ? 'Restored' : state.ready ? 'Offer set' : 'Keep learning'}</button></article>`).join('') || '<p>No Restoration Sets are available for this curriculum yet.</p>'}</div></div>`);
     for (const button of document.querySelectorAll('[data-offer]:not([disabled])')) button.addEventListener('click', () => {
       const state = states.find(item => item.set.id === button.dataset.offer);
       const result = offerSet(state.set, state);
@@ -119,8 +119,9 @@ export function createCollection({ overlay, getActive, persist, render, toast })
     const gold = Object.values(game.state.progress.words).filter(value => tierOf(value) === 'gold').length;
     const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
     if (goal?.complete && !game.state.progress.parent.goal.celebrated) { game.state.progress.parent.goal.celebrated = true; commit(); toast(`Goal reached: ${goal.label}!`); }
-    overlay.open(`<div class="panel room-panel"><div class="panel-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>Your Room</h1></div><button class="secondary" data-close-overlay>Leave room</button></div><p><b>Lantern Streak: ${game.state.progress.streak?.count || 0} days</b></p>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : ''}<div class="room-scene"><div class="room-shelf">${game.state.progress.room.trophies.length ? game.state.progress.room.trophies.map(() => '<span>🏆</span>').join('') : '<span class="empty">Trophy shelf</span>'}</div><div class="room-bed">Rest</div><div class="room-partners">${partners.length ? partners.map(word => `<i>${escapeHtml(word.w)}</i>`).join('') : '<span>Partner spirits will rest here.</span>'}</div><div class="room-decor">${game.state.progress.room.decorations.map(item => `<b>${escapeHtml(item)}</b>`).join(' ')}</div></div><div class="button-row"><button class="primary" data-board-open>Restoration Board</button><button class="secondary" data-room-partners>Partners</button></div></div>`);
-    document.querySelector('[data-board-open]').addEventListener('click', restorationBoard);
+    const hasSets = game.levelPackage.sets.some(set => setProgress(set, game.state.progress.words, game.levelPackage.content.words).words.length >= 3);
+    overlay.open(`<div class="panel room-panel"><div class="panel-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>Your Room</h1></div><button class="secondary" data-close-overlay>Leave room</button></div><p><b>Lantern Streak: ${game.state.progress.streak?.count || 0} days</b></p>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : ''}<div class="room-scene"><div class="room-shelf">${game.state.progress.room.trophies.length ? game.state.progress.room.trophies.map(() => '<span>🏆</span>').join('') : '<span class="empty">Trophy shelf</span>'}</div><div class="room-bed">Rest</div><div class="room-partners">${partners.length ? partners.map(word => `<i>${escapeHtml(word.w)}</i>`).join('') : '<span>Partner spirits will rest here.</span>'}</div><div class="room-decor">${game.state.progress.room.decorations.map(item => `<b>${escapeHtml(item)}</b>`).join(' ')}</div></div><div class="button-row">${hasSets ? '<button class="primary" data-board-open>Restoration Board</button>' : ''}<button class="secondary" data-room-partners>Partners</button></div></div>`);
+    document.querySelector('[data-board-open]')?.addEventListener('click', restorationBoard);
     document.querySelector('[data-room-partners]').addEventListener('click', partners);
   }
 

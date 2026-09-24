@@ -8,6 +8,16 @@ function join(baseUrl, path) {
   return `${baseUrl.replace(/\/$/, '')}/${path}`;
 }
 
+function mergeObjects(base, overrides = {}) {
+  const result = { ...base };
+  for (const [key, value] of Object.entries(overrides)) {
+    result[key] = value && typeof value === 'object' && !Array.isArray(value)
+      ? mergeObjects(base?.[key] || {}, value)
+      : value;
+  }
+  return result;
+}
+
 export async function listLevels(fetcher = fetch, baseUrl = '..') {
   return fetchJson(fetcher, join(baseUrl, 'content/authored/shared/levels.json'));
 }
@@ -35,6 +45,13 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
   }
   const region = regions.find(candidate => candidate.id === map.region);
   if (!region) throw new Error(`Map ${map.id} refers to missing region ${map.region}.`);
+  const tunedBalance = mergeObjects(balance, config.tuning?.balance);
+  const tunedStory = JSON.parse(JSON.stringify(regionStory));
+  if (config.region1?.stories?.length) tunedStory.stories = JSON.parse(JSON.stringify(config.region1.stories));
+  if (config.region1?.atticLine) {
+    const line = tunedStory.scenes.attic.find(command => command.speaker === 'Fogling');
+    if (line) line.say = config.region1.atticLine;
+  }
   return {
     id: levelId,
     label: content.label,
@@ -44,7 +61,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     regions,
     region,
     map,
-    balance,
+    balance: tunedBalance,
     strings,
     items,
     gear,
@@ -53,6 +70,6 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     sets,
     wordTags,
     dailyQuestTemplates,
-    regionStory
+    regionStory: tunedStory
   };
 }

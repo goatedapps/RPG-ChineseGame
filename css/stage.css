@@ -104,6 +104,23 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .answer-feedback { margin-top: 14px; padding: 13px; border-left: 5px solid var(--jade); border-radius: 8px; background: white; }
 .answer-feedback.bad { border-color: var(--seal); }
 .battle-grid { display: grid; grid-template-columns: minmax(200px,.8fr) minmax(280px,1.4fr); gap: 24px; align-items: center; }
+.battle-scene { display: grid; grid-template-rows: minmax(190px,1fr) auto; align-self: stretch; width: min(760px,100%); min-height: 100%; margin: auto; overflow: hidden; border: 3px solid var(--ink); border-radius: 16px; background: linear-gradient(#cfe3d5 0 55%,#a9cda0 55%); box-shadow: 0 13px 30px rgba(0,0,0,.35); }
+.battle-scene.lesson-2 { background: linear-gradient(#d6d3e6 0 55%,#b5b0cc 55%); }
+.battle-scene.lesson-3 { background: linear-gradient(#eee6c4 0 55%,#c9d98e 55%); }
+.battle-arena { position: relative; min-height: 205px; }
+.battle-player { position: absolute; bottom: 10px; left: 14px; display: flex; align-items: flex-end; gap: 8px; }
+.battle-enemy { position: absolute; top: 8px; right: 14px; display: flex; flex-direction: column; align-items: center; }
+.battle-enemy.elite .battle-nameplate { box-shadow: inset 0 0 0 3px #8e5cc7; }
+.battle-enemy.golden .battle-nameplate { background: #fff3b3; box-shadow: inset 0 0 0 3px var(--gold); }
+.battle-nameplate { min-width: 170px; padding: 7px 10px; border: 2px solid var(--ink); border-radius: 9px; background: var(--paper); font-size: 13px; }
+.battle-nameplate b, .battle-nameplate small, .battle-nameplate strong { display: block; }
+.battle-nameplate small { color: #536171; }
+.battle-hero { display: grid; place-items: center; width: 74px; height: 88px; border: 4px solid var(--ink); border-radius: 32px 32px 15px 15px; color: white; background: var(--jade); font: 34px var(--font-chinese); box-shadow: 0 5px 0 rgba(27,36,48,.2); }
+.battle-enemy .creature-art { min-height: 112px; }
+.battle-enemy .creature-svg { width: 145px; height: 112px; }
+.battle-console { margin: 10px; padding: 12px 14px; border: 3px solid var(--ink); border-radius: 12px; background: var(--paper); }
+.battle-console h2 { margin: 0; }
+.battle-console .battle-message { margin-bottom: 8px; }
 .creature-card { padding: 18px; border-radius: 15px; background: white; text-align: center; }
 .creature-card.elite { box-shadow: inset 0 0 0 4px #8e5cc7, 0 7px 18px rgba(60,36,87,.2); }
 .creature-card.golden { background: linear-gradient(145deg,#fffdf1,#ffe58a); box-shadow: inset 0 0 0 4px var(--gold), 0 7px 20px rgba(179,126,14,.28); }
@@ -127,6 +144,8 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .attack-grid button { display: grid; }
 .attack-grid button span { color: #65717d; font: 12px system-ui; }
 .attack-grid button.recommended { border-color: var(--gold); box-shadow: inset 0 0 0 2px #f4d886; }
+.attack-grid button.weak-to { border-color: var(--seal); background: #fae3de; }
+.attack-grid button[data-attack="w"] { grid-column: 1 / -1; }
 .battle-message { min-height: 44px; padding: 9px; border-radius: 8px; background: white; }
 .level-up { margin: 15px 0; padding: 14px; border: 3px solid var(--gold); border-radius: 12px; background: #fff8d8; text-align: center; animation: encounter-pop .55s cubic-bezier(.18,.9,.25,1.25); }
 .level-up strong { color: #a16b00; font-size: clamp(30px,7vw,50px); text-shadow: 0 2px 0 white; }
@@ -211,5 +230,14 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   .battle-grid, .writing-layout, .question-options, .attack-grid, .service-grid, .spirit-grid, .gear-grid, .set-grid, .shop-grid { grid-template-columns: 1fr; }
   .shop-item { grid-template-columns: auto 1fr; }
   .shop-item button { grid-column: 1 / -1; }
+  .battle-scene { min-height: 520px; }
+  .battle-arena { min-height: 190px; }
+  .battle-player { left: 8px; }
+  .battle-enemy { right: 8px; }
+  .battle-nameplate { min-width: 140px; max-width: 180px; font-size: 11px; }
+  .battle-hero { width: 58px; height: 70px; font-size: 27px; }
+  .battle-enemy .creature-svg { width: 112px; height: 88px; }
+  .battle-console .attack-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .battle-console .button-row { margin-top: 10px; }
 }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }

@@ -4,10 +4,10 @@ import { checkPassageAnswer } from './systems/reading.js';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js';
+import { showQuestion } from './ui/questionView.js?p10d';
 import { showWritingTask } from './ui/writingView.js';
 import { localDay } from './core/time.js';
-import { recordActivity } from './systems/parent.js?p8b';
+import { recordActivity } from './systems/parent.js?p10d';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -183,17 +183,24 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const game = active();
     const story = normalizeStory(game.state.progress.story);
     const data = game.levelPackage.regionStory.requests[id];
+    const bindings = game.levelPackage.config.region1?.requests || {};
+    const bound = bindings[id] || {};
+    const steps = id === 'xiaoqiang'
+      ? [`Collect ${(bound.collect || ['贵重', '探险']).join(' and ')}.`, 'Find the treasure box in Camping Forest.', `Raise ${bound.silver || '狼吞虎咽'} to Silver.`]
+      : id === 'mr-lin'
+        ? [`Raise ${(bound.silver || ['模糊', '眼圈']).join(' and ')} to Silver.`, 'Defeat three Twin Shades.', `Practise writing ${bound.write || '距离'} successfully.`]
+        : [`Raise ${(bound.silver || ['调味料', '材料']).join(' and ')} to Silver.`, 'Defeat two Ink Imps.', 'Complete a clean Lesson 3 tingxie.'];
     const step = story.requests[id] || 0;
-    if (step >= data.steps.length) return overlay.dialogue({ title: data.name, lines: [id === 'mr-lin' ? 'Rest your eyes every 30 minutes!' : id === 'chef-mei' ? 'Salt and sugar finally have their proper labels.' : 'My pork-rib treasure is safe. Adventure is better with friends!'] });
-    const ready = requestReady(id, step, game.state.progress, story);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Villager request · ${step + 1}/${data.steps.length}</p><h1>${escapeHtml(data.name)}</h1><p>${escapeHtml(data.steps[step])}</p><p>${ready ? 'You have completed this step.' : 'Come back when this step is complete.'}</p><div class="button-row"><button class="primary" data-request-complete ${ready ? '' : 'disabled'}>Help ${escapeHtml(data.name)}</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
+    if (step >= steps.length) return overlay.dialogue({ title: data.name, lines: [id === 'mr-lin' ? 'Rest your eyes every 30 minutes!' : id === 'chef-mei' ? 'Salt and sugar finally have their proper labels.' : 'My pork-rib treasure is safe. Adventure is better with friends!'] });
+    const ready = requestReady(id, step, game.state.progress, story, bindings);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Villager request · ${step + 1}/${steps.length}</p><h1>${escapeHtml(data.name)}</h1><p>${escapeHtml(steps[step])}</p><p>${ready ? 'You have completed this step.' : 'Come back when this step is complete.'}</p><div class="button-row"><button class="primary" data-request-complete ${ready ? '' : 'disabled'}>Help ${escapeHtml(data.name)}</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
     document.querySelector('[data-request-complete]:not([disabled])')?.addEventListener('click', () => {
       story.requests[id] = step + 1;
       game.state.progress.story = story;
-      if (story.requests[id] === data.steps.length) grantRequestReward(id, game);
+      if (story.requests[id] === steps.length) grantRequestReward(id, game);
       recordEvent('villager-help', { id });
       commit();
-      toast(story.requests[id] === data.steps.length ? `${data.name} is clear-minded again. Reward: ${data.reward}.` : 'Request step complete.');
+      toast(story.requests[id] === steps.length ? `${data.name} is clear-minded again. Reward: ${data.reward}.` : 'Request step complete.');
       villagerRequest(id);
     }, { once: true });
   }
@@ -247,12 +254,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   }
 
   function startBoss() {
-    const queue = bossGateQueue(active().levelPackage.content);
+    const queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config);
     const battle = { queue, hp: queue.length * 4, maxHp: queue.length * 4, index: 0 };
     audio?.setScene('boss');
     const next = () => {
       if (battle.hp <= 0) return bossWin();
-      if (!battle.queue.length) battle.queue = bossGateQueue(active().levelPackage.content);
+      if (!battle.queue.length) battle.queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config);
       const task = battle.queue.shift();
       const finish = correct => {
         const game = active();
@@ -315,12 +322,16 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function hiddenGrove() {
     const game = active();
     if (!game.state.progress.story.flags.hiddenGrove) return overlay.dialogue({ title: 'Thick fog', lines: ['The path disappears into silver fog. A restored Brush Fragment may clear it.'] });
-    if ((game.state.progress.scrolls.unlocked || []).some(entry => entry.type === 'Idiom Scroll')) return overlay.dialogue({ title: 'Hidden Grove', lines: ['Elite word spirits patrol the bright clearing. The old chest is empty now.'] });
-    const idiom = game.levelPackage.content.words.find(word => word.isIdiom && word.lesson <= 3);
-    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: idiom?.w || 'Region 1 Idiom', type: 'Idiom Scroll', text: `${idiom?.p || ''} · ${idiom?.m || 'A special Region 1 move'}` });
+    const supportsIdioms = game.levelPackage.config.features.idioms;
+    const scrollType = supportsIdioms ? 'Idiom Scroll' : 'Word Wisdom Scroll';
+    if ((game.state.progress.scrolls.unlocked || []).some(entry => entry.type === scrollType)) return overlay.dialogue({ title: 'Hidden Grove', lines: ['Elite word spirits patrol the bright clearing. The old chest is empty now.'] });
+    const featured = supportsIdioms
+      ? game.levelPackage.content.words.find(word => word.isIdiom && word.lesson <= 3)
+      : game.levelPackage.content.words.find(word => word.lesson <= 3);
+    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: featured?.w || 'Region 1 Wisdom', type: scrollType, text: `${featured?.p || ''} · ${featured?.m || 'A special Region 1 word'}` });
     game.state.player.coins += 30;
     commit();
-    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Hidden Grove chest</p><h1>${escapeHtml(idiom?.w || 'Idiom Scroll')}</h1><p>You found the first idiom scroll and 30 coins. Elite creatures now guard this clearing for advanced practice.</p><button class="primary" data-close-overlay>Continue</button></div>`);
+    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Hidden Grove chest</p><h1>${escapeHtml(featured?.w || scrollType)}</h1><p>You found a ${supportsIdioms ? 'special idiom' : 'word wisdom'} scroll and 30 coins. Elite creatures now guard this clearing for advanced practice.</p><button class="primary" data-close-overlay>Continue</button></div>`);
   }
 
   function handleInteraction(object) {

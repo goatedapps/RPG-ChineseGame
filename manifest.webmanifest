@@ -1,0 +1,10 @@
+{
+  "name": "Word Spirit Quest",
+  "short_name": "Word Spirits",
+  "description": "A tablet-friendly Chinese vocabulary adventure.",
+  "start_url": "./game/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1b2430",
+  "theme_color": "#1b2430"
+}

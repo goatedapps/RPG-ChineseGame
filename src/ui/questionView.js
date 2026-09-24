@@ -1,10 +1,9 @@
 import { escapeHtml } from './dom.js';
 import { checkAnswer } from '../learning/questions.js';
 
-export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge' } = {}) {
+export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge', revealWord = word } = {}) {
   overlay.open(`<article class="panel question-panel">
     <p class="panel-kicker">${escapeHtml(title)}</p>
-    ${word ? `<div class="question-word"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span></div>` : ''}
     <h2>${escapeHtml(question.prompt)}</h2>
     <p class="question-instruction">${escapeHtml(question.instruction)}</p>
     <div class="question-options">${question.options.map((option, index) => `<button type="button" data-answer="${index}">${escapeHtml(option)}</button>`).join('')}</div>
@@ -20,7 +19,7 @@ export function showQuestion(overlay, question, word, onDone, { title = 'Learnin
     if (!result.ok) button.classList.add('wrong');
     document.querySelector('[data-feedback]').innerHTML = `<div class="answer-feedback ${result.ok ? 'good' : 'bad'}">
       <b>${result.ok ? 'Correct!' : `Not quite. The answer is ${escapeHtml(result.answer)}.`}</b>
-      ${word ? `<p>${escapeHtml(word.ex)}</p>` : ''}
+      ${revealWord ? `<p><b>${escapeHtml(revealWord.w)}</b> · ${escapeHtml(revealWord.p)} · ${escapeHtml(revealWord.m)}</p><p>${escapeHtml(revealWord.ex)}</p>` : ''}
       <button class="primary" data-question-next type="button">Continue</button>
     </div>`;
     document.querySelector('[data-question-next]').addEventListener('click', event => {

@@ -1,7 +1,7 @@
 {
   "id": "p2",
   "label": "Primary 2",
-  "ready": false,
+  "ready": true,
   "regionLessons": {
     "r1": [1, 2, 3],
     "r2": [4, 5, 6],
@@ -12,7 +12,7 @@
     "r7": [18, 19]
   },
   "coreQuestionKinds": ["vocab", "pinyin", "usage", "comprehension"],
-  "optionalQuestionKinds": ["cloze", "conjunction", "dialogue", "errorcorrect", "phrase", "practical", "sentence"],
+  "optionalQuestionKinds": [],
   "features": {
     "writing": true,
     "higherChinese": true,
@@ -21,6 +21,32 @@
   "tuning": {
     "profile": "lower-primary",
     "dialogueDensity": "short",
-    "readingChunk": "small"
+    "readingChunk": "small",
+    "balance": {
+      "combat": {
+        "lessonLevels": { "1": [1, 2], "2": [4, 6], "3": [7, 9] },
+        "baseEnemyHp": 6,
+        "hpPerLevel": 3,
+        "baseEnemyAttack": 3,
+        "attackPerLevel": 1,
+        "baseEnemyDefense": 0,
+        "defensePerLevel": 2
+      },
+      "school": { "questionsPerQuiz": 4 }
+    }
+  },
+  "region1": {
+    "tutorialWord": "帮助",
+    "atticLine": "A Fogling bursts from an old scroll. The word spirit 帮助 is trapped inside!",
+    "stories": [
+      { "lesson": 1, "title": "Who Folded It Best?", "pages": ["The class learns to fold paper animals, but everyone thinks a different one is the most beautiful.", "They look closely, listen to one another and help fix the folds.", "They discover that careful work and kind words matter more than winning."] },
+      { "lesson": 2, "title": "New Year at Grandma's", "pages": ["The family cleans the house and visits Grandma for Lunar New Year.", "They watch a lion dance and offer wishes for health and learning.", "Grandma reminds everyone that being together is the best blessing."] },
+      { "lesson": 3, "title": "A Special Guest", "pages": ["A hungry dog appears while the family prepares cups, bowls and food for guests.", "The children carefully give it water and ask an adult for help.", "They find its owner and learn how to welcome every guest safely."] }
+    ],
+    "requests": {
+      "xiaoqiang": { "collect": ["外", "帮助"], "silver": "专心" },
+      "mr-lin": { "silver": ["读", "听"], "write": "年级" },
+      "chef-mei": { "silver": ["碗", "盘"] }
+    }
   }
 }

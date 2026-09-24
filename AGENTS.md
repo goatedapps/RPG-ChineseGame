@@ -1,7 +1,7 @@
 # Word Spirit Quest
 
 Word Spirit Quest is a tablet-friendly exploration RPG for learning primary-school Chinese vocabulary and reading.
-The deployed playable build is the modular Primary 5 Region 1 game under `game/`.
+The deployed playable build is the modular Primary 2 and Primary 5 Region 1 game under `game/`.
 `gameplan.md` is the detailed product and rebuild specification.
 Primary 2 and Primary 5 curriculum sources live under `content/source/`.
 Run `npm run validate:content` after changing either source pack.
@@ -22,6 +22,7 @@ The deployed modular game starts at `game/index.html` and uses the runtime modul
 `tests/prototype.test.cjs` contains DOM, startup, save, content and progression regression checks.
 `.lavish/` contains the annotated review and its pre-feedback plan snapshot.
 The Region 1 parity baseline includes random encounters, packaged scene audio, held D-pad input, rotating objectives, wandering villagers, distributed passage questions, enemy spell turns, battle streaks and visible level-ups.
+The service worker caches both curricula and the Region 1 runtime for offline play after the first online load.
 
 The current world is one 52×38 map containing Scholar Village, Camping Forest, Misty Path, Kitchen Garden and Muddle Cave.
 Scholar Village is intentionally the smallest and simplest hub because it teaches the core loop.
@@ -113,7 +114,8 @@ P6 is complete: daily quests, the chest, Lantern Streak, weekly freeze, Mystery 
 P7 is complete: Region 1 has its authored story, tutorial, Storyteller, villager requests, rival duels, gate, four-phase boss, Dawn Stroke, hidden grove and next-region progress gate.
 The Region 1 parity correction is complete: random encounters, packaged scene audio, held D-pad input, rotating objectives, wandering lore villagers, distributed passage questions, optional Higher Chinese, enemy spell turns, battle streaks, rare variants and visible level-ups match the reference behavior.
 P8 is complete: the parent panel includes goals, weekly summaries, save transfer, region and test controls, speech speed, sound and PIN changes.
-P9 is next: run P2 Lessons 1–3 through the shared Region 1 vertical slice.
+P9 is complete: P2 Lessons 1–3 use the shared Region 1 with separate saves, younger tuning, P2 story words and feature-aware activities.
+P10 engineering hardening is complete, but `PILOT.md` keeps Region 2 blocked until the physical child-and-parent tablet session is recorded.
 
 ## Development workflow
 

@@ -1,4 +1,4 @@
-import { zoneAt } from './encounters.js?p8b';
+import { zoneAt } from './encounters.js?p10d';
 
 const TILE = 32;
 

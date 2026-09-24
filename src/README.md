@@ -1,6 +1,6 @@
 # Modular engine source
 
-The new game engine will be built here while `prototype/` remains the playable reference.
+The deployed modular game engine lives here while `prototype/` remains the frozen behavioral reference.
 
 The intended module boundaries are:
 
@@ -15,5 +15,5 @@ The intended module boundaries are:
 Engine modules must not contain P2 or P5 constants.
 The content loader combines one shared campaign with the selected level package.
 
-P2 Learning Core is implemented in `learning/`.
-`game/lab.html` exercises generated Meaning, Pinyin, Hanzi and Usage questions, enabled real-exam adapters, speech and all three local Hanzi Writer stages for either curriculum.
+Primary 2 and Primary 5 share the Region 1 runtime with separate saves, level-specific story bindings, feature flags and tuning.
+`game/lab.html?debug=1` exercises generated Meaning, Pinyin, Hanzi and Usage questions, enabled real-exam adapters, speech and all three local Hanzi Writer stages for either curriculum.

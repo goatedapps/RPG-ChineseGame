@@ -1,4 +1,4 @@
-import { migrateState } from './state.js?p8b';
+import { createFreshState, migrateState } from './state.js?p10d';
 
 const SAVE_PREFIX = 'WSQ2';
 const SAVE_SALT = 'word-spirit-quest|modular|v2|';
@@ -6,6 +6,7 @@ const LEGACY_SALT = 'wsq·字灵·v1';
 export const PROFILE_KEY = 'wsq-next-profile';
 export const saveKey = level => `wsq-next-save-${level}`;
 export const recoveryKey = level => `${saveKey(level)}-recovery`;
+export const backupKey = level => `${saveKey(level)}-backup`;
 
 export function checksum(text, salt = SAVE_SALT) {
   let hash = 0x811c9dc5;
@@ -65,6 +66,16 @@ export function loadLevelState(storage, levelPackage) {
       return { state: migrateState(decodeSave(current), levelPackage), migrated: false, warning: '' };
     } catch (error) {
       storage.setItem(recoveryKey(levelPackage.id), current);
+      const backup = storage.getItem(backupKey(levelPackage.id));
+      if (backup) {
+        try {
+          const state = migrateState(decodeSave(backup), levelPackage);
+          storage.setItem(key, backup);
+          return { state, migrated: false, recovered: true, warning: `The latest save was unreadable. The last known-good backup was restored. ${error.message}` };
+        } catch {
+          // Preserve both payloads and require an explicit recovery choice below.
+        }
+      }
       return { state: migrateState(null, levelPackage), migrated: false, warning: error.message, blocked: true };
     }
   }
@@ -86,8 +97,19 @@ export function loadLevelState(storage, levelPackage) {
 
 export function saveLevelState(storage, state) {
   const next = { ...state, updatedAt: new Date().toISOString() };
-  storage.setItem(saveKey(state.level), encodeSave(next));
+  const key = saveKey(state.level);
+  const previous = storage.getItem(key);
+  if (previous) storage.setItem(backupKey(state.level), previous);
+  storage.setItem(key, encodeSave(next));
   return next;
+}
+
+export function startFreshLevelState(storage, levelPackage) {
+  const state = createFreshState(levelPackage);
+  storage.removeItem(saveKey(levelPackage.id));
+  storage.removeItem(backupKey(levelPackage.id));
+  storage.setItem(saveKey(levelPackage.id), encodeSave(state));
+  return state;
 }
 
 export function loadProfile(storage) {

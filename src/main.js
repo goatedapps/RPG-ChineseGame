@@ -1,20 +1,20 @@
 import { createEventBus } from './core/events.js';
-import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js?p8b';
-import { listLevels, loadLevelPackage } from './content/loader.js?p8b';
+import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10d';
+import { listLevels, loadLevelPackage } from './content/loader.js?p10d';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p8b';
+import { createRenderer } from './world/renderer.js?p10d';
 import { bindInput } from './world/input.js';
 import { $, escapeHtml } from './ui/dom.js';
-import { createOverlay } from './ui/overlay.js';
+import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p8b';
-import { createCollection } from './collection.js?p8b';
-import { createAdventure } from './adventure.js?p8b';
-import { createAudioManager } from './core/audio.js?p8b';
+import { createGameplay } from './gameplay.js?p10d';
+import { createCollection } from './collection.js?p10d';
+import { createAdventure } from './adventure.js?p10d';
+import { createAudioManager } from './core/audio.js?p10d';
 import { localDay } from './core/time.js';
-import { encounterStep } from './world/encounters.js?p8b';
-import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p8b';
+import { encounterStep } from './world/encounters.js?p10d';
+import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
 import { tierOf } from './learning/mastery.js';
 
 const storage = window.localStorage;
@@ -99,7 +99,7 @@ function move(direction) {
 function startAutosave() {
   clearInterval(autosave);
   autosave = setInterval(() => {
-    if (!active || overlay.isOpen) return;
+    if (!active || overlay.isOpen || document.hidden) return;
     active.state.session.playMs += 5000;
     const today = localDay();
     const entry = active.state.progress.activity[today] || { battles: 0, school: 0, reading: 0, writing: 0, minutes: 0 };
@@ -145,7 +145,7 @@ function startWorldTimers() {
   clearInterval(wanderTimer);
   clearInterval(objectiveTimer);
   wanderTimer = setInterval(() => {
-    if (!active || overlay.isOpen) return;
+    if (!active || overlay.isOpen || document.hidden) return;
     active.state.progress.npcs = wanderNpcs(active.levelPackage.map, active.state.player, active.state.progress.npcs);
     render();
   }, 2200);
@@ -157,19 +157,41 @@ function showWelcome(loadResult) {
   const messages = [];
   if (loadResult.migrated) messages.push('Your existing P5 prototype progress was copied into this preview. The original prototype save was left untouched.');
   if (loadResult.warning) messages.push(`Save recovery notice: ${loadResult.warning}`);
-  messages.push('Walk with the keyboard arrows, WASD, or the on-screen arrows. Open Adventure to begin the Region 1 story, or explore the village in any order.');
+  messages.push('Use the arrow pad to walk. Open Adventure to begin the Region 1 story, or explore the village in any order.');
   overlay.open(`<div class="panel">
-    <h1>Scholar Village engine preview</h1>
+    <h1>Welcome to Scholar Village</h1>
     ${messages.map(message => `<p>${message}</p>`).join('')}
     <p>Collect word spirits, help the muddled villagers, complete daily quests, earn the Cave Lantern, and challenge the Muddle King.</p>
-    <button class="primary" data-enter-world>Enter the village</button>
+    <div class="button-row">${loadResult.blocked ? '<button class="primary" data-fresh-save>Start fresh</button><button class="secondary" data-download-recovery>Download damaged save</button>' : '<button class="primary" data-enter-world>Enter the village</button>'}</div>
   </div>`, { dismissible: false });
-  $('[data-enter-world]').addEventListener('click', () => {
+  $('[data-enter-world]')?.addEventListener('click', () => {
     active.state.session.seenWelcome = true;
     persist();
     overlay.close();
     render();
   }, { once: true });
+  $('[data-download-recovery]')?.addEventListener('click', () => {
+    const payload = storage.getItem(recoveryKey(active.levelPackage.id)) || '';
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([payload], { type: 'text/plain' }));
+    link.download = `word-spirit-quest-${active.levelPackage.id}-damaged-save.txt`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 0);
+  });
+  $('[data-fresh-save]')?.addEventListener('click', event => {
+    if (event.currentTarget.dataset.confirm !== 'true') {
+      event.currentTarget.dataset.confirm = 'true';
+      event.currentTarget.textContent = 'Confirm new save';
+      toast('Download the damaged save first if you want to keep it for support.');
+      return;
+    }
+    active.state = startFreshLevelState(storage, active.levelPackage);
+    active.saveBlocked = false;
+    active.state.session.seenWelcome = true;
+    persist();
+    overlay.close();
+    render();
+  });
 }
 
 async function startLevel(levelId) {
@@ -216,8 +238,8 @@ async function startLevel(levelId) {
 }
 
 function levelStatus(level) {
-  if (level.worldMappingReady) return level.playableBuild === 'prototype' ? 'Engine preview ready · stable prototype also available' : 'Engine preview ready';
-  if (level.sourceReady) return 'Curriculum imported · shared-world tuning comes after P5 parity';
+  if (level.worldMappingReady) return 'Region 1 ready';
+  if (level.sourceReady) return 'Curriculum imported · world mapping in progress';
   return 'Coming soon';
 }
 
@@ -241,8 +263,9 @@ function showBuildStatus() {
   if (!active) return;
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
-    <div class="panel-header"><h2>Modular build status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P8 are complete. Region 1 now has random tall-grass encounters, full creature presentation and audio, daily quests, the complete village story, and parent goals, summaries and save transfer.</p>
+    <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
+    <p>P0–P9 are complete. Primary 2 and Primary 5 now share Region 1 with separate saves and level-specific content and tuning.</p>
+    ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
@@ -251,12 +274,22 @@ function showBuildStatus() {
       <div>Position<b>${state.player.x}, ${state.player.y}</b></div>
       <div>Save integrity<b>${state.tampered ? 'Edited' : 'Verified'}</b></div>
     </div>
-    <div class="button-row"><a class="primary" href="./lab.html">Open learning lab</a><button class="secondary" data-switch-level>Switch curriculum</button><a class="secondary" href="../prototype/">Open stable prototype</a></div>
+    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-switch-level>Switch curriculum</button></div>
   </div>`);
   $('[data-switch-level]').addEventListener('click', showLevelPicker, { once: true });
+  $('[data-export-current]').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([JSON.stringify(exportSaveEnvelope(state), null, 2)], { type: 'application/json' }));
+    link.download = `word-spirit-quest-${state.level}-export.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(link.href), 0);
+  });
 }
 
 async function boot() {
+  if (new URLSearchParams(location.search).get('debug') === '1') {
+    for (const element of document.querySelectorAll('.debug-only')) element.hidden = false;
+  }
   $('#status-button').addEventListener('click', showBuildStatus);
   $('#book-button').addEventListener('click', () => gameplay?.spiritBook());
   $('#character-button').addEventListener('click', () => collection?.character());
@@ -288,6 +321,13 @@ async function boot() {
     overlay.open(`<div class="panel"><h1>Could not load the game</h1><p>${escapeHtml(error.message)}</p><p>Serve the repository through HTTP; ES modules and content files cannot load from <code>file://</code>.</p></div>`, { dismissible: false });
   }
 }
+
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), { scope: '../' }).catch(error => console.warn('Offline support could not start.', error));
+}
+
+addEventListener('offline', () => { hud.status.textContent = 'Offline · progress stays on this device'; hud.status.classList.add('warning'); });
+addEventListener('online', () => { if (active && !active.saveBlocked) { hud.status.textContent = active.state.tampered ? 'Save edited' : 'Save verified'; hud.status.classList.toggle('warning', active.state.tampered); } });
 
 window.addEventListener('beforeunload', persist);
 window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, get adventure() { return adventure; }, events, startLevel };

@@ -50,19 +50,22 @@ function silver(progress, word) {
   return ['silver', 'gold'].includes(tierOf(progress.words[word]));
 }
 
-export function requestReady(id, step, progress, story) {
+export function requestReady(id, step, progress, story, bindings = {}) {
+  const xiaoqiang = bindings.xiaoqiang || { collect: ['贵重', '探险'], silver: '狼吞虎咽' };
+  const mrLin = bindings['mr-lin'] || { silver: ['模糊', '眼圈'], write: '距离' };
+  const chefMei = bindings['chef-mei'] || { silver: ['调味料', '材料'] };
   if (id === 'xiaoqiang') {
-    if (step === 0) return collected(progress, '贵重') && collected(progress, '探险');
+    if (step === 0) return xiaoqiang.collect.every(word => collected(progress, word));
     if (step === 1) return Boolean(story.flags.treasureFound);
-    if (step === 2) return silver(progress, '狼吞虎咽');
+    if (step === 2) return silver(progress, xiaoqiang.silver);
   }
   if (id === 'mr-lin') {
-    if (step === 0) return silver(progress, '模糊') && silver(progress, '眼圈');
+    if (step === 0) return mrLin.silver.every(word => silver(progress, word));
     if (step === 1) return (story.counters.creatures['twin-shade'] || 0) >= 3;
-    if (step === 2) return (story.counters.writing['距离'] || 0) >= 1;
+    if (step === 2) return (story.counters.writing[mrLin.write] || 0) >= 1;
   }
   if (id === 'chef-mei') {
-    if (step === 0) return silver(progress, '调味料') && silver(progress, '材料');
+    if (step === 0) return chefMei.silver.every(word => silver(progress, word));
     if (step === 1) return (story.counters.creatures['ink-imp'] || 0) >= 2;
     if (step === 2) return story.counters.tingxieLesson3 >= 3;
   }
@@ -77,14 +80,20 @@ export function recordStoryEvent(value, event, payload = {}) {
   return story;
 }
 
-export function bossGateQueue(content) {
+export function bossGateQueue(content, config = {}) {
   const singles = content.questions.single;
   const inRegion = item => !item.lessons?.length || item.lessons.some(lesson => lesson <= 3);
-  const conjunctions = singles.filter(item => item.kind === 'conjunction' && inRegion(item)).slice(0, 3).map(item => ({ phase: 'Chain Spell', kind: 'question', item }));
-  const sentences = singles.filter(item => item.kind === 'sentence' && inRegion(item)).slice(0, 2).map(item => ({ phase: 'Scramble Spell', kind: 'question', item }));
+  const configuredKinds = [...(config.coreQuestionKinds || []), ...(config.optionalQuestionKinds || [])];
+  const enabled = new Set(configuredKinds.length ? configuredKinds : ['conjunction', 'sentence', 'cloze']);
+  const supported = singles.filter(item => enabled.has(item.kind) && item.subject !== 'Higher Chinese' && inRegion(item));
+  const firstKind = enabled.has('conjunction') ? 'conjunction' : config.coreQuestionKinds?.[0];
+  const secondKind = enabled.has('sentence') ? 'sentence' : config.coreQuestionKinds?.find(kind => kind !== firstKind);
+  const conjunctions = supported.filter(item => item.kind === firstKind).slice(0, 3).map(item => ({ phase: 'Chain Spell', kind: 'question', item }));
+  const sentences = supported.filter(item => item.kind === secondKind).slice(0, 2).map(item => ({ phase: 'Scramble Spell', kind: 'question', item }));
   const lessonWords = content.words.filter(word => word.lesson <= 3).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
-  const cloze = content.questions.groups.find(group => group.id === 'TN-G1') || content.questions.groups.find(group => group.kind === 'cloze' && group.subject === 'Chinese');
-  const blanks = (cloze?.items || []).slice(0, 5).map(item => ({ phase: 'Muddle Scroll', kind: 'question', item: { ...item, kind: 'cloze' } }));
+  const passage = content.questions.groups.find(group => group.id === 'TN-G1' && enabled.has(group.kind))
+    || content.questions.groups.find(group => enabled.has(group.kind) && group.subject === 'Chinese');
+  const blanks = (passage?.items || []).filter(item => ['MCQ', 'Fill-in'].includes(item.format)).slice(0, 5).map(item => ({ phase: 'Muddle Scroll', kind: 'question', item: { ...item, kind: passage.kind } }));
   return [...conjunctions, ...sentences, ...lessonWords, ...blanks];
 }
 

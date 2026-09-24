@@ -4,15 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#1b2430">
-  <title>Word Spirit Quest — Modular Preview</title>
+  <meta name="description" content="A tablet-friendly Chinese vocabulary adventure for Primary 2 and Primary 5 learners.">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/stage.css">
 </head>
 <body>
+  <a class="skip-link" href="#game-stage">Skip to the game</a>
   <main class="game-shell">
     <header class="hud" aria-label="Player status">
-      <div class="brand">Word Spirit Quest <span>字灵</span><small>P8 Parent tools</small></div>
+      <div class="brand">Word Spirit Quest <span>字灵</span><small>P10 tablet pilot</small></div>
       <div class="hud-stat"><span>Curriculum</span><b id="hud-level">—</b></div>
       <div class="hud-stat"><span>Location</span><b id="hud-location">—</b></div>
       <div class="hud-stat"><span>Level</span><b id="hud-player-level">1</b></div>
@@ -29,13 +32,13 @@
       <button class="hud-button" id="story-button" type="button">Adventure</button>
       <button class="hud-button" id="parent-button" type="button">Parent</button>
       <button class="hud-button" id="sound-button" type="button" aria-pressed="true">Sound on</button>
-      <a class="hud-button" href="./lab.html">Learning lab</a>
-      <button class="hud-button" id="status-button" type="button">Build status</button>
+      <a class="hud-button debug-only" href="./lab.html" hidden>Learning lab</a>
+      <button class="hud-button debug-only" id="status-button" type="button" hidden>Build status</button>
     </header>
 
-    <div class="objective"><b>Next step</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status">Save verified</small></div>
+    <div class="objective" aria-live="polite"><b>Next step</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status" role="status">Save verified</small></div>
 
-    <section class="stage" aria-label="Scholar Village map">
+    <section class="stage" id="game-stage" tabindex="-1" aria-label="Scholar Village map">
       <canvas id="world" width="640" height="448" aria-label="Game world"></canvas>
       <div class="toast" id="toast" hidden aria-live="polite"></div>
       <div class="dpad" id="dpad" aria-label="Movement controls">
@@ -46,9 +49,10 @@
       </div>
       <div class="overlay" id="overlay" hidden></div>
     </section>
-    <p class="preview-note">Explore through the village signs, battle word spirits, and visit each building. The stable prototype remains available during parity review.</p>
+    <p class="preview-note">Follow the Next step banner, explore the village, and learn with each Word Spirit.</p>
   </main>
+  <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p8b"></script>
+  <script type="module" src="../src/main.js?p10d"></script>
 </body>
 </html>

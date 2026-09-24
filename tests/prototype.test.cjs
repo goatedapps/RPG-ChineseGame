@@ -264,12 +264,13 @@ test('wild encounters transition into battle and creature hits have audio feedba
   assert.ok(hit.length > 20_000);
 });
 
-test('agent guidance documents the prototype and future architecture concisely', () => {
+test('agent guidance provides a concise operational handoff', () => {
   assert.ok(agentsSource.split(/\r?\n/).length <= 200);
-  assert.match(agentsSource, /## Reference prototype and modular game/);
-  assert.match(agentsSource, /## Future campaign/);
-  assert.match(agentsSource, /## Planned rebuild/);
-  assert.match(agentsSource, /core`, `content`, `learning`, `world`, `battle`, `systems` and `ui/);
+  assert.match(agentsSource, /## Start here/);
+  assert.match(agentsSource, /## Repository map/);
+  assert.match(agentsSource, /## Product invariants/);
+  assert.match(agentsSource, /physical child-and-parent tablet pilot/);
+  assert.match(agentsSource, /content\/authored\/campaign/);
 });
 
 test('packaged sound effects and mixed music loops are available', () => {

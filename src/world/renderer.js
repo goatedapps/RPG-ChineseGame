@@ -1,4 +1,4 @@
-import { zoneAt } from './encounters.js?p8';
+import { zoneAt } from './encounters.js?p8b';
 
 const TILE = 32;
 
@@ -184,7 +184,17 @@ export function createRenderer(canvas, map) {
       const x = entity.x * TILE - offsetX;
       const y = entity.y * TILE - offsetY;
       if (entity.type === 'sign') drawSign(context, x, y);
-      else if (entity.type === 'npc') drawPerson(context, x, y, entity.color, 'down');
+      else if (entity.type === 'npc') {
+        drawPerson(context, x, y, entity.color, entity.direction || 'down');
+        const questionIndex = (map.passageVillagers || []).indexOf(entity.id);
+        const reading = state.progress?.reading;
+        if (reading?.active && questionIndex >= 0 && questionIndex < reading.questionCount && reading.results?.[questionIndex] == null) {
+          const bob = Math.sin(tick / 6) * 2;
+          context.fillStyle = '#fff'; context.strokeStyle = '#1b2430'; context.lineWidth = 2;
+          context.beginPath(); context.arc(x + 16, y - 5 + bob, 9, 0, Math.PI * 2); context.fill(); context.stroke();
+          context.fillStyle = '#c63f2b'; context.font = '900 14px system-ui'; context.textAlign = 'center'; context.textBaseline = 'middle'; context.fillText('?', x + 16, y - 4 + bob);
+        }
+      }
       else drawPerson(context, x, y, '#2f6f8f', state.player.direction, true, state.progress?.equipment?.equipped);
     }
     if (state.progress?.sets?.campfire) drawCampfire(context, 20 * TILE - offsetX, 16 * TILE - offsetY);

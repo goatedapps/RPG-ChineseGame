@@ -7,7 +7,7 @@ import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js';
 import { showWritingTask } from './ui/writingView.js';
 import { localDay } from './core/time.js';
-import { recordActivity } from './systems/parent.js?p8';
+import { recordActivity } from './systems/parent.js?p8b';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);

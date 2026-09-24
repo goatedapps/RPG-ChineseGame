@@ -1,20 +1,21 @@
 import { createBattleState, enemyAttack, gainBattleRewards, playerAttack } from './battle/battle.js';
 import { createCreature } from './battle/creatures.js';
-import { creatureSvg } from './battle/creatureArt.js?p8';
+import { heroStats } from './battle/damage.js';
+import { creatureSvg } from './battle/creatureArt.js?p8b';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
 import { partnerBonuses, partnerMove } from './systems/partners.js';
 import { battlesLeft, useBattle } from './systems/energy.js';
-import { ensureParentPin, goalProgress, parentPinMatches, setParentPin, weeklySummary } from './systems/parent.js?p8';
-import { weightedCreature } from './world/encounters.js?p8';
-import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p8';
+import { ensureParentPin, goalProgress, parentPinMatches, setParentPin, weeklySummary } from './systems/parent.js?p8b';
+import { weightedCreature } from './world/encounters.js?p8b';
+import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p8b';
 import { checkPassageAnswer, completePassage, normalizeReading, selectPassage } from './systems/reading.js';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
 import { makeExamQuestion, makeQuestion } from './learning/questions.js';
-import { normalizeWordProgress, recordAnswer, SKILLS, starsOf, tierOf } from './learning/mastery.js';
-import { selectWord } from './learning/selection.js';
+import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILLS, starsOf, tierOf } from './learning/mastery.js';
+import { recommendedSkill, selectWord } from './learning/selection.js';
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js';
@@ -38,7 +39,14 @@ function accuracyRecord(accuracy, skill, ok) {
   return { ...accuracy, [skill]: { correct: current.correct + (ok ? 1 : 0), total: current.total + 1 } };
 }
 
-export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
+function levelUpMarkup(before, after) {
+  if (after.level <= before.level) return '';
+  const oldStats = heroStats(before.level);
+  const newStats = heroStats(after.level);
+  return `<div class="level-up"><strong>LEVEL UP!</strong><p>Level ${before.level} → ${after.level} · Max HP ${before.maxHp} → ${after.maxHp}</p><p>ATK ${oldStats.attack} → ${newStats.attack} · DEF ${oldStats.defense} → ${newStats.defense} · Evasion ${Math.round(oldStats.evasion * 100)}% → ${Math.round(newStats.evasion * 100)}%</p></div>`;
+}
+
+export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
   ensureParentPin(storage);
   const active = () => getActive();
   const speech = createSpeechController();
@@ -98,11 +106,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const lead = game.levelPackage.content.words.find(word => word.id === game.state.progress.partners[0]);
     const move = partnerMove(lead, lead && game.state.progress.words[lead.w], game.levelPackage.wordTags);
     overlay.open(`<article class="panel battle-panel">
-      <p class="panel-kicker">Wild word spirit · Lesson ${battle.word.lesson}</p>
+      <p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p>
       <div class="battle-grid">
-        <div class="creature-card" style="--creature:${battle.creature.color}"><div class="creature-art">${creatureSvg(battle.creature.id, escapeHtml(battle.word.w))}</div><h2>${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</h2><p>${escapeHtml(battle.word.p)} · ${escapeHtml(battle.word.m)}</p><p>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</p><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><b>HP ${battle.enemyHp}/${battle.creature.maxHp}</b></div>
-        <div><h2>Your turn</h2><p>HP <b>${game.state.player.hp}/${game.state.player.maxHp}</b> · ATK ${3 + game.state.player.level * 3} · DEF ${game.state.player.level * 2}</p>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : ''}
-          <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}</span></button>`).join('')}</div>
+        <div class="creature-card ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="creature-art">${creatureSvg(battle.creature.id, escapeHtml(battle.word.w))}</div><h2>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</h2><p>${escapeHtml(battle.word.p)} · ${escapeHtml(battle.word.m)}</p><p>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</p><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><b>HP ${battle.enemyHp}/${battle.creature.maxHp}</b></div>
+        <div><h2>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2><p>HP <b>${game.state.player.hp}/${game.state.player.maxHp}</b> · ATK ${3 + game.state.player.level * 3} · DEF ${game.state.player.level * 2}</p>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : ''}
+          <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak || key === battle.recommended ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.recommended ? ' · recommended' : ''}</span></button>`).join('')}</div>
           <div class="button-row"><button class="secondary" data-bag type="button">Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button">${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button">Run safely</button></div>
         </div>
       </div>
@@ -110,13 +118,16 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
       const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.partnerBoost || 0), damageMultiplier: battle.doubleHit ? 2 : 1 });
       if (playerResult.damage > 0) audio?.sfx('hit');
+      if (!ok && battle.review) battle.reviewFailed = true;
       battle.partnerBoost = 0;
       battle.doubleHit = false;
       battle = playerResult.battle;
       if (battle.finished) return battleWin(battle, playerResult.damage);
+      if (battle.creature.fleeAfter && battle.turn > battle.creature.fleeAfter) return creatureFled(battle);
       const blocksMiss = !ok && battle.ignoreMiss;
       if (blocksMiss) battle.ignoreMiss = false;
-      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense + (battle.partnerShield || blocksMiss ? 999 : 0) });
+      if (Math.random() < 0.4) return enemySpell(battle, ok, bonuses, blocksMiss);
+      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion + (ok ? battle.streak >= 3 ? 0.3 : 0.18 : 0), damageReduction: bonuses.spellDefense + (battle.partnerShield || blocksMiss ? 999 : 0), damageMultiplier: ok ? 1 : 1.5 });
       battle.partnerShield = false;
       game.state.player = enemyResult.player;
       if (game.state.player.hp <= 0) return faint(battle);
@@ -143,6 +154,34 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     }, { once: true });
   }
 
+  function enemySpell(battle, lastCorrect, bonuses, blocksMiss) {
+    const game = active();
+    const pool = wordsForLesson(battle.word.lesson).filter(word => word.w !== battle.word.w);
+    const collected = pool.filter(word => game.state.progress.words[word.w]?.collected);
+    const source = collected.length && Math.random() < 0.7 ? collected : pool;
+    const word = source[Math.floor(Math.random() * source.length)] || battle.word;
+    const spellNames = { fogling: 'Fog Cloud', 'echo-bat': 'Screech', 'twin-shade': 'Mirror Trick', 'jumble-bug': 'Word Scramble', 'ink-imp': 'Ink Splash' };
+    const spell = spellNames[battle.creature.id];
+    const question = makeQuestion(word, battle.creature.attackSkill, game.levelPackage.content.words);
+    showQuestion(overlay, question, word, result => {
+      recordWord(word, battle.creature.attackSkill, result.ok);
+      if (result.ok) { commit(); showBattle(battle, `You blocked ${battle.creature.name}’s ${spell}!`); return; }
+      const shielded = battle.partnerShield || blocksMiss;
+      battle.partnerShield = false;
+      const hit = enemyAttack(battle, game.state.player, () => 1, { damageReduction: bonuses.spellDefense + (shielded ? 999 : 0), damageMultiplier: lastCorrect ? 1 : 1.5 });
+      game.state.player = hit.player;
+      if (game.state.player.hp <= 0) return faint(battle);
+      commit();
+      showBattle(battle, shielded ? `${spell} struck your shield. No damage!` : `${spell} dealt ${hit.damage} damage.`);
+    }, { title: `${battle.creature.name} casts ${spell}! Block it` });
+  }
+
+  function creatureFled(battle) {
+    commit();
+    audio?.setScene('village');
+    overlay.open(`<div class="panel result-panel"><h1>The Golden ${escapeHtml(battle.creature.name)} escaped!</h1><p>Golden creatures flee after four turns. Build a streak and use their weakness to defeat them quickly.</p><button class="primary" data-close-overlay>Return to the village</button></div>`);
+  }
+
   function battleBag(battle) {
     const game = active();
     const owned = game.levelPackage.items.filter(item => game.state.progress.inventory[item.id] > 0);
@@ -165,12 +204,15 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function battleWin(battle, damage) {
     const game = active();
+    const beforeLevel = { ...game.state.player };
     const progress = normalizeWordProgress(game.state.progress.words[battle.word.w]);
-    game.state.progress.words[battle.word.w] = { ...progress, collected: true };
+    game.state.progress.words[battle.word.w] = battle.review && !battle.reviewFailed ? completeReview({ ...progress, collected: true }, localDay()) : { ...progress, collected: true };
     const rewards = progressionBonuses(game);
     const xpMultiplier = rewards.xpMultiplier;
     const xpAwarded = Math.round(game.levelPackage.balance.combat.battleXp * xpMultiplier);
     game.state.player = gainBattleRewards(game.state.player, game.levelPackage.balance, rewards);
+    const variantCoins = battle.creature.variant === 'elite' ? 6 : battle.creature.variant === 'golden' ? 12 : 0;
+    game.state.player.coins += variantCoins;
     if (battle.doubleCoins) game.state.player.coins += game.levelPackage.balance.combat.battleCoins;
     const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead' };
     const material = materialByCreature[battle.creature.id];
@@ -181,7 +223,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     commit();
     audio?.sfx('win');
     audio?.setScene('village');
-    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${escapeHtml(battle.word.w)} joined your Spirit Book!</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${game.levelPackage.balance.combat.battleCoins * (battle.doubleCoins ? 2 : 1)} coins.</p><button class="primary" data-close-overlay type="button">Return to village</button></div>`);
+    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${game.levelPackage.balance.combat.battleCoins * (battle.doubleCoins ? 2 : 1) + variantCoins} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay type="button">Return to village</button></div>`);
   }
 
   function faint(battle) {
@@ -209,6 +251,9 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
+    battle.review = isReviewDue(game.state.progress.words[word.w], localDay());
+    battle.reviewFailed = false;
+    battle.recommended = recommendedSkill(game.state.progress.words[word.w], localDay());
     commit();
     audio?.setScene('battle');
     const transition = document.createElement('div');
@@ -219,7 +264,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       transition.classList.add('closing');
       setTimeout(() => {
         transition.remove();
-        showBattle(battle, bait ? `Your bait worked! ${battle.creature.name} carries ${word.w}.` : `A wild level ${battle.creature.level} ${battle.creature.name} appeared!`);
+        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, escapeHtml(word.w))}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? `Your bait worked. It carries ${escapeHtml(word.w)}.` : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
+        document.querySelector('[data-fight]').addEventListener('click', () => showBattle(battle), { once: true });
       }, 220);
     }, 720);
     return true;
@@ -295,11 +341,12 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       game.state.progress.school = { ...run.school, examWeek: examDay ? weekKey() : run.school.examWeek };
       const rewards = progressionBonuses(game);
       const xpAwarded = Math.round(correct * game.levelPackage.balance.school.xpPerCorrect * rewards.xpMultiplier);
+      const beforeLevel = { ...game.state.player };
       game.state.player = addXp(game.state.player, correct * game.levelPackage.balance.school.xpPerCorrect, rewards);
       if (run.rewarded) game.state.player.coins += correct * game.levelPackage.balance.school.coinsPerCorrect;
       onProgressEvent('school-run', { kind: examDay ? 'exam' : 'quiz', correct });
       commit();
-      overlay.open(`<div class="panel result-panel"><h1>${escapeHtml(title)} complete</h1><p>You answered <b>${correct}/${total}</b> correctly and earned ${xpAwarded} XP${run.rewarded ? ` plus ${correct * game.levelPackage.balance.school.coinsPerCorrect} coins` : ''}.</p><button class="primary" data-close-overlay>Continue</button></div>`);
+      overlay.open(`<div class="panel result-panel"><h1>${escapeHtml(title)} complete</h1><p>You answered <b>${correct}/${total}</b> correctly and earned ${xpAwarded} XP${run.rewarded ? ` plus ${correct * game.levelPackage.balance.school.coinsPerCorrect} coins` : ''}.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
     });
   }
 
@@ -315,12 +362,13 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (index >= words.length) {
         const run = schoolRun(game.state.progress.school, localDay(), game.levelPackage.balance.school.paidRunsPerDay);
         game.state.progress.school = run.school;
+        const beforeLevel = { ...game.state.player };
         game.state.player = addXp(game.state.player, clean * game.levelPackage.balance.school.xpPerCorrect, progressionBonuses(game));
         if (run.rewarded) game.state.player.coins += clean * game.levelPackage.balance.school.coinsPerCorrect;
         onProgressEvent('school-run', { kind: 'tingxie', correct: clean });
         if (lesson3Clean) onProgressEvent('tingxie-lesson3', { count: lesson3Clean });
         commit();
-        return overlay.open(`<div class="panel result-panel"><h1>Tingxie complete</h1><p>You wrote ${clean}/${words.length} words without help.</p><button class="primary" data-close-overlay>Continue</button></div>`);
+        return overlay.open(`<div class="panel result-panel"><h1>Tingxie complete</h1><p>You wrote ${clean}/${words.length} words without help.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
       }
       const word = words[index++];
       showWritingTask(overlay, word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
@@ -334,21 +382,108 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     next();
   }
 
-  function readingHall() {
+  function readingHall(preferredGroup = null) {
     const game = active();
     const enabled = enabledQuestionKinds(game.levelPackage.config);
     const groups = game.levelPackage.content.questions.groups.filter(group => enabled.has(group.kind));
     const reading = normalizeReading(game.state.progress.reading);
-    const group = selectPassage(groups, reading);
-    if (!group) return overlay.open('<div class="panel"><h1>Reading Hall</h1><p>You have completed every available standard passage.</p><button class="secondary" data-close-overlay>Leave</button></div>');
-    overlay.open(`<article class="panel reading-panel"><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}</p><h1>${escapeHtml(group.passage.title)}</h1><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div><p>${group.items.length} questions follow. Open answers are completed by comparing with a model answer, without automatic marking.</p><div class="button-row"><button class="primary" data-reading-start>Begin passage chain</button><button class="secondary" data-read-aloud>Read aloud</button><button class="secondary" data-close-overlay>Read later</button></div></article>`);
-    document.querySelector('[data-reading-start]').addEventListener('click', () => runPassage(group, 0, 0), { once: true });
+    const higherGroups = groups.filter(candidate => candidate.subject === 'Higher Chinese' && !reading.completed.includes(candidate.id));
+    const group = groups.find(candidate => candidate.id === reading.active) || preferredGroup || selectPassage(groups, reading);
+    if (!group) {
+      overlay.open(`<div class="panel"><h1>Reading Hall</h1><p>You have completed every available standard passage.</p><div class="button-row">${higherGroups.length ? '<button class="primary" data-higher-chinese>Try Higher Chinese</button>' : ''}<button class="secondary" data-close-overlay>Leave</button></div></div>`);
+      document.querySelector('[data-higher-chinese]')?.addEventListener('click', () => readingHall(higherGroups[Math.floor(Math.random() * higherGroups.length)]), { once: true });
+      return;
+    }
+    const activePassage = reading.active === group.id;
+    const answered = Object.keys(reading.results).length;
+    overlay.open(`<article class="panel reading-panel"><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}${group.subject === 'Higher Chinese' ? ' · Optional Higher Chinese' : ''}</p><h1>${escapeHtml(group.passage.title)}</h1><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div><p>${activePassage ? `${answered}/${reading.questionCount} villagers have received an answer. Look for ? bubbles in the village.` : `${Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length)} villagers will each ask one short question.`}</p><div class="button-row"><button class="primary" data-reading-start>${activePassage ? 'Return to the village' : 'I’ve read it · Take Passage Scroll'}</button><button class="secondary" data-read-aloud>Read aloud</button>${!activePassage && group.subject !== 'Higher Chinese' && higherGroups.length ? '<button class="secondary" data-higher-chinese>Higher Chinese</button>' : ''}<button class="secondary" data-close-overlay>Read later</button></div></article>`, { onClose: speech.stop });
+    document.querySelector('[data-reading-start]').addEventListener('click', () => {
+      if (!activePassage) game.state.progress.reading = { ...reading, active: group.id, questionCount: Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length), results: {} };
+      speech.stop(); commit(); overlay.close(); toast(activePassage ? 'Find the remaining villagers with ? bubbles.' : 'Passage Scroll received. Find the villagers with ? bubbles.');
+    }, { once: true });
     document.querySelector('[data-close-overlay]').addEventListener('click', speech.stop, { once: true });
+    document.querySelector('[data-higher-chinese]')?.addEventListener('click', () => { speech.stop(); readingHall(higherGroups[Math.floor(Math.random() * higherGroups.length)]); }, { once: true });
     document.querySelector('[data-read-aloud]').addEventListener('click', event => {
       if (speech.isSpeaking) { speech.stop(); event.currentTarget.textContent = 'Read aloud'; return; }
       event.currentTarget.textContent = 'Stop';
       speech.speak(group.passage.text, { rate: game.state.settings.speechRate, onEnd: () => { if (event.currentTarget.isConnected) event.currentTarget.textContent = 'Read aloud'; } });
     });
+  }
+
+  function passageQuestion(object, questionIndex) {
+    const game = active();
+    const reading = normalizeReading(game.state.progress.reading);
+    const group = game.levelPackage.content.questions.groups.find(candidate => candidate.id === reading.active);
+    const item = group?.items[questionIndex];
+    if (!item) return false;
+    overlay.open(`<div class="panel"><p class="panel-kicker">Passage question ${questionIndex + 1}/${reading.questionCount}</p><h1>${escapeHtml(object.name || object.interaction?.title || 'Villager')}</h1><p>I heard you read <b>${escapeHtml(group.passage.title)}</b>. May I ask one question?</p><div class="button-row"><button class="primary" data-passage-accept>Answer</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
+    document.querySelector('[data-passage-accept]').addEventListener('click', () => askPassageItem(group, item, questionIndex, 0), { once: true });
+    return true;
+  }
+
+  function askPassageItem(group, item, questionIndex, attempt) {
+    const passage = `<details class="passage-scroll"><summary>Open Passage Scroll</summary><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div></details>`;
+    if (item.format === 'MCQ') {
+      overlay.open(`<article class="panel question-panel"><p class="panel-kicker">${escapeHtml(group.passage.title)}</p>${passage}<h2>${escapeHtml(item.q)}</h2><div class="question-options">${item.o.map((option, index) => `<button data-passage-option="${index}">${escapeHtml(option)}</button>`).join('')}</div><button class="secondary" data-passage-giveup>I don’t know</button></article>`, { dismissible: false });
+      for (const button of document.querySelectorAll('[data-passage-option]')) button.addEventListener('click', () => resolvePassageAuto(group, item, questionIndex, item.o[Number(button.dataset.passageOption)] === item.c, attempt), { once: true });
+      document.querySelector('[data-passage-giveup]').addEventListener('click', () => finishPassageQuestion(group, questionIndex, 'help', false, item.displayAnswer || item.c), { once: true });
+      return;
+    }
+    if (item.format === 'Fill-in') {
+      overlay.open(`<article class="panel question-panel"><p class="panel-kicker">${escapeHtml(group.passage.title)}</p>${passage}<h2>${escapeHtml(item.q)}</h2><label class="answer-field">Your answer<input data-passage-input autocomplete="off"></label><div class="button-row"><button class="primary" data-passage-check>Check</button><button class="secondary" data-passage-giveup>I don’t know</button></div></article>`, { dismissible: false });
+      document.querySelector('[data-passage-check]').addEventListener('click', () => resolvePassageAuto(group, item, questionIndex, checkPassageAnswer(item, document.querySelector('[data-passage-input]').value), attempt), { once: true });
+      document.querySelector('[data-passage-giveup]').addEventListener('click', () => finishPassageQuestion(group, questionIndex, 'help', false, item.displayAnswer || item.accepted?.[0]), { once: true });
+      return;
+    }
+    overlay.open(`<article class="panel question-panel"><p class="panel-kicker">${escapeHtml(group.passage.title)}</p>${passage}<h2>${escapeHtml(item.q)}</h2><label class="answer-field">Write your answer<textarea data-passage-written rows="4"></textarea></label><div class="button-row"><button class="primary" data-passage-model>Show model answer</button><button class="secondary" data-passage-giveup>I don’t know</button></div></article>`, { dismissible: false });
+    const compare = answer => {
+      overlay.open(`<article class="panel"><p class="panel-kicker">Self-check</p><h2>Model answer</h2><p>${escapeHtml(item.displayAnswer || item.context || 'Discuss this answer with an adult.')}</p><p>Your answer: ${escapeHtml(answer || '(No answer)')}</p><div class="button-row"><button class="primary" data-passage-rate="right">Got it</button><button class="secondary" data-passage-rate="partly">Partly</button><button class="secondary" data-passage-rate="help">Not yet</button></div></article>`, { dismissible: false });
+      for (const button of document.querySelectorAll('[data-passage-rate]')) button.addEventListener('click', () => {
+        if (active().state.settings.sendWrittenAnswers) active().state.progress.reading.written.unshift({ day: localDay(), title: group.passage.title, question: item.q, answer, model: item.displayAnswer || item.context || '', rating: button.dataset.passageRate });
+        finishPassageQuestion(group, questionIndex, button.dataset.passageRate, button.dataset.passageRate === 'right', item.displayAnswer || item.context);
+      }, { once: true });
+    };
+    document.querySelector('[data-passage-model]').addEventListener('click', () => compare(document.querySelector('[data-passage-written]').value), { once: true });
+    document.querySelector('[data-passage-giveup]').addEventListener('click', () => compare(''), { once: true });
+  }
+
+  function resolvePassageAuto(group, item, questionIndex, correct, attempt) {
+    if (!correct && attempt === 0) {
+      overlay.open(`<div class="panel result-panel"><h2>Look at the passage again</h2><p>Your first answer was not quite right. Read the relevant part and try once more.</p><button class="primary" data-passage-retry>Try again</button></div>`, { dismissible: false });
+      document.querySelector('[data-passage-retry]').addEventListener('click', () => askPassageItem(group, item, questionIndex, 1), { once: true });
+      return;
+    }
+    finishPassageQuestion(group, questionIndex, correct ? 'right' : 'help', correct, item.displayAnswer || item.c || item.accepted?.[0]);
+  }
+
+  function finishPassageQuestion(group, questionIndex, rating, correct, answer) {
+    const game = active();
+    const reading = normalizeReading(game.state.progress.reading);
+    reading.results[questionIndex] = { rating, correct };
+    game.state.progress.reading = reading;
+    game.state.progress.accuracy = accuracyRecord(game.state.progress.accuracy, 'reading', correct);
+    const coins = rating === 'right' ? 10 : rating === 'partly' ? 6 : 3;
+    game.state.player.coins += coins;
+    const beforeLevel = { ...game.state.player };
+    if (rating === 'right') game.state.player = addXp(game.state.player, 5, progressionBonuses(game));
+    onProgressEvent('reading-answer', { correct });
+    const done = Object.keys(reading.results).length >= reading.questionCount;
+    if (done) {
+      const standard = group.subject !== 'Higher Chinese';
+      const first = standard && !(game.state.progress.inventory.keyItems || []).includes(game.levelPackage.balance.reading.keyItem);
+      if (standard) {
+        const completed = completePassage(reading, group.id, game.levelPackage.balance.reading.keyItem, game.state.progress.inventory);
+        game.state.progress.reading = completed.reading;
+        game.state.progress.inventory = completed.inventory;
+      } else game.state.progress.reading = { ...reading, active: null, index: 0, questionCount: 0, results: {}, completed: [...new Set([...reading.completed, group.id])] };
+      if (!first) { game.state.player.coins += 30; game.state.progress.inventory['rice-ball'] = (game.state.progress.inventory['rice-ball'] || 0) + 1; }
+      const scrolls = game.state.progress.scrolls.unlocked;
+      if (!scrolls.some(entry => entry.id === `reading-${group.id}`)) scrolls.unshift({ id: `reading-${group.id}`, day: localDay(), title: group.passage.title, type: group.subject === 'Higher Chinese' ? 'Higher Chinese Passage' : 'Reading Hall Passage', text: group.passage.text });
+      commit();
+      return overlay.open(`<div class="panel result-panel"><h1>Passage complete!</h1><p>${first ? 'The villagers made you the Cave Lantern.' : 'You received 30 coins and a Rice Ball.'} The passage is now in the Scroll Library.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
+    }
+    commit();
+    overlay.open(`<div class="panel result-panel"><h2>${correct ? 'Correct!' : `Answer: ${escapeHtml(answer || '')}`}</h2><p>You received ${coins} coins. Find the next villager with a ? bubble.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
   }
 
   function runPassage(group, index, correct) {
@@ -414,7 +549,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const game = active();
     const shopItems = game.levelPackage.items;
     const redCap = game.levelPackage.gear.find(gear => gear.id === 'red-cap');
-    overlay.open(`<div class="panel"><p class="panel-kicker">Scholar Village Shop</p><h1>Supplies, bait and gear</h1><div class="shop-grid">${shopItems.map(item => `<article><b>${escapeHtml(item.name)}</b><span>${escapeHtml(item.effect)} · ${item.price} coins · Own ${game.state.progress.inventory[item.id] || 0}</span><button data-buy="${item.id}">Buy</button></article>`).join('')}${game.levelPackage.map.zones.map(zone => `<article><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter · 35 coins</span><button data-bait-lesson="${zone.lesson}">Choose spirit</button></article>`).join('')}<article><b>${escapeHtml(redCap.name)}</b><span>+3 max HP · ${redCap.price} coins</span><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div><div class="button-row"><button class="secondary" data-close-overlay>Leave Shop</button></div></div>`);
+    const icons = { 'rice-ball': '🍙', 'ink-pot': '🫙', lantern: '🏮', bandage: '🩹', tea: '🍵', compass: '🧭', charm: '🧿' };
+    overlay.open(`<div class="panel"><p class="panel-kicker">Scholar Village Shop</p><h1>Supplies, bait and gear</h1><div class="shop-grid">${shopItems.map(item => `<article class="shop-item"><i class="item-icon" aria-hidden="true">${icons[item.id] || '🎒'}</i><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(item.effect)} · ${item.price} coins · Own ${game.state.progress.inventory[item.id] || 0}</span></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`).join('')}${game.levelPackage.map.zones.map(zone => `<article class="shop-item"><i class="item-icon" aria-hidden="true">🪱</i><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter · 35 coins</span></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < 35 ? 'disabled' : ''}>Choose spirit</button></article>`).join('')}<article class="shop-item"><i class="item-icon" aria-hidden="true">🧢</i><div><b>${escapeHtml(redCap.name)}</b><span>+3 max HP · ${redCap.price} coins</span></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div><div class="button-row"><button class="secondary" data-close-overlay>Leave Shop</button></div></div>`);
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
       const bought = buyItem(game.state.player, game.state.progress.inventory, item.id, item);
@@ -478,12 +614,19 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const written = game.state.progress.reading.written || [];
     const energy = game.state.progress.energy;
     const gold = progressWords.filter(value => tierOf(value) === 'gold').length;
+    const silver = progressWords.filter(value => tierOf(value) === 'silver').length;
+    const bronze = progressWords.filter(value => tierOf(value) === 'bronze').length;
     const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
     const accuracy = Object.entries(game.state.progress.accuracy || {});
+    const missed = Object.entries(game.state.progress.words).map(([word, value]) => [word, normalizeWordProgress(value).misses]).filter(([, count]) => count).sort((a, b) => b[1] - a[1]).slice(0, 8);
+    const helped = Object.entries(game.state.progress.characters).map(([character, value]) => [character, Number(value.helped ?? value.help) || 0]).filter(([, count]) => count).sort((a, b) => b[1] - a[1]).slice(0, 8);
+    const due = game.levelPackage.content.words.filter(word => isReviewDue(game.state.progress.words[word.w], localDay())).slice(0, 12);
     overlay.open(`<div class="panel parent-panel"><div class="panel-header"><div><p class="panel-kicker">Parent Panel</p><h1>Learning summary</h1></div><button class="secondary" data-close-overlay>Lock</button></div>
-      <div class="status-grid"><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Gold spirits<b>${gold}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div><div>Unlocked regions<b>${game.state.settings.unlockedRegions}</b></div></div>
+      ${game.state.tampered ? '<p class="save-warning">This save failed its integrity check and was recovered. Review the progress before continuing.</p>' : ''}
+      <div class="status-grid"><div>Curriculum<b>${escapeHtml(game.levelPackage.label)}</b></div><div>Player level<b>${game.state.player.level}</b></div><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Bronze / Silver / Gold<b>${bronze} / ${silver} / ${gold}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div><div>Unlocked regions<b>${game.state.settings.unlockedRegions}</b></div></div>
       ${goal ? `<section class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : '<p>No real-world goal has been set.</p>'}
       <h2>Accuracy by skill</h2><div class="accuracy-grid">${accuracy.map(([skill, value]) => `<div><b>${escapeHtml(skill.toUpperCase())}</b><span>${value.correct}/${value.total}</span><i><em style="width:${Math.round(value.correct / Math.max(1, value.total) * 100)}%"></em></i></div>`).join('') || '<p>Answer data will appear after the first activity.</p>'}</div>
+      <div class="parent-tables"><section><h2>Most-missed words</h2>${missed.map(([word,count]) => `<p><b>${escapeHtml(word)}</b><span>${count}</span></p>`).join('') || '<p>None yet.</p>'}</section><section><h2>Writing help</h2>${helped.map(([character,count]) => `<p><b>${escapeHtml(character)}</b><span>${count}</span></p>`).join('') || '<p>None yet.</p>'}</section><section><h2>Due for review</h2>${due.map(word => `<p><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)}</span></p>`).join('') || '<p>None today.</p>'}</section></div>
       <h2>Settings</h2><div class="parent-settings">
         <label class="answer-field">Daily creature battles<select data-daily-cap>${[10,15,20,30,0].map(value => `<option value="${value}" ${game.state.settings.dailyBattles === value ? 'selected' : ''}>${value || 'No limit'}</option>`).join('')}</select></label>
         <label class="answer-field">Writing check<select data-writing-check><option value="gentle" ${game.state.settings.lenientWriting ? 'selected' : ''}>Gentle</option><option value="strict" ${!game.state.settings.lenientWriting ? 'selected' : ''}>Strict</option></select></label>
@@ -493,7 +636,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <label class="check-setting"><input type="checkbox" data-test-mode ${game.state.settings.testMode ? 'checked' : ''}> Test mode: open all gates</label>
       </div>
       <h2>Real-world goal</h2><div class="goal-editor"><input data-goal-label value="${escapeHtml(goal?.label || '')}" placeholder="20 Gold words → ice-cream trip"><select data-goal-type><option value="gold" ${goal?.type === 'gold' ? 'selected' : ''}>Gold words</option><option value="streak" ${goal?.type === 'streak' ? 'selected' : ''}>Streak days</option><option value="region" ${goal?.type === 'region' ? 'selected' : ''}>Region cleared</option></select><input data-goal-target type="number" min="1" value="${goal?.target || 20}"><button data-goal-save>Save goal</button></div>
-      <div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-weekly>Weekly summary</button><button class="secondary" data-export-save>Export save</button><button class="secondary" data-import-trigger>Import save</button><input data-import-save type="file" accept="application/json,.json" hidden></div>
+      <div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-weekly>Weekly summary</button><button class="secondary" data-switch-level>Switch curriculum</button><button class="secondary" data-export-save>Export save</button><button class="secondary" data-import-trigger>Import save</button><input data-import-save type="file" accept="application/json,.json" hidden></div>
       <details><summary>Change parent PIN</summary><label class="answer-field">New 4–8 digit PIN<input data-new-pin type="password" inputmode="numeric" maxlength="8"></label><button data-change-pin>Change PIN</button></details>
       <h2>Written Reading Hall answers</h2>${written.length ? written.slice(0, 10).map(entry => `<article class="written-review"><b>${escapeHtml(entry.day)} · ${escapeHtml(entry.title)} · ${escapeHtml(entry.rating)}</b><p>${escapeHtml(entry.question)}</p><small>Child: ${escapeHtml(entry.answer || '(No answer)')}</small><small>Model: ${escapeHtml(entry.model)}</small></article>`).join('') : '<p>No written answers yet.</p>'}</div>`);
     document.querySelector('[data-daily-cap]').addEventListener('change', event => { game.state.settings.dailyBattles = Number(event.target.value); commit(); });
@@ -515,6 +658,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       showParentDashboard();
     });
     document.querySelector('[data-weekly]').addEventListener('click', showWeeklySummary);
+    document.querySelector('[data-switch-level]').addEventListener('click', onSwitchLevel);
     document.querySelector('[data-export-save]').addEventListener('click', () => {
       const blob = new Blob([JSON.stringify(exportSaveEnvelope(game.state), null, 2)], { type: 'application/json' });
       const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `word-spirit-quest-${game.state.level}-${localDay()}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 0);
@@ -542,6 +686,9 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   }
 
   function handleInteraction(object) {
+    const reading = normalizeReading(active().state.progress.reading);
+    const passageIndex = active().levelPackage.regionStory.passageVillagers.indexOf(object.id);
+    if (reading.active && passageIndex >= 0 && passageIndex < reading.questionCount && reading.results[passageIndex] == null) return passageQuestion(object, passageIndex);
     const handlers = {
       'school-door': school,
       'inn-door': inn,

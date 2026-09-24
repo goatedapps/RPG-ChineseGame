@@ -10,12 +10,17 @@ export function createCreature(lesson, balance, random = Math.random, typeId = n
   const [minimum, maximum] = balance.combat.lessonLevels[String(lesson)];
   const level = minimum + Math.floor(random() * (maximum - minimum + 1));
   const type = CREATURES.find(candidate => candidate.id === typeId) || CREATURES[Math.floor(random() * CREATURES.length)];
+  const variantRoll = random();
+  const variant = variantRoll < 0.05 ? 'golden' : variantRoll < 0.13 ? 'elite' : 'normal';
+  const hpBonus = variant === 'elite' ? 8 : variant === 'golden' ? 4 : 0;
   return {
     ...type,
     level,
-    maxHp: balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel,
-    attack: balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel,
-    defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel
+    variant,
+    maxHp: balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel + hpBonus,
+    attack: balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + (variant === 'elite' ? 2 : 0),
+    defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel + (variant === 'elite' ? 1 : 0),
+    fleeAfter: variant === 'golden' ? 4 : null
   };
 }
 

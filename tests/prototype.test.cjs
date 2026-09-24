@@ -266,7 +266,7 @@ test('wild encounters transition into battle and creature hits have audio feedba
 
 test('agent guidance documents the prototype and future architecture concisely', () => {
   assert.ok(agentsSource.split(/\r?\n/).length <= 200);
-  assert.match(agentsSource, /## Current prototype/);
+  assert.match(agentsSource, /## Reference prototype and modular game/);
   assert.match(agentsSource, /## Future campaign/);
   assert.match(agentsSource, /## Planned rebuild/);
   assert.match(agentsSource, /core`, `content`, `learning`, `world`, `battle`, `systems` and `ui/);

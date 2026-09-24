@@ -5,7 +5,7 @@ import { eligiblePartners, partnerBonuses, setPartners } from './systems/partner
 import { offerSet, setProgress } from './systems/sets.js';
 import { tierOf } from './learning/mastery.js';
 import { escapeHtml } from './ui/dom.js';
-import { goalProgress } from './systems/parent.js?p8';
+import { goalProgress } from './systems/parent.js?p8b';
 
 export function createCollection({ overlay, getActive, persist, render, toast }) {
   const active = () => getActive();

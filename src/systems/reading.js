@@ -3,18 +3,20 @@ export function normalizeReading(value = {}) {
     completed: Array.isArray(value.completed) ? [...value.completed] : Array.isArray(value.done) ? [...value.done] : [],
     active: value.active || null,
     index: Math.max(0, Number(value.index) || 0),
+    questionCount: Math.max(0, Number(value.questionCount) || 0),
     results: { ...(value.results || {}) },
     written: Array.isArray(value.written) ? [...value.written] : []
   };
 }
 
-export function selectPassage(groups, reading, { includeHigherChinese = false } = {}) {
+export function selectPassage(groups, reading, { includeHigherChinese = false, random = Math.random } = {}) {
   const state = normalizeReading(reading);
-  return groups.find(group => (
+  const eligible = groups.filter(group => (
     (includeHigherChinese || group.subject !== 'Higher Chinese')
     && !state.completed.includes(group.id)
     && group.items.length > 0
-  )) || null;
+  ));
+  return eligible[Math.floor(random() * eligible.length)] || null;
 }
 
 export function checkPassageAnswer(item, answer) {
@@ -27,7 +29,7 @@ export function checkPassageAnswer(item, answer) {
 export function completePassage(reading, groupId, keyItem, inventory) {
   const state = normalizeReading(reading);
   return {
-    reading: { ...state, active: null, index: 0, completed: [...new Set([...state.completed, groupId])] },
+    reading: { ...state, active: null, index: 0, questionCount: 0, results: {}, completed: [...new Set([...state.completed, groupId])] },
     inventory: { ...inventory, keyItems: [...new Set([...(inventory.keyItems || []), keyItem])] }
   };
 }

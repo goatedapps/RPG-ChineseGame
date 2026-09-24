@@ -7,6 +7,7 @@ const KEY_DIRECTIONS = new Map([
 
 export function bindInput({ target = window, dpad, onMove }) {
   let lastMove = 0;
+  let repeatTimer = null;
   const move = direction => {
     const now = performance.now();
     if (now - lastMove < 95) return;
@@ -24,23 +25,27 @@ export function bindInput({ target = window, dpad, onMove }) {
   for (const button of dpad.querySelectorAll('[data-direction]')) {
     const onPointer = event => {
       event.preventDefault();
+      button.setPointerCapture?.(event.pointerId);
       button.classList.add('is-active');
       move(button.dataset.direction);
+      clearInterval(repeatTimer);
+      repeatTimer = setInterval(() => move(button.dataset.direction), 130);
     };
-    const release = () => button.classList.remove('is-active');
+    const release = () => { clearInterval(repeatTimer); repeatTimer = null; button.classList.remove('is-active'); };
     button.addEventListener('pointerdown', onPointer);
     button.addEventListener('pointerup', release);
     button.addEventListener('pointercancel', release);
-    button.addEventListener('pointerleave', release);
+    button.addEventListener('lostpointercapture', release);
     cleanups.push(() => {
       button.removeEventListener('pointerdown', onPointer);
       button.removeEventListener('pointerup', release);
       button.removeEventListener('pointercancel', release);
-      button.removeEventListener('pointerleave', release);
+      button.removeEventListener('lostpointercapture', release);
     });
   }
   return () => {
     target.removeEventListener('keydown', onKeyDown);
+    clearInterval(repeatTimer);
     cleanups.forEach(cleanup => cleanup());
   };
 }

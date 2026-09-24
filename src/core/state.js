@@ -35,6 +35,7 @@ export function createFreshState(levelPackage) {
       materials: {},
       baits: [],
       encounter: { cooldown: 3, zone: null, capNoticeDay: '' },
+      npcs: {},
       activity: {},
       parent: { goal: null },
       partners: [],
@@ -49,7 +50,7 @@ export function createFreshState(levelPackage) {
         requests: { xiaoqiang: 0, 'mr-lin': 0, 'chef-mei': 0 },
         counters: { creatures: {}, writing: {}, tingxieLesson3: 0 }, storiesRead: []
       },
-      reading: { completed: [], active: null, index: 0, results: {}, written: [] },
+      reading: { completed: [], active: null, index: 0, questionCount: 0, results: {}, written: [] },
       accuracy: {}
     },
     settings: {
@@ -106,6 +107,7 @@ export function migrateState(candidate, levelPackage) {
         materials: { ...fresh.progress.materials, ...(candidate.progress?.materials || {}) },
         baits: Array.isArray(candidate.progress?.baits) ? candidate.progress.baits : [],
         encounter: { ...fresh.progress.encounter, ...(candidate.progress?.encounter || {}) },
+        npcs: { ...fresh.progress.npcs, ...(candidate.progress?.npcs || {}) },
         activity: { ...fresh.progress.activity, ...(candidate.progress?.activity || {}) },
         parent: { ...fresh.progress.parent, ...(candidate.progress?.parent || {}) },
         partners: Array.isArray(candidate.progress?.partners) ? candidate.progress.partners : [],

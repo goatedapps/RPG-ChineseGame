@@ -1,19 +1,21 @@
 import { createEventBus } from './core/events.js';
-import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js?p8';
-import { listLevels, loadLevelPackage } from './content/loader.js?p8';
+import { loadLevelState, loadProfile, saveLevelState, saveProfile } from './core/save.js?p8b';
+import { listLevels, loadLevelPackage } from './content/loader.js?p8b';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p8';
+import { createRenderer } from './world/renderer.js?p8b';
 import { bindInput } from './world/input.js';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p8';
-import { createCollection } from './collection.js?p8';
-import { createAdventure } from './adventure.js?p8';
-import { createAudioManager } from './core/audio.js?p8';
+import { createGameplay } from './gameplay.js?p8b';
+import { createCollection } from './collection.js?p8b';
+import { createAdventure } from './adventure.js?p8b';
+import { createAudioManager } from './core/audio.js?p8b';
 import { localDay } from './core/time.js';
-import { encounterStep } from './world/encounters.js?p8';
+import { encounterStep } from './world/encounters.js?p8b';
+import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p8b';
+import { tierOf } from './learning/mastery.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -28,6 +30,7 @@ const hud = {
   hp: $('#hud-hp'),
   hpBar: $('#hud-hp-bar'),
   coins: $('#hud-coins'),
+  spirits: $('#hud-spirits'),
   battles: $('#hud-battles'),
   streak: $('#hud-streak'),
   status: $('#save-status')
@@ -37,6 +40,9 @@ let levels = [];
 let active = null;
 let unbindInput = null;
 let autosave = null;
+let wanderTimer = null;
+let objectiveTimer = null;
+let objectiveIndex = 0;
 let gameplay = null;
 let collection = null;
 let adventure = null;
@@ -45,6 +51,7 @@ function render() {
   if (!active) return;
   active.renderer.render(active.state);
   updateHud(hud, active.levelPackage, active.state);
+  updateObjective();
 }
 
 function persist() {
@@ -101,6 +108,51 @@ function startAutosave() {
   }, 5000);
 }
 
+function objectiveTasks() {
+  if (!active) return [];
+  const game = active;
+  const words = game.levelPackage.content.words.filter(word => game.levelPackage.config.regionLessons.r1.includes(word.lesson));
+  const tasks = [];
+  const reading = game.state.progress.reading;
+  if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.keys(reading.results || {}).length}/${reading.questionCount}.`);
+  else if (!(reading.completed || []).length) tasks.push('Read a passage in the Reading Hall to earn the Cave Lantern.');
+  for (const zone of game.levelPackage.map.zones) {
+    const lessonWords = words.filter(word => word.lesson === zone.lesson);
+    const collected = lessonWords.filter(word => game.state.progress.words[word.w]?.collected).length;
+    if (collected < lessonWords.length) tasks.push(`Explore ${zone.name} and collect Lesson ${zone.lesson} spirits (${collected}/${lessonWords.length}).`);
+  }
+  const runs = game.state.progress.school.day === localDay() ? game.state.progress.school.runs : 0;
+  if (runs < 3) tasks.push(`Take a rewarded quiz or tingxie session at School (${3 - runs} left today).`);
+  const unread = game.levelPackage.regionStory.stories.length - game.state.progress.story.storiesRead.length;
+  if (unread > 0) tasks.push(`Hear an unread story from the Storyteller (${unread} left).`);
+  if (game.state.player.hp < game.state.player.maxHp / 2) tasks.push('Your HP is low. Rest and review at the Inn.');
+  const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
+  const required = Math.ceil(words.length * game.levelPackage.regionStory.gateSilverPct);
+  if (!game.state.progress.story.bossDefeated && silver < required) tasks.push(`Raise ${required - silver} more spirits to Silver for the Muddle Cave gate.`);
+  else if (!game.state.progress.story.bossDefeated) tasks.push('The Muddle Cave gate is ready. Challenge the Muddle King!');
+  return tasks.length ? tasks : ['Region 1 is clear. Keep turning spirits Gold while the next region is built.'];
+}
+
+function updateObjective(advance = false) {
+  const tasks = objectiveTasks();
+  if (!tasks.length) return;
+  if (advance) objectiveIndex = (objectiveIndex + 1) % tasks.length;
+  else objectiveIndex = Math.min(objectiveIndex, tasks.length - 1);
+  $('#objective-text').textContent = tasks[objectiveIndex];
+}
+
+function startWorldTimers() {
+  clearInterval(wanderTimer);
+  clearInterval(objectiveTimer);
+  wanderTimer = setInterval(() => {
+    if (!active || overlay.isOpen) return;
+    active.state.progress.npcs = wanderNpcs(active.levelPackage.map, active.state.player, active.state.progress.npcs);
+    render();
+  }, 2200);
+  objectiveTimer = setInterval(() => updateObjective(true), 60000);
+  updateObjective();
+}
+
 function showWelcome(loadResult) {
   const messages = [];
   if (loadResult.migrated) messages.push('Your existing P5 prototype progress was copied into this preview. The original prototype save was left untouched.');
@@ -139,16 +191,20 @@ async function startLevel(levelId) {
       renderer: createRenderer($('#world'), levelPackage.map),
       saveBlocked: Boolean(loadResult.blocked)
     };
+    restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
     adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio });
     adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
     unbindInput = bindInput({ dpad: $('#dpad'), onMove: move });
     startAutosave();
+    startWorldTimers();
     audio.setEnabled(active.state.settings.sound);
     audio.setScene('village');
+    $('#sound-button').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
+    $('#sound-button').setAttribute('aria-pressed', String(active.state.settings.sound));
     render();
     if (!active.state.session.seenWelcome || loadResult.migrated || loadResult.warning) showWelcome(loadResult);
     else overlay.close();
@@ -208,6 +264,14 @@ async function boot() {
   $('#daily-button').addEventListener('click', () => adventure?.questBoard());
   $('#story-button').addEventListener('click', () => adventure?.storyJournal());
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
+  $('#sound-button').addEventListener('click', event => {
+    if (!active) return;
+    active.state.settings.sound = !active.state.settings.sound;
+    audio.setEnabled(active.state.settings.sound);
+    event.currentTarget.textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
+    event.currentTarget.setAttribute('aria-pressed', String(active.state.settings.sound));
+    persist();
+  });
   events.on('world:interaction', interaction => console.debug('Interaction', interaction.id));
   addEventListener('pointerdown', () => audio.unlock(), { once: true });
   addEventListener('keydown', () => audio.unlock(), { once: true });

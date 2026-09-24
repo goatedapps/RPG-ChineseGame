@@ -19,6 +19,7 @@
       <div class="hud-stat"><span>XP</span><b id="hud-xp">0 XP</b></div>
       <div class="hud-stat hp"><span>HP</span><i><em id="hud-hp-bar"></em></i><b id="hud-hp">20/20</b></div>
       <div class="hud-stat"><span>Coins</span><b id="hud-coins">20</b></div>
+      <div class="hud-stat"><span>Spirits</span><b id="hud-spirits">0</b></div>
       <div class="hud-stat"><span>Battles</span><b id="hud-battles">15 left</b></div>
       <div class="hud-stat"><span>Lantern streak</span><b id="hud-streak">0 days</b></div>
       <button class="hud-button" id="book-button" type="button">Spirit Book</button>
@@ -27,11 +28,12 @@
       <button class="hud-button" id="daily-button" type="button">Daily Board</button>
       <button class="hud-button" id="story-button" type="button">Adventure</button>
       <button class="hud-button" id="parent-button" type="button">Parent</button>
+      <button class="hud-button" id="sound-button" type="button" aria-pressed="true">Sound on</button>
       <a class="hud-button" href="./lab.html">Learning lab</a>
       <button class="hud-button" id="status-button" type="button">Build status</button>
     </header>
 
-    <div class="objective"><b>Next step</b><span>Explore Scholar Village and read its signs.</span><small id="save-status">Save verified</small></div>
+    <div class="objective"><b>Next step</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status">Save verified</small></div>
 
     <section class="stage" aria-label="Scholar Village map">
       <canvas id="world" width="640" height="448" aria-label="Game world"></canvas>
@@ -47,6 +49,6 @@
     <p class="preview-note">Explore through the village signs, battle word spirits, and visit each building. The stable prototype remains available during parity review.</p>
   </main>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p8"></script>
+  <script type="module" src="../src/main.js?p8b"></script>
 </body>
 </html>

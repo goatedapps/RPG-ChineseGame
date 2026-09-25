@@ -9,9 +9,9 @@ The intended session is 30–60 minutes, but the game has no mandatory timer.
 The game opens with an illustrated, musical, typewriter-paced prologue that introduces the Dictionary Tree, Word Spirits, the Spirit Brush and the Great Forgetter.
 The prologue remains skippable during testing and is intended to become mandatory after approval.
 
-The current release contains complete shared Regions 1–6 through Ancient Grove with curriculum-specific Lessons 1–17.
-P0–P15 and the physical tablet pilot are complete.
-The next development phase is P16 Treehouse Summit and the Great Dictionary Tree.
+The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
+P0–P16 engineering and the earlier physical tablet pilot are complete.
+The next development phase is P17 multi-level completion review.
 
 Production URLs:
 
@@ -186,6 +186,7 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | P13 | Lantern Theatre and Farm Fields, curriculum-specific Lessons 9–12, performance and farming requests, five creatures, Mocking Mirror, Courage Stroke and Courage Loft. |
 | P14 | Festival City, curriculum-specific Lessons 11–15, martial arts and celebration requests, five creatures, Grudge Dragon, Harmony Stroke and Harmony Pavilion. |
 | P15 | Ancient Grove, curriculum-specific Lessons 13–17, archaeology and Hanzi-history requests, five creatures, Give-Up Ghost, Memory Stroke and Memory Vault. |
+| P16 | Treehouse Summit and Great Dictionary Tree, curriculum-specific P2 Lessons 18–19 and P5 Lessons 16–17, final requests, five creatures, Great Forgetter, Final Stroke and Dictionary Heart. |
 
 ## Remaining roadmap
 
@@ -194,26 +195,6 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 The child-and-parent tablet session in `PILOT.md` is complete.
 Its Cave Lantern celebration and Inn onboarding findings have been implemented with regression coverage.
 P11 was completed after this gate passed.
-
-### P16 shared Region 7
-
-Build each region once for both curricula.
-Each region needs its mapped lessons, a distinct larger hub, core services, purposeful special buildings, residents, passage chain, requests, creatures, Restoration Sets, boss, Brush Fragment and fragment-opened secret.
-Each region must be completable with P2 and P5 content, and every required question pool must be reviewed and sufficient.
-
-The planned P5 campaign is:
-
-| Phase | Region | P5 lessons | Theme and boss |
-|---|---|---:|---|
-| P12 | Tidewater Bay and Clock Tower | 7–8 | Whale rescue and Idle Clock. |
-| P13 | Lantern Theatre and Farm Fields | 9–10 | Performance, farming and Mocking Mirror. |
-| P14 | Festival City | 11–12 | Martial arts, celebration and Grudge Dragon. |
-| P15 | Ancient Grove | 13–15 | Archaeology, Hanzi history and Give-Up Ghost. |
-| P16 | Treehouse Summit and Great Dictionary Tree | 16–17 | Restoration and the Great Forgetter. |
-
-Map P2 lessons through the same regions before implementing each region’s required gates.
-Later hubs should be larger than Scholar Village and include shortcuts, optional interiors and story-specific facilities.
-Every optional building must offer useful dialogue, a request, a fixed reward, a collectible or a learning activity.
 
 ### P17 multi-level completion
 

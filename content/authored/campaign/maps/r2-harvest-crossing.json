@@ -6,12 +6,12 @@
   "height": 32,
   "spawn": { "x": 24, "y": 29, "direction": "up" },
   "legend": {
-    "g": { "name": "meadow", "walkable": true, "color": "#7ea85a" },
+    "g": { "name": "meadow", "walkable": true, "encounter": true, "color": "#7ea85a" },
     "p": { "name": "market path", "walkable": true, "color": "#d8b56c" },
     "t": { "name": "bamboo", "walkable": false, "color": "#315f42" },
     "w": { "name": "irrigation canal", "walkable": false, "color": "#4d9b9a" },
-    "r": { "name": "rice field", "walkable": true, "color": "#a8bd55" },
-    "h": { "name": "hill grass", "walkable": true, "color": "#708d51" }
+    "r": { "name": "rice field", "walkable": true, "encounter": true, "color": "#a8bd55" },
+    "h": { "name": "hill grass", "walkable": true, "encounter": true, "color": "#708d51" }
   },
   "tiles": [
     "tttttttttttttttttttttttttttttttttttttttttttttttt",

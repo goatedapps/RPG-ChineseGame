@@ -1,0 +1,12 @@
+{
+  "p2": [
+    { "id": "summit-city-stories", "name": "City Stories", "words": ["新加坡", "国家博物馆", "参观", "市区"], "restoration": "The Tree's city memories return to every branch." },
+    { "id": "summit-water-care", "name": "Care for Every Drop", "words": ["珍惜", "节约", "浪费", "滴"], "restoration": "The summit water channels flow gently again." },
+    { "id": "summit-open-air", "name": "Open Air", "words": ["植物园", "东海岸公园", "野餐", "贝壳"], "restoration": "The Crown Garden recalls days outdoors with family." }
+  ],
+  "p5": [
+    { "id": "summit-living-museum", "name": "Living Museum", "words": ["博物院", "资源", "和谐", "污染"], "restoration": "The Reading Hall preserves how people cared for the world." },
+    { "id": "summit-treehouse", "name": "Strong Treehouse", "words": ["建筑", "搭建", "坚固", "环境"], "restoration": "The branch bridges and homes stand strong again." },
+    { "id": "summit-kindness", "name": "Kindness Remembered", "words": ["盲人", "冷漠", "惋惜", "悲伤"], "restoration": "The Tree remembers how to notice and help one another." }
+  ]
+}

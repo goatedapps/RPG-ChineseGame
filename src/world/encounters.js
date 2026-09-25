@@ -4,10 +4,15 @@ export function zoneAt(map, x, y) {
   return (map.zones || []).find(zone => x >= zone.rect.x && y >= zone.rect.y && x < zone.rect.x + zone.rect.width && y < zone.rect.y + zone.rect.height) || null;
 }
 
+export function isEncounterTerrain(map, x, y) {
+  const tile = tileAt(map, x, y);
+  return Boolean(zoneAt(map, x, y) && map.legend[tile]?.walkable && map.legend[tile]?.encounter);
+}
+
 export function encounterStep(value, map, player, random = Math.random) {
   const zone = zoneAt(map, player.x, player.y);
   const previous = value || { cooldown: 0, zone: null, capNoticeDay: '' };
-  if (!zone || tileAt(map, player.x, player.y) !== 'g') return { state: { ...previous, zone: null }, zone: null, entered: null, encounter: false };
+  if (!isEncounterTerrain(map, player.x, player.y)) return { state: { ...previous, zone: null }, zone: null, entered: null, encounter: false };
   const entered = previous.zone === zone.id ? null : zone;
   const cooldown = Math.max(0, Number(previous.cooldown || 0) - 1);
   const repellentSteps = Math.max(0, Number(previous.repellentSteps || 0));

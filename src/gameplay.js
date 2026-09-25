@@ -69,6 +69,15 @@ function accuracyLabel(skill) {
   return SKILLS[skill]?.name || skill;
 }
 
+export function innReviewPool(levelPackage, progress) {
+  const lessons = new Set(levelPackage.config.regionLessons[levelPackage.region.id] || []);
+  const regionalWords = levelPackage.content.words.filter(word => lessons.has(word.lesson));
+  const review = regionalWords
+    .filter(word => progress.words[word.w]?.collected || progress.words[word.w]?.c)
+    .sort((a, b) => starsOf(progress.words[a.w]) - starsOf(progress.words[b.w]));
+  return { regionalWords, review };
+}
+
 export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchRegion = () => {}, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
   ensureParentPin(storage);
   const active = () => getActive();
@@ -588,21 +597,21 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function inn() {
     const game = active();
-    const collected = game.levelPackage.content.words.filter(word => game.state.progress.words[word.w]?.collected || game.state.progress.words[word.w]?.c);
+    const { regionalWords, review: ranked } = innReviewPool(game.levelPackage, game.state.progress);
+    const innName = game.levelPackage.map.objects.find(object => object.id === 'inn-door')?.interaction?.title || 'Inn';
     const rest = () => {
       game.state.player.hp = game.state.player.maxHp;
       commit();
       overlay.open('<div class="panel result-panel"><h1>Fully rested</h1><p>Your HP is full. The word spirits are ready for another adventure.</p><button class="primary" data-close-overlay>Continue</button></div>');
     };
-    const ranked = [...collected].sort((a, b) => starsOf(game.state.progress.words[a.w]) - starsOf(game.state.progress.words[b.w]));
     const review = ranked.length ? Array.from({ length: 3 }, (_, index) => ranked[index % ranked.length]) : [];
     let index = 0;
     const next = () => {
       if (index >= review.length) return rest();
       const word = review[index++];
-      showQuestion(overlay, makeQuestion(word, 'm', game.levelPackage.content.words), word, result => { recordWord(word, 'm', result.ok); next(); }, { title: `Bedtime review · ${index}/${review.length}` });
+      showQuestion(overlay, makeQuestion(word, 'm', regionalWords), word, result => { recordWord(word, 'm', result.ok); next(); }, { title: `Bedtime review · ${index}/${review.length}` });
     };
-    overlay.open(`<div class="panel inn-welcome"><p class="panel-kicker">Scholar Village Inn</p><h1>Welcome to the Inn</h1><p>Would you like to rest and restore your HP?</p>${review.length ? '<p>The innkeeper asks three quick Meaning questions before preparing your room.</p>' : '<p>You have no Word Spirits to review yet, so your first rest is free.</p>'}<div class="button-row"><button class="primary" data-inn-rest>${review.length ? 'Rest · Answer 3 questions' : 'Rest now'}</button><button class="secondary" data-close-overlay>Not now</button></div></div>`);
+    overlay.open(`<div class="panel inn-welcome"><p class="panel-kicker">${escapeHtml(innName)}</p><h1>Welcome to the Inn</h1><p>Would you like to rest and restore your HP?</p>${review.length ? '<p>The innkeeper asks three quick Meaning questions from this region before preparing your room.</p>' : '<p>You have no Word Spirits from this region to review yet, so your first rest here is free.</p>'}<div class="button-row"><button class="primary" data-inn-rest>${review.length ? 'Rest · Answer 3 questions' : 'Rest now'}</button><button class="secondary" data-close-overlay>Not now</button></div></div>`);
     document.querySelector('[data-inn-rest]').addEventListener('click', () => review.length ? next() : rest(), { once: true });
   }
 
@@ -610,7 +619,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const game = active();
     const shopItems = game.levelPackage.items;
     const redCap = game.levelPackage.gear.find(gear => gear.id === 'red-cap');
-    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>Scholar Village Shop</p><h1>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${shopItems.map(item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>35 coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < 35 ? 'disabled' : ''}>Choose</button></article>`).join('')}<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`);
+    const shopName = game.levelPackage.map.objects.find(object => object.id === 'shop-door')?.interaction?.title || 'Shop';
+    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${shopItems.map(item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>35 coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < 35 ? 'disabled' : ''}>Choose</button></article>`).join('')}<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`);
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
       const bought = buyItem(game.state.player, game.state.progress.inventory, item.id, item);

@@ -27,15 +27,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .brand { flex: 0 0 auto; color: var(--gold); font-size: 20px; font-weight: 800; line-height: 1.1; }
 .brand span { color: var(--paper); font-family: var(--font-hanzi); }
 .brand small { display: block; margin-top: 4px; color: var(--silver); font: 11px system-ui; letter-spacing: .08em; text-transform: uppercase; }
-.hud-status { display: grid; flex: 1; grid-template-columns: repeat(7,minmax(62px,1fr)); align-items: center; gap: 7px 12px; }
-.hud-stat { display: grid; gap: 1px; font: 12px system-ui; }
+.hud-status { display: grid; flex: 1; min-width: 0; grid-template-columns: repeat(6,minmax(0,1fr)); align-items: center; gap: 7px 12px; }
+.hud-stat { display: grid; min-width: 0; gap: 1px; font: 12px system-ui; }
 .hud-stat span { color: var(--silver); }
-.hud-stat b { color: var(--paper); font-size: 14px; }
-.hud-stat.hp { grid-template-columns: auto 82px auto; align-items: center; column-gap: 6px; }
-.hud-stat.hp span { grid-column: 1 / -1; }
-.hud-stat.xp { grid-template-columns: 82px auto; align-items: center; column-gap: 6px; }
-.hud-stat.xp span { grid-column: 1 / -1; }
-.hud-stat.hp i, .hud-stat.xp i { height: 10px; overflow: hidden; border-radius: 8px; background: #101720; }
+.hud-stat b { overflow: hidden; color: var(--paper); font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.hud-stat.hp, .hud-stat.xp { grid-column: span 2; grid-template-columns: minmax(70px,1fr) max-content; align-items: center; column-gap: 9px; }
+.hud-stat.hp span, .hud-stat.xp span { grid-column: 1 / -1; }
+.hud-stat.hp b, .hud-stat.xp b { overflow: visible; font-size: 12px; }
+.hud-stat.hp i, .hud-stat.xp i { width: 100%; min-width: 0; height: 11px; overflow: hidden; border-radius: 8px; background: #101720; }
 .hud-stat.hp em, .hud-stat.xp em { display: block; height: 100%; transition: width .2s; }
 .hud-stat.hp em { background: var(--jade); }
 .hud-stat.xp em { background: var(--gold); }
@@ -50,9 +49,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hud-actions { display: grid; grid-template-columns: repeat(8,minmax(0,1fr)); gap: 6px; padding-top: 7px; border-top: 1px solid var(--ink-3); }
 .hud-button { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 6px 8px; text-decoration: none; box-shadow: none; }
-.hud-button i { display: grid; place-items: center; width: 25px; height: 25px; flex: 0 0 auto; color: var(--paper); border-radius: 7px; background: var(--jade); font: 800 15px var(--font-hanzi); }
+.hud-button svg { display: block; width: 27px; height: 27px; flex: 0 0 auto; padding: 4px; color: var(--paper); border-radius: 7px; background: var(--jade); fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 .hud-button.utility { color: var(--paper); background: var(--ink-3); }
-.hud-button.utility i { color: var(--gold); background: transparent; }
+.hud-button.utility svg { color: var(--gold); background: transparent; }
+.hud-button .sound-slash { opacity: 0; }
+.hud-button[aria-pressed="false"] .sound-waves { opacity: 0; }
+.hud-button[aria-pressed="false"] .sound-slash { opacity: 1; }
 .primary { color: white; background: var(--jade); box-shadow: 0 3px 0 #1e684c; }
 .secondary { background: var(--paper-2); }
 .objective {
@@ -100,9 +102,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .game-shell { min-height: calc(100dvh - 14px); }
   .hud-overview { align-items: flex-start; flex-direction: column; gap: 7px; }
   .hud-status { width: 100%; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .hud-stat.hp, .hud-stat.xp { grid-column: span 3; }
   .hud-actions { grid-template-columns: repeat(4,minmax(0,1fr)); }
   .hud-button { gap: 4px; font-size: 11px; }
-  .hud-button i { width: 22px; height: 22px; }
+  .hud-button svg { width: 24px; height: 24px; }
   .objective { align-items: flex-start; flex-wrap: wrap; }
   .objective small { width: 100%; margin-left: 0; }
   .prologue-screen { background-position: 62% center; }

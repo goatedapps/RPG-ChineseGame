@@ -185,6 +185,9 @@ test('Storyteller uses an open book, two-page text and page dictation', async ()
   const [left, right] = splitStoryPage('第一句。第二句。第三句。第四句。');
   assert.match(left, /第一句/);
   assert.match(right, /第四句/);
+  const quoted = splitStoryPage('他说：“字灵回来了。”她笑了。');
+  assert.equal(quoted.join(' ').includes('。\n”'), false);
+  assert.match(quoted.join(' '), /字灵回来了。”/);
   assert.match(adventure, /Let me tell you a story/);
   assert.match(adventure, /data-story-dictation/);
   assert.match(adventure, /story-book-left/);
@@ -201,7 +204,7 @@ test('Hero Status shows the main character and leaves partner selection in My Ro
   assert.match(collection, /XP to Level/);
   assert.match(collection, /heroPortrait\(equipment\.equipped, 'paper-hero'\)/);
   assert.doesNotMatch(collection, /data-partners-open/);
-  assert.match(collection, /data-room-partners>Choose Partner Spirits/);
+  assert.match(collection, /data-room-partners><b>Choose Partner Spirits/);
   assert.doesNotMatch(collection, /paper-hero[^>]*>勇/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8'), /battle-hero[^>]*>勇/);
   assert.match(collection, /function bag\(\)/);
@@ -230,7 +233,7 @@ test('Parent Mode defaults to Settings and separates its Learning Summary', () =
 test('Your Room explains the Restoration Board before opening it', () => {
   const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
   assert.match(collection, /What is the Restoration Board\?/);
-  assert.match(collection, /Offering a set does not use up your cards/);
+  assert.match(collection, /Your cards are never used up/);
   assert.match(collection, /View Restoration Board/);
   assert.match(collection, /Your Spirit cards are never consumed/);
 });

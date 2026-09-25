@@ -12,7 +12,7 @@ test('modular preview shell exposes the shared map and touch controls', () => {
   const dom = new JSDOM(html);
   assert.ok(dom.window.document.querySelector('canvas#world'));
   assert.equal(dom.window.document.querySelectorAll('#dpad [data-direction]').length, 4);
-  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\.\/src\/main\.js\?p15/);
+  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\.\/src\/main\.js\?p\d+/);
 });
 test('shared Region 1 map validates and supports movement interactions', async () => {
   const { attemptStep, validateMap } = await import('../src/world/map.js');

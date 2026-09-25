@@ -1,0 +1,36 @@
+{
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
+  "readingKeyItem": "treeheart-lens",
+  "gateKeyName": "Treeheart Lens",
+  "bossName": "Great Forgetter",
+  "bossPlace": "Final Seal",
+  "fragmentName": "Final Stroke",
+  "fragmentKey": "final-stroke",
+  "secretName": "Dictionary Heart",
+  "passageVillagers": ["keeper-ming", "storyteller", "builder-ru", "gardener-shui", "reader-lin", "summit-guide", "tree-warden"],
+  "scrollSpots": [{ "x": 11, "y": 9 }, { "x": 40, "y": 9 }, { "x": 16, "y": 24 }, { "x": 46, "y": 28 }],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Keeper Ming", "say": "You have reached Treehouse Summit. The Great Dictionary Tree once sheltered every Word Spirit, but its heart has gone quiet." },
+      { "speaker": "Keeper Ming", "say": "Your Brush Fragments have carried memories from every region. Find the final spirits, restore the Treeheart Lens, and face the Great Forgetter." },
+      { "speaker": "Keeper Ming", "say": "The words you saved belong to everyone. Let us bring them home together." },
+      { "setFlag": "arrival" }
+    ],
+    "reform": [
+      { "speaker": "Great Forgetter", "say": "If no one remembers a word, I thought no one could disagree, make mistakes, or be hurt." },
+      { "speaker": "Keeper Ming", "say": "A forgotten word also takes away a story, a promise, and a way to help someone." },
+      { "speaker": "Hero", "say": "We can make mistakes, learn again, and still keep our promises." },
+      { "speaker": "Great Forgetter", "say": "Then let the words return. I will remember what I nearly erased." },
+      { "speaker": "Spirit Brush", "say": "Final Stroke restored. The Brush is whole, and the Great Dictionary Tree can bloom again." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "final-stroke" }
+    ]
+  },
+  "stories": [],
+  "requests": {
+    "builder-ru": { "name": "Builder Ru", "lessonSlot": 1, "creature": "hollow-book-golem", "count": 2, "reward": "Repaired Branch Bridge" },
+    "gardener-shui": { "name": "Gardener Shui", "lessonSlot": 0, "creature": "blank-page-wisp", "count": 2, "reward": "Shared Water Garden" },
+    "reader-lin": { "name": "Reader Lin", "lessonSlot": 1, "creature": "lost-name-fox", "count": 2, "reward": "Recovered Tree Chronicle" }
+  }
+}

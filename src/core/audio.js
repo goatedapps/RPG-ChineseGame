@@ -6,14 +6,16 @@ const MUSIC = {
   r4: '../assets/audio/lantern-theatre-bg.mp3',
   r5: '../assets/audio/festival-city-bg.mp3',
   r6: '../assets/audio/music-village.wav',
+  r7: '../assets/audio/music-village.wav',
   battle: '../assets/audio/music-battle.wav',
-  boss: '../assets/audio/music-boss.wav'
+  boss: '../assets/audio/music-boss.wav',
+  victory: '../assets/audio/good-result.mp3'
 };
 const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', hit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', majorReward: '../assets/audio/major-reward.wav', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
 
 export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   if (!AudioClass) return { unlock() {}, setEnabled() {}, setScene() {}, setWorld() {}, sfx() {} };
-  const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = true; track.preload = 'auto'; track.volume = 0; return [id, track]; }));
+  const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = id !== 'victory'; track.preload = 'auto'; track.volume = 0; return [id, track]; }));
   const effects = Object.fromEntries(Object.entries(EFFECTS).map(([id, source]) => { const sound = new AudioClass(source); sound.preload = 'auto'; return [id, sound]; }));
   let enabled = true;
   let unlocked = false;

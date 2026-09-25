@@ -28,7 +28,12 @@ export const CREATURES = Object.freeze([
   { id: 'bone-owl', name: 'Bone Owl', color: '#a78b68', weak: 'p', attackSkill: 'm' },
   { id: 'ink-vine', name: 'Ink Vine', color: '#3f614d', weak: 'h', attackSkill: 'p' },
   { id: 'relic-tortoise', name: 'Relic Tortoise', color: '#6b7658', weak: 'u', attackSkill: 'w' },
-  { id: 'whisper-moss', name: 'Whisper Moss', color: '#527b53', weak: 'w', attackSkill: 'u' }
+  { id: 'whisper-moss', name: 'Whisper Moss', color: '#527b53', weak: 'w', attackSkill: 'u' },
+  { id: 'blank-page-wisp', name: 'Blank-Page Wisp', color: '#c7b794', weak: 'm', attackSkill: 'p' },
+  { id: 'eraser-moth', name: 'Eraser Moth', color: '#a9a2c0', weak: 'p', attackSkill: 'm' },
+  { id: 'silence-raven', name: 'Silence Raven', color: '#40506d', weak: 'h', attackSkill: 'u' },
+  { id: 'lost-name-fox', name: 'Lost-Name Fox', color: '#7993a5', weak: 'u', attackSkill: 'h' },
+  { id: 'hollow-book-golem', name: 'Hollow-Book Golem', color: '#796b57', weak: 'w', attackSkill: 'p' }
 ]);
 
 export function createCreature(lesson, balance, random = Math.random, typeId = null) {

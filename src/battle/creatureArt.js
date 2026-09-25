@@ -36,7 +36,13 @@ const CREATURE_IMAGES = {
   'ink-vine': 'ink-vine.png',
   'relic-tortoise': 'relic-tortoise.png',
   'whisper-moss': 'whisper-moss.png',
-  'give-up-ghost': 'give-up-ghost.png'
+  'give-up-ghost': 'give-up-ghost.png',
+  'blank-page-wisp': 'blank-page-wisp.png',
+  'eraser-moth': 'eraser-moth.png',
+  'silence-raven': 'silence-raven.png',
+  'lost-name-fox': 'lost-name-fox.png',
+  'hollow-book-golem': 'hollow-book-golem.png',
+  'great-forgetter': 'great-forgetter.png'
 };
 
 export function creatureSvg(id, word = '字') {

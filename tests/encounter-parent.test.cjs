@@ -24,6 +24,41 @@ test('forest repellent suppresses encounters and counts down only in encounter g
   assert.equal(villageStep.state.repellentSteps, 1);
 });
 
+test('every regional battle field is visible terrain that can trigger encounters', async () => {
+  const { encounterStep, isEncounterTerrain, zoneAt } = await import('../src/world/encounters.js');
+  for (const file of fs.readdirSync('content/authored/campaign/maps').filter(name => name.endsWith('.json'))) {
+    const map = JSON.parse(fs.readFileSync(`content/authored/campaign/maps/${file}`, 'utf8'));
+    for (const zone of map.zones) {
+      const positions = [];
+      for (let y = zone.rect.y; y < zone.rect.y + zone.rect.height; y += 1) {
+        for (let x = zone.rect.x; x < zone.rect.x + zone.rect.width; x += 1) {
+          if (isEncounterTerrain(map, x, y)) positions.push({ x, y });
+        }
+      }
+      assert.ok(positions.length >= 20, `${file}: ${zone.name} needs a usable battle field`);
+      assert.equal(zoneAt(map, positions[0].x, positions[0].y)?.id, zone.id);
+      assert.equal(encounterStep({ cooldown: 0, zone: null }, map, positions[0], () => 0).encounter, true);
+    }
+  }
+  const tidewater = JSON.parse(fs.readFileSync('content/authored/campaign/maps/r3-tidewater-bay.json', 'utf8'));
+  assert.equal(isEncounterTerrain(tidewater, 2, 5), true);
+  assert.equal(isEncounterTerrain(tidewater, 2, 2), false);
+});
+
+test('Inn reviews and answer choices come from the current region', async () => {
+  const { innReviewPool } = await import('../src/gameplay.js');
+  const { makeQuestion } = await import('../src/learning/questions.js');
+  const content = JSON.parse(fs.readFileSync('content/generated/p5.content.json', 'utf8'));
+  const config = JSON.parse(fs.readFileSync('content/authored/levels/p5/level.json', 'utf8'));
+  const oldWord = content.words.find(word => word.lesson === 1);
+  const currentWord = content.words.find(word => word.lesson === 11);
+  const levelPackage = { region: { id: 'r5' }, config, content };
+  const { regionalWords, review } = innReviewPool(levelPackage, { words: { [oldWord.w]: { collected: true }, [currentWord.w]: { collected: true } } });
+  assert.deepEqual(review.map(word => word.w), [currentWord.w]);
+  assert.ok(regionalWords.every(word => config.regionLessons.r5.includes(word.lesson)));
+  assert.equal(makeQuestion(currentWord, 'm', regionalWords, { random: () => 0 }).options.includes(oldWord.m), false);
+});
+
 test('parent goals, bulk Spirit gifting, weekly summaries and activity tracking are state-only', async () => {
   const { giftSpiritCard, giftSpiritCards, goalProgress, recordActivity, setTestingPlayerLevel, weeklySummary } = await import('../src/systems/parent.js');
   let activity = recordActivity({}, '2026-09-24', 'battle-win');

@@ -1,4 +1,4 @@
-import { zoneAt } from './encounters.js?p10d';
+import { isEncounterTerrain, zoneAt } from './encounters.js?p16';
 
 const TILE = 32;
 
@@ -23,14 +23,14 @@ function drawTile(context, map, tile, x, y, column, row, tick) {
   const definition = map.legend[tile];
   context.fillStyle = definition.color;
   context.fillRect(Math.floor(x), Math.floor(y), TILE + 1, TILE + 1);
-  if (tile === 'g' || tile === 'f' || tile === 'r' || tile === 'h') {
+  if (map.legend[tile]?.encounter) {
     const hash = (column * 17 + row * 23) % 31;
     context.fillStyle = tile === 'f' ? (hash % 2 ? '#f1c34f' : '#efa2ae') : 'rgba(255,255,255,.16)';
     context.beginPath();
     context.arc(x + 7 + hash % 18, y + 8 + hash % 13, tile === 'f' ? 3 : 2, 0, Math.PI * 2);
     context.fill();
-    const zone = ['g', 'r', 'h'].includes(tile) ? zoneAt(map, column, row) : null;
-    if (zone) {
+    const zone = zoneAt(map, column, row);
+    if (zone && isEncounterTerrain(map, column, row)) {
       context.fillStyle = `${zone.tint}b8`;
       for (let blade = 0; blade < 4; blade += 1) {
         const bx = x + 4 + ((column * 11 + row * 7 + blade * 8) % 25);
@@ -89,13 +89,57 @@ function drawBuilding(context, object, offsetX, offsetY) {
   const doorX = object.door.x * TILE - offsetX;
   context.fillStyle = '#674127';
   context.fillRect(doorX + 7, top + pixelHeight - 27, 18, 27);
-  context.fillStyle = '#1b2430';
-  context.fillRect(left + pixelWidth / 2 - 43, top + 32, 86, 22);
-  context.fillStyle = '#f0c95a';
   context.font = '700 14px system-ui';
+  const maxTextWidth = Math.max(70, pixelWidth - 28);
+  const lines = [''];
+  for (const word of object.name.split(' ')) {
+    const current = lines.at(-1);
+    const candidate = current ? `${current} ${word}` : word;
+    if (current && context.measureText(candidate).width > maxTextWidth) lines.push(word);
+    else lines[lines.length - 1] = candidate;
+  }
+  const labelWidth = Math.min(pixelWidth - 10, Math.ceil(Math.max(...lines.map(line => context.measureText(line).width))) + 18);
+  const labelHeight = lines.length * 18 + 8;
+  context.fillStyle = '#1b2430';
+  context.fillRect(left + (pixelWidth - labelWidth) / 2, top + 30, labelWidth, labelHeight);
+  context.fillStyle = '#f0c95a';
   context.textAlign = 'center';
   context.textBaseline = 'middle';
-  context.fillText(object.name, left + pixelWidth / 2, top + 43);
+  lines.forEach((line, index) => context.fillText(line, left + pixelWidth / 2, top + 43 + index * 18, maxTextWidth));
+}
+
+function drawLandmark(context, object, offsetX, offsetY) {
+  const { x, y, width, height } = object.rect;
+  const left = x * TILE - offsetX;
+  const top = y * TILE - offsetY;
+  const cx = left + width * TILE / 2;
+  const base = top + height * TILE;
+  context.fillStyle = 'rgba(32,55,52,.3)';
+  context.beginPath(); context.ellipse(cx, base - 5, width * TILE * .47, 21, 0, 0, Math.PI * 2); context.fill();
+  context.fillStyle = '#70533c';
+  context.beginPath();
+  context.moveTo(cx - 35, base - 5);
+  context.lineTo(cx - 25, top + 72);
+  context.lineTo(cx - 61, top + 41);
+  context.lineTo(cx - 45, top + 35);
+  context.lineTo(cx, top + 74);
+  context.lineTo(cx + 44, top + 35);
+  context.lineTo(cx + 61, top + 41);
+  context.lineTo(cx + 25, top + 72);
+  context.lineTo(cx + 35, base - 5);
+  context.closePath(); context.fill();
+  context.fillStyle = '#3d786c';
+  for (const [dx, dy, radius] of [[-75, 64, 49], [-34, 37, 57], [26, 36, 58], [76, 65, 47], [0, 21, 54]]) {
+    context.beginPath(); context.arc(cx + dx, top + dy, radius, 0, Math.PI * 2); context.fill();
+  }
+  context.fillStyle = '#7bb59c';
+  for (const [dx, dy, radius] of [[-56, 30, 19], [0, 9, 25], [51, 34, 21]]) {
+    context.beginPath(); context.arc(cx + dx, top + dy, radius, 0, Math.PI * 2); context.fill();
+  }
+  context.fillStyle = '#f2d383';
+  for (const [dx, dy] of [[-67, 56], [-26, 28], [18, 41], [64, 65], [3, 93]]) {
+    context.beginPath(); context.arc(cx + dx, top + dy, 3, 0, Math.PI * 2); context.fill();
+  }
 }
 
 function drawPerson(context, x, y, color, direction = 'down', isPlayer = false, equipment = {}) {
@@ -248,6 +292,7 @@ export function createRenderer(canvas, map) {
       }
     }
 
+    for (const object of map.objects.filter(object => object.type === 'landmark')) drawLandmark(context, object, offsetX, offsetY);
     for (const object of map.objects.filter(object => object.type === 'building')) drawBuilding(context, object, offsetX, offsetY);
     const entities = map.objects.filter(object => object.type === 'npc' || object.type === 'sign')
       .map(object => ({ ...object, sortY: object.y }))

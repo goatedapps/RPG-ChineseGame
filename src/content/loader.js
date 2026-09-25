@@ -23,7 +23,7 @@ export async function listLevels(fetcher = fetch, baseUrl = '..') {
 }
 
 export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..') {
-  const [content, characters, config, regions, r1Map, r2Map, r3Map, r4Map, r5Map, r6Map, balance, strings, items, gear, recipes, milestones, r1Sets, r2Sets, r3Sets, r4Sets, r5Sets, r6Sets, wordTags, dailyQuestTemplates, r1Story, r2Story, r3Story, r4Story, r5Story, r6Story] = await Promise.all([
+  const [content, characters, config, regions, r1Map, r2Map, r3Map, r4Map, r5Map, r6Map, r7Map, balance, strings, items, gear, recipes, milestones, r1Sets, r2Sets, r3Sets, r4Sets, r5Sets, r6Sets, r7Sets, wordTags, dailyQuestTemplates, r1Story, r2Story, r3Story, r4Story, r5Story, r6Story, r7Story] = await Promise.all([
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.content.json`)),
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.chars.json`)),
     fetchJson(fetcher, join(baseUrl, `content/authored/levels/${levelId}/level.json`)),
@@ -34,6 +34,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r4-lantern-theatre.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r5-festival-city.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r6-ancient-grove.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r7-treehouse-summit.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/shared/balance.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/shared/strings.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/shared/items.json')),
@@ -46,6 +47,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r4-sets.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r5-sets.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r6-sets.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r7-sets.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/shared/word-tags.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/daily-quests.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r1-story.json')),
@@ -53,7 +55,8 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r3-story.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r4-story.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r5-story.json')),
-    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r6-story.json'))
+    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r6-story.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/r7-story.json'))
   ]);
   if (content.level !== levelId || characters.level !== levelId || config.id !== levelId) {
     throw new Error(`The ${levelId} package contains mismatched level identifiers.`);
@@ -66,7 +69,8 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     ['r3', r3Map, r3Story, r3Sets[levelId] || []],
     ['r4', r4Map, r4Story, r4Sets[levelId] || []],
     ['r5', r5Map, r5Story, r5Sets[levelId] || []],
-    ['r6', r6Map, r6Story, r6Sets[levelId] || []]
+    ['r6', r6Map, r6Story, r6Sets[levelId] || []],
+    ['r7', r7Map, r7Story, r7Sets[levelId] || []]
   ]) {
     const map = JSON.parse(JSON.stringify(mapSource));
     const region = regions.find(candidate => candidate.id === map.region);

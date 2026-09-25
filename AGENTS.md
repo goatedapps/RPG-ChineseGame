@@ -3,9 +3,9 @@
 ## Start here
 
 The deployed app is the modular game under `game/`.
-Primary 2 and Primary 5 share Regions 1–6 and keep separate saves.
-P0–P15 and the physical child-and-parent tablet pilot are complete.
-The next development phase is P16 Treehouse Summit and the Great Dictionary Tree.
+Primary 2 and Primary 5 share Regions 1–7 and keep separate saves.
+P0–P16 engineering and the earlier physical child-and-parent tablet pilot are complete.
+The next development phase is P17 multi-level completion review.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
 Use `prototype/` only as the frozen visual and behavioral reference when parity is unclear.
 

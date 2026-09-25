@@ -76,6 +76,7 @@
     { "id": "harbour-guide", "type": "npc", "name": "Harbour Guide", "x": 31, "y": 18, "solid": true, "color": "#407384", "interaction": { "kind": "dialogue", "title": "Harbour Guide", "lines": ["Whale Shallows are gentlest. The Clock Garden holds the strongest spirits."] } },
     { "id": "clock-warden", "type": "npc", "name": "Clock Warden", "x": 24, "y": 2, "solid": true, "color": "#66566f", "interaction": { "kind": "boss", "title": "Silent Clock Tower", "lines": ["The Idle Clock keeps every stolen moment behind this gate."] } },
     { "id": "return-gate", "type": "sign", "x": 24, "y": 30, "solid": true, "interaction": { "kind": "travel", "title": "Road to Harvest Crossing", "lines": ["Return to Region 2."] } },
+    { "id": "next-region-gate", "type": "sign", "x": 50, "y": 16, "solid": true, "interaction": { "kind": "travel", "title": "Lantern road", "lines": ["Travel onward to Lantern Theatre and Farm Fields."] } },
     { "id": "tide-vault", "type": "sign", "x": 43, "y": 25, "solid": true, "interaction": { "kind": "secret", "title": "Tide Vault", "lines": ["A current-shaped lock seals an old rescue log."] } },
     { "id": "quest-board", "type": "sign", "x": 18, "y": 16, "solid": true, "interaction": { "kind": "daily", "title": "Harbour Board", "lines": ["Daily work keeps the rescue boats ready."] } },
     { "id": "shallows-sign", "type": "sign", "x": 8, "y": 10, "solid": true, "interaction": { "kind": "dialogue", "title": "Harbour sign", "lines": ["← Whale Shallows"] } },

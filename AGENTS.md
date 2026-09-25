@@ -3,9 +3,9 @@
 ## Start here
 
 The deployed app is the modular game under `game/`.
-Primary 2 and Primary 5 share Regions 1–3 and keep separate saves.
-P0–P12 and the physical child-and-parent tablet pilot are complete.
-The next development phase is P13 Lantern Theatre and Farm Fields.
+Primary 2 and Primary 5 share Regions 1–4 and keep separate saves.
+P0–P13 and the physical child-and-parent tablet pilot are complete.
+The next development phase is P14 Festival City.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
 Use `prototype/` only as the frozen visual and behavioral reference when parity is unclear.
 

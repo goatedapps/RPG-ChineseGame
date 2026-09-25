@@ -3,6 +3,7 @@ const MUSIC = {
   r1: '../assets/audio/scholar-village-bg.mp3',
   r2: '../assets/audio/harvest-crossing-bg.mp3',
   r3: '../assets/audio/tidewater-bg.mp3',
+  r4: '../assets/audio/lantern-theatre-bg.mp3',
   battle: '../assets/audio/music-battle.wav',
   boss: '../assets/audio/music-boss.wav'
 };

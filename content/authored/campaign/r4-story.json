@@ -1,0 +1,33 @@
+{
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
+  "readingKeyItem": "lantern-stage-pass",
+  "gateKeyName": "Lantern Stage Pass",
+  "bossName": "Mocking Mirror",
+  "bossPlace": "Mirror Stage",
+  "fragmentName": "Courage Stroke",
+  "fragmentKey": "courage-stroke",
+  "secretName": "Courage Loft",
+  "passageVillagers": ["director-luo", "storyteller", "actor-min", "farmer-qiao", "gardener-su", "field-guide", "mirror-keeper"],
+  "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 40, "y": 28}],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Director Luo", "say": "Welcome to Lantern Theatre. The Mocking Mirror repeats every mistake until our performers are too afraid to speak." },
+      { "speaker": "Director Luo", "say": "The farm fields are suffering too. Help our company and neighbours remember that courage grows through practice." },
+      { "setFlag": "arrival" }
+    ],
+    "reform": [
+      { "speaker": "Mocking Mirror", "say": "I made every stumble look enormous. I thought laughter could stop anyone from trying again." },
+      { "speaker": "Director Luo", "say": "A mistake is one moment, not the whole performance. We learn, breathe, and continue." },
+      { "speaker": "Spirit Brush", "say": "Courage Stroke restored. The hidden Courage Loft can now be opened." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "courage-stroke" }
+    ]
+  },
+  "stories": [],
+  "requests": {
+    "actor-min": { "name": "Actor Min", "lessonSlot": 0, "creature": "mask-moth", "count": 2, "reward": "Brave Actor Mask" },
+    "farmer-qiao": { "name": "Farmer Qiao", "lessonSlot": 1, "creature": "straw-soldier", "count": 2, "reward": "Harvest Basket" },
+    "gardener-su": { "name": "Gardener Su", "lessonSlot": 2, "creature": "wilt-wisp", "count": 2, "reward": "Lantern Flower" }
+  }
+}

@@ -23,7 +23,8 @@ function addUnique(list, value) {
 const FRAGMENT_ART = Object.freeze({
   'dawn-stroke': '../assets/images/rewards/dawn-stroke.png',
   'truth-stroke': '../assets/images/rewards/truth-stroke.png',
-  'current-stroke': '../assets/images/rewards/current-stroke.png'
+  'current-stroke': '../assets/images/rewards/current-stroke.png',
+  'courage-stroke': '../assets/images/rewards/courage-stroke.png'
 });
 
 export function splitStoryPage(text) {
@@ -309,7 +310,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     if (story.bossDefeated) {
       if (game.levelPackage.region.id === 'r1') return nextRegionGate();
       if (game.levelPackage.region.id === 'r2') return truthTerrace();
-      return tideVault();
+      if (game.levelPackage.region.id === 'r3') return tideVault();
+      return courageLoft();
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
@@ -472,6 +474,17 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     overlay.open('<div class="panel result-panel"><p class="panel-kicker">Current Stroke secret</p><h1>The Tide Vault opens</h1><p>The rescued whale’s first journey is recorded inside. You found a Secret Scroll and 70 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
   }
 
+  function courageLoft() {
+    const game = active();
+    if (!game.state.progress.story.bossDefeated) return overlay.dialogue({ title: 'Brush-shaped seal', lines: ['The Courage Loft waits for the Courage Stroke.'] });
+    if (game.state.progress.story.flags.courageLoft) return overlay.dialogue({ title: 'Courage Loft', lines: ['The old mask reads: “A brave voice may shake and still be heard.”'] });
+    game.state.progress.story.flags.courageLoft = true;
+    game.state.player.coins += 80;
+    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'Courage Loft Playbill', type: 'Secret Scroll', text: 'A brave voice may shake and still be heard.' });
+    commit();
+    overlay.open('<div class="panel result-panel"><p class="panel-kicker">Courage Stroke secret</p><h1>The oldest mask shines</h1><p>You found the first Lantern Theatre playbill, a Secret Scroll and 80 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
+  }
+
   function mistakeMuseum() {
     const game = active();
     const misses = Object.entries(game.state.progress.words).sort((a, b) => (b[1].misses || 0) - (a[1].misses || 0)).slice(0, 5);
@@ -528,6 +541,19 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       handlers['clock-warden'] = gatekeeper;
       handlers['return-gate'] = () => onSwitchRegion?.('r2');
       handlers['tide-vault'] = tideVault;
+      handlers['next-region-gate'] = nextRegionGate;
+    }
+    if (gameRegion() === 'r4') {
+      handlers['director-luo'] = storyJournal;
+      handlers['actor-min'] = () => regionalRequest('actor-min');
+      handlers['theatre-door'] = () => regionalRequest('actor-min');
+      handlers['farmer-qiao'] = () => regionalRequest('farmer-qiao');
+      handlers['gardener-su'] = () => regionalRequest('gardener-su');
+      handlers['farmhouse-door'] = () => regionalRequest('gardener-su');
+      handlers['mirror-stage-door'] = gatekeeper;
+      handlers['mirror-keeper'] = gatekeeper;
+      handlers['return-gate'] = () => onSwitchRegion?.('r3');
+      handlers['courage-loft'] = courageLoft;
     }
     if (!handlers[object.id]) return false;
     handlers[object.id]();

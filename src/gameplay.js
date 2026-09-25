@@ -257,7 +257,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const variantCoins = battle.creature.variant === 'elite' ? 6 : battle.creature.variant === 'golden' ? 12 : 0;
     game.state.player.coins += variantCoins;
     if (battle.doubleCoins) game.state.player.coins += baseRewards.coins;
-    const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur' };
+    const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf' };
     const material = materialByCreature[battle.creature.id];
     const pouch = game.state.progress.inventory['material-pouch'] ? 2 : 1;
     game.state.progress.materials[material] = (game.state.progress.materials[material] || 0) + pouch;

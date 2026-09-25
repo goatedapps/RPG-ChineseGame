@@ -1,0 +1,12 @@
+{
+  "p2": [
+    { "id": "garden-friends", "name": "Garden Friends", "words": ["蚂蚁", "蜜蜂", "花丛", "青蛙"], "restoration": "Helpful insects and frogs return to the lotus garden." },
+    { "id": "play-together", "name": "Play Together", "words": ["纸飞机", "积木", "拼拼图", "象棋"], "restoration": "The theatre courtyard becomes a lively children's play space." },
+    { "id": "birthday-stage", "name": "Birthday Stage", "words": ["幸福", "许愿", "生日卡", "礼物"], "restoration": "The company prepares a joyful birthday performance." }
+  ],
+  "p5": [
+    { "id": "mulan-stage", "name": "Mulan's Stage", "words": ["花木兰", "装扮", "战场", "孝心"], "restoration": "The Lantern Theatre raises the curtain on its Mulan performance." },
+    { "id": "important-things", "name": "Important Things", "words": ["珍惜", "惭愧", "拥有", "农夫"], "restoration": "The farm's Hall of Important Things opens with honest stories." },
+    { "id": "kind-applause", "name": "Kind Applause", "words": ["嘲笑", "遮住", "一段", "丰盛"], "restoration": "The audience learns to replace mockery with kind applause." }
+  ]
+}

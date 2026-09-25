@@ -101,11 +101,19 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
 
   function crafting() {
     const game = active();
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Materials: ${Object.entries(game.state.progress.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(' · ') || 'None yet'}</p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => `<article><b>${escapeHtml(recipe.name)}</b><span>${recipe.coins} coins · ${Object.entries(recipe.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(', ')}</span><button data-craft="${recipe.id}">Craft</button></article>`).join('')}</div></div>`);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Materials: ${Object.entries(game.state.progress.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(' · ') || 'None yet'}</p><p class="craft-message" data-craft-message role="alert" tabindex="-1" hidden></p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => `<article><b>${escapeHtml(recipe.name)}</b><span>${recipe.coins} coins · ${Object.entries(recipe.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(', ')}</span><button data-craft="${recipe.id}">Craft</button></article>`).join('')}</div></div>`);
     for (const button of document.querySelectorAll('[data-craft]')) button.addEventListener('click', () => {
       const recipe = game.levelPackage.recipes.find(item => item.id === button.dataset.craft);
       const result = craft(recipe, game.state.player, game.state.progress.materials, game.state.progress.equipment);
-      if (!result.ok) return toast('You need more coins or materials for that recipe.');
+      if (!result.ok) {
+        const message = document.querySelector('[data-craft-message]');
+        if (message) {
+          message.hidden = false;
+          message.textContent = 'You need more coins or materials for that recipe.';
+          message.focus();
+        }
+        return;
+      }
       game.state.player = result.player;
       game.state.progress.materials = result.materials;
       game.state.progress.equipment = result.equipment;

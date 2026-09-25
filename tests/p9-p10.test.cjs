@@ -44,7 +44,9 @@ test('P2 story requests and boss use only words and required question kinds avai
   const queue = bossGateQueue(p2.content, p2.config);
   assert.deepEqual([...new Set(queue.map(task => task.phase))], ['Chain Spell', 'Scramble Spell', 'Ink Spell', 'Muddle Scroll']);
   const enabled = new Set(p2.config.coreQuestionKinds);
+  const standaloneQuestionIds = new Set(p2.content.questions.single.map(item => item.id));
   assert.ok(queue.filter(task => task.item).every(task => enabled.has(task.item.kind)));
+  assert.ok(queue.filter(task => task.kind === 'question').every(task => standaloneQuestionIds.has(task.item.id)));
 });
 
 test('P2 and P5 saves remain isolated when the active curriculum changes', async () => {
@@ -148,6 +150,7 @@ test('tablet fixes hide unavailable help actions and memory-writing answers', ()
   assert.match(writing, /Hanyu Pinyin/);
   assert.match(writing, /Example sentence/);
   assert.match(writing, /split\(word\.w\)\.join\(blank\)/);
+  assert.match(writing, /memoryTask \? '' : `<button class="secondary" data-writing-skip/);
   assert.match(gameplay, /if \(skill === 'h'\) question\.prompt = battle\.word\.m/);
   assert.match(gameplay, /data-higher-chinese/);
   assert.match(gameplay, /Give a Spirit card/);
@@ -162,10 +165,24 @@ test('Muddle King and creature encounters use illustrated battle presentation', 
   assert.match(adventure, /boss-battle-arena/);
   assert.match(adventure, /creatureSvg\('muddle-king', ''\)/);
   assert.match(adventure, /forceMemory: true, headerHtml: arena\(\)/);
+  assert.match(adventure, /audio\?\.sfx\('hit'\)/);
+  assert.match(adventure, /enemyAttack\(\{ creature: battle \}/);
   for (const name of ['muddle-king', 'fogling', 'echo-bat', 'twin-shade', 'jumble-bug', 'ink-imp']) {
     assert.match(creatureArt, new RegExp(`${name.replace('-', '\\-')}\\.png`));
     assert.equal(fs.existsSync(path.join(root, `assets/images/creatures/${name}.png`)), true);
   }
+});
+
+test('Storyteller uses an open book, two-page text and page dictation', async () => {
+  const { splitStoryPage } = await import('../src/adventure.js');
+  const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
+  const [left, right] = splitStoryPage('第一句。第二句。第三句。第四句。');
+  assert.match(left, /第一句/);
+  assert.match(right, /第四句/);
+  assert.match(adventure, /Let me tell you a story/);
+  assert.match(adventure, /data-story-dictation/);
+  assert.match(adventure, /story-book-left/);
+  assert.equal(fs.existsSync(path.join(root, 'assets/images/story/open-book.png')), true);
 });
 
 test('Hero Status shows the main character and leaves partner selection in My Room', () => {
@@ -197,7 +214,7 @@ test('Spirit Book separates regional vocabulary into lesson tabs', () => {
 
 test('Parent Mode defaults to Settings and separates its Learning Summary', () => {
   const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
-  assert.match(gameplay, /showParentDashboard\(selectedTab = 'settings'\)/);
+  assert.match(gameplay, /showParentDashboard\(selectedTab = 'settings', selectedGiftLesson = null\)/);
   assert.match(gameplay, /role="tablist" aria-label="Parent Mode sections"/);
   assert.match(gameplay, /data-parent-tab="settings">Settings/);
   assert.match(gameplay, /data-parent-tab="summary">Learning Summary/);

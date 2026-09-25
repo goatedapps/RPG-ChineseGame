@@ -44,6 +44,9 @@ test('crafting consumes its exact recipe once and grants permanent gear', async 
   assert.equal(first.materials['mist-drop'], 0);
   assert.ok(first.equipment.owned.includes('jade-brush'));
   assert.equal(craft(recipe, first.player, first.materials, first.equipment).ok, false);
+  const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
+  assert.match(collection, /data-craft-message/);
+  assert.match(collection, /role="alert"/);
 });
 
 test('partners require Silver, stop at three, and Gold unlocks authored or idiom moves', async () => {

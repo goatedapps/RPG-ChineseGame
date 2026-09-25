@@ -32,6 +32,7 @@ Production URLs:
 ## Product invariants
 
 - Keep one shared engine, world and campaign with separate curriculum packs and saves.
+- Keep the illustrated, typewriter-paced startup prologue skippable until testing approves mandatory playback.
 - Keep English for interface and campaign dialogue; present Storyteller chapters from the original Chinese curriculum stories without English translation.
 - Keep Meaning, Pinyin, Hanzi, Usage and Writing as the five vocabulary skills.
 - Keep the four-miss handwriting help threshold; one correct unassisted answer fills a skill circle.
@@ -41,8 +42,11 @@ Production URLs:
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
+- Set each regional boss one level above that region's strongest standard creature and let it counterattack until defeated.
+- Use only standalone questions in boss battles; never use questions that depend on an unseen passage.
 - Keep battle vocabulary sealed until the child answers; reveal pinyin and meaning in feedback.
 - Keep writing-from-memory prompts free of the target Hanzi; show only meaning, Hanyu Pinyin and a blanked example sentence.
+- For writing-from-memory and dictation, offer “Show me how” without a redundant “I don’t know” action.
 - Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.
 - Keep all three Region 1 lesson areas open, with difficulty guiding the intended order.
 - Keep exact-word lesson bait in the shop.

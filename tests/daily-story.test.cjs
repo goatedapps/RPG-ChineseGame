@@ -74,10 +74,22 @@ test('Muddle King has all four authored phases and awards Dawn Stroke through co
   const queue = bossGateQueue(content);
   assert.equal(queue.length, 12);
   assert.deepEqual([...new Set(queue.map(task => task.phase))], ['Chain Spell', 'Scramble Spell', 'Ink Spell', 'Muddle Scroll']);
-  assert.ok(queue.filter(task => task.phase === 'Muddle Scroll').every(task => task.item.id == null));
+  const standaloneQuestionIds = new Set(content.questions.single.map(item => item.id));
+  assert.ok(queue.filter(task => task.kind === 'question').every(task => standaloneQuestionIds.has(task.item.id)));
+  assert.ok(queue.filter(task => task.phase === 'Muddle Scroll').every(task => task.item.id));
   const result = applyStoryCommands({}, story.scenes.reform);
   assert.equal(result.story.bossDefeated, true);
   assert.deepEqual(result.rewards, ['dawn-stroke']);
+});
+
+test('regional bosses are one level above the strongest regional creature', async () => {
+  const { createBoss } = await import('../src/battle/creatures.js');
+  const balance = readJson('content/authored/shared/balance.json');
+  const boss = createBoss(balance, [1, 2, 3]);
+  assert.equal(boss.level, 13);
+  assert.equal(boss.maxHp, balance.combat.baseEnemyHp + boss.level * balance.combat.hpPerLevel);
+  assert.ok(boss.attack > balance.combat.baseEnemyAttack);
+  assert.ok(boss.defense > balance.combat.baseEnemyDefense);
 });
 
 test('P6 and P7 surfaces and Region 1 characters are present in the modular shell', () => {

@@ -28,3 +28,14 @@ export function createCreature(lesson, balance, random = Math.random, typeId = n
     fleeAfter: variant === 'golden' ? 4 : null
   };
 }
+
+export function createBoss(balance, lessons) {
+  const highestCreatureLevel = Math.max(...lessons.map(lesson => balance.combat.lessonLevels[String(lesson)]?.[1] || 1));
+  const level = highestCreatureLevel + 1;
+  return {
+    level,
+    maxHp: balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel,
+    attack: balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel,
+    defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel
+  };
+}

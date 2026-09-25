@@ -6,6 +6,8 @@ Word Spirit Quest is a tablet-friendly exploration RPG for Singapore primary-sch
 Every creature contains a collectible vocabulary word, and combat actions are powered by learning tasks.
 Primary 2 and Primary 5 use the same engine, world, cast and campaign with separate curriculum packs and saves.
 The intended session is 30–60 minutes, but the game has no mandatory timer.
+The game opens with an illustrated, musical, typewriter-paced prologue that introduces the Dictionary Tree, Word Spirits, the Spirit Brush and the Great Forgetter.
+The prologue remains skippable during testing and is intended to become mandatory after approval.
 
 The current release contains complete shared Regions 1–2: Scholar Village for Lessons 1–3 and Harvest Crossing for Lessons 4–6 in both curricula.
 P0–P11 and the physical tablet pilot are complete.
@@ -55,8 +57,11 @@ Every open response offers “I don’t know.”
 
 Battle questions show only the information needed by the selected attack.
 Dictation hides the target Hanzi and shows only its meaning and pinyin.
+Writing-from-memory and dictation offer “Show me how” without a duplicate give-up button.
 Battle Hanzi-selection questions show the English meaning without pinyin.
 The creature art stays sealed with `？` until the answer is submitted or the spirit is won.
+Boss question queues use only self-contained standalone questions and never require an unseen passage.
+Each regional boss is one level above the region's strongest standard creature, uses stat-scaled HP, attack and defence, and counterattacks while still standing.
 Pinyin, meaning and examples appear in answer feedback.
 The battle arena places the player at lower left and the creature at upper right.
 Show exact HP and relevant attack, defense and evasion values.
@@ -79,10 +84,11 @@ Tablet movement uses the D-pad over the play area.
 The Next step banner rotates among incomplete tasks every 60 seconds.
 Wild encounters are random, use a staged transition and play scene music and hit effects.
 
-The Region 1 story includes the tutorial battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
+The Region 1 story begins automatically with Grandma Wang's welcome and includes the tutorial battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
+Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.
-Parent tools include the PIN, goals, current-region Spirit-card gifting, weekly summary, save transfer, curriculum switching, region/test controls, speech speed and sound.
+Parent tools include the PIN, goals, lesson-filtered multi-card gifting from the current region, weekly summary, save transfer, curriculum switching, region/test controls, speech speed and sound.
 
 ## Architecture
 

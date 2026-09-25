@@ -48,7 +48,14 @@ export function goalProgress(goal, state, goldCount = 0) {
 }
 
 export function giftSpiritCard(progressByWord, word, availableWords) {
-  if (!availableWords.some(candidate => candidate.w === word)) return { ok: false, words: progressByWord };
-  const current = progressByWord[word] || {};
-  return { ok: true, words: { ...progressByWord, [word]: { ...current, collected: true } } };
+  return giftSpiritCards(progressByWord, [word], availableWords);
+}
+
+export function giftSpiritCards(progressByWord, requestedWords, availableWords) {
+  const available = new Set(availableWords.map(word => word.w));
+  const gifted = [...new Set(requestedWords)].filter(word => available.has(word));
+  if (!gifted.length) return { ok: false, words: progressByWord, gifted: [] };
+  const words = { ...progressByWord };
+  for (const word of gifted) words[word] = { ...(words[word] || {}), collected: true };
+  return { ok: true, words, gifted };
 }

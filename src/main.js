@@ -8,10 +8,11 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p10p';
-import { createCollection } from './collection.js?p10p';
-import { createAdventure } from './adventure.js?p10p';
-import { createAudioManager } from './core/audio.js?p10p';
+import { createGameplay } from './gameplay.js?p12b';
+import { createCollection } from './collection.js?p12b';
+import { createAdventure } from './adventure.js?p12b';
+import { createAudioManager } from './core/audio.js?p12b';
+import { createPrologue } from './ui/prologue.js?p12b';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p10n';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
@@ -50,6 +51,7 @@ let stageObserver = null;
 let gameplay = null;
 let collection = null;
 let adventure = null;
+let prologueCompleted = false;
 
 function render() {
   if (!active) return;
@@ -180,6 +182,7 @@ function showWelcome(loadResult) {
     persist();
     overlay.close();
     render();
+    if (!active.state.progress.story.flags.arrival) adventure?.storyJournal();
   }, { once: true });
   $('[data-download-recovery]')?.addEventListener('click', () => {
     const payload = storage.getItem(recoveryKey(active.levelPackage.id)) || '';
@@ -244,12 +247,20 @@ async function startLevel(levelId) {
     startAutosave();
     startWorldTimers();
     audio.setEnabled(active.state.settings.sound);
+    audio.setWorld(active.levelPackage.region.id);
     audio.setScene('village');
     $('#sound-button span').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
     $('#sound-button').setAttribute('aria-pressed', String(active.state.settings.sound));
     render();
+    if (prologueCompleted && !loadResult.blocked && !loadResult.migrated && !loadResult.warning) {
+      active.state.session.seenWelcome = true;
+      persist();
+    }
     if (!active.state.session.seenWelcome || loadResult.migrated || loadResult.warning) showWelcome(loadResult);
-    else overlay.close();
+    else {
+      overlay.close();
+      if (!active.state.progress.story.flags.arrival) adventure.storyJournal();
+    }
   } catch (error) {
     console.error(error);
     overlay.open(`<div class="panel"><h2>The preview could not start</h2><p>${escapeHtml(error.message)}</p><button class="secondary" data-retry>Back to levels</button></div>`, { dismissible: false });
@@ -271,6 +282,7 @@ function switchRegion(regionId) {
   persist();
   render();
   overlay.close();
+  audio.setWorld(active.levelPackage.region.id);
   audio.setScene('village');
   toast(`Arrived in ${active.levelPackage.region.name}.`);
   if (!active.state.progress.story.flags.arrival) adventure.storyJournal();
@@ -313,9 +325,13 @@ function showBuildStatus() {
       <div>Position<b>${state.player.x}, ${state.player.y}</b></div>
       <div>Save integrity<b>${state.tampered ? 'Edited' : 'Verified'}</b></div>
     </div>
-    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-switch-level>Switch curriculum</button>${Object.values(levelPackage.campaigns).map(campaign => `<button class="secondary" data-debug-region="${campaign.region.id}" ${campaign.region.id === levelPackage.region.id ? 'disabled' : ''}>Open ${escapeHtml(campaign.region.name)}</button>`).join('')}</div>
+    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-replay-intro>Replay introduction</button><button class="secondary" data-switch-level>Switch curriculum</button>${Object.values(levelPackage.campaigns).map(campaign => `<button class="secondary" data-debug-region="${campaign.region.id}" ${campaign.region.id === levelPackage.region.id ? 'disabled' : ''}>Open ${escapeHtml(campaign.region.name)}</button>`).join('')}</div>
   </div>`);
   $('[data-switch-level]').addEventListener('click', showLevelPicker, { once: true });
+  $('[data-replay-intro]').addEventListener('click', () => {
+    overlay.close();
+    createPrologue({ root: $('#prologue'), audio, onComplete: render, skippable: true });
+  }, { once: true });
   for (const button of document.querySelectorAll('[data-debug-region]:not([disabled])')) button.addEventListener('click', () => switchRegion(button.dataset.debugRegion), { once: true });
   $('[data-export-current]').addEventListener('click', () => {
     const link = document.createElement('a');
@@ -355,8 +371,16 @@ async function boot() {
     const requestedLevel = new URLSearchParams(location.search).get('level');
     const profile = loadProfile(storage);
     const level = levels.find(candidate => candidate.id === (requestedLevel || profile?.level) && candidate.worldMappingReady);
-    if (level) await startLevel(level.id);
-    else showLevelPicker();
+    createPrologue({
+      root: $('#prologue'),
+      audio,
+      skippable: true,
+      onComplete: async () => {
+        prologueCompleted = true;
+        if (level) await startLevel(level.id);
+        else showLevelPicker();
+      }
+    });
   } catch (error) {
     console.error(error);
     overlay.open(`<div class="panel"><h1>Could not load the game</h1><p>${escapeHtml(error.message)}</p><p>Serve the repository through HTTP; ES modules and content files cannot load from <code>file://</code>.</p></div>`, { dismissible: false });

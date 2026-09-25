@@ -12,7 +12,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   position: absolute;
   top: 14px;
   left: 50%;
-  z-index: 4;
+  z-index: 12;
   max-width: calc(100% - 30px);
   padding: 7px 15px;
   color: var(--paper);
@@ -175,6 +175,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .major-reward h1, .major-reward p { margin: 3px 0; }
 .inn-welcome { border-top: 8px solid var(--jade); background: linear-gradient(145deg,#f4efe2,#fff8d8); }
 .save-warning { padding: 12px; border-left: 5px solid var(--seal); border-radius: 8px; background: #fae3de; font-weight: 800; }
+.craft-message { margin: 12px 0; padding: 12px 14px; border: 3px solid var(--seal); border-radius: 9px; color: #76271f; background: #ffe6df; font-weight: 900; box-shadow: 0 4px 0 rgba(118,39,31,.18); }
 .writing-layout { display: grid; grid-template-columns: minmax(200px,300px) 1fr; gap: 24px; align-items: center; }
 .writing-box { width: 100%; aspect-ratio: 1; touch-action: none; border: 3px solid var(--ink); border-radius: 11px; background: white; }
 .writing-slots { display: flex; gap: 6px; margin: 13px 0; }
@@ -257,8 +258,18 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .room-goal.complete { box-shadow: 0 0 0 4px rgba(217,166,46,.28); }
 .parent-gift { margin: 18px 0; padding: 14px; border: 2px solid var(--jade); border-radius: 10px; background: #e8f5ed; }
 .parent-gift h2, .parent-gift p { margin-top: 0; }
-.parent-gift div { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; }
-.parent-gift select { min-height: 48px; min-width: 0; padding: 9px; border: 2px solid var(--line); border-radius: 8px; background: white; font: 16px var(--font-ui); }
+.parent-gift-toolbar { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.parent-gift-toolbar label { display: grid; gap: 5px; min-width: 190px; font-weight: 900; }
+.parent-gift-toolbar select { min-height: 48px; min-width: 0; padding: 9px; border: 2px solid var(--line); border-radius: 8px; background: white; font: 16px var(--font-ui); }
+.parent-gift-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; max-height: 320px; padding: 3px; overflow: auto; }
+.gift-word-option { display: grid; grid-template-columns: 25px minmax(0,1fr); gap: 10px; align-items: center; min-height: 60px; padding: 9px 11px; border: 2px solid #a9cdb9; border-radius: 9px; background: white; cursor: pointer; }
+.gift-word-option:has(input:checked) { border-color: var(--jade); background: #d8f0e3; box-shadow: inset 0 0 0 1px var(--jade); }
+.gift-word-option input { width: 22px; height: 22px; margin: 0; accent-color: var(--jade); }
+.gift-word-option span { display: grid; min-width: 0; }
+.gift-word-option b { font: 800 21px var(--font-chinese); }
+.gift-word-option small { overflow: hidden; color: #536171; font: 12px/1.35 system-ui; text-overflow: ellipsis; white-space: nowrap; }
+.parent-gift-actions { display: flex; align-items: center; justify-content: flex-end; gap: 14px; margin-top: 12px; }
+.parent-gift-actions span { color: #536171; font: 800 13px system-ui; }
 .accuracy-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
 .accuracy-grid div { display: grid; grid-template-columns: 1fr auto; gap: 5px 8px; padding: 9px; background: white; border-radius: 8px; }
 .accuracy-grid i { grid-column: 1 / -1; height: 8px; overflow: hidden; border-radius: 9px; background: #d8cfc0; }
@@ -338,15 +349,34 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .scroll-grid article { display: grid; gap: 5px; }
 .scroll-grid article p { margin: 3px 0 0; font: 15px/1.55 var(--font-chinese); }
 .scroll-grid small { color: #647180; }
-.story-page { min-height: 150px; padding: 20px; border-radius: 12px; background: white; font: 19px/1.8 var(--font-chinese); }
+.storyteller-panel { border-top: 8px solid #78689c; }
+.storyteller-welcome { display: flex; align-items: center; gap: 13px; margin: 8px 0 18px; padding: 12px 14px; border-radius: 10px; background: #eee9f5; }
+.storyteller-welcome span { display: grid; place-items: center; width: 46px; height: 46px; flex: 0 0 auto; color: white; border-radius: 50%; background: #78689c; font: 900 24px var(--font-chinese); }
+.storyteller-welcome p { margin: 0; font-weight: 800; }
+.story-reader-panel { width: min(920px,100%); padding: 16px; border-color: #4c3324; background: #172334; }
+.story-reader-header { display: flex; justify-content: space-between; gap: 16px; padding: 2px 7px 10px; color: var(--paper); }
+.story-reader-header h1 { margin: 0; color: white; font: 900 clamp(22px,3vw,34px)/1.2 var(--font-chinese); }
+.story-reader-header .panel-kicker { color: #e5b947; }
+.story-book-spread { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 10px; background: #6a4329 url('../assets/images/story/open-book.png') center / cover no-repeat; box-shadow: inset 0 0 0 2px rgba(229,185,71,.34),0 10px 24px rgba(0,0,0,.42); }
+.story-book-page { position: absolute; top: 19%; bottom: 18%; overflow: auto; color: #33251d; font: 700 clamp(14px,2.05vw,21px)/1.7 var(--font-chinese); white-space: normal; scrollbar-width: thin; }
+.story-book-left { left: 14%; width: 32%; }
+.story-book-right { right: 14%; width: 32%; }
+.story-reader-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px; }
 .boss-victory { border-color: var(--gold); background: linear-gradient(145deg,var(--paper),#fff3bd); }
 @media (max-width: 600px) {
   .dpad { right: 9px; bottom: 9px; grid-template-columns: repeat(3,47px); grid-template-rows: repeat(3,47px); }
   .level-grid, .status-grid, .parent-settings, .accuracy-grid, .parent-tables, .hero-stat-grid, .bag-grid { grid-template-columns: 1fr; }
   .goal-editor, .weekly-table div { grid-template-columns: 1fr; }
   .pin-editor { grid-template-columns: 1fr; }
-  .parent-gift div { grid-template-columns: 1fr; }
+  .parent-gift-grid { grid-template-columns: 1fr; }
+  .parent-gift-toolbar, .parent-gift-actions { align-items: stretch; flex-direction: column; }
   .summary-toolbar { align-items: stretch; flex-direction: column; }
+  .story-reader-panel { padding: 9px; }
+  .story-reader-header { padding-inline: 4px; }
+  .story-book-page { top: 17%; bottom: 15%; font-size: 12px; line-height: 1.45; }
+  .story-book-left { left: 13%; width: 33%; }
+  .story-book-right { right: 13%; width: 33%; }
+  .story-reader-actions { align-items: stretch; flex-direction: column; }
   .battle-grid, .writing-layout, .question-options, .attack-grid, .service-grid, .spirit-grid, .gear-grid, .set-grid, .shop-grid { grid-template-columns: 1fr; }
   .shop-item { grid-template-columns: auto 1fr; }
   .shop-item button { grid-column: 1 / -1; }

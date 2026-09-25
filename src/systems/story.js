@@ -92,10 +92,9 @@ export function bossGateQueue(content, config = {}, lessons = [1, 2, 3]) {
   const conjunctions = supported.filter(item => item.kind === firstKind).slice(0, 3).map(item => ({ phase: 'Chain Spell', kind: 'question', item }));
   const sentences = supported.filter(item => item.kind === secondKind).slice(0, 2).map(item => ({ phase: 'Scramble Spell', kind: 'question', item }));
   const lessonWords = content.words.filter(word => lessons.includes(word.lesson)).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
-  const passage = content.questions.groups.find(group => group.id === 'TN-G1' && enabled.has(group.kind))
-    || content.questions.groups.find(group => enabled.has(group.kind) && group.subject === 'Chinese');
-  const blanks = (passage?.items || []).filter(item => ['MCQ', 'Fill-in'].includes(item.format)).slice(0, 5).map(item => ({ phase: 'Muddle Scroll', kind: 'question', item: { ...item, kind: passage.kind } }));
-  return [...conjunctions, ...sentences, ...lessonWords, ...blanks];
+  const usedQuestionIds = new Set([...conjunctions, ...sentences].map(task => task.item.id));
+  const muddleScrolls = supported.filter(item => !usedQuestionIds.has(item.id)).slice(0, 5).map(item => ({ phase: 'Muddle Scroll', kind: 'question', item }));
+  return [...conjunctions, ...sentences, ...lessonWords, ...muddleScrolls];
 }
 
 export function applyStoryCommands(value, commands) {

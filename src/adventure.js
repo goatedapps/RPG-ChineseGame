@@ -5,20 +5,39 @@ import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p10f';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p10m';
-import { showWritingTask } from './ui/writingView.js?p10m';
+import { showWritingTask } from './ui/writingView.js?p12b';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
-import { heroStats } from './battle/damage.js';
+import { calculateDamage, heroStats } from './battle/damage.js';
+import { enemyAttack } from './battle/battle.js';
+import { createBoss } from './battle/creatures.js';
+import { gearBonuses } from './systems/gear.js';
 import { creatureSvg } from './battle/creatureArt.js?p10m';
 import { heroPortrait } from './ui/heroPortrait.js?p10n';
+import { createSpeechController } from './learning/audio.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
 }
 
+export function splitStoryPage(text) {
+  const sentences = String(text).split(/(?<=[。！？!?])\s*|\r?\n+/).map(sentence => sentence.trim()).filter(Boolean);
+  if (sentences.length < 2) return [sentences[0] || '', ''];
+  const total = sentences.reduce((sum, sentence) => sum + sentence.length, 0);
+  let leftLength = 0;
+  let splitAt = 1;
+  for (let index = 0; index < sentences.length - 1; index += 1) {
+    leftLength += sentences[index].length;
+    splitAt = index + 1;
+    if (leftLength >= total / 2) break;
+  }
+  return [sentences.slice(0, splitAt).join('\n\n'), sentences.slice(splitAt).join('\n\n')];
+}
+
 export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio, onSwitchRegion }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
+  const speech = createSpeechController();
 
   function ensureDaily() {
     const game = active();
@@ -170,7 +189,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function storyteller() {
     const game = active();
     const story = normalizeStory(game.state.progress.story);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Storyteller’s bench</p><h1>${escapeHtml(game.levelPackage.region.name)} Stories</h1></div><button class="secondary" data-close-overlay>Leave</button></div><div class="service-grid">${game.levelPackage.regionStory.stories.map(item => `<button data-story-lesson="${item.lesson}"><b>${story.storiesRead.includes(item.lesson) ? '✓ ' : ''}${escapeHtml(item.title)}</b><span>Lesson ${item.lesson} · ${item.pages.length} short pages</span></button>`).join('')}</div><div class="button-row"><button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
+    overlay.open(`<div class="panel storyteller-panel"><div class="panel-header"><div><p class="panel-kicker">Storyteller’s bench</p><h1>${escapeHtml(game.levelPackage.region.name)} Stories</h1></div><button class="secondary" data-close-overlay>Leave</button></div><div class="storyteller-welcome"><span aria-hidden="true">说</span><p>Let me tell you a story. Which one do you want to know about?</p></div><div class="service-grid">${game.levelPackage.regionStory.stories.map(item => `<button data-story-lesson="${item.lesson}"><b>${story.storiesRead.includes(item.lesson) ? '✓ ' : ''}${escapeHtml(item.title)}</b><span>Lesson ${item.lesson} · ${item.pages.length} short pages</span></button>`).join('')}</div><div class="button-row"><button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
     for (const button of document.querySelectorAll('[data-story-lesson]')) button.addEventListener('click', () => readStory(Number(button.dataset.storyLesson)));
     document.querySelector('[data-scroll-library]').addEventListener('click', scrollLibrary);
   }
@@ -180,6 +199,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const storyData = game.levelPackage.regionStory.stories.find(item => item.lesson === lesson);
     let page = 0;
     const next = () => {
+      speech.stop();
       if (page >= storyData.pages.length) {
         if (!game.state.progress.story.storiesRead.includes(lesson)) {
           game.state.progress.story.storiesRead.push(lesson);
@@ -189,7 +209,22 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         }
         return storyteller();
       }
-      overlay.open(`<article class="panel"><p class="panel-kicker">${escapeHtml(storyData.title)} · ${page + 1}/${storyData.pages.length}</p><h1>Lesson ${lesson}</h1><p class="story-page">${escapeHtml(storyData.pages[page++])}</p><button class="primary" data-story-next>${page === storyData.pages.length ? 'Finish story' : 'Next page'}</button></article>`, { dismissible: false });
+      const pageText = storyData.pages[page];
+      const [leftPage, rightPage] = splitStoryPage(pageText);
+      const lastPage = page === storyData.pages.length - 1;
+      overlay.open(`<article class="panel story-reader-panel"><header class="story-reader-header"><div><p class="panel-kicker">Lesson ${lesson} · Page ${page + 1}/${storyData.pages.length}</p><h1>${escapeHtml(storyData.title)}</h1></div></header><div class="story-book-spread" aria-label="${escapeHtml(pageText)}"><div class="story-book-page story-book-left">${escapeHtml(leftPage).replaceAll('\n', '<br>')}</div><div class="story-book-page story-book-right">${escapeHtml(rightPage).replaceAll('\n', '<br>')}</div></div><div class="story-reader-actions"><button class="secondary" data-story-dictation>Dictation · Read page aloud</button><button class="primary" data-story-next>${lastPage ? 'Finish story' : 'Next page'}</button></div></article>`, { dismissible: false, onClose: speech.stop });
+      const dictation = document.querySelector('[data-story-dictation]');
+      dictation.addEventListener('click', () => {
+        if (speech.isSpeaking) {
+          speech.stop();
+          dictation.textContent = 'Dictation · Read page aloud';
+          return;
+        }
+        const started = speech.speak(pageText, { rate: game.state.settings.speechRate, onEnd: () => { if (dictation.isConnected) dictation.textContent = 'Dictation · Read page aloud'; } });
+        if (started) dictation.textContent = 'Stop dictation';
+        else toast('Chinese speech is not available on this device.');
+      });
+      page += 1;
       document.querySelector('[data-story-next]').addEventListener('click', next, { once: true });
     };
     next();
@@ -276,7 +311,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function startBoss() {
     const regionLessons = active().levelPackage.config.regionLessons[active().levelPackage.region.id] || [];
     const queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config, regionLessons);
-    const battle = { queue, hp: queue.length * 4, maxHp: queue.length * 4, index: 0 };
+    const boss = createBoss(active().levelPackage.balance, regionLessons);
+    const battle = { queue, ...boss, hp: boss.maxHp, index: 0 };
     const arena = () => {
       const game = active();
       const hero = heroStats(game.state.player.level);
@@ -285,7 +321,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const bossArt = bossId === 'muddle-king' ? creatureSvg('muddle-king', '') : creatureSvg(bossId, '');
       return `<div class="boss-battle-arena">
         <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense}</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
-        <div class="battle-enemy boss-enemy"><div class="battle-nameplate"><b>${escapeHtml(bossName)} · Boss</b><small>Break every twisting spell</small><div class="enemy-hp"><i style="width:${battle.hp / battle.maxHp * 100}%"></i></div><strong>HP ${battle.hp}/${battle.maxHp}</strong></div><div class="creature-art">${bossArt}</div></div>
+        <div class="battle-enemy boss-enemy"><div class="battle-nameplate"><b>${escapeHtml(bossName)} · Lv ${battle.level} Boss</b><small>ATK ${battle.attack} · DEF ${battle.defense}</small><div class="enemy-hp"><i style="width:${battle.hp / battle.maxHp * 100}%"></i></div><strong>HP ${battle.hp}/${battle.maxHp}</strong></div><div class="creature-art">${bossArt}</div></div>
       </div>`;
     };
     const bossPanel = content => `<article class="battle-scene boss-battle-scene">${arena()}<div class="battle-console">${content}</div></article>`;
@@ -296,19 +332,29 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const task = battle.queue.shift();
       const finish = correct => {
         const game = active();
-        if (correct) battle.hp = Math.max(0, battle.hp - 4);
-        else {
-          battle.queue.push(task);
-          game.state.player.hp = Math.max(0, game.state.player.hp - 3);
-          if (game.state.player.hp === 0) {
-            game.state.player.hp = game.state.player.maxHp;
-            commit();
-            audio?.setScene('village');
-            return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`));
-          }
+        const hero = heroStats(game.state.player.level);
+        const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
+        let damage = 0;
+        if (correct) {
+          damage = calculateDamage({ attack: hero.attack, defense: battle.defense, moveBonus: task.kind === 'writing' ? 3 + bonuses.skillDamage.w : 2, roll: Math.random() * 3 });
+          battle.hp = Math.max(0, battle.hp - damage);
+          audio?.sfx('hit');
+        } else battle.queue.push(task);
+        let counter = { damage: 0, evaded: false };
+        if (battle.hp > 0) {
+          counter = enemyAttack({ creature: battle }, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense, damageMultiplier: correct ? 0.8 : 1 });
+          game.state.player = counter.player;
+        }
+        if (game.state.player.hp === 0) {
+          game.state.player.hp = game.state.player.maxHp;
+          commit();
+          audio?.setScene('village');
+          return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`));
         }
         commit();
-        overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>Muddle King HP ${battle.hp}/${battle.maxHp}${correct ? '' : ' · You lost 3 HP'}.</p><button class="primary" data-boss-next>Next spell</button>`), { dismissible: false });
+        const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
+        const counterText = battle.hp <= 0 ? '' : counter.evaded ? ' You dodged the counterattack.' : ` ${bossName} struck back for ${counter.damage} damage.`;
+        overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>${correct ? `You dealt ${damage} damage. ` : ''}${escapeHtml(bossName)} HP ${battle.hp}/${battle.maxHp}.${counterText}</p><button class="primary" data-boss-next>Next spell</button>`), { dismissible: false });
         document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
       };
       if (task.kind === 'writing') {

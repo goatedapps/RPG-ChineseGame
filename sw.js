@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p11-v19';
+const CACHE = 'word-spirit-quest-p11-v21';
 const CORE = [
   './game/', './game/index.html', './manifest.webmanifest',
   './css/tokens.css', './css/base.css', './css/stage.css',
@@ -17,13 +17,14 @@ const RUNTIME = [
   './src/core/audio.js', './src/core/events.js', './src/core/rng.js', './src/core/safe.js', './src/core/save.js', './src/core/state.js', './src/core/time.js',
   './src/learning/audio.js', './src/learning/examAdapters.js', './src/learning/mastery.js', './src/learning/pinyin.js', './src/learning/questions.js', './src/learning/selection.js', './src/learning/writing.js',
   './src/systems/crafting.js', './src/systems/daily.js', './src/systems/economy.js', './src/systems/energy.js', './src/systems/gear.js', './src/systems/inventory.js', './src/systems/milestones.js', './src/systems/parent.js', './src/systems/partners.js', './src/systems/reading.js', './src/systems/regions.js', './src/systems/school.js', './src/systems/sets.js', './src/systems/story.js',
-  './src/ui/dom.js', './src/ui/hud.js', './src/ui/overlay.js', './src/ui/questionView.js', './src/ui/toast.js', './src/ui/writingView.js',
+  './src/ui/dom.js', './src/ui/hud.js', './src/ui/overlay.js', './src/ui/prologue.js', './src/ui/questionView.js', './src/ui/toast.js', './src/ui/writingView.js',
   './src/world/encounters.js', './src/world/input.js', './src/world/map.js', './src/world/npcs.js', './src/world/renderer.js',
   './assets/images/creatures/muddle-king.png', './assets/images/creatures/fogling.png', './assets/images/creatures/echo-bat.png', './assets/images/creatures/twin-shade.png', './assets/images/creatures/jumble-bug.png', './assets/images/creatures/ink-imp.png', './assets/images/creatures/chaff-sprite.png', './assets/images/creatures/rumour-crow.png', './assets/images/creatures/price-mimic.png', './assets/images/creatures/doubt-moth.png', './assets/images/creatures/forked-gecko.png', './assets/images/creatures/doubt-serpent.png',
   './assets/images/hero/main-hero.png', './assets/images/shop/shop-background.png',
+  './assets/images/intro/dictionary-tree.png', './assets/images/intro/great-forgetter.png', './assets/images/intro/spirits-scattered.png', './assets/images/story/open-book.png',
   './assets/images/rewards/cave-lantern.png', './assets/images/rewards/dawn-stroke.png', './assets/images/rewards/market-seal.png', './assets/images/rewards/truth-stroke.png',
   './assets/images/shop/rice-ball.png', './assets/images/shop/instant-noodles.png', './assets/images/shop/mooncake.png', './assets/images/shop/scholars-lantern.png', './assets/images/shop/ink-pot.png', './assets/images/shop/smoke-ball.png', './assets/images/shop/lucky-knot.png', './assets/images/shop/power-tea.png', './assets/images/shop/guardian-talisman.png', './assets/images/shop/forest-repellent.png', './assets/images/shop/spirit-bait.png', './assets/images/shop/red-cap.png',
-  './assets/audio/bag-open.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/level-up.mp3', './assets/audio/major-reward.wav', './assets/audio/music-battle.wav', './assets/audio/music-boss.wav', './assets/audio/music-village.wav', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
+  './assets/audio/bag-open.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/harvest-crossing-bg.mp3', './assets/audio/level-up.mp3', './assets/audio/major-reward.wav', './assets/audio/music-battle.wav', './assets/audio/music-boss.wav', './assets/audio/prologue-bg.mp3', './assets/audio/scholar-village-bg.mp3', './assets/audio/tidewater-bg.mp3', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
 ];
 
 self.addEventListener('install', event => {

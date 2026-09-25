@@ -24,8 +24,8 @@ test('forest repellent suppresses encounters and counts down only in encounter g
   assert.equal(villageStep.state.repellentSteps, 1);
 });
 
-test('parent goals, weekly summaries and activity tracking are state-only', async () => {
-  const { giftSpiritCard, goalProgress, recordActivity, weeklySummary } = await import('../src/systems/parent.js');
+test('parent goals, bulk Spirit gifting, weekly summaries and activity tracking are state-only', async () => {
+  const { giftSpiritCard, giftSpiritCards, goalProgress, recordActivity, weeklySummary } = await import('../src/systems/parent.js');
   let activity = recordActivity({}, '2026-09-24', 'battle-win');
   activity = recordActivity(activity, '2026-09-24', 'school-run');
   const rows = weeklySummary(activity, '2026-09-24');
@@ -39,6 +39,10 @@ test('parent goals, weekly summaries and activity tracking are state-only', asyn
   assert.equal(gifted.ok, true);
   assert.equal(gifted.words['露营'].collected, true);
   assert.equal(giftSpiritCard(gifted.words, '区域外', available).ok, false);
+  const bulkGift = giftSpiritCards(gifted.words, ['集合', '集合', '区域外'], available);
+  assert.equal(bulkGift.ok, true);
+  assert.deepEqual(bulkGift.gifted, ['集合']);
+  assert.equal(bulkGift.words['集合'].collected, true);
 });
 
 test('P8 export envelopes restore the matching curriculum save', async () => {
@@ -58,9 +62,9 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const css = fs.readFileSync('css/stage.css', 'utf8');
   const shell = fs.readFileSync('game/index.html', 'utf8');
-  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-spirit', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
+  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-lesson', 'data-gift-word', 'data-gift-spirit-save', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
   assert.match(shell, /Scholar Village/);
-  for (const file of ['music-village.wav', 'music-battle.wav', 'music-boss.wav', 'creature-hit.wav']) assert.equal(fs.existsSync(`assets/audio/${file}`), true);
+  for (const file of ['scholar-village-bg.mp3', 'harvest-crossing-bg.mp3', 'prologue-bg.mp3', 'music-battle.wav', 'music-boss.wav', 'creature-hit.wav']) assert.equal(fs.existsSync(`assets/audio/${file}`), true);
 });

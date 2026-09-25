@@ -30,7 +30,7 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>
         <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${memoryTask ? (itemIndex === index ? '✎' : '') : itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
-        <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button><button class="secondary" data-writing-skip type="button">I don't know</button></div>
+        <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button>${memoryTask ? '' : `<button class="secondary" data-writing-skip type="button">I don't know</button>`}</div>
       </div></div>
     </article>`, { dismissible: false });
     const box = document.querySelector('[data-writing-box]');
@@ -60,7 +60,7 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       writer.cancelQuiz();
       writer.animateCharacter({ onComplete: quiz });
     });
-    document.querySelector('[data-writing-skip]').addEventListener('click', event => {
+    document.querySelector('[data-writing-skip]')?.addEventListener('click', event => {
       event.currentTarget.disabled = true;
       gaveUp = true;
       anyHelp = true;

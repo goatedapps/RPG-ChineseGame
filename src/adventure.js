@@ -24,7 +24,8 @@ const FRAGMENT_ART = Object.freeze({
   'dawn-stroke': '../assets/images/rewards/dawn-stroke.png',
   'truth-stroke': '../assets/images/rewards/truth-stroke.png',
   'current-stroke': '../assets/images/rewards/current-stroke.png',
-  'courage-stroke': '../assets/images/rewards/courage-stroke.png'
+  'courage-stroke': '../assets/images/rewards/courage-stroke.png',
+  'harmony-stroke': '../assets/images/rewards/harmony-stroke.png'
 });
 
 export function splitStoryPage(text) {
@@ -311,7 +312,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (game.levelPackage.region.id === 'r1') return nextRegionGate();
       if (game.levelPackage.region.id === 'r2') return truthTerrace();
       if (game.levelPackage.region.id === 'r3') return tideVault();
-      return courageLoft();
+      if (game.levelPackage.region.id === 'r4') return courageLoft();
+      return harmonyPavilion();
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
@@ -485,6 +487,17 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     overlay.open('<div class="panel result-panel"><p class="panel-kicker">Courage Stroke secret</p><h1>The oldest mask shines</h1><p>You found the first Lantern Theatre playbill, a Secret Scroll and 80 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
   }
 
+  function harmonyPavilion() {
+    const game = active();
+    if (!game.state.progress.story.bossDefeated) return overlay.dialogue({ title: 'Twin-stroke seal', lines: ['The Harmony Pavilion waits for the Harmony Stroke.'] });
+    if (game.state.progress.story.flags.harmonyPavilion) return overlay.dialogue({ title: 'Harmony Pavilion', lines: ['The peace bell reads: “Listening turns two voices into one path forward.”'] });
+    game.state.progress.story.flags.harmonyPavilion = true;
+    game.state.player.coins += 90;
+    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'Harmony Pavilion Bell', type: 'Secret Scroll', text: 'Listening turns two voices into one path forward.' });
+    commit();
+    overlay.open('<div class="panel result-panel"><p class="panel-kicker">Harmony Stroke secret</p><h1>The peace bell rings</h1><p>You found the city founders’ pledge, a Secret Scroll and 90 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
+  }
+
   function mistakeMuseum() {
     const game = active();
     const misses = Object.entries(game.state.progress.words).sort((a, b) => (b[1].misses || 0) - (a[1].misses || 0)).slice(0, 5);
@@ -554,6 +567,19 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       handlers['mirror-keeper'] = gatekeeper;
       handlers['return-gate'] = () => onSwitchRegion?.('r3');
       handlers['courage-loft'] = courageLoft;
+      handlers['next-region-gate'] = nextRegionGate;
+    }
+    if (gameRegion() === 'r5') {
+      handlers['mayor-shen'] = storyJournal;
+      handlers['keeper-bao'] = () => regionalRequest('keeper-bao');
+      handlers['harmony-dojo'] = () => regionalRequest('keeper-bao');
+      handlers['artist-cai'] = () => regionalRequest('artist-cai');
+      handlers['gardener-ren'] = () => regionalRequest('gardener-ren');
+      handlers['festival-workshop'] = () => regionalRequest('gardener-ren');
+      handlers['dragon-gate-door'] = gatekeeper;
+      handlers['dragon-warden'] = gatekeeper;
+      handlers['return-gate'] = () => onSwitchRegion?.('r4');
+      handlers['harmony-pavilion'] = harmonyPavilion;
     }
     if (!handlers[object.id]) return false;
     handlers[object.id]();

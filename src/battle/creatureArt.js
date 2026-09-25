@@ -24,7 +24,13 @@ const CREATURE_IMAGES = {
   'straw-soldier': 'straw-soldier.png',
   'spotlight-fox': 'spotlight-fox.png',
   'wilt-wisp': 'wilt-wisp.png',
-  'mocking-mirror': 'mocking-mirror.png'
+  'mocking-mirror': 'mocking-mirror.png',
+  'ribbon-rat': 'ribbon-rat.png',
+  'drum-gremlin': 'drum-gremlin.png',
+  'spark-kite': 'spark-kite.png',
+  'quarrel-macaque': 'quarrel-macaque.png',
+  'boastful-lion': 'boastful-lion.png',
+  'grudge-dragon': 'grudge-dragon.png'
 };
 
 export function creatureSvg(id, word = '字') {

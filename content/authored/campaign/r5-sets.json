@@ -1,0 +1,12 @@
+{
+  "p2": [
+    { "id": "pet-island-friends", "name": "Pet Island Friends", "words": ["小猫", "小狗", "金鱼", "宠物"], "restoration": "The Pet Lantern parade welcomes every small companion." },
+    { "id": "rainbow-team", "name": "Rainbow Team", "words": ["蜡笔", "合作", "彩虹", "草地"], "restoration": "Neighbours paint one great rainbow banner together." },
+    { "id": "festival-harvest", "name": "Festival Harvest", "words": ["茄子", "番茄", "玉米", "果实"], "restoration": "The Victory Gardens fill the festival tables with colour." }
+  ],
+  "p5": [
+    { "id": "martial-foundations", "name": "Martial Foundations", "words": ["初级", "基本", "躲闪", "胸口"], "restoration": "The Harmony Dojo returns to careful, respectful practice." },
+    { "id": "settle-the-misunderstanding", "name": "Settle the Misunderstanding", "words": ["详细", "彼此", "恨", "尽早"], "restoration": "Old disagreements are discussed before they become grudges." },
+    { "id": "national-night", "name": "National Night", "words": ["气氛", "表演", "荧光棒", "五彩缤纷"], "restoration": "The night parade glows across the reunited city." }
+  ]
+}

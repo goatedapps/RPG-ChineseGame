@@ -1,6 +1,6 @@
 import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10d';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p13';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p14';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p10n';
 import { bindInput } from './world/input.js?p10n';
@@ -8,11 +8,11 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p13';
-import { createCollection } from './collection.js?p13';
-import { createAdventure } from './adventure.js?p13';
-import { createAudioManager } from './core/audio.js?p13';
-import { createPrologue } from './ui/prologue.js?p13';
+import { createGameplay } from './gameplay.js?p14';
+import { createCollection } from './collection.js?p14';
+import { createAdventure } from './adventure.js?p14';
+import { createAudioManager } from './core/audio.js?p14';
+import { createPrologue } from './ui/prologue.js?p14';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p10n';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
@@ -315,7 +315,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P13 are complete. Primary 2 and Primary 5 share Scholar Village, Harvest Crossing, Tidewater Bay and Lantern Theatre with separate saves and level-specific content and tuning.</p>
+    <p>P0–P14 are complete. Primary 2 and Primary 5 share five regions through Festival City with separate saves and level-specific content and tuning.</p>
     ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>

@@ -1,0 +1,33 @@
+{
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
+  "readingKeyItem": "festival-medallion",
+  "gateKeyName": "Festival Medallion",
+  "bossName": "Grudge Dragon",
+  "bossPlace": "Dragon Gate Arena",
+  "fragmentName": "Harmony Stroke",
+  "fragmentKey": "harmony-stroke",
+  "secretName": "Harmony Pavilion",
+  "passageVillagers": ["mayor-shen", "storyteller", "keeper-bao", "artist-cai", "gardener-ren", "parade-guide", "dragon-warden"],
+  "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 46, "y": 28}],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Mayor Shen", "say": "Welcome to Festival City. Our brightest celebration has become a contest of pride, and old arguments now stalk the streets." },
+      { "speaker": "Mayor Shen", "say": "The Grudge Dragon grows stronger whenever people refuse to listen. Help the city remember how to celebrate together." },
+      { "setFlag": "arrival" }
+    ],
+    "reform": [
+      { "speaker": "Grudge Dragon", "say": "I kept every insult polished like treasure. Each old grievance became another scale on my back." },
+      { "speaker": "Mayor Shen", "say": "Harmony does not erase disagreement. It begins when we listen, repair what was hurt, and move forward together." },
+      { "speaker": "Spirit Brush", "say": "Harmony Stroke restored. The hidden Harmony Pavilion can now be opened." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "harmony-stroke" }
+    ]
+  },
+  "stories": [],
+  "requests": {
+    "keeper-bao": { "name": "Keeper Bao", "lessonSlot": 0, "creature": "ribbon-rat", "count": 2, "reward": "Lion Dance Bell" },
+    "artist-cai": { "name": "Artist Cai", "lessonSlot": 1, "creature": "spark-kite", "count": 2, "reward": "Rainbow Banner" },
+    "gardener-ren": { "name": "Gardener Ren", "lessonSlot": 2, "creature": "boastful-lion", "count": 2, "reward": "Victory Seed Box" }
+  }
+}

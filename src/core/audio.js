@@ -4,6 +4,7 @@ const MUSIC = {
   r2: '../assets/audio/harvest-crossing-bg.mp3',
   r3: '../assets/audio/tidewater-bg.mp3',
   r4: '../assets/audio/lantern-theatre-bg.mp3',
+  r5: '../assets/audio/festival-city-bg.mp3',
   battle: '../assets/audio/music-battle.wav',
   boss: '../assets/audio/music-boss.wav'
 };

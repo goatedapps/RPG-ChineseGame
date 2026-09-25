@@ -18,7 +18,12 @@ export const CREATURES = Object.freeze([
   { id: 'heckle-magpie', name: 'Heckle Magpie', color: '#405780', weak: 'h', attackSkill: 'm' },
   { id: 'straw-soldier', name: 'Straw Soldier', color: '#b78b42', weak: 'u', attackSkill: 'h' },
   { id: 'spotlight-fox', name: 'Spotlight Fox', color: '#cc7445', weak: 'p', attackSkill: 'u' },
-  { id: 'wilt-wisp', name: 'Wilt Wisp', color: '#668657', weak: 'w', attackSkill: 'm' }
+  { id: 'wilt-wisp', name: 'Wilt Wisp', color: '#668657', weak: 'w', attackSkill: 'm' },
+  { id: 'ribbon-rat', name: 'Ribbon Rat', color: '#b74f43', weak: 'm', attackSkill: 'u' },
+  { id: 'drum-gremlin', name: 'Drum Gremlin', color: '#aa4938', weak: 'p', attackSkill: 'm' },
+  { id: 'spark-kite', name: 'Spark Kite', color: '#456ba1', weak: 'h', attackSkill: 'p' },
+  { id: 'quarrel-macaque', name: 'Quarrel Macaque', color: '#697b51', weak: 'u', attackSkill: 'h' },
+  { id: 'boastful-lion', name: 'Boastful Lion', color: '#c35e43', weak: 'w', attackSkill: 'u' }
 ]);
 
 export function createCreature(lesson, balance, random = Math.random, typeId = null) {

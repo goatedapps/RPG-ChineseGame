@@ -5,6 +5,9 @@
   "gateKeyName": "Market Seal",
   "bossName": "Doubt Serpent",
   "bossPlace": "Whispering Granary",
+  "fragmentName": "Truth Stroke",
+  "fragmentKey": "truth-stroke",
+  "secretName": "Truth Terrace",
   "passageVillagers": ["elder-sun", "storyteller", "hawker-lina", "courier-wei", "farmer-tan", "ranger-rui", "gatekeeper"],
   "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 40, "y": 28}],
   "scenes": {

@@ -20,6 +20,12 @@ function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
 }
 
+const FRAGMENT_ART = Object.freeze({
+  'dawn-stroke': '../assets/images/rewards/dawn-stroke.png',
+  'truth-stroke': '../assets/images/rewards/truth-stroke.png',
+  'current-stroke': '../assets/images/rewards/current-stroke.png'
+});
+
 export function splitStoryPage(text) {
   const sentences = String(text).split(/(?<=[。！？!?])\s*|\r?\n+/).map(sentence => sentence.trim()).filter(Boolean);
   if (sentences.length < 2) return [sentences[0] || '', ''];
@@ -147,7 +153,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         if (sceneId === 'reform') {
           if (game.levelPackage.region.id === 'r1') game.state.progress.story.flags.hiddenGrove = true;
           game.state.player.coins += 100;
-          addUnique(game.state.progress.room.trophies, game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke');
+          addUnique(game.state.progress.room.trophies, game.levelPackage.regionStory.fragmentName || (game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke'));
         }
         commit();
         overlay.close();
@@ -166,12 +172,15 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const story = normalizeStory(game.state.progress.story);
     game.state.progress.story = story;
     if (!story.flags.arrival) return playScene('arrival', storyJournal);
-    if (game.levelPackage.region.id === 'r2') {
+    if (game.levelPackage.region.id !== 'r1') {
       const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
       const requestsDone = Object.keys(game.levelPackage.regionStory.requests).filter(id => (story.requests[id] || 0) >= 3).length;
-      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 2</p><h1>Harvest Crossing Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Harvest Crossing</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a crossing story</p><p class="${requestsDone === 3 ? 'done' : ''}">${requestsDone === 3 ? '✓' : '○'} Helped ${requestsDone}/3 neighbours</p><p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Truth Stroke restored' : '○ Face the Doubt Serpent'}</p></div><div class="button-row"><button class="primary" data-storyteller>Visit Storyteller</button><button class="secondary" data-travel-r1>Return to Scholar Village</button></div></div>`);
+      const regionNumber = Number(game.levelPackage.region.id.slice(1));
+      const requestTotal = Object.keys(game.levelPackage.regionStory.requests).length;
+      const fragmentName = game.levelPackage.regionStory.fragmentName || 'Truth Stroke';
+      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p><p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p></div><div class="button-row"><button class="primary" data-storyteller>Visit Storyteller</button><button class="secondary" data-travel-previous>Return to previous region</button></div></div>`);
       document.querySelector('[data-storyteller]').addEventListener('click', storyteller);
-      document.querySelector('[data-travel-r1]').addEventListener('click', () => onSwitchRegion?.('r1'));
+      document.querySelector('[data-travel-previous]').addEventListener('click', () => onSwitchRegion?.(`r${regionNumber - 1}`));
       return;
     }
     if (!story.flags.attic) return playScene('attic', storyJournal);
@@ -297,7 +306,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function gatekeeper() {
     const game = active();
     const story = normalizeStory(game.state.progress.story);
-    if (story.bossDefeated) return game.levelPackage.region.id === 'r1' ? nextRegionGate() : truthTerrace();
+    if (story.bossDefeated) {
+      if (game.levelPackage.region.id === 'r1') return nextRegionGate();
+      if (game.levelPackage.region.id === 'r2') return truthTerrace();
+      return tideVault();
+    }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
     const percent = Math.round(gate.bronze / gate.total * 100);
@@ -366,13 +379,13 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         return;
       }
       if (task.item.format === 'Fill-in') {
-        overlay.open(`<article class="panel question-panel boss-question">${arena()}<p class="panel-kicker">${escapeHtml(task.phase)} · Muddle King HP ${battle.hp}/${battle.maxHp}</p><h2>${escapeHtml(task.item.q)}</h2><label class="answer-field">Your answer<input data-boss-answer autocomplete="off"></label><div class="button-row"><button class="primary" data-boss-check>Break spell</button><button class="secondary" data-boss-giveup>I don't know</button></div></article>`, { dismissible: false });
+        overlay.open(`<article class="panel question-panel boss-question">${arena()}<p class="panel-kicker">${escapeHtml(task.phase)} · ${escapeHtml(game.levelPackage.regionStory.bossName)} HP ${battle.hp}/${battle.maxHp}</p><h2>${escapeHtml(task.item.q)}</h2><label class="answer-field">Your answer<input data-boss-answer autocomplete="off"></label><div class="button-row"><button class="primary" data-boss-check>Break spell</button><button class="secondary" data-boss-giveup>I don't know</button></div></article>`, { dismissible: false });
         const check = answer => finish(checkPassageAnswer(task.item, answer));
         document.querySelector('[data-boss-check]').addEventListener('click', () => check(document.querySelector('[data-boss-answer]').value), { once: true });
         document.querySelector('[data-boss-giveup]').addEventListener('click', () => check(''), { once: true });
         return;
       }
-      showQuestion(overlay, makeExamQuestion(task.item), null, result => finish(result.ok), { title: `${task.phase} · Muddle King HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() });
+      showQuestion(overlay, makeExamQuestion(task.item), null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() });
     };
     next();
   }
@@ -382,30 +395,37 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     playScene('reform', () => {
       audio?.sfx('majorReward');
       const game = active();
-      const r2 = game.levelPackage.region.id === 'r2';
-      const fragment = r2 ? 'truth-stroke' : 'dawn-stroke';
-      const fragmentName = r2 ? 'Truth Stroke' : 'Dawn Stroke';
-      const fragmentArt = r2 ? '../assets/images/rewards/truth-stroke.png' : '../assets/images/rewards/dawn-stroke.png';
-      if (r2) addUnique(game.state.progress.room.trophies, fragmentName);
+      const fragment = game.levelPackage.regionStory.fragmentKey || (game.levelPackage.region.id === 'r2' ? 'truth-stroke' : 'dawn-stroke');
+      const fragmentName = game.levelPackage.regionStory.fragmentName || (game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke');
+      const fragmentArt = FRAGMENT_ART[fragment] || FRAGMENT_ART['dawn-stroke'];
+      if (game.levelPackage.region.id !== 'r1') addUnique(game.state.progress.room.trophies, fragmentName);
       commit();
-      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${r2 ? 'Hidden writing on Truth Terrace can now be revealed.' : 'The hidden grove is open, and the Muddle King now runs the Mistake Museum.'}</p><button class="primary" data-close-overlay>Return to ${escapeHtml(game.levelPackage.region.name)}</button></div>`);
+      const secretText = game.levelPackage.region.id === 'r1' ? 'The hidden grove is open, and the Muddle King now runs the Mistake Museum.' : `${game.levelPackage.regionStory.secretName || 'The hidden place'} can now be opened.`;
+      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p><button class="primary" data-close-overlay>Return to ${escapeHtml(game.levelPackage.region.name)}</button></div>`);
     });
   }
 
   function nextRegionGate() {
     const game = active();
+    const currentNumber = Number(game.levelPackage.region.id.slice(1));
+    const nextNumber = currentNumber + 1;
+    const nextRegionId = `r${nextNumber}`;
+    const nextCampaign = game.levelPackage.campaigns[nextRegionId];
+    if (!nextCampaign) return overlay.dialogue({ title: 'The road ahead', lines: ['This road will open in a future chapter.'] });
     const words = regionWords(game.levelPackage);
     const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
     const required = Math.ceil(words.length * game.levelPackage.regionStory.nextRegionSilverPct);
-    const ready = silver >= required || game.state.settings.testMode;
-    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region 2. Gold spirits are optional bonuses.</p><div class="button-row">${ready ? '<button class="primary" data-travel-r2>Travel to Harvest Crossing</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
-    document.querySelector('[data-travel-r2]')?.addEventListener('click', () => {
-      game.state.settings.unlockedRegions = Math.max(2, game.state.settings.unlockedRegions);
-      onSwitchRegion?.('r2');
+    const fragmentReady = Boolean(game.state.progress.story.bossDefeated);
+    const ready = (silver >= required && fragmentReady) || game.state.settings.testMode;
+    const fragmentName = game.levelPackage.regionStory.fragmentName || (currentNumber === 1 ? 'Dawn Stroke' : 'Truth Stroke');
+    overlay.open(`<div class="panel"><p class="panel-kicker">Road to ${escapeHtml(nextCampaign.region.name)}</p><h1>${fragmentReady ? `${escapeHtml(fragmentName)} restored` : `Defeat the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region ${nextNumber}. Gold spirits are optional bonuses.</p><div class="button-row">${ready ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    document.querySelector('[data-travel-next]')?.addEventListener('click', () => {
+      game.state.settings.unlockedRegions = Math.max(nextNumber, game.state.settings.unlockedRegions);
+      onSwitchRegion?.(nextRegionId);
     });
   }
 
-  function regionTwoRequest(id) {
+  function regionalRequest(id) {
     const game = active();
     const story = normalizeStory(game.state.progress.story);
     const request = game.levelPackage.regionStory.requests[id];
@@ -415,8 +435,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const ready = step === 0 ? collected >= 3 : step === 1 ? (story.counters.creatures[request.creature] || 0) >= request.count : step === 2 ? story.storiesRead.includes(request.lesson) : false;
     const tasks = [`Collect three Lesson ${request.lesson} Spirit cards (${collected}/3).`, `Defeat ${request.count} ${request.creature.split('-').join(' ')} creatures (${story.counters.creatures[request.creature] || 0}/${request.count}).`, `Hear the Lesson ${request.lesson} story from the Storyteller.`];
     if (step >= 3) return overlay.dialogue({ title: request.name, lines: [`Thank you. ${request.reward} has brought neighbours together again.`] });
-    overlay.open(`<div class="panel"><p class="panel-kicker">Harvest Crossing request · ${step + 1}/3</p><h1>${escapeHtml(request.name)}</h1><p>${escapeHtml(tasks[step])}</p><div class="button-row">${ready ? `<button class="primary" data-r2-request>Complete step</button>` : ''}<button class="secondary" data-close-overlay>Later</button></div></div>`);
-    document.querySelector('[data-r2-request]')?.addEventListener('click', () => {
+    overlay.open(`<div class="panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} request · ${step + 1}/3</p><h1>${escapeHtml(request.name)}</h1><p>${escapeHtml(tasks[step])}</p><div class="button-row">${ready ? `<button class="primary" data-regional-request>Complete step</button>` : ''}<button class="secondary" data-close-overlay>Later</button></div></div>`);
+    document.querySelector('[data-regional-request]')?.addEventListener('click', () => {
       story.requests[id] = step + 1;
       game.state.progress.story = story;
       if (story.requests[id] === 3) {
@@ -426,7 +446,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       }
       recordEvent('villager-help', { id });
       commit();
-      regionTwoRequest(id);
+      regionalRequest(id);
     }, { once: true });
   }
 
@@ -439,6 +459,17 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'Truth Terrace', type: 'Secret Scroll', text: 'Ask clearly. Check carefully. Speak kindly.' });
     commit();
     overlay.open('<div class="panel result-panel"><p class="panel-kicker">Truth Stroke secret</p><h1>The hidden words shine</h1><p>“Ask clearly. Check carefully. Speak kindly.” You found a Secret Scroll and 60 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
+  }
+
+  function tideVault() {
+    const game = active();
+    if (!game.state.progress.story.bossDefeated) return overlay.dialogue({ title: 'Current-shaped lock', lines: ['The Tide Vault waits for the Current Stroke.'] });
+    if (game.state.progress.story.flags.tideVault) return overlay.dialogue({ title: 'Tide Vault', lines: ['The rescue log reads: “A moment used kindly is never wasted.”'] });
+    game.state.progress.story.flags.tideVault = true;
+    game.state.player.coins += 70;
+    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'Tide Vault Rescue Log', type: 'Secret Scroll', text: 'A moment used kindly is never wasted.' });
+    commit();
+    overlay.open('<div class="panel result-panel"><p class="panel-kicker">Current Stroke secret</p><h1>The Tide Vault opens</h1><p>The rescued whale’s first journey is recorded inside. You found a Secret Scroll and 70 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
   }
 
   function mistakeMuseum() {
@@ -476,14 +507,27 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     };
     if (gameRegion() === 'r2') {
       handlers['elder-sun'] = storyJournal;
-      handlers['hawker-lina'] = () => regionTwoRequest('hawker-lina');
-      handlers['hawker-centre'] = () => regionTwoRequest('hawker-lina');
-      handlers['courier-wei'] = () => regionTwoRequest('courier-wei');
+      handlers['hawker-lina'] = () => regionalRequest('hawker-lina');
+      handlers['hawker-centre'] = () => regionalRequest('hawker-lina');
+      handlers['courier-wei'] = () => regionalRequest('courier-wei');
       handlers['granary-door'] = gatekeeper;
-      handlers['farmer-tan'] = () => regionTwoRequest('farmer-tan');
-      handlers['hill-house'] = () => regionTwoRequest('farmer-tan');
+      handlers['farmer-tan'] = () => regionalRequest('farmer-tan');
+      handlers['hill-house'] = () => regionalRequest('farmer-tan');
       handlers['return-gate'] = () => onSwitchRegion?.('r1');
+      handlers['next-region-gate'] = nextRegionGate;
       handlers['truth-terrace'] = truthTerrace;
+    }
+    if (gameRegion() === 'r3') {
+      handlers['keeper-lan'] = storyJournal;
+      handlers['fisher-yu'] = () => regionalRequest('fisher-yu');
+      handlers['rescue-dock'] = () => regionalRequest('fisher-yu');
+      handlers['maker-chen'] = () => regionalRequest('maker-chen');
+      handlers['watcher-an'] = () => regionalRequest('watcher-an');
+      handlers['tide-workshop'] = () => regionalRequest('watcher-an');
+      handlers['clock-tower-door'] = gatekeeper;
+      handlers['clock-warden'] = gatekeeper;
+      handlers['return-gate'] = () => onSwitchRegion?.('r2');
+      handlers['tide-vault'] = tideVault;
     }
     if (!handlers[object.id]) return false;
     handlers[object.id]();

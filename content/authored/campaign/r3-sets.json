@@ -1,0 +1,12 @@
+{
+  "p2": [
+    { "id": "harbour-breakfast", "name": "Harbour Breakfast", "words": ["奶茶", "炒饭", "青菜", "早餐"], "restoration": "The rescue crew's breakfast stall opens before dawn." },
+    { "id": "helping-hands", "name": "Helping Hands", "words": ["医生", "护士", "照顾", "消防员"], "restoration": "The harbour rescue station is staffed again." },
+    { "id": "weather-watch", "name": "Weather Watch", "words": ["阴", "晴", "乌云密布", "雨伞"], "restoration": "The Clock Tower's weather vane turns again." }
+  ],
+  "p5": [
+    { "id": "whale-rescue", "name": "Whale Rescue", "words": ["浮出", "水柱", "深海", "巨大"], "restoration": "The deep-water route for the young whale is restored." },
+    { "id": "future-clock", "name": "Future Clock", "words": ["机器人", "未来", "光阴似箭", "一眨眼"], "restoration": "Maker Chen's clockwork guide begins moving again." },
+    { "id": "shore-and-sea", "name": "Shore and Sea", "words": ["浅海", "陆地", "足迹", "随着"], "restoration": "The harbour's tide markers become readable again." }
+  ]
+}

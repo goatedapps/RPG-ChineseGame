@@ -315,7 +315,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P11 are complete. Primary 2 and Primary 5 share Scholar Village and Harvest Crossing with separate saves and level-specific content and tuning.</p>
+    <p>P0–P12 are complete. Primary 2 and Primary 5 share Scholar Village, Harvest Crossing and Tidewater Bay with separate saves and level-specific content and tuning.</p>
     ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>

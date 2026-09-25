@@ -1,0 +1,33 @@
+{
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
+  "readingKeyItem": "harbour-chronometer",
+  "gateKeyName": "Harbour Chronometer",
+  "bossName": "Idle Clock",
+  "bossPlace": "Silent Clock Tower",
+  "fragmentName": "Current Stroke",
+  "fragmentKey": "current-stroke",
+  "secretName": "Tide Vault",
+  "passageVillagers": ["keeper-lan", "storyteller", "fisher-yu", "maker-chen", "watcher-an", "harbour-guide", "clock-warden"],
+  "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 40, "y": 28}],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Keeper Lan", "say": "Welcome to Tidewater Bay. The Great Forgetter has stopped our Clock Tower, and the sea can no longer remember when to rise or fall." },
+      { "speaker": "Keeper Lan", "say": "A young whale is stranded in the shallows. Restore the harbour words, help the rescue crew, and set time moving again." },
+      { "setFlag": "arrival" }
+    ],
+    "reform": [
+      { "speaker": "Idle Clock", "say": "I let every useful moment drift away. If time never moves, no one can finish what they begin." },
+      { "speaker": "Keeper Lan", "say": "Rest is precious, but a life without purpose is only a stopped clock." },
+      { "speaker": "Spirit Brush", "say": "Current Stroke restored. The hidden Tide Vault can now be opened." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "current-stroke" }
+    ]
+  },
+  "stories": [],
+  "requests": {
+    "fisher-yu": { "name": "Fisher Yu", "lessonSlot": 0, "creature": "tangle-crab", "count": 2, "reward": "Rescue Rope" },
+    "maker-chen": { "name": "Maker Chen", "lessonSlot": 1, "creature": "rust-gull", "count": 2, "reward": "Tide Gauge" },
+    "watcher-an": { "name": "Watcher An", "lessonSlot": 2, "creature": "minute-mite", "count": 2, "reward": "Clock Garden Bell" }
+  }
+}

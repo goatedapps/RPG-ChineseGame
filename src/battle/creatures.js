@@ -3,7 +3,12 @@ export const CREATURES = Object.freeze([
   { id: 'echo-bat', name: 'Echo Bat', color: '#3d9c9a', weak: 'p', attackSkill: 'p' },
   { id: 'twin-shade', name: 'Twin Shade', color: '#4a5a86', weak: 'h', attackSkill: 'h' },
   { id: 'jumble-bug', name: 'Jumble Bug', color: '#d98a3a', weak: 'u', attackSkill: 'u' },
-  { id: 'ink-imp', name: 'Ink Imp', color: '#3b3f55', weak: 'w', attackSkill: 'h' }
+  { id: 'ink-imp', name: 'Ink Imp', color: '#3b3f55', weak: 'w', attackSkill: 'h' },
+  { id: 'chaff-sprite', name: 'Chaff Sprite', color: '#d8a63c', weak: 'm', attackSkill: 'u' },
+  { id: 'rumour-crow', name: 'Rumour Crow', color: '#243640', weak: 'h', attackSkill: 'm' },
+  { id: 'price-mimic', name: 'Price Mimic', color: '#a94f3d', weak: 'u', attackSkill: 'p' },
+  { id: 'doubt-moth', name: 'Doubt Moth', color: '#7e6a9c', weak: 'p', attackSkill: 'h' },
+  { id: 'forked-gecko', name: 'Forked Gecko', color: '#6f9b54', weak: 'w', attackSkill: 'u' }
 ]);
 
 export function createCreature(lesson, balance, random = Math.random, typeId = null) {
@@ -23,4 +28,3 @@ export function createCreature(lesson, balance, random = Math.random, typeId = n
     fleeAfter: variant === 'golden' ? 4 : null
   };
 }
-

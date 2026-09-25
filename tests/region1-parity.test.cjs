@@ -126,7 +126,7 @@ test('schema 2 modular saves migrate without losing progress', async () => {
     progress: { words: { '露营': { collected: true } }, battles: 9 }, settings: { dailyBattles: 20 }
   };
   const migrated = migrateState(old, levelPackage);
-  assert.equal(SAVE_SCHEMA_VERSION, 5);
+  assert.equal(SAVE_SCHEMA_VERSION, 6);
   assert.equal(migrated.player.level, 4);
   assert.equal(migrated.player.coins, 77);
   assert.equal(migrated.progress.words['露营'].collected, true);

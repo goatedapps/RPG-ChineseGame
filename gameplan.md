@@ -7,9 +7,9 @@ Every creature contains a collectible vocabulary word, and combat actions are po
 Primary 2 and Primary 5 use the same engine, world, cast and campaign with separate curriculum packs and saves.
 The intended session is 30–60 minutes, but the game has no mandatory timer.
 
-The current release contains the complete shared Region 1 vertical slice for P2 Lessons 1–3 and P5 Lessons 1–3.
-P0–P10 and the physical tablet pilot are complete.
-The next development phase is P11 Region 2.
+The current release contains complete shared Regions 1–2: Scholar Village for Lessons 1–3 and Harvest Crossing for Lessons 4–6 in both curricula.
+P0–P11 and the physical tablet pilot are complete.
+The next development phase is P12 Tidewater Bay and Clock Tower.
 
 Production URLs:
 
@@ -175,6 +175,7 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | Parity | Random encounters, audio, D-pad, rotating goals, wandering villagers, passage distribution, enemy spells, streak combat, rare variants and level-up presentation. |
 | P9 | P2 Lessons 1–3 in the shared world with younger tuning, compatible story words and separate progress. |
 | P10 engineering | Recovery, offline cache, accessibility, responsive checks and pilot checklist. |
+| P11 | Harvest Crossing, regional travel saves, Lessons 4–6, five creatures, Doubt Serpent, Truth Stroke and Truth Terrace. |
 
 ## Remaining roadmap
 
@@ -182,9 +183,9 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 
 The child-and-parent tablet session in `PILOT.md` is complete.
 Its Cave Lantern celebration and Inn onboarding findings have been implemented with regression coverage.
-P11 is unblocked.
+P11 was completed after this gate passed.
 
-### P11–P16 shared Regions 2–7
+### P12–P16 shared Regions 3–7
 
 Build each region once for both curricula.
 Each region needs its mapped lessons, a distinct larger hub, core services, purposeful special buildings, residents, passage chain, requests, creatures, Restoration Sets, boss, Brush Fragment and fragment-opened secret.
@@ -194,7 +195,6 @@ The planned P5 campaign is:
 
 | Phase | Region | P5 lessons | Theme and boss |
 |---|---|---:|---|
-| P11 | Harvest Crossing | 4–6 | Market, hawker centre, hill village and Doubt Serpent. |
 | P12 | Tidewater Bay and Clock Tower | 7–8 | Whale rescue and Idle Clock. |
 | P13 | Lantern Theatre and Farm Fields | 9–10 | Performance, farming and Mocking Mirror. |
 | P14 | Festival City | 11–12 | Martial arts, celebration and Grudge Dragon. |

@@ -6,7 +6,13 @@ const CREATURE_IMAGES = {
   'twin-shade': 'twin-shade.png',
   'jumble-bug': 'jumble-bug.png',
   'ink-imp': 'ink-imp.png',
-  'muddle-king': 'muddle-king.png'
+  'muddle-king': 'muddle-king.png',
+  'chaff-sprite': 'chaff-sprite.png',
+  'rumour-crow': 'rumour-crow.png',
+  'price-mimic': 'price-mimic.png',
+  'doubt-moth': 'doubt-moth.png',
+  'forked-gecko': 'forked-gecko.png',
+  'doubt-serpent': 'doubt-serpent.png'
 };
 
 export function creatureSvg(id, word = '字') {

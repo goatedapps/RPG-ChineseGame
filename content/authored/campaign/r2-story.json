@@ -1,0 +1,30 @@
+{
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
+  "readingKeyItem": "market-seal",
+  "gateKeyName": "Market Seal",
+  "bossName": "Doubt Serpent",
+  "bossPlace": "Whispering Granary",
+  "passageVillagers": ["elder-sun", "storyteller", "hawker-lina", "courier-wei", "farmer-tan", "ranger-rui", "gatekeeper"],
+  "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 40, "y": 28}],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Elder Sun", "say": "Welcome to Harvest Crossing. Rumours are twisting every sign, price and promise." },
+      { "speaker": "Elder Sun", "say": "Listen carefully in the market, help our neighbours, and follow evidence up the hill." },
+      { "setFlag": "arrival" }
+    ],
+    "reform": [
+      { "speaker": "Doubt Serpent", "say": "I made every question coil into another question. I thought uncertainty made me powerful." },
+      { "speaker": "Elder Sun", "say": "A good question opens a path. A rumour only hides it." },
+      { "speaker": "Spirit Brush", "say": "Truth Stroke restored. Hidden writing can now be revealed." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "truth-stroke" }
+    ]
+  },
+  "stories": [],
+  "requests": {
+    "hawker-lina": { "name": "Hawker Lina", "lesson": 4, "creature": "chaff-sprite", "count": 2, "reward": "Community Meal" },
+    "courier-wei": { "name": "Courier Wei", "lesson": 5, "creature": "rumour-crow", "count": 2, "reward": "Courier Charm" },
+    "farmer-tan": { "name": "Farmer Tan", "lesson": 6, "creature": "forked-gecko", "count": 2, "reward": "Hill Rice Bundle" }
+  }
+}

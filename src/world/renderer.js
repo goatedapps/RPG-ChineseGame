@@ -22,14 +22,14 @@ function drawTree(context, x, y) {
 function drawTile(context, map, tile, x, y, column, row, tick) {
   const definition = map.legend[tile];
   context.fillStyle = definition.color;
-  context.fillRect(x, y, TILE, TILE);
-  if (tile === 'g' || tile === 'f') {
+  context.fillRect(Math.floor(x), Math.floor(y), TILE + 1, TILE + 1);
+  if (tile === 'g' || tile === 'f' || tile === 'r' || tile === 'h') {
     const hash = (column * 17 + row * 23) % 31;
     context.fillStyle = tile === 'f' ? (hash % 2 ? '#f1c34f' : '#efa2ae') : 'rgba(255,255,255,.16)';
     context.beginPath();
     context.arc(x + 7 + hash % 18, y + 8 + hash % 13, tile === 'f' ? 3 : 2, 0, Math.PI * 2);
     context.fill();
-    const zone = tile === 'g' ? zoneAt(map, column, row) : null;
+    const zone = ['g', 'r', 'h'].includes(tile) ? zoneAt(map, column, row) : null;
     if (zone) {
       context.fillStyle = `${zone.tint}b8`;
       for (let blade = 0; blade < 4; blade += 1) {
@@ -42,6 +42,17 @@ function drawTile(context, map, tile, x, y, column, row, tick) {
         context.fill();
       }
     }
+  }
+  if (tile === 'r') {
+    context.strokeStyle = 'rgba(82,105,38,.55)';
+    context.lineWidth = 2;
+    for (let line = 6; line < 32; line += 9) {
+      context.beginPath(); context.moveTo(x, y + line); context.lineTo(x + 32, y + line); context.stroke();
+    }
+  }
+  if (tile === 'h') {
+    context.fillStyle = 'rgba(50,66,42,.2)';
+    context.beginPath(); context.arc(x + 7 + (column * 9 % 18), y + 21, 4, 0, Math.PI * 2); context.fill();
   }
   if (tile === 'p') {
     context.fillStyle = 'rgba(105,76,34,.16)';
@@ -223,8 +234,8 @@ export function createRenderer(canvas, map) {
     const worldHeight = map.height * TILE;
     const playerPx = state.player.x * TILE;
     const playerPy = state.player.y * TILE;
-    const offsetX = Math.max(0, Math.min(worldWidth - viewWidth, playerPx - viewWidth / 2 + TILE / 2));
-    const offsetY = Math.max(0, Math.min(worldHeight - viewHeight, playerPy - viewHeight / 2 + TILE / 2));
+    const offsetX = Math.round(Math.max(0, Math.min(worldWidth - viewWidth, playerPx - viewWidth / 2 + TILE / 2)));
+    const offsetY = Math.round(Math.max(0, Math.min(worldHeight - viewHeight, playerPy - viewHeight / 2 + TILE / 2)));
     const firstColumn = Math.floor(offsetX / TILE);
     const firstRow = Math.floor(offsetY / TILE);
     const lastColumn = Math.min(map.width - 1, Math.ceil((offsetX + viewWidth) / TILE));

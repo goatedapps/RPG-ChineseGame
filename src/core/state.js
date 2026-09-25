@@ -1,4 +1,4 @@
-export const SAVE_SCHEMA_VERSION = 5;
+export const SAVE_SCHEMA_VERSION = 6;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -52,6 +52,7 @@ export function createFreshState(levelPackage) {
       },
       reading: { completed: [], active: null, index: 0, questionCount: 0, results: {}, written: [] },
       accuracy: {}
+      ,regions: {}
     },
     settings: {
       dailyBattles: 30,
@@ -134,6 +135,7 @@ export function migrateState(candidate, levelPackage) {
         },
         reading: { ...fresh.progress.reading, ...(candidate.progress?.reading || {}) },
         accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
+        ,regions: { ...(candidate.progress?.regions || {}) }
       },
       settings: { ...fresh.settings, ...(candidate.settings || {}) },
       session: { ...fresh.session, ...(candidate.session || {}) }

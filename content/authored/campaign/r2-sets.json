@@ -1,0 +1,12 @@
+{
+  "p2": [
+    { "id": "forest-shapes", "name": "Forest Shapes", "words": ["棵", "树林", "圆形", "三角形"], "restoration": "The market's paper-cut forest display is restored." },
+    { "id": "finding-the-way", "name": "Finding the Way", "words": ["哪里", "旁边", "向", "往", "转"], "restoration": "The crossing's direction signs become clear again." },
+    { "id": "safe-journey", "name": "Safe Journey", "words": ["行人", "天桥", "等", "停", "绿灯"], "restoration": "The hill road's safe crossing lights shine again." }
+  ],
+  "p5": [
+    { "id": "open-pantry", "name": "Open Pantry", "words": ["捐出", "新鲜", "邀请", "存放"], "restoration": "The hawker centre's community pantry reopens." },
+    { "id": "clear-evidence", "name": "Clear Evidence", "words": ["根据", "怀疑", "测试", "碎片"], "restoration": "The market noticeboard displays verified facts again." },
+    { "id": "honest-breakfast", "name": "Honest Breakfast", "words": ["联系", "号码", "诚实", "善良"], "restoration": "The hill village shares breakfast together again." }
+  ]
+}

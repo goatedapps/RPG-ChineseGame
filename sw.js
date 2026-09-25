@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p10-v18';
+const CACHE = 'word-spirit-quest-p11-v19';
 const CORE = [
   './game/', './game/index.html', './manifest.webmanifest',
   './css/tokens.css', './css/base.css', './css/stage.css',
@@ -6,8 +6,8 @@ const CORE = [
   './content/authored/shared/levels.json', './content/authored/shared/balance.json', './content/authored/shared/strings.json',
   './content/authored/shared/items.json', './content/authored/shared/gear.json', './content/authored/shared/recipes.json',
   './content/authored/shared/milestones.json', './content/authored/shared/word-tags.json',
-  './content/authored/campaign/regions.json', './content/authored/campaign/maps/r1-hub.json',
-  './content/authored/campaign/r1-story.json', './content/authored/campaign/r1-sets.json', './content/authored/campaign/daily-quests.json',
+  './content/authored/campaign/regions.json', './content/authored/campaign/maps/r1-hub.json', './content/authored/campaign/maps/r2-harvest-crossing.json',
+  './content/authored/campaign/r1-story.json', './content/authored/campaign/r1-sets.json', './content/authored/campaign/r2-story.json', './content/authored/campaign/r2-sets.json', './content/authored/campaign/daily-quests.json',
   './content/authored/levels/p2/level.json', './content/authored/levels/p5/level.json',
   './content/generated/p2.content.json', './content/generated/p2.chars.json', './content/generated/p5.content.json', './content/generated/p5.chars.json'
 ];
@@ -16,12 +16,12 @@ const RUNTIME = [
   './src/battle/battle.js', './src/battle/creatureArt.js', './src/battle/creatures.js', './src/battle/damage.js',
   './src/core/audio.js', './src/core/events.js', './src/core/rng.js', './src/core/safe.js', './src/core/save.js', './src/core/state.js', './src/core/time.js',
   './src/learning/audio.js', './src/learning/examAdapters.js', './src/learning/mastery.js', './src/learning/pinyin.js', './src/learning/questions.js', './src/learning/selection.js', './src/learning/writing.js',
-  './src/systems/crafting.js', './src/systems/daily.js', './src/systems/economy.js', './src/systems/energy.js', './src/systems/gear.js', './src/systems/inventory.js', './src/systems/milestones.js', './src/systems/parent.js', './src/systems/partners.js', './src/systems/reading.js', './src/systems/school.js', './src/systems/sets.js', './src/systems/story.js',
+  './src/systems/crafting.js', './src/systems/daily.js', './src/systems/economy.js', './src/systems/energy.js', './src/systems/gear.js', './src/systems/inventory.js', './src/systems/milestones.js', './src/systems/parent.js', './src/systems/partners.js', './src/systems/reading.js', './src/systems/regions.js', './src/systems/school.js', './src/systems/sets.js', './src/systems/story.js',
   './src/ui/dom.js', './src/ui/hud.js', './src/ui/overlay.js', './src/ui/questionView.js', './src/ui/toast.js', './src/ui/writingView.js',
   './src/world/encounters.js', './src/world/input.js', './src/world/map.js', './src/world/npcs.js', './src/world/renderer.js',
-  './assets/images/creatures/muddle-king.png', './assets/images/creatures/fogling.png', './assets/images/creatures/echo-bat.png', './assets/images/creatures/twin-shade.png', './assets/images/creatures/jumble-bug.png', './assets/images/creatures/ink-imp.png',
+  './assets/images/creatures/muddle-king.png', './assets/images/creatures/fogling.png', './assets/images/creatures/echo-bat.png', './assets/images/creatures/twin-shade.png', './assets/images/creatures/jumble-bug.png', './assets/images/creatures/ink-imp.png', './assets/images/creatures/chaff-sprite.png', './assets/images/creatures/rumour-crow.png', './assets/images/creatures/price-mimic.png', './assets/images/creatures/doubt-moth.png', './assets/images/creatures/forked-gecko.png', './assets/images/creatures/doubt-serpent.png',
   './assets/images/hero/main-hero.png', './assets/images/shop/shop-background.png',
-  './assets/images/rewards/cave-lantern.png', './assets/images/rewards/dawn-stroke.png',
+  './assets/images/rewards/cave-lantern.png', './assets/images/rewards/dawn-stroke.png', './assets/images/rewards/market-seal.png', './assets/images/rewards/truth-stroke.png',
   './assets/images/shop/rice-ball.png', './assets/images/shop/instant-noodles.png', './assets/images/shop/mooncake.png', './assets/images/shop/scholars-lantern.png', './assets/images/shop/ink-pot.png', './assets/images/shop/smoke-ball.png', './assets/images/shop/lucky-knot.png', './assets/images/shop/power-tea.png', './assets/images/shop/guardian-talisman.png', './assets/images/shop/forest-repellent.png', './assets/images/shop/spirit-bait.png', './assets/images/shop/red-cap.png',
   './assets/audio/bag-open.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/level-up.mp3', './assets/audio/major-reward.wav', './assets/audio/music-battle.wav', './assets/audio/music-boss.wav', './assets/audio/music-village.wav', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
 ];

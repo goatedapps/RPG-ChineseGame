@@ -38,6 +38,7 @@ const SHOP_ITEM_COPY = Object.freeze({
 const itemDescription = item => (SHOP_ITEM_COPY[item.effect]?.(item) || item.effect);
 const itemIcon = id => `../assets/images/shop/${id}.png`;
 const rewardArt = (id, name) => `<div class="major-reward"><img src="../assets/images/rewards/${id}.png" alt="${escapeHtml(name)}"><div><p class="panel-kicker">Major reward</p><h1>${escapeHtml(name)} received!</h1></div></div>`;
+const passageRewardArt = (id, name) => id === 'cave-lantern' ? rewardArt('cave-lantern', 'Cave Lantern') : rewardArt(id, name);
 
 function addXp(player, amount, { xpMultiplier = 1, maxHpBonus = 0 } = {}) {
   let level = player.level;
@@ -256,7 +257,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const variantCoins = battle.creature.variant === 'elite' ? 6 : battle.creature.variant === 'golden' ? 12 : 0;
     game.state.player.coins += variantCoins;
     if (battle.doubleCoins) game.state.player.coins += baseRewards.coins;
-    const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead' };
+    const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter' };
     const material = materialByCreature[battle.creature.id];
     const pouch = game.state.progress.inventory['material-pouch'] ? 2 : 1;
     game.state.progress.materials[material] = (game.state.progress.materials[material] || 0) + pouch;
@@ -343,7 +344,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function rivalDuel(onDone) {
     const game = active();
-    const words = [...game.levelPackage.content.words.filter(word => game.levelPackage.config.regionLessons.r1.includes(word.lesson))].sort(() => Math.random() - 0.5).slice(0, 5);
+    const regionLessons = game.levelPackage.config.regionLessons[game.levelPackage.region.id] || [];
+    const words = [...game.levelPackage.content.words.filter(word => regionLessons.includes(word.lesson))].sort(() => Math.random() - 0.5).slice(0, 5);
     let index = 0;
     let score = 0;
     const next = () => {
@@ -521,9 +523,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const done = Object.keys(reading.results).length >= reading.questionCount;
     if (done) {
       const standard = group.subject !== 'Higher Chinese';
-      const first = standard && !(game.state.progress.inventory.keyItems || []).includes(game.levelPackage.balance.reading.keyItem);
+      const readingKey = game.levelPackage.regionStory.readingKeyItem || game.levelPackage.balance.reading.keyItem;
+      const readingKeyName = game.levelPackage.regionStory.gateKeyName || 'Cave Lantern';
+      const first = standard && !(game.state.progress.inventory.keyItems || []).includes(readingKey);
       if (standard) {
-        const completed = completePassage(reading, group.id, game.levelPackage.balance.reading.keyItem, game.state.progress.inventory);
+        const completed = completePassage(reading, group.id, readingKey, game.state.progress.inventory);
         game.state.progress.reading = completed.reading;
         game.state.progress.inventory = completed.inventory;
       } else game.state.progress.reading = { ...reading, active: null, index: 0, questionCount: 0, results: {}, completed: [...new Set([...reading.completed, group.id])] };
@@ -532,7 +536,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (!scrolls.some(entry => entry.id === `reading-${group.id}`)) scrolls.unshift({ id: `reading-${group.id}`, day: localDay(), title: group.passage.title, type: group.subject === 'Higher Chinese' ? 'Higher Chinese Passage' : 'Reading Hall Passage', text: group.passage.text });
       commit();
       audio?.sfx(first ? 'majorReward' : game.state.player.level > beforeLevel.level ? 'level' : 'win');
-      return overlay.open(`<div class="panel result-panel ${first ? 'major-reward-panel' : ''}">${first ? rewardArt('cave-lantern', 'Cave Lantern') : '<h1>Passage complete!</h1>'}<p>${first ? 'The villagers made this lantern for you. Its light opens the way to Muddle Cave.' : 'You received 30 coins and a Rice Ball.'} The passage is now in the Scroll Library.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
+      return overlay.open(`<div class="panel result-panel ${first ? 'major-reward-panel' : ''}">${first ? passageRewardArt(readingKey, readingKeyName) : '<h1>Passage complete!</h1>'}<p>${first ? `The people of ${escapeHtml(game.levelPackage.region.name)} entrusted this key item to you. It opens the way to ${escapeHtml(game.levelPackage.regionStory.bossPlace || 'Muddle Cave')}.` : 'You received 30 coins and a Rice Ball.'} The passage is now in the Scroll Library.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
     }
     commit();
     playLevelUp(beforeLevel, game.state.player);
@@ -542,13 +546,15 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   function runPassage(group, index, correct) {
     const game = active();
     if (index >= group.items.length) {
-      const completed = completePassage(game.state.progress.reading, group.id, game.levelPackage.balance.reading.keyItem, game.state.progress.inventory);
+      const readingKey = game.levelPackage.regionStory.readingKeyItem || game.levelPackage.balance.reading.keyItem;
+      const readingKeyName = game.levelPackage.regionStory.gateKeyName || 'Cave Lantern';
+      const completed = completePassage(game.state.progress.reading, group.id, readingKey, game.state.progress.inventory);
       game.state.progress.reading = completed.reading;
       game.state.progress.inventory = completed.inventory;
       game.state.player.coins += game.levelPackage.balance.reading.completionCoins;
       commit();
       audio?.sfx('majorReward');
-      return overlay.open(`<div class="panel result-panel major-reward-panel"><p class="panel-kicker">Passage complete · ${correct}/${group.items.length} auto-marked correct</p>${rewardArt('cave-lantern', 'Cave Lantern')}<p>${escapeHtml(game.levelPackage.strings.readingComplete)}</p><button class="primary" data-close-overlay>Continue</button></div>`);
+      return overlay.open(`<div class="panel result-panel major-reward-panel"><p class="panel-kicker">Passage complete · ${correct}/${group.items.length} auto-marked correct</p>${passageRewardArt(readingKey, readingKeyName)}<p>${escapeHtml(game.levelPackage.strings.readingComplete)}</p><button class="primary" data-close-overlay>Continue</button></div>`);
     }
     const item = group.items[index];
     if (item.format === 'MCQ') {
@@ -644,7 +650,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function spiritBook(selectedLesson = null) {
     const game = active();
-    const lessons = game.levelPackage.config.regionLessons.r1;
+    const lessons = game.levelPackage.config.regionLessons[game.levelPackage.region.id] || [];
     const words = game.levelPackage.content.words.filter(word => lessons.includes(word.lesson));
     const lessonNumbers = [...new Set(words.map(word => word.lesson))].sort((a, b) => a - b);
     const lesson = lessonNumbers.includes(Number(selectedLesson)) ? Number(selectedLesson) : lessonNumbers[0];

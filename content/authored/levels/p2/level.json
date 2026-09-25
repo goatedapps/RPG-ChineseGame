@@ -24,7 +24,7 @@
     "readingChunk": "small",
     "balance": {
       "combat": {
-        "lessonLevels": { "1": [1, 2], "2": [4, 6], "3": [7, 9] },
+        "lessonLevels": { "1": [1, 2], "2": [4, 6], "3": [7, 9], "4": [10, 12], "5": [13, 15], "6": [16, 18] },
         "baseEnemyHp": 6,
         "hpPerLevel": 3,
         "baseEnemyAttack": 3,

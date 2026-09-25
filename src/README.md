@@ -15,5 +15,5 @@ The intended module boundaries are:
 Engine modules must not contain P2 or P5 constants.
 The content loader combines one shared campaign with the selected level package.
 
-Primary 2 and Primary 5 share the Region 1 runtime with separate saves, level-specific story bindings, feature flags and tuning.
+Primary 2 and Primary 5 share the Regions 1–2 runtime with separate saves, level-specific story bindings, feature flags and tuning.
 `game/lab.html?debug=1` exercises generated Meaning, Pinyin, Hanzi and Usage questions, enabled real-exam adapters, speech and all three local Hanzi Writer stages for either curriculum.

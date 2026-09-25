@@ -3,7 +3,8 @@
 ## Decision
 
 The physical child-and-parent tablet pilot is complete.
-The build is a **go for P11 Region 2** after the recorded follow-up fixes passed regression checks.
+The build was a **go for P11 Region 2** after the recorded follow-up fixes passed regression checks.
+P11 has since been completed; this record remains the physical-device evidence that cleared its expansion gate.
 
 ## Completed engineering checks
 
@@ -34,4 +35,5 @@ The build is a **go for P11 Region 2** after the recorded follow-up fixes passed
 ## Expansion gate
 
 The P10 physical-device gate has passed.
-P11 Region 2 may begin while future device findings continue through the normal feedback cycle.
+P11 Region 2 was completed after this gate passed.
+Future device findings continue through the normal feedback cycle.

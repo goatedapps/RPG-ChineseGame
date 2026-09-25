@@ -1,6 +1,7 @@
 import { localDay } from '../core/time.js';
 
 export function updateHud(elements, levelPackage, state) {
+  if (elements.region) elements.region.textContent = levelPackage.region.name;
   elements.level.textContent = levelPackage.label;
   elements.location.textContent = levelPackage.map.name;
   elements.playerLevel.textContent = state.player.level;

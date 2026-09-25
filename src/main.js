@@ -1,6 +1,6 @@
 import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10d';
-import { listLevels, loadLevelPackage } from './content/loader.js?p10d';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p11';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p10n';
 import { bindInput } from './world/input.js?p10n';
@@ -16,6 +16,7 @@ import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p10n';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
 import { tierOf } from './learning/mastery.js?p10f';
+import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p11';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -23,6 +24,7 @@ const toast = createToast($('#toast'));
 const events = createEventBus();
 const audio = createAudioManager();
 const hud = {
+  region: $('#hud-region'),
   level: $('#hud-level'),
   location: $('#hud-location'),
   playerLevel: $('#hud-player-level'),
@@ -53,6 +55,7 @@ function render() {
   if (!active) return;
   const canvas = $('#world');
   const stage = $('#game-stage');
+  stage.setAttribute('aria-label', `${active.levelPackage.region.name} map`);
   const width = Math.max(320, Math.round(stage.clientWidth));
   const height = Math.max(320, Math.round(stage.clientHeight));
   if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
@@ -118,11 +121,12 @@ function startAutosave() {
 function objectiveTasks() {
   if (!active) return [];
   const game = active;
-  const words = game.levelPackage.content.words.filter(word => game.levelPackage.config.regionLessons.r1.includes(word.lesson));
+  const regionId = game.levelPackage.region.id;
+  const words = game.levelPackage.content.words.filter(word => (game.levelPackage.config.regionLessons[regionId] || []).includes(word.lesson));
   const tasks = [];
   const reading = game.state.progress.reading;
   if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.keys(reading.results || {}).length}/${reading.questionCount}.`);
-  else if (!(reading.completed || []).length) tasks.push('Read a passage in the Reading Hall to earn the Cave Lantern.');
+  else if (!(reading.completed || []).length) tasks.push(`Read a passage in the Reading Hall to earn the ${game.levelPackage.regionStory.gateKeyName || 'Cave Lantern'}.`);
   for (const zone of game.levelPackage.map.zones) {
     const lessonWords = words.filter(word => word.lesson === zone.lesson);
     const collected = lessonWords.filter(word => game.state.progress.words[word.w]?.collected).length;
@@ -135,9 +139,9 @@ function objectiveTasks() {
   if (game.state.player.hp < game.state.player.maxHp / 2) tasks.push('Your HP is low. Rest and review at the Inn.');
   const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
   const required = Math.ceil(words.length * game.levelPackage.regionStory.gateBronzePct);
-  if (!game.state.progress.story.bossDefeated && bronze < required) tasks.push(`Collect ${required - bronze} more Bronze spirits for the Muddle Cave gate.`);
-  else if (!game.state.progress.story.bossDefeated) tasks.push('The Muddle Cave gate is ready. Challenge the Muddle King!');
-  return tasks.length ? tasks : ['Region 1 is clear. Keep turning spirits Gold while the next region is built.'];
+  if (!game.state.progress.story.bossDefeated && bronze < required) tasks.push(`Collect ${required - bronze} more Bronze spirits for ${game.levelPackage.regionStory.bossPlace || 'the boss gate'}.`);
+  else if (!game.state.progress.story.bossDefeated) tasks.push(`${game.levelPackage.regionStory.bossPlace || 'The boss gate'} is ready. Challenge the ${game.levelPackage.regionStory.bossName || 'Muddle King'}!`);
+  return tasks.length ? tasks : [`${game.levelPackage.region.name} is restored. Keep turning spirits Gold.`];
 }
 
 function updateObjective(advance = false) {
@@ -164,11 +168,11 @@ function showWelcome(loadResult) {
   const messages = [];
   if (loadResult.migrated) messages.push('Your existing P5 prototype progress was copied into this preview. The original prototype save was left untouched.');
   if (loadResult.warning) messages.push(`Save recovery notice: ${loadResult.warning}`);
-  messages.push('Use the arrow pad to walk. Open Adventure to begin the Region 1 story, or explore the village in any order.');
+  messages.push(`Use the arrow pad to walk. Open Adventure to continue the ${active.levelPackage.region.name} story, or explore in any order.`);
   overlay.open(`<div class="panel">
-    <h1>Welcome to Scholar Village</h1>
+    <h1>Welcome to ${escapeHtml(active.levelPackage.region.name)}</h1>
     ${messages.map(message => `<p>${message}</p>`).join('')}
-    <p>Collect word spirits, help the muddled villagers, complete daily quests, earn the Cave Lantern, and challenge the Muddle King.</p>
+    <p>Collect word spirits, help the residents, complete daily quests, earn the regional key item, and challenge the region boss.</p>
     <div class="button-row">${loadResult.blocked ? '<button class="primary" data-fresh-save>Start fresh</button><button class="secondary" data-download-recovery>Download damaged save</button>' : '<button class="primary" data-enter-world>Enter the village</button>'}</div>
   </div>`, { dismissible: false });
   $('[data-enter-world]')?.addEventListener('click', () => {
@@ -204,10 +208,14 @@ function showWelcome(loadResult) {
 async function startLevel(levelId) {
   overlay.open('<div class="panel"><h2>Opening the shared world…</h2><p>Loading curriculum, map and save data.</p></div>', { dismissible: false });
   try {
-    const levelPackage = await loadLevelPackage(levelId);
-    const mapErrors = validateMap(levelPackage.map);
-    if (mapErrors.length) throw new Error(mapErrors.join(' '));
+    let levelPackage = await loadLevelPackage(levelId);
+    for (const campaign of Object.values(levelPackage.campaigns)) {
+      const mapErrors = validateMap(campaign.map);
+      if (mapErrors.length) throw new Error(`${campaign.map.name}: ${mapErrors.join(' ')}`);
+    }
     const loadResult = loadLevelState(storage, levelPackage);
+    const savedRegionId = regionIdForMap(levelPackage, loadResult.state.player.map);
+    levelPackage = activateRegion(levelPackage, savedRegionId);
     if (!isWalkable(levelPackage.map, loadResult.state.player.x, loadResult.state.player.y)) {
       loadResult.state.player.x = levelPackage.map.spawn.x;
       loadResult.state.player.y = levelPackage.map.spawn.y;
@@ -223,7 +231,7 @@ async function startLevel(levelId) {
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
     gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
-    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio });
+    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion });
     adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
@@ -249,8 +257,27 @@ async function startLevel(levelId) {
   }
 }
 
+function switchRegion(regionId) {
+  if (!active?.levelPackage.campaigns?.[regionId]) return toast('That region is not available yet.');
+  const currentId = active.levelPackage.region.id;
+  if (currentId === regionId) return;
+  saveCurrentRegion(active.state, currentId);
+  active.levelPackage = activateRegion(active.levelPackage, regionId);
+  enterRegion(active.state, active.levelPackage);
+  active.renderer = createRenderer($('#world'), active.levelPackage.map);
+  restoreNpcPositions(active.levelPackage.map, active.state.progress.npcs);
+  adventure?.initialize();
+  objectiveIndex = 0;
+  persist();
+  render();
+  overlay.close();
+  audio.setScene('village');
+  toast(`Arrived in ${active.levelPackage.region.name}.`);
+  if (!active.state.progress.story.flags.arrival) adventure.storyJournal();
+}
+
 function levelStatus(level) {
-  if (level.worldMappingReady) return 'Region 1 ready';
+  if (level.worldMappingReady) return 'Regions 1–2 ready';
   if (level.sourceReady) return 'Curriculum imported · world mapping in progress';
   return 'Coming soon';
 }
@@ -276,7 +303,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P9 are complete. Primary 2 and Primary 5 now share Region 1 with separate saves and level-specific content and tuning.</p>
+    <p>P0–P11 are complete. Primary 2 and Primary 5 share Scholar Village and Harvest Crossing with separate saves and level-specific content and tuning.</p>
     ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
@@ -286,9 +313,10 @@ function showBuildStatus() {
       <div>Position<b>${state.player.x}, ${state.player.y}</b></div>
       <div>Save integrity<b>${state.tampered ? 'Edited' : 'Verified'}</b></div>
     </div>
-    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-switch-level>Switch curriculum</button></div>
+    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-switch-level>Switch curriculum</button>${Object.values(levelPackage.campaigns).map(campaign => `<button class="secondary" data-debug-region="${campaign.region.id}" ${campaign.region.id === levelPackage.region.id ? 'disabled' : ''}>Open ${escapeHtml(campaign.region.name)}</button>`).join('')}</div>
   </div>`);
   $('[data-switch-level]').addEventListener('click', showLevelPicker, { once: true });
+  for (const button of document.querySelectorAll('[data-debug-region]:not([disabled])')) button.addEventListener('click', () => switchRegion(button.dataset.debugRegion), { once: true });
   $('[data-export-current]').addEventListener('click', () => {
     const link = document.createElement('a');
     link.href = URL.createObjectURL(new Blob([JSON.stringify(exportSaveEnvelope(state), null, 2)], { type: 'application/json' }));
@@ -343,5 +371,5 @@ addEventListener('offline', () => { hud.status.textContent = 'Offline · progres
 addEventListener('online', () => { if (active && !active.saveBlocked) { hud.status.textContent = active.state.tampered ? 'Save edited' : 'Save verified'; hud.status.classList.toggle('warning', active.state.tampered); } });
 
 window.addEventListener('beforeunload', persist);
-window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, get adventure() { return adventure; }, events, startLevel };
+window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, get adventure() { return adventure; }, events, startLevel, switchRegion };
 boot();

@@ -16,16 +16,18 @@ function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
 }
 
-export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio }) {
+export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio, onSwitchRegion }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
 
   function ensureDaily() {
     const game = active();
     const day = localDay();
+    const regionId = game.levelPackage.region.id;
     game.state.progress.daily = normalizeDaily(game.state.progress.daily, day, game.levelPackage.dailyQuestTemplates, game.levelPackage.id);
-    if (game.state.progress.scrolls.day !== day) game.state.progress.scrolls = { ...game.state.progress.scrolls, day, found: false, spot: dailyScrollSpot(day, game.levelPackage.regionStory.scrollSpots, game.levelPackage.id) };
-    if (!game.state.progress.scrolls.spot) game.state.progress.scrolls.spot = dailyScrollSpot(day, game.levelPackage.regionStory.scrollSpots, game.levelPackage.id);
+    if (game.state.progress.scrolls.day !== day) game.state.progress.scrolls = { ...game.state.progress.scrolls, day, region: regionId, found: false, spot: dailyScrollSpot(day, game.levelPackage.regionStory.scrollSpots, `${game.levelPackage.id}-${regionId}`) };
+    if (!game.state.progress.scrolls.found && game.state.progress.scrolls.region !== regionId) game.state.progress.scrolls = { ...game.state.progress.scrolls, region: regionId, spot: dailyScrollSpot(day, game.levelPackage.regionStory.scrollSpots, `${game.levelPackage.id}-${regionId}`) };
+    if (!game.state.progress.scrolls.spot) game.state.progress.scrolls.spot = dailyScrollSpot(day, game.levelPackage.regionStory.scrollSpots, `${game.levelPackage.id}-${regionId}`);
     game.state.progress.story = normalizeStory(game.state.progress.story);
   }
 
@@ -124,9 +126,9 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         game.state.progress.story = result.story;
         for (const key of result.rewards) addUnique(game.state.progress.inventory.keyItems, key);
         if (sceneId === 'reform') {
-          game.state.progress.story.flags.hiddenGrove = true;
+          if (game.levelPackage.region.id === 'r1') game.state.progress.story.flags.hiddenGrove = true;
           game.state.player.coins += 100;
-          addUnique(game.state.progress.room.trophies, 'Dawn Stroke');
+          addUnique(game.state.progress.room.trophies, game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke');
         }
         commit();
         overlay.close();
@@ -145,6 +147,14 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const story = normalizeStory(game.state.progress.story);
     game.state.progress.story = story;
     if (!story.flags.arrival) return playScene('arrival', storyJournal);
+    if (game.levelPackage.region.id === 'r2') {
+      const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
+      const requestsDone = Object.keys(game.levelPackage.regionStory.requests).filter(id => (story.requests[id] || 0) >= 3).length;
+      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 2</p><h1>Harvest Crossing Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Harvest Crossing</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a crossing story</p><p class="${requestsDone === 3 ? 'done' : ''}">${requestsDone === 3 ? '✓' : '○'} Helped ${requestsDone}/3 neighbours</p><p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Truth Stroke restored' : '○ Face the Doubt Serpent'}</p></div><div class="button-row"><button class="primary" data-storyteller>Visit Storyteller</button><button class="secondary" data-travel-r1>Return to Scholar Village</button></div></div>`);
+      document.querySelector('[data-storyteller]').addEventListener('click', storyteller);
+      document.querySelector('[data-travel-r1]').addEventListener('click', () => onSwitchRegion?.('r1'));
+      return;
+    }
     if (!story.flags.attic) return playScene('attic', storyJournal);
     if (!story.flags.tutorial) return gameplay.tutorialBattle(() => {
       active().state.progress.story.flags.tutorial = true;
@@ -160,7 +170,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function storyteller() {
     const game = active();
     const story = normalizeStory(game.state.progress.story);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Storyteller’s bench</p><h1>Region 1 Stories</h1></div><button class="secondary" data-close-overlay>Leave</button></div><div class="service-grid">${game.levelPackage.regionStory.stories.map(item => `<button data-story-lesson="${item.lesson}"><b>${story.storiesRead.includes(item.lesson) ? '✓ ' : ''}${escapeHtml(item.title)}</b><span>Lesson ${item.lesson} · ${item.pages.length} short pages</span></button>`).join('')}</div><div class="button-row"><button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Storyteller’s bench</p><h1>${escapeHtml(game.levelPackage.region.name)} Stories</h1></div><button class="secondary" data-close-overlay>Leave</button></div><div class="service-grid">${game.levelPackage.regionStory.stories.map(item => `<button data-story-lesson="${item.lesson}"><b>${story.storiesRead.includes(item.lesson) ? '✓ ' : ''}${escapeHtml(item.title)}</b><span>Lesson ${item.lesson} · ${item.pages.length} short pages</span></button>`).join('')}</div><div class="button-row"><button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
     for (const button of document.querySelectorAll('[data-story-lesson]')) button.addEventListener('click', () => readStory(Number(button.dataset.storyLesson)));
     document.querySelector('[data-scroll-library]').addEventListener('click', scrollLibrary);
   }
@@ -174,7 +184,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         if (!game.state.progress.story.storiesRead.includes(lesson)) {
           game.state.progress.story.storiesRead.push(lesson);
           game.state.player.coins += 10;
-          if (lesson === 1) game.state.progress.story.flags.campingForest = true;
+          if (game.levelPackage.region.id === 'r1' && lesson === 1) game.state.progress.story.flags.campingForest = true;
           commit();
         }
         return storyteller();
@@ -252,30 +262,37 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function gatekeeper() {
     const game = active();
     const story = normalizeStory(game.state.progress.story);
-    if (story.bossDefeated) return nextRegionGate();
+    if (story.bossDefeated) return game.levelPackage.region.id === 'r1' ? nextRegionGate() : truthTerrace();
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
     const percent = Math.round(gate.bronze / gate.total * 100);
-    overlay.open(`<div class="panel"><p class="panel-kicker">Muddle Cave gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>Bronze or better: <b>${gate.bronze}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>Cave Lantern: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? '<button class="primary" data-boss-start>Challenge Muddle King</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
+    const place = game.levelPackage.regionStory.bossPlace || 'Muddle Cave';
+    const keyName = game.levelPackage.regionStory.gateKeyName || 'Cave Lantern';
+    overlay.open(`<div class="panel"><p class="panel-kicker">${escapeHtml(place)} gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>Bronze or better: <b>${gate.bronze}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>${escapeHtml(keyName)}: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? `<button class="primary" data-boss-start>Challenge ${escapeHtml(bossName)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
     document.querySelector('[data-boss-start]')?.addEventListener('click', startBoss, { once: true });
   }
 
   function startBoss() {
-    const queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config);
+    const regionLessons = active().levelPackage.config.regionLessons[active().levelPackage.region.id] || [];
+    const queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config, regionLessons);
     const battle = { queue, hp: queue.length * 4, maxHp: queue.length * 4, index: 0 };
     const arena = () => {
       const game = active();
       const hero = heroStats(game.state.player.level);
+      const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
+      const bossId = game.levelPackage.region.boss;
+      const bossArt = bossId === 'muddle-king' ? creatureSvg('muddle-king', '') : creatureSvg(bossId, '');
       return `<div class="boss-battle-arena">
         <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense}</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
-        <div class="battle-enemy boss-enemy"><div class="battle-nameplate"><b>Muddle King · Boss</b><small>Break every muddling spell</small><div class="enemy-hp"><i style="width:${battle.hp / battle.maxHp * 100}%"></i></div><strong>HP ${battle.hp}/${battle.maxHp}</strong></div><div class="creature-art">${creatureSvg('muddle-king', '')}</div></div>
+        <div class="battle-enemy boss-enemy"><div class="battle-nameplate"><b>${escapeHtml(bossName)} · Boss</b><small>Break every twisting spell</small><div class="enemy-hp"><i style="width:${battle.hp / battle.maxHp * 100}%"></i></div><strong>HP ${battle.hp}/${battle.maxHp}</strong></div><div class="creature-art">${bossArt}</div></div>
       </div>`;
     };
     const bossPanel = content => `<article class="battle-scene boss-battle-scene">${arena()}<div class="battle-console">${content}</div></article>`;
     audio?.setScene('boss');
     const next = () => {
       if (battle.hp <= 0) return bossWin();
-      if (!battle.queue.length) battle.queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config);
+      if (!battle.queue.length) battle.queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config, regionLessons);
       const task = battle.queue.shift();
       const finish = correct => {
         const game = active();
@@ -287,7 +304,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
             game.state.player.hp = game.state.player.maxHp;
             commit();
             audio?.setScene('village');
-            return overlay.open(bossPanel('<h1>The Muddle King overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>'));
+            return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`));
           }
         }
         commit();
@@ -318,7 +335,14 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     audio?.setScene('village');
     playScene('reform', () => {
       audio?.sfx('majorReward');
-      overlay.open('<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">Region 1 restored</p><div class="major-reward"><img src="../assets/images/rewards/dawn-stroke.png" alt="Dawn Stroke"><div><p class="panel-kicker">Major reward</p><h1>Dawn Stroke obtained!</h1></div></div><p>The hidden grove is open, and the Muddle King now runs the Mistake Museum.</p><button class="primary" data-close-overlay>Return to Scholar Village</button></div>');
+      const game = active();
+      const r2 = game.levelPackage.region.id === 'r2';
+      const fragment = r2 ? 'truth-stroke' : 'dawn-stroke';
+      const fragmentName = r2 ? 'Truth Stroke' : 'Dawn Stroke';
+      const fragmentArt = r2 ? '../assets/images/rewards/truth-stroke.png' : '../assets/images/rewards/dawn-stroke.png';
+      if (r2) addUnique(game.state.progress.room.trophies, fragmentName);
+      commit();
+      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${r2 ? 'Hidden writing on Truth Terrace can now be revealed.' : 'The hidden grove is open, and the Muddle King now runs the Mistake Museum.'}</p><button class="primary" data-close-overlay>Return to ${escapeHtml(game.levelPackage.region.name)}</button></div>`);
     });
   }
 
@@ -327,8 +351,48 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const words = regionWords(game.levelPackage);
     const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
     const required = Math.ceil(words.length * game.levelPackage.regionStory.nextRegionSilverPct);
-    const parentUnlocked = game.state.settings.testMode || game.state.settings.unlockedRegions >= 2;
-    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region 2. Gold spirits are optional bonuses.</p><p>${parentUnlocked ? 'A parent has unlocked Region 2 for testing. ' : ''}Region 2 will be built after the P2 vertical slice and device pilot.</p><button class="secondary" data-close-overlay>Return</button></div>`);
+    const ready = silver >= required || game.state.settings.testMode;
+    overlay.open(`<div class="panel"><p class="panel-kicker">Road to Harvest Crossing</p><h1>Dawn Stroke restored</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region 2. Gold spirits are optional bonuses.</p><div class="button-row">${ready ? '<button class="primary" data-travel-r2>Travel to Harvest Crossing</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    document.querySelector('[data-travel-r2]')?.addEventListener('click', () => {
+      game.state.settings.unlockedRegions = Math.max(2, game.state.settings.unlockedRegions);
+      onSwitchRegion?.('r2');
+    });
+  }
+
+  function regionTwoRequest(id) {
+    const game = active();
+    const story = normalizeStory(game.state.progress.story);
+    const request = game.levelPackage.regionStory.requests[id];
+    const lessonWords = game.levelPackage.content.words.filter(word => word.lesson === request.lesson);
+    const collected = lessonWords.filter(word => game.state.progress.words[word.w]?.collected).length;
+    const step = story.requests[id] || 0;
+    const ready = step === 0 ? collected >= 3 : step === 1 ? (story.counters.creatures[request.creature] || 0) >= request.count : step === 2 ? story.storiesRead.includes(request.lesson) : false;
+    const tasks = [`Collect three Lesson ${request.lesson} Spirit cards (${collected}/3).`, `Defeat ${request.count} ${request.creature.split('-').join(' ')} creatures (${story.counters.creatures[request.creature] || 0}/${request.count}).`, `Hear the Lesson ${request.lesson} story from the Storyteller.`];
+    if (step >= 3) return overlay.dialogue({ title: request.name, lines: [`Thank you. ${request.reward} has brought neighbours together again.`] });
+    overlay.open(`<div class="panel"><p class="panel-kicker">Harvest Crossing request · ${step + 1}/3</p><h1>${escapeHtml(request.name)}</h1><p>${escapeHtml(tasks[step])}</p><div class="button-row">${ready ? `<button class="primary" data-r2-request>Complete step</button>` : ''}<button class="secondary" data-close-overlay>Later</button></div></div>`);
+    document.querySelector('[data-r2-request]')?.addEventListener('click', () => {
+      story.requests[id] = step + 1;
+      game.state.progress.story = story;
+      if (story.requests[id] === 3) {
+        game.state.player.coins += 40;
+        game.state.progress.inventory['rice-ball'] = (game.state.progress.inventory['rice-ball'] || 0) + 1;
+        audio?.sfx('majorReward');
+      }
+      recordEvent('villager-help', { id });
+      commit();
+      regionTwoRequest(id);
+    }, { once: true });
+  }
+
+  function truthTerrace() {
+    const game = active();
+    if (!game.state.progress.story.bossDefeated) return overlay.dialogue({ title: 'Faded stone', lines: ['A hidden message waits for the Truth Stroke.'] });
+    if (game.state.progress.story.flags.truthTerrace) return overlay.dialogue({ title: 'Truth Terrace', lines: ['The stone reads: “Ask clearly. Check carefully. Speak kindly.”'] });
+    game.state.progress.story.flags.truthTerrace = true;
+    game.state.player.coins += 60;
+    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'Truth Terrace', type: 'Secret Scroll', text: 'Ask clearly. Check carefully. Speak kindly.' });
+    commit();
+    overlay.open('<div class="panel result-panel"><p class="panel-kicker">Truth Stroke secret</p><h1>The hidden words shine</h1><p>“Ask clearly. Check carefully. Speak kindly.” You found a Secret Scroll and 60 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
   }
 
   function mistakeMuseum() {
@@ -364,9 +428,24 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       'hidden-grove': hiddenGrove,
       gatekeeper
     };
+    if (gameRegion() === 'r2') {
+      handlers['elder-sun'] = storyJournal;
+      handlers['hawker-lina'] = () => regionTwoRequest('hawker-lina');
+      handlers['hawker-centre'] = () => regionTwoRequest('hawker-lina');
+      handlers['courier-wei'] = () => regionTwoRequest('courier-wei');
+      handlers['granary-door'] = gatekeeper;
+      handlers['farmer-tan'] = () => regionTwoRequest('farmer-tan');
+      handlers['hill-house'] = () => regionTwoRequest('farmer-tan');
+      handlers['return-gate'] = () => onSwitchRegion?.('r1');
+      handlers['truth-terrace'] = truthTerrace;
+    }
     if (!handlers[object.id]) return false;
     handlers[object.id]();
     return true;
+  }
+
+  function gameRegion() {
+    return active().levelPackage.region.id;
   }
 
   return { initialize, recordEvent, questBoard, scrollLibrary, scrollSpot, collectDailyScroll, storyJournal, storyteller, handleInteraction, gatekeeper, startBoss };

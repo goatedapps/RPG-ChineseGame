@@ -30,7 +30,7 @@ export function normalizeStory(value = {}) {
 }
 
 export function regionWords(levelPackage) {
-  const lessons = levelPackage.config.regionLessons.r1;
+  const lessons = levelPackage.config.regionLessons[levelPackage.region?.id || 'r1'] || [];
   return levelPackage.content.words.filter(word => lessons.includes(word.lesson));
 }
 
@@ -38,7 +38,8 @@ export function gateStatus(levelPackage, progress, inventory, requiredPct = 0.22
   const words = regionWords(levelPackage);
   const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(progress.words[word.w]))).length;
   const required = Math.ceil(new Set(words.map(word => word.w)).size * requiredPct);
-  const lantern = (inventory.keyItems || []).includes('cave-lantern');
+  const keyItem = levelPackage.regionStory?.readingKeyItem || 'cave-lantern';
+  const lantern = (inventory.keyItems || []).includes(keyItem);
   return { bronze, total: words.length, required, requiredPct, lantern, open: bronze >= required && lantern };
 }
 
@@ -80,9 +81,9 @@ export function recordStoryEvent(value, event, payload = {}) {
   return story;
 }
 
-export function bossGateQueue(content, config = {}) {
+export function bossGateQueue(content, config = {}, lessons = [1, 2, 3]) {
   const singles = content.questions.single;
-  const inRegion = item => !item.lessons?.length || item.lessons.some(lesson => lesson <= 3);
+  const inRegion = item => !item.lessons?.length || item.lessons.some(lesson => lessons.includes(lesson));
   const configuredKinds = [...(config.coreQuestionKinds || []), ...(config.optionalQuestionKinds || [])];
   const enabled = new Set(configuredKinds.length ? configuredKinds : ['conjunction', 'sentence', 'cloze']);
   const supported = singles.filter(item => enabled.has(item.kind) && item.subject !== 'Higher Chinese' && inRegion(item));
@@ -90,7 +91,7 @@ export function bossGateQueue(content, config = {}) {
   const secondKind = enabled.has('sentence') ? 'sentence' : config.coreQuestionKinds?.find(kind => kind !== firstKind);
   const conjunctions = supported.filter(item => item.kind === firstKind).slice(0, 3).map(item => ({ phase: 'Chain Spell', kind: 'question', item }));
   const sentences = supported.filter(item => item.kind === secondKind).slice(0, 2).map(item => ({ phase: 'Scramble Spell', kind: 'question', item }));
-  const lessonWords = content.words.filter(word => word.lesson <= 3).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
+  const lessonWords = content.words.filter(word => lessons.includes(word.lesson)).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
   const passage = content.questions.groups.find(group => group.id === 'TN-G1' && enabled.has(group.kind))
     || content.questions.groups.find(group => enabled.has(group.kind) && group.subject === 'Chinese');
   const blanks = (passage?.items || []).filter(item => ['MCQ', 'Fill-in'].includes(item.format)).slice(0, 5).map(item => ({ phase: 'Muddle Scroll', kind: 'question', item: { ...item, kind: passage.kind } }));

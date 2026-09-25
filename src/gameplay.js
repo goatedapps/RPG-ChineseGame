@@ -37,6 +37,7 @@ const SHOP_ITEM_COPY = Object.freeze({
 
 const itemDescription = item => (SHOP_ITEM_COPY[item.effect]?.(item) || item.effect);
 const itemIcon = id => `../assets/images/shop/${id}.png`;
+const rewardArt = (id, name) => `<div class="major-reward"><img src="../assets/images/rewards/${id}.png" alt="${escapeHtml(name)}"><div><p class="panel-kicker">Major reward</p><h1>${escapeHtml(name)} received!</h1></div></div>`;
 
 function addXp(player, amount, { xpMultiplier = 1, maxHpBonus = 0 } = {}) {
   let level = player.level;
@@ -73,6 +74,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   const speech = createSpeechController();
   const wordsForLesson = lesson => active().levelPackage.content.words.filter(word => word.lesson === lesson);
   const commit = () => { persist(); render(); };
+  const playLevelUp = (before, after) => { if (after.level > before.level) audio?.sfx('level'); };
 
   function progressionBonuses(game) {
     const gear = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
@@ -261,7 +263,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     onProgressEvent('battle-win', { creature: battle.creature.id, word: battle.word.w });
     onCollectionChanged();
     commit();
-    audio?.sfx('win');
+    audio?.sfx(game.state.player.level > beforeLevel.level ? 'level' : 'win');
     audio?.setScene('village');
     const coinsAwarded = baseRewards.coins * (battle.doubleCoins ? 2 : 1) + variantCoins;
     overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.creature.level > beforeLevel.level ? ' Higher-level creature bonus included.' : battle.creature.level < beforeLevel.level ? ' Lower-level creatures give reduced rewards.' : ''}${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay type="button">Return to village</button></div>`);
@@ -388,6 +390,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (run.rewarded) game.state.player.coins += correct * game.levelPackage.balance.school.coinsPerCorrect;
       onProgressEvent('school-run', { kind: examDay ? 'exam' : 'quiz', correct });
       commit();
+      playLevelUp(beforeLevel, game.state.player);
       overlay.open(`<div class="panel result-panel"><h1>${escapeHtml(title)} complete</h1><p>You answered <b>${correct}/${total}</b> correctly and earned ${xpAwarded} XP${run.rewarded ? ` plus ${correct * game.levelPackage.balance.school.coinsPerCorrect} coins` : ''}.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
     });
   }
@@ -410,6 +413,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         onProgressEvent('school-run', { kind: 'tingxie', correct: clean });
         if (lesson3Clean) onProgressEvent('tingxie-lesson3', { count: lesson3Clean });
         commit();
+        playLevelUp(beforeLevel, game.state.player);
         return overlay.open(`<div class="panel result-panel"><h1>Tingxie complete</h1><p>You wrote ${clean}/${words.length} words without help.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
       }
       const word = words[index++];
@@ -527,9 +531,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       const scrolls = game.state.progress.scrolls.unlocked;
       if (!scrolls.some(entry => entry.id === `reading-${group.id}`)) scrolls.unshift({ id: `reading-${group.id}`, day: localDay(), title: group.passage.title, type: group.subject === 'Higher Chinese' ? 'Higher Chinese Passage' : 'Reading Hall Passage', text: group.passage.text });
       commit();
-      return overlay.open(`<div class="panel result-panel"><h1>Passage complete!</h1><p>${first ? 'The villagers made you the Cave Lantern.' : 'You received 30 coins and a Rice Ball.'} The passage is now in the Scroll Library.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
+      audio?.sfx(first ? 'majorReward' : game.state.player.level > beforeLevel.level ? 'level' : 'win');
+      return overlay.open(`<div class="panel result-panel ${first ? 'major-reward-panel' : ''}">${first ? rewardArt('cave-lantern', 'Cave Lantern') : '<h1>Passage complete!</h1>'}<p>${first ? 'The villagers made this lantern for you. Its light opens the way to Muddle Cave.' : 'You received 30 coins and a Rice Ball.'} The passage is now in the Scroll Library.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
     }
     commit();
+    playLevelUp(beforeLevel, game.state.player);
     overlay.open(`<div class="panel result-panel"><h2>${correct ? 'Correct!' : `Answer: ${escapeHtml(answer || '')}`}</h2><p>You received ${coins} coins. Find the next villager with a ? bubble.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
   }
 
@@ -541,7 +547,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       game.state.progress.inventory = completed.inventory;
       game.state.player.coins += game.levelPackage.balance.reading.completionCoins;
       commit();
-      return overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Passage complete · ${correct}/${group.items.length} auto-marked correct</p><h1>Cave Lantern received</h1><p>${escapeHtml(game.levelPackage.strings.readingComplete)}</p><button class="primary" data-close-overlay>Continue</button></div>`);
+      audio?.sfx('majorReward');
+      return overlay.open(`<div class="panel result-panel major-reward-panel"><p class="panel-kicker">Passage complete · ${correct}/${group.items.length} auto-marked correct</p>${rewardArt('cave-lantern', 'Cave Lantern')}<p>${escapeHtml(game.levelPackage.strings.readingComplete)}</p><button class="primary" data-close-overlay>Continue</button></div>`);
     }
     const item = group.items[index];
     if (item.format === 'MCQ') {
@@ -581,15 +588,16 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       commit();
       overlay.open('<div class="panel result-panel"><h1>Fully rested</h1><p>Your HP is full. The word spirits are ready for another adventure.</p><button class="primary" data-close-overlay>Continue</button></div>');
     };
-    if (!collected.length) return rest();
-    const review = [...collected].sort((a, b) => starsOf(game.state.progress.words[a.w]) - starsOf(game.state.progress.words[b.w])).slice(0, 3);
+    const ranked = [...collected].sort((a, b) => starsOf(game.state.progress.words[a.w]) - starsOf(game.state.progress.words[b.w]));
+    const review = ranked.length ? Array.from({ length: 3 }, (_, index) => ranked[index % ranked.length]) : [];
     let index = 0;
     const next = () => {
       if (index >= review.length) return rest();
       const word = review[index++];
       showQuestion(overlay, makeQuestion(word, 'm', game.levelPackage.content.words), word, result => { recordWord(word, 'm', result.ok); next(); }, { title: `Bedtime review · ${index}/${review.length}` });
     };
-    next();
+    overlay.open(`<div class="panel inn-welcome"><p class="panel-kicker">Scholar Village Inn</p><h1>Welcome to the Inn</h1><p>Would you like to rest and restore your HP?</p>${review.length ? '<p>The innkeeper asks three quick Meaning questions before preparing your room.</p>' : '<p>You have no Word Spirits to review yet, so your first rest is free.</p>'}<div class="button-row"><button class="primary" data-inn-rest>${review.length ? 'Rest · Answer 3 questions' : 'Rest now'}</button><button class="secondary" data-close-overlay>Not now</button></div></div>`);
+    document.querySelector('[data-inn-rest]').addEventListener('click', () => review.length ? next() : rest(), { once: true });
   }
 
   function shop() {

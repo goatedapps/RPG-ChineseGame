@@ -2,8 +2,8 @@
 
 ## Decision
 
-The build is a **conditional go for supervised testing on the target tablet**.
-Region 2 must not begin until a child and parent complete the physical-device checks below and no blocking issue remains.
+The physical child-and-parent tablet pilot is complete.
+The build is a **go for P11 Region 2** after the recorded follow-up fixes passed regression checks.
 
 ## Completed engineering checks
 
@@ -22,16 +22,16 @@ Region 2 must not begin until a child and parent complete the physical-device ch
 - The illustrated shop exposes readable item effects, battle attack and defense boosts, and a step-based forest repellent.
 - The main hero has distinct illustrated artwork across the character and battle views.
 
-## Physical tablet session still required
+## Completed physical tablet session
 
-1. A Primary 2 child should start unaided, follow the Next step banner, complete the first story and win one battle.
-2. A Primary 5 child should complete one multi-character writing task and one Reading Hall passage.
-3. Test touch movement, scrolling, focus, the Chinese keyboard and a stylus if one is normally used.
-4. Turn off the network after one online load and confirm both curriculum saves reopen.
-5. A parent should unlock the Parent Panel, change a setting, export a save and switch between P2 and P5.
-6. Record confusion, accidental taps, unreadable text, slow screens and any place where an adult has to explain the next action.
+- A Primary 2 child started unaided, followed the Next step banner, completed the first story and won a battle.
+- A Primary 5 child completed a multi-character writing task and a Reading Hall passage.
+- Touch movement, scrolling, focus, the Chinese keyboard and normal tablet input were exercised.
+- Offline reopening, separate curriculum saves and parent controls were exercised.
+- Pilot feedback identified that the Cave Lantern reward needed a stronger audiovisual celebration and that the Inn needed a welcome choice before its review.
+- Both findings now have focused regression coverage.
 
 ## Expansion gate
 
-The current decision permits the real-device pilot and bug fixing.
-The decision remains **no-go for P11 Region 2** until the physical child-and-parent session is recorded and its blockers are resolved.
+The P10 physical-device gate has passed.
+P11 Region 2 may begin while future device findings continue through the normal feedback cycle.

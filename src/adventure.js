@@ -46,6 +46,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (advanced.usedFreeze) toast('Grandma kept your lantern lit while you were away.');
       if ([3, 7, 14, 30, 60, 100].includes(advanced.streak.count)) {
         addUnique(game.state.progress.room.decorations, `lantern-${advanced.streak.count}`);
+        audio?.sfx('majorReward');
         toast(`${advanced.streak.count}-day Lantern Streak! A new room decoration was earned.`);
       }
     }
@@ -70,6 +71,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       game.state.progress.materials['mist-drop'] = (game.state.progress.materials['mist-drop'] || 0) + 1;
       game.state.progress.materials['echo-feather'] = (game.state.progress.materials['echo-feather'] || 0) + 1;
       commit();
+      audio?.sfx('win');
       overlay.open('<div class="panel result-panel"><h1>Daily Chest opened!</h1><p>You received 30 coins, one Rice Ball, one Mist Drop and one Echo Feather.</p><button class="primary" data-close-overlay>Continue</button></div>');
     }, { once: true });
     document.querySelector('[data-scroll-library]').addEventListener('click', scrollLibrary);
@@ -98,6 +100,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     if (libraryReward) {
       game.state.player.coins += 50;
       addUnique(game.state.progress.room.decorations, `scroll-library-${game.state.progress.scrolls.unlocked.length}`);
+      audio?.sfx('majorReward');
     }
     commit();
     overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Mystery Scroll found</p><h1>${escapeHtml(word.w)}</h1><p>${escapeHtml(sentence[0])}</p><p>${escapeHtml(sentence[1])}</p>${libraryReward ? '<p><b>Seven-scroll reward:</b> 50 coins and a room decoration!</p>' : ''}<button class="primary" data-close-overlay>Add to Scroll Library</button></div>`);
@@ -203,6 +206,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (story.requests[id] === steps.length) grantRequestReward(id, game);
       recordEvent('villager-help', { id });
       commit();
+      if (story.requests[id] === steps.length) audio?.sfx('majorReward');
       toast(story.requests[id] === steps.length ? `${data.name} is clear-minded again. Reward: ${data.reward}.` : 'Request step complete.');
       villagerRequest(id);
     }, { once: true });
@@ -311,9 +315,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   }
 
   function bossWin() {
-    audio?.sfx('win');
     audio?.setScene('village');
-    playScene('reform', () => overlay.open('<div class="panel result-panel boss-victory"><p class="panel-kicker">Region 1 restored</p><h1>Dawn Stroke obtained!</h1><p>The hidden grove is open, and the Muddle King now runs the Mistake Museum.</p><button class="primary" data-close-overlay>Return to Scholar Village</button></div>'));
+    playScene('reform', () => {
+      audio?.sfx('majorReward');
+      overlay.open('<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">Region 1 restored</p><div class="major-reward"><img src="../assets/images/rewards/dawn-stroke.png" alt="Dawn Stroke"><div><p class="panel-kicker">Major reward</p><h1>Dawn Stroke obtained!</h1></div></div><p>The hidden grove is open, and the Muddle King now runs the Mistake Museum.</p><button class="primary" data-close-overlay>Return to Scholar Village</button></div>');
+    });
   }
 
   function nextRegionGate() {

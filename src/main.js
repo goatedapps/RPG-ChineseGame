@@ -8,10 +8,10 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p10n';
-import { createCollection } from './collection.js?p10n';
-import { createAdventure } from './adventure.js?p10m';
-import { createAudioManager } from './core/audio.js?p10d';
+import { createGameplay } from './gameplay.js?p10p';
+import { createCollection } from './collection.js?p10p';
+import { createAdventure } from './adventure.js?p10p';
+import { createAudioManager } from './core/audio.js?p10p';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p10n';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
@@ -221,7 +221,7 @@ async function startLevel(levelId) {
       saveBlocked: Boolean(loadResult.blocked)
     };
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
-    collection = createCollection({ overlay, getActive: () => active, persist, render, toast });
+    collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
     gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
     adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio });
     adventure.initialize();

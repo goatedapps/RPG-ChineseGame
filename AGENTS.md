@@ -4,8 +4,8 @@
 
 The deployed app is the modular game under `game/`.
 Primary 2 and Primary 5 share the same Region 1 world and keep separate saves.
-P0–P9 and P10 engineering are complete.
-Do not start P11 until the physical child-and-parent tablet pilot in `PILOT.md` passes.
+P0–P10 and the physical child-and-parent tablet pilot are complete.
+P11 Region 2 is now unblocked.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
 Use `prototype/` only as the frozen visual and behavioral reference when parity is unclear.
 

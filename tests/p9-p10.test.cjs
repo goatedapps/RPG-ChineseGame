@@ -123,6 +123,21 @@ test('shop has illustrated supplies, battle boosts and forest repellent', () => 
   assert.match(fs.readFileSync(path.join(root, 'src/ui/heroPortrait.js'), 'utf8'), /main-hero\.png/);
 });
 
+test('major rewards use illustrated celebrations and the Inn asks before starting review', () => {
+  const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
+  const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
+  const audio = fs.readFileSync(path.join(root, 'src/core/audio.js'), 'utf8');
+  assert.match(gameplay, /rewardArt\('cave-lantern', 'Cave Lantern'\)/);
+  assert.match(gameplay, /Welcome to the Inn/);
+  assert.match(gameplay, /Rest · Answer 3 questions/);
+  assert.match(gameplay, /data-inn-rest/);
+  assert.match(adventure, /dawn-stroke\.png/);
+  assert.match(audio, /major-reward\.wav/);
+  for (const asset of ['assets/images/rewards/cave-lantern.png', 'assets/images/rewards/dawn-stroke.png', 'assets/audio/major-reward.wav']) {
+    assert.equal(fs.existsSync(path.join(root, asset)), true, asset);
+  }
+});
+
 test('tablet fixes hide unavailable help actions and memory-writing answers', () => {
   const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
   const writing = fs.readFileSync(path.join(root, 'src/ui/writingView.js'), 'utf8');

@@ -1,5 +1,5 @@
 const MUSIC = { village: '../assets/audio/music-village.wav', battle: '../assets/audio/music-battle.wav', boss: '../assets/audio/music-boss.wav' };
-const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', hit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
+const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', hit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', majorReward: '../assets/audio/major-reward.wav', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
 
 export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   if (!AudioClass) return { unlock() {}, setEnabled() {}, setScene() {}, sfx() {} };
@@ -23,6 +23,6 @@ export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
     unlock() { if (!unlocked) { unlocked = true; start(); } },
     setEnabled(value) { enabled = Boolean(value); if (enabled) start(); else stop(); },
     setScene(value) { if (music[value]) { scene = value; start(); } },
-    sfx(id) { if (!enabled || !unlocked || !effects[id]) return; const sound = effects[id].cloneNode(); sound.volume = id === 'button' ? .25 : .55; sound.play().catch(() => {}); }
+    sfx(id) { if (!enabled || !unlocked || !effects[id]) return; const sound = effects[id].cloneNode(); sound.volume = id === 'button' ? .25 : id === 'majorReward' ? .68 : .55; sound.play().catch(() => {}); }
   };
 }

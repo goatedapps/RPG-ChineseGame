@@ -8,9 +8,8 @@ Primary 2 and Primary 5 use the same engine, world, cast and campaign with separ
 The intended session is 30–60 minutes, but the game has no mandatory timer.
 
 The current release contains the complete shared Region 1 vertical slice for P2 Lessons 1–3 and P5 Lessons 1–3.
-P0–P9 are complete, and P10 engineering is complete.
-The next action is the physical tablet pilot in `PILOT.md`.
-P11 Region 2 is blocked until that pilot passes and any blocking findings are fixed.
+P0–P10 and the physical tablet pilot are complete.
+The next development phase is P11 Region 2.
 
 Production URLs:
 
@@ -181,10 +180,9 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 
 ### P10 physical pilot
 
-Run the exact child-and-parent tablet session in `PILOT.md`.
-Record the device, curriculum, tasks completed, observed confusion, defects and pass/fail decision.
-Fix blocking findings and rerun `npm run build:content` and `npm test`.
-Only then mark P10 complete and unblock P11.
+The child-and-parent tablet session in `PILOT.md` is complete.
+Its Cave Lantern celebration and Inn onboarding findings have been implemented with regression coverage.
+P11 is unblocked.
 
 ### P11–P16 shared Regions 2–7
 

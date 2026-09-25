@@ -25,6 +25,12 @@ export function setParentPin(storage, pin) {
   return true;
 }
 
+export function setTestingPlayerLevel(player, requestedLevel, maxHpBonus = 0) {
+  const level = Math.min(99, Math.max(1, Math.trunc(Number(requestedLevel) || 1)));
+  const maxHp = 18 + level * 2 + Math.max(0, Number(maxHpBonus) || 0);
+  return { ...player, level, xp: 0, maxHp, hp: maxHp };
+}
+
 export function recordActivity(activity, day, event, amount = 1) {
   const current = activity?.[day] || { battles: 0, school: 0, reading: 0, writing: 0, minutes: 0 };
   const field = event === 'battle-win' ? 'battles' : event === 'school-run' ? 'school' : event === 'reading-answer' ? 'reading' : event === 'writing-success' ? 'writing' : null;

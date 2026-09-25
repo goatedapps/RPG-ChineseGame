@@ -30,7 +30,13 @@ const CREATURE_IMAGES = {
   'spark-kite': 'spark-kite.png',
   'quarrel-macaque': 'quarrel-macaque.png',
   'boastful-lion': 'boastful-lion.png',
-  'grudge-dragon': 'grudge-dragon.png'
+  'grudge-dragon': 'grudge-dragon.png',
+  'glyph-beetle': 'glyph-beetle.png',
+  'bone-owl': 'bone-owl.png',
+  'ink-vine': 'ink-vine.png',
+  'relic-tortoise': 'relic-tortoise.png',
+  'whisper-moss': 'whisper-moss.png',
+  'give-up-ghost': 'give-up-ghost.png'
 };
 
 export function creatureSvg(id, word = '字') {

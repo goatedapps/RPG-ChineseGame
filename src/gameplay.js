@@ -7,7 +7,7 @@ import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
 import { partnerBonuses, partnerMove } from './systems/partners.js?p10f';
 import { battlesLeft, useBattle } from './systems/energy.js';
-import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, weeklySummary } from './systems/parent.js?p12a';
+import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, setTestingPlayerLevel, weeklySummary } from './systems/parent.js?p15';
 import { weightedCreature } from './world/encounters.js?p10d';
 import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10d';
 import { checkPassageAnswer, completePassage, normalizeReading, repairActiveReading, selectPassage } from './systems/reading.js?p10f';
@@ -69,7 +69,7 @@ function accuracyLabel(skill) {
   return SKILLS[skill]?.name || skill;
 }
 
-export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
+export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchRegion = () => {}, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
   ensureParentPin(storage);
   const active = () => getActive();
   const speech = createSpeechController();
@@ -257,7 +257,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const variantCoins = battle.creature.variant === 'elite' ? 6 : battle.creature.variant === 'golden' ? 12 : 0;
     game.state.player.coins += variantCoins;
     if (battle.doubleCoins) game.state.player.coins += baseRewards.coins;
-    const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf', 'ribbon-rat': 'ribbon-knot', 'drum-gremlin': 'drum-hide', 'spark-kite': 'spark-tassel', 'quarrel-macaque': 'jade-bead', 'boastful-lion': 'lion-bell' };
+    const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf', 'ribbon-rat': 'ribbon-knot', 'drum-gremlin': 'drum-hide', 'spark-kite': 'spark-tassel', 'quarrel-macaque': 'jade-bead', 'boastful-lion': 'lion-bell', 'glyph-beetle': 'glyph-shard', 'bone-owl': 'bone-feather', 'ink-vine': 'ink-leaf', 'relic-tortoise': 'relic-scale', 'whisper-moss': 'memory-moss' };
     const material = materialByCreature[battle.creature.id];
     const pouch = game.state.progress.inventory['material-pouch'] ? 2 : 1;
     game.state.progress.materials[material] = (game.state.progress.materials[material] || 0) + pouch;
@@ -704,6 +704,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <label class="answer-field">Unlock through region<select data-region-unlock>${[1,2,3,4,5,6,7].map(value => `<option value="${value}" ${game.state.settings.unlockedRegions === value ? 'selected' : ''}>Region ${value}</option>`).join('')}</select></label>
         <label class="check-setting"><input type="checkbox" data-test-mode ${game.state.settings.testMode ? 'checked' : ''}> Test mode: open all gates</label>
       </div></section>
+      <section class="parent-section"><div class="parent-section-heading"><div><h2>Testing shortcuts</h2><p>Jump directly to a built region without defeating earlier bosses, or set the hero level for battle testing.</p></div></div><div class="parent-settings"><label class="answer-field">Jump to region<select data-parent-jump-region>${Object.values(game.levelPackage.campaigns).map(campaign => `<option value="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'selected' : ''}>${escapeHtml(campaign.region.name)}</option>`).join('')}</select></label><button class="secondary" type="button" data-parent-jump>Jump now</button><label class="answer-field">Main-character level<input data-parent-level type="number" inputmode="numeric" min="1" max="99" value="${game.state.player.level}"></label><button class="secondary" type="button" data-parent-level-save>Apply level</button></div><p class="parent-tab-intro">Changing level resets current XP to 0 and fully restores HP. Learning progress is unchanged.</p></section>
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Real-world goal</h2><p>Connect in-game progress to a family reward or milestone.</p></div></div><div class="goal-editor"><input data-goal-label value="${escapeHtml(goal?.label || '')}" placeholder="20 Gold words → ice-cream trip"><select data-goal-type><option value="gold" ${goal?.type === 'gold' ? 'selected' : ''}>Gold words</option><option value="streak" ${goal?.type === 'streak' ? 'selected' : ''}>Streak days</option><option value="region" ${goal?.type === 'region' ? 'selected' : ''}>Region cleared</option></select><input data-goal-target type="number" min="1" value="${goal?.target || 20}"><button data-goal-save>Save goal</button></div>${goal ? `<div class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></div>` : ''}</section>
       <section class="parent-gift"><div class="parent-section-heading"><div><h2>Give a Spirit card—or several</h2><p>Select a lesson, then choose one or more cards to add at Bronze. Their five learning circles remain empty.</p></div></div>${missingRegionWords.length ? `<div class="parent-gift-toolbar"><label>Lesson<select data-gift-lesson aria-label="Lesson to gift from">${giftLessons.map(lesson => `<option value="${lesson}" ${lesson === giftLesson ? 'selected' : ''}>Lesson ${lesson}</option>`).join('')}</select></label><button class="secondary" type="button" data-gift-select-all>Select all</button></div><div class="parent-gift-grid" role="group" aria-label="Lesson ${giftLesson} Spirit cards">${giftLessonWords.map(word => `<label class="gift-word-option"><input type="checkbox" data-gift-word value="${escapeHtml(word.w)}"><span><b>${escapeHtml(word.w)}</b><small>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</small></span></label>`).join('')}</div><div class="parent-gift-actions"><span data-gift-count>0 selected</span><button class="primary" data-gift-spirit-save disabled>Give selected cards</button></div>` : '<p><b>Every Spirit card in this region has been collected.</b></p>'}</section>
       <section class="parent-section parent-actions"><div class="parent-section-heading"><div><h2>Parent tools</h2><p>Temporary allowances, curriculum selection, and save management.</p></div></div><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-switch-level>Switch curriculum</button><button class="secondary" data-export-save>Export save</button><button class="secondary" data-import-trigger>Import save</button><input data-import-save type="file" accept="application/json,.json" hidden></div></section>
@@ -727,6 +728,20 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     document.querySelector('[data-higher-chinese]').addEventListener('change', event => { game.state.settings.higherChinese = event.target.checked; if (!event.target.checked) { const reading = normalizeReading(game.state.progress.reading); const activeGroup = game.levelPackage.content.questions.groups.find(group => group.id === reading.active); if (activeGroup?.subject === 'Higher Chinese') game.state.progress.reading = { ...reading, active: null, index: 0, questionCount: 0, results: {} }; } commit(); });
     document.querySelector('[data-region-unlock]').addEventListener('change', event => { game.state.settings.unlockedRegions = Number(event.target.value); commit(); });
     document.querySelector('[data-test-mode]').addEventListener('change', event => { game.state.settings.testMode = event.target.checked; commit(); });
+    document.querySelector('[data-parent-jump]').addEventListener('click', () => {
+      const regionId = document.querySelector('[data-parent-jump-region]').value;
+      const regionNumber = Number(regionId.slice(1));
+      game.state.settings.unlockedRegions = Math.max(Number(game.state.settings.unlockedRegions) || 1, regionNumber);
+      commit();
+      onSwitchRegion(regionId);
+    });
+    document.querySelector('[data-parent-level-save]').addEventListener('click', () => {
+      const bonuses = progressionBonuses(game);
+      game.state.player = setTestingPlayerLevel(game.state.player, document.querySelector('[data-parent-level]').value, bonuses.maxHpBonus);
+      commit();
+      toast(`Main character set to Level ${game.state.player.level}.`);
+      showParentDashboard('settings');
+    });
     document.querySelector('[data-goal-save]').addEventListener('click', () => { const type = document.querySelector('[data-goal-type]').value; game.state.progress.parent.goal = { label: document.querySelector('[data-goal-label]').value.trim() || 'Learning goal', type, target: type === 'region' ? 1 : Math.max(1, Number(document.querySelector('[data-goal-target]').value) || 1), celebrated: false }; commit(); toast('Goal saved. It is now visible in the player room.'); showParentDashboard('settings'); });
     document.querySelector('[data-gift-lesson]')?.addEventListener('change', event => showParentDashboard('settings', Number(event.target.value)));
     const giftCheckboxes = [...document.querySelectorAll('[data-gift-word]')];

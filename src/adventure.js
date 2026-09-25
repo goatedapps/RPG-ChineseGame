@@ -15,6 +15,7 @@ import { gearBonuses } from './systems/gear.js';
 import { creatureSvg } from './battle/creatureArt.js?p10m';
 import { heroPortrait } from './ui/heroPortrait.js?p10n';
 import { createSpeechController } from './learning/audio.js';
+import { applyHealing, useConsumable } from './systems/inventory.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -25,7 +26,17 @@ const FRAGMENT_ART = Object.freeze({
   'truth-stroke': '../assets/images/rewards/truth-stroke.png',
   'current-stroke': '../assets/images/rewards/current-stroke.png',
   'courage-stroke': '../assets/images/rewards/courage-stroke.png',
-  'harmony-stroke': '../assets/images/rewards/harmony-stroke.png'
+  'harmony-stroke': '../assets/images/rewards/harmony-stroke.png',
+  'memory-stroke': '../assets/images/rewards/memory-stroke.png'
+});
+
+const BOSS_ITEM_COPY = Object.freeze({
+  heal: item => `Restore ${item.amount} HP`,
+  'full-heal': () => 'Restore all HP',
+  'remove-option': () => 'Remove one wrong choice from the next multiple-choice spell',
+  escape: () => 'Leave the boss battle safely',
+  'attack-boost': item => `Add ${item.amount} damage to each successful boss attack`,
+  'defense-boost': item => `Reduce each boss counterattack by ${item.amount} damage`
 });
 
 export function splitStoryPage(text) {
@@ -313,7 +324,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (game.levelPackage.region.id === 'r2') return truthTerrace();
       if (game.levelPackage.region.id === 'r3') return tideVault();
       if (game.levelPackage.region.id === 'r4') return courageLoft();
-      return harmonyPavilion();
+      if (game.levelPackage.region.id === 'r5') return harmonyPavilion();
+      return memoryVault();
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
@@ -342,6 +354,33 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       </div>`;
     };
     const bossPanel = content => `<article class="battle-scene boss-battle-scene">${arena()}<div class="battle-console">${content}</div></article>`;
+    const bossBag = resume => {
+      const game = active();
+      const usableEffects = new Set(Object.keys(BOSS_ITEM_COPY));
+      const owned = game.levelPackage.items.filter(item => usableEffects.has(item.effect) && game.state.progress.inventory[item.id] > 0);
+      overlay.open(`<div class="panel"><p class="panel-kicker">Boss battle bag</p><h1>Choose an item</h1><div class="service-grid">${owned.map(item => `<button data-use-boss-item="${item.id}"><b>${escapeHtml(item.name)} × ${game.state.progress.inventory[item.id]}</b><span>${escapeHtml(BOSS_ITEM_COPY[item.effect](item))}</span></button>`).join('') || '<p>Your usable boss-battle items are empty.</p>'}</div><div class="button-row"><button class="secondary" data-back-boss>Back to battle</button></div></div>`, { dismissible: false });
+      document.querySelector('[data-back-boss]').addEventListener('click', resume, { once: true });
+      for (const button of document.querySelectorAll('[data-use-boss-item]')) button.addEventListener('click', () => {
+        const item = game.levelPackage.items.find(candidate => candidate.id === button.dataset.useBossItem);
+        const consumed = useConsumable(game.state.progress.inventory, item.id);
+        if (!consumed.ok) return;
+        game.state.progress.inventory = consumed.inventory;
+        if (item.effect === 'heal' || item.effect === 'full-heal') game.state.player = applyHealing(game.state.player, item);
+        if (item.effect === 'remove-option') battle.lantern = true;
+        if (item.effect === 'attack-boost') battle.attackBoost = Math.max(battle.attackBoost || 0, item.amount || 1);
+        if (item.effect === 'defense-boost') battle.defenseBoost = Math.max(battle.defenseBoost || 0, item.amount || 1);
+        if (item.effect === 'escape') {
+          commit();
+          overlay.close();
+          audio?.setScene('village');
+          toast('The Smoke Ball carried you safely away from the boss.');
+          return;
+        }
+        commit();
+        toast(`${item.name} used.`);
+        resume();
+      }, { once: true });
+    };
     audio?.setScene('boss');
     const next = () => {
       if (battle.hp <= 0) return bossWin();
@@ -353,13 +392,13 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
         let damage = 0;
         if (correct) {
-          damage = calculateDamage({ attack: hero.attack, defense: battle.defense, moveBonus: task.kind === 'writing' ? 3 + bonuses.skillDamage.w : 2, roll: Math.random() * 3 });
+          damage = calculateDamage({ attack: hero.attack, defense: battle.defense, moveBonus: (task.kind === 'writing' ? 3 + bonuses.skillDamage.w : 2) + (battle.attackBoost || 0), roll: Math.random() * 3 });
           battle.hp = Math.max(0, battle.hp - damage);
           audio?.sfx('hit');
         } else battle.queue.push(task);
         let counter = { damage: 0, evaded: false };
         if (battle.hp > 0) {
-          counter = enemyAttack({ creature: battle }, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense, damageMultiplier: correct ? 0.8 : 1 });
+          counter = enemyAttack({ creature: battle }, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense + (battle.defenseBoost || 0), damageMultiplier: correct ? 0.8 : 1 });
           game.state.player = counter.player;
         }
         if (game.state.player.hp === 0) {
@@ -371,8 +410,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         commit();
         const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
         const counterText = battle.hp <= 0 ? '' : counter.evaded ? ' You dodged the counterattack.' : ` ${bossName} struck back for ${counter.damage} damage.`;
-        overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>${correct ? `You dealt ${damage} damage. ` : ''}${escapeHtml(bossName)} HP ${battle.hp}/${battle.maxHp}.${counterText}</p><button class="primary" data-boss-next>Next spell</button>`), { dismissible: false });
-        document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
+        const showTurnResult = () => {
+          overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>${correct ? `You dealt ${damage} damage. ` : ''}${escapeHtml(bossName)} HP ${battle.hp}/${battle.maxHp}.${counterText}</p><div class="button-row"><button class="primary" data-boss-next>Next spell</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });
+          document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
+          document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showTurnResult), { once: true });
+        };
+        showTurnResult();
       };
       if (task.kind === 'writing') {
         const game = active();
@@ -389,9 +432,20 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         document.querySelector('[data-boss-giveup]').addEventListener('click', () => check(''), { once: true });
         return;
       }
-      showQuestion(overlay, makeExamQuestion(task.item), null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() });
+      const question = makeExamQuestion(task.item);
+      if (battle.lantern && question.options.length > 2) {
+        const wrong = question.options.find(option => option !== question.correct);
+        question.options = question.options.filter(option => option !== wrong);
+        battle.lantern = false;
+      }
+      showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() });
     };
-    next();
+    const showBossReady = () => {
+      overlay.open(bossPanel(`<p class="panel-kicker">Boss challenge</p><h1>${escapeHtml(active().levelPackage.regionStory.bossName)} awaits</h1><p>Prepare before breaking the first spell.</p><div class="button-row"><button class="primary" data-boss-next>Begin battle</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });
+      document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
+      document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showBossReady), { once: true });
+    };
+    showBossReady();
   }
 
   function bossWin() {
@@ -498,6 +552,17 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     overlay.open('<div class="panel result-panel"><p class="panel-kicker">Harmony Stroke secret</p><h1>The peace bell rings</h1><p>You found the city founders’ pledge, a Secret Scroll and 90 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
   }
 
+  function memoryVault() {
+    const game = active();
+    if (!game.state.progress.story.bossDefeated) return overlay.dialogue({ title: 'Remembering seal', lines: ['The Memory Vault waits for the Memory Stroke.'] });
+    if (game.state.progress.story.flags.memoryVault) return overlay.dialogue({ title: 'Memory Vault', lines: ['The first promise reads: “What we practise with care becomes part of us.”'] });
+    game.state.progress.story.flags.memoryVault = true;
+    game.state.player.coins += 100;
+    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'The Grove’s First Promise', type: 'Secret Scroll', text: 'What we practise with care becomes part of us.' });
+    commit();
+    overlay.open('<div class="panel result-panel"><p class="panel-kicker">Memory Stroke secret</p><h1>The first promise returns</h1><p>You found the oldest grove record, a Secret Scroll and 100 coins.</p><button class="primary" data-close-overlay>Continue</button></div>');
+  }
+
   function mistakeMuseum() {
     const game = active();
     const misses = Object.entries(game.state.progress.words).sort((a, b) => (b[1].misses || 0) - (a[1].misses || 0)).slice(0, 5);
@@ -580,6 +645,19 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       handlers['dragon-warden'] = gatekeeper;
       handlers['return-gate'] = () => onSwitchRegion?.('r4');
       handlers['harmony-pavilion'] = harmonyPavilion;
+      handlers['next-region-gate'] = nextRegionGate;
+    }
+    if (gameRegion() === 'r6') {
+      handlers['curator-wen'] = storyJournal;
+      handlers['researcher-mo'] = () => regionalRequest('researcher-mo');
+      handlers['excavation-lodge'] = () => regionalRequest('researcher-mo');
+      handlers['scribe-yu'] = () => regionalRequest('scribe-yu');
+      handlers['arborist-he'] = () => regionalRequest('arborist-he');
+      handlers['root-library'] = () => regionalRequest('arborist-he');
+      handlers['ghost-archive-door'] = gatekeeper;
+      handlers['memory-keeper'] = gatekeeper;
+      handlers['return-gate'] = () => onSwitchRegion?.('r5');
+      handlers['memory-vault'] = memoryVault;
     }
     if (!handlers[object.id]) return false;
     handlers[object.id]();

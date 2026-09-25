@@ -167,6 +167,12 @@ test('Muddle King and creature encounters use illustrated battle presentation', 
   assert.match(adventure, /forceMemory: true, headerHtml: arena\(\)/);
   assert.match(adventure, /audio\?\.sfx\('hit'\)/);
   assert.match(adventure, /enemyAttack\(\{ creature: battle \}/);
+  assert.match(adventure, /data-boss-bag>Open bag/);
+  assert.match(adventure, /data-use-boss-item/);
+  assert.match(adventure, /useConsumable\(game\.state\.progress\.inventory, item\.id\)/);
+  assert.match(adventure, /applyHealing\(game\.state\.player, item\)/);
+  assert.match(adventure, /battle\.attackBoost/);
+  assert.match(adventure, /battle\.defenseBoost/);
   for (const name of ['muddle-king', 'fogling', 'echo-bat', 'twin-shade', 'jumble-bug', 'ink-imp']) {
     assert.match(creatureArt, new RegExp(`${name.replace('-', '\\-')}\\.png`));
     assert.equal(fs.existsSync(path.join(root, `assets/images/creatures/${name}.png`)), true);

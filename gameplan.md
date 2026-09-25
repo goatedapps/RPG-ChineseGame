@@ -9,9 +9,9 @@ The intended session is 30–60 minutes, but the game has no mandatory timer.
 The game opens with an illustrated, musical, typewriter-paced prologue that introduces the Dictionary Tree, Word Spirits, the Spirit Brush and the Great Forgetter.
 The prologue remains skippable during testing and is intended to become mandatory after approval.
 
-The current release contains complete shared Regions 1–5 through Festival City with curriculum-specific Lessons 1–15.
-P0–P14 and the physical tablet pilot are complete.
-The next development phase is P15 Ancient Grove.
+The current release contains complete shared Regions 1–6 through Ancient Grove with curriculum-specific Lessons 1–17.
+P0–P15 and the physical tablet pilot are complete.
+The next development phase is P16 Treehouse Summit and the Great Dictionary Tree.
 
 Production URLs:
 
@@ -185,6 +185,7 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | P12 | Tidewater Bay and Clock Tower, curriculum-specific Lessons 7–9, whale rescue, five creatures, Idle Clock, Current Stroke and Tide Vault. |
 | P13 | Lantern Theatre and Farm Fields, curriculum-specific Lessons 9–12, performance and farming requests, five creatures, Mocking Mirror, Courage Stroke and Courage Loft. |
 | P14 | Festival City, curriculum-specific Lessons 11–15, martial arts and celebration requests, five creatures, Grudge Dragon, Harmony Stroke and Harmony Pavilion. |
+| P15 | Ancient Grove, curriculum-specific Lessons 13–17, archaeology and Hanzi-history requests, five creatures, Give-Up Ghost, Memory Stroke and Memory Vault. |
 
 ## Remaining roadmap
 
@@ -194,7 +195,7 @@ The child-and-parent tablet session in `PILOT.md` is complete.
 Its Cave Lantern celebration and Inn onboarding findings have been implemented with regression coverage.
 P11 was completed after this gate passed.
 
-### P15–P16 shared Regions 6–7
+### P16 shared Region 7
 
 Build each region once for both curricula.
 Each region needs its mapped lessons, a distinct larger hub, core services, purposeful special buildings, residents, passage chain, requests, creatures, Restoration Sets, boss, Brush Fragment and fragment-opened secret.

@@ -25,7 +25,7 @@ test('forest repellent suppresses encounters and counts down only in encounter g
 });
 
 test('parent goals, bulk Spirit gifting, weekly summaries and activity tracking are state-only', async () => {
-  const { giftSpiritCard, giftSpiritCards, goalProgress, recordActivity, weeklySummary } = await import('../src/systems/parent.js');
+  const { giftSpiritCard, giftSpiritCards, goalProgress, recordActivity, setTestingPlayerLevel, weeklySummary } = await import('../src/systems/parent.js');
   let activity = recordActivity({}, '2026-09-24', 'battle-win');
   activity = recordActivity(activity, '2026-09-24', 'school-run');
   const rows = weeklySummary(activity, '2026-09-24');
@@ -43,6 +43,7 @@ test('parent goals, bulk Spirit gifting, weekly summaries and activity tracking 
   assert.equal(bulkGift.ok, true);
   assert.deepEqual(bulkGift.gifted, ['集合']);
   assert.equal(bulkGift.words['集合'].collected, true);
+  assert.deepEqual(setTestingPlayerLevel({ level: 3, xp: 12, hp: 4, maxHp: 24, coins: 9 }, 20, 3), { level: 20, xp: 0, hp: 61, maxHp: 61, coins: 9 });
 });
 
 test('P8 export envelopes restore the matching curriculum save', async () => {
@@ -62,7 +63,7 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const css = fs.readFileSync('css/stage.css', 'utf8');
   const shell = fs.readFileSync('game/index.html', 'utf8');
-  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-lesson', 'data-gift-word', 'data-gift-spirit-save', 'data-speech-rate', 'data-region-unlock']) assert.match(gameplay, new RegExp(text));
+  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-lesson', 'data-gift-word', 'data-gift-spirit-save', 'data-speech-rate', 'data-region-unlock', 'data-parent-jump-region', 'data-parent-jump', 'data-parent-level', 'data-parent-level-save']) assert.match(gameplay, new RegExp(text));
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
   assert.match(shell, /Scholar Village/);

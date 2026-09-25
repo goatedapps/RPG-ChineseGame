@@ -1,0 +1,33 @@
+{
+  "gateBronzePct": 0.22,
+  "nextRegionSilverPct": 0.7,
+  "readingKeyItem": "oracle-rubbing-kit",
+  "gateKeyName": "Oracle Rubbing Kit",
+  "bossName": "Give-Up Ghost",
+  "bossPlace": "Abandoned Memory Archive",
+  "fragmentName": "Memory Stroke",
+  "fragmentKey": "memory-stroke",
+  "secretName": "Memory Vault",
+  "passageVillagers": ["curator-wen", "storyteller", "researcher-mo", "scribe-yu", "arborist-he", "grove-guide", "memory-keeper"],
+  "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 46, "y": 28}],
+  "scenes": {
+    "arrival": [
+      { "speaker": "Curator Wen", "say": "Welcome to Ancient Grove. Every root holds a memory, but the Give-Up Ghost is erasing discoveries before they can be understood." },
+      { "speaker": "Curator Wen", "say": "Recover the scattered words, help our researchers, and prove that a difficult beginning is not the end." },
+      { "setFlag": "arrival" }
+    ],
+    "reform": [
+      { "speaker": "Give-Up Ghost", "say": "I whispered that one mistake meant failure. Every abandoned attempt made me larger." },
+      { "speaker": "Curator Wen", "say": "Learning survives because we return, revise, and try another path." },
+      { "speaker": "Spirit Brush", "say": "Memory Stroke restored. The hidden Memory Vault can now be opened." },
+      { "setFlag": "bossDefeated" },
+      { "rewardKey": "memory-stroke" }
+    ]
+  },
+  "stories": [],
+  "requests": {
+    "researcher-mo": { "name": "Researcher Mo", "lessonSlot": 0, "creature": "glyph-beetle", "count": 2, "reward": "Oracle Fragment Case" },
+    "scribe-yu": { "name": "Scribe Yu", "lessonSlot": 1, "creature": "ink-vine", "count": 2, "reward": "Restored Ink Record" },
+    "arborist-he": { "name": "Arborist He", "lessonSlot": 2, "creature": "whisper-moss", "count": 2, "reward": "Memory Tree Seed" }
+  }
+}

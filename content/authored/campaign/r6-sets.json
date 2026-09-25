@@ -1,0 +1,12 @@
+{
+  "p2": [
+    { "id": "story-roots", "name": "Story Roots", "words": ["绘本", "书架", "故事", "道具"], "restoration": "The Root Library fills with stories and reading props." },
+    { "id": "grove-night-market", "name": "Grove Night Market", "words": ["夜市", "烤香肠", "灯光", "摊位"], "restoration": "A gentle night market returns beneath the ancient canopy." },
+    { "id": "quiet-and-lively", "name": "Quiet and Lively", "words": ["安静", "大声", "热闹", "安安静静"], "restoration": "The grove remembers when to listen quietly and when to celebrate." }
+  ],
+  "p5": [
+    { "id": "oracle-record", "name": "Oracle Record", "words": ["记录", "骨", "艺术", "墨"], "restoration": "The Oracle Reading Room displays the recovered history of writing." },
+    { "id": "patient-team", "name": "Patient Team", "words": ["辛勤", "积极", "培育", "恢复"], "restoration": "The research team learns to improve together after mistakes." },
+    { "id": "ancient-tree", "name": "Ancient Tree", "words": ["栽种", "炮弹树", "阴凉", "茂密"], "restoration": "The Memory Canopy grows broad and green once more." }
+  ]
+}

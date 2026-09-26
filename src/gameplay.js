@@ -287,8 +287,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.player.x = game.levelPackage.map.spawn.x;
     game.state.player.y = game.levelPackage.map.spawn.y;
     commit();
-    audio?.setScene('village');
-    overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you home. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`);
+    audio?.setScene('defeat');
+    overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you to the Inn. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`, { onClose: () => audio?.setScene('village') });
   }
 
   function startBattle(zoneOrLesson) {

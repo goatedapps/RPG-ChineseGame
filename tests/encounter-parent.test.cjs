@@ -102,5 +102,5 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
   assert.match(shell, /Scholar Village/);
-  for (const file of ['scholar-village-bg.mp3', 'harvest-crossing-bg.mp3', 'prologue-bg.mp3', 'music-battle.wav', 'music-boss.wav', 'creature-hit.wav']) assert.equal(fs.existsSync(`assets/audio/${file}`), true);
+  for (const file of ['scholar-village-bg.mp3', 'harvest-crossing-bg.mp3', 'prologue-bg.mp3', 'battle.mp3', 'creature-hit.wav']) assert.equal(fs.existsSync(`assets/audio/${file}`), true);
 });

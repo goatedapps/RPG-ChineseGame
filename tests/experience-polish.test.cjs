@@ -82,6 +82,44 @@ test('music pauses on visibility loss and resumes the same scene', async () => {
   audio.setEnabled(false);
 });
 
+test('ordinary and boss defeats play non-looping recovery music until the recovery panel closes', async () => {
+  const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
+  const adventure = fs.readFileSync('src/adventure.js', 'utf8');
+  assert.match(gameplay, /function faint\(battle\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => audio\?\.setScene\('village'\)/);
+  assert.match(adventure, /if \(game\.state\.player\.hp === 0\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => audio\?\.setScene\('village'\)/);
+  const tracks = [];
+  class FakeAudio {
+    constructor(source) { this.source = source; this.currentTime = 0; this.playing = false; tracks.push(this); }
+    play() { this.playing = true; return Promise.resolve(); }
+    pause() { this.playing = false; }
+    cloneNode() { return new FakeAudio(this.source); }
+  }
+  const { createAudioManager } = await import('../src/core/audio.js');
+  const audio = createAudioManager({ AudioClass: FakeAudio });
+  const defeat = tracks.find(track => track.source.includes('need-improvement.mp3'));
+  const village = tracks.find(track => track.source.includes('scholar-village-bg.mp3'));
+  const battle = tracks.find(track => track.source.includes('battle.mp3'));
+  const prologueTracks = tracks.filter(track => track.source.includes('prologue-bg.mp3'));
+  assert.ok(battle);
+  assert.equal(tracks.some(track => track.source.includes('music-battle.wav')), false);
+  assert.equal(tracks.some(track => track.source.includes('music-boss.wav')), false);
+  assert.equal(prologueTracks.length, 2);
+  assert.equal(defeat.loop, false);
+  audio.unlock();
+  audio.setScene('battle');
+  assert.equal(battle.playing, true);
+  audio.setScene('boss');
+  assert.equal(prologueTracks[1].playing, true);
+  audio.setScene('defeat');
+  assert.equal(defeat.playing, true);
+  audio.setScene('village');
+  assert.equal(defeat.playing, false);
+  assert.equal(village.playing, true);
+  audio.setScene('defeat');
+  assert.equal(defeat.playing, true);
+  audio.setEnabled(false);
+});
+
 test('background image warming deduplicates decode work', async () => {
   let decodes = 0;
   class FakeImage {

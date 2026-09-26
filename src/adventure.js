@@ -427,8 +427,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         if (game.state.player.hp === 0) {
           game.state.player.hp = game.state.player.maxHp;
           commit();
-          audio?.setScene('village');
-          return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`));
+          audio?.setScene('defeat');
+          return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`), { onClose: () => audio?.setScene('village') });
         }
         commit();
         const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';

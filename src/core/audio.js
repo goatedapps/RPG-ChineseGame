@@ -7,15 +7,16 @@ const MUSIC = {
   r5: '../assets/audio/festival-city-bg.mp3',
   r6: '../assets/audio/music-village.wav',
   r7: '../assets/audio/music-village.wav',
-  battle: '../assets/audio/music-battle.wav',
-  boss: '../assets/audio/music-boss.wav',
+  battle: '../assets/audio/battle.mp3',
+  boss: '../assets/audio/prologue-bg.mp3',
+  defeat: '../assets/audio/need-improvement.mp3',
   victory: '../assets/audio/good-result.mp3'
 };
 const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', hit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', majorReward: '../assets/audio/major-reward.wav', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
 
 export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   if (!AudioClass) return { unlock() {}, setEnabled() {}, setVisible() {}, setScene() {}, setWorld() {}, sfx() {} };
-  const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = id !== 'victory'; track.preload = 'none'; track.volume = 0; return [id, track]; }));
+  const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = !['victory', 'defeat'].includes(id); track.preload = 'none'; track.volume = 0; return [id, track]; }));
   const effects = Object.fromEntries(Object.entries(EFFECTS).map(([id, source]) => { const sound = new AudioClass(source); sound.preload = 'auto'; return [id, sound]; }));
   let enabled = true;
   let visible = true;
@@ -37,7 +38,7 @@ export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
     const previous = current;
     current = next;
     next.currentTime = 0;
-    if (previous === music.intro && scene === 'village') {
+    if ((previous === music.intro || previous === music.defeat) && scene === 'village') {
       previous.pause(); previous.currentTime = 0; previous.volume = 0;
       next.volume = .25;
       return void next.play().catch(() => {});

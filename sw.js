@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p18-v33';
+const CACHE = 'word-spirit-quest-p18-v34';
 const CORE = [
   './game/', './game/index.html', './manifest.webmanifest',
   './css/tokens.css', './css/base.css', './css/stage.css',

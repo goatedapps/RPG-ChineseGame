@@ -27,9 +27,22 @@ export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   const start = () => {
     if (!enabled || !unlocked) return;
     const next = music[scene === 'village' ? worldScene : scene];
-    if (current === next) return void next.play().catch(() => {});
-    const previous = current; current = next; next.currentTime = 0; next.volume = 0; next.play().catch(() => {});
-    clearInterval(fade); let step = 0;
+    clearInterval(fade);
+    for (const track of Object.values(music)) {
+      if (track === next || track === current) continue;
+      track.pause(); track.currentTime = 0; track.volume = 0;
+    }
+    if (current === next) { next.volume = .25; return void next.play().catch(() => {}); }
+    const previous = current;
+    current = next;
+    next.currentTime = 0;
+    if (previous === music.intro && scene === 'village') {
+      previous.pause(); previous.currentTime = 0; previous.volume = 0;
+      next.volume = .25;
+      return void next.play().catch(() => {});
+    }
+    next.volume = 0; next.play().catch(() => {});
+    let step = 0;
     fade = setInterval(() => { step += 1; const progress = Math.min(1, step / 10); next.volume = .25 * progress; if (previous) previous.volume = .25 * (1 - progress); if (progress === 1) { clearInterval(fade); if (previous) { previous.pause(); previous.currentTime = 0; } } }, 50);
   };
   return {

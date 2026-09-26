@@ -11,7 +11,7 @@ import { createToast } from './ui/toast.js';
 import { createGameplay } from './gameplay.js?p17b';
 import { createCollection } from './collection.js?p16';
 import { createAdventure } from './adventure.js?p17b';
-import { createAudioManager } from './core/audio.js?p18';
+import { createAudioManager } from './core/audio.js?p19';
 import { createPrologue } from './ui/prologue.js?p15';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p16';

@@ -24,6 +24,32 @@ test('release audio loads only the active music track while keeping short effect
   audio.setEnabled(false);
 });
 
+test('leaving the prologue stops its music immediately and repeated village handoffs keep one track', async () => {
+  const tracks = [];
+  class FakeAudio {
+    constructor(source) { this.source = source; this.currentTime = 0; this.volume = 0; this.playing = false; tracks.push(this); }
+    play() { this.playing = true; return Promise.resolve(); }
+    pause() { this.playing = false; }
+    cloneNode() { return new FakeAudio(this.source); }
+  }
+  const { createAudioManager } = await import('../src/core/audio.js');
+  const audio = createAudioManager({ AudioClass: FakeAudio });
+  const intro = tracks.find(track => track.source.includes('prologue-bg.mp3'));
+  const village = tracks.find(track => track.source.includes('scholar-village-bg.mp3'));
+  audio.unlock();
+  audio.setScene('intro');
+  assert.equal(intro.playing, true);
+  audio.setScene('village');
+  assert.equal(intro.playing, false);
+  assert.equal(intro.currentTime, 0);
+  assert.equal(village.playing, true);
+  audio.setEnabled(true);
+  audio.setWorld('r1');
+  audio.setScene('village');
+  assert.deepEqual(tracks.filter(track => track.loop && track.playing), [village]);
+  audio.setEnabled(false);
+});
+
 test('offline release cache includes both curricula and every region runtime file', () => {
   const serviceWorker = fs.readFileSync('sw.js', 'utf8');
   for (const level of ['p2', 'p5']) {

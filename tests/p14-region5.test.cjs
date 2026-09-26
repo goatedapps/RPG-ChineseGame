@@ -60,14 +60,14 @@ test('Region 5 travel state remains isolated and Grudge Dragon scales above its 
 
 test('P14 creature, boss and reward art are packaged for offline play', () => {
   for (const file of ['ribbon-rat', 'drum-gremlin', 'spark-kite', 'quarrel-macaque', 'boastful-lion', 'grudge-dragon']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
   }
   for (const file of ['festival-medallion', 'harmony-stroke']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.webp`)).size > 10000, file);
   }
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   assert.match(serviceWorker, /r5-festival-city\.json/);
-  assert.match(serviceWorker, /grudge-dragon\.png/);
-  assert.match(serviceWorker, /harmony-stroke\.png/);
+  assert.match(serviceWorker, /grudge-dragon\.webp/);
+  assert.match(serviceWorker, /harmony-stroke\.webp/);
   assert.match(serviceWorker, /festival-city-bg\.mp3/);
 });

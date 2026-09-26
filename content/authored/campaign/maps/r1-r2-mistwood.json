@@ -1,0 +1,206 @@
+{
+  "id": "r1-r2-mistwood",
+  "region": "r1",
+  "route": true,
+  "name": "Mistwood Road",
+  "width": 44,
+  "height": 32,
+  "spawn": {
+    "x": 4,
+    "y": 28,
+    "direction": "up"
+  },
+  "legend": {
+    "g": {
+      "name": "forest floor",
+      "walkable": true,
+      "encounter": true,
+      "color": "#6ba66c"
+    },
+    "p": {
+      "name": "old road",
+      "walkable": true,
+      "encounter": true,
+      "color": "#c2ad80"
+    },
+    "t": {
+      "name": "dense thicket",
+      "walkable": false,
+      "color": "#346c4b"
+    },
+    "w": {
+      "name": "pond",
+      "walkable": false,
+      "color": "#4f91ac"
+    },
+    "f": {
+      "name": "wildflowers",
+      "walkable": true,
+      "encounter": true,
+      "color": "#8db97b"
+    }
+  },
+  "tiles": [
+    "tttttttttttttttttttttttttttttttttttttttttttt",
+    "tggggggfggtgggggggggfgggggggggggtggggfgggggt",
+    "tgtttttttttgggfgggggtttttttfgtgggggggggggggt",
+    "tgtttttttttgggggggggtttttttgggggggfggggggggt",
+    "tgttttttttttggggggggtttttttgfggggggggggggfgt",
+    "tftttttttttgggggggfgtttttttggpppppppppppgggt",
+    "tgtttttttttgggggggggtttttttggpgggggtgggpggft",
+    "tgtttttttttggggfggggtttttttggpggfggggggggggt",
+    "tgggggtggftgggggggggggfggggggpgggggggggfgtgt",
+    "tgggggggggtppppppgppppppppppppgggggggggggggt",
+    "tgttttfgggtppppppgpggggfggggggggggwwwwwwwggt",
+    "tgttttggggtppppppgpggggggtggggfgggwwwwwwwggt",
+    "tgttttggggtppppppgpgfgggggggggggggwwwwwwwggt",
+    "tgttttggggtgggpppppggggggggfggggggwwwwwwwggt",
+    "tgttttgtggtgggpggfggggggggggggggggwwwwwwwggt",
+    "tgggggggggtfggpgggggggggfggggggggggggggggfgt",
+    "tfggggggggtgggpgggfgwwwwwwwggggfggggggggggtt",
+    "tgggggggfgpppppgggggwwwwwwwtgggtttttttfggggt",
+    "tgggggggggpggggfggggwwwwwwwgggttttttttgggggt",
+    "tggggfgggtpgggggggggwwwwwwwggggtttttttgfgggt",
+    "tggttttttgpgfgggggggwwwwwwwggfgtttttttgggggt",
+    "tggttttttgpggggggggfwwwwwwwggtgtttttttgggggt",
+    "tggttttttgpggfggggggwwwwwwwggggtttttttgggggt",
+    "tggttttttgpgggggggggtggggggggggtttttttgggggt",
+    "tgggggggggpggggggggggggggggfgggtttttttggtggt",
+    "tgggggggggpggggggfggggggggtgggggggfggggggggt",
+    "tgggtgtftgpgtgggggggggggfggggggggggggggggfgt",
+    "tfgtpppppppgggfggggggggggggggggfgggggggggggt",
+    "tgggpgggfgtggggggggggfggtgggggggggggggfggggt",
+    "tggtpgggggtggggfgtggggggtgggfggtgggggggggggt",
+    "tgggpfggggtgggggggggggfggggggggggtgfgggggggt",
+    "tttttttttttttttttttttttttttttttttttttttttttt"
+  ],
+  "zones": [
+    {
+      "id": "mistwood-edge",
+      "name": "Mistwood Edge",
+      "lessonSlot": 0,
+      "lesson": 1,
+      "tint": "#4d8b51",
+      "rect": {
+        "x": 1,
+        "y": 1,
+        "width": 15,
+        "height": 30
+      },
+      "encounter": {
+        "rate": 0.05,
+        "cooldown": 3,
+        "types": {
+          "fogling": 4,
+          "jumble-bug": 3,
+          "echo-bat": 1
+        }
+      }
+    },
+    {
+      "id": "whispering-grove",
+      "name": "Whispering Grove",
+      "lessonSlot": 1,
+      "lesson": 2,
+      "tint": "#7776a1",
+      "rect": {
+        "x": 16,
+        "y": 1,
+        "width": 14,
+        "height": 30
+      },
+      "encounter": {
+        "rate": 0.05,
+        "cooldown": 3,
+        "types": {
+          "twin-shade": 4,
+          "fogling": 2,
+          "echo-bat": 2
+        }
+      }
+    },
+    {
+      "id": "lantern-border",
+      "name": "Lantern Border",
+      "lessonSlot": 2,
+      "lesson": 3,
+      "tint": "#879f49",
+      "rect": {
+        "x": 30,
+        "y": 1,
+        "width": 13,
+        "height": 30
+      },
+      "encounter": {
+        "rate": 0.05,
+        "cooldown": 3,
+        "types": {
+          "ink-imp": 4,
+          "jumble-bug": 3,
+          "twin-shade": 1
+        }
+      }
+    }
+  ],
+  "objects": [
+    {
+      "id": "boss-pavilion-building",
+      "type": "building",
+      "name": "Muddle Pavilion",
+      "rect": {
+        "x": 11,
+        "y": 9,
+        "width": 6,
+        "height": 4
+      },
+      "door": {
+        "x": 14,
+        "y": 13
+      },
+      "solid": true,
+      "color": "#493b75"
+    },
+    {
+      "id": "boss-pavilion-door",
+      "type": "door",
+      "x": 14,
+      "y": 12,
+      "solid": true,
+      "interaction": {
+        "kind": "boss",
+        "title": "Muddle Pavilion",
+        "lines": [
+          "A muddling spell swirls within the pavilion."
+        ]
+      }
+    },
+    {
+      "id": "next-region-gate",
+      "type": "sign",
+      "x": 39,
+      "y": 5,
+      "solid": true,
+      "interaction": {
+        "kind": "travel",
+        "title": "Gate to Harvest Crossing",
+        "lines": [
+          "The road continues beyond this gate."
+        ]
+      }
+    },
+    {
+      "id": "return-village",
+      "type": "sign",
+      "x": 4,
+      "y": 30,
+      "solid": true,
+      "interaction": {
+        "kind": "travel",
+        "title": "Scholar Village",
+        "lines": [
+          "Return to Scholar Village."
+        ]
+      }
+    }
+  ]
+}

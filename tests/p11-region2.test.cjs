@@ -61,13 +61,13 @@ test('regional travel preserves separate story, reading, encounter and NPC state
 
 test('Region 2 battle and reward art are packaged for offline play', () => {
   for (const file of ['chaff-sprite', 'rumour-crow', 'price-mimic', 'doubt-moth', 'forked-gecko', 'doubt-serpent']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
   }
   for (const file of ['market-seal', 'truth-stroke']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.webp`)).size > 10000, file);
   }
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   assert.match(serviceWorker, /r2-harvest-crossing\.json/);
-  assert.match(serviceWorker, /doubt-serpent\.png/);
-  assert.match(serviceWorker, /truth-stroke\.png/);
+  assert.match(serviceWorker, /doubt-serpent\.webp/);
+  assert.match(serviceWorker, /truth-stroke\.webp/);
 });

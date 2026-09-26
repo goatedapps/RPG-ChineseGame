@@ -34,5 +34,5 @@ export function enterRegion(state, campaign) {
 }
 
 export function regionIdForMap(levelPackage, mapId) {
-  return Object.entries(levelPackage.campaigns || {}).find(([, campaign]) => campaign.map.id === mapId)?.[0] || 'r1';
+  return Object.entries(levelPackage.campaigns || {}).find(([, campaign]) => campaign.map.id === mapId || campaign.route?.id === mapId)?.[0] || 'r1';
 }

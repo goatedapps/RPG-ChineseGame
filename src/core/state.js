@@ -1,4 +1,4 @@
-export const SAVE_SCHEMA_VERSION = 6;
+export const SAVE_SCHEMA_VERSION = 7;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -52,7 +52,7 @@ export function createFreshState(levelPackage) {
       },
       reading: { completed: [], active: null, index: 0, questionCount: 0, results: {}, written: [] },
       accuracy: {}
-      ,regions: {}
+      ,regions: {}, routes: {}
     },
     settings: {
       dailyBattles: 30,
@@ -73,6 +73,17 @@ export function createFreshState(levelPackage) {
 
 function numberOr(value, fallback, minimum = 0) {
   return Number.isFinite(value) && value >= minimum ? value : fallback;
+}
+
+function normalizeRoutes(value) {
+  const route = value?.r1r2;
+  if (!route || typeof route !== 'object') return {};
+  return { r1r2: {
+    discovered: Array.isArray(route.discovered) ? [...new Set(route.discovered.filter(mark => Number.isInteger(mark) && mark >= 0))] : [],
+    gateOpened: Boolean(route.gateOpened),
+    ...(route.position && typeof route.position === 'object' ? { position: route.position } : {}),
+    ...(route.villagePosition && typeof route.villagePosition === 'object' ? { villagePosition: route.villagePosition } : {})
+  } };
 }
 
 export function migrateState(candidate, levelPackage) {
@@ -135,7 +146,8 @@ export function migrateState(candidate, levelPackage) {
         },
         reading: { ...fresh.progress.reading, ...(candidate.progress?.reading || {}) },
         accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
-        ,regions: { ...(candidate.progress?.regions || {}) }
+        ,regions: { ...(candidate.progress?.regions || {}) },
+        routes: normalizeRoutes(candidate.progress?.routes)
       },
       settings: { ...fresh.settings, ...(candidate.settings || {}) },
       session: { ...fresh.session, ...(candidate.session || {}) }

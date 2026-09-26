@@ -51,9 +51,9 @@ test('P2 and P5 activate their own final lessons, sets and boss question pool', 
 
 test('Final art is packaged offline and boss knockout bypasses Next spell', () => {
   for (const file of ['blank-page-wisp', 'eraser-moth', 'silence-raven', 'lost-name-fox', 'hollow-book-golem', 'great-forgetter']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
   }
-  for (const file of ['treeheart-lens', 'final-stroke']) assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.png`)).size > 10000, file);
+  for (const file of ['treeheart-lens', 'final-stroke']) assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.webp`)).size > 10000, file);
   const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
   const hit = adventure.indexOf("audio?.setScene('victory')");
   const next = adventure.indexOf('data-boss-next>Next spell', hit);
@@ -62,6 +62,6 @@ test('Final art is packaged offline and boss knockout bypasses Next spell', () =
   assert.match(adventure.slice(hit, next), /return;/);
   const sw = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   assert.match(sw, /r7-treehouse-summit\.json/);
-  assert.match(sw, /great-forgetter\.png/);
-  assert.match(sw, /final-stroke\.png/);
+  assert.match(sw, /great-forgetter\.webp/);
+  assert.match(sw, /final-stroke\.webp/);
 });

@@ -61,14 +61,14 @@ test('Region 3 travel state remains isolated and its boss scales above its creat
 
 test('P12 creature, boss and reward art are packaged for offline play', () => {
   for (const file of ['tangle-crab', 'drift-jelly', 'rust-gull', 'minute-mite', 'tide-hare', 'idle-clock']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
   }
   for (const file of ['harbour-chronometer', 'current-stroke']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.webp`)).size > 10000, file);
   }
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   assert.match(serviceWorker, /r3-tidewater-bay\.json/);
-  assert.match(serviceWorker, /idle-clock\.png/);
-  assert.match(serviceWorker, /current-stroke\.png/);
+  assert.match(serviceWorker, /idle-clock\.webp/);
+  assert.match(serviceWorker, /current-stroke\.webp/);
   assert.match(serviceWorker, /tidewater-bg\.mp3/);
 });

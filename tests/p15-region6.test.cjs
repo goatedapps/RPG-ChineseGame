@@ -60,14 +60,14 @@ test('Region 6 travel state remains isolated and Give-Up Ghost scales above its 
 
 test('P15 creature, boss and reward art are packaged for offline play', () => {
   for (const file of ['glyph-beetle', 'bone-owl', 'ink-vine', 'relic-tortoise', 'whisper-moss', 'give-up-ghost']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
   }
   for (const file of ['oracle-rubbing-kit', 'memory-stroke']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.webp`)).size > 10000, file);
   }
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   assert.match(serviceWorker, /r6-ancient-grove\.json/);
-  assert.match(serviceWorker, /give-up-ghost\.png/);
-  assert.match(serviceWorker, /memory-stroke\.png/);
+  assert.match(serviceWorker, /give-up-ghost\.webp/);
+  assert.match(serviceWorker, /memory-stroke\.webp/);
   assert.match(serviceWorker, /music-village\.wav/);
 });

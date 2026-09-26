@@ -1,6 +1,14 @@
-import { isEncounterTerrain, zoneAt } from './encounters.js?p16';
+import { isEncounterTerrain, zoneAt } from './encounters.js?p17';
 
 const TILE = 32;
+const BUILDING_ICON = { school: 0, inn: 2, 'reading-hall': 1, shop: 3, 'hawker-centre-building': 3, 'granary-building': 6, 'hill-house-building': 4, 'boss-pavilion-building': 6 };
+const NPC_ICON = { 'grandma-wang': 0, 'chef-mei': 1, storyteller: 2, 'mr-lin': 3, 'hawker-lina': 4, 'courier-wei': 5, 'elder-sun': 0, 'auntie-bao': 6, 'rice-seller': 5, 'postman-bo': 5, 'ranger-rui': 5 };
+
+function drawAtlasSprite(context, sheet, index, columns, cellWidth, cellHeight, x, y, width, height) {
+  if (!sheet?.complete || !sheet.naturalWidth) return false;
+  context.drawImage(sheet, index % columns * cellWidth, Math.floor(index / columns) * cellHeight, cellWidth, cellHeight, x, y, width, height);
+  return true;
+}
 
 function drawTree(context, x, y) {
   context.fillStyle = 'rgba(20,40,25,.2)';
@@ -19,10 +27,63 @@ function drawTree(context, x, y) {
   context.fill();
 }
 
-function drawTile(context, map, tile, x, y, column, row, tick) {
+function drawBamboo(context, x, y) {
+  context.strokeStyle = '#245d3b';
+  context.lineWidth = 3;
+  for (const [dx, height] of [[9, 22], [16, 27], [23, 19]]) {
+    context.beginPath();
+    context.moveTo(x + dx, y + 29);
+    context.lineTo(x + dx, y + 29 - height);
+    context.stroke();
+    context.fillStyle = '#58a363';
+    context.beginPath();
+    context.ellipse(x + dx - 5, y + 17, 8, 3, -.35, 0, Math.PI * 2);
+    context.ellipse(x + dx + 5, y + 10, 8, 3, .35, 0, Math.PI * 2);
+    context.fill();
+  }
+}
+
+function drawAtlasTileDetail(context, tile, x, y, column, row, regionId) {
+  const seed = (column * 37 + row * 19) % 17;
+  if (tile === 'g' || tile === 'h' || tile === 'f') {
+    context.fillStyle = seed % 2 ? '#e0e8a543' : '#245b3940';
+    context.beginPath();
+    context.ellipse(x + 8 + seed % 13, y + 9 + seed % 15, 7, 3, -.25, 0, Math.PI * 2);
+    context.fill();
+    if ((seed + row) % 7 === 0 || tile === 'f') {
+      context.fillStyle = tile === 'f' ? '#f8e08e' : '#fbf2c2';
+      context.beginPath();
+      context.arc(x + 10 + seed % 12, y + 11 + seed % 12, 2, 0, Math.PI * 2);
+      context.fill();
+      context.fillStyle = tile === 'f' ? '#cf6580' : '#efa83c';
+      context.beginPath();
+      context.arc(x + 10 + seed % 12, y + 11 + seed % 12, 1, 0, Math.PI * 2);
+      context.fill();
+    }
+  }
+  if (tile === 'p') {
+    context.fillStyle = 'rgba(255,242,205,.19)';
+    context.fillRect(x + 3 + seed % 6, y + 5, 17, 8);
+    context.fillRect(x + 11 - seed % 5, y + 19, 18, 7);
+  }
+  if (tile === 'r' && regionId === 'r2') {
+    context.strokeStyle = '#efd365';
+    context.lineWidth = 2;
+    for (let stalk = 0; stalk < 3; stalk += 1) {
+      const sx = x + 6 + stalk * 9;
+      context.beginPath();
+      context.moveTo(sx, y + 25);
+      context.quadraticCurveTo(sx - 3, y + 16, sx + 2, y + 10);
+      context.stroke();
+    }
+  }
+}
+
+function drawTile(context, map, tile, x, y, column, row, tick, atlasRegion) {
   const definition = map.legend[tile];
-  context.fillStyle = definition.color;
+  context.fillStyle = atlasRegion && tile === 't' ? map.legend.g.color : definition.color;
   context.fillRect(Math.floor(x), Math.floor(y), TILE + 1, TILE + 1);
+  if (atlasRegion) drawAtlasTileDetail(context, tile, x, y, column, row, atlasRegion);
   if (map.legend[tile]?.encounter) {
     const hash = (column * 17 + row * 23) % 31;
     context.fillStyle = tile === 'f' ? (hash % 2 ? '#f1c34f' : '#efa2ae') : 'rgba(255,255,255,.16)';
@@ -58,7 +119,10 @@ function drawTile(context, map, tile, x, y, column, row, tick) {
     context.fillStyle = 'rgba(105,76,34,.16)';
     context.fillRect(x + 5 + (column * 7 + row * 3) % 19, y + 8 + (row * 5) % 14, 4, 3);
   }
-  if (tile === 't') drawTree(context, x, y);
+  if (tile === 't') {
+    if (atlasRegion === 'r2') drawBamboo(context, x, y);
+    else drawTree(context, x, y);
+  }
   if (tile === 'w') {
     context.strokeStyle = 'rgba(255,255,255,.5)';
     context.lineWidth = 2;
@@ -70,25 +134,122 @@ function drawTile(context, map, tile, x, y, column, row, tick) {
   }
 }
 
-function drawBuilding(context, object, offsetX, offsetY) {
+function drawAtlasBuilding(context, object, left, top, pixelWidth, pixelHeight, doorX) {
+  const bottom = top + pixelHeight;
+  const right = left + pixelWidth;
+  context.fillStyle = 'rgba(32,57,41,.22)';
+  context.beginPath();
+  context.ellipse(left + pixelWidth / 2, bottom - 2, pixelWidth * .53, 14, 0, 0, Math.PI * 2);
+  context.fill();
+
+  context.fillStyle = '#705a40';
+  context.fillRect(left + 6, top + 31, pixelWidth - 12, pixelHeight - 28);
+  context.fillStyle = '#f0dfb7';
+  context.fillRect(left + 11, top + 35, pixelWidth - 22, pixelHeight - 40);
+  context.fillStyle = '#fff1d2';
+  context.fillRect(left + 16, top + 39, pixelWidth - 32, pixelHeight - 53);
+  context.fillStyle = '#795b3c';
+  for (const post of [left + 11, right - 16]) context.fillRect(post, top + 38, 5, pixelHeight - 43);
+  context.fillRect(left + 10, bottom - 18, pixelWidth - 20, 5);
+
+  context.save();
+  context.beginPath();
+  context.moveTo(left - 6, top + 39);
+  context.quadraticCurveTo(left + 13, top + 20, left + 18, top + 9);
+  context.lineTo(right - 18, top + 9);
+  context.quadraticCurveTo(right - 13, top + 20, right + 6, top + 39);
+  context.closePath();
+  context.fillStyle = object.color;
+  context.fill();
+  context.clip();
+  context.strokeStyle = 'rgba(255,245,216,.34)';
+  context.lineWidth = 2;
+  for (let roofY = top + 15; roofY < top + 41; roofY += 8) {
+    context.beginPath();
+    context.moveTo(left - 4, roofY);
+    context.lineTo(right + 4, roofY);
+    context.stroke();
+  }
+  context.strokeStyle = 'rgba(23,39,42,.26)';
+  context.lineWidth = 1;
+  for (let roofX = left + 9; roofX < right; roofX += 16) {
+    context.beginPath();
+    context.moveTo(roofX, top + 12);
+    context.lineTo(roofX - 8, top + 41);
+    context.stroke();
+  }
+  context.restore();
+  context.strokeStyle = '#4a3d39';
+  context.lineWidth = 4;
+  context.beginPath();
+  context.moveTo(left - 8, top + 38);
+  context.quadraticCurveTo(left + 10, top + 43, left + 21, top + 35);
+  context.lineTo(right - 21, top + 35);
+  context.quadraticCurveTo(right - 10, top + 43, right + 8, top + 38);
+  context.stroke();
+
+  for (const windowX of [left + 29, right - 53]) {
+    context.fillStyle = '#614936';
+    context.fillRect(windowX, top + 58, 24, 26);
+    context.fillStyle = '#a7c4ad';
+    context.fillRect(windowX + 3, top + 61, 18, 20);
+    context.strokeStyle = '#79563a';
+    context.lineWidth = 2;
+    context.beginPath();
+    context.moveTo(windowX + 12, top + 60);
+    context.lineTo(windowX + 12, top + 82);
+    context.moveTo(windowX + 2, top + 71);
+    context.lineTo(windowX + 22, top + 71);
+    context.stroke();
+  }
+
+  context.fillStyle = '#513628';
+  context.fillRect(doorX + 4, bottom - 43, 24, 39);
+  context.fillStyle = '#8c6543';
+  context.fillRect(doorX + 8, bottom - 39, 16, 35);
+  context.fillStyle = '#e4b968';
+  context.beginPath();
+  context.arc(doorX + 21, bottom - 20, 1.8, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = '#b7a085';
+  context.fillRect(doorX - 3, bottom - 4, 38, 5);
+  context.fillStyle = '#ded0af';
+  context.fillRect(doorX - 8, bottom + 1, 48, 4);
+
+  for (const lanternX of [left + 16, right - 23]) {
+    context.fillStyle = '#e3b65a';
+    context.fillRect(lanternX + 2, top + 44, 3, 6);
+    context.fillStyle = '#d05a3a';
+    context.fillRect(lanternX, top + 50, 8, 11);
+    context.fillStyle = '#f8d684';
+    context.fillRect(lanternX + 2, top + 52, 4, 7);
+  }
+}
+
+function drawBuilding(context, object, offsetX, offsetY, atlasRegion, art) {
   const { x, y, width, height } = object.rect;
   const left = x * TILE - offsetX;
   const top = y * TILE - offsetY;
   const pixelWidth = width * TILE;
   const pixelHeight = height * TILE;
-  context.fillStyle = '#eadfc5';
-  context.fillRect(left + 5, top + 24, pixelWidth - 10, pixelHeight - 24);
-  context.fillStyle = object.color;
-  context.beginPath();
-  context.moveTo(left - 5, top + 31);
-  context.quadraticCurveTo(left + 12, top + 20, left + 18, top + 5);
-  context.lineTo(left + pixelWidth - 18, top + 5);
-  context.quadraticCurveTo(left + pixelWidth - 12, top + 20, left + pixelWidth + 5, top + 31);
-  context.closePath();
-  context.fill();
   const doorX = object.door.x * TILE - offsetX;
-  context.fillStyle = '#674127';
-  context.fillRect(doorX + 7, top + pixelHeight - 27, 18, 27);
+  const spriteIndex = BUILDING_ICON[object.id] ?? 4;
+  const illustrated = atlasRegion && drawAtlasSprite(context, art?.buildings, spriteIndex, 4, 256, 256, left - 4, top - 31, pixelWidth + 8, pixelHeight + 43);
+  if (atlasRegion && !illustrated) drawAtlasBuilding(context, object, left, top, pixelWidth, pixelHeight, doorX);
+  else if (!atlasRegion) {
+    context.fillStyle = '#eadfc5';
+    context.fillRect(left + 5, top + 24, pixelWidth - 10, pixelHeight - 24);
+    context.fillStyle = object.color;
+    context.beginPath();
+    context.moveTo(left - 5, top + 31);
+    context.quadraticCurveTo(left + 12, top + 20, left + 18, top + 5);
+    context.lineTo(left + pixelWidth - 18, top + 5);
+    context.quadraticCurveTo(left + pixelWidth - 12, top + 20, left + pixelWidth + 5, top + 31);
+    context.closePath();
+    context.fill();
+    context.fillStyle = '#674127';
+    context.fillRect(doorX + 7, top + pixelHeight - 27, 18, 27);
+  }
   context.font = '700 14px system-ui';
   const maxTextWidth = Math.max(70, pixelWidth - 28);
   const lines = [''];
@@ -100,9 +261,12 @@ function drawBuilding(context, object, offsetX, offsetY) {
   }
   const labelWidth = Math.min(pixelWidth - 10, Math.ceil(Math.max(...lines.map(line => context.measureText(line).width))) + 18);
   const labelHeight = lines.length * 18 + 8;
-  context.fillStyle = '#1b2430';
+  context.fillStyle = atlasRegion ? '#fff1c9' : '#1b2430';
+  context.strokeStyle = atlasRegion ? '#684e31' : '#1b2430';
+  context.lineWidth = atlasRegion ? 2 : 1;
   context.fillRect(left + (pixelWidth - labelWidth) / 2, top + 30, labelWidth, labelHeight);
-  context.fillStyle = '#f0c95a';
+  if (atlasRegion) context.strokeRect(left + (pixelWidth - labelWidth) / 2, top + 30, labelWidth, labelHeight);
+  context.fillStyle = atlasRegion ? '#442f29' : '#f0c95a';
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   lines.forEach((line, index) => context.fillText(line, left + pixelWidth / 2, top + 43 + index * 18, maxTextWidth));
@@ -269,8 +433,21 @@ function drawScroll(context, x, y) {
 
 export function createRenderer(canvas, map) {
   const context = canvas.getContext('2d');
+  const atlasRegion = map.region === 'r1' || map.region === 'r2' ? map.region : null;
+  let disposed = false;
+  let lastState = null;
+  const art = {};
+  if (atlasRegion && globalThis.Image) {
+    for (const [kind, file] of [['buildings', 'buildings.webp'], ['villagers', 'villagers.webp']]) {
+      const image = new Image();
+      image.onload = () => { if (!disposed && lastState) render(lastState); };
+      image.src = new URL(`../../assets/images/atlas/${file}`, import.meta.url).href;
+      art[kind] = image;
+    }
+  }
   let tick = 0;
   function render(state) {
+    lastState = state;
     tick += 1;
     const viewWidth = canvas.width;
     const viewHeight = canvas.height;
@@ -288,12 +465,12 @@ export function createRenderer(canvas, map) {
     context.clearRect(0, 0, viewWidth, viewHeight);
     for (let row = firstRow; row <= lastRow; row += 1) {
       for (let column = firstColumn; column <= lastColumn; column += 1) {
-        drawTile(context, map, map.tiles[row][column], column * TILE - offsetX, row * TILE - offsetY, column, row, tick);
+        drawTile(context, map, map.tiles[row][column], column * TILE - offsetX, row * TILE - offsetY, column, row, tick, atlasRegion);
       }
     }
 
     for (const object of map.objects.filter(object => object.type === 'landmark')) drawLandmark(context, object, offsetX, offsetY);
-    for (const object of map.objects.filter(object => object.type === 'building')) drawBuilding(context, object, offsetX, offsetY);
+    for (const object of map.objects.filter(object => object.type === 'building')) drawBuilding(context, object, offsetX, offsetY, atlasRegion, art);
     const entities = map.objects.filter(object => object.type === 'npc' || object.type === 'sign')
       .map(object => ({ ...object, sortY: object.y }))
       .concat({ type: 'player', x: state.player.x, y: state.player.y, sortY: state.player.y })
@@ -301,9 +478,12 @@ export function createRenderer(canvas, map) {
     for (const entity of entities) {
       const x = entity.x * TILE - offsetX;
       const y = entity.y * TILE - offsetY;
-      if (entity.type === 'sign') drawSign(context, x, y);
+      if (entity.type === 'sign') {
+        if (!['next-region-gate', 'route-entrance'].includes(entity.id) || !drawAtlasSprite(context, art.buildings, 7, 4, 256, 256, x - 15, y - 36, 62, 68)) drawSign(context, x, y);
+      }
       else if (entity.type === 'npc') {
-        drawPerson(context, x, y, entity.color, entity.direction || 'down');
+        const index = NPC_ICON[entity.id] ?? (entity.id.length % 8);
+        if (!atlasRegion || !drawAtlasSprite(context, art.villagers, index, 4, 192, 192, x - 4, y - 10, 40, 43)) drawPerson(context, x, y, entity.color, entity.direction || 'down');
         const questionIndex = (map.passageVillagers || []).indexOf(entity.id);
         const reading = state.progress?.reading;
         if (reading?.active && questionIndex >= 0 && questionIndex < reading.questionCount && reading.results?.[questionIndex] == null) {
@@ -330,8 +510,25 @@ export function createRenderer(canvas, map) {
       context.beginPath(); context.arc(playerPx - offsetX - 5, playerPy - offsetY + 5, 11, 0, Math.PI * 2); context.fill(); context.stroke();
       context.fillStyle = '#1b2430'; context.font = '700 13px serif'; context.fillText(glyph, playerPx - offsetX - 5, playerPy - offsetY + 5);
     }
+    if (map.route) {
+      const discovered = new Set(state.progress?.routes?.r1r2?.discovered || []);
+      for (let row = firstRow; row <= lastRow; row += 1) {
+        for (let column = firstColumn; column <= lastColumn; column += 1) {
+          if (discovered.has(row * map.width + column)) continue;
+          const x = column * TILE - offsetX;
+          const y = row * TILE - offsetY;
+          const distance = Math.abs(column - state.player.x) + Math.abs(row - state.player.y);
+          context.fillStyle = distance <= 2 ? '#102c3b80' : '#102c3bf5';
+          context.fillRect(x, y, TILE + 1, TILE + 1);
+          context.fillStyle = '#d5e8db16';
+          context.beginPath();
+          context.arc(x + 8 + (column * 7 + row * 3) % 18, y + 10 + (row * 5) % 12, 7, 0, Math.PI * 2);
+          context.fill();
+        }
+      }
+    }
   }
-  return { render };
+  return { render, dispose() { disposed = true; } };
 }
 
 export { TILE };

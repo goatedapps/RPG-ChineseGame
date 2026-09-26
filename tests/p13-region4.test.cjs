@@ -61,15 +61,15 @@ test('Region 4 travel state remains isolated and Mocking Mirror scales above its
 
 test('P13 art and both supplied future-facing music tracks are packaged for offline play', () => {
   for (const file of ['mask-moth', 'heckle-magpie', 'straw-soldier', 'spotlight-fox', 'wilt-wisp', 'mocking-mirror']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
   }
   for (const file of ['lantern-stage-pass', 'courage-stroke']) {
-    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.png`)).size > 10000, file);
+    assert.ok(fs.statSync(path.join(root, 'assets/images/rewards', `${file}.webp`)).size > 10000, file);
   }
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
   assert.match(serviceWorker, /r4-lantern-theatre\.json/);
-  assert.match(serviceWorker, /mocking-mirror\.png/);
-  assert.match(serviceWorker, /courage-stroke\.png/);
+  assert.match(serviceWorker, /mocking-mirror\.webp/);
+  assert.match(serviceWorker, /courage-stroke\.webp/);
   assert.match(serviceWorker, /lantern-theatre-bg\.mp3/);
   assert.match(serviceWorker, /festival-city-bg\.mp3/);
 });

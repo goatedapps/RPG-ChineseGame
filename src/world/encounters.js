@@ -5,6 +5,7 @@ export function zoneAt(map, x, y) {
 }
 
 export function isEncounterTerrain(map, x, y) {
+  if (map.safeTown) return false;
   const tile = tileAt(map, x, y);
   return Boolean(zoneAt(map, x, y) && map.legend[tile]?.walkable && map.legend[tile]?.encounter);
 }

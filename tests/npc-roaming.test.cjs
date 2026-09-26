@@ -8,7 +8,7 @@ const mapDirectory = 'content/authored/campaign/maps';
 test('every village has several villagers who roam without blocking each other', async () => {
   const { wanderNpcs, restoreNpcPositions } = await import('../src/world/npcs.js');
   const { tileAt, objectOccupies, validateMap } = await import('../src/world/map.js');
-  const files = fs.readdirSync(mapDirectory).filter(file => /^r[1-7]-.*\.json$/.test(file));
+  const files = fs.readdirSync(mapDirectory).filter(file => /^r[1-7]-.*\.json$/.test(file) && !file.includes('mistwood'));
   assert.equal(files.length, 7);
 
   for (const file of files) {

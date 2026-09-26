@@ -13,8 +13,8 @@ import { calculateDamage, heroStats } from './battle/damage.js';
 import { enemyAttack } from './battle/battle.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
-import { creatureSvg } from './battle/creatureArt.js?p10m';
-import { heroPortrait } from './ui/heroPortrait.js?p10n';
+import { creatureSvg } from './battle/creatureArt.js?p10n';
+import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 
@@ -23,13 +23,13 @@ function addUnique(list, value) {
 }
 
 const FRAGMENT_ART = Object.freeze({
-  'dawn-stroke': '../assets/images/rewards/dawn-stroke.png',
-  'truth-stroke': '../assets/images/rewards/truth-stroke.png',
-  'current-stroke': '../assets/images/rewards/current-stroke.png',
-  'courage-stroke': '../assets/images/rewards/courage-stroke.png',
-  'harmony-stroke': '../assets/images/rewards/harmony-stroke.png',
-  'memory-stroke': '../assets/images/rewards/memory-stroke.png',
-  'final-stroke': '../assets/images/rewards/final-stroke.png'
+  'dawn-stroke': '../assets/images/rewards/dawn-stroke.webp',
+  'truth-stroke': '../assets/images/rewards/truth-stroke.webp',
+  'current-stroke': '../assets/images/rewards/current-stroke.webp',
+  'courage-stroke': '../assets/images/rewards/courage-stroke.webp',
+  'harmony-stroke': '../assets/images/rewards/harmony-stroke.webp',
+  'memory-stroke': '../assets/images/rewards/memory-stroke.webp',
+  'final-stroke': '../assets/images/rewards/final-stroke.webp'
 });
 
 const BOSS_ITEM_COPY = Object.freeze({
@@ -66,7 +66,7 @@ function fitStoryPages(spread) {
   }
 }
 
-export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio, onSwitchRegion }) {
+export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio, onSwitchRegion, onEnterRoute, onGateOpening }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
   const speech = createSpeechController();
@@ -225,7 +225,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       overlay.open('<div class="panel result-panel"><h1>The adventure begins</h1><p>Visit the Storyteller to hear the first village story, then explore Camping Forest.</p><button class="primary" data-close-overlay>Explore</button></div>');
     });
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>${gate.open ? '✓ Muddle Cave gate ready' : `○ Muddle Cave: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p></div>${pathGuideMarkup(game)}${story.bossDefeated ? '<div class="button-row"><button class="secondary" data-museum>Mistake Museum</button></div>' : ''}</div>`);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>Explore Mistwood Road through the north village gate; discover the Muddle Pavilion and the eastern town gate.</p><p>${gate.open ? '✓ Muddle Pavilion ready' : `○ Muddle Pavilion: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p></div>${pathGuideMarkup(game)}${story.bossDefeated ? '<div class="button-row"><button class="secondary" data-museum>Mistake Museum</button></div>' : ''}</div>`);
     document.querySelector('[data-museum]')?.addEventListener('click', mistakeMuseum);
   }
 
@@ -342,7 +342,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const game = active();
     const story = normalizeStory(game.state.progress.story);
     if (story.bossDefeated) {
-      if (game.levelPackage.region.id === 'r1') return nextRegionGate();
+      if (game.levelPackage.region.id === 'r1') return overlay.dialogue({ title: 'Muddle Pavilion', lines: ['The Muddle King has left this pavilion. Keep exploring to find the eastern gate to Harvest Crossing.'] });
       if (game.levelPackage.region.id === 'r2') return truthTerrace();
       if (game.levelPackage.region.id === 'r3') return tideVault();
       if (game.levelPackage.region.id === 'r4') return courageLoft();
@@ -426,6 +426,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         }
         if (game.state.player.hp === 0) {
           game.state.player.hp = game.state.player.maxHp;
+          if (game.levelPackage.map.route) onEnterRoute?.('rest');
           commit();
           audio?.setScene('defeat');
           return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`), { onClose: () => audio?.setScene('village') });
@@ -493,7 +494,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         : game.levelPackage.region.id === 'r7'
           ? 'The Spirit Brush is whole. Visit the Dictionary Heart to hear the final story.'
           : `${game.levelPackage.regionStory.secretName || 'The hidden place'} can now be opened.`;
-      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p><button class="primary" data-close-overlay>Return to ${escapeHtml(game.levelPackage.region.name)}</button></div>`);
+      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p><button class="primary" data-close-overlay>${game.levelPackage.map.route ? 'Continue exploring' : `Return to ${escapeHtml(game.levelPackage.region.name)}`}</button></div>`);
     });
   }
 
@@ -511,10 +512,15 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const ready = (silver >= required && fragmentReady) || game.state.settings.testMode;
     const fragmentName = game.levelPackage.regionStory.fragmentName || (currentNumber === 1 ? 'Dawn Stroke' : 'Truth Stroke');
     overlay.open(`<div class="panel"><p class="panel-kicker">Road to ${escapeHtml(nextCampaign.region.name)}</p><h1>${fragmentReady ? `${escapeHtml(fragmentName)} restored` : `Defeat the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region ${nextNumber}. Gold spirits are optional bonuses.</p><div class="button-row">${ready ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
-    document.querySelector('[data-travel-next]')?.addEventListener('click', () => {
+    document.querySelector('[data-travel-next]')?.addEventListener('click', async () => {
       game.state.settings.unlockedRegions = Math.max(nextNumber, game.state.settings.unlockedRegions);
+      if (game.levelPackage.region.id === 'r1' && game.levelPackage.map.route && !game.state.progress.routes?.r1r2?.gateOpened) {
+        game.state.progress.routes.r1r2.gateOpened = true;
+        commit();
+        await onGateOpening?.();
+      }
       onSwitchRegion?.(nextRegionId);
-    });
+    }, { once: true });
   }
 
   function regionalRequest(id) {
@@ -642,6 +648,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       'hidden-grove': hiddenGrove,
       gatekeeper
     };
+    if (gameRegion() === 'r1') {
+      handlers['route-entrance'] = () => onEnterRoute?.('enter');
+      handlers['return-village'] = () => onEnterRoute?.('leave');
+      handlers['boss-pavilion-door'] = gatekeeper;
+      handlers['next-region-gate'] = nextRegionGate;
+    }
     if (gameRegion() === 'r2') {
       handlers['elder-sun'] = storyJournal;
       handlers['hawker-lina'] = () => regionalRequest('hawker-lina');

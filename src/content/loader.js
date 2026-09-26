@@ -23,12 +23,13 @@ export async function listLevels(fetcher = fetch, baseUrl = '..') {
 }
 
 export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..') {
-  const [content, characters, config, regions, r1Map, r2Map, r3Map, r4Map, r5Map, r6Map, r7Map, balance, strings, items, gear, recipes, milestones, r1Sets, r2Sets, r3Sets, r4Sets, r5Sets, r6Sets, r7Sets, wordTags, dailyQuestTemplates, r1Story, r2Story, r3Story, r4Story, r5Story, r6Story, r7Story] = await Promise.all([
+  const [content, characters, config, regions, r1Map, route1, r2Map, r3Map, r4Map, r5Map, r6Map, r7Map, balance, strings, items, gear, recipes, milestones, r1Sets, r2Sets, r3Sets, r4Sets, r5Sets, r6Sets, r7Sets, wordTags, dailyQuestTemplates, r1Story, r2Story, r3Story, r4Story, r5Story, r6Story, r7Story] = await Promise.all([
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.content.json`)),
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.chars.json`)),
     fetchJson(fetcher, join(baseUrl, `content/authored/levels/${levelId}/level.json`)),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/regions.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r1-hub.json')),
+    fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r1-r2-mistwood.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r2-harvest-crossing.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r3-tidewater-bay.json')),
     fetchJson(fetcher, join(baseUrl, 'content/authored/campaign/maps/r4-lantern-theatre.json')),
@@ -87,6 +88,14 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     story.stories = JSON.parse(JSON.stringify(content.stories.filter(item => regionLessons.has(item.lesson))));
     campaigns[regionId] = { region, map, sets: authoredSets, regionStory: story };
   }
+  campaigns.r1.map.safeTown = true;
+  const route = JSON.parse(JSON.stringify(route1));
+  const firstRegionLessons = config.regionLessons.r1 || [];
+  for (const zone of route.zones) {
+    zone.lesson = firstRegionLessons[zone.lessonSlot] ?? firstRegionLessons.at(-1);
+    zone.encounter.rate = config.tuning?.routeEncounterRate ?? zone.encounter.rate;
+  }
+  campaigns.r1.route = route;
   if (config.region1?.atticLine) {
     const line = campaigns.r1.regionStory.scenes.attic.find(command => command.speaker === 'Fogling');
     if (line) line.say = config.region1.atticLine;

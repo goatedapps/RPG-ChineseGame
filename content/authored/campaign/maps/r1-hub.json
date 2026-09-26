@@ -93,7 +93,7 @@
       "encounter": { "rate": 0.16, "cooldown": 3, "types": { "ink-imp": 4, "jumble-bug": 3, "twin-shade": 1 } }
     }
   ],
-  "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "gatekeeper"],
+  "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "auntie-bao"],
   "objects": [
     {
       "id": "school",
@@ -242,19 +242,17 @@
       }
     },
     {
-      "id": "gatekeeper",
-      "type": "npc",
-      "name": "Gatekeeper",
+      "id": "route-entrance",
+      "type": "sign",
       "x": 20,
       "y": 2,
       "solid": true,
-      "color": "#8e3b2e",
       "interaction": {
-        "kind": "dialogue",
-        "title": "Gatekeeper",
+        "kind": "travel",
+        "title": "Mistwood Road",
         "lines": [
-          "The road to the Great Dictionary Tree is still shrouded in mist.",
-          "Gather the lost Word Spirits and a light for the way before you pass."
+          "The wild road beyond the village is shrouded in mist.",
+          "Explore to find the Muddle Pavilion and the gate to Harvest Crossing."
         ]
       }
     },

@@ -1,7 +1,8 @@
 {
   "gateBronzePct": 0.22,
+  "bossPlace": "Muddle Pavilion",
   "nextRegionSilverPct": 0.7,
-  "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "gatekeeper"],
+  "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "auntie-bao"],
   "scrollSpots": [{"x": 7, "y": 13}, {"x": 32, "y": 13}, {"x": 18, "y": 24}, {"x": 25, "y": 15}],
   "scenes": {
     "arrival": [

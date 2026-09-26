@@ -1,25 +1,28 @@
 import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10d';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p16';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p18';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p16';
+import { createRenderer } from './world/renderer.js?p20';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p22';
-import { createCollection } from './collection.js?p16';
-import { createAdventure } from './adventure.js?p22';
-import { createAudioManager } from './core/audio.js?p22';
+import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p2';
+import { createGameplay } from './gameplay.js?p25';
+import { createCollection } from './collection.js?p17';
+import { createAdventure } from './adventure.js?p25';
+import { createAudioManager } from './core/audio.js?p23';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p21';
 import { localDay } from './core/time.js';
-import { encounterStep } from './world/encounters.js?p16';
+import { encounterStep } from './world/encounters.js?p17';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
 import { tierOf } from './learning/mastery.js?p10f';
-import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p11';
-import { regionPathGuide } from './systems/regionGuide.js';
+import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p12';
+import { regionPathGuide } from './systems/regionGuide.js?p2';
+import { revealRouteTile, routeDiscoveryPercent } from './world/fog.js?p2';
+import { showGateOpening } from './ui/gateTransition.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -58,14 +61,16 @@ let prologueCompleted = false;
 
 function render() {
   if (!active) return;
+  setAtlasRegion($('.game-shell'), active.levelPackage.region.id);
   const canvas = $('#world');
   const stage = $('#game-stage');
-  stage.setAttribute('aria-label', `${active.levelPackage.region.name} map`);
+  stage.setAttribute('aria-label', `${active.levelPackage.map.name} map`);
   const width = Math.max(320, Math.round(stage.clientWidth));
   const height = Math.max(320, Math.round(stage.clientHeight));
   if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
   active.renderer.render(active.state);
   updateHud(hud, active.levelPackage, active.state);
+  if (active.levelPackage.map.route) hud.region.textContent = active.levelPackage.map.name;
   updateObjective();
 }
 
@@ -89,7 +94,12 @@ function move(direction) {
   active.state = { ...active.state, player: result.player };
   if (result.moved) {
     events.emit('player:moved', { ...result.player });
-    const spot = adventure?.scrollSpot();
+    if (active.levelPackage.map.route) {
+      const route = active.state.progress.routes.r1r2;
+      route.position = { x: result.player.x, y: result.player.y, direction: result.player.direction };
+      route.discovered = revealRouteTile(active.levelPackage.map, route.discovered, result.player.x, result.player.y);
+    }
+    const spot = active.levelPackage.map.route ? null : adventure?.scrollSpot();
     if (spot && result.player.x === spot.x && result.player.y === spot.y) adventure.collectDailyScroll();
     const encounter = encounterStep(active.state.progress.encounter, active.levelPackage.map, result.player);
     active.state.progress.encounter = encounter.state;
@@ -129,12 +139,16 @@ function objectiveTasks() {
   const regionId = game.levelPackage.region.id;
   const words = game.levelPackage.content.words.filter(word => (game.levelPackage.config.regionLessons[regionId] || []).includes(word.lesson));
   const tasks = [];
+  if (game.levelPackage.map.route) {
+    const discovered = routeDiscoveryPercent(game.levelPackage.map, game.state.progress.routes.r1r2?.discovered);
+    tasks.push(`Mistwood Road ${discovered}% explored. Find the Muddle Pavilion and the gate to Harvest Crossing.`);
+  }
   const suggestedPath = regionPathGuide(game.levelPackage, game.state.progress, game.state.player.level).find(path => path.suggested);
   if (suggestedPath) tasks.push(`Suggested path: ${suggestedPath.name} (${suggestedPath.direction}, Lesson ${suggestedPath.lesson}). Other paths stay open.`);
   const reading = game.state.progress.reading;
   if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.keys(reading.results || {}).length}/${reading.questionCount}.`);
   else if (!(reading.completed || []).length) tasks.push(`Read a passage in the Reading Hall to earn the ${game.levelPackage.regionStory.gateKeyName || 'Cave Lantern'}.`);
-  for (const zone of game.levelPackage.map.zones) {
+  for (const zone of (game.levelPackage.campaigns[regionId].route || game.levelPackage.map).zones) {
     const lessonWords = words.filter(word => word.lesson === zone.lesson);
     const collected = lessonWords.filter(word => game.state.progress.words[word.w]?.collected).length;
     if (collected < lessonWords.length) tasks.push(`Explore ${zone.name} and collect Lesson ${zone.lesson} spirits (${collected}/${lessonWords.length}).`);
@@ -224,6 +238,11 @@ async function startLevel(levelId) {
     const loadResult = loadLevelState(storage, levelPackage);
     const savedRegionId = regionIdForMap(levelPackage, loadResult.state.player.map);
     levelPackage = activateRegion(levelPackage, savedRegionId);
+    if (loadResult.state.player.map === levelPackage.campaigns.r1.route?.id) {
+      levelPackage.map = levelPackage.campaigns.r1.route;
+      loadResult.state.progress.routes.r1r2 ||= { discovered: [], gateOpened: false };
+      loadResult.state.progress.routes.r1r2.discovered = revealRouteTile(levelPackage.map, loadResult.state.progress.routes.r1r2.discovered, loadResult.state.player.x, loadResult.state.player.y);
+    }
     if (!isWalkable(levelPackage.map, loadResult.state.player.x, loadResult.state.player.y)) {
       loadResult.state.player.x = levelPackage.map.spawn.x;
       loadResult.state.player.y = levelPackage.map.spawn.y;
@@ -238,8 +257,8 @@ async function startLevel(levelId) {
     };
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
-    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: () => changeRoute('rest'), onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
+    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion, onEnterRoute: changeRoute, onGateOpening: showGateOpening });
     adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
@@ -256,6 +275,7 @@ async function startLevel(levelId) {
     audio.setScene('village');
     $('#sound-button span').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
     $('#sound-button').setAttribute('aria-pressed', String(active.state.settings.sound));
+    $('#sound-button').setAttribute('aria-label', active.state.settings.sound ? 'Sound on' : 'Sound off');
     render();
     if (prologueCompleted && !loadResult.blocked && !loadResult.migrated && !loadResult.warning) {
       active.state.session.seenWelcome = true;
@@ -273,11 +293,50 @@ async function startLevel(levelId) {
   }
 }
 
+function saveCurrentLocation() {
+  const regionId = active.levelPackage.region.id;
+  if (active.levelPackage.map.route) {
+    const route = active.state.progress.routes.r1r2;
+    route.position = { x: active.state.player.x, y: active.state.player.y, direction: active.state.player.direction };
+    saveCurrentRegion(active.state, regionId);
+    active.state.progress.regions[regionId].position = route.villagePosition || active.levelPackage.campaigns.r1.map.spawn;
+  } else saveCurrentRegion(active.state, regionId);
+}
+
+function changeRoute(direction) {
+  if (!active || active.levelPackage.region.id !== 'r1') return;
+  const routeMap = active.levelPackage.campaigns.r1.route;
+  active.state.progress.routes.r1r2 ||= { discovered: [], gateOpened: false };
+  const route = active.state.progress.routes.r1r2;
+  if (direction === 'enter' && !active.levelPackage.map.route) {
+    saveCurrentRegion(active.state, 'r1');
+    route.villagePosition = { x: active.state.player.x, y: active.state.player.y, direction: active.state.player.direction };
+    const position = Number.isInteger(route.position?.x) && Number.isInteger(route.position?.y) && isWalkable(routeMap, route.position.x, route.position.y) ? route.position : routeMap.spawn;
+    active.levelPackage.map = routeMap;
+    active.state.player = { ...active.state.player, ...position, map: routeMap.id };
+    route.discovered = revealRouteTile(routeMap, route.discovered, position.x, position.y);
+  } else if ((direction === 'leave' || direction === 'rest') && active.levelPackage.map.route) {
+    saveCurrentLocation();
+    active.levelPackage = activateRegion(active.levelPackage, 'r1');
+    enterRegion(active.state, active.levelPackage);
+    if (direction === 'rest') Object.assign(active.state.player, { x: 26, y: 9, direction: 'up' });
+    restoreNpcPositions(active.levelPackage.map, active.state.progress.npcs);
+  } else return;
+  active.renderer.dispose?.();
+  active.renderer = createRenderer($('#world'), active.levelPackage.map);
+  objectiveIndex = 0;
+  persist();
+  overlay.close();
+  render();
+  toast(direction === 'enter' ? 'Mistwood Road is shrouded in fog. Each step reveals more.' : direction === 'rest' ? 'The villagers carried you to the Inn.' : 'Returned to Scholar Village.');
+}
+
 function switchRegion(regionId) {
   if (!active?.levelPackage.campaigns?.[regionId]) return toast('That region is not available yet.');
   const currentId = active.levelPackage.region.id;
   if (currentId === regionId) return;
-  saveCurrentRegion(active.state, currentId);
+  saveCurrentLocation();
+  active.renderer.dispose?.();
   active.levelPackage = activateRegion(active.levelPackage, regionId);
   enterRegion(active.state, active.levelPackage);
   active.renderer = createRenderer($('#world'), active.levelPackage.map);
@@ -348,6 +407,7 @@ function showBuildStatus() {
 }
 
 async function boot() {
+  bindAtlasMenu($('.game-shell'), $('#atlas-menu-toggle'), render, matchMedia('(min-width: 1000px)').matches);
   const walkingHero = $('#boot-loading-hero');
   walkingHero?.decode().then(() => walkingHero.classList.add('ready')).catch(() => {});
   const openingImage = new Image();
@@ -357,6 +417,7 @@ async function boot() {
   }
   $('#status-button').addEventListener('click', showBuildStatus);
   $('#book-button').addEventListener('click', () => gameplay?.spiritBook());
+  $('#dictation-button').addEventListener('click', () => gameplay?.dictationPractice());
   $('#character-button').addEventListener('click', () => collection?.character());
   $('#bag-button').addEventListener('click', () => collection?.bag());
   $('#room-button').addEventListener('click', () => collection?.room());
@@ -369,6 +430,7 @@ async function boot() {
     audio.setEnabled(active.state.settings.sound);
     event.currentTarget.querySelector('span').textContent = active.state.settings.sound ? 'Sound on' : 'Sound off';
     event.currentTarget.setAttribute('aria-pressed', String(active.state.settings.sound));
+    event.currentTarget.setAttribute('aria-label', active.state.settings.sound ? 'Sound on' : 'Sound off');
     persist();
   });
   events.on('world:interaction', interaction => console.debug('Interaction', interaction.id));
@@ -392,7 +454,7 @@ async function boot() {
       }
     });
     requestAnimationFrame(() => $('#boot-loading')?.remove());
-    const warmPaths = ['room/grandmas-room.jpg', 'intro/great-forgetter.jpg', 'intro/spirits-scattered.jpg', 'shop/shop-background.jpg', 'story/reading-scroll.jpg', 'hero/main-hero.png', 'story/open-book.png'];
+    const warmPaths = ['room/grandmas-room.jpg', 'intro/great-forgetter.jpg', 'intro/spirits-scattered.jpg', 'shop/shop-background.jpg', 'story/reading-scroll.jpg', 'hero/main-hero.webp', 'story/open-book.webp'];
     (async () => { for (const path of warmPaths) await warmImage(new URL(`../assets/images/${path}`, import.meta.url).href).catch(() => {}); })();
   } catch (error) {
     console.error(error);

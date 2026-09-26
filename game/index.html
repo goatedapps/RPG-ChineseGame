@@ -9,13 +9,14 @@
   <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css?p21">
-  <link rel="stylesheet" href="../css/stage.css?p21">
+  <link rel="stylesheet" href="../css/stage.css?p23">
+  <link rel="stylesheet" href="../css/atlas.css?p3">
 </head>
 <body>
   <div class="boot-loading" id="boot-loading" role="status" aria-live="polite" aria-label="Loading Word Spirit Quest">
     <div class="boot-loading-scene" aria-hidden="true">
       <div class="boot-loading-glow"></div>
-      <img class="boot-loading-hero" id="boot-loading-hero" src="../assets/images/hero/hero-walking.png" alt="">
+      <img class="boot-loading-hero" id="boot-loading-hero" src="../assets/images/hero/hero-walking.webp" alt="">
       <div class="boot-loading-path"></div>
     </div>
     <div class="boot-loading-copy"><span class="boot-loading-mark">字灵</span><h1>Word Spirit Quest</h1><p>Our hero is on the way…</p><div class="boot-loading-track" aria-hidden="true"><i></i></div></div>
@@ -33,26 +34,28 @@
   <a class="skip-link" href="#game-stage">Skip to the game</a>
   <main class="game-shell">
     <header class="hud" aria-label="Player status">
-      <div class="hud-overview"><div class="brand">Word Spirit Quest <span>字灵</span><small id="hud-region">Scholar Village</small></div><div class="hud-status">
-      <div class="hud-stat"><span>Curriculum</span><b id="hud-level">—</b></div>
-      <div class="hud-stat"><span>Location</span><b id="hud-location">—</b></div>
-      <div class="hud-stat"><span>Level</span><b id="hud-player-level">1</b></div>
+      <div class="hud-overview"><div class="brand"><i class="atlas-region-emblem" aria-hidden="true"></i><div class="brand-copy">Word Spirit Quest <span>字灵</span><small id="hud-region">Scholar Village</small></div></div><div class="hud-status">
+      <div class="hud-stat curriculum"><span>Curriculum</span><b id="hud-level">—</b></div>
+      <div class="hud-stat location"><span>Location</span><b id="hud-location">—</b></div>
+      <div class="hud-stat player-level"><span>Level</span><b id="hud-player-level">1</b></div>
       <div class="hud-stat xp"><span>XP to next level</span><i><em id="hud-xp-bar"></em></i><b id="hud-xp">0/30 XP</b></div>
       <div class="hud-stat hp"><span>HP</span><i><em id="hud-hp-bar"></em></i><b id="hud-hp">20/20</b></div>
-      <div class="hud-stat"><span>Coins</span><b id="hud-coins">20</b></div>
-      <div class="hud-stat"><span>Spirits</span><b id="hud-spirits">0</b></div>
-      <div class="hud-stat"><span>Battles</span><b id="hud-battles">30 left</b></div>
-      <div class="hud-stat"><span>Lantern streak</span><b id="hud-streak">0 days</b></div>
+      <div class="hud-stat coins"><span>Coins</span><b id="hud-coins">20</b></div>
+      <div class="hud-stat spirits"><span>Spirits</span><b id="hud-spirits">0</b></div>
+      <div class="hud-stat battles"><span>Battles</span><b id="hud-battles">30 left</b></div>
+      <div class="hud-stat streak"><span>Lantern streak</span><b id="hud-streak">0 days</b></div>
       </div></div>
-      <nav class="hud-actions" aria-label="Game menus">
-      <button class="hud-button" id="book-button" type="button"><svg aria-hidden="true"><use href="#menu-book"/></svg><span>Spirit Book</span></button>
-      <button class="hud-button" id="character-button" type="button"><svg aria-hidden="true"><use href="#menu-hero"/></svg><span>Hero Status</span></button>
-      <button class="hud-button" id="bag-button" type="button"><svg aria-hidden="true"><use href="#menu-bag"/></svg><span>Bag</span></button>
-      <button class="hud-button" id="room-button" type="button"><svg aria-hidden="true"><use href="#menu-room"/></svg><span>My Room</span></button>
-      <button class="hud-button" id="daily-button" type="button"><svg aria-hidden="true"><use href="#menu-daily"/></svg><span>Daily Board</span></button>
-      <button class="hud-button" id="story-button" type="button"><svg aria-hidden="true"><use href="#menu-adventure"/></svg><span>Adventure</span></button>
-      <button class="hud-button utility" id="parent-button" type="button"><svg aria-hidden="true"><use href="#menu-parent"/></svg><span>Parent</span></button>
-      <button class="hud-button utility" id="sound-button" type="button" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3Z"/><path class="sound-waves" d="M16 8a6 6 0 0 1 0 8m2-11a10 10 0 0 1 0 14"/><path class="sound-slash" d="M4 20 20 4"/></svg><span>Sound on</span></button>
+      <nav class="hud-actions" id="game-menus" aria-label="Game menus">
+      <button class="atlas-menu-toggle" id="atlas-menu-toggle" type="button" aria-controls="game-menus" aria-expanded="false" aria-label="Expand menu"><span class="atlas-menu-chevron" aria-hidden="true">›</span><span class="atlas-menu-label">Expand menu</span></button>
+      <button class="hud-button" id="book-button" type="button" aria-label="Spirit Book"><svg aria-hidden="true"><use href="#menu-book"/></svg><span>Spirit Book</span></button>
+      <button class="hud-button" id="character-button" type="button" aria-label="Hero Status"><svg aria-hidden="true"><use href="#menu-hero"/></svg><span>Hero Status</span></button>
+      <button class="hud-button" id="bag-button" type="button" aria-label="Bag"><svg aria-hidden="true"><use href="#menu-bag"/></svg><span>Bag</span></button>
+      <button class="hud-button" id="room-button" type="button" aria-label="My Room"><svg aria-hidden="true"><use href="#menu-room"/></svg><span>My Room</span></button>
+      <button class="hud-button" id="daily-button" type="button" aria-label="Daily Board"><svg aria-hidden="true"><use href="#menu-daily"/></svg><span>Daily Board</span></button>
+      <button class="hud-button" id="story-button" type="button" aria-label="Adventure"><svg aria-hidden="true"><use href="#menu-adventure"/></svg><span>Adventure</span></button>
+      <button class="hud-button" id="dictation-button" type="button" aria-label="Dictation Practice"><svg aria-hidden="true"><use href="#menu-book"/></svg><span>Dictation</span></button>
+      <button class="hud-button utility" id="parent-button" type="button" aria-label="Parent"><svg aria-hidden="true"><use href="#menu-parent"/></svg><span>Parent</span></button>
+      <button class="hud-button utility" id="sound-button" type="button" aria-label="Sound on" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3Z"/><path class="sound-waves" d="M16 8a6 6 0 0 1 0 8m2-11a10 10 0 0 1 0 14"/><path class="sound-slash" d="M4 20 20 4"/></svg><span>Sound on</span></button>
       <a class="hud-button debug-only" href="./lab.html" hidden>Learning lab</a>
       <button class="hud-button debug-only" id="status-button" type="button" hidden>Build status</button>
       </nav>
@@ -74,6 +77,6 @@
   </main>
   <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p22"></script>
+  <script type="module" src="../src/main.js?p30"></script>
 </body>
 </html>

@@ -68,7 +68,7 @@ test('first paint shows an illustrated walking-hero loader until the opening art
   const startup = fs.readFileSync('src/main.js', 'utf8');
   const styles = fs.readFileSync('css/base.css', 'utf8');
   assert.match(shell, /id="boot-loading"[^>]*role="status"/);
-  assert.match(shell, /id="boot-loading-hero"[^>]*hero-walking\.png/);
+  assert.match(shell, /id="boot-loading-hero"[^>]*hero-walking\.webp/);
   assert.ok(shell.indexOf('id="boot-loading"') < shell.indexOf('id="prologue"'));
   assert.match(startup, /await openingImage\.decode\(\)/);
   assert.match(startup, /createPrologue\([\s\S]*?requestAnimationFrame\(\(\) => \$\('#boot-loading'\)\?\.remove\(\)\)/);

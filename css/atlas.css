@@ -1,0 +1,278 @@
+.atlas-region-emblem,
+.atlas-menu-toggle { display: none; }
+
+.game-shell.atlas-enabled {
+  --atlas-accent: #16876d;
+  --atlas-accent-light: #d7f1dc;
+  --atlas-rail-width: 66px;
+  grid-template-columns: var(--atlas-rail-width) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 8px;
+}
+
+.game-shell.atlas-enabled.atlas-menu-expanded { --atlas-rail-width: 160px; }
+.game-shell.atlas-enabled.atlas-region-r2 { --atlas-accent: #b56a27; --atlas-accent-light: #fff0bc; }
+.atlas-enabled .hud { display: contents; }
+
+.atlas-enabled .hud-overview {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 84px;
+  gap: 18px;
+  overflow: hidden;
+  padding: 8px 14px;
+  border: 2px solid #aa8b50;
+  border-radius: 15px 15px 6px 6px;
+  color: #163744;
+  background: #f8eecb url('../assets/images/atlas/top-panel.webp') center / 100% 100% no-repeat;
+  box-shadow: 0 3px 0 #715e3c, inset 0 0 0 3px #fff8dd;
+}
+
+.atlas-enabled .hud-overview::after {
+  position: absolute;
+  right: 11px;
+  bottom: 4px;
+  left: 11px;
+  height: 2px;
+  content: '';
+  background: linear-gradient(90deg, transparent, #ba994e 12%, var(--atlas-accent) 50%, #ba994e 88%, transparent);
+  opacity: .6;
+}
+
+.atlas-enabled .brand {
+  display: flex;
+  flex: 0 0 310px;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  color: #173442;
+  font: 900 20px/1.02 var(--font-ui);
+  letter-spacing: -.025em;
+}
+
+.atlas-enabled .brand-copy { min-width: 0; white-space: nowrap; }
+.atlas-enabled .brand-copy > span { color: #b6412d; font: 400 25px/1 var(--font-hanzi); }
+.atlas-enabled .brand small { margin-top: 5px; color: #176c61; font: 800 12px/1.15 var(--font-ui); letter-spacing: .025em; text-transform: none; }
+.atlas-region-r2 .brand small { color: #8d5521; }
+
+.atlas-enabled .atlas-region-emblem {
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  border: 3px solid #fff7d6;
+  border-radius: 14px;
+  background-color: #a6c8a4;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 0 0 2px #a58750, 0 3px 7px #513f2e40;
+}
+
+.atlas-region-r1 .atlas-region-emblem { background-image: url('../assets/images/atlas/scholar-village.webp'); }
+.atlas-region-r2 .atlas-region-emblem { background-image: url('../assets/images/atlas/harvest-crossing.webp'); }
+
+.atlas-enabled .hud-status {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px 13px;
+  min-width: 0;
+  width: auto;
+}
+
+.atlas-enabled .hud-stat { flex: 0 0 auto; gap: 3px; color: #173442; font: 700 11px/1.1 var(--font-ui); }
+.atlas-enabled .hud-stat span { color: #385e5b; }
+.atlas-enabled .hud-stat b { color: #173442; font: 900 14px/1.1 var(--font-ui); }
+.atlas-enabled .hud-stat.curriculum,
+.atlas-enabled .hud-stat.location,
+.atlas-enabled .hud-stat.streak { display: none; }
+
+.atlas-enabled .hud-stat.player-level { order: 1; min-width: 45px; }
+.atlas-enabled .hud-stat.player-level b { font-size: 21px; }
+.atlas-enabled .hud-stat.hp,
+.atlas-enabled .hud-stat.xp {
+  display: grid;
+  grid-template-columns: minmax(82px, 1fr) auto;
+  flex-basis: 126px;
+  order: 2;
+  column-gap: 6px;
+}
+.atlas-enabled .hud-stat.xp { order: 3; }
+.atlas-enabled .hud-stat.hp span,
+.atlas-enabled .hud-stat.xp span { grid-column: 1 / -1; }
+.atlas-enabled .hud-stat.hp i,
+.atlas-enabled .hud-stat.xp i { height: 10px; background: #c8cfbf; box-shadow: inset 0 1px 2px #5d674950; }
+.atlas-enabled .hud-stat.hp em { background: linear-gradient(90deg, #1c9c77, #36b98e); }
+.atlas-enabled .hud-stat.xp em { background: linear-gradient(90deg, #e8a52b, #f4c249); }
+.atlas-enabled .hud-stat.hp b,
+.atlas-enabled .hud-stat.xp b { color: #173442; font: 900 11px/1 var(--font-ui); }
+.atlas-enabled .hud-stat.coins { order: 4; }
+.atlas-enabled .hud-stat.spirits { order: 5; }
+.atlas-enabled .hud-stat.battles {
+  order: 6;
+  min-width: 70px;
+  padding: 7px 8px 6px;
+  border: 2px solid #fff2cf;
+  border-radius: 9px;
+  background: #b94333;
+  box-shadow: 0 0 0 2px #9a302a;
+  text-align: center;
+}
+.atlas-enabled .hud-stat.battles span,
+.atlas-enabled .hud-stat.battles b { color: white; }
+.atlas-enabled .hud-stat.battles span { font-size: 10px; }
+.atlas-enabled .hud-stat.battles b { font-size: 13px; }
+
+.atlas-enabled .hud-actions {
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 8px 6px;
+  border: 2px solid #47616a;
+  border-radius: 6px 6px 12px 12px;
+  background: #0d3245 url('../assets/images/atlas/side-panel.webp') center / 100% 100% no-repeat;
+  box-shadow: inset -3px 0 #d6b36866, 3px 0 0 #091e2a44;
+  scrollbar-width: thin;
+}
+
+.atlas-enabled .atlas-menu-toggle {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 5px;
+  border: 1px solid #a8bdaf6b;
+  border-radius: 8px;
+  color: #fff7d7;
+  background: #28556a;
+  font: 800 13px var(--font-ui);
+}
+.atlas-enabled .atlas-menu-chevron { font: 900 28px/1 var(--font-ui); }
+.atlas-enabled .atlas-menu-label { display: none; }
+.atlas-enabled.atlas-menu-expanded .atlas-menu-label { display: inline; }
+.atlas-enabled.atlas-menu-expanded .atlas-menu-toggle { justify-content: flex-start; padding-left: 15px; }
+
+.atlas-enabled .hud-button {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  gap: 11px;
+  padding: 7px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #fff8e8;
+  background: transparent;
+  font: 800 13px/1.1 var(--font-ui);
+  text-align: left;
+}
+.atlas-enabled .hud-button svg { width: 30px; height: 30px; padding: 3px; color: #fff7de; background: transparent; }
+.atlas-enabled .hud-button:hover,
+.atlas-enabled .hud-button:focus-visible { border-color: #e3c983; background: #24697a; }
+.atlas-enabled .hud-button.utility { color: #fbe5bc; }
+.atlas-enabled .hud-button.utility svg { color: #f4ca70; }
+.atlas-enabled .hud-button span { display: none; }
+.atlas-enabled:not(.atlas-menu-expanded) .hud-button.debug-only { display: none; }
+.atlas-enabled.atlas-menu-expanded .hud-button { justify-content: flex-start; padding-left: 12px; }
+.atlas-enabled.atlas-menu-expanded .hud-button span { display: inline; }
+.atlas-enabled #parent-button { margin-top: auto; border-top: 1px solid #ffffff38; }
+
+.atlas-enabled .stage {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  border: 3px solid #bd9f5a;
+  border-radius: 6px 6px 12px 12px;
+  box-shadow: 0 0 0 2px #153744, inset 0 0 0 3px #fff6dc;
+}
+.atlas-enabled .objective {
+  grid-column: 2;
+  grid-row: 2;
+  z-index: 4;
+  display: grid;
+  align-self: start;
+  justify-self: start;
+  gap: 3px;
+  width: min(325px, calc(100% - 26px));
+  max-height: 160px;
+  margin: 14px;
+  overflow: auto;
+  padding: 11px 14px;
+  border: 2px solid #bc9750;
+  border-radius: 4px 13px 5px 14px;
+  color: #243a3a;
+  background: #fff8e7f2;
+  box-shadow: 4px 5px 0 #15374450, inset 0 0 0 3px #fffdf1;
+  font: 700 13px/1.35 var(--font-ui);
+  pointer-events: none;
+}
+.atlas-enabled .objective b { color: #a63129; font: 400 22px/1 var(--font-hanzi); }
+.atlas-enabled .objective small { margin: 2px 0 0; color: #4d655e; font: 700 10px/1 var(--font-ui); }
+.atlas-enabled .dpad button { border-color: #f7e7b7; background: #104d56e8; box-shadow: inset 0 0 0 2px #478c82; }
+.atlas-enabled .dpad button.is-active { background: #bf5540; }
+
+@media (max-width: 900px) {
+  .atlas-enabled .hud-overview { display: grid; gap: 6px; min-height: 105px; padding: 7px 12px; }
+  .atlas-enabled .brand { flex-basis: auto; font-size: 19px; }
+  .atlas-enabled .atlas-region-emblem { width: 48px; height: 48px; flex-basis: 48px; }
+  .atlas-enabled .hud-status { justify-content: space-between; }
+}
+
+@media (max-width: 600px) {
+  .game-shell.atlas-enabled { --atlas-rail-width: 54px; height: calc(100dvh - 14px); min-height: 480px; gap: 5px; }
+  .game-shell.atlas-enabled.atlas-menu-expanded { --atlas-rail-width: 150px; }
+  .atlas-enabled .hud-overview { min-height: 119px; }
+  .atlas-enabled .brand { gap: 8px; font-size: 17px; }
+  .atlas-enabled .atlas-region-emblem { width: 39px; height: 39px; flex-basis: 39px; border-radius: 9px; }
+  .atlas-enabled .brand-copy > span { font-size: 20px; }
+  .atlas-enabled .brand small { font-size: 11px; }
+  .atlas-enabled .hud-status { display: grid; grid-template-columns: 42px repeat(2, minmax(0, 1fr)) 64px; gap: 4px 8px; }
+  .atlas-enabled .hud-stat.player-level { grid-column: 1; grid-row: 1; }
+  .atlas-enabled .hud-stat.hp { grid-column: 2; grid-row: 1; }
+  .atlas-enabled .hud-stat.xp { grid-column: 3; grid-row: 1; }
+  .atlas-enabled .hud-stat.battles { grid-column: 4; grid-row: 1; }
+  .atlas-enabled .hud-stat.coins,
+  .atlas-enabled .hud-stat.spirits { display: none; }
+  .atlas-enabled .hud-stat.hp,
+  .atlas-enabled .hud-stat.xp { grid-template-columns: minmax(26px, 1fr) auto; }
+  .atlas-enabled .hud-stat.hp b,
+  .atlas-enabled .hud-stat.xp b { font-size: 9px; }
+  .atlas-enabled .hud-button { min-height: 48px; padding: 5px; }
+  .atlas-enabled .hud-button svg { width: 27px; height: 27px; }
+  .atlas-enabled .objective { width: min(280px, calc(100% - 18px)); max-height: 135px; margin: 9px; padding: 8px 10px; font-size: 12px; }
+  .atlas-enabled .objective b { font-size: 19px; }
+}
+
+@media (max-height: 780px) {
+  .atlas-enabled .hud-actions { gap: 2px; padding-block: 4px; }
+  .atlas-enabled .hud-button { min-height: 46px; }
+  .atlas-enabled .hud-button.debug-only { min-height: 42px; font-size: 11px; }
+  .atlas-enabled .objective { width: min(265px, calc(100% - 18px)); margin: 9px; padding: 7px 10px; font-size: 12px; }
+  .atlas-enabled .objective b { font-size: 19px; }
+}
+
+.gate-transition { position: fixed; inset: 0; z-index: 10000; display: flex; overflow: hidden; align-items: center; justify-content: center; background: #f5d68a; }
+.gate-transition-leaf { position: absolute; top: 0; bottom: 0; width: 50%; background-image: url('../assets/images/atlas/gate-opening.webp'); background-size: 200% 100%; transition: transform 1.45s cubic-bezier(.52, .04, .27, 1); }
+.gate-transition-leaf.left { left: 0; background-position: left center; }
+.gate-transition-leaf.right { right: 0; background-position: right center; }
+.gate-transition.opening .left { transform: translateX(-100%); }
+.gate-transition.opening .right { transform: translateX(100%); }
+.gate-transition p { z-index: 1; margin-top: 18vh; padding: 12px 26px; border: 2px solid #8b602d; border-radius: 12px; color: #233d41; background: #fff5d9e8; font: 900 clamp(19px, 4vw, 36px) var(--font-ui); opacity: 0; transition: opacity .5s .8s; }
+.gate-transition.opening p { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .gate-transition-leaf { transition-duration: .1s; } .gate-transition p { transition-duration: .1s; transition-delay: 0s; } }

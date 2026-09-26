@@ -122,7 +122,7 @@ test('shop has illustrated supplies, battle boosts and forest repellent', () => 
   assert.match(gameplay, /battle\.attackBoost/);
   assert.match(gameplay, /battle\.defenseBoost/);
   assert.match(collection, /data-use-repellent/);
-  assert.match(fs.readFileSync(path.join(root, 'src/ui/heroPortrait.js'), 'utf8'), /main-hero\.png/);
+  assert.match(fs.readFileSync(path.join(root, 'src/ui/heroPortrait.js'), 'utf8'), /main-hero\.webp/);
 });
 
 test('major rewards use illustrated celebrations and the Inn asks before starting review', () => {
@@ -133,9 +133,9 @@ test('major rewards use illustrated celebrations and the Inn asks before startin
   assert.match(gameplay, /Welcome to the Inn/);
   assert.match(gameplay, /Rest · Answer 3 questions/);
   assert.match(gameplay, /data-inn-rest/);
-  assert.match(adventure, /dawn-stroke\.png/);
+  assert.match(adventure, /dawn-stroke\.webp/);
   assert.match(audio, /major-reward\.wav/);
-  for (const asset of ['assets/images/rewards/cave-lantern.png', 'assets/images/rewards/dawn-stroke.png', 'assets/audio/major-reward.wav']) {
+  for (const asset of ['assets/images/rewards/cave-lantern.webp', 'assets/images/rewards/dawn-stroke.webp', 'assets/audio/major-reward.wav']) {
     assert.equal(fs.existsSync(path.join(root, asset)), true, asset);
   }
 });
@@ -174,8 +174,8 @@ test('Muddle King and creature encounters use illustrated battle presentation', 
   assert.match(adventure, /battle\.attackBoost/);
   assert.match(adventure, /battle\.defenseBoost/);
   for (const name of ['muddle-king', 'fogling', 'echo-bat', 'twin-shade', 'jumble-bug', 'ink-imp']) {
-    assert.match(creatureArt, new RegExp(`${name.replace('-', '\\-')}\\.png`));
-    assert.equal(fs.existsSync(path.join(root, `assets/images/creatures/${name}.png`)), true);
+    assert.match(creatureArt, new RegExp(`${name.replace('-', '\\-')}\\.webp`));
+    assert.equal(fs.existsSync(path.join(root, `assets/images/creatures/${name}.webp`)), true);
   }
 });
 
@@ -191,7 +191,7 @@ test('Storyteller uses an open book, two-page text and page dictation', async ()
   assert.match(adventure, /Let me tell you a story/);
   assert.match(adventure, /data-story-dictation/);
   assert.match(adventure, /story-book-left/);
-  assert.equal(fs.existsSync(path.join(root, 'assets/images/story/open-book.png')), true);
+  assert.equal(fs.existsSync(path.join(root, 'assets/images/story/open-book.webp')), true);
 });
 
 test('Hero Status shows the main character and leaves partner selection in My Room', () => {

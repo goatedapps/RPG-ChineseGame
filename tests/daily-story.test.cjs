@@ -98,5 +98,5 @@ test('P6 and P7 surfaces and Region 1 characters are present in the modular shel
   assert.ok(dom.window.document.querySelector('#story-button'));
   const map = readJson('content/authored/campaign/maps/r1-hub.json');
   const ids = new Set(map.objects.map(object => object.id));
-  for (const id of ['quest-board', 'storyteller', 'xiaoqiang', 'mr-lin', 'chef-mei', 'ah-dong', 'treasure-chest', 'gatekeeper']) assert.ok(ids.has(id), id);
+  for (const id of ['quest-board', 'storyteller', 'xiaoqiang', 'mr-lin', 'chef-mei', 'ah-dong', 'treasure-chest', 'route-entrance']) assert.ok(ids.has(id), id);
 });

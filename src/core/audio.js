@@ -14,10 +14,11 @@ const MUSIC = {
 const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', hit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', majorReward: '../assets/audio/major-reward.wav', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
 
 export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
-  if (!AudioClass) return { unlock() {}, setEnabled() {}, setScene() {}, setWorld() {}, sfx() {} };
+  if (!AudioClass) return { unlock() {}, setEnabled() {}, setVisible() {}, setScene() {}, setWorld() {}, sfx() {} };
   const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = id !== 'victory'; track.preload = 'none'; track.volume = 0; return [id, track]; }));
   const effects = Object.fromEntries(Object.entries(EFFECTS).map(([id, source]) => { const sound = new AudioClass(source); sound.preload = 'auto'; return [id, sound]; }));
   let enabled = true;
+  let visible = true;
   let unlocked = false;
   let scene = 'village';
   let worldScene = 'r1';
@@ -25,7 +26,7 @@ export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   let fade = null;
   const stop = () => { clearInterval(fade); Object.values(music).forEach(track => { track.pause(); track.currentTime = 0; track.volume = 0; }); current = null; };
   const start = () => {
-    if (!enabled || !unlocked) return;
+    if (!enabled || !unlocked || !visible) return;
     const next = music[scene === 'village' ? worldScene : scene];
     clearInterval(fade);
     for (const track of Object.values(music)) {
@@ -48,6 +49,18 @@ export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   return {
     unlock() { if (!unlocked) { unlocked = true; start(); } },
     setEnabled(value) { enabled = Boolean(value); if (enabled) start(); else stop(); },
+    setVisible(value) {
+      const nextVisible = Boolean(value);
+      if (visible === nextVisible) return;
+      visible = nextVisible;
+      if (visible) return start();
+      clearInterval(fade);
+      for (const track of Object.values(music)) {
+        track.pause();
+        if (track !== current) { track.currentTime = 0; track.volume = 0; }
+      }
+      if (current) current.volume = .25;
+    },
     setScene(value) { if (value === 'village' || music[value]) { scene = value; start(); } },
     setWorld(regionId) {
       worldScene = music[regionId] ? regionId : 'r1';

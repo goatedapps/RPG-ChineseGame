@@ -8,22 +8,25 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p17b';
+import { createGameplay } from './gameplay.js?p20';
 import { createCollection } from './collection.js?p16';
-import { createAdventure } from './adventure.js?p17b';
-import { createAudioManager } from './core/audio.js?p19';
-import { createPrologue } from './ui/prologue.js?p15';
+import { createAdventure } from './adventure.js?p21';
+import { createAudioManager } from './core/audio.js?p21';
+import { warmImage } from './core/assets.js';
+import { createPrologue } from './ui/prologue.js?p21';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p16';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
 import { tierOf } from './learning/mastery.js?p10f';
 import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p11';
+import { regionPathGuide } from './systems/regionGuide.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
 const toast = createToast($('#toast'));
 const events = createEventBus();
 const audio = createAudioManager();
+audio.setVisible(!document.hidden);
 const hud = {
   region: $('#hud-region'),
   level: $('#hud-level'),
@@ -126,6 +129,8 @@ function objectiveTasks() {
   const regionId = game.levelPackage.region.id;
   const words = game.levelPackage.content.words.filter(word => (game.levelPackage.config.regionLessons[regionId] || []).includes(word.lesson));
   const tasks = [];
+  const suggestedPath = regionPathGuide(game.levelPackage, game.state.progress, game.state.player.level).find(path => path.suggested);
+  if (suggestedPath) tasks.push(`Suggested path: ${suggestedPath.name} (${suggestedPath.direction}, Lesson ${suggestedPath.lesson}). Other paths stay open.`);
   const reading = game.state.progress.reading;
   if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.keys(reading.results || {}).length}/${reading.questionCount}.`);
   else if (!(reading.completed || []).length) tasks.push(`Read a passage in the Reading Hall to earn the ${game.levelPackage.regionStory.gateKeyName || 'Cave Lantern'}.`);
@@ -346,7 +351,7 @@ async function boot() {
   const walkingHero = $('#boot-loading-hero');
   walkingHero?.decode().then(() => walkingHero.classList.add('ready')).catch(() => {});
   const openingImage = new Image();
-  openingImage.src = new URL('../assets/images/intro/dictionary-tree.png', import.meta.url).href;
+  openingImage.src = new URL('../assets/images/intro/dictionary-tree.jpg', import.meta.url).href;
   if (new URLSearchParams(location.search).get('debug') === '1') {
     for (const element of document.querySelectorAll('.debug-only')) element.hidden = false;
   }
@@ -387,6 +392,8 @@ async function boot() {
       }
     });
     requestAnimationFrame(() => $('#boot-loading')?.remove());
+    const warmPaths = ['room/grandmas-room.jpg', 'intro/great-forgetter.jpg', 'intro/spirits-scattered.jpg', 'shop/shop-background.jpg', 'story/reading-scroll.jpg', 'hero/main-hero.png', 'story/open-book.png'];
+    (async () => { for (const path of warmPaths) await warmImage(new URL(`../assets/images/${path}`, import.meta.url).href).catch(() => {}); })();
   } catch (error) {
     console.error(error);
     overlay.open(`<div class="panel"><h1>Could not load the game</h1><p>${escapeHtml(error.message)}</p><p>Serve the repository through HTTP; ES modules and content files cannot load from <code>file://</code>.</p></div>`, { dismissible: false });
@@ -402,5 +409,8 @@ addEventListener('offline', () => { hud.status.textContent = 'Offline · progres
 addEventListener('online', () => { if (active && !active.saveBlocked) { hud.status.textContent = active.state.tampered ? 'Save edited' : 'Save verified'; hud.status.classList.toggle('warning', active.state.tampered); } });
 
 window.addEventListener('beforeunload', persist);
+document.addEventListener('visibilitychange', () => audio.setVisible(!document.hidden));
+window.addEventListener('pagehide', () => audio.setVisible(false));
+window.addEventListener('pageshow', () => audio.setVisible(!document.hidden));
 window.__WSQ_GAME__ = { get active() { return active; }, get gameplay() { return gameplay; }, get adventure() { return adventure; }, events, startLevel, switchRegion };
 boot();

@@ -192,13 +192,15 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .service-grid button { display: grid; gap: 4px; }
 .service-grid button span { color: #647180; font: 13px system-ui; }
 .reading-panel { width: min(960px,100%); max-height: 100%; overflow: auto; }
-.passage-text { max-height: 330px; min-height: 210px; overflow: auto; padding: clamp(32px,6vw,70px) 13%; border: 2px solid #9e793f; border-radius: 10px; color: #302318; background: #fff4d5 url('../assets/images/story/reading-scroll.png') center / 100% 100% no-repeat; font: 17px/1.8 var(--font-chinese); }
+.passage-art { position: relative; width: 100%; height: clamp(310px,48vw,480px); overflow: hidden; border-radius: 8px; background: #f5dfaa url('../assets/images/story/reading-scroll.jpg') center / 100% 100% no-repeat; box-shadow: 0 6px 16px rgba(59,37,20,.22); }
+.passage-text { position: absolute; inset: 20% 15% 21%; overflow: auto; padding: 0 1.5% 2px; color: #3c2b22; font: 600 clamp(21px,2.1vw,24px)/1.6 KaiTi,"Kaiti SC","STKaiti","Noto Serif SC",serif; line-break: strict; overflow-wrap: break-word; scrollbar-color: #a77c4f #eed9aa; scrollbar-width: thin; }
+.passage-text:focus-visible { outline: 3px solid #8e5f37; outline-offset: 2px; }
 .passage-scroll { margin: 10px 0 16px; padding: 10px; border: 2px solid var(--gold); border-radius: 10px; background: #fff8d8; }
 .passage-scroll summary { cursor: pointer; font-weight: 900; }
-.passage-scroll .passage-text { min-height: 150px; padding: 30px 12%; }
+.passage-scroll .passage-art { height: clamp(280px,42vw,380px); margin-top: 9px; }
 .answer-field { display: grid; gap: 6px; margin: 12px 0; font-weight: 800; }
 .answer-field input, .answer-field textarea, .answer-field select { min-height: 44px; padding: 9px; border: 2px solid var(--line); border-radius: 8px; font: 16px var(--font-ui); }
-.shop-panel { width: min(900px,100%); max-height: 100%; overflow: auto; padding: 0 18px 18px; background: #e9d5a6 url('../assets/images/shop/shop-background.png') center top / cover; }
+.shop-panel { width: min(900px,100%); max-height: 100%; overflow: auto; padding: 0 18px 18px; background: #e9d5a6 url('../assets/images/shop/shop-background.jpg') center top / cover; }
 .shop-banner { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; min-height: 180px; margin: 0 -18px 18px; padding: 22px; color: white; background: linear-gradient(90deg,rgba(22,28,34,.9),rgba(22,28,34,.18)); text-shadow: 0 2px 3px rgba(0,0,0,.75); }
 .shop-banner p, .shop-banner h1, .shop-banner span { margin: 0; }
 .shop-banner p { color: #f0ca62; font-weight: 900; }
@@ -346,7 +348,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .room-header { align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
 .room-header h1 { margin: 0; color: #3b302c; font: 900 clamp(26px,3vw,34px)/1.1 var(--font-ui); }
 .room-header p:last-child { max-width: 48ch; margin: 6px 0 0; color: #5c5348; font: 14px/1.4 system-ui; }
-.room-scene { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 220px; overflow: hidden; border: 5px solid #664932; border-radius: 12px; background: #765238 url('../assets/images/room/grandmas-room.png') center / cover no-repeat; box-shadow: 0 9px 0 #cfb886; }
+.room-scene { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 220px; overflow: hidden; border: 5px solid #664932; border-radius: 12px; background: #765238 url('../assets/images/room/grandmas-room.jpg') center / cover no-repeat; box-shadow: 0 9px 0 #cfb886; }
 .room-shelf-count { position: absolute; top: 4%; right: 3%; display: flex; align-items: center; gap: 8px; padding: 5px 10px; border: 1px solid #e2be79; border-radius: 7px; color: #fff8e8; background: rgba(39,48,59,.9); box-shadow: 0 3px 9px #1c1a1880; }
 .room-shelf-count b { color: #eac268; font-size: 24px; }
 .room-shelf-count span { font: 700 12px system-ui; }
@@ -389,6 +391,19 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .quest-card, .scroll-grid article, .story-timeline p { margin: 0; padding: 12px; border: 2px solid var(--line); border-radius: 10px; background: white; }
 .quest-card { display: flex; justify-content: space-between; gap: 14px; }
 .quest-card.complete, .story-timeline .done { border-color: var(--jade); background: #dff3e8; }
+.path-guide { margin: 22px 0 16px; }
+.path-guide-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
+.path-guide-heading h2 { margin: 3px 0 0; }
+.path-guide-heading > span { color: #49675a; font-size: 13px; font-weight: 800; }
+.path-guide-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 10px; margin-top: 12px; }
+.path-guide-card { padding: 14px; border: 2px solid #c5cfd0; border-radius: 12px; background: #f5f8f5; }
+.path-guide-card.suggested { border-color: var(--jade); background: #e3f4e9; box-shadow: 0 3px 0 #8dbba1; }
+.path-guide-card-head { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 9px; }
+.path-guide-card h3 { margin: 0; font-size: 18px; }
+.path-guide-card strong { padding: 3px 6px; border-radius: 5px; color: white; background: #267553; font-size: 11px; }
+.path-guide-card p { margin: 7px 0; font-size: 13px; }
+.path-guide-card small { font-weight: 800; }
+.path-guide-note { margin: 12px 0 0; color: #49675a; font-size: 13px; }
 .quest-card.paused { opacity: .58; border-style: dashed; }
 .quest-chest-status { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 10px; background: #f6f0e4; color: var(--ink); font-weight: 700; }
 .scroll-grid { max-height: 390px; overflow: auto; }

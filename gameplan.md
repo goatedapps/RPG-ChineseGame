@@ -7,7 +7,7 @@ Every creature contains a collectible vocabulary word, and combat actions are po
 Primary 2 and Primary 5 use the same engine, world, cast and campaign with separate curriculum packs and saves.
 The intended session is 30–60 minutes, but the game has no mandatory timer.
 The game opens with an illustrated, musical, typewriter-paced prologue that introduces the Dictionary Tree, Word Spirits, the Spirit Brush and the Great Forgetter.
-The prologue remains skippable during testing and is intended to become mandatory after approval.
+The prologue has a permanent, unobtrusive Skip intro link.
 
 The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
 P0–P17 engineering and the earlier physical tablet pilot are complete.

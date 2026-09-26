@@ -32,7 +32,7 @@ Production URLs:
 ## Product invariants
 
 - Keep one shared engine, world and campaign with separate curriculum packs and saves.
-- Keep the illustrated, typewriter-paced startup prologue skippable until testing approves mandatory playback.
+- Keep the illustrated, typewriter-paced startup prologue skippable as a permanent feature.
 - Keep English for interface and campaign dialogue; present Storyteller chapters from the original Chinese curriculum stories without English translation.
 - Keep Meaning, Pinyin, Hanzi, Usage and Writing as the five vocabulary skills.
 - Keep the four-miss handwriting help threshold; one correct unassisted answer fills a skill circle.
@@ -48,7 +48,7 @@ Production URLs:
 - Keep writing-from-memory prompts free of the target Hanzi; show only meaning, Hanyu Pinyin and a blanked example sentence.
 - For writing-from-memory and dictation, offer “Show me how” without a redundant “I don’t know” action.
 - Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.
-- Keep all three Region 1 lesson areas open, with difficulty guiding the intended order.
+- Keep every regional lesson area open, with difficulty and the Journal guiding a suggested route.
 - Keep exact-word lesson bait in the shop.
 - Keep battle boosts consumable in battle and forest repellent active only while walking through encounter grass.
 - Keep the percentage-based Bronze Muddle Cave gate plus Cave Lantern requirement, and use Silver rather than Gold for onward region progression.
@@ -66,7 +66,7 @@ Production URLs:
 - Add migrations for save-shape changes.
 - Preserve local Hanzi data and the vendored Hanzi Writer runtime.
 - Keep touch targets at least 44 pixels and support reduced motion.
-- Stop speech and scene audio when leaving their activity.
+- Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.
 - Do not reveal an answer elsewhere on an active question screen.
 - Do not end an active Lavish annotation session until the user finishes or explicitly requests it.
 

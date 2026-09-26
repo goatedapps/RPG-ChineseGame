@@ -118,7 +118,7 @@ test('shop has illustrated supplies, battle boosts and forest repellent', () => 
   assert.ok(items.some(item => item.effect === 'attack-boost'));
   assert.ok(items.some(item => item.effect === 'defense-boost'));
   assert.ok(items.some(item => item.effect === 'repellent' && item.amount >= 20));
-  assert.match(css, /shop-background\.png/);
+  assert.match(css, /shop-background\.jpg/);
   assert.match(gameplay, /battle\.attackBoost/);
   assert.match(gameplay, /battle\.defenseBoost/);
   assert.match(collection, /data-use-repellent/);

@@ -40,6 +40,7 @@ const itemDescription = item => (SHOP_ITEM_COPY[item.effect]?.(item) || item.eff
 const itemIcon = id => `../assets/images/shop/${id}.png`;
 const rewardArt = (id, name) => `<div class="major-reward"><img src="../assets/images/rewards/${id}.png" alt="${escapeHtml(name)}"><div><p class="panel-kicker">Major reward</p><h1>${escapeHtml(name)} received!</h1></div></div>`;
 const passageRewardArt = (id, name) => id === 'cave-lantern' ? rewardArt('cave-lantern', 'Cave Lantern') : rewardArt(id, name);
+const passageScroll = text => `<div class="passage-art"><div class="passage-text" role="region" aria-label="Passage text" tabindex="0">${escapeHtml(text).replaceAll('\n', '<br>')}</div></div>`;
 
 function addXp(player, amount, { xpMultiplier = 1, maxHpBonus = 0 } = {}) {
   let level = player.level;
@@ -459,7 +460,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     }
     const activePassage = reading.active === group.id;
     const answered = Object.keys(reading.results).length;
-    overlay.open(`<article class="panel reading-panel"><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}${group.subject === 'Higher Chinese' ? ' · Optional Higher Chinese' : ''}</p><h1>${escapeHtml(group.passage.title)}</h1><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div><p>${activePassage ? `${answered}/${reading.questionCount} villagers have received an answer. Look for ? bubbles in the village.` : `${Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length)} villagers will each ask one short question.`}</p><div class="button-row"><button class="primary" data-reading-start>${activePassage ? 'Return to the village' : 'I’ve read it · Take Passage Scroll'}</button><button class="secondary" data-read-aloud>Read aloud</button>${!activePassage && group.subject !== 'Higher Chinese' && higherGroups.length ? '<button class="secondary" data-higher-chinese>Higher Chinese</button>' : ''}<button class="secondary" data-close-overlay>Read later</button></div></article>`, { onClose: speech.stop });
+    overlay.open(`<article class="panel reading-panel"><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}${group.subject === 'Higher Chinese' ? ' · Optional Higher Chinese' : ''}</p><h1>${escapeHtml(group.passage.title)}</h1>${passageScroll(group.passage.text)}<p>${activePassage ? `${answered}/${reading.questionCount} villagers have received an answer. Look for ? bubbles in the village.` : `${Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length)} villagers will each ask one short question.`}</p><div class="button-row"><button class="primary" data-reading-start>${activePassage ? 'Return to the village' : 'I’ve read it · Take Passage Scroll'}</button><button class="secondary" data-read-aloud>Read aloud</button>${!activePassage && group.subject !== 'Higher Chinese' && higherGroups.length ? '<button class="secondary" data-higher-chinese>Higher Chinese</button>' : ''}<button class="secondary" data-close-overlay>Read later</button></div></article>`, { onClose: speech.stop });
     document.querySelector('[data-reading-start]').addEventListener('click', () => {
       if (!activePassage) game.state.progress.reading = { ...reading, active: group.id, questionCount: Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length), results: {} };
       speech.stop(); commit(); overlay.close(); toast(activePassage ? 'Find the remaining villagers with ? bubbles.' : 'Passage Scroll received. Find the villagers with ? bubbles.');
@@ -485,7 +486,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   }
 
   function askPassageItem(group, item, questionIndex, attempt) {
-    const passage = `<details class="passage-scroll"><summary>Open Passage Scroll</summary><div class="passage-text">${escapeHtml(group.passage.text).replaceAll('\n', '<br>')}</div></details>`;
+    const passage = `<details class="passage-scroll"><summary>Open Passage Scroll</summary>${passageScroll(group.passage.text)}</details>`;
     if (item.format === 'MCQ') {
       overlay.open(`<article class="panel question-panel"><p class="panel-kicker">${escapeHtml(group.passage.title)}</p>${passage}<h2>${escapeHtml(item.q)}</h2><div class="question-options">${item.o.map((option, index) => `<button data-passage-option="${index}">${escapeHtml(option)}</button>`).join('')}</div><button class="secondary" data-passage-giveup>I don’t know</button></article>`, { dismissible: false });
       for (const button of document.querySelectorAll('[data-passage-option]')) button.addEventListener('click', () => resolvePassageAuto(group, item, questionIndex, item.o[Number(button.dataset.passageOption)] === item.c, attempt), { once: true });

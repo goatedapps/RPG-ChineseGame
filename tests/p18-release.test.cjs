@@ -79,8 +79,9 @@ test('first paint shows an illustrated walking-hero loader until the opening art
 test('Reading Hall has a packaged scroll backdrop and in-world dialogue avoids curriculum labels', () => {
   const styles = fs.readFileSync('css/stage.css', 'utf8');
   const serviceWorker = fs.readFileSync('sw.js', 'utf8');
-  assert.match(styles, /\.passage-text[^\n]*reading-scroll\.png/);
-  assert.match(serviceWorker, /assets\/images\/story\/reading-scroll\.png/);
+  assert.match(styles, /\.passage-art[^\n]*reading-scroll\.jpg/);
+  assert.match(styles, /\.passage-text[^\n]*clamp\(21px,2\.1vw,24px\)/);
+  assert.match(serviceWorker, /assets\/images\/story\/reading-scroll\.jpg/);
   for (const file of fs.readdirSync('content/authored/campaign/maps')) {
     if (!/^r[1-7]-.*\.json$/.test(file)) continue;
     const map = JSON.parse(fs.readFileSync(`content/authored/campaign/maps/${file}`, 'utf8'));

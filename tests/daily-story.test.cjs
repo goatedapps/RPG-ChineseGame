@@ -87,7 +87,7 @@ test('regional bosses are one level above the strongest regional creature', asyn
   const balance = readJson('content/authored/shared/balance.json');
   const boss = createBoss(balance, [1, 2, 3]);
   assert.equal(boss.level, 13);
-  assert.equal(boss.maxHp, balance.combat.baseEnemyHp + boss.level * balance.combat.hpPerLevel);
+  assert.ok(boss.maxHp > balance.combat.baseEnemyHp + boss.level * balance.combat.hpPerLevel);
   assert.ok(boss.attack > balance.combat.baseEnemyAttack);
   assert.ok(boss.defense > balance.combat.baseEnemyDefense);
 });

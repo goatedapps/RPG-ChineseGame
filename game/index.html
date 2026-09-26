@@ -8,10 +8,18 @@
   <link rel="manifest" href="../manifest.webmanifest">
   <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="../css/tokens.css">
-  <link rel="stylesheet" href="../css/base.css?p16">
-  <link rel="stylesheet" href="../css/stage.css?p17">
+  <link rel="stylesheet" href="../css/base.css?p18">
+  <link rel="stylesheet" href="../css/stage.css?p18">
 </head>
 <body>
+  <div class="boot-loading" id="boot-loading" role="status" aria-live="polite" aria-label="Loading Word Spirit Quest">
+    <div class="boot-loading-scene" aria-hidden="true">
+      <div class="boot-loading-glow"></div>
+      <img class="boot-loading-hero" id="boot-loading-hero" src="../assets/images/hero/hero-walking.png" alt="">
+      <div class="boot-loading-path"></div>
+    </div>
+    <div class="boot-loading-copy"><span class="boot-loading-mark">字灵</span><h1>Word Spirit Quest</h1><p>Our hero is on the way…</p><div class="boot-loading-track" aria-hidden="true"><i></i></div></div>
+  </div>
   <svg aria-hidden="true" width="0" height="0" style="position:absolute;overflow:hidden">
     <symbol id="menu-book" viewBox="0 0 24 24"><path d="M12 5.5c-2.7-1.7-5.5-1.9-9-1.4v14c3.5-.5 6.3-.3 9 1.4m0-14c2.7-1.7 5.5-1.9 9-1.4v14c-3.5-.5-6.3-.3-9 1.4m0-14v14"/></symbol>
     <symbol id="menu-hero" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M5.5 20v-2.1a6.5 6.5 0 0 1 13 0V20H5.5Z"/><path d="M9 15h6"/></symbol>
@@ -66,6 +74,6 @@
   </main>
   <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p17c"></script>
+  <script type="module" src="../src/main.js?p18"></script>
 </body>
 </html>

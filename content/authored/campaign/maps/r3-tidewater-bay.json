@@ -79,7 +79,7 @@
     { "id": "clock-apprentice", "type": "npc", "name": "Clock Apprentice", "x": 34, "y": 25, "solid": true, "wander": true, "color": "#8c718c", "interaction": { "kind": "dialogue", "title": "Clock Apprentice", "lines": ["I am learning to mend the old clock."] } },
     { "id": "tide-watcher", "type": "npc", "name": "Tide Watcher", "x": 40, "y": 26, "solid": true, "wander": true, "color": "#5b938d", "interaction": { "kind": "dialogue", "title": "Tide Watcher", "lines": ["The water is calm today."] } },
     { "id": "clock-warden", "type": "npc", "name": "Clock Warden", "x": 24, "y": 2, "solid": true, "color": "#66566f", "interaction": { "kind": "boss", "title": "Silent Clock Tower", "lines": ["The Idle Clock keeps every stolen moment behind this gate."] } },
-    { "id": "return-gate", "type": "sign", "x": 24, "y": 30, "solid": true, "interaction": { "kind": "travel", "title": "Road to Harvest Crossing", "lines": ["Return to Region 2."] } },
+    { "id": "return-gate", "type": "sign", "x": 24, "y": 30, "solid": true, "interaction": { "kind": "travel", "title": "Road to Harvest Crossing", "lines": ["Return to Harvest Crossing."] } },
     { "id": "next-region-gate", "type": "sign", "x": 50, "y": 16, "solid": true, "interaction": { "kind": "travel", "title": "Lantern road", "lines": ["Travel onward to Lantern Theatre and Farm Fields."] } },
     { "id": "tide-vault", "type": "sign", "x": 43, "y": 25, "solid": true, "interaction": { "kind": "secret", "title": "Tide Vault", "lines": ["A current-shaped lock seals an old rescue log."] } },
     { "id": "quest-board", "type": "sign", "x": 18, "y": 16, "solid": true, "interaction": { "kind": "daily", "title": "Harbour Board", "lines": ["Daily work keeps the rescue boats ready."] } },

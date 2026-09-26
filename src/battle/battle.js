@@ -1,4 +1,5 @@
 import { calculateDamage, didEvade, heroStats } from './damage.js';
+import { xpToNextLevel } from '../core/progression.js';
 
 export function createBattleState(word, creature) {
   return { word, creature, enemyHp: creature.maxHp, turn: 1, finished: false, streak: 0, partnerUsed: false };
@@ -61,8 +62,8 @@ export function gainBattleRewards(player, balance, { creatureLevel = player.leve
   const xpAwarded = rewards.xp;
   let xp = player.xp + xpAwarded;
   let maxHp = player.maxHp;
-  while (xp >= level * 30) {
-    xp -= level * 30;
+  while (xp >= xpToNextLevel(level)) {
+    xp -= xpToNextLevel(level);
     level += 1;
     maxHp = 18 + level * 2 + maxHpBonus;
   }

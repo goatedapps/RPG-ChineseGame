@@ -11,7 +11,7 @@ import { createToast } from './ui/toast.js';
 import { createGameplay } from './gameplay.js?p17b';
 import { createCollection } from './collection.js?p16';
 import { createAdventure } from './adventure.js?p17b';
-import { createAudioManager } from './core/audio.js?p16';
+import { createAudioManager } from './core/audio.js?p18';
 import { createPrologue } from './ui/prologue.js?p15';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p16';
@@ -315,7 +315,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>P0–P15 are complete. Primary 2 and Primary 5 share six regions through Ancient Grove with separate saves and level-specific content and tuning.</p>
+    <p>Primary 2 and Primary 5 share all seven regions with separate saves and level-specific content and tuning.</p>
     ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>
@@ -343,6 +343,10 @@ function showBuildStatus() {
 }
 
 async function boot() {
+  const walkingHero = $('#boot-loading-hero');
+  walkingHero?.decode().then(() => walkingHero.classList.add('ready')).catch(() => {});
+  const openingImage = new Image();
+  openingImage.src = new URL('../assets/images/intro/dictionary-tree.png', import.meta.url).href;
   if (new URLSearchParams(location.search).get('debug') === '1') {
     for (const element of document.querySelectorAll('.debug-only')) element.hidden = false;
   }
@@ -371,6 +375,7 @@ async function boot() {
     const requestedLevel = new URLSearchParams(location.search).get('level');
     const profile = loadProfile(storage);
     const level = levels.find(candidate => candidate.id === (requestedLevel || profile?.level) && candidate.worldMappingReady);
+    await openingImage.decode().catch(() => {});
     createPrologue({
       root: $('#prologue'),
       audio,
@@ -381,9 +386,11 @@ async function boot() {
         else showLevelPicker();
       }
     });
+    requestAnimationFrame(() => $('#boot-loading')?.remove());
   } catch (error) {
     console.error(error);
     overlay.open(`<div class="panel"><h1>Could not load the game</h1><p>${escapeHtml(error.message)}</p><p>Serve the repository through HTTP; ES modules and content files cannot load from <code>file://</code>.</p></div>`, { dismissible: false });
+    $('#boot-loading')?.remove();
   }
 }
 

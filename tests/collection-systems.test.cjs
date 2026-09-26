@@ -86,13 +86,13 @@ test('collection milestones are claimed once and battle XP supports gear multipl
   assert.equal(player.level, 3);
   assert.equal(player.maxHp, 27);
   assert.equal(player.hp, 27);
-  assert.equal(player.xp, 8);
+  assert.equal(player.xp, 28);
 });
 
 test('collecting each lesson once keeps player level near the next lesson band', async () => {
   const { gainBattleRewards } = await import('../src/battle/battle.js');
   const shared = readJson('content/authored/shared/balance.json');
-  const expected = { p2: [4, 6], p5: [4, 7] };
+  const expected = { p2: [5, 8], p5: [5, 9] };
   for (const level of ['p2', 'p5']) {
     const content = readJson(`content/generated/${level}.content.json`);
     const config = readJson(`content/authored/levels/${level}/level.json`);

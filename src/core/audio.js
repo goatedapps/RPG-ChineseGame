@@ -15,7 +15,7 @@ const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audi
 
 export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   if (!AudioClass) return { unlock() {}, setEnabled() {}, setScene() {}, setWorld() {}, sfx() {} };
-  const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = id !== 'victory'; track.preload = 'auto'; track.volume = 0; return [id, track]; }));
+  const music = Object.fromEntries(Object.entries(MUSIC).map(([id, source]) => { const track = new AudioClass(source); track.loop = id !== 'victory'; track.preload = 'none'; track.volume = 0; return [id, track]; }));
   const effects = Object.fromEntries(Object.entries(EFFECTS).map(([id, source]) => { const sound = new AudioClass(source); sound.preload = 'auto'; return [id, sound]; }));
   let enabled = true;
   let unlocked = false;

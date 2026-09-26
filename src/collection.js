@@ -9,6 +9,7 @@ import { goalProgress } from './systems/parent.js?p10f';
 import { heroStats } from './battle/damage.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10n';
 import { useConsumable } from './systems/inventory.js';
+import { xpToNextLevel } from './core/progression.js';
 
 const SPECIAL_ITEM_NAMES = Object.freeze({
   'cave-lantern': 'Cave Lantern',
@@ -100,7 +101,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     const equipment = normalizeEquipment(game.state.progress.equipment);
     const bonuses = gearBonuses(equipment, game.levelPackage.gear);
     const stats = heroStats(game.state.player.level);
-    const xpNeeded = game.state.player.level * 30;
+    const xpNeeded = xpToNextLevel(game.state.player.level);
     const xpPercent = Math.min(100, game.state.player.xp / xpNeeded * 100);
     overlay.open(`<div class="panel hero-status-panel"><div class="panel-header"><div><p class="panel-kicker">Main character</p><h1>Hero Status</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="character-preview">${heroPortrait(equipment.equipped, 'paper-hero')}<div class="hero-level"><b>Level ${game.state.player.level}</b><span>${game.state.player.xp}/${xpNeeded} XP to Level ${game.state.player.level + 1}</span><div class="hero-xp" role="progressbar" aria-label="Experience toward next level" aria-valuemin="0" aria-valuemax="${xpNeeded}" aria-valuenow="${game.state.player.xp}"><i style="width:${xpPercent}%"></i></div></div></div><div class="hero-stat-grid"><div><span>Health</span><b>${game.state.player.hp}/${game.state.player.maxHp}</b></div><div><span>Attack</span><b>${stats.attack}</b></div><div><span>Defence</span><b>${stats.defense}</b></div><div><span>Evasion</span><b>${Math.round((stats.evasion + bonuses.evasion) * 100)}%</b></div><div><span>Coins</span><b>${game.state.player.coins}</b></div><div><span>Battles won</span><b>${game.state.progress.battles || 0}</b></div></div><section class="equipment-section"><h2>Equipment</h2><p>Equipped gear currently adds +${bonuses.maxHp} maximum HP, +${Math.round(bonuses.evasion * 100)}% evasion, and +${Math.round(bonuses.xp * 100)}% XP.</p><div class="gear-grid">${game.levelPackage.gear.map(gear => { const owned = equipment.owned.includes(gear.id); const equipped = equipment.equipped[gear.slot] === gear.id; return `<article><b>${escapeHtml(gear.name)}</b><span>${escapeHtml(gear.slot)} · ${escapeHtml(gear.effect)}</span><button data-equip="${gear.id}" ${owned && !equipped ? '' : 'disabled'}>${equipped ? 'Equipped' : owned ? 'Equip' : 'Not earned'}</button></article>`; }).join('')}</div></section><div class="button-row"><button class="primary" data-craft-open>Craft Table</button></div></div>`);
     for (const button of document.querySelectorAll('[data-equip]:not([disabled])')) button.addEventListener('click', () => {

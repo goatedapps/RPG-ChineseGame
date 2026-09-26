@@ -11,7 +11,7 @@ The prologue remains skippable during testing and is intended to become mandator
 
 The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
 P0–P17 engineering and the earlier physical tablet pilot are complete.
-The next development phase is P18 release polish.
+P18 release polish is in progress.
 
 Production URLs:
 
@@ -198,6 +198,14 @@ Proofread audio and content.
 Verify offline restart, update behavior, save migration, export/import and curriculum switching.
 Reach at least 90 Lighthouse accessibility on menu screens.
 Produce the final distributable only after deciding whether double-click `file://` support still justifies a single-file bundle.
+Automated checks cover packaged offline assets, save recovery, migration, export/import and separate P2/P5 curriculum loading.
+Regional music now loads only when played, reducing unnecessary startup requests.
+P2 and P5 loaded without browser errors in a local in-app-browser smoke check; a portrait-tablet viewport had no horizontal overflow and visible controls met the 44-pixel target size.
+Local Lighthouse accessibility scored 100 for both P2 and P5 after the objective contrast fix.
+The minimum-progress audit models 70% Silver cards, one battle and two correct practice answers per card, confirms all seven bosses are beatable without optional purchases, and enters each next region 1–3 levels below its first creatures.
+The first-paint loading screen shows the illustrated walking hero and waits for the opening art to decode before revealing the prologue.
+Older-iPad verification and a human audio/content proofread remain open.
+The hosted PWA is the release format; double-click `file://` support does not justify a second single-file build because the modular game and content loading require HTTP.
 
 ## Definition of done for every phase
 

@@ -173,8 +173,8 @@
         "kind": "dialogue",
         "title": "School",
         "lines": [
-          "The School interior arrives with the learning-core migration.",
-          "This preview already knows which questions belong to the selected level."
+          "The School is open to every seeker of Word Spirits.",
+          "Practice what you have learned before taking the forest path."
         ]
       }
     },
@@ -188,8 +188,8 @@
         "kind": "dialogue",
         "title": "Inn",
         "lines": [
-          "The Inn is closed during the engine preview.",
-          "Your position still saves automatically while you explore."
+          "Welcome, traveller. A warm bed and a little practice can restore your strength.",
+          "Come inside whenever you need a rest."
         ]
       }
     },
@@ -203,8 +203,8 @@
         "kind": "dialogue",
         "title": "Reading Hall",
         "lines": [
-          "P2 and P5 will use their own stories inside this same Reading Hall.",
-          "Higher Chinese remains an optional shelf."
+          "Ancient passages are kept safe here on scrolls.",
+          "Read one carefully, then help the villagers answer their questions."
         ]
       }
     },
@@ -218,8 +218,8 @@
         "kind": "dialogue",
         "title": "Shop",
         "lines": [
-          "The shared shop will sell the same item families at every school level.",
-          "Lesson bait will read its available words from the selected curriculum."
+          "Welcome! I have supplies for the road ahead.",
+          "Ask about Spirit bait if you are searching for a particular lost word."
         ]
       }
     },
@@ -236,8 +236,8 @@
         "title": "Grandma Wang",
         "lines": [
           "Welcome back to Scholar Village!",
-          "Every school level follows this same adventure. The word spirits change, but our village and our story remain together.",
-          "For this engine preview, explore the square and read the signs."
+          "The Word Spirits have scattered, but this village still remembers their stories.",
+          "Explore the square, meet our neighbours, and follow the signs when you are ready."
         ]
       }
     },
@@ -253,8 +253,8 @@
         "kind": "dialogue",
         "title": "Gatekeeper",
         "lines": [
-          "The road beyond the gate is still being rebuilt as modular map data.",
-          "Scholar Village is ready for walking, saving and shared-level testing."
+          "The road to the Great Dictionary Tree is still shrouded in mist.",
+          "Gather the lost Word Spirits and a light for the way before you pass."
         ]
       }
     },
@@ -371,7 +371,7 @@
         "title": "Village sign",
         "lines": [
           "← Camping Forest",
-          "This path will hold the first lesson slot for whichever school level is selected."
+          "Small creatures have been seen hiding among the campfires."
         ]
       }
     },
@@ -386,7 +386,7 @@
         "title": "Village sign",
         "lines": [
           "Misty Path →",
-          "Maps are shared. The selected curriculum decides which lesson’s spirits appear."
+          "Lost Word Spirits have been seen among the creatures beyond the mist."
         ]
       }
     },
@@ -401,7 +401,7 @@
         "title": "Village sign",
         "lines": [
           "↓ Kitchen Garden",
-          "Region 1 uses three lesson slots: P2 Lessons 1–3 or P5 Lessons 1–3."
+          "The garden paths are gentle, but even here the Word Spirits need your help."
         ]
       }
     },
@@ -416,7 +416,7 @@
         "title": "Village sign",
         "lines": [
           "↑ Great Dictionary Tree",
-          "Seven shared regions lead toward the Great Forgetter."
+          "The road to the Great Forgetter begins here."
         ]
       }
     }

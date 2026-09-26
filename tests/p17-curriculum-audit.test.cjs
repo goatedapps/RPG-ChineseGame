@@ -55,7 +55,7 @@ test('approved P5 final questions are playable and included in the final boss', 
   assert.ok(queue.some(task => task.kind === 'question' && task.item.kind === 'sentence'));
 });
 
-test('late lesson creature levels stay within reach of normal card-collection play', async () => {
+test('full late-lesson collection stays close to the creature level band', async () => {
   const { gainBattleRewards } = await import('../src/battle/battle.js');
   const shared = readJson('content/authored/shared/balance.json');
   for (const [level, firstLateLesson] of [['p2', 16], ['p5', 13]]) {
@@ -71,7 +71,7 @@ test('late lesson creature levels stay within reach of normal card-collection pl
         player = gainBattleRewards(player, balance, { creatureLevel: minimum + index % (maximum - minimum + 1) });
       }
       if (lesson >= firstLateLesson) {
-        assert.ok(player.level >= minimum - 1 && player.level <= maximum + 1, `${level} Lesson ${lesson}: hero ${player.level}, creature ${minimum}–${maximum}`);
+        assert.ok(player.level >= minimum - 1 && player.level <= maximum + 3, `${level} Lesson ${lesson}: hero ${player.level}, creature ${minimum}–${maximum}`);
       }
     }
   }

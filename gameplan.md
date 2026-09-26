@@ -10,8 +10,8 @@ The game opens with an illustrated, musical, typewriter-paced prologue that intr
 The prologue remains skippable during testing and is intended to become mandatory after approval.
 
 The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
-P0–P16 engineering and the earlier physical tablet pilot are complete.
-The next development phase is P17 multi-level completion review.
+P0–P17 engineering and the earlier physical tablet pilot are complete.
+The next development phase is P18 release polish.
 
 Production URLs:
 
@@ -187,21 +187,9 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | P14 | Festival City, curriculum-specific Lessons 11–15, martial arts and celebration requests, five creatures, Grudge Dragon, Harmony Stroke and Harmony Pavilion. |
 | P15 | Ancient Grove, curriculum-specific Lessons 13–17, archaeology and Hanzi-history requests, five creatures, Give-Up Ghost, Memory Stroke and Memory Vault. |
 | P16 | Treehouse Summit and Great Dictionary Tree, curriculum-specific P2 Lessons 18–19 and P5 Lessons 16–17, final requests, five creatures, Great Forgetter, Final Stroke and Dictionary Heart. |
+| P17 | Seven-region curriculum and boss-pool audit, late-level balance smoothing, twelve reviewed P5 final-lesson questions and Daily Quest Board polish. |
 
 ## Remaining roadmap
-
-### P10 physical pilot
-
-The child-and-parent tablet session in `PILOT.md` is complete.
-Its Cave Lantern celebration and Inn onboarding findings have been implemented with regression coverage.
-P11 was completed after this gate passed.
-
-### P17 multi-level completion
-
-Finish and review every P2 and P5 lesson-to-region mapping, story insertion and tuning value.
-Ensure every lesson belongs to exactly one region.
-Keep sparse question types optional until their pools are expanded and reviewed.
-Complete both curricula through the same seven-region story with isolated saves.
 
 ### P18 release polish
 

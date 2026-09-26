@@ -83,17 +83,35 @@ export function recordStoryEvent(value, event, payload = {}) {
 
 export function bossGateQueue(content, config = {}, lessons = [1, 2, 3]) {
   const singles = content.questions.single;
-  const inRegion = item => !item.lessons?.length || item.lessons.some(lesson => lessons.includes(lesson));
+  const inRegion = item => item.lessons?.some(lesson => lessons.includes(lesson));
   const configuredKinds = [...(config.coreQuestionKinds || []), ...(config.optionalQuestionKinds || [])];
   const enabled = new Set(configuredKinds.length ? configuredKinds : ['conjunction', 'sentence', 'cloze']);
-  const supported = singles.filter(item => enabled.has(item.kind) && item.subject !== 'Higher Chinese' && inRegion(item));
+  const supported = singles.filter(item => enabled.has(item.kind) && item.subject !== 'Higher Chinese' && inRegion(item) && Array.isArray(item.o) && new Set(item.o).size >= 2 && item.o.includes(item.c));
   const firstKind = enabled.has('conjunction') ? 'conjunction' : config.coreQuestionKinds?.[0];
   const secondKind = enabled.has('sentence') ? 'sentence' : config.coreQuestionKinds?.find(kind => kind !== firstKind);
-  const conjunctions = supported.filter(item => item.kind === firstKind).slice(0, 3).map(item => ({ phase: 'Chain Spell', kind: 'question', item }));
-  const sentences = supported.filter(item => item.kind === secondKind).slice(0, 2).map(item => ({ phase: 'Scramble Spell', kind: 'question', item }));
-  const lessonWords = content.words.filter(word => lessons.includes(word.lesson)).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
-  const usedQuestionIds = new Set([...conjunctions, ...sentences].map(task => task.item.id));
-  const muddleScrolls = supported.filter(item => !usedQuestionIds.has(item.id)).slice(0, 5).map(item => ({ phase: 'Muddle Scroll', kind: 'question', item }));
+  const usedQuestionIds = new Set();
+  const takeQuestions = (preferredKind, count, phase) => {
+    const available = supported.filter(item => !usedQuestionIds.has(item.id));
+    const preferred = available.filter(item => item.kind === preferredKind);
+    const fallback = available.filter(item => item.kind !== preferredKind);
+    const ordered = [...preferred, ...fallback];
+    const selected = [];
+    for (const lesson of lessons) {
+      const item = ordered.find(candidate => !selected.includes(candidate) && candidate.lessons.includes(lesson));
+      if (item) selected.push(item);
+      if (selected.length === count) break;
+    }
+    for (const item of ordered) {
+      if (selected.length === count) break;
+      if (!selected.includes(item)) selected.push(item);
+    }
+    selected.forEach(item => usedQuestionIds.add(item.id));
+    return selected.map(item => ({ phase, kind: 'question', item }));
+  };
+  const conjunctions = takeQuestions(firstKind, 3, 'Chain Spell');
+  const sentences = takeQuestions(secondKind, 2, 'Scramble Spell');
+  const lessonWords = lessons.flatMap(lesson => content.words.filter(word => word.lesson === lesson).slice(0, 1)).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
+  const muddleScrolls = takeQuestions(null, 5, 'Muddle Scroll');
   return [...conjunctions, ...sentences, ...lessonWords, ...muddleScrolls];
 }
 

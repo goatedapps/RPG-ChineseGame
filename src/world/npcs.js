@@ -1,30 +1,38 @@
 import { DIRECTIONS, isWalkable, objectOccupies, tileAt } from './map.js';
 
+const ROAM_RADIUS = 4;
+const homeOf = npc => npc.home || (npc.home = { x: npc.x, y: npc.y });
+const nearHome = (home, x, y) => Math.abs(x - home.x) + Math.abs(y - home.y) <= ROAM_RADIUS;
+
 export function restoreNpcPositions(map, saved = {}) {
   for (const npc of map.objects.filter(object => object.type === 'npc' && object.wander)) {
+    const home = homeOf(npc);
     const position = saved[npc.id];
     if (!position) continue;
     const tile = tileAt(map, position.x, position.y);
     const occupied = map.objects.some(other => other !== npc && other.solid && objectOccupies(other, position.x, position.y));
-    if (tile && map.legend[tile]?.walkable !== false && !occupied) Object.assign(npc, position);
+    if (tile && nearHome(home, position.x, position.y) && map.legend[tile]?.walkable !== false && !occupied) Object.assign(npc, position);
   }
 }
 
 export function wanderNpcs(map, player, saved = {}, random = Math.random) {
-  const next = { ...saved };
+  const next = {};
   const wanderers = map.objects.filter(object => object.type === 'npc' && object.wander);
   for (const npc of wanderers) {
-    if (random() > 0.35) continue;
-    const directions = Object.entries(DIRECTIONS).sort(() => random() - 0.5);
-    for (const [direction, delta] of directions) {
-      const x = npc.x + delta.x;
-      const y = npc.y + delta.y;
-      const occupied = x === player.x && y === player.y || map.objects.some(other => other !== npc && other.solid && other.x === x && other.y === y);
-      if (x < 10 || x > 29 || y < 10 || y > 17 || occupied || !isWalkable(map, x, y)) continue;
-      Object.assign(npc, { x, y, direction });
-      next[npc.id] = { x, y, direction };
-      break;
+    const home = homeOf(npc);
+    if (random() <= 0.8) {
+      const directions = Object.entries(DIRECTIONS);
+      const start = Math.floor(random() * directions.length);
+      for (let offset = 0; offset < directions.length; offset += 1) {
+        const [direction, delta] = directions[(start + offset) % directions.length];
+        const x = npc.x + delta.x;
+        const y = npc.y + delta.y;
+        if (!nearHome(home, x, y) || x === player.x && y === player.y || !isWalkable(map, x, y)) continue;
+        Object.assign(npc, { x, y, direction });
+        break;
+      }
     }
+    next[npc.id] = { x: npc.x, y: npc.y, direction: npc.direction };
   }
   return next;
 }

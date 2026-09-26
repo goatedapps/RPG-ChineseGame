@@ -257,6 +257,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .parent-tables section h2 { margin-top: 0; }
 .parent-tables section p { display: flex; justify-content: space-between; gap: 10px; margin: 6px 0; }
 .parent-settings { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.parent-shortcut-button { justify-self: start; align-self: end; width: auto; min-height: 44px; padding: 8px 14px; font-size: 14px; }
 .check-setting { display: flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 800; }
 .goal-editor { display: grid; grid-template-columns: 2fr 1fr 90px auto; gap: 8px; }
 .goal-editor input, .goal-editor select, .goal-editor button { min-height: 44px; border: 2px solid var(--line); border-radius: 8px; padding: 8px; }
@@ -384,6 +385,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .quest-card { display: flex; justify-content: space-between; gap: 14px; }
 .quest-card.complete, .story-timeline .done { border-color: var(--jade); background: #dff3e8; }
 .quest-card.paused { opacity: .58; border-style: dashed; }
+.quest-chest-status { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 10px; background: #f6f0e4; color: var(--ink); font-weight: 700; }
 .scroll-grid { max-height: 390px; overflow: auto; }
 .scroll-grid article { display: grid; gap: 5px; }
 .scroll-grid article p { margin: 3px 0 0; font: 15px/1.55 var(--font-chinese); }

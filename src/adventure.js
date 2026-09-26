@@ -2,9 +2,9 @@ import { makeExamQuestion } from './learning/questions.js';
 import { tierOf } from './learning/mastery.js?p10f';
 import { checkPassageAnswer } from './systems/reading.js?p10f';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
-import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p10f';
+import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p17';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js?p10m';
+import { showQuestion } from './ui/questionView.js?p17b';
 import { showWritingTask } from './ui/writingView.js?p12b';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
@@ -113,8 +113,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const daily = game.state.progress.daily;
     const ready = dailyChestReady(daily);
     const battlePaused = gameplay.battlesLeft() === 0;
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Resets at local midnight</p><h1>Daily Quest Board</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Complete all three quests to open today's chest. Battle quests pause when the daily battle cap is reached.</p><div class="quest-list">${daily.quests.map(quest => `<article class="quest-card ${quest.complete ? 'complete' : ''} ${quest.event === 'battle-win' && battlePaused && !quest.complete ? 'paused' : ''}"><b>${quest.complete ? '✓' : '○'} ${escapeHtml(quest.text)}</b><span>${quest.progress}/${quest.target}${quest.event === 'battle-win' && battlePaused && !quest.complete ? ' · resumes tomorrow' : ''}</span></article>`).join('')}</div><div class="button-row"><button class="primary" data-daily-chest ${ready ? '' : 'disabled'}>${daily.chestClaimed ? 'Chest claimed' : ready ? 'Open Daily Chest' : 'Finish all quests'}</button><button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
-    document.querySelector('[data-daily-chest]:not([disabled])')?.addEventListener('click', () => {
+    const completeCount = daily.quests.filter(quest => quest.complete).length;
+    const chestAction = ready
+      ? '<button class="primary" data-daily-chest>Open Daily Chest</button>'
+      : `<span class="quest-chest-status" role="status">${daily.chestClaimed ? 'Daily Chest claimed — come back tomorrow.' : `${completeCount}/${daily.quests.length} quests complete — finish the remaining quests to open the chest.`}</span>`;
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Resets at local midnight</p><h1>Daily Quest Board</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Complete all three quests to open today's chest. Battle quests pause when the daily battle cap is reached.</p><div class="quest-list">${daily.quests.map(quest => `<article class="quest-card ${quest.complete ? 'complete' : ''} ${quest.event === 'battle-win' && battlePaused && !quest.complete ? 'paused' : ''}"><b>${quest.complete ? '✓' : '○'} ${escapeHtml(quest.text)}</b><span>${quest.progress}/${quest.target}${quest.event === 'battle-win' && battlePaused && !quest.complete ? ' · resumes tomorrow' : ''}</span></article>`).join('')}</div><div class="button-row">${chestAction}<button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
+    document.querySelector('[data-daily-chest]')?.addEventListener('click', () => {
       const claimed = claimDailyChest(game.state.progress.daily);
       if (!claimed.ok) return;
       game.state.progress.daily = claimed.daily;
@@ -457,7 +461,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         question.options = question.options.filter(option => option !== wrong);
         battle.lantern = false;
       }
-      showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() });
+      showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena(), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
     const showBossReady = () => {
       overlay.open(bossPanel(`<p class="panel-kicker">Boss challenge</p><h1>${escapeHtml(active().levelPackage.regionStory.bossName)} awaits</h1><p>Prepare before breaking the first spell.</p><div class="button-row"><button class="primary" data-boss-next>Begin battle</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });

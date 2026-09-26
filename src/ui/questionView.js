@@ -1,7 +1,7 @@
 import { escapeHtml } from './dom.js';
 import { checkAnswer } from '../learning/questions.js';
 
-export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge', revealWord = word, headerHtml = '' } = {}) {
+export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge', revealWord = word, headerHtml = '', onAnswer = () => {} } = {}) {
   overlay.open(`<article class="panel question-panel">
     ${headerHtml}
     <p class="panel-kicker">${escapeHtml(title)}</p>
@@ -23,6 +23,7 @@ export function showQuestion(overlay, question, word, onDone, { title = 'Learnin
       ${revealWord ? `<p><b>${escapeHtml(revealWord.w)}</b> · ${escapeHtml(revealWord.p)} · ${escapeHtml(revealWord.m)}</p><p>${escapeHtml(revealWord.ex)}</p>` : ''}
       <button class="primary" data-question-next type="button">Continue</button>
     </div>`;
+    onAnswer(result);
     document.querySelector('[data-question-next]').addEventListener('click', event => {
       event.currentTarget.disabled = true;
       onDone(result);

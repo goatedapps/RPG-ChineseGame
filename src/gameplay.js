@@ -18,7 +18,7 @@ import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILL
 import { recommendedSkill, selectWord } from './learning/selection.js?p10f';
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js?p10m';
+import { showQuestion } from './ui/questionView.js?p17b';
 import { showWritingTask } from './ui/writingView.js?p12b';
 import { createSpeechController } from './learning/audio.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10n';
@@ -93,12 +93,12 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     return { xpMultiplier: 1 + gear.xp, maxHpBonus: gear.maxHp + partners.maxHp };
   }
 
-  function recordWord(word, skill, ok, assisted = false) {
+  function recordWord(word, skill, ok, assisted = false, playFeedback = true) {
     const game = active();
     const recorded = recordAnswer(game.state.progress.words[word.w], { skill, correct: ok, day: localDay(), assisted });
     game.state.progress.words[word.w] = recorded.progress;
     game.state.progress.accuracy = accuracyRecord(game.state.progress.accuracy, skill, ok);
-    audio?.sfx(ok ? 'correct' : 'wrong');
+    if (playFeedback) audio?.sfx(ok ? 'correct' : 'wrong');
     if (skill === 'w' && ok) onProgressEvent('writing-success', { word: word.w, lesson: word.lesson });
     return recorded;
   }
@@ -129,9 +129,9 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       battle.lantern = false;
     }
     showQuestion(overlay, question, null, result => {
-      recordWord(battle.word, skill, result.ok, assisted);
+      recordWord(battle.word, skill, result.ok, assisted, false);
       done(result.ok, skill);
-    }, { title: SKILLS[skill].action, revealWord: battle.word });
+    }, { title: SKILLS[skill].action, revealWord: battle.word, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
   }
 
   function showBattle(battle, message = '') {
@@ -213,7 +213,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const spell = spellNames[battle.creature.id];
     const question = makeQuestion(word, battle.creature.attackSkill, game.levelPackage.content.words);
     showQuestion(overlay, question, word, result => {
-      recordWord(word, battle.creature.attackSkill, result.ok);
+      recordWord(word, battle.creature.attackSkill, result.ok, false, false);
       if (result.ok) { commit(); showBattle(battle, `You blocked ${battle.creature.name}’s ${spell}!`); return; }
       const shielded = battle.partnerShield || blocksMiss;
       battle.partnerShield = false;
@@ -222,7 +222,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (game.state.player.hp <= 0) return faint(battle);
       commit();
       showBattle(battle, shielded ? `${spell} struck your shield. No damage!` : `${spell} dealt ${hit.damage} damage.`);
-    }, { title: `${battle.creature.name} casts ${spell}! Block it` });
+    }, { title: `${battle.creature.name} casts ${spell}! Block it`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
   }
 
   function creatureFled(battle) {
@@ -528,6 +528,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.player.coins += coins;
     const beforeLevel = { ...game.state.player };
     if (rating === 'right') game.state.player = addXp(game.state.player, 5, progressionBonuses(game));
+    if (correct) audio?.sfx('correct');
     onProgressEvent('reading-answer', { correct });
     const done = Object.keys(reading.results).length >= reading.questionCount;
     if (done) {
@@ -544,7 +545,9 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       const scrolls = game.state.progress.scrolls.unlocked;
       if (!scrolls.some(entry => entry.id === `reading-${group.id}`)) scrolls.unshift({ id: `reading-${group.id}`, day: localDay(), title: group.passage.title, type: group.subject === 'Higher Chinese' ? 'Higher Chinese Passage' : 'Reading Hall Passage', text: group.passage.text });
       commit();
-      audio?.sfx(first ? 'majorReward' : game.state.player.level > beforeLevel.level ? 'level' : 'win');
+      const completionCue = first ? 'majorReward' : game.state.player.level > beforeLevel.level ? 'level' : 'win';
+      if (correct) setTimeout(() => audio?.sfx(completionCue), 400);
+      else audio?.sfx(completionCue);
       return overlay.open(`<div class="panel result-panel ${first ? 'major-reward-panel' : ''}">${first ? passageRewardArt(readingKey, readingKeyName) : '<h1>Passage complete!</h1>'}<p>${first ? `The people of ${escapeHtml(game.levelPackage.region.name)} entrusted this key item to you. It opens the way to ${escapeHtml(game.levelPackage.regionStory.bossPlace || 'Muddle Cave')}.` : 'You received 30 coins and a Rice Ball.'} The passage is now in the Scroll Library.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
     }
     commit();
@@ -714,7 +717,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <label class="answer-field">Unlock through region<select data-region-unlock>${[1,2,3,4,5,6,7].map(value => `<option value="${value}" ${game.state.settings.unlockedRegions === value ? 'selected' : ''}>Region ${value}</option>`).join('')}</select></label>
         <label class="check-setting"><input type="checkbox" data-test-mode ${game.state.settings.testMode ? 'checked' : ''}> Test mode: open all gates</label>
       </div></section>
-      <section class="parent-section"><div class="parent-section-heading"><div><h2>Testing shortcuts</h2><p>Jump directly to a built region without defeating earlier bosses, or set the hero level for battle testing.</p></div></div><div class="parent-settings"><label class="answer-field">Jump to region<select data-parent-jump-region>${Object.values(game.levelPackage.campaigns).map(campaign => `<option value="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'selected' : ''}>${escapeHtml(campaign.region.name)}</option>`).join('')}</select></label><button class="secondary" type="button" data-parent-jump>Jump now</button><label class="answer-field">Main-character level<input data-parent-level type="number" inputmode="numeric" min="1" max="99" value="${game.state.player.level}"></label><button class="secondary" type="button" data-parent-level-save>Apply level</button></div><p class="parent-tab-intro">Changing level resets current XP to 0 and fully restores HP. Learning progress is unchanged.</p></section>
+      <section class="parent-section"><div class="parent-section-heading"><div><h2>Testing shortcuts</h2><p>Jump directly to a built region without defeating earlier bosses, or set the hero level for battle testing.</p></div></div><div class="parent-settings"><label class="answer-field">Jump to region<select data-parent-jump-region>${Object.values(game.levelPackage.campaigns).map(campaign => `<option value="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'selected' : ''}>${escapeHtml(campaign.region.name)}</option>`).join('')}</select></label><button class="secondary parent-shortcut-button" type="button" data-parent-jump>Jump now</button><label class="answer-field">Main-character level<input data-parent-level type="number" inputmode="numeric" min="1" max="99" value="${game.state.player.level}"></label><button class="secondary parent-shortcut-button" type="button" data-parent-level-save>Apply level</button></div><p class="parent-tab-intro">Changing level resets current XP to 0 and fully restores HP. Learning progress is unchanged.</p></section>
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Real-world goal</h2><p>Connect in-game progress to a family reward or milestone.</p></div></div><div class="goal-editor"><input data-goal-label value="${escapeHtml(goal?.label || '')}" placeholder="20 Gold words → ice-cream trip"><select data-goal-type><option value="gold" ${goal?.type === 'gold' ? 'selected' : ''}>Gold words</option><option value="streak" ${goal?.type === 'streak' ? 'selected' : ''}>Streak days</option><option value="region" ${goal?.type === 'region' ? 'selected' : ''}>Region cleared</option></select><input data-goal-target type="number" min="1" value="${goal?.target || 20}"><button data-goal-save>Save goal</button></div>${goal ? `<div class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></div>` : ''}</section>
       <section class="parent-gift"><div class="parent-section-heading"><div><h2>Give a Spirit card—or several</h2><p>Select a lesson, then choose one or more cards to add at Bronze. Their five learning circles remain empty.</p></div></div>${missingRegionWords.length ? `<div class="parent-gift-toolbar"><label>Lesson<select data-gift-lesson aria-label="Lesson to gift from">${giftLessons.map(lesson => `<option value="${lesson}" ${lesson === giftLesson ? 'selected' : ''}>Lesson ${lesson}</option>`).join('')}</select></label><button class="secondary" type="button" data-gift-select-all>Select all</button></div><div class="parent-gift-grid" role="group" aria-label="Lesson ${giftLesson} Spirit cards">${giftLessonWords.map(word => `<label class="gift-word-option"><input type="checkbox" data-gift-word value="${escapeHtml(word.w)}"><span><b>${escapeHtml(word.w)}</b><small>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</small></span></label>`).join('')}</div><div class="parent-gift-actions"><span data-gift-count>0 selected</span><button class="primary" data-gift-spirit-save disabled>Give selected cards</button></div>` : '<p><b>Every Spirit card in this region has been collected.</b></p>'}</section>
       <section class="parent-section parent-actions"><div class="parent-section-heading"><div><h2>Parent tools</h2><p>Temporary allowances, curriculum selection, and save management.</p></div></div><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-switch-level>Switch curriculum</button><button class="secondary" data-export-save>Export save</button><button class="secondary" data-import-trigger>Import save</button><input data-import-save type="file" accept="application/json,.json" hidden></div></section>

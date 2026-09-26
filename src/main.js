@@ -8,14 +8,14 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
-import { createGameplay } from './gameplay.js?p16';
+import { createGameplay } from './gameplay.js?p17b';
 import { createCollection } from './collection.js?p16';
-import { createAdventure } from './adventure.js?p16';
+import { createAdventure } from './adventure.js?p17b';
 import { createAudioManager } from './core/audio.js?p16';
 import { createPrologue } from './ui/prologue.js?p15';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p16';
-import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p10d';
+import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
 import { tierOf } from './learning/mastery.js?p10f';
 import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p11';
 
@@ -161,7 +161,7 @@ function startWorldTimers() {
     if (!active || overlay.isOpen || document.hidden) return;
     active.state.progress.npcs = wanderNpcs(active.levelPackage.map, active.state.player, active.state.progress.npcs);
     render();
-  }, 2200);
+  }, 1300);
   objectiveTimer = setInterval(() => updateObjective(true), 60000);
   updateObjective();
 }

@@ -328,3 +328,23 @@
     - 虽然……但是……
     - 与其……不如……
   correct: 不仅……而且……
+- questionID: WSQ-P5-L16-CJ1
+  lessonIds: [16]
+  question: ___ 大家都愿意节约用水，城市 ___ 能减少资源浪费。
+  options: [只要……就……, 除非……才……, 虽然……但是……, 与其……不如……]
+  correct: 只要……就……
+- questionID: WSQ-P5-L16-CJ2
+  lessonIds: [16]
+  question: 保护环境 ___ 政府的责任，___ 每个人的责任。
+  options: [不仅是……也是……, 不是……而是……, 一边是……一边是……, 宁可是……也不……]
+  correct: 不仅是……也是……
+- questionID: WSQ-P5-L17-CJ1
+  lessonIds: [17]
+  question: ___ 天气十分寒冷，建筑工人 ___ 坚持完成修桥的工作。
+  options: [虽然……仍然……, 因为……所以……, 只要……就……, 与其……不如……]
+  correct: 虽然……仍然……
+- questionID: WSQ-P5-L17-CJ2
+  lessonIds: [17]
+  question: ___ 房屋搭建得坚固，___ 能减少地震造成的伤亡。
+  options: [只有……才……, 虽然……但是……, 不但……而且……, 与其……不如……]
+  correct: 只有……才……

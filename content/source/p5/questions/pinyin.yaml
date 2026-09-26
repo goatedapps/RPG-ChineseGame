@@ -336,3 +336,23 @@
     - liú zǒu
     - liú zhǒu
   correct: liū zǒu
+- questionID: WSQ-P5-L16-PY1
+  lessonIds: [16]
+  question: 我们应该珍惜地球上的__资源__。（选出画线词语的汉语拼音）
+  options: [zī yuán, zhī yuán, zī yuǎn, zhī yuǎn]
+  correct: zī yuán
+- questionID: WSQ-P5-L16-PY2
+  lessonIds: [16]
+  question: 大家互相尊重，才能建立__和谐__的社区。（选出画线词语的汉语拼音）
+  options: [hé xié, hé xí, hè xié, hè xí]
+  correct: hé xié
+- questionID: WSQ-P5-L17-PY1
+  lessonIds: [17]
+  question: 这座桥十分__坚固__，能承受大风。（选出画线词语的汉语拼音）
+  options: [jiān gù, jiàn gù, jiān gǔ, jiàn gǔ]
+  correct: jiān gù
+- questionID: WSQ-P5-L17-PY2
+  lessonIds: [17]
+  question: 倒下的大树__阻挡__了道路。（选出画线词语的汉语拼音）
+  options: [zǔ dǎng, zǔ dàng, zhǔ dǎng, zhǔ dàng]
+  correct: zǔ dǎng

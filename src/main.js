@@ -2,16 +2,16 @@ import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10g';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p20';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p23';
+import { createRenderer } from './world/renderer.js?p24';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10e';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
-import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p3';
-import { createGameplay } from './gameplay.js?p33';
-import { createCollection } from './collection.js?p18';
-import { createAdventure } from './adventure.js?p28';
+import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
+import { createGameplay } from './gameplay.js?p36';
+import { createCollection } from './collection.js?p19';
+import { createAdventure } from './adventure.js?p30';
 import { createAudioManager } from './core/audio.js?p24';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p21';
@@ -421,12 +421,13 @@ function levelStatus(level) {
 }
 
 function showLevelPicker() {
-  overlay.open(`<div class="panel">
+  if (!active) $('#game-stage').setAttribute('aria-label', 'Curriculum selection');
+  overlay.open(`<div class="panel atlas-level-picker">
     <h1>Choose your curriculum</h1>
     <p>Every level follows the same seven-region adventure. Learning progress is saved separately for each curriculum.</p>
     <div class="level-grid">
       ${levels.map(level => `<button class="level-card" data-level="${level.id}" ${level.worldMappingReady ? '' : 'disabled'}>
-        <b>${level.label}</b>${levelStatus(level) ? `<span>${levelStatus(level)}</span>` : ''}
+        <i aria-hidden="true">${level.id === 'p2' ? '二' : level.id === 'p5' ? '五' : '学'}</i><b>${level.label}</b><span>${levelStatus(level) || 'Enter the seven-region adventure'}</span>
       </button>`).join('')}
     </div>
     ${active ? '<div class="button-row"><button class="secondary" data-close-overlay>Return to village</button></div>' : ''}

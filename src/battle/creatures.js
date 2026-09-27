@@ -36,6 +36,12 @@ export const CREATURES = Object.freeze([
   { id: 'hollow-book-golem', name: 'Hollow-Book Golem', color: '#796b57', weak: 'w', attackSkill: 'p' }
 ]);
 
+export function creatureSpellName(creature) {
+  const signature = { fogling: 'Fog Cloud', 'echo-bat': 'Screech', 'twin-shade': 'Mirror Trick', 'jumble-bug': 'Word Scramble', 'ink-imp': 'Ink Splash' };
+  const bySkill = { m: 'Meaning Mist', p: 'Pinyin Pulse', h: 'Hanzi Hex', u: 'Usage Twist', w: 'Brush Burst' };
+  return signature[creature.id] || bySkill[creature.attackSkill] || 'Word Spell';
+}
+
 export function createCreature(lesson, balance, random = Math.random, typeId = null) {
   const [minimum, maximum] = balance.combat.lessonLevels[String(lesson)];
   const level = minimum + Math.floor(random() * (maximum - minimum + 1));

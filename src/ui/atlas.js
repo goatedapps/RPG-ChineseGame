@@ -1,7 +1,8 @@
 const ATLAS_REGIONS = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7'];
 
 export function setAtlasRegion(shell, regionId) {
-  if (shell.dataset.atlasRegion === regionId) return;
+  if (shell.dataset.atlasRegion === regionId && !shell.classList.contains('atlas-pregame')) return;
+  shell.classList.remove('atlas-pregame');
   shell.dataset.atlasRegion = regionId;
   const menu = shell.querySelector('.hud-actions');
   if (menu) menu.scrollTop = 0;

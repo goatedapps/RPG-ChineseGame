@@ -59,3 +59,15 @@ test('wide layouts can start with the Atlas menu expanded', async () => {
   assert.equal(button.getAttribute('aria-expanded'), 'true');
   assert.equal(button.getAttribute('aria-label'), 'Collapse menu');
 });
+
+test('curriculum selection uses Atlas chrome without placeholder player stats', async () => {
+  const { setAtlasRegion } = await import('../src/ui/atlas.js');
+  const html = fs.readFileSync('game/index.html', 'utf8');
+  const styles = fs.readFileSync('css/atlas.css', 'utf8');
+  const shell = new JSDOM(html).window.document.querySelector('.game-shell');
+  assert.ok(shell.classList.contains('atlas-pregame'));
+  assert.match(styles, /\.atlas-pregame \.hud-status,[\s\S]*?\.atlas-pregame \.hud-actions,[\s\S]*?display: none/);
+  setAtlasRegion(shell, 'r3');
+  assert.ok(!shell.classList.contains('atlas-pregame'));
+  assert.ok(shell.classList.contains('atlas-region-r3'));
+});

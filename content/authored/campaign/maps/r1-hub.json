@@ -324,7 +324,7 @@
     },
     {
       "id": "ranger-rui", "type": "npc", "name": "Ranger Rui", "x": 36, "y": 15, "solid": true, "wander": true, "color": "#4e8056",
-      "interaction": { "kind": "dialogue", "title": "Ranger Rui", "lines": ["Camping Forest is safest for new collectors. Misty Path and Kitchen Garden are much tougher.", "Bait from the shop attracts the exact missing spirit you choose."] }
+      "interaction": { "kind": "dialogue", "title": "Ranger Rui", "lines": ["The village is safe. Beyond the north gate, Mistwood Edge is the gentlest part of the wild road; Lantern Border is the toughest.", "Bait from the shop attracts the exact missing spirit you choose."] }
     },
     {
       "id": "postman-bo", "type": "npc", "name": "Postman Bo", "x": 25, "y": 10, "solid": true, "wander": true, "color": "#3e6d91",
@@ -369,7 +369,7 @@
         "title": "Village sign",
         "lines": [
           "← Camping Forest",
-          "Small creatures have been seen hiding among the campfires."
+          "This village path is safe. For wild creatures and Word Spirits, take the north gate to Mistwood Road."
         ]
       }
     },
@@ -384,7 +384,7 @@
         "title": "Village sign",
         "lines": [
           "Misty Path →",
-          "Lost Word Spirits have been seen among the creatures beyond the mist."
+          "The battles are outside the village now. Explore Mistwood Road beyond the north gate."
         ]
       }
     },
@@ -399,7 +399,7 @@
         "title": "Village sign",
         "lines": [
           "↓ Kitchen Garden",
-          "The garden paths are gentle, but even here the Word Spirits need your help."
+          "The garden is safe. Mistwood Edge beyond the north gate is the gentlest place to begin battling."
         ]
       }
     },
@@ -413,8 +413,8 @@
         "kind": "dialogue",
         "title": "Village sign",
         "lines": [
-          "↑ Great Dictionary Tree",
-          "The road to the Great Forgetter begins here."
+          "↑ Mistwood Road",
+          "Explore the fog to find the Muddle Pavilion and the gate to Harvest Crossing."
         ]
       }
     }

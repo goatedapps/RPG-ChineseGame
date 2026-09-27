@@ -67,7 +67,10 @@ Production URLs:
 - Add migrations for save-shape changes.
 - Preserve local Hanzi data and the vendored Hanzi Writer runtime.
 - Keep runtime illustration assets sized for their displayed use, and update image references, offline cache and asset tests together.
-- Keep the Scholar Atlas header and collapsible rail consistent across all seven regions; richer canvas map art remains scoped to Regions 1–2.
+- Keep the Scholar Atlas shell consistent from curriculum selection through all seven regions, and reuse illustrated buildings and terrain detail across safe villages.
+- Keep village signs and guide dialogue aligned with the current inter-town fog routes; towns themselves are safe.
+- Keep Parent Mode actions in place with a clear confirmation instead of resetting its scroll position.
+- Keep the Spirit Book, Bag, Daily Board and equipment art lightweight and available offline.
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
 - Every town is safe; six distinct inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition.
 - Keep each route's discovery, gate-opening flag and return position persistent across saves.

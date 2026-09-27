@@ -223,7 +223,7 @@ test('Spirit Book separates regional vocabulary into lesson tabs', () => {
 
 test('Parent Mode defaults to Settings and separates its Learning Summary', () => {
   const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
-  assert.match(gameplay, /showParentDashboard\(selectedTab = 'settings', selectedGiftLesson = null\)/);
+  assert.match(gameplay, /showParentDashboard\(selectedTab = 'settings', selectedGiftLesson = null, \{ keepPosition = false, message = null \} = \{\}\)/);
   assert.match(gameplay, /role="tablist" aria-label="Parent Mode sections"/);
   assert.match(gameplay, /data-parent-tab="settings">Settings/);
   assert.match(gameplay, /data-parent-tab="summary">Learning Summary/);

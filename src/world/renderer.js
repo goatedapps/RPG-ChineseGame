@@ -2,7 +2,16 @@ import { isEncounterTerrain, zoneAt } from './encounters.js?p17';
 import { routeKey } from '../systems/regions.js';
 
 const TILE = 32;
-const BUILDING_ICON = { school: 0, inn: 2, 'reading-hall': 1, shop: 3, 'hawker-centre-building': 3, 'granary-building': 6, 'hill-house-building': 4, 'boss-pavilion-building': 6 };
+const BUILDING_ICON = {
+  school: 0, inn: 2, 'reading-hall': 1, shop: 3,
+  'hawker-centre-building': 3, 'granary-building': 6, 'hill-house-building': 4,
+  'rescue-dock-building': 5, 'clock-tower-building': 2, 'workshop-building': 4,
+  'theatre-building': 2, 'mirror-stage-building': 5, 'farmhouse-building': 4,
+  'harmony-dojo-building': 0, 'dragon-gate-building': 7, 'festival-workshop-building': 4,
+  'excavation-lodge-building': 5, 'ghost-archive-building': 6, 'root-library-building': 1,
+  'branch-workshop-building': 4, 'final-seal-building': 7, 'water-garden-building': 3,
+  'boss-pavilion-building': 6
+};
 const NPC_ICON = {
   'grandma-wang': 0, 'chef-mei': 1, storyteller: 2, 'mr-lin': 3,
   'hawker-lina': 4, 'courier-wei': 5, 'elder-sun': 0, 'auntie-bao': 7,
@@ -56,14 +65,35 @@ function drawBamboo(context, x, y) {
   }
 }
 
-function drawAtlasTileDetail(context, tile, x, y, column, row, regionId) {
+function drawRock(context, x, y) {
+  context.fillStyle = '#647d83';
+  context.beginPath();
+  context.moveTo(x + 1, y + 29); context.lineTo(x + 8, y + 10); context.lineTo(x + 18, y + 5); context.lineTo(x + 31, y + 29); context.closePath();
+  context.fill();
+  context.fillStyle = '#9db0aa';
+  context.beginPath();
+  context.moveTo(x + 8, y + 10); context.lineTo(x + 18, y + 5); context.lineTo(x + 16, y + 18); context.closePath();
+  context.fill();
+}
+
+function drawWall(context, x, y) {
+  context.fillStyle = '#795d50';
+  context.fillRect(x + 1, y + 5, 30, 25);
+  context.strokeStyle = '#b29a78';
+  context.lineWidth = 2;
+  for (const line of [12, 21]) { context.beginPath(); context.moveTo(x + 2, y + line); context.lineTo(x + 30, y + line); context.stroke(); }
+  context.beginPath(); context.moveTo(x + 15, y + 5); context.lineTo(x + 15, y + 12); context.moveTo(x + 8, y + 12); context.lineTo(x + 8, y + 21); context.moveTo(x + 23, y + 21); context.lineTo(x + 23, y + 30); context.stroke();
+}
+
+function drawAtlasTileDetail(context, map, tile, x, y, column, row, regionId) {
   const seed = (column * 37 + row * 19) % 17;
-  if (tile === 'g' || tile === 'h' || tile === 'f') {
+  const paved = ['p', 'b', 'q', 's', 'l', 'd'].includes(tile);
+  if (map.legend[tile].walkable && !paved) {
     context.fillStyle = seed % 2 ? '#e0e8a543' : '#245b3940';
     context.beginPath();
     context.ellipse(x + 8 + seed % 13, y + 9 + seed % 15, 7, 3, -.25, 0, Math.PI * 2);
     context.fill();
-    if ((seed + row) % 7 === 0 || tile === 'f') {
+    if ((seed + row) % 7 === 0 || tile === 'f' || tile === 'a') {
       context.fillStyle = tile === 'f' ? '#f8e08e' : '#fbf2c2';
       context.beginPath();
       context.arc(x + 10 + seed % 12, y + 11 + seed % 12, 2, 0, Math.PI * 2);
@@ -74,7 +104,7 @@ function drawAtlasTileDetail(context, tile, x, y, column, row, regionId) {
       context.fill();
     }
   }
-  if (tile === 'p') {
+  if (paved) {
     context.fillStyle = 'rgba(255,242,205,.19)';
     context.fillRect(x + 3 + seed % 6, y + 5, 17, 8);
     context.fillRect(x + 11 - seed % 5, y + 19, 18, 7);
@@ -94,10 +124,11 @@ function drawAtlasTileDetail(context, tile, x, y, column, row, regionId) {
 
 function drawTile(context, map, tile, x, y, column, row, tick, atlasRegion) {
   const definition = map.legend[tile];
-  context.fillStyle = atlasRegion && tile === 't' ? map.legend.g.color : definition.color;
+  const villageGround = map.legend.g?.color || map.legend.s?.color || map.legend.f?.color || definition.color;
+  context.fillStyle = atlasRegion && tile === 't' ? villageGround : definition.color;
   context.fillRect(Math.floor(x), Math.floor(y), TILE + 1, TILE + 1);
-  if (atlasRegion) drawAtlasTileDetail(context, tile, x, y, column, row, atlasRegion);
-  if (map.legend[tile]?.encounter) {
+  if (atlasRegion) drawAtlasTileDetail(context, map, tile, x, y, column, row, atlasRegion);
+  if (!map.safeTown && map.legend[tile]?.encounter) {
     const hash = (column * 17 + row * 23) % 31;
     context.fillStyle = tile === 'f' ? (hash % 2 ? '#f1c34f' : '#efa2ae') : 'rgba(255,255,255,.16)';
     context.beginPath();
@@ -134,6 +165,8 @@ function drawTile(context, map, tile, x, y, column, row, tick, atlasRegion) {
   }
   if (tile === 't') {
     if (atlasRegion === 'r2') drawBamboo(context, x, y);
+    else if (atlasRegion === 'r3') drawRock(context, x, y);
+    else if (atlasRegion === 'r5') drawWall(context, x, y);
     else drawTree(context, x, y);
   }
   if (tile === 'w') {
@@ -446,7 +479,7 @@ function drawScroll(context, x, y) {
 
 export function createRenderer(canvas, map) {
   const context = canvas.getContext('2d');
-  const atlasRegion = map.region === 'r1' || map.region === 'r2' ? map.region : null;
+  const atlasRegion = map.safeTown ? map.region : null;
   let disposed = false;
   let lastState = null;
   const art = {};

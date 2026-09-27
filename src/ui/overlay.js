@@ -34,6 +34,8 @@ export function createOverlay(element) {
     closeHandler = onClose;
     api.dismissible = dismissible;
     element.innerHTML = content;
+    const panel = element.querySelector('.panel');
+    if (panel?.querySelector(':scope > .panel-header') && !panel.matches('.bag-panel, .parent-panel')) panel.classList.add('atlas-window');
     element.hidden = false;
     element.dataset.open = 'true';
     element.setAttribute('role', 'dialog');

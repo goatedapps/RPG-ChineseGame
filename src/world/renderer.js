@@ -296,8 +296,8 @@ function drawBuilding(context, object, offsetX, offsetY, atlasRegion, art) {
     context.fillStyle = '#674127';
     context.fillRect(doorX + 7, top + pixelHeight - 27, 18, 27);
   }
-  context.font = '700 14px system-ui';
-  const maxTextWidth = Math.max(70, pixelWidth - 28);
+  context.font = atlasRegion ? '800 15px Georgia, serif' : '700 14px system-ui';
+  const maxTextWidth = Math.max(70, pixelWidth - (atlasRegion ? 48 : 28));
   const lines = [''];
   for (const word of object.name.split(' ')) {
     const current = lines.at(-1);
@@ -305,17 +305,30 @@ function drawBuilding(context, object, offsetX, offsetY, atlasRegion, art) {
     if (current && context.measureText(candidate).width > maxTextWidth) lines.push(word);
     else lines[lines.length - 1] = candidate;
   }
-  const labelWidth = Math.min(pixelWidth - 10, Math.ceil(Math.max(...lines.map(line => context.measureText(line).width))) + 18);
-  const labelHeight = lines.length * 18 + 8;
-  context.fillStyle = atlasRegion ? '#fff1c9' : '#1b2430';
-  context.strokeStyle = atlasRegion ? '#684e31' : '#1b2430';
-  context.lineWidth = atlasRegion ? 2 : 1;
-  context.fillRect(left + (pixelWidth - labelWidth) / 2, top + 30, labelWidth, labelHeight);
-  if (atlasRegion) context.strokeRect(left + (pixelWidth - labelWidth) / 2, top + 30, labelWidth, labelHeight);
-  context.fillStyle = atlasRegion ? '#442f29' : '#f0c95a';
+  const labelWidth = Math.min(pixelWidth - 8, Math.ceil(Math.max(...lines.map(line => context.measureText(line).width))) + (atlasRegion ? 42 : 18));
+  const labelHeight = lines.length * 19 + (atlasRegion ? 12 : 8);
+  const labelX = left + (pixelWidth - labelWidth) / 2;
+  const labelY = top + (atlasRegion ? 8 : 30);
+  context.fillStyle = atlasRegion ? '#163a45' : '#1b2430';
+  context.strokeStyle = atlasRegion ? '#e4be74' : '#1b2430';
+  context.lineWidth = atlasRegion ? 3 : 1;
+  context.fillRect(labelX, labelY, labelWidth, labelHeight);
+  if (atlasRegion) {
+    context.strokeRect(labelX, labelY, labelWidth, labelHeight);
+    context.strokeStyle = '#2a5f62';
+    context.lineWidth = 1;
+    context.strokeRect(labelX + 4, labelY + 4, labelWidth - 8, labelHeight - 8);
+    context.fillStyle = '#e4be74';
+    for (const dotX of [labelX + 11, labelX + labelWidth - 11]) {
+      context.beginPath();
+      context.arc(dotX, labelY + labelHeight / 2, 2.5, 0, Math.PI * 2);
+      context.fill();
+    }
+  }
+  context.fillStyle = atlasRegion ? '#fff8df' : '#f0c95a';
   context.textAlign = 'center';
   context.textBaseline = 'middle';
-  lines.forEach((line, index) => context.fillText(line, left + pixelWidth / 2, top + 43 + index * 18, maxTextWidth));
+  lines.forEach((line, index) => context.fillText(line, left + pixelWidth / 2, labelY + (labelHeight - lines.length * 19) / 2 + 9.5 + index * 19, maxTextWidth));
 }
 
 function drawLandmark(context, object, offsetX, offsetY) {
@@ -480,11 +493,12 @@ function drawScroll(context, x, y) {
 export function createRenderer(canvas, map) {
   const context = canvas.getContext('2d');
   const atlasRegion = map.safeTown ? map.region : null;
+  const illustratedStructures = Boolean(map.safeTown || map.route);
   let disposed = false;
   let lastState = null;
   const art = {};
   if (globalThis.Image) {
-    for (const [kind, file] of [...(atlasRegion ? [['buildings', 'buildings.webp']] : []), ['villagers', 'villagers-full-body.webp'], ['hero', 'hero-map.webp']]) {
+    for (const [kind, file] of [...(illustratedStructures ? [['buildings', 'buildings.webp']] : []), ['villagers', 'villagers-full-body.webp'], ['hero', 'hero-map.webp']]) {
       const image = new Image();
       image.onload = () => { if (!disposed && lastState) render(lastState); };
       image.src = new URL(`../../assets/images/atlas/${file}`, import.meta.url).href;
@@ -516,7 +530,7 @@ export function createRenderer(canvas, map) {
     }
 
     for (const object of map.objects.filter(object => object.type === 'landmark')) drawLandmark(context, object, offsetX, offsetY);
-    for (const object of map.objects.filter(object => object.type === 'building')) drawBuilding(context, object, offsetX, offsetY, atlasRegion, art);
+    for (const object of map.objects.filter(object => object.type === 'building')) drawBuilding(context, object, offsetX, offsetY, illustratedStructures, art);
     const entities = map.objects.filter(object => object.type === 'npc' || object.type === 'sign')
       .map(object => ({ ...object, sortY: object.y }))
       .concat({ type: 'player', x: state.player.x, y: state.player.y, sortY: state.player.y })
@@ -525,7 +539,7 @@ export function createRenderer(canvas, map) {
       const x = entity.x * TILE - offsetX;
       const y = entity.y * TILE - offsetY;
       if (entity.type === 'sign') {
-        if (!['next-region-gate', 'route-entrance'].includes(entity.id) || !drawAtlasSprite(context, art.buildings, 7, 4, 256, 256, x - 15, y - 36, 62, 68)) drawSign(context, x, y);
+        if (!['next-region-gate', 'route-entrance', 'return-village'].includes(entity.id) || !drawAtlasSprite(context, art.buildings, 7, 4, 256, 256, x - 15, y - 36, 62, 68)) drawSign(context, x, y);
       }
       else if (entity.type === 'npc') {
         const index = npcSpriteIndex(entity.id);

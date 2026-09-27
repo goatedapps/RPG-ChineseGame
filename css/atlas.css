@@ -1,4 +1,4 @@
-.atlas-region-emblem,
+.game-logo,
 .atlas-menu-toggle { display: none; }
 
 .game-shell.atlas-enabled {
@@ -64,28 +64,14 @@
 .atlas-enabled .brand small { margin-top: 5px; color: #16473f; font: 900 12px/1.2 var(--font-ui); letter-spacing: .025em; text-transform: none; }
 .atlas-region-r2 .brand small { color: #8d5521; }
 
-.atlas-enabled .atlas-region-emblem {
+.atlas-enabled .game-logo {
   display: block;
-  width: 60px;
-  height: 60px;
-  flex: 0 0 60px;
-  border: 3px solid #fff7d6;
-  border-radius: 14px;
-  background-color: #a6c8a4;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0 0 0 2px #a58750, 0 3px 7px #513f2e40;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px #49372f66);
 }
-
-.atlas-region-r1 .atlas-region-emblem { background-image: url('../assets/images/atlas/scholar-village.webp'); }
-.atlas-region-r2 .atlas-region-emblem { background-image: url('../assets/images/atlas/harvest-crossing.webp'); }
-.atlas-enabled:is(.atlas-region-r3, .atlas-region-r4, .atlas-region-r5, .atlas-region-r6, .atlas-region-r7) .atlas-region-emblem { display: grid; place-items: center; background: radial-gradient(circle at 34% 28%, var(--atlas-accent-light), var(--atlas-accent) 85%); }
-.atlas-enabled:is(.atlas-region-r3, .atlas-region-r4, .atlas-region-r5, .atlas-region-r6, .atlas-region-r7) .atlas-region-emblem::after { color: #fff8dd; font: 900 28px/1 var(--font-hanzi); text-shadow: 0 2px 3px #18304091; }
-.atlas-region-r3 .atlas-region-emblem::after { content: '潮'; }
-.atlas-region-r4 .atlas-region-emblem::after { content: '灯'; }
-.atlas-region-r5 .atlas-region-emblem::after { content: '庆'; }
-.atlas-region-r6 .atlas-region-emblem::after { content: '林'; }
-.atlas-region-r7 .atlas-region-emblem::after { content: '字'; }
 
 .atlas-enabled .hud-status {
   display: flex;
@@ -246,7 +232,7 @@
 @media (max-width: 900px) {
   .atlas-enabled .hud-overview { display: grid; gap: 6px; min-height: 105px; padding: 7px 12px; }
   .atlas-enabled .brand { flex-basis: auto; font-size: 19px; }
-  .atlas-enabled .atlas-region-emblem { width: 48px; height: 48px; flex-basis: 48px; }
+  .atlas-enabled .game-logo { width: 48px; height: 48px; flex-basis: 48px; }
   .atlas-enabled .hud-status { justify-content: space-between; }
 }
 
@@ -255,7 +241,7 @@
   .game-shell.atlas-enabled.atlas-menu-expanded { --atlas-rail-width: 150px; }
   .atlas-enabled .hud-overview { min-height: 119px; }
   .atlas-enabled .brand { gap: 8px; font-size: 17px; }
-  .atlas-enabled .atlas-region-emblem { width: 39px; height: 39px; flex-basis: 39px; border-radius: 9px; }
+  .atlas-enabled .game-logo { width: 39px; height: 39px; flex-basis: 39px; }
   .atlas-enabled .brand-copy > span { font-size: 20px; }
   .atlas-enabled .brand small { font-size: 11px; }
   .atlas-enabled .hud-status { display: grid; grid-template-columns: 56px repeat(2, minmax(0, 1fr)) 64px; gap: 4px 6px; }
@@ -295,12 +281,6 @@
 .atlas-pregame .objective,
 .atlas-pregame .stage canvas,
 .atlas-pregame .dpad { display: none; }
-.atlas-pregame .atlas-region-emblem {
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle at 30% 22%, #e4cf91, #497e75 70%, #194251);
-}
-.atlas-pregame .atlas-region-emblem::after { content: '学'; color: #fff7d8; font: 900 28px/1 var(--font-hanzi); text-shadow: 0 2px 4px #173744; }
 .atlas-pregame .stage {
   grid-column: 1;
   grid-row: 2;

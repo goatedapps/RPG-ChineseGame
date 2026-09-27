@@ -80,7 +80,7 @@ Scholar's Lantern prevents Silver and Gold spirits from appearing for 40 forest 
 ## World and Region 1 gameplay
 
 Scholar Village is the intentionally small tutorial town.
-The Scholar Atlas art treatment covers Scholar Village and Harvest Crossing with reusable illustrated buildings and compact UI textures.
+The Scholar Atlas art treatment covers all seven villages, the fog-route pavilions and gates, and the navigation and building panels with reusable illustrated assets.
 Reusable full-body villager and distinct hero sprites appear on all village maps.
 Six separate battlefields now connect the seven towns, each with three lesson bands, persistent fog, a discoverable boss pavilion and an onward gate.
 The five later routes use distinct authored terrain layouts and the shared route renderer and progression rules.

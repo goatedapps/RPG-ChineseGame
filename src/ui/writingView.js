@@ -5,13 +5,12 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
   const characters = [...word.w].filter(character => /\p{Script=Han}/u.test(character));
   let index = 0;
   let anyHelp = false;
-  let gaveUp = false;
   const nextProgress = { ...characterProgress };
   const stages = characters.map(character => forceMemory ? 2 : normalizeCharacterProgress(nextProgress[character]).stage);
   const allFromMemory = stages.every(stage => stage === 2);
   let writer = null;
 
-  const finish = () => onDone({ ...writingResult({ gaveUp, usedDemonstration: anyHelp, allFromMemory }), gaveUp }, nextProgress);
+  const finish = () => onDone({ ...writingResult({ gaveUp: false, usedDemonstration: anyHelp, allFromMemory }), gaveUp: false }, nextProgress);
   const draw = () => {
     const character = characters[index];
     const stage = WRITING_STAGES[stages[index]];
@@ -30,7 +29,7 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>
         <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${memoryTask ? (itemIndex === index ? '✎' : '') : itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
-        <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button>${memoryTask ? '' : `<button class="secondary" data-writing-skip type="button">I don't know</button>`}</div>
+        <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button></div>
       </div></div>
     </article>`, { dismissible: false });
     const box = document.querySelector('[data-writing-box]');
@@ -60,15 +59,6 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       writer.cancelQuiz();
       writer.animateCharacter({ onComplete: quiz });
     });
-    document.querySelector('[data-writing-skip]')?.addEventListener('click', event => {
-      event.currentTarget.disabled = true;
-      gaveUp = true;
-      anyHelp = true;
-      writer.cancelQuiz();
-      characters.slice(index).forEach(item => { nextProgress[item] = recordCharacter(nextProgress[item], { helped: true, runId }); });
-      writer.showCharacter();
-      window.setTimeout(finish, 400);
-    }, { once: true });
     quiz();
   };
   draw();

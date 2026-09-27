@@ -1,4 +1,4 @@
-export const SAVE_SCHEMA_VERSION = 7;
+export const SAVE_SCHEMA_VERSION = 8;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -86,6 +86,14 @@ function normalizeRoutes(value) {
   } };
 }
 
+function migrateReading(value, fallback) {
+  const reading = { ...fallback, ...(value || {}) };
+  return {
+    ...reading,
+    results: Object.fromEntries(Object.entries(reading.results || {}).filter(([, result]) => result?.correct === true))
+  };
+}
+
 export function migrateState(candidate, levelPackage) {
   const fresh = createFreshState(levelPackage);
   if (!candidate || typeof candidate !== 'object') return fresh;
@@ -144,7 +152,7 @@ export function migrateState(candidate, levelPackage) {
           },
           storiesRead: Array.isArray(candidate.progress?.story?.storiesRead) ? candidate.progress.story.storiesRead : []
         },
-        reading: { ...fresh.progress.reading, ...(candidate.progress?.reading || {}) },
+        reading: migrateReading(candidate.progress?.reading, fresh.progress.reading),
         accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
         ,regions: { ...(candidate.progress?.regions || {}) },
         routes: normalizeRoutes(candidate.progress?.routes)
@@ -185,11 +193,7 @@ export function migrateState(candidate, levelPackage) {
         'rice-ball': numberOr(candidate.potions, 1),
         keyItems: candidate.keyItems || []
       },
-      reading: {
-        ...fresh.progress.reading,
-        ...(candidate.reading || {}),
-        written: candidate.written || []
-      },
+      reading: { ...migrateReading(candidate.reading, fresh.progress.reading), written: candidate.written || [] },
       legacySnapshot: {
         boss: Boolean(candidate.boss),
         keyItems: candidate.keyItems || [],

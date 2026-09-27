@@ -1,10 +1,11 @@
 export function normalizeReading(value = {}) {
+  const results = Object.fromEntries(Object.entries(value.results || {}).filter(([, result]) => result?.correct === true));
   return {
     completed: Array.isArray(value.completed) ? [...value.completed] : Array.isArray(value.done) ? [...value.done] : [],
     active: value.active || null,
     index: Math.max(0, Number(value.index) || 0),
     questionCount: Math.max(0, Number(value.questionCount) || 0),
-    results: { ...(value.results || {}) },
+    results,
     written: Array.isArray(value.written) ? [...value.written] : []
   };
 }
@@ -31,7 +32,7 @@ export function selectPassage(groups, reading, { includeHigherChinese = false, r
 export function checkPassageAnswer(item, answer) {
   const normalized = String(answer || '').replace(/\s+/g, '').toLocaleLowerCase();
   if (item.format === 'MCQ') return answer === item.c;
-  if (item.format === 'Fill-in') return (item.accepted || []).some(candidate => String(candidate).replace(/\s+/g, '').toLocaleLowerCase() === normalized);
+  if (item.format === 'Fill-in') return [...(item.accepted || []), item.c].filter(Boolean).some(candidate => String(candidate).replace(/\s+/g, '').toLocaleLowerCase() === normalized);
   return null;
 }
 

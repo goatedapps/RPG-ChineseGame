@@ -150,8 +150,8 @@ test('tablet fixes hide unavailable help actions and memory-writing answers', ()
   assert.match(writing, /Hanyu Pinyin/);
   assert.match(writing, /Example sentence/);
   assert.match(writing, /split\(word\.w\)\.join\(blank\)/);
-  assert.match(writing, /memoryTask \? '' : `<button class="secondary" data-writing-skip/);
-  assert.match(gameplay, /if \(skill === 'h'\) question\.prompt = battle\.word\.m/);
+  assert.doesNotMatch(writing, /data-writing-skip/);
+  assert.match(gameplay, /return skill === 'h' \? \{ \.\.\.question, prompt: word\.m \}/);
   assert.match(gameplay, /data-higher-chinese/);
   assert.match(gameplay, /Give a Spirit card/);
   assert.match(gameplay, /accuracyLabel\(skill\)/);

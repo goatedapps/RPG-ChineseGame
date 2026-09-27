@@ -48,9 +48,9 @@ test('passages are selected randomly, repair stale counts, and reset their villa
   ];
   assert.equal(selectPassage(groups, {}, { random: () => 0.99 }).id, 'standard-b');
   assert.equal(selectPassage(groups, { completed: ['standard-a'] }, { random: () => 0 }).id, 'standard-b');
-  const repaired = repairActiveReading({ active: 'standard-a', questionCount: 0, results: { 0: {}, 1: {}, 9: {} } }, { id: 'standard-a', items: [{}, {}, {}] }, 7);
+  const repaired = repairActiveReading({ active: 'standard-a', questionCount: 0, results: { 0: { correct: true }, 1: { correct: false }, 2: { correct: true }, 9: { correct: true } } }, { id: 'standard-a', items: [{}, {}, {}] }, 7);
   assert.equal(repaired.questionCount, 3);
-  assert.deepEqual(Object.keys(repaired.results), ['0', '1']);
+  assert.deepEqual(Object.keys(repaired.results), ['0', '2']);
   const completed = completePassage({ active: 'standard-a', questionCount: 3, results: { 0: {} } }, 'standard-a', 'cave-lantern', { keyItems: [] });
   assert.equal(completed.reading.active, null);
   assert.equal(completed.reading.questionCount, 0);
@@ -61,12 +61,13 @@ test('wandering villagers restore valid positions and never walk onto the player
   const { restoreNpcPositions, wanderNpcs } = await import('../src/world/npcs.js');
   const map = readJson('content/authored/campaign/maps/r1-hub.json');
   const wanderer = map.objects.find(object => object.wander);
-  restoreNpcPositions(map, { [wanderer.id]: { x: 15, y: 12, direction: 'right' } });
-  assert.deepEqual({ x: wanderer.x, y: wanderer.y, direction: wanderer.direction }, { x: 15, y: 12, direction: 'right' });
+  const home = { x: wanderer.x, y: wanderer.y };
+  restoreNpcPositions(map, { [wanderer.id]: { x: home.x + 1, y: home.y, direction: 'right' } });
+  assert.deepEqual({ x: wanderer.x, y: wanderer.y, direction: wanderer.direction }, { x: home.x + 1, y: home.y, direction: 'right' });
   const before = { x: wanderer.x, y: wanderer.y };
-  wanderNpcs(map, { x: 16, y: 12 }, {}, () => 0);
-  assert.notDeepEqual({ x: wanderer.x, y: wanderer.y }, { x: 16, y: 12 });
-  assert.ok(wanderer.x >= 10 && wanderer.x <= 29 && wanderer.y >= 10 && wanderer.y <= 17);
+  wanderNpcs(map, { x: home.x + 2, y: home.y }, {}, () => 0);
+  assert.notDeepEqual({ x: wanderer.x, y: wanderer.y }, { x: home.x + 2, y: home.y });
+  assert.ok(Math.abs(wanderer.x - home.x) + Math.abs(wanderer.y - home.y) <= 4);
   assert.ok(before.x !== undefined);
 });
 

@@ -78,7 +78,8 @@ Onward region progression uses Silver-or-better words; Gold is an optional maste
 ## Region 1 gameplay
 
 Scholar Village is the intentionally small tutorial town.
-The Scholar Atlas art treatment currently covers Scholar Village and Harvest Crossing with reusable illustrated buildings, villager portraits and compact UI textures.
+The Scholar Atlas art treatment covers Scholar Village and Harvest Crossing with reusable illustrated buildings and compact UI textures.
+Reusable full-body villager and distinct hero sprites appear on all village maps.
 Mistwood Road is the first separate battlefield between towns, using three lesson bands, persistent fog, a discoverable boss pavilion and an eastern gate to Harvest Crossing.
 The later inter-town routes remain pending user review of this prototype.
 The map includes School, Reading Hall, Inn, Shop, Storyteller, quest villagers, lore villagers and wandering flavor villagers.
@@ -89,7 +90,7 @@ The first gate opening is a one-time illustrated transition, tracked in the save
 
 The Region 1 story begins automatically with Grandma Wang's welcome and includes the tutorial battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
 School dictation now offers a regional lesson and 5, 10 or all words; menu dictation offers every curriculum lesson as score-only practice.
-Wrong villager passage answers keep the passage and question open for review.
+Wrong or skipped villager passage answers show the passage, question and correct answer for review, but only a correct attempt clears the villager's question mark.
 Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.

@@ -114,6 +114,11 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .question-options button.wrong { border-color: var(--seal); background: #fae3de; }
 .answer-feedback { margin-top: 14px; padding: 13px; border-left: 5px solid var(--jade); border-radius: 8px; background: white; }
 .answer-feedback.bad { border-color: var(--seal); }
+.answer-word { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.read-feedback { display: inline-grid; place-items: center; width: 44px; height: 44px; min-width: 44px; min-height: 44px; padding: 9px; border: 1px solid var(--jade); border-radius: 50%; background: #e7f2e9; color: #215b49; vertical-align: middle; }
+.read-feedback svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.read-feedback:hover, .read-feedback:focus-visible { background: #cde8d4; }
+.passage-review-answer { padding: 10px 12px; border-left: 4px solid var(--jade); border-radius: 6px; background: #eaf3df; font-size: 1.05em; }
 .battle-grid { display: grid; grid-template-columns: minmax(200px,.8fr) minmax(280px,1.4fr); gap: 24px; align-items: center; }
 .battle-scene { display: grid; grid-template-rows: minmax(190px,1fr) auto; align-self: stretch; width: min(760px,100%); min-height: 100%; margin: auto; overflow: hidden; border: 3px solid var(--ink); border-radius: 16px; background: linear-gradient(#cfe3d5 0 55%,#a9cda0 55%); box-shadow: 0 13px 30px rgba(0,0,0,.35); }
 .battle-scene.lesson-2 { background: linear-gradient(#d6d3e6 0 55%,#b5b0cc 55%); }

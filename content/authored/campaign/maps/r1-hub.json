@@ -100,14 +100,14 @@
       "type": "building",
       "name": "School",
       "rect": {
-        "x": 11,
-        "y": 5,
+        "x": 8,
+        "y": 4,
         "width": 6,
         "height": 4
       },
       "door": {
-        "x": 14,
-        "y": 9
+        "x": 11,
+        "y": 8
       },
       "solid": true,
       "color": "#2f6f8f"
@@ -117,14 +117,14 @@
       "type": "building",
       "name": "Inn",
       "rect": {
-        "x": 23,
-        "y": 5,
+        "x": 27,
+        "y": 4,
         "width": 6,
         "height": 4
       },
       "door": {
-        "x": 26,
-        "y": 9
+        "x": 30,
+        "y": 8
       },
       "solid": true,
       "color": "#8e3b2e"
@@ -134,14 +134,14 @@
       "type": "building",
       "name": "Reading Hall",
       "rect": {
-        "x": 11,
-        "y": 18,
+        "x": 10,
+        "y": 20,
         "width": 6,
         "height": 4
       },
       "door": {
-        "x": 14,
-        "y": 22
+        "x": 13,
+        "y": 24
       },
       "solid": true,
       "color": "#6b4e8e"
@@ -151,14 +151,14 @@
       "type": "building",
       "name": "Shop",
       "rect": {
-        "x": 23,
-        "y": 18,
+        "x": 27,
+        "y": 20,
         "width": 6,
         "height": 4
       },
       "door": {
-        "x": 26,
-        "y": 22
+        "x": 30,
+        "y": 24
       },
       "solid": true,
       "color": "#3f7a4a"
@@ -166,8 +166,8 @@
     {
       "id": "school-door",
       "type": "door",
-      "x": 14,
-      "y": 8,
+      "x": 11,
+      "y": 7,
       "solid": true,
       "interaction": {
         "kind": "dialogue",
@@ -181,8 +181,8 @@
     {
       "id": "inn-door",
       "type": "door",
-      "x": 26,
-      "y": 8,
+      "x": 30,
+      "y": 7,
       "solid": true,
       "interaction": {
         "kind": "dialogue",
@@ -196,8 +196,8 @@
     {
       "id": "hall-door",
       "type": "door",
-      "x": 14,
-      "y": 21,
+      "x": 13,
+      "y": 23,
       "solid": true,
       "interaction": {
         "kind": "dialogue",
@@ -211,8 +211,8 @@
     {
       "id": "shop-door",
       "type": "door",
-      "x": 26,
-      "y": 21,
+      "x": 30,
+      "y": 23,
       "solid": true,
       "interaction": {
         "kind": "dialogue",
@@ -228,7 +228,7 @@
       "type": "npc",
       "name": "Grandma Wang",
       "x": 19,
-      "y": 12,
+      "y": 11,
       "solid": true,
       "color": "#c9804b",
       "interaction": {
@@ -268,8 +268,8 @@
       "id": "storyteller",
       "type": "npc",
       "name": "Storyteller",
-      "x": 22,
-      "y": 12,
+      "x": 34,
+      "y": 10,
       "solid": true,
       "color": "#6b4e8e",
       "interaction": { "kind": "story", "title": "Storyteller", "lines": ["Every lesson leaves a story behind."] }
@@ -278,7 +278,7 @@
       "id": "xiaoqiang",
       "type": "npc",
       "name": "Xiaoqiang",
-      "x": 12,
+      "x": 10,
       "y": 13,
       "solid": true,
       "color": "#d98a3a",
@@ -288,7 +288,7 @@
       "id": "mr-lin",
       "type": "npc",
       "name": "Mr Lin",
-      "x": 28,
+      "x": 30,
       "y": 13,
       "solid": true,
       "color": "#2f6f8f",
@@ -298,8 +298,8 @@
       "id": "chef-mei",
       "type": "npc",
       "name": "Chef Mei",
-      "x": 18,
-      "y": 17,
+      "x": 34,
+      "y": 18,
       "solid": true,
       "color": "#c9804b",
       "interaction": { "kind": "request", "title": "Chef Mei", "lines": ["Was that salt or sugar? Everything tastes muddled."] }
@@ -308,38 +308,38 @@
       "id": "ah-dong",
       "type": "npc",
       "name": "Ah Dong",
-      "x": 22,
-      "y": 17,
+      "x": 15,
+      "y": 18,
       "solid": true,
       "color": "#3f7a4a",
       "interaction": { "kind": "duel", "title": "Ah Dong", "lines": ["Collect enough spirits and face me in a quiz duel!"] }
     },
     {
-      "id": "auntie-bao", "type": "npc", "name": "Auntie Bao", "x": 14, "y": 11, "solid": true, "wander": true, "color": "#b05c74",
+      "id": "auntie-bao", "type": "npc", "name": "Auntie Bao", "x": 5, "y": 10, "solid": true, "wander": true, "color": "#b05c74",
       "interaction": { "kind": "dialogue", "title": "Auntie Bao", "lines": ["There are seven great regions between Scholar Village and the Dictionary Tree.", "The Muddle King once labelled every jar in his cave ‘probably sugar’. It did not end well."] }
     },
     {
-      "id": "old-chen", "type": "npc", "name": "Old Chen", "x": 16, "y": 13, "solid": true, "wander": true, "color": "#7a6748",
+      "id": "old-chen", "type": "npc", "name": "Old Chen", "x": 7, "y": 16, "solid": true, "wander": true, "color": "#7a6748",
       "interaction": { "kind": "dialogue", "title": "Old Chen", "lines": ["A spirit needs practice on different days before a star becomes whole.", "When a Gold spirit wakes for review, help it and it will rest longer next time."] }
     },
     {
-      "id": "ranger-rui", "type": "npc", "name": "Ranger Rui", "x": 24, "y": 12, "solid": true, "wander": true, "color": "#4e8056",
+      "id": "ranger-rui", "type": "npc", "name": "Ranger Rui", "x": 36, "y": 15, "solid": true, "wander": true, "color": "#4e8056",
       "interaction": { "kind": "dialogue", "title": "Ranger Rui", "lines": ["Camping Forest is safest for new collectors. Misty Path and Kitchen Garden are much tougher.", "Bait from the shop attracts the exact missing spirit you choose."] }
     },
     {
-      "id": "postman-bo", "type": "npc", "name": "Postman Bo", "x": 26, "y": 15, "solid": true, "wander": true, "color": "#3e6d91",
+      "id": "postman-bo", "type": "npc", "name": "Postman Bo", "x": 25, "y": 10, "solid": true, "wander": true, "color": "#3e6d91",
       "interaction": { "kind": "dialogue", "title": "Postman Bo", "lines": ["A letter from Harvest Crossing says its neighbours have started hiding food from one another.", "That sounds like the Great Forgetter’s work."] }
     },
     {
-      "id": "little-min", "type": "npc", "name": "Little Min", "x": 15, "y": 16, "solid": true, "wander": true, "color": "#b06c35",
+      "id": "little-min", "type": "npc", "name": "Little Min", "x": 17, "y": 23, "solid": true, "wander": true, "color": "#b06c35",
       "interaction": { "kind": "dialogue", "title": "Little Min", "lines": ["I count my answer streak in battle. Three correct answers make the Spirit Brush shine brighter!", "If your HP is low, the Innkeeper gives a bedtime review before restoring it."] }
     },
     {
-      "id": "gardener-lan", "type": "npc", "name": "Gardener Lan", "x": 24, "y": 16, "solid": true, "wander": true, "color": "#5e7e3e",
+      "id": "gardener-lan", "type": "npc", "name": "Gardener Lan", "x": 34, "y": 25, "solid": true, "wander": true, "color": "#5e7e3e",
       "interaction": { "kind": "dialogue", "title": "Gardener Lan", "lines": ["Every creature type leaves a different crafting material.", "The hidden grove glows when the Dawn Stroke clears its fog."] }
     },
     {
-      "id": "apprentice-jun", "type": "npc", "name": "Apprentice Jun", "x": 27, "y": 11, "solid": true, "wander": true, "color": "#8663a2",
+      "id": "apprentice-jun", "type": "npc", "name": "Apprentice Jun", "x": 6, "y": 9, "solid": true, "wander": true, "color": "#8663a2",
       "interaction": { "kind": "dialogue", "title": "Apprentice Jun", "lines": ["The Muddle King is frightening, but Grandma says he can still learn from his mistakes.", "Check the Daily Board when you are unsure what to practise next."] }
     },
     {

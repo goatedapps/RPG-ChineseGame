@@ -2,7 +2,19 @@ import { isEncounterTerrain, zoneAt } from './encounters.js?p17';
 
 const TILE = 32;
 const BUILDING_ICON = { school: 0, inn: 2, 'reading-hall': 1, shop: 3, 'hawker-centre-building': 3, 'granary-building': 6, 'hill-house-building': 4, 'boss-pavilion-building': 6 };
-const NPC_ICON = { 'grandma-wang': 0, 'chef-mei': 1, storyteller: 2, 'mr-lin': 3, 'hawker-lina': 4, 'courier-wei': 5, 'elder-sun': 0, 'auntie-bao': 6, 'rice-seller': 5, 'postman-bo': 5, 'ranger-rui': 5 };
+const NPC_ICON = {
+  'grandma-wang': 0, 'chef-mei': 1, storyteller: 2, 'mr-lin': 3,
+  'hawker-lina': 4, 'courier-wei': 5, 'elder-sun': 0, 'auntie-bao': 7,
+  'rice-seller': 6, 'postman-bo': 5, 'ranger-rui': 4, xiaoqiang: 5,
+  'ah-dong': 3, 'old-chen': 2, 'little-min': 7, 'gardener-lan': 4,
+  'apprentice-jun': 3, 'farmer-tan': 6, 'market-child': 7,
+  'field-walker': 4, 'hill-messenger': 5, gatekeeper: 3
+};
+
+function npcSpriteIndex(id) {
+  if (NPC_ICON[id] !== undefined) return NPC_ICON[id];
+  return [...id].reduce((hash, character) => ((hash * 31) + character.charCodeAt(0)) >>> 0, 7) % 8;
+}
 
 function drawAtlasSprite(context, sheet, index, columns, cellWidth, cellHeight, x, y, width, height) {
   if (!sheet?.complete || !sheet.naturalWidth) return false;
@@ -437,8 +449,8 @@ export function createRenderer(canvas, map) {
   let disposed = false;
   let lastState = null;
   const art = {};
-  if (atlasRegion && globalThis.Image) {
-    for (const [kind, file] of [['buildings', 'buildings.webp'], ['villagers', 'villagers.webp']]) {
+  if (globalThis.Image) {
+    for (const [kind, file] of [...(atlasRegion ? [['buildings', 'buildings.webp']] : []), ['villagers', 'villagers-full-body.webp'], ['hero', 'hero-map.webp']]) {
       const image = new Image();
       image.onload = () => { if (!disposed && lastState) render(lastState); };
       image.src = new URL(`../../assets/images/atlas/${file}`, import.meta.url).href;
@@ -482,18 +494,18 @@ export function createRenderer(canvas, map) {
         if (!['next-region-gate', 'route-entrance'].includes(entity.id) || !drawAtlasSprite(context, art.buildings, 7, 4, 256, 256, x - 15, y - 36, 62, 68)) drawSign(context, x, y);
       }
       else if (entity.type === 'npc') {
-        const index = NPC_ICON[entity.id] ?? (entity.id.length % 8);
-        if (!atlasRegion || !drawAtlasSprite(context, art.villagers, index, 4, 192, 192, x - 4, y - 10, 40, 43)) drawPerson(context, x, y, entity.color, entity.direction || 'down');
+        const index = npcSpriteIndex(entity.id);
+        if (!drawAtlasSprite(context, art.villagers, index, 4, 192, 256, x - 8, y - 18, 48, 56)) drawPerson(context, x, y, entity.color, entity.direction || 'down');
         const questionIndex = (map.passageVillagers || []).indexOf(entity.id);
         const reading = state.progress?.reading;
-        if (reading?.active && questionIndex >= 0 && questionIndex < reading.questionCount && reading.results?.[questionIndex] == null) {
+        if (reading?.active && questionIndex >= 0 && questionIndex < reading.questionCount && reading.results?.[questionIndex]?.correct !== true) {
           const bob = Math.sin(tick / 6) * 2;
           context.fillStyle = '#fff'; context.strokeStyle = '#1b2430'; context.lineWidth = 2;
           context.beginPath(); context.arc(x + 16, y - 5 + bob, 9, 0, Math.PI * 2); context.fill(); context.stroke();
           context.fillStyle = '#c63f2b'; context.font = '900 14px system-ui'; context.textAlign = 'center'; context.textBaseline = 'middle'; context.fillText('?', x + 16, y - 4 + bob);
         }
       }
-      else drawHero(context, x, y, state.player.direction, state.progress?.equipment?.equipped);
+      else if (!drawAtlasSprite(context, art.hero, 0, 1, 256, 384, x - 8, y - 21, 48, 60)) drawHero(context, x, y, state.player.direction, state.progress?.equipment?.equipped);
     }
     if (state.progress?.sets?.campfire) drawCampfire(context, 20 * TILE - offsetX, 16 * TILE - offsetY);
     const scroll = state.progress?.scrolls;

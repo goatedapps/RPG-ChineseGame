@@ -1,15 +1,15 @@
 import { createEventBus } from './core/events.js';
-import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10d';
+import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10e';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p18';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p20';
+import { createRenderer } from './world/renderer.js?p22';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p2';
-import { createGameplay } from './gameplay.js?p25';
+import { createGameplay } from './gameplay.js?p28';
 import { createCollection } from './collection.js?p17';
 import { createAdventure } from './adventure.js?p25';
 import { createAudioManager } from './core/audio.js?p23';
@@ -146,7 +146,7 @@ function objectiveTasks() {
   const suggestedPath = regionPathGuide(game.levelPackage, game.state.progress, game.state.player.level).find(path => path.suggested);
   if (suggestedPath) tasks.push(`Suggested path: ${suggestedPath.name} (${suggestedPath.direction}, Lesson ${suggestedPath.lesson}). Other paths stay open.`);
   const reading = game.state.progress.reading;
-  if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.keys(reading.results || {}).length}/${reading.questionCount}.`);
+  if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.values(reading.results || {}).filter(result => result?.correct === true).length}/${reading.questionCount}.`);
   else if (!(reading.completed || []).length) tasks.push(`Read a passage in the Reading Hall to earn the ${game.levelPackage.regionStory.gateKeyName || 'Cave Lantern'}.`);
   for (const zone of (game.levelPackage.campaigns[regionId].route || game.levelPackage.map).zones) {
     const lessonWords = words.filter(word => word.lesson === zone.lesson);

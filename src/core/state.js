@@ -1,6 +1,6 @@
 import { gateDictationRules } from '../systems/dictation.js';
 
-export const SAVE_SCHEMA_VERSION = 9;
+export const SAVE_SCHEMA_VERSION = 10;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -80,14 +80,17 @@ function numberOr(value, fallback, minimum = 0) {
 }
 
 function normalizeRoutes(value) {
-  const route = value?.r1r2;
-  if (!route || typeof route !== 'object') return {};
-  return { r1r2: {
-    discovered: Array.isArray(route.discovered) ? [...new Set(route.discovered.filter(mark => Number.isInteger(mark) && mark >= 0))] : [],
-    gateOpened: Boolean(route.gateOpened),
-    ...(route.position && typeof route.position === 'object' ? { position: route.position } : {}),
-    ...(route.villagePosition && typeof route.villagePosition === 'object' ? { villagePosition: route.villagePosition } : {})
-  } };
+  return Object.fromEntries(Array.from({ length: 6 }, (_, index) => {
+    const key = `r${index + 1}r${index + 2}`;
+    const route = value?.[key];
+    if (!route || typeof route !== 'object') return null;
+    return [key, {
+      discovered: Array.isArray(route.discovered) ? [...new Set(route.discovered.filter(mark => Number.isInteger(mark) && mark >= 0))] : [],
+      gateOpened: Boolean(route.gateOpened),
+      ...(route.position && typeof route.position === 'object' ? { position: route.position } : {}),
+      ...(route.villagePosition && typeof route.villagePosition === 'object' ? { villagePosition: route.villagePosition } : {})
+    }];
+  }).filter(Boolean));
 }
 
 function migrateReading(value, fallback) {

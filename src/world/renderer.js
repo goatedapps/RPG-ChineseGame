@@ -1,4 +1,5 @@
 import { isEncounterTerrain, zoneAt } from './encounters.js?p17';
+import { routeKey } from '../systems/regions.js';
 
 const TILE = 32;
 const BUILDING_ICON = { school: 0, inn: 2, 'reading-hall': 1, shop: 3, 'hawker-centre-building': 3, 'granary-building': 6, 'hill-house-building': 4, 'boss-pavilion-building': 6 };
@@ -523,7 +524,7 @@ export function createRenderer(canvas, map) {
       context.fillStyle = '#1b2430'; context.font = '700 13px serif'; context.fillText(glyph, playerPx - offsetX - 5, playerPy - offsetY + 5);
     }
     if (map.route) {
-      const discovered = new Set(state.progress?.routes?.r1r2?.discovered || []);
+      const discovered = new Set(state.progress?.routes?.[routeKey(map.region)]?.discovered || []);
       for (let row = firstRow; row <= lastRow; row += 1) {
         for (let column = firstColumn; column <= lastColumn; column += 1) {
           if (discovered.has(row * map.width + column)) continue;

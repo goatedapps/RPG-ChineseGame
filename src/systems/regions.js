@@ -36,3 +36,8 @@ export function enterRegion(state, campaign) {
 export function regionIdForMap(levelPackage, mapId) {
   return Object.entries(levelPackage.campaigns || {}).find(([, campaign]) => campaign.map.id === mapId || campaign.route?.id === mapId)?.[0] || 'r1';
 }
+
+export function routeKey(regionId) {
+  const number = Number(regionId.slice(1));
+  return `r${number}r${number + 1}`;
+}

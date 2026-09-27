@@ -1,8 +1,8 @@
 import { createEventBus } from './core/events.js';
-import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10f';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p18';
+import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10g';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p19';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p22';
+import { createRenderer } from './world/renderer.js?p23';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10d';
@@ -11,7 +11,7 @@ import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p2';
 import { createGameplay } from './gameplay.js?p30';
 import { createCollection } from './collection.js?p18';
-import { createAdventure } from './adventure.js?p26';
+import { createAdventure } from './adventure.js?p27';
 import { createAudioManager } from './core/audio.js?p23';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p21';
@@ -20,7 +20,7 @@ import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
 import { tierOf } from './learning/mastery.js?p10f';
 import { gateDictationRules } from './systems/dictation.js';
-import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p13';
+import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './systems/regions.js?p14';
 import { regionPathGuide } from './systems/regionGuide.js?p2';
 import { revealRouteTile, routeDiscoveryPercent } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
@@ -96,7 +96,7 @@ function move(direction) {
   if (result.moved) {
     events.emit('player:moved', { ...result.player });
     if (active.levelPackage.map.route) {
-      const route = active.state.progress.routes.r1r2;
+      const route = active.state.progress.routes[routeKey(active.levelPackage.region.id)];
       route.position = { x: result.player.x, y: result.player.y, direction: result.player.direction };
       route.discovered = revealRouteTile(active.levelPackage.map, route.discovered, result.player.x, result.player.y);
     }
@@ -141,8 +141,10 @@ function objectiveTasks() {
   const words = game.levelPackage.content.words.filter(word => (game.levelPackage.config.regionLessons[regionId] || []).includes(word.lesson));
   const tasks = [];
   if (game.levelPackage.map.route) {
-    const discovered = routeDiscoveryPercent(game.levelPackage.map, game.state.progress.routes.r1r2?.discovered);
-    tasks.push(`Mistwood Road ${discovered}% explored. Find the Muddle Pavilion and the gate to Harvest Crossing.`);
+    const discovered = routeDiscoveryPercent(game.levelPackage.map, game.state.progress.routes[routeKey(regionId)]?.discovered);
+    const nextTown = game.levelPackage.campaigns[`r${Number(regionId.slice(1)) + 1}`]?.region.name;
+    const destination = game.state.progress.story.bossDefeated ? `Find the gate to ${nextTown}.` : `Find the ${game.levelPackage.map.objects.find(object => object.id === 'boss-pavilion-building')?.name || 'boss pavilion'} and the gate to ${nextTown}.`;
+    tasks.push(`${game.levelPackage.map.name} ${discovered}% explored. ${destination}`);
   }
   const suggestedPath = regionPathGuide(game.levelPackage, game.state.progress, game.state.player.level).find(path => path.suggested);
   if (suggestedPath) tasks.push(`Suggested path: ${suggestedPath.name} (${suggestedPath.direction}, Lesson ${suggestedPath.lesson}). Other paths stay open.`);
@@ -237,16 +239,19 @@ async function startLevel(levelId) {
   try {
     let levelPackage = await loadLevelPackage(levelId);
     for (const campaign of Object.values(levelPackage.campaigns)) {
-      const mapErrors = validateMap(campaign.map);
-      if (mapErrors.length) throw new Error(`${campaign.map.name}: ${mapErrors.join(' ')}`);
+      for (const map of [campaign.map, campaign.route].filter(Boolean)) {
+        const mapErrors = validateMap(map);
+        if (mapErrors.length) throw new Error(`${map.name}: ${mapErrors.join(' ')}`);
+      }
     }
     const loadResult = loadLevelState(storage, levelPackage);
     const savedRegionId = regionIdForMap(levelPackage, loadResult.state.player.map);
     levelPackage = activateRegion(levelPackage, savedRegionId);
-    if (loadResult.state.player.map === levelPackage.campaigns.r1.route?.id) {
-      levelPackage.map = levelPackage.campaigns.r1.route;
-      loadResult.state.progress.routes.r1r2 ||= { discovered: [], gateOpened: false };
-      loadResult.state.progress.routes.r1r2.discovered = revealRouteTile(levelPackage.map, loadResult.state.progress.routes.r1r2.discovered, loadResult.state.player.x, loadResult.state.player.y);
+    if (loadResult.state.player.map === levelPackage.campaigns[savedRegionId].route?.id) {
+      levelPackage.map = levelPackage.campaigns[savedRegionId].route;
+      const key = routeKey(savedRegionId);
+      loadResult.state.progress.routes[key] ||= { discovered: [], gateOpened: false };
+      loadResult.state.progress.routes[key].discovered = revealRouteTile(levelPackage.map, loadResult.state.progress.routes[key].discovered, loadResult.state.player.x, loadResult.state.player.y);
     }
     if (!isWalkable(levelPackage.map, loadResult.state.player.x, loadResult.state.player.y)) {
       loadResult.state.player.x = levelPackage.map.spawn.x;
@@ -301,20 +306,40 @@ async function startLevel(levelId) {
 function saveCurrentLocation() {
   const regionId = active.levelPackage.region.id;
   if (active.levelPackage.map.route) {
-    const route = active.state.progress.routes.r1r2;
+    const route = active.state.progress.routes[routeKey(regionId)];
     route.position = { x: active.state.player.x, y: active.state.player.y, direction: active.state.player.direction };
     saveCurrentRegion(active.state, regionId);
-    active.state.progress.regions[regionId].position = route.villagePosition || active.levelPackage.campaigns.r1.map.spawn;
+    active.state.progress.regions[regionId].position = route.villagePosition || active.levelPackage.campaigns[regionId].map.spawn;
   } else saveCurrentRegion(active.state, regionId);
 }
 
 function changeRoute(direction) {
-  if (!active || active.levelPackage.region.id !== 'r1') return;
-  const routeMap = active.levelPackage.campaigns.r1.route;
-  active.state.progress.routes.r1r2 ||= { discovered: [], gateOpened: false };
-  const route = active.state.progress.routes.r1r2;
+  if (!active) return;
+  let regionId = active.levelPackage.region.id;
+  if (direction === 'back') {
+    const previousId = `r${Number(regionId.slice(1)) - 1}`;
+    if (!active.levelPackage.campaigns[previousId]?.route) return;
+    saveCurrentLocation();
+    active.levelPackage = activateRegion(active.levelPackage, previousId);
+    enterRegion(active.state, active.levelPackage);
+    regionId = previousId;
+  }
+  const routeMap = active.levelPackage.campaigns[regionId].route;
+  if (!routeMap) return;
+  const key = routeKey(regionId);
+  active.state.progress.routes[key] ||= { discovered: [], gateOpened: false };
+  const route = active.state.progress.routes[key];
+  if (direction === 'back') {
+    const gate = routeMap.objects.find(object => object.id === 'next-region-gate');
+    const position = [{ x: gate.x - 1, y: gate.y }, { x: gate.x + 1, y: gate.y }, { x: gate.x, y: gate.y + 1 }, { x: gate.x, y: gate.y - 1 }].find(candidate => isWalkable(routeMap, candidate.x, candidate.y));
+    if (!position) throw new Error(`The ${routeMap.name} gate has no accessible approach.`);
+    active.levelPackage.map = routeMap;
+    active.state.player = { ...active.state.player, ...position, direction: 'left', map: routeMap.id };
+    route.position = { ...position, direction: 'left' };
+    route.discovered = revealRouteTile(routeMap, route.discovered, position.x, position.y);
+  }
   if (direction === 'enter' && !active.levelPackage.map.route) {
-    saveCurrentRegion(active.state, 'r1');
+    saveCurrentRegion(active.state, regionId);
     route.villagePosition = { x: active.state.player.x, y: active.state.player.y, direction: active.state.player.direction };
     const position = Number.isInteger(route.position?.x) && Number.isInteger(route.position?.y) && isWalkable(routeMap, route.position.x, route.position.y) ? route.position : routeMap.spawn;
     active.levelPackage.map = routeMap;
@@ -322,18 +347,23 @@ function changeRoute(direction) {
     route.discovered = revealRouteTile(routeMap, route.discovered, position.x, position.y);
   } else if ((direction === 'leave' || direction === 'rest') && active.levelPackage.map.route) {
     saveCurrentLocation();
-    active.levelPackage = activateRegion(active.levelPackage, 'r1');
+    active.levelPackage = activateRegion(active.levelPackage, regionId);
     enterRegion(active.state, active.levelPackage);
-    if (direction === 'rest') Object.assign(active.state.player, { x: 26, y: 9, direction: 'up' });
+    if (direction === 'rest') {
+      const inn = active.levelPackage.map.objects.find(object => object.id === 'inn-door');
+      if (inn) Object.assign(active.state.player, { x: inn.x, y: inn.y + 1, direction: 'up' });
+    }
     restoreNpcPositions(active.levelPackage.map, active.state.progress.npcs);
-  } else return;
+  } else if (direction !== 'back') return;
   active.renderer.dispose?.();
   active.renderer = createRenderer($('#world'), active.levelPackage.map);
   objectiveIndex = 0;
   persist();
   overlay.close();
   render();
-  toast(direction === 'enter' ? 'Mistwood Road is shrouded in fog. Each step reveals more.' : direction === 'rest' ? 'The villagers carried you to the Inn.' : 'Returned to Scholar Village.');
+  audio.setWorld(regionId);
+  audio.setScene('village');
+  toast(direction === 'enter' || direction === 'back' ? `${routeMap.name} is shrouded in fog. Each step reveals more.` : direction === 'rest' ? 'The villagers carried you to the Inn.' : `Returned to ${active.levelPackage.region.name}.`);
 }
 
 function switchRegion(regionId) {

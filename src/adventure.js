@@ -18,6 +18,7 @@ import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
+import { routeKey } from './systems/regions.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -216,8 +217,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const regionNumber = Number(game.levelPackage.region.id.slice(1));
       const requestTotal = Object.keys(game.levelPackage.regionStory.requests).length;
       const fragmentName = game.levelPackage.regionStory.fragmentName || 'Truth Stroke';
-      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p><p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>Return to previous region</button></div></div>`);
-      document.querySelector('[data-travel-previous]').addEventListener('click', () => onSwitchRegion?.(`r${regionNumber - 1}`));
+      const routeNote = regionNumber < 7 ? `<p>Explore ${escapeHtml(game.levelPackage.campaigns[game.levelPackage.region.id].route.name)}${game.levelPackage.map.route ? '' : ' beyond the town gate'}. ${story.bossDefeated ? 'Find the onward gate.' : 'Find its pavilion and onward gate.'}</p>` : '';
+      const returnAction = game.levelPackage.map.route ? 'leave' : 'back';
+      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p>${routeNote}<p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>${returnAction === 'leave' ? 'Return to town' : 'Enter the return road'}</button></div></div>`);
+      document.querySelector('[data-travel-previous]').addEventListener('click', () => onEnterRoute?.(returnAction));
       return;
     }
     if (!story.flags.attic) return playScene('attic', storyJournal);
@@ -344,13 +347,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const game = active();
     const story = normalizeStory(game.state.progress.story);
     if (story.bossDefeated) {
-      if (game.levelPackage.region.id === 'r1') return overlay.dialogue({ title: 'Muddle Pavilion', lines: ['The Muddle King has left this pavilion. Keep exploring to find the eastern gate to Harvest Crossing.'] });
-      if (game.levelPackage.region.id === 'r2') return truthTerrace();
-      if (game.levelPackage.region.id === 'r3') return tideVault();
-      if (game.levelPackage.region.id === 'r4') return courageLoft();
-      if (game.levelPackage.region.id === 'r5') return harmonyPavilion();
-      if (game.levelPackage.region.id === 'r6') return memoryVault();
-      return dictionaryHeart();
+      if (game.levelPackage.region.id === 'r7') return dictionaryHeart();
+      return overlay.dialogue({ title: game.levelPackage.map.objects?.find(object => object.id === 'boss-pavilion-building')?.name || 'Boss Pavilion', lines: ['The boss has left this pavilion. Find the onward gate to continue your journey.'] });
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
@@ -509,8 +507,9 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const fragmentName = game.levelPackage.regionStory.fragmentName || (currentNumber === 1 ? 'Dawn Stroke' : 'Truth Stroke');
     const travel = async () => {
       game.state.settings.unlockedRegions = Math.max(nextNumber, game.state.settings.unlockedRegions);
-      if (game.levelPackage.region.id === 'r1' && game.levelPackage.map.route && !game.state.progress.routes?.r1r2?.gateOpened) {
-        game.state.progress.routes.r1r2.gateOpened = true;
+      const route = game.state.progress.routes?.[routeKey(game.levelPackage.region.id)];
+      if (game.levelPackage.map.route && route && !route.gateOpened) {
+        route.gateOpened = true;
         commit();
         await onGateOpening?.();
       }
@@ -753,6 +752,22 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       handlers['tree-warden'] = gatekeeper;
       handlers['return-gate'] = () => onSwitchRegion?.('r6');
       handlers['dictionary-heart'] = dictionaryHeart;
+    }
+    const game = active();
+    if (game.levelPackage.map.route) {
+      handlers['boss-pavilion-door'] = gatekeeper;
+      handlers['next-region-gate'] = nextRegionGate;
+      handlers['return-village'] = () => onEnterRoute?.('leave');
+    } else {
+      const route = game.levelPackage.campaigns[gameRegion()]?.route;
+      if (route) {
+        handlers['next-region-gate'] = () => onEnterRoute?.('enter');
+        if (gameRegion() === 'r1') handlers['route-entrance'] = () => onEnterRoute?.('enter');
+        for (const bossId of ['granary-door', 'gatekeeper', 'clock-tower-door', 'clock-warden', 'mirror-stage-door', 'mirror-keeper', 'dragon-gate-door', 'dragon-warden', 'ghost-archive-door', 'memory-keeper']) {
+          if (handlers[bossId]) handlers[bossId] = () => overlay.dialogue({ title: route.name, lines: [`The boss awaits at the ${route.objects.find(item => item.id === 'boss-pavilion-building').name} beyond the town gate.`] });
+        }
+      }
+      if (Number(gameRegion().slice(1)) > 1) handlers['return-gate'] = () => onEnterRoute?.('back');
     }
     if (!handlers[object.id]) return false;
     handlers[object.id]();

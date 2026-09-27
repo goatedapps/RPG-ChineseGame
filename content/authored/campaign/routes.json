@@ -1,0 +1,114 @@
+[
+  {
+    "id": "r2-r3-reedway", "region": "r2", "name": "Golden Reed Way", "nextTown": "Tidewater Bay", "returnTown": "Harvest Crossing",
+    "ground": "harvest grass", "path": "reed road", "flower": "golden grain", "thicket": "dense reeds", "water": "irrigation channel",
+    "colors": { "ground": "#87a55b", "path": "#c9ac69", "flower": "#d3bd63", "thicket": "#597342", "water": "#5c9b9b", "pavilion": "#785d42" },
+    "spawn": { "x": 5, "y": 28, "direction": "up" }, "returnGate": [5, 30], "gate": [39, 24], "pavilion": [24, 6],
+    "pavilionName": "Reed Pavilion", "pavilionLine": "The Doubt Serpent whispers beneath the harvest reeds.",
+    "patches": [
+      { "tile": "f", "x": 2, "y": 5, "width": 11, "height": 8 },
+      { "tile": "w", "x": 16, "y": 1, "width": 3, "height": 13 },
+      { "tile": "w", "x": 16, "y": 18, "width": 3, "height": 13 },
+      { "tile": "t", "x": 5, "y": 16, "width": 9, "height": 5 },
+      { "tile": "t", "x": 28, "y": 16, "width": 10, "height": 6 },
+      { "tile": "f", "x": 32, "y": 3, "width": 8, "height": 7 },
+      { "tile": "w", "x": 25, "y": 24, "width": 8, "height": 3 }
+    ],
+    "trails": [ [[5,28],[5,23],[14,23],[14,15],[22,15],[22,11],[26,11]], [[22,15],[39,15],[39,24]], [[5,28],[5,30]] ],
+    "zones": [
+      { "id": "grain-margin", "name": "Grain Margin", "tint": "#c9aa4f", "types": { "chaff-sprite": 5, "doubt-moth": 2 } },
+      { "id": "reed-crossing", "name": "Reed Crossing", "tint": "#6c9969", "types": { "rumour-crow": 4, "price-mimic": 3, "doubt-moth": 1 } },
+      { "id": "windward-hill", "name": "Windward Hill", "tint": "#8a9f55", "types": { "forked-gecko": 4, "doubt-moth": 3, "rumour-crow": 1 } }
+    ]
+  },
+  {
+    "id": "r3-r4-saltwind", "region": "r3", "name": "Saltwind Coast", "nextTown": "Lantern Theatre", "returnTown": "Tidewater Bay",
+    "ground": "coastal grass", "path": "shell path", "flower": "sea lavender", "thicket": "rocky bluff", "water": "tidal inlet",
+    "colors": { "ground": "#78a995", "path": "#d5be91", "flower": "#98bdb3", "thicket": "#4d6b6d", "water": "#398aab", "pavilion": "#58788b" },
+    "spawn": { "x": 6, "y": 28, "direction": "up" }, "returnGate": [6, 30], "gate": [39, 7], "pavilion": [11, 16],
+    "pavilionName": "Tide Pavilion", "pavilionLine": "The Idle Clock has stopped the rhythm of the waves.",
+    "patches": [
+      { "tile": "w", "x": 2, "y": 2, "width": 10, "height": 7 },
+      { "tile": "w", "x": 2, "y": 10, "width": 5, "height": 9 },
+      { "tile": "w", "x": 19, "y": 13, "width": 12, "height": 4 },
+      { "tile": "w", "x": 33, "y": 23, "width": 8, "height": 7 },
+      { "tile": "t", "x": 13, "y": 4, "width": 8, "height": 5 },
+      { "tile": "t", "x": 28, "y": 2, "width": 6, "height": 7 },
+      { "tile": "f", "x": 7, "y": 22, "width": 9, "height": 7 },
+      { "tile": "f", "x": 31, "y": 10, "width": 9, "height": 8 }
+    ],
+    "trails": [ [[6,28],[10,28],[10,20],[13,20]], [[10,28],[23,28],[23,19],[32,19],[32,11],[39,11],[39,7]], [[13,20],[13,18]], [[6,28],[6,30]] ],
+    "zones": [
+      { "id": "shell-beach", "name": "Shell Beach", "tint": "#74b8b5", "types": { "tangle-crab": 5, "drift-jelly": 2 } },
+      { "id": "saltwind-bridge", "name": "Saltwind Bridge", "tint": "#65a3b5", "types": { "drift-jelly": 4, "rust-gull": 3, "minute-mite": 1 } },
+      { "id": "clockward-cliffs", "name": "Clockward Cliffs", "tint": "#688596", "types": { "minute-mite": 4, "tide-hare": 3, "rust-gull": 1 } }
+    ]
+  },
+  {
+    "id": "r4-r5-lantern-pass", "region": "r4", "name": "Lantern Pass", "nextTown": "Festival City", "returnTown": "Lantern Theatre",
+    "ground": "stage meadow", "path": "lantern trail", "flower": "painted flowers", "thicket": "bamboo screen", "water": "mirror pool",
+    "colors": { "ground": "#9caa70", "path": "#d5ab74", "flower": "#d3a7a4", "thicket": "#557449", "water": "#6e9b9d", "pavilion": "#ad6b55" },
+    "spawn": { "x": 4, "y": 28, "direction": "up" }, "returnGate": [4, 30], "gate": [40, 25], "pavilion": [21, 9],
+    "pavilionName": "Mirror Pavilion", "pavilionLine": "The Mocking Mirror repeats every unkind word.",
+    "patches": [
+      { "tile": "t", "x": 10, "y": 2, "width": 5, "height": 20 },
+      { "tile": "t", "x": 18, "y": 18, "width": 5, "height": 12 },
+      { "tile": "t", "x": 28, "y": 2, "width": 5, "height": 20 },
+      { "tile": "w", "x": 3, "y": 4, "width": 5, "height": 6 },
+      { "tile": "w", "x": 34, "y": 14, "width": 7, "height": 5 },
+      { "tile": "f", "x": 3, "y": 16, "width": 5, "height": 6 },
+      { "tile": "f", "x": 35, "y": 3, "width": 6, "height": 7 }
+    ],
+    "trails": [ [[4,28],[7,28],[7,24],[16,24],[16,15],[23,15],[23,13]], [[23,15],[26,15],[26,25],[40,25]], [[4,28],[4,30]] ],
+    "zones": [
+      { "id": "field-footlights", "name": "Field Footlights", "tint": "#c6a363", "types": { "mask-moth": 5, "heckle-magpie": 2 } },
+      { "id": "mirror-thicket", "name": "Mirror Thicket", "tint": "#aa7782", "types": { "straw-soldier": 4, "spotlight-fox": 3, "heckle-magpie": 1 } },
+      { "id": "festival-approach", "name": "Festival Approach", "tint": "#a18a56", "types": { "wilt-wisp": 4, "spotlight-fox": 3, "straw-soldier": 1 } }
+    ]
+  },
+  {
+    "id": "r5-r6-ember-road", "region": "r5", "name": "Ember Parade Road", "nextTown": "Ancient Grove", "returnTown": "Festival City",
+    "ground": "festival verge", "path": "parade stones", "flower": "ribbon flowers", "thicket": "festival hedge", "water": "lotus fountain",
+    "colors": { "ground": "#8ea86c", "path": "#d2a774", "flower": "#d69079", "thicket": "#56724f", "water": "#5e9da0", "pavilion": "#ae534f" },
+    "spawn": { "x": 7, "y": 28, "direction": "up" }, "returnGate": [7, 30], "gate": [38, 5], "pavilion": [29, 20],
+    "pavilionName": "Harmony Pavilion", "pavilionLine": "The Grudge Dragon's quarrel echoes through the pavilion.",
+    "patches": [
+      { "tile": "w", "x": 17, "y": 11, "width": 9, "height": 8 },
+      { "tile": "t", "x": 4, "y": 4, "width": 8, "height": 6 },
+      { "tile": "t", "x": 4, "y": 14, "width": 8, "height": 5 },
+      { "tile": "t", "x": 15, "y": 23, "width": 9, "height": 5 },
+      { "tile": "t", "x": 33, "y": 11, "width": 7, "height": 5 },
+      { "tile": "f", "x": 14, "y": 2, "width": 11, "height": 6 },
+      { "tile": "f", "x": 34, "y": 24, "width": 7, "height": 5 }
+    ],
+    "trails": [ [[7,28],[12,28],[12,21],[27,21],[27,25],[31,25]], [[27,21],[27,9],[38,9],[38,5]], [[7,28],[7,30]] ],
+    "zones": [
+      { "id": "ribbon-verge", "name": "Ribbon Verge", "tint": "#d48a69", "types": { "ribbon-rat": 5, "drum-gremlin": 2 } },
+      { "id": "fountain-ring", "name": "Fountain Ring", "tint": "#bd8d70", "types": { "spark-kite": 4, "quarrel-macaque": 3, "drum-gremlin": 1 } },
+      { "id": "ember-rise", "name": "Ember Rise", "tint": "#bd7463", "types": { "boastful-lion": 4, "quarrel-macaque": 3, "spark-kite": 1 } }
+    ]
+  },
+  {
+    "id": "r6-r7-root-stair", "region": "r6", "name": "Root Stair Trail", "nextTown": "Treehouse Summit", "returnTown": "Ancient Grove", "encounterRate": 0.05,
+    "ground": "ancient moss", "path": "root stair", "flower": "memory blooms", "thicket": "elder roots", "water": "forest spring",
+    "colors": { "ground": "#6f9b70", "path": "#ad9470", "flower": "#a4b991", "thicket": "#355f4d", "water": "#588d90", "pavilion": "#5e7658" },
+    "spawn": { "x": 5, "y": 28, "direction": "up" }, "returnGate": [5, 30], "gate": [39, 22], "pavilion": [13, 5],
+    "pavilionName": "Memory Pavilion", "pavilionLine": "The Give-Up Ghost waits behind an old written seal.",
+    "patches": [
+      { "tile": "t", "x": 8, "y": 9, "width": 8, "height": 5 },
+      { "tile": "t", "x": 8, "y": 18, "width": 8, "height": 7 },
+      { "tile": "t", "x": 20, "y": 3, "width": 5, "height": 18 },
+      { "tile": "t", "x": 29, "y": 16, "width": 5, "height": 13 },
+      { "tile": "w", "x": 30, "y": 3, "width": 10, "height": 6 },
+      { "tile": "w", "x": 35, "y": 11, "width": 6, "height": 5 },
+      { "tile": "f", "x": 3, "y": 3, "width": 6, "height": 6 },
+      { "tile": "f", "x": 35, "y": 24, "width": 6, "height": 5 }
+    ],
+    "trails": [ [[5,28],[18,28],[18,16],[18,9],[15,9]], [[18,16],[27,16],[27,12],[34,12],[34,22],[39,22]], [[5,28],[5,30]] ],
+    "zones": [
+      { "id": "mossy-steps", "name": "Mossy Steps", "tint": "#729c70", "types": { "glyph-beetle": 5, "bone-owl": 2 } },
+      { "id": "elder-root-maze", "name": "Elder Root Maze", "tint": "#5d8264", "types": { "ink-vine": 4, "relic-tortoise": 3, "bone-owl": 1 } },
+      { "id": "summit-footpath", "name": "Summit Footpath", "tint": "#8faa7b", "types": { "whisper-moss": 4, "relic-tortoise": 3, "ink-vine": 1 } }
+    ]
+  }
+]

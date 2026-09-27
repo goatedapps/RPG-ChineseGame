@@ -68,8 +68,8 @@ Production URLs:
 - Keep runtime illustration assets sized for their displayed use, and update image references, offline cache and asset tests together.
 - Keep the Scholar Atlas shell and richer canvas map treatment scoped to Regions 1–2 until the user reviews them.
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
-- Mistwood Road between Regions 1 and 2 is the first fog-route prototype; do not extend the route system to later region pairs before review.
-- Keep Region 1's village safe and its route discovery, gate-opening flag and return position persistent across saves.
+- Every town is safe; six distinct inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition.
+- Keep each route's discovery, gate-opening flag and return position persistent across saves.
 - Keep touch targets at least 44 pixels and support reduced motion.
 - Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.
 - Do not reveal an answer elsewhere on an active question screen.

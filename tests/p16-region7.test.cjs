@@ -33,10 +33,23 @@ test('P2 and P5 activate their own final lessons, sets and boss question pool', 
   const { activateRegion, loadLevelPackage } = await import('../src/content/loader.js');
   const { bossGateQueue } = await import('../src/systems/story.js');
   const { createBoss } = await import('../src/battle/creatures.js');
+  const { isEncounterTerrain } = await import('../src/world/encounters.js');
   for (const [level, lessons] of [['p2', [18, 19]], ['p5', [16, 17]]]) {
     const base = await loadLevelPackage(level, fetcher, '');
     const r7 = activateRegion(base, 'r7');
     assert.equal(r7.map.id, 'r7-treehouse-summit');
+    assert.equal(r7.map.safeTown, false);
+    assert.equal(r7.map.atlasVillage, true);
+    for (const zone of r7.map.zones) {
+      const encounterTiles = [];
+      for (let y = zone.rect.y; y < zone.rect.y + zone.rect.height; y += 1) {
+        for (let x = zone.rect.x; x < zone.rect.x + zone.rect.width; x += 1) {
+          if (isEncounterTerrain(r7.map, x, y)) encounterTiles.push([x, y]);
+        }
+      }
+      assert.ok(encounterTiles.length >= 20, `${level} ${zone.name} needs playable encounters`);
+    }
+    assert.equal(isEncounterTerrain(r7.map, r7.map.spawn.x, r7.map.spawn.y), false);
     assert.ok(r7.map.zones.every(zone => lessons.includes(zone.lesson)));
     assert.ok(Object.values(r7.regionStory.requests).every(request => lessons.includes(request.lesson)));
     assert.deepEqual([...new Set(r7.regionStory.stories.map(story => story.lesson))], lessons);

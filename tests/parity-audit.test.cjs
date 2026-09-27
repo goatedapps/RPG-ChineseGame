@@ -81,7 +81,7 @@ test('modular shell wires the remaining prototype parity surfaces', () => {
   assert.ok(map.objects.filter(object => object.wander).length >= 5);
   assert.ok(map.passageVillagers.length >= 3);
   for (const feature of ['enemySpell', 'data-higher-chinese', 'levelUpMarkup', 'item-icon', 'Most-missed words']) assert.match(gameplay, new RegExp(feature));
-  assert.match(main, /60000/);
+  assert.match(main, /const step = nextStep\(active\.levelPackage, active\.state\)/);
   assert.match(main, /wanderNpcs/);
   assert.match(input, /setInterval\(\(\) => move/);
   assert.match(renderer, /fillText\('\?'/);

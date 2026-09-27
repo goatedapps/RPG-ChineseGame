@@ -3,6 +3,7 @@ import path from 'node:path';
 import process from 'node:process';
 import { load as loadYaml } from 'js-yaml';
 import { validateMap } from '../src/world/map.js';
+import { gateDictationRules } from '../src/systems/dictation.js';
 
 const projectRoot = path.resolve(import.meta.dirname, '..');
 const sourceRoot = path.join(projectRoot, 'content', 'source');
@@ -33,6 +34,7 @@ function auditLevel(level) {
   const lessonIds = new Set(Array.from({ length: meta.lessonCount }, (_, index) => index + 1));
   const ids = new Set();
   const availableKinds = new Set();
+  const wordsByLesson = new Map();
   const summary = {
     level,
     label: meta.label,
@@ -64,6 +66,7 @@ function auditLevel(level) {
 
     const lessonData = readYaml(lessonFile);
     const vocab = lessonData.vocab || [];
+    wordsByLesson.set(lesson, vocab.map(word => word.word));
     summary.words += vocab.length;
     summary.modelSentences += (lessonData.sentences || []).length;
     for (const [index, word] of vocab.entries()) {
@@ -132,7 +135,7 @@ function auditLevel(level) {
     }
   }
 
-  return { summary, errors, warnings, availableKinds };
+  return { summary, errors, warnings, availableKinds, wordsByLesson };
 }
 
 function validateSharedConfiguration(reports) {
@@ -151,6 +154,14 @@ function validateSharedConfiguration(reports) {
   }
 
   const registryById = new Map(registry.map(level => [level.id, level]));
+  if (registryById.size !== registry.length) errors.push('content/authored/shared/levels.json contains duplicate curriculum ids.');
+  for (const entry of registry) {
+    if (!/^[a-z][a-z0-9-]*$/.test(entry.id || '')) errors.push(`Invalid curriculum id ${entry.id}.`);
+    if (!entry.label || typeof entry.label !== 'string') errors.push(`${entry.id} needs a display label.`);
+    if (entry.badge != null && (typeof entry.badge !== 'string' || !entry.badge.trim())) errors.push(`${entry.id} has an invalid picker badge.`);
+    if (entry.worldMappingReady && !entry.sourceReady) errors.push(`${entry.id} cannot be playable before its source is ready.`);
+  }
+  const gateWordCount = gateDictationRules({}).count;
   for (const report of reports) {
     const { level, lessons } = report.summary;
     if (!registryById.has(level)) {
@@ -173,6 +184,19 @@ function validateSharedConfiguration(reports) {
     if (assigned.length !== new Set(assigned).size) errors.push(`${level}/level.json assigns at least one lesson more than once.`);
     if (assigned.length !== expected.length || expected.some(lesson => !assigned.includes(lesson))) {
       errors.push(`${level}/level.json must assign every lesson exactly once.`);
+    }
+    if (registryById.get(level).worldMappingReady) {
+      for (const regionId of regionIds) {
+        const lessonsForRegion = config.regionLessons?.[regionId] || [];
+        const uniqueWords = new Set(lessonsForRegion.flatMap(lesson => report.wordsByLesson.get(lesson) || []));
+        const storyFile = path.join(authoredRoot, 'campaign', `${regionId}-story.json`);
+        const story = JSON.parse(fs.readFileSync(storyFile, 'utf8'));
+        if (!Number.isFinite(story.gateBronzePct) || story.gateBronzePct <= 0 || story.gateBronzePct > 1) {
+          errors.push(`${regionId}-story.json needs a Bronze threshold between 0 and 1.`);
+        } else if (Math.ceil(uniqueWords.size * story.gateBronzePct) < gateWordCount) {
+          errors.push(`${level} ${regionId} needs at least ${gateWordCount} distinct words available at the Bronze boss threshold for default gate dictation.`);
+        }
+      }
     }
     const core = config.coreQuestionKinds || [];
     const optional = config.optionalQuestionKinds || [];

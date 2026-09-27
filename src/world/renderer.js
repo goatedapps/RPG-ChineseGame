@@ -492,8 +492,8 @@ function drawScroll(context, x, y) {
 
 export function createRenderer(canvas, map) {
   const context = canvas.getContext('2d');
-  const atlasRegion = map.safeTown ? map.region : null;
-  const illustratedStructures = Boolean(map.safeTown || map.route);
+  const atlasRegion = map.atlasVillage || map.safeTown ? map.region : null;
+  const illustratedStructures = Boolean(map.atlasVillage || map.safeTown || map.route);
   let disposed = false;
   let lastState = null;
   const art = {};
@@ -586,6 +586,25 @@ export function createRenderer(canvas, map) {
           context.fill();
         }
       }
+    }
+    if (state.guidePin && (state.guidePin.x !== state.player.x || state.guidePin.y !== state.player.y)) {
+      const x = state.guidePin.x * TILE + TILE / 2 - offsetX;
+      const y = state.guidePin.y * TILE - offsetY;
+      context.save();
+      context.fillStyle = '#a63129';
+      context.strokeStyle = '#fff4d5';
+      context.lineWidth = 3;
+      context.beginPath();
+      context.arc(x, y - 12, 11, Math.PI * .75, Math.PI * 2.25);
+      context.lineTo(x, y + 9);
+      context.closePath();
+      context.fill();
+      context.stroke();
+      context.fillStyle = '#fff4d5';
+      context.beginPath();
+      context.arc(x, y - 12, 3.3, 0, Math.PI * 2);
+      context.fill();
+      context.restore();
     }
   }
   return { render, dispose() { disposed = true; } };

@@ -3,14 +3,15 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { load: loadYaml } = require('js-yaml');
+const { playableIds } = require('./support/levels.cjs');
 
 const root = path.resolve(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
-test('both curricula have a complete seven-region story and lesson mapping', async () => {
+test('every playable curriculum has a complete seven-region story and lesson mapping', async () => {
   const { bossGateQueue } = await import('../src/systems/story.js');
   const regions = readJson('content/authored/campaign/regions.json');
-  for (const level of ['p2', 'p5']) {
+  for (const level of playableIds) {
     const config = readJson(`content/authored/levels/${level}/level.json`);
     const content = readJson(`content/generated/${level}.content.json`);
     const assigned = Object.values(config.regionLessons).flat();

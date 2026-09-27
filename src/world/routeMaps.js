@@ -42,9 +42,11 @@ export function expandRouteMap(map, encounterScale = 1.2) {
   if (pavilion && pavilionDoor) {
     pavilionDoor.y = pavilion.rect.y + pavilion.rect.height - 1;
     const frontY = pavilionDoor.y + 1;
+    const centerX = pavilion.rect.x + Math.floor(pavilion.rect.width / 2);
     const openings = Array.from({ length: pavilion.rect.width }, (_, offset) => pavilion.rect.x + offset);
-    pavilionDoor.x = openings.find(x => tiles[frontY]?.[x] === 'p') ?? openings.find(x => map.legend[tiles[frontY]?.[x]]?.walkable) ?? openings[Math.floor(openings.length / 2)];
-    tiles[frontY][pavilionDoor.x] = 'p';
+    const approachX = openings.filter(x => map.legend[tiles[frontY]?.[x]]?.walkable).sort((a, b) => Math.abs(a - centerX) - Math.abs(b - centerX))[0] ?? centerX;
+    pavilionDoor.x = centerX;
+    for (let x = Math.min(centerX, approachX); x <= Math.max(centerX, approachX); x += 1) tiles[frontY][x] = 'p';
     pavilion.door = { x: pavilionDoor.x, y: pavilionDoor.y + 1 };
   }
   return {

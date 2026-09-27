@@ -224,7 +224,8 @@
   font: 700 13px/1.35 var(--font-ui);
   pointer-events: none;
 }
-.atlas-enabled .objective b { color: #a63129; font: 400 22px/1 var(--font-hanzi); }
+.atlas-enabled .objective b { color: #a63129; font: 700 15px/1.2 var(--font-ui); }
+.objective-pin { display: inline-block; width: 15px; height: 15px; margin-right: 7px; border: 4px solid #a63129; border-radius: 50% 50% 50% 0; transform: rotate(-45deg) translateY(1px); vertical-align: -1px; }
 .atlas-enabled .objective small { margin: 2px 0 0; color: #4d655e; font: 700 10px/1 var(--font-ui); }
 .atlas-enabled .dpad button { border-color: #f7e7b7; background: #104d56e8; box-shadow: inset 0 0 0 2px #478c82; }
 .atlas-enabled .dpad button.is-active { background: #bf5540; }

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Word Spirit Quest · Seven-Region Field Walkthrough</title>
+  <style>
+    :root { color-scheme: light; --ink:#173747; --deep:#102c3c; --jade:#286d61; --gold:#c5943e; --paper:#fbf5e6; --parchment:#eadcb8; --red:#a44331; --line:#b8a377; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:#d9d1b5; font:17px/1.58 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:#126456; }
+    a:focus-visible, button:focus-visible { outline:3px solid #ffca56; outline-offset:3px; }
+    .sheet { max-width:1200px; margin:auto; background:var(--paper); box-shadow:0 0 0 1px #9d916e,0 18px 55px #17374735; }
+    header { position:relative; overflow:hidden; padding:clamp(25px,5vw,58px); color:#fff6df; background:var(--deep); }
+    header::after { content:""; position:absolute; inset:auto -9% -135px 38%; height:260px; border:1px solid #e4c98055; border-radius:50%; transform:rotate(-18deg); box-shadow:0 0 0 25px #e4c98010,0 0 0 52px #e4c9800a; pointer-events:none; }
+    .trail { display:flex; align-items:center; gap:12px; margin:0 0 22px; color:#d8c187; font:700 14px/1.2 system-ui,sans-serif; }
+    .trail svg { flex:none; width:27px; height:27px; }
+    h1,h2,h3 { font-family:Georgia,"Noto Serif SC",serif; line-height:1.14; }
+    h1 { max-width:760px; margin:0 0 18px; font-size:clamp(36px,6vw,74px); font-weight:700; letter-spacing:-.045em; }
+    header p { max-width:650px; margin:0; color:#f0e5ce; font-size:clamp(17px,2vw,21px); }
+    .controls { display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:28px; }
+    .level-choice { display:inline-flex; border:1px solid #d6b76f; border-radius:8px; overflow:hidden; }
+    .level-choice button { min-height:44px; padding:8px 18px; border:0; color:#fff5df; background:transparent; font:700 15px system-ui,sans-serif; cursor:pointer; }
+    .level-choice button[aria-pressed="true"] { color:#142f3c; background:#eccb83; }
+    .controls small { color:#cdbd9f; }
+    nav { display:flex; flex-wrap:wrap; gap:0 24px; padding:9px clamp(25px,5vw,58px); border-bottom:3px double var(--line); background:#f0e2bf; }
+    nav a { display:inline-flex; align-items:center; min-height:44px; text-decoration:none; font-size:14px; font-weight:800; }
+    main { padding:12px clamp(25px,5vw,58px) 60px; }
+    section { padding:34px 0 38px; border-bottom:2px solid #c6b487; }
+    section:last-child { border:0; }
+    .section-heading { display:flex; align-items:baseline; gap:16px; }
+    .section-heading .step { flex:none; display:grid; place-items:center; width:34px; height:34px; border-radius:50%; color:white; background:var(--red); font:800 16px system-ui,sans-serif; }
+    h2 { margin:0 0 15px; font-size:clamp(29px,4vw,43px); letter-spacing:-.035em; }
+    h3 { margin:0 0 10px; font-size:22px; }
+    p { max-width:75ch; margin:0 0 16px; }
+    .lead { font-size:19px; }
+    .split { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); gap:35px; align-items:start; }
+    .margin-note { padding:18px 20px; border-left:5px solid var(--gold); background:#f2e6c9; }
+    .margin-note p:last-child { margin-bottom:0; }
+    .checklist { margin:14px 0 0; padding:0; list-style:none; }
+    .checklist li { position:relative; padding:10px 0 10px 34px; border-top:1px solid #d6c8a5; }
+    .checklist li::before { content:"□"; position:absolute; left:1px; top:7px; color:var(--jade); font-size:24px; }
+    .fact-strip { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+    .fact-strip span { padding:7px 11px; border:1px solid #b99f66; border-radius:5px; background:#f3e7c8; font-size:14px; font-weight:800; }
+    .map-wrap { margin:22px 0; padding:16px; border:2px solid #6f866f; border-radius:8px; background:#e7e9cf; }
+    .map-wrap figcaption { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; margin-bottom:10px; font-weight:800; }
+    .map-wrap figcaption small { font-weight:500; }
+    .map-frame { overflow:auto; border:1px solid #788d77; background:#b2ccab; }
+    .map-frame svg { display:block; width:100%; min-width:550px; height:auto; }
+    .map-key { display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:10px; font-size:13px; }
+    .map-key span::before { content:""; display:inline-block; width:12px; height:12px; margin-right:6px; border:1px solid #526452; vertical-align:-1px; background:var(--key); }
+    .legend-spots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:22px 0 14px; }
+    .legend-spots article { padding:14px 15px; border-top:5px solid var(--jade); background:#f1e6ca; }
+    .legend-spots article:nth-child(2) { border-color:#9a6c46; }
+    .legend-spots article:nth-child(3) { border-color:var(--red); }
+    .legend-spots b { display:block; font-size:17px; }
+    .legend-spots small { display:block; margin-top:5px; color:#405960; }
+    .creatures { width:100%; border-collapse:collapse; margin:17px 0; font-size:15px; }
+    .creatures th { color:#fff8e8; background:var(--deep); text-align:left; }
+    .creatures th,.creatures td { padding:12px 14px; border:1px solid #b9ad8b; vertical-align:top; }
+    .creatures tr:nth-child(even) td { background:#f0e7d2; }
+    .gear-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 28px; margin:15px 0; }
+    .gear-list p { padding:11px 0; border-top:1px solid #d4c49f; margin:0; }
+    .gear-list strong { color:#17695c; }
+    .end-note { padding:22px 25px; border:3px solid var(--gold); border-radius:7px; background:#f4e9cb; }
+    .end-note p:last-child { margin:0; }
+    .chapter-nav { border-top:1px solid #e2cc98; }
+    .chapter-nav a { white-space:nowrap; }
+    .chapter { padding-top:52px; }
+    .chapter .chapter-intro { padding:16px 0 5px; }
+    .chapter .chapter-intro p { max-width:80ch; }
+    .chapter .chapter-intro strong { color:#17695c; }
+    .chapter-route { margin-top:22px; }
+    .chapter-route h3 { margin-top:28px; }
+    .chapter .map-wrap { background:#e7e9cf; }
+    .chapter-gate { margin-top:24px; }
+    .chapter-gate .checkpoint { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:15px 0; }
+    .chapter-gate .checkpoint span { padding:12px 14px; border-top:4px solid var(--gold); background:#f0e5c7; font-weight:700; }
+    .optional { margin:24px 0 7px; border:1px solid #9aab8a; border-left:6px solid var(--jade); background:#f0eedb; }
+    .optional summary { min-height:52px; padding:12px 16px; cursor:pointer; font-weight:800; color:#174b46; }
+    .optional summary:hover { background:#e7e5cc; }
+    .optional[open] summary { border-bottom:1px solid #a9ae8b; }
+    .optional-body { padding:17px 20px 20px; }
+    .optional-body p { max-width:none; }
+    .optional-body ul { margin:10px 0 14px; padding-left:23px; }
+    .optional-body li { margin:7px 0; }
+    .issue-note { margin:20px 0; padding:16px 20px; border-left:6px solid var(--red); background:#f7e1d4; }
+    .issue-note p { margin-bottom:0; }
+    .region-loading { padding:20px 0; color:#526a63; }
+    footer { padding:25px clamp(25px,5vw,58px); color:#e9dfc7; background:var(--deep); font-size:14px; }
+    @media (max-width:760px) { .split,.legend-spots,.gear-list,.chapter-gate .checkpoint { grid-template-columns:1fr; } main { padding-top:0; } section { padding:28px 0; } .map-wrap { margin-inline:-12px; padding:11px; } .chapter { padding-top:34px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <div class="trail"><svg viewBox="0 0 28 28" aria-hidden="true"><path fill="none" stroke="#dfc481" stroke-width="2" d="M4 25 13 3l3 3-9 20m10-15 8 3-7 8-7-3"/></svg> Word Spirit Quest · a player’s field journal</div>
+    <h1>Across the seven regions</h1>
+    <p>A player’s field journal from Scholar Village and Mistwood Road to the Great Dictionary Tree, with route maps, required steps and optional discoveries.</p>
+    <div class="controls"><div class="level-choice" role="group" aria-label="Curriculum"><button type="button" data-level="p5" aria-pressed="true">Primary 5</button><button type="button" data-level="p2" aria-pressed="false">Primary 2</button></div><small>Same road, different vocabulary counts.</small></div>
+  </header>
+  <nav aria-label="Walkthrough sections"><a href="#village">Scholar Village</a><a href="#road">Mistwood Road</a><a href="#bag">Spirits & supplies</a><a href="#boss">First boss & gate</a></nav>
+  <nav class="chapter-nav" aria-label="Region chapters"><a href="#region2">2 · Harvest Crossing</a><a href="#region3">3 · Tidewater Bay</a><a href="#region4">4 · Lantern Theatre</a><a href="#region5">5 · Festival City</a><a href="#region6">6 · Ancient Grove</a><a href="#region7">7 · Treehouse Summit</a></nav>
+  <main>
+    <section id="village">
+      <div class="section-heading"><span class="step">1</span><h2>I got ready in Scholar Village</h2></div>
+      <div class="split">
+        <div>
+          <p class="lead">After the introduction, Grandma Wang welcomed me and gave me the Spirit Brush handle. A Fogling appeared, so my first fight taught me how to free a Word Spirit.</p>
+          <p>I opened the <b>Spirit Book</b> from the left menu. It separates words by lesson. A new card is Bronze; answering its Meaning, Pinyin, Hanzi, Usage and Writing questions fills its circles. Silver and Gold are useful bonuses, but Bronze is enough for the boss requirement.</p>
+          <ul class="checklist">
+            <li><b>Reading Hall:</b> take a normal passage, then answer the villagers marked <b>?</b>. An “I don’t know” review helps, but only a correct answer clears the question. Finishing the passage awards the <b>Cave Lantern</b> and saves its scroll.</li>
+            <li><b>School:</b> practise words from Lessons 1–3, including dictation. I could repeat lessons for XP, though only the first three daily School runs paid coins.</li>
+            <li><b>Inn:</b> when HP was low, I answered three questions to rest. The Inn uses this region’s vocabulary.</li>
+            <li><b>Shop:</b> I bought a Rice Ball for healing and considered a 10-coin Spirit Bait before searching for a specific missing word.</li>
+          </ul>
+        </div>
+        <aside class="margin-note">
+          <h3>My village compass</h3>
+          <p>The <b>north exit</b> leads to Mistwood Road. School and Inn are in the northern half of town; Reading Hall and Shop are in the southern half. The Storyteller is near the eastern path.</p>
+          <p>The <b>Adventure</b> menu and Next step message helped me remember my goal, but they did not lock me to one route.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="road">
+      <div class="section-heading"><span class="step">2</span><h2>I explored the foggy road</h2></div>
+      <p class="lead">I entered from the Scholar Village side at the lower left. The fog cleared as I walked. I could step on forest floor, flowers and old road, but not through thickets or ponds; those blocked areas revealed themselves when I came beside them.</p>
+      <div class="fact-strip"><span>Mistwood Edge · Lesson 1</span><span>Whispering Grove · Lesson 2</span><span>Lantern Border · Lesson 3</span></div>
+      <figure class="map-wrap">
+        <figcaption>My Mistwood Road map <small>Actual route layout; the in-game road starts under fog.</small></figcaption>
+        <div class="map-frame"><svg id="route-map" viewBox="0 0 620 480" role="img" aria-label="Map of Mistwood Road showing Scholar Village entrance at lower left, three lesson areas, Muddle Pavilion and Harvest Crossing gate"><text x="24" y="45">Loading the field map…</text></svg></div>
+        <div class="map-key"><span style="--key:#75ae74">Encounter ground</span><span style="--key:#d0bc90">Old road</span><span style="--key:#3c7151">Dense thicket</span><span style="--key:#5b9bb0">Pond</span></div>
+      </figure>
+      <div class="legend-spots">
+        <article><b>1 · Village entrance</b><small>Return this way to heal or shop. My cleared fog stayed cleared.</small></article>
+        <article><b>2 · Muddle Pavilion</b><small>The boss waits inside. I found it by exploring, not by speaking to a village guard.</small></article>
+        <article><b>3 · Harvest gate</b><small>I found this beyond the later lesson area. It stayed locked until the boss and dictation test were done.</small></article>
+      </div>
+      <p>The paths bend around thickets and water; I could not simply walk straight north. The map’s left-to-right bands tell me which lesson’s spirits can appear. Creatures can appear on old road and open terrain, even where I already cleared the fog.</p>
+      <table class="creatures"><thead><tr><th>Where I walked</th><th>Creatures I met</th><th>What I learned</th></tr></thead><tbody>
+        <tr><td>Mistwood Edge · Lesson 1</td><td>Fogling, Jumble Bug, Echo Bat</td><td>A gentler place to begin collecting and filling skill circles.</td></tr>
+        <tr><td>Whispering Grove · Lesson 2</td><td>Twin Shade, Fogling, Echo Bat</td><td>I needed more levels and better answers before pushing through.</td></tr>
+        <tr><td>Lantern Border · Lesson 3</td><td>Ink Imp, Jumble Bug, Twin Shade</td><td>These were the toughest regular fights on the road.</td></tr>
+      </tbody></table>
+      <p>Occasionally I met an Elite or Golden version. When I ran out of my default <b>30 battles for the day</b>, the road sent me back to the Inn. I could return the next day without losing my map discoveries.</p>
+    </section>
+
+    <section id="bag">
+      <div class="section-heading"><span class="step">3</span><h2>I used my book, bag and equipment</h2></div>
+      <div class="split">
+        <div>
+          <p><b>Why battle?</b> A creature holds a Word Spirit. Winning can add its card to my Spirit Book and gives XP and coins. I needed enough different Bronze cards to challenge the boss; repeatedly fighting only low-level creatures was a slow way to gain levels.</p>
+          <p>In a fight, <b>“weak spot”</b> means that attack hurts this creature more. <b>“Can fill an empty skill circle”</b> means a correct answer can teach that Spirit a skill it has not yet mastered. The hint changes when that circle is filled. I could choose another attack when it suited me.</p>
+          <p>When a missing word would not appear, the Shop’s <b>Spirit Bait</b> let me choose the exact word from that lesson for my next encounter there. The shop marks missing and already-collected words differently.</p>
+        </div>
+        <aside class="margin-note"><h3>What I kept in the Bag</h3><p>Consumables, materials, key items and scrolls live together here. The Cave Lantern is the key item from Reading Hall. The Dawn Stroke comes after the boss.</p><p><b>Hero Status</b> shows my stats and equipped brush, charm and hat. Changing equipment is separate from using a consumable.</p></aside>
+      </div>
+      <div class="gear-list">
+        <p><strong>Rice Ball · 25 coins.</strong> Heals in a fight; useful when I was close to losing.</p>
+        <p><strong>Power Tea / Guardian Talisman · 45 coins each.</strong> Boost attacks or soften counterattacks during a battle.</p>
+        <p><strong>Red Cap · 40 coins.</strong> Shop equipment that adds 3 maximum HP.</p>
+        <p><strong>Scholar’s Lantern · 40 coins.</strong> For 40 forest steps, avoids spirits I already raised to Silver or Gold.</p>
+        <p><strong>Forest Repellent · 30 coins.</strong> Stops encounters for 40 forest steps; useful for travel, not collecting.</p>
+        <p><strong>Smoke Ball · 20 coins.</strong> A safer way out when a fight is too much; ordinary Run safely is chance-based.</p>
+      </div>
+      <details class="optional"><summary>Optional in Scholar Village: goals and rewards</summary><div class="optional-body">
+        <ul>
+          <li><b>Xiaoqiang:</b> collect <span data-xiaoqiang-words>贵重 and 探险</span>, find his treasure box in Camping Forest, then raise <span data-xiaoqiang-bronze>狼吞虎咽</span> to Bronze. The request names the Jade Brush recipe; the game grants three Mist Drops and two Ink Beads toward crafting it.</li>
+          <li><b>Mr Lin:</b> raise <span data-mrlin-words>模糊 and 眼圈</span> to Bronze, defeat three Twin Shades, and write <span data-mrlin-write>距离</span> successfully. He gives Grandma’s Lantern as a key keepsake.</li>
+          <li><b>Chef Mei:</b> raise <span data-chef-words>调味料 and 材料</span> to Bronze, defeat two Ink Imps, and answer three Lesson 3 tingxie words correctly. The request names the Mooncake recipe; the game grants one Mooncake in the Bag.</li>
+        </ul>
+        <p>The <b>Storyteller</b> gives 10 coins the first time I finish each regional story. The <b>Restoration Board</b> asks me to raise every card in a themed set to Silver or Gold; each offered set repairs part of town and adds a room decoration without consuming cards. The sets here are <span id="r1-set-names">Campfire, Kitchen, Healthy Eyes, Kind Words and Team Spirit</span>.</p>
+        <p>The <b>Daily Board</b> asks for three daily tasks; the chest gives 30 coins, one Rice Ball, one Mist Drop and one Echo Feather. At the Craft Table, the Jade Brush takes 20 coins plus Xiaoqiang’s three Mist Drops and two Ink Beads; an Echo Bell or Mirror Charm takes 20 coins and four matching creature drops.</p>
+        <p>After the boss, I could visit the reformed Muddle King’s <b>Mistake Museum</b>. The restored Dawn Stroke also opens the <b>Hidden Grove</b> for a special scroll and 30 coins. None of these detours blocks the onward gate.</p>
+      </div></details>
+    </section>
+
+    <section id="boss">
+      <div class="section-heading"><span class="step">4</span><h2>I faced the Muddle King and reached the gate</h2></div>
+      <p class="lead">The Muddle Pavilion became my next goal once I had the Cave Lantern and at least <b data-bronze-count>44</b> different Bronze-or-better cards from this region. That is <b data-total-count>54</b> regional words in total for this curriculum. Silver and Gold were not required.</p>
+      <p>Inside the Pavilion, the <b>Muddle King</b> fought back. The challenge mixed standalone word questions with writing from memory; it did not expect me to answer from a hidden passage. I brought healing and a Guardian Talisman, and I could open my Bag during the boss fight. Winning restored the Spirit Brush’s <b>Dawn Stroke</b>.</p>
+      <div class="end-note"><h3>My last test before Harvest Crossing</h3><p>At the road gate, I had to write <b>15 collected regional words from memory</b> and get <b>13 correct</b> under the default settings. The prompt reads the word aloud, shows meaning, pinyin and a blanked sentence, but not the target Chinese characters. I could practise at School and return to try again. After I passed, the gate opened and I arrived at <b>Harvest Crossing</b>.</p></div>
+    </section>
+    <div id="later-regions" class="region-loading" aria-live="polite">Loading the remaining regions and their maps…</div>
+  </main>
+  <footer>This is a separate player’s guide for review, not an in-game change. Its maps and curriculum counts load from the local project over HTTP.</footer>
+</div>
+<script type="module">
+  import { expandRouteMap } from '../src/world/routeMaps.js';
+
+  const counts = { p5: { bronze: 44, total: 54 }, p2: { bronze: 62, total: 77 } };
+  for (const button of document.querySelectorAll('[data-level]')) button.addEventListener('click', () => {
+    for (const choice of document.querySelectorAll('[data-level]')) choice.setAttribute('aria-pressed', String(choice === button));
+    document.querySelector('[data-bronze-count]').textContent = counts[button.dataset.level].bronze;
+    document.querySelector('[data-total-count]').textContent = counts[button.dataset.level].total;
+  });
+
+  const svg = document.querySelector('#route-map');
+  const ns = 'http://www.w3.org/2000/svg';
+  const add = (name, attrs, parent = svg) => {
+    const element = document.createElementNS(ns, name);
+    for (const [key, value] of Object.entries(attrs)) element.setAttribute(key, value);
+    parent.appendChild(element);
+    return element;
+  };
+  try {
+    const response = await fetch('../content/authored/campaign/maps/r1-r2-mistwood.json');
+    if (!response.ok) throw new Error('Map file unavailable');
+    const map = expandRouteMap(await response.json());
+    const unit = 10;
+    const top = 31;
+    svg.replaceChildren();
+    svg.setAttribute('viewBox', `0 0 ${map.width * unit} ${map.height * unit + top}`);
+    add('rect', { x:0, y:0, width:map.width * unit, height:top, fill:'#e7d7ad' });
+    for (const zone of map.zones) {
+      const label = add('text', { x:(zone.rect.x + zone.rect.width / 2) * unit, y:20, 'text-anchor':'middle', fill:'#173747', 'font-size':12, 'font-weight':800 });
+      label.textContent = zone.name;
+    }
+    const colors = { g:'#83b77f', p:'#d0bc90', t:'#3c7151', w:'#5b9bb0', f:'#a6c784' };
+    map.tiles.forEach((row, y) => [...row].forEach((tile, x) => add('rect', { x:x * unit, y:y * unit + top, width:unit + .15, height:unit + .15, fill:colors[tile] || '#83b77f' })));
+    const pavilion = map.objects.find(object => object.id === 'boss-pavilion-building');
+    add('rect', { x:pavilion.rect.x * unit, y:pavilion.rect.y * unit + top, width:pavilion.rect.width * unit, height:pavilion.rect.height * unit, rx:4, fill:'#6b587b', stroke:'#fff3c5', 'stroke-width':2 });
+    const markers = [
+      { number:'1', x:map.spawn.x, y:map.spawn.y, fill:'#235b54', label:'Village entrance' },
+      { number:'2', x:pavilion.door.x, y:pavilion.door.y, fill:'#82552e', label:'Muddle Pavilion' },
+      { number:'3', ...map.objects.find(object => object.id === 'next-region-gate'), fill:'#a44331', label:'Harvest gate' }
+    ];
+    for (const marker of markers) {
+      const x = (marker.x + .5) * unit;
+      const y = (marker.y + .5) * unit + top;
+      add('circle', { cx:x, cy:y, r:10, fill:marker.fill, stroke:'#fff9e8', 'stroke-width':2 });
+      const text = add('text', { x, y:y + 4, 'text-anchor':'middle', fill:'white', 'font-size':11, 'font-weight':900 });
+      text.textContent = marker.number;
+      const title = add('title', {}, text);
+      title.textContent = marker.label;
+    }
+  } catch {
+    svg.innerHTML = '<text x="24" y="45">Open this walkthrough through the local HTTP server to see the route map.</text>';
+  }
+</script>
+<script type="module">
+  import { buildRouteMap, expandRouteMap } from '../src/world/routeMaps.js';
+
+  const journey = {
+    r2: { town: 'Harvest Crossing', greeter: 'Elder Sun', problem: 'Rumours had twisted the market’s signs, prices and promises.', reading: 'Market Archive', school: 'Schoolhouse', inn: 'Rest House', shop: 'Supply Stall', route: 'Golden Reed Way', next: 'Tidewater Bay', secret: 'Truth Terrace', secretReward: 'a Secret Scroll and 60 coins', routeAdvice: 'The irrigation channels divided the reeds. I found the Reed Pavilion away from the town gate, then followed the trail toward the hill-side gate.' },
+    r3: { town: 'Tidewater Bay', greeter: 'Keeper Lan', problem: 'The Clock Tower had stopped and a young whale was stranded in the shallows.', reading: 'Tide Archive', school: 'Harbour School', inn: 'Sailor’s Rest', shop: 'Dockside Store', route: 'Saltwind Coast', next: 'Lantern Theatre', secret: 'Tide Vault', secretReward: 'a Secret Scroll and 70 coins', routeAdvice: 'Tidal inlets and rocky bluffs split the coast. I searched off the main shell path for the Tide Pavilion before making for the far gate.' },
+    r4: { town: 'Lantern Theatre', greeter: 'Director Luo', problem: 'The Mocking Mirror made performers afraid of every mistake, and the farm fields suffered too.', reading: 'Script Library', school: 'Rehearsal School', inn: 'Actors’ Rest', shop: 'Prop and Produce Stall', route: 'Lantern Pass', next: 'Festival City', secret: 'Courage Loft', secretReward: 'a Secret Scroll and 80 coins', routeAdvice: 'The bamboo screens made this road feel like a stage maze. I explored around them to find the Mirror Pavilion before heading to the festival gate.' },
+    r5: { town: 'Festival City', greeter: 'Mayor Shen', problem: 'Old grudges had turned a celebration into a contest of pride.', reading: 'Festival Archive', school: 'City Academy', inn: 'Firecracker Rest', shop: 'Night Market', route: 'Ember Parade Road', next: 'Ancient Grove', secret: 'Harmony Pavilion', secretReward: 'a Secret Scroll and 90 coins', routeAdvice: 'The lotus fountain and hedges interrupted the parade stones. The Harmony Pavilion sat off the road, while the gate lay beyond the later lesson area.' },
+    r6: { town: 'Ancient Grove', greeter: 'Curator Wen', problem: 'The Give-Up Ghost had erased discoveries before the researchers could understand them.', reading: 'Oracle Reading Room', school: 'Grove Academy', inn: 'Explorer’s Rest', shop: 'Expedition Store', route: 'Root Stair Trail', next: 'Treehouse Summit', secret: 'Memory Vault', secretReward: 'a Secret Scroll and 100 coins', routeAdvice: 'Elder roots and a forest spring forced several turns. The Memory Pavilion was a deliberate detour from the climb to the summit gate.' },
+    r7: { town: 'Treehouse Summit', greeter: 'Keeper Ming', problem: 'The Great Dictionary Tree’s heart had gone quiet, and the Great Forgetter held the final Brush seal.', reading: 'Canopy Reading Hall', school: 'Summit School', inn: 'Treehouse Inn', shop: 'Summit Supply', secret: 'Dictionary Heart', secretReward: 'the Final Story Scroll and 120 coins' }
+  };
+  const source = path => `../content/authored/${path}`;
+  const fetchJson = async path => {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`${path}: ${response.status}`);
+    return response.json();
+  };
+  const escape = value => String(value).replace(/[&<>"']/g, character => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[character]);
+  const label = id => id.split('-').map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const addSvg = (parent, name, attributes) => {
+    const element = document.createElementNS(svgNS, name);
+    for (const [key, value] of Object.entries(attributes)) element.setAttribute(key, value);
+    parent.appendChild(element);
+    return element;
+  };
+  const paintMap = (svg, map, final = false) => {
+    const unit = 10;
+    const top = 31;
+    svg.replaceChildren();
+    svg.setAttribute('viewBox', `0 0 ${map.width * unit} ${map.height * unit + top}`);
+    addSvg(svg, 'rect', { x:0, y:0, width:map.width * unit, height:top, fill:'#e7d7ad' });
+    map.zones.forEach((zone, index) => {
+      const x = final ? (index + .5) * map.width * unit / 3 : (zone.rect.x + zone.rect.width / 2) * unit;
+      const title = addSvg(svg, 'text', { x, y:20, 'text-anchor':'middle', fill:'#173747', 'font-size':final ? 10 : 12, 'font-weight':800 });
+      title.textContent = zone.name;
+    });
+    map.tiles.forEach((row, y) => [...row].forEach((tile, x) => {
+      addSvg(svg, 'rect', { x:x * unit, y:y * unit + top, width:unit + .15, height:unit + .15, fill:map.legend[tile]?.color || '#83b77f' });
+    }));
+    const pavilion = map.objects.find(object => object.id === (final ? 'final-seal-building' : 'boss-pavilion-building'));
+    if (pavilion) addSvg(svg, 'rect', { x:pavilion.rect.x * unit, y:pavilion.rect.y * unit + top, width:pavilion.rect.width * unit, height:pavilion.rect.height * unit, rx:4, fill:'#6b587b', stroke:'#fff3c5', 'stroke-width':2 });
+    const gate = map.objects.find(object => object.id === (final ? 'dictionary-heart' : 'next-region-gate'));
+    const markers = [
+      { number:'1', x:map.spawn.x, y:map.spawn.y, fill:'#235b54', label:'Town entrance' },
+      { number:'2', x:pavilion.door.x, y:pavilion.door.y, fill:'#82552e', label:final ? 'Final Seal' : pavilion.name },
+      { number:'3', x:gate.x, y:gate.y, fill:'#a44331', label:final ? 'Dictionary Heart' : 'Onward gate' }
+    ];
+    for (const marker of markers) {
+      const x = (marker.x + .5) * unit;
+      const y = (marker.y + .5) * unit + top;
+      addSvg(svg, 'circle', { cx:x, cy:y, r:10, fill:marker.fill, stroke:'#fff9e8', 'stroke-width':2 });
+      const text = addSvg(svg, 'text', { x, y:y + 4, 'text-anchor':'middle', fill:'white', 'font-size':11, 'font-weight':900 });
+      text.textContent = marker.number;
+      addSvg(text, 'title', {}).textContent = marker.label;
+    }
+  };
+  const optionalMarkup = (regionId, story, sets, lessons) => {
+    const quests = Object.values(story.requests).map(request => {
+      const lesson = request.lesson ?? lessons[request.lessonSlot] ?? lessons.at(-1);
+      return `<li><b>${escape(request.name)}:</b> collect three Lesson ${lesson} Spirit cards, defeat ${request.count} ${escape(label(request.creature))} creatures, then hear the Lesson ${lesson} Storyteller chapter. <b>Reward:</b> ${escape(request.reward)} in the story, plus 40 coins and one Rice Ball.</li>`;
+    }).join('');
+    const restorations = sets.map(set => `<li><b>${escape(set.name)}:</b> raise ${set.words.map(escape).join(', ')} to Silver or Gold, then offer the set at the Restoration Board. <b>Reward:</b> ${escape(set.restoration)} and a room decoration.</li>`).join('');
+    return `<details class="optional"><summary>Optional in ${escape(journey[regionId].town)}: goals and rewards</summary><div class="optional-body"><h3>Help the neighbours</h3><ul>${quests}</ul><h3>Restore themed sets</h3><ul>${restorations}</ul><p>Reading a regional <b>Storyteller</b> chapter for the first time gives 10 coins. Completing all three daily board tasks opens a chest with 30 coins, a Rice Ball, a Mist Drop and an Echo Feather.</p><p>After the boss, the restored Brush Stroke opens <b>${escape(journey[regionId].secret)}</b> for ${escape(journey[regionId].secretReward)}. These are side rewards, not extra gate requirements.</p></div></details>`;
+  };
+  const later = document.querySelector('#later-regions');
+  let shared;
+  const render = levelId => {
+    if (!shared) return;
+    const config = shared.config[levelId];
+    const words = shared.content[levelId].words;
+    const firstRequests = config.region1.requests;
+    document.querySelector('[data-xiaoqiang-words]').textContent = firstRequests.xiaoqiang.collect.join(' and ');
+    document.querySelector('[data-xiaoqiang-bronze]').textContent = firstRequests.xiaoqiang.bronze;
+    document.querySelector('[data-mrlin-words]').textContent = firstRequests['mr-lin'].bronze.join(' and ');
+    document.querySelector('[data-mrlin-write]').textContent = firstRequests['mr-lin'].write;
+    document.querySelector('[data-chef-words]').textContent = firstRequests['chef-mei'].bronze.join(' and ');
+    later.innerHTML = ['r2','r3','r4','r5','r6','r7'].map((regionId, offset) => {
+      const chapter = journey[regionId];
+      const story = shared.story[regionId];
+      const lessons = config.regionLessons[regionId];
+      const regionalWords = words.filter(word => lessons.includes(word.lesson));
+      const uniqueWords = new Set(regionalWords.map(word => word.w));
+      const required = Math.ceil(uniqueWords.size * story.gateBronzePct);
+      const final = regionId === 'r7';
+      const spec = shared.routes.find(route => route.region === regionId);
+      const map = final ? shared.finalMap : expandRouteMap(buildRouteMap(spec, lessons, config.tuning.routeEncounterRate), config.tuning.routeEncounterScales?.[regionId] ?? config.tuning.routeEncounterScale ?? 1.2);
+      const zoneLabels = map.zones.map(zone => `<span>${escape(zone.name)} · Lesson ${lessons[zone.lessonSlot] ?? lessons.at(-1)}</span>`).join('');
+      const creatures = map.zones.map(zone => `<tr><td>${escape(zone.name)} · Lesson ${lessons[zone.lessonSlot] ?? lessons.at(-1)}</td><td>${Object.keys(zone.encounter.types).map(label).join(', ')}</td><td>${final ? 'Battle here to free the summit’s final Word Spirits.' : 'Collect the local words, practise their skills and watch your HP.'}</td></tr>`).join('');
+      const routeHeading = final ? 'I reached the Great Dictionary Tree' : `I explored ${chapter.route}`;
+      const routeIntro = final ? 'The Treehouse Summit is one shared map rather than a separate fog route. Its Ascent Glade, Whisper Branches and Crown Garden contain the final battles, while the building paths are encounter-free.' : `I left ${chapter.town} by the onward town gate. Fog covered ${chapter.route}; explored tiles stayed clear when I returned to heal or restock. ${chapter.routeAdvice}`;
+      const bossText = final ? `The <b>Final Seal</b> holds the <b>Great Forgetter</b>. The intended requirement is the <b>${escape(story.gateKeyName)}</b> plus <b>${required} different regional Spirits</b> at Bronze or better. Defeating the Great Forgetter restores the <b>${escape(story.fragmentName)}</b>; then the <b>Dictionary Heart</b> gives the final story and its reward. There is no onward gate dictation after Region 7.` : `The <b>${escape(story.bossPlace)}</b> holds the <b>${escape(story.bossName)}</b>. I needed the <b>${escape(story.gateKeyName)}</b> plus <b>${required} different regional Spirits</b> at Bronze or better. Defeating the boss restored the <b>${escape(story.fragmentName)}</b>. At the onward gate, I then wrote 15 collected regional words from memory and needed 13 correct under the default settings before entering <b>${escape(chapter.next)}</b>.`;
+      return `<section class="chapter" id="region${offset + 2}"><div class="section-heading"><span class="step">${offset + 5}</span><h2>Region ${offset + 2}: ${escape(chapter.town)}</h2></div><div class="chapter-intro"><p class="lead"><b>${escape(chapter.greeter)}</b> welcomed me. ${escape(chapter.problem)}</p><p>I used the <b>${escape(chapter.reading)}</b> to finish a passage and correctly answer the villagers marked ?, earning the <b>${escape(story.gateKeyName)}</b>. The <b>${escape(chapter.school)}</b> let me practise Lessons ${lessons.join(', ')}, the <b>${escape(chapter.inn)}</b> restored HP after three questions, and the <b>${escape(chapter.shop)}</b> sold healing and exact-word Spirit Bait. My Bag, equipment and Spirit Book worked as before.</p></div><div class="chapter-route"><h3>${escape(routeHeading)}</h3><p>${escape(routeIntro)}</p><div class="fact-strip">${zoneLabels}</div><figure class="map-wrap"><figcaption>${escape(final ? 'Treehouse Summit map' : `${chapter.route} map`)} <small>Actual authored layout${final ? '; glades trigger battles' : '; fog hides the route in the game'}.</small></figcaption><div class="map-frame"><svg id="map-${regionId}" role="img" aria-label="${escape(final ? 'Treehouse Summit map with entrance, Final Seal and Dictionary Heart' : `${chapter.route} map with town entrance, boss pavilion and onward gate`)}"></svg></div><div class="map-key"><span style="--key:${map.legend.g?.color || '#83b77f'}">Open ground</span><span style="--key:${map.legend.p?.color || '#d0bc90'}">Path</span><span style="--key:${map.legend.t?.color || '#3c7151'}">Blocked terrain</span><span style="--key:${map.legend.w?.color || '#5b9bb0'}">Water or gap</span></div></figure><div class="legend-spots"><article><b>1 · ${final ? 'Summit entrance' : 'Town entrance'}</b><small>${final ? 'I arrived from Ancient Grove.' : 'I could return to the Inn, School and Shop; explored fog stayed clear.'}</small></article><article><b>2 · ${escape(final ? 'Final Seal' : story.bossPlace)}</b><small>${escape(final ? 'The Great Forgetter waits in the summit.' : `The ${story.bossName} waits here after I collect enough Spirits and the reading key.`)}</small></article><article><b>3 · ${escape(final ? 'Dictionary Heart' : `Gate to ${chapter.next}`)}</b><small>${escape(final ? 'The final story follows the restored Brush.' : 'The gate tests dictation after the boss is defeated.')}</small></article></div><table class="creatures"><thead><tr><th>Lesson area</th><th>Creatures</th><th>Field note</th></tr></thead><tbody>${creatures}</tbody></table>${final ? '<p>I fought in the summit glades to free the last Spirits, returned to the Inn when needed, then approached the Final Seal with the reading key and enough Bronze cards.</p>' : '<p>Elite or Golden variants may appear. I kept healing supplies ready, used Spirit Bait for a missing word, and returned to town when HP or my daily battle quota ran low.</p>'}</div><div class="chapter-gate"><h3>${escape(final ? 'The final seal' : `The boss and gate to ${chapter.next}`)}</h3><div class="checkpoint"><span>Reading key · ${escape(story.gateKeyName)}</span><span>${required} distinct Bronze Spirits needed</span><span>${escape(story.bossName)} · ${escape(story.fragmentName)}</span></div><p>${bossText}</p>${regionalWords.length !== uniqueWords.size ? `<p><small>This curriculum has ${regionalWords.length} lesson entries here but ${uniqueWords.size} distinct words; the boss threshold is calculated from distinct words.</small></p>` : ''}</div>${optionalMarkup(regionId, story, shared.sets[regionId][levelId], lessons)}</section>`;
+    }).join('');
+    for (const regionId of ['r2','r3','r4','r5','r6','r7']) {
+      const lessons = config.regionLessons[regionId];
+      const spec = shared.routes.find(route => route.region === regionId);
+      const map = regionId === 'r7' ? shared.finalMap : expandRouteMap(buildRouteMap(spec, lessons, config.tuning.routeEncounterRate), config.tuning.routeEncounterScales?.[regionId] ?? config.tuning.routeEncounterScale ?? 1.2);
+      paintMap(document.querySelector(`#map-${regionId}`), map, regionId === 'r7');
+    }
+  };
+  for (const button of document.querySelectorAll('[data-level]')) button.addEventListener('click', () => render(button.dataset.level));
+  try {
+    const [p2Config, p5Config, p2Content, p5Content, routes, finalMap, ...authored] = await Promise.all([
+      fetchJson(source('levels/p2/level.json')), fetchJson(source('levels/p5/level.json')),
+      fetchJson('../content/generated/p2.content.json'), fetchJson('../content/generated/p5.content.json'),
+      fetchJson(source('campaign/routes.json')), fetchJson(source('campaign/maps/r7-treehouse-summit.json')),
+      ...['r2','r3','r4','r5','r6','r7'].flatMap(id => [fetchJson(source(`campaign/${id}-story.json`)), fetchJson(source(`campaign/${id}-sets.json`))])
+    ]);
+    shared = { config:{ p2:p2Config, p5:p5Config }, content:{ p2:p2Content, p5:p5Content }, routes, finalMap, story:{}, sets:{} };
+    ['r2','r3','r4','r5','r6','r7'].forEach((id, index) => { shared.story[id] = authored[index * 2]; shared.sets[id] = authored[index * 2 + 1]; });
+    render(document.querySelector('[data-level][aria-pressed="true"]').dataset.level);
+  } catch (error) {
+    later.textContent = `The remaining regions could not load: ${error.message}. Open this guide through the local HTTP server.`;
+  }
+</script>
+</body>
+</html>

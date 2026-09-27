@@ -54,7 +54,7 @@ export function createCreature(lesson, balance, random = Math.random, typeId = n
     level,
     variant,
     maxHp: balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel + hpBonus,
-    attack: balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + (variant === 'elite' ? 2 : 0),
+    attack: Math.round(balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + (variant === 'elite' ? 2 : 0)),
     defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel + (variant === 'elite' ? 1 : 0),
     fleeAfter: variant === 'golden' ? 4 : null
   };
@@ -68,7 +68,7 @@ export function createBoss(balance, lessons) {
   return {
     level,
     maxHp: Math.round((balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel) * hpMultiplier),
-    attack: balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + attackBonus,
+    attack: Math.round(balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + attackBonus),
     defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel
   };
 }

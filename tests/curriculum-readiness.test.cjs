@@ -1,20 +1,20 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const { playableLevels } = require('./support/levels.cjs');
 
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
-const playable = read('content/authored/shared/levels.json').filter(level => level.worldMappingReady);
 const fetcher = async url => ({ ok: true, json: async () => read(url.replace(/^\//, '')) });
 
 test('every playable curriculum has complete seven-region teaching and progression pools', async () => {
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { bossGateQueue, gateStatus } = await import('../src/systems/story.js');
-  const { gateDictationRules } = await import('../src/systems/dictation.js');
+  const { gateDictationPool, gateDictationRules } = await import('../src/systems/dictation.js');
   const { saveKey } = await import('../src/core/save.js');
-  assert.ok(playable.length > 0);
-  assert.equal(new Set(playable.map(level => level.id)).size, playable.length);
-  assert.equal(new Set(playable.map(level => saveKey(level.id))).size, playable.length);
-  for (const level of playable) {
+  assert.ok(playableLevels.length > 0);
+  assert.equal(new Set(playableLevels.map(level => level.id)).size, playableLevels.length);
+  assert.equal(new Set(playableLevels.map(level => saveKey(level.id))).size, playableLevels.length);
+  for (const level of playableLevels) {
     const game = await loadLevelPackage(level.id, fetcher, '');
     const assignedLessons = Object.values(game.config.regionLessons).flat();
     assert.equal(assignedLessons.length, new Set(assignedLessons).size, `${level.id}: a lesson belongs to only one region`);
@@ -26,7 +26,7 @@ test('every playable curriculum has complete seven-region teaching and progressi
       const lessons = game.config.regionLessons[id];
       const words = game.content.words.filter(word => lessons.includes(word.lesson));
       assert.ok(campaign?.map && campaign.regionStory, `${level.id} ${id}: shared campaign exists`);
-      assert.ok(words.length >= count, `${level.id} ${id}: enough words for gate dictation`);
+      assert.ok(new Set(words.map(word => word.w)).size >= count, `${level.id} ${id}: enough distinct words for gate dictation`);
       assert.ok(lessons.every(lesson => game.content.stories.some(story => story.lesson === lesson)), `${level.id} ${id}: stories cover every lesson`);
       const queue = bossGateQueue(game.content, game.config, lessons);
       assert.equal(queue.length, 12, `${level.id} ${id}: complete boss challenge`);
@@ -35,6 +35,7 @@ test('every playable curriculum has complete seven-region teaching and progressi
       const eligible = words.slice(0, Math.ceil(words.length * campaign.regionStory.gateBronzePct));
       const progress = { words: Object.fromEntries(eligible.map(word => [word.w, { collected: true, ticks: { m: 1, p: 1, h: 1 } }])) };
       assert.ok(gateStatus({ ...game, ...campaign }, progress, { keyItems: [campaign.regionStory.readingKeyItem || 'cave-lantern'] }, campaign.regionStory.gateBronzePct).open, `${level.id} ${id}: attainable boss gate`);
+      assert.ok(gateDictationPool(words, progress.words).length >= count, `${level.id} ${id}: default gate dictation is possible at the boss threshold`);
     }
   }
 });

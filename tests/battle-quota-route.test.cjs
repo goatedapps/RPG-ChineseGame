@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { JSDOM } = require('jsdom');
 
 const root = path.resolve(__dirname, '..');
 
@@ -26,4 +27,20 @@ test('the final field battle returns to the Inn and zero quota blocks re-entry',
   assert.match(main, /active\.levelPackage\.map\.route && gameplay\.battlesLeft\(\) === 0/);
   assert.match(gameplay, /battle\.lastDailyBattle = cap !== 0 && energy\.energy\.used >= cap/);
   assert.match(gameplay, /data-battle-win-next/);
+});
+
+test('the quota Continue button closes its non-dismissible notice', async () => {
+  const { createOverlay } = await import('../src/ui/overlay.js');
+  const dom = new JSDOM('<button id="return-focus">Map</button><div id="overlay" hidden></div>');
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  try {
+    const overlay = createOverlay(dom.window.document.querySelector('#overlay'));
+    overlay.open('<div class="panel"><button data-close-overlay>Continue at the Inn</button></div>', { dismissible: false });
+    assert.equal(overlay.isOpen, true);
+    dom.window.document.querySelector('[data-close-overlay]').click();
+    assert.equal(overlay.isOpen, false);
+  } finally {
+    global.document = previousDocument;
+  }
 });

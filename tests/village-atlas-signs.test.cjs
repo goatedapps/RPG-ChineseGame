@@ -6,7 +6,7 @@ const read = path => JSON.parse(fs.readFileSync(path, 'utf8'));
 
 test('later villages share illustrated buildings and safe-town terrain rendering', () => {
   const renderer = fs.readFileSync('src/world/renderer.js', 'utf8');
-  assert.match(renderer, /const atlasRegion = map\.safeTown \? map\.region : null/);
+  assert.match(renderer, /const atlasRegion = map\.atlasVillage \|\| map\.safeTown \? map\.region : null/);
   assert.match(renderer, /!map\.safeTown && map\.legend\[tile\]\?\.encounter/);
   for (const id of ['rescue-dock-building', 'theatre-building', 'dragon-gate-building', 'excavation-lodge-building', 'final-seal-building']) {
     assert.ok(renderer.includes(`'${id}'`), `${id} needs a suitable reusable building sprite`);
@@ -26,7 +26,7 @@ test('village wayfinding points to actual inter-town routes instead of old battl
     assert.ok(guide.interaction.lines.join(' ').includes(routes[index].zones[0].name));
   }
   const summit = read('content/authored/campaign/maps/r7-treehouse-summit.json');
-  assert.ok(summit.objects.find(object => object.id === 'summit-guide').interaction.lines.join(' ').includes('safe'));
+  assert.ok(summit.objects.find(object => object.id === 'summit-guide').interaction.lines.join(' ').includes('Ascent Glade'));
 });
 
 test('Parent Mode keeps its scroll and confirms changes inside the panel', () => {

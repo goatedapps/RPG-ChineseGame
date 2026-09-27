@@ -3,7 +3,7 @@
 ## Start here
 
 The deployed app is the modular game under `game/`.
-Primary 2 and Primary 5 share Regions 1–7 and keep separate saves.
+Each playable curriculum in the level registry shares Regions 1–7 and keeps a separate save.
 P0–P17 engineering and the earlier physical child-and-parent tablet pilot are complete.
 P18 release polish is in progress; browser smoke checks and local Lighthouse accessibility passed, while older-iPad verification remains outstanding.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
@@ -68,13 +68,13 @@ Production URLs:
 - Preserve local Hanzi data and the vendored Hanzi Writer runtime.
 - Keep runtime illustration assets sized for their displayed use, and update image references, offline cache and asset tests together.
 - Keep the Scholar Atlas shell consistent from curriculum selection through all seven regions, and reuse illustrated buildings and terrain detail across safe villages.
-- Keep village signs and guide dialogue aligned with the current inter-town fog routes; towns themselves are safe.
+- Keep village signs and guide dialogue aligned with the inter-town routes; Regions 1–6 towns are safe, while Treehouse Summit has encounter lesson glades.
 - Keep Parent Mode actions in place with a clear confirmation instead of resetting its scroll position.
 - Keep the Spirit Book, Bag, Daily Board and equipment art lightweight and available offline.
 - Reuse the Atlas panel treatment across navigation and building windows, and use the shared building/gate sprites on both towns and fog routes.
 - Reuse the same optimized Word Spirit emblem for the game header, favicon and install icons.
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
-- Every town is safe; six roughly double-area inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition.
+- Six roughly double-area inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition; the final summit's glades also carry encounters.
 - Tune normal full-route exploration to sample about two thirds of regional spirits, and verify P2 and P5 pacing in route tests.
 - Keep each route's discovery, gate-opening flag and return position persistent across saves.
 - Keep touch targets at least 44 pixels and support reduced motion.
@@ -88,6 +88,7 @@ Production URLs:
 ## Workflow
 
 - Run `npm run build:content` after curriculum or authored-content changes.
+- Register a playable curriculum in `levels.json`, then run `npm run check:curricula`; the validator and readiness tests must cover its regional gates and boss pools.
 - Run `npm test` after behavior, content wiring, progression or save changes.
 - Add focused regression coverage for permanent systems and reported failures.
 - Test through HTTP because ES modules and content loading do not work from `file://`.

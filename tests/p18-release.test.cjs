@@ -1,6 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const { playableIds } = require('./support/levels.cjs');
 
 test('release audio loads only the active music track while keeping short effects ready', async () => {
   const tracks = [];
@@ -110,7 +111,7 @@ test('80-percent Bronze playthrough reaches every boss and enters tougher region
   const { xpToNextLevel } = await import('../src/core/progression.js');
   assert.equal(xpToNextLevel(1), 30);
   assert.equal(xpToNextLevel(40), 420);
-  for (const levelId of ['p2', 'p5']) {
+  for (const levelId of playableIds) {
     const rows = auditLevel(levelId);
     assert.equal(rows.length, 7);
     for (const row of rows) {
@@ -130,7 +131,7 @@ test('a seven-region state journey can collect keys, defeat each boss, travel an
   const { enterRegion, saveCurrentRegion } = await import('../src/systems/regions.js');
   const mapFiles = fs.readdirSync('content/authored/campaign/maps').filter(file => /^r[1-7]-.*\.json$/.test(file)).sort();
 
-  for (const levelId of ['p2', 'p5']) {
+  for (const levelId of playableIds) {
     const content = JSON.parse(fs.readFileSync(`content/generated/${levelId}.content.json`, 'utf8'));
     const config = JSON.parse(fs.readFileSync(`content/authored/levels/${levelId}/level.json`, 'utf8'));
     const firstMap = JSON.parse(fs.readFileSync(`content/authored/campaign/maps/${mapFiles[0]}`, 'utf8'));

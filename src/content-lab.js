@@ -1,4 +1,4 @@
-import { loadLevelPackage } from './content/loader.js';
+import { listLevels, loadLevelPackage } from './content/loader.js';
 import { localDay } from './core/time.js';
 import { createSpeechController } from './learning/audio.js';
 import { filterSupportedQuestions, EXAM_INSTRUCTIONS } from './learning/examAdapters.js';
@@ -284,4 +284,14 @@ elements.task.addEventListener('change', runTask);
 elements.run.addEventListener('click', runTask);
 window.addEventListener('beforeunload', stopActivity);
 window.__WSQ_LEARNING_LAB__ = { get levelPackage() { return levelPackage; }, runTask, wordProgress, characterProgress };
-loadLevel();
+try {
+  const levels = (await listLevels()).filter(level => level.worldMappingReady);
+  if (!levels.length) throw new Error('No playable curriculum is registered.');
+  elements.level.innerHTML = levels.map(level => `<option value="${escapeHtml(level.id)}">${escapeHtml(level.label)}</option>`).join('');
+  const requested = new URLSearchParams(window.location.search).get('level');
+  if (levels.some(level => level.id === requested)) elements.level.value = requested;
+  await loadLevel();
+} catch (error) {
+  console.error(error);
+  elements.workspace.innerHTML = `<div class="lab-loading"><h2>The content lab could not load</h2><p>${escapeHtml(error.message)}</p></div>`;
+}

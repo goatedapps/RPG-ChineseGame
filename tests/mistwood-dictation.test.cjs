@@ -1,6 +1,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const { playableIds } = require('./support/levels.cjs');
 
 const read = path => JSON.parse(fs.readFileSync(path, 'utf8'));
 
@@ -47,7 +48,7 @@ test('a full Mistwood exploration samples roughly two thirds of regional spirits
   const { isEncounterTerrain, zoneAt } = await import('../src/world/encounters.js');
   const { revealRouteTile, routeDiscoveryPercent } = await import('../src/world/fog.js');
   const fetcher = async url => ({ ok: true, json: async () => read(url.replace(/^\//, '')) });
-  for (const level of ['p2', 'p5']) {
+  for (const level of playableIds) {
     const game = await loadLevelPackage(level, fetcher, '');
     const map = game.campaigns.r1.route;
     let player = map.spawn;

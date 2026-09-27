@@ -2,6 +2,7 @@
   {
     "id": "p2",
     "label": "Primary 2",
+    "badge": "二",
     "sourceReady": true,
     "worldMappingReady": true,
     "playableBuild": "modular",
@@ -10,6 +11,7 @@
   {
     "id": "p5",
     "label": "Primary 5",
+    "badge": "五",
     "sourceReady": true,
     "worldMappingReady": true,
     "playableBuild": "modular",

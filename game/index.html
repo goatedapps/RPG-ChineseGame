@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#1b2430">
-  <meta name="description" content="A tablet-friendly Chinese vocabulary adventure for Primary 2 and Primary 5 learners.">
+  <meta name="description" content="A tablet-friendly Chinese vocabulary adventure across seven storybook regions.">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/brand/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/brand/apple-touch-icon.png">
   <link rel="manifest" href="../manifest.webmanifest">
   <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css?p21">
-  <link rel="stylesheet" href="../css/stage.css?p30">
-  <link rel="stylesheet" href="../css/atlas.css?p7">
+  <link rel="stylesheet" href="../css/stage.css?p32">
+  <link rel="stylesheet" href="../css/atlas.css?p8">
 </head>
 <body>
   <div class="boot-loading" id="boot-loading" role="status" aria-live="polite" aria-label="Loading Word Spirit Quest">
@@ -63,11 +63,11 @@
       </nav>
     </header>
 
-    <div class="objective" aria-live="polite"><b>Next step</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status" role="status">Save verified</small></div>
+    <div class="objective" aria-live="polite"><b><span class="objective-pin" aria-hidden="true"></span>Next step · pinned on map</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status" role="status">Save verified</small></div>
 
     <section class="stage" id="game-stage" tabindex="-1" aria-label="Scholar Village map">
       <canvas id="world" width="640" height="448" aria-label="Game world"></canvas>
-      <div class="route-zone-label" id="route-zone-label" hidden aria-live="polite"></div>
+      <aside class="guide-map" id="guide-map" hidden aria-label="Area map"><div class="guide-map-heading"><b id="guide-map-heading">Area map</b><span id="route-zone-label" hidden></span></div><canvas id="guide-map-canvas" role="img" aria-label="Area map showing your position and next step"></canvas><small><i aria-hidden="true"></i> You <em aria-hidden="true"></em> Next step</small></aside>
       <div class="route-effects" id="route-effects" hidden aria-live="polite"></div>
       <div class="toast" id="toast" hidden aria-live="polite"></div>
       <div class="dpad" id="dpad" aria-label="Movement controls">
@@ -81,6 +81,6 @@
   </main>
   <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p39"></script>
+  <script type="module" src="../src/main.js?p43"></script>
 </body>
 </html>

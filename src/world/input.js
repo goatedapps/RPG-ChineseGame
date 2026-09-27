@@ -23,6 +23,12 @@ export function bindInput({ target = window, dpad, onMove }) {
     move(direction);
   };
   target.addEventListener('keydown', onKeyDown);
+  const stage = dpad.closest('.stage');
+  const preventWorldSelection = event => {
+    if (!event.target?.closest?.('.overlay')) event.preventDefault();
+  };
+  stage?.addEventListener('selectstart', preventWorldSelection);
+  stage?.addEventListener('dragstart', preventWorldSelection);
   const cleanups = [];
   for (const button of dpad.querySelectorAll('[data-direction]')) {
     const onPointer = event => {
@@ -37,7 +43,7 @@ export function bindInput({ target = window, dpad, onMove }) {
       clearInterval(repeatTimer);
       repeatTimer = null;
       button.classList.remove('is-active');
-      if (event?.pointerType === 'touch') button.blur();
+      if (event?.pointerType === 'touch' || event?.pointerType === 'pen') button.blur();
     };
     button.addEventListener('pointerdown', onPointer);
     button.addEventListener('pointerup', release);
@@ -54,6 +60,8 @@ export function bindInput({ target = window, dpad, onMove }) {
   }
   return () => {
     target.removeEventListener('keydown', onKeyDown);
+    stage?.removeEventListener('selectstart', preventWorldSelection);
+    stage?.removeEventListener('dragstart', preventWorldSelection);
     clearInterval(repeatTimer);
     cleanups.forEach(cleanup => cleanup());
   };

@@ -1,28 +1,27 @@
 import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10g';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p20';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p21';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p24';
+import { createRenderer } from './world/renderer.js?p25';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10e';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p36';
+import { createGameplay } from './gameplay.js?p37';
 import { createCollection } from './collection.js?p19';
 import { createAdventure } from './adventure.js?p30';
 import { createAudioManager } from './core/audio.js?p24';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p21';
 import { localDay } from './core/time.js';
-import { encounterStep, zoneAt } from './world/encounters.js?p18';
+import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
-import { tierOf } from './learning/mastery.js?p10f';
-import { gateDictationRules } from './systems/dictation.js';
+import { nextStep } from './systems/wayfinding.js?p1';
+import { drawGuideMap } from './ui/guideMap.js?p1';
 import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './systems/regions.js?p14';
-import { regionPathGuide } from './systems/regionGuide.js?p3';
-import { revealRouteTile, routeDiscoveryPercent } from './world/fog.js?p2';
+import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 
 const storage = window.localStorage;
@@ -52,8 +51,6 @@ let active = null;
 let unbindInput = null;
 let autosave = null;
 let wanderTimer = null;
-let objectiveTimer = null;
-let objectiveIndex = 0;
 let stageObserver = null;
 let gameplay = null;
 let collection = null;
@@ -70,13 +67,17 @@ function render() {
   const width = Math.max(320, Math.round(stage.clientWidth));
   const height = Math.max(320, Math.round(stage.clientHeight));
   if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
-  active.renderer.render(active.state);
+  const step = updateObjective();
+  active.renderer.render({ ...active.state, guidePin: step.target });
   updateHud(hud, active.levelPackage, active.state);
   if (active.levelPackage.map.route) hud.region.textContent = active.levelPackage.map.name;
-  const zone = active.levelPackage.map.route ? zoneAt(active.levelPackage.map, active.state.player.x, active.state.player.y) : null;
+  const guideMap = $('#guide-map');
+  guideMap.hidden = false;
+  $('#guide-map-heading').textContent = active.levelPackage.map.route ? 'Route map' : active.levelPackage.region.id === 'r7' ? 'Summit map' : 'Village map';
+  const currentZone = drawGuideMap($('#guide-map-canvas'), active.levelPackage.map, active.state, step);
   const zoneLabel = $('#route-zone-label');
-  zoneLabel.hidden = !zone;
-  if (zone) zoneLabel.textContent = `${zone.name} · Lesson ${zone.lesson}`;
+  zoneLabel.hidden = false;
+  zoneLabel.textContent = currentZone ? `${currentZone.name} · Lesson ${currentZone.lesson}` : active.levelPackage.map.route || active.levelPackage.region.id === 'r7' ? 'Between lesson areas' : 'Safe town · battle on the road';
   const effects = $('#route-effects');
   const encounter = active.state.progress.encounter;
   const activeEffects = active.levelPackage.map.route ? [
@@ -85,7 +86,6 @@ function render() {
   ].filter(Boolean) : [];
   effects.hidden = activeEffects.length === 0;
   effects.innerHTML = activeEffects.map(effect => `<span>${escapeHtml(effect)}</span>`).join('');
-  updateObjective();
 }
 
 function persist({ rewardSound = true } = {}) {
@@ -169,62 +169,19 @@ function startAutosave() {
   }, 5000);
 }
 
-function objectiveTasks() {
-  if (!active) return [];
-  const game = active;
-  const regionId = game.levelPackage.region.id;
-  const words = game.levelPackage.content.words.filter(word => (game.levelPackage.config.regionLessons[regionId] || []).includes(word.lesson));
-  const tasks = [];
-  if (game.levelPackage.map.route) {
-    const discovered = routeDiscoveryPercent(game.levelPackage.map, game.state.progress.routes[routeKey(regionId)]?.discovered);
-    const nextTown = game.levelPackage.campaigns[`r${Number(regionId.slice(1)) + 1}`]?.region.name;
-    const destination = game.state.progress.story.bossDefeated ? `Find the gate to ${nextTown}.` : `Find the ${game.levelPackage.map.objects.find(object => object.id === 'boss-pavilion-building')?.name || 'boss pavilion'} and the gate to ${nextTown}.`;
-    tasks.push(`${game.levelPackage.map.name} ${discovered}% explored. ${destination}`);
-  }
-  const suggestedPath = regionPathGuide(game.levelPackage, game.state.progress, game.state.player.level).find(path => path.suggested);
-  if (suggestedPath) tasks.push(`Suggested path: ${suggestedPath.name} (${suggestedPath.direction}, Lesson ${suggestedPath.lesson}). Other paths stay open.`);
-  const reading = game.state.progress.reading;
-  if (reading.active) tasks.push(`Answer the villagers’ passage questions: ${Object.values(reading.results || {}).filter(result => result?.correct === true).length}/${reading.questionCount}.`);
-  else if (!(reading.completed || []).length) tasks.push(`Read a passage in the Reading Hall to earn the ${game.levelPackage.regionStory.gateKeyName || 'Cave Lantern'}.`);
-  for (const zone of (game.levelPackage.campaigns[regionId].route || game.levelPackage.map).zones) {
-    const lessonWords = words.filter(word => word.lesson === zone.lesson);
-    const collected = lessonWords.filter(word => game.state.progress.words[word.w]?.collected).length;
-    if (collected < lessonWords.length) tasks.push(`Explore ${zone.name} and collect Lesson ${zone.lesson} spirits (${collected}/${lessonWords.length}).`);
-  }
-  const runs = game.state.progress.school.day === localDay() ? game.state.progress.school.runs : 0;
-  if (runs < 3) tasks.push(`Take a rewarded quiz or tingxie session at School (${3 - runs} left today).`);
-  const unread = game.levelPackage.regionStory.stories.length - game.state.progress.story.storiesRead.length;
-  if (unread > 0) tasks.push(`Hear an unread story from the Storyteller (${unread} left).`);
-  if (game.state.player.hp < game.state.player.maxHp / 2) tasks.push('Your HP is low. Rest and review at the Inn.');
-  const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
-  const required = Math.ceil(words.length * game.levelPackage.regionStory.gateBronzePct);
-  if (!game.state.progress.story.bossDefeated && bronze < required) tasks.push(`Collect ${required - bronze} more Bronze spirits for ${game.levelPackage.regionStory.bossPlace || 'the boss gate'}.`);
-  else if (!game.state.progress.story.bossDefeated) tasks.push(`${game.levelPackage.regionStory.bossPlace || 'The boss gate'} is ready. Challenge the ${game.levelPackage.regionStory.bossName || 'Muddle King'}!`);
-  else if (game.levelPackage.campaigns[`r${Number(game.levelPackage.region.id.slice(1)) + 1}`] && !game.state.progress.story.flags.gateDictationPassed) {
-    const { count, pass } = gateDictationRules(game.state.settings);
-    tasks.push(`Pass the gate dictation: write ${pass} of ${count} regional words from memory.`);
-  }
-  return tasks.length ? tasks : [`${game.levelPackage.region.name} is restored. Keep turning spirits Gold.`];
-}
-
-function updateObjective(advance = false) {
-  const tasks = objectiveTasks();
-  if (!tasks.length) return;
-  if (advance) objectiveIndex = (objectiveIndex + 1) % tasks.length;
-  else objectiveIndex = Math.min(objectiveIndex, tasks.length - 1);
-  $('#objective-text').textContent = tasks[objectiveIndex];
+function updateObjective() {
+  const step = nextStep(active.levelPackage, active.state);
+  $('#objective-text').textContent = step.text;
+  return step;
 }
 
 function startWorldTimers() {
   clearInterval(wanderTimer);
-  clearInterval(objectiveTimer);
   wanderTimer = setInterval(() => {
     if (!active || overlay.isOpen || document.hidden) return;
     active.state.progress.npcs = wanderNpcs(active.levelPackage.map, active.state.player, active.state.progress.npcs);
     render();
   }, 1300);
-  objectiveTimer = setInterval(() => updateObjective(true), 60000);
-  updateObjective();
 }
 
 function showWelcome(loadResult) {
@@ -395,7 +352,6 @@ function changeRoute(direction) {
   } else if (direction !== 'back') return;
   active.renderer.dispose?.();
   active.renderer = createRenderer($('#world'), active.levelPackage.map);
-  objectiveIndex = 0;
   persist();
   overlay.close();
   render();
@@ -415,7 +371,6 @@ function switchRegion(regionId) {
   active.renderer = createRenderer($('#world'), active.levelPackage.map);
   restoreNpcPositions(active.levelPackage.map, active.state.progress.npcs);
   adventure?.initialize();
-  objectiveIndex = 0;
   persist();
   render();
   overlay.close();
@@ -438,7 +393,7 @@ function showLevelPicker() {
     <p>Every level follows the same seven-region adventure. Learning progress is saved separately for each curriculum.</p>
     <div class="level-grid">
       ${levels.map(level => `<button class="level-card" data-level="${level.id}" ${level.worldMappingReady ? '' : 'disabled'}>
-        <i aria-hidden="true">${level.id === 'p2' ? '二' : level.id === 'p5' ? '五' : '学'}</i><b>${level.label}</b><span>${levelStatus(level) || 'Enter the seven-region adventure'}</span>
+        <i aria-hidden="true">${escapeHtml(level.badge || '学')}</i><b>${escapeHtml(level.label)}</b><span>${levelStatus(level) || 'Enter the seven-region adventure'}</span>
       </button>`).join('')}
     </div>
     ${active ? '<div class="button-row"><button class="secondary" data-close-overlay>Return to village</button></div>' : ''}
@@ -453,7 +408,7 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>Primary 2 and Primary 5 share all seven regions with separate saves and level-specific content and tuning.</p>
+    <p>Every playable curriculum shares the seven-region campaign with its own save, lessons and tuning.</p>
     ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
       <div>Curriculum<b>${levelPackage.label}</b></div>

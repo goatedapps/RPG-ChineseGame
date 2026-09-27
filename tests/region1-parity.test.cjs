@@ -69,6 +69,29 @@ test('tablet controls do not capture typing in form fields', async () => {
   unbind();
 });
 
+test('touch controls cannot select the playfield but overlay text remains selectable', async () => {
+  const dom = new JSDOM('<section class="stage"><div id="dpad"><button data-direction="up">Up</button></div><div class="overlay"><p id="question">Read this</p></div></section>');
+  const { bindInput } = await import('../src/world/input.js');
+  const unbind = bindInput({ target: dom.window, dpad: dom.window.document.querySelector('#dpad'), onMove: () => {} });
+  const selection = new dom.window.Event('selectstart', { bubbles: true, cancelable: true });
+  dom.window.document.querySelector('#dpad button').dispatchEvent(selection);
+  assert.equal(selection.defaultPrevented, true);
+  const questionSelection = new dom.window.Event('selectstart', { bubbles: true, cancelable: true });
+  dom.window.document.querySelector('#question').dispatchEvent(questionSelection);
+  assert.equal(questionSelection.defaultPrevented, false);
+  unbind();
+});
+
+test('creature and boss attack stats are displayed as whole numbers', async () => {
+  const { createBoss, createCreature } = await import('../src/battle/creatures.js');
+  const shared = JSON.parse(fs.readFileSync(path.join(root, 'content/authored/shared/balance.json'), 'utf8'));
+  for (const level of [1, 6, 13, 22, 40, 53]) {
+    const balance = { ...shared, combat: { ...shared.combat, lessonLevels: { test: [level, level] } } };
+    for (const roll of [0, .08, .5]) assert.equal(Number.isInteger(createCreature('test', balance, () => roll, 'jumble-bug').attack), true);
+    assert.equal(Number.isInteger(createBoss(balance, ['test']).attack), true);
+  }
+});
+
 test('daily energy blocks only battles after the parent cap', async () => {
   const { battlesLeft, useBattle } = await import('../src/systems/energy.js');
   let energy = { day: '', used: 99 };

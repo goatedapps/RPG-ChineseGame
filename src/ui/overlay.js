@@ -41,7 +41,7 @@ export function createOverlay(element) {
     element.setAttribute('role', 'dialog');
     element.setAttribute('aria-modal', 'true');
     const close = element.querySelector('[data-close-overlay]');
-    if (close && dismissible) close.addEventListener('click', api.close, { once: true });
+    if (close) close.addEventListener('click', api.close, { once: true });
     element.querySelector('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href]')?.focus();
     typeDialogue();
   }

@@ -42,6 +42,6 @@ test('battle question badges and route labels are present without bitmap request
   const main = fs.readFileSync(path.join(root, 'src/main.js'), 'utf8');
   assert.match(gameplay, /battleQuestionBadge\('attack'\)/);
   assert.match(gameplay, /battleQuestionBadge\('defense'\)/);
-  assert.match(main, /zoneLabel\.textContent = `\$\{zone\.name\} · Lesson \$\{zone\.lesson\}`/);
+  assert.match(main, /zoneLabel\.textContent = currentZone \? `\$\{currentZone\.name\} · Lesson \$\{currentZone\.lesson\}`/);
   assert.match(fs.readFileSync(path.join(root, 'sw.js'), 'utf8'), /audio\/earn\.mp3/);
 });

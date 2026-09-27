@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { JSDOM } = require('jsdom');
+const { playableIds } = require('./support/levels.cjs');
 
 const fetcher = async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(url.replace(/^\//, ''), 'utf8')) });
 
@@ -11,7 +12,7 @@ test('all six inter-town battlefields are distinct, reachable and tied to their 
   const { isEncounterTerrain } = await import('../src/world/encounters.js');
   const names = new Set();
   const layouts = new Set();
-  for (const level of ['p2', 'p5']) {
+  for (const level of playableIds) {
     const game = await loadLevelPackage(level, fetcher, '');
     for (let number = 1; number <= 6; number += 1) {
       const regionId = `r${number}`;
@@ -46,6 +47,25 @@ test('all six inter-town battlefields are distinct, reachable and tied to their 
   }
   assert.equal(names.size, 6);
   assert.equal(layouts.size, 6);
+});
+
+test('every village and route building has a centred, approachable entrance', async () => {
+  const { loadLevelPackage } = await import('../src/content/loader.js');
+  const { isWalkable } = await import('../src/world/map.js');
+  for (const level of playableIds) {
+    const game = await loadLevelPackage(level, fetcher, '');
+    for (const campaign of Object.values(game.campaigns)) {
+      for (const map of [campaign.map, campaign.route].filter(Boolean)) {
+        for (const building of map.objects.filter(object => object.type === 'building')) {
+          const centerX = building.rect.x + Math.floor(building.rect.width / 2);
+          const entrance = map.objects.find(object => object.type === 'door' && object.x === building.door.x && object.y === building.door.y - 1);
+          assert.equal(building.door.x, centerX, `${level} ${map.name}: ${building.name} entrance is off-centre`);
+          assert.ok(entrance, `${level} ${map.name}: ${building.name} has no matching interaction`);
+          assert.ok(isWalkable(map, entrance.x, entrance.y + 1), `${level} ${map.name}: ${building.name} entrance is blocked`);
+        }
+      }
+    }
+  }
 });
 
 test('route fog, gate opening and village return positions survive a save migration', async () => {
@@ -154,7 +174,7 @@ test('clearing each later road naturally samples roughly two thirds of its regio
   const { isWalkable } = await import('../src/world/map.js');
   const { isEncounterTerrain, zoneAt } = await import('../src/world/encounters.js');
   const { revealRouteTile, routeDiscoveryPercent } = await import('../src/world/fog.js');
-  for (const level of ['p2', 'p5']) {
+  for (const level of playableIds) {
     const game = await loadLevelPackage(level, fetcher, '');
     for (let number = 2; number <= 6; number += 1) {
       const regionId = `r${number}`;

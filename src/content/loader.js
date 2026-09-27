@@ -91,7 +91,10 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     story.stories = JSON.parse(JSON.stringify(content.stories.filter(item => regionLessons.has(item.lesson))));
     campaigns[regionId] = { region, map, sets: authoredSets, regionStory: story };
   }
-  for (const campaign of Object.values(campaigns)) campaign.map.safeTown = true;
+  for (const [regionId, campaign] of Object.entries(campaigns)) {
+    campaign.map.safeTown = regionId !== 'r7';
+    campaign.map.atlasVillage = true;
+  }
   const route = JSON.parse(JSON.stringify(route1));
   const firstRegionLessons = config.regionLessons.r1 || [];
   for (const zone of route.zones) {

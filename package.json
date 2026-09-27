@@ -5,7 +5,8 @@
   "scripts": {
     "test": "node --test tests/*.test.cjs",
     "validate:content": "node tools/validate-content.mjs",
-    "build:content": "node tools/validate-content.mjs && node tools/build-content.mjs && node tools/build-chars.mjs"
+    "build:content": "node tools/validate-content.mjs && node tools/build-content.mjs && node tools/build-chars.mjs",
+    "check:curricula": "npm run build:content && npm test"
   },
   "devDependencies": {
     "hanzi-writer": "^3.7.2",

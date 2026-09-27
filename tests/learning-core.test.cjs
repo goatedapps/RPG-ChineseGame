@@ -3,17 +3,19 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM } = require('jsdom');
+const { playableIds } = require('./support/levels.cjs');
 
 const root = path.resolve(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
-test('content lab exposes both curricula and local Hanzi Writer', () => {
+test('content lab loads curricula from the registry and local Hanzi Writer', () => {
   const html = fs.readFileSync(path.join(root, 'game', 'lab.html'), 'utf8');
   const dom = new JSDOM(html);
   const levels = [...dom.window.document.querySelectorAll('#lab-level option')].map(option => option.value);
-  assert.deepEqual(levels, ['p5', 'p2']);
+  assert.deepEqual(levels, []);
+  assert.match(fs.readFileSync(path.join(root, 'src', 'content-lab.js'), 'utf8'), /await listLevels\(\)/);
   assert.equal(dom.window.document.querySelector('script[src*="hanzi-writer.min.js"]').getAttribute('src'), '../vendor/hanzi-writer/hanzi-writer.min.js');
-  assert.equal(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), '../src/content-lab.js');
+  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\.\/src\/content-lab\.js(?:\?p\d+)?$/);
 });
 
 test('one clean correct answer fills a skill circle and five skills reach Gold', async () => {
@@ -82,9 +84,9 @@ test('battle skill hint advances as a spirit masters skills during the encounter
   assert.doesNotMatch(gameplay, /battle\.recommended/);
 });
 
-test('all four generated MCQ skills produce a valid answer for P2 and P5 words', async () => {
+test('all four generated MCQ skills produce a valid answer for each playable curriculum', async () => {
   const { checkAnswer, makeQuestion } = await import('../src/learning/questions.js');
-  for (const level of ['p2', 'p5']) {
+  for (const level of playableIds) {
     const content = readJson(`content/generated/${level}.content.json`);
     const word = content.words[0];
     for (const skill of ['m', 'p', 'h', 'u']) {

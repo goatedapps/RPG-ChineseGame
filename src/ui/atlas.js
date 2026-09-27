@@ -1,13 +1,12 @@
-const ATLAS_REGIONS = new Set(['r1', 'r2']);
+const ATLAS_REGIONS = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7'];
 
 export function setAtlasRegion(shell, regionId) {
   if (shell.dataset.atlasRegion === regionId) return;
   shell.dataset.atlasRegion = regionId;
   const menu = shell.querySelector('.hud-actions');
   if (menu) menu.scrollTop = 0;
-  shell.classList.toggle('atlas-enabled', ATLAS_REGIONS.has(regionId));
-  shell.classList.toggle('atlas-region-r1', regionId === 'r1');
-  shell.classList.toggle('atlas-region-r2', regionId === 'r2');
+  shell.classList.toggle('atlas-enabled', ATLAS_REGIONS.includes(regionId));
+  for (const id of ATLAS_REGIONS) shell.classList.toggle(`atlas-region-${id}`, regionId === id);
 }
 
 export function bindAtlasMenu(shell, button, onLayoutChange, initiallyExpanded = false) {

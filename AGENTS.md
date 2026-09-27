@@ -39,6 +39,7 @@ Production URLs:
 - Keep Higher Chinese disabled by default and make its Reading Hall availability parent-controlled.
 - Keep School XP after the first three rewarded daily runs.
 - Keep the parent battle cap and the intended 30–60 minute session without a mandatory timer.
+- Keep fog-route entry closed at zero remaining battles and return the player to the Inn after the final allowed battle.
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
@@ -66,7 +67,7 @@ Production URLs:
 - Add migrations for save-shape changes.
 - Preserve local Hanzi data and the vendored Hanzi Writer runtime.
 - Keep runtime illustration assets sized for their displayed use, and update image references, offline cache and asset tests together.
-- Keep the Scholar Atlas shell and richer canvas map treatment scoped to Regions 1–2 until the user reviews them.
+- Keep the Scholar Atlas header and collapsible rail consistent across all seven regions; richer canvas map art remains scoped to Regions 1–2.
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
 - Every town is safe; six distinct inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition.
 - Keep each route's discovery, gate-opening flag and return position persistent across saves.

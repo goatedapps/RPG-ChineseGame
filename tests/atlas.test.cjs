@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { JSDOM } = require('jsdom');
 
-test('Scholar Atlas is limited to the first two regions', async () => {
+test('Scholar Atlas stays active across all seven regions', async () => {
   const { setAtlasRegion } = await import('../src/ui/atlas.js');
   const shell = new JSDOM('<main class="game-shell"></main>').window.document.querySelector('main');
 
@@ -16,9 +16,14 @@ test('Scholar Atlas is limited to the first two regions', async () => {
   assert.ok(shell.classList.contains('atlas-region-r2'));
   assert.ok(!shell.classList.contains('atlas-region-r1'));
 
-  setAtlasRegion(shell, 'r3');
+  for (const id of ['r3', 'r4', 'r5', 'r6', 'r7']) {
+    setAtlasRegion(shell, id);
+    assert.ok(shell.classList.contains('atlas-enabled'));
+    assert.ok(shell.classList.contains(`atlas-region-${id}`));
+    assert.equal([...shell.classList].filter(name => name.startsWith('atlas-region-')).length, 1);
+  }
+  setAtlasRegion(shell, 'unknown');
   assert.ok(!shell.classList.contains('atlas-enabled'));
-  assert.ok(!shell.classList.contains('atlas-region-r2'));
 });
 
 test('Atlas menu expands accessibly while preserving the world controls', async () => {

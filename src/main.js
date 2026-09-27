@@ -6,10 +6,10 @@ import { createRenderer } from './world/renderer.js?p23';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10e';
-import { updateHud } from './ui/hud.js';
+import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
-import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p2';
-import { createGameplay } from './gameplay.js?p31';
+import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p3';
+import { createGameplay } from './gameplay.js?p33';
 import { createCollection } from './collection.js?p18';
 import { createAdventure } from './adventure.js?p28';
 import { createAudioManager } from './core/audio.js?p24';
@@ -98,8 +98,31 @@ function persist({ rewardSound = true } = {}) {
   }
 }
 
+function importCurrentLevelSave(state) {
+  if (!active || state.level !== active.levelPackage.id) throw new Error('This save belongs to a different curriculum. Switch curriculum first.');
+  const matchingMap = Object.values(active.levelPackage.campaigns).some(campaign => campaign.map.id === state.player.map || campaign.route?.id === state.player.map);
+  if (!matchingMap) throw new Error('This save refers to a map that is not in this version of the game.');
+  saveLevelState(storage, state);
+  window.location.reload();
+}
+
+function showBattleQuotaNotice() {
+  if (!active || gameplay?.battlesLeft() !== 0) return;
+  if (active.levelPackage.map.route) changeRoute('rest');
+  else {
+    const inn = active.levelPackage.map.objects.find(object => object.id === 'inn-door');
+    if (inn && isWalkable(active.levelPackage.map, inn.x, inn.y + 1)) {
+      Object.assign(active.state.player, { x: inn.x, y: inn.y + 1, direction: 'up' });
+      persist();
+      render();
+    }
+  }
+  overlay.open('<div class="panel result-panel"><p class="panel-kicker">Daily battle quota</p><h1>That’s all the battles for today</h1><p>You have used today’s battle quota. A parent can add five more battles in Parent Mode. For now, you are back at the Inn and can rest or try other town activities.</p><button class="primary" data-close-overlay>Continue at the Inn</button></div>', { dismissible: false });
+}
+
 function move(direction) {
   if (!active || overlay.isOpen) return;
+  if (active.levelPackage.map.route && gameplay.battlesLeft() === 0) return showBattleQuotaNotice();
   const result = attemptStep(active.state.player, active.levelPackage.map, direction);
   active.state = { ...active.state, player: result.player };
   if (result.moved) {
@@ -115,15 +138,7 @@ function move(direction) {
     active.state.progress.encounter = encounter.state;
     if (encounter.entered) toast(`${encounter.entered.name} · Lesson ${encounter.entered.lesson}`);
     persist();
-    if (encounter.encounter) {
-      if (gameplay.battlesLeft() === 0) {
-        if (active.state.progress.encounter.capNoticeDay !== localDay()) {
-          active.state.progress.encounter.capNoticeDay = localDay();
-          persist();
-          overlay.dialogue({ title: 'The creatures are asleep', lines: ['You have reached today’s battle limit. Stories, writing, School and the Scroll Library are still open. A parent can add five battles from the Parent Panel.'] });
-        } else toast(active.levelPackage.strings.battleCap);
-      } else gameplay.startBattle(encounter.zone, { scholarsLanternActive: encounter.scholarsLanternActive });
-    }
+    if (encounter.encounter) gameplay.startBattle(encounter.zone, { scholarsLanternActive: encounter.scholarsLanternActive });
   } else if (result.interaction) {
     events.emit('world:interaction', result.interaction);
     if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
@@ -277,7 +292,7 @@ async function startLevel(levelId) {
     lastRewardState = { level: active.state.player.level, xp: active.state.player.xp, coins: active.state.player.coins };
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: () => changeRoute('rest'), onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: () => changeRoute('rest'), onBattleQuotaExhausted: showBattleQuotaNotice, onImportSave: importCurrentLevelSave, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
     adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion, onEnterRoute: changeRoute, onGateOpening: showGateOpening });
     adventure.initialize();
     collection.refreshMaxHp();
@@ -301,7 +316,8 @@ async function startLevel(levelId) {
       active.state.session.seenWelcome = true;
       persist();
     }
-    if (!active.state.session.seenWelcome || loadResult.migrated || loadResult.warning) showWelcome(loadResult);
+    if (active.levelPackage.map.route && gameplay.battlesLeft() === 0) showBattleQuotaNotice();
+    else if (!active.state.session.seenWelcome || loadResult.migrated || loadResult.warning) showWelcome(loadResult);
     else {
       overlay.close();
       if (!active.state.progress.story.flags.arrival) adventure.storyJournal();
@@ -325,6 +341,7 @@ function saveCurrentLocation() {
 
 function changeRoute(direction) {
   if (!active) return;
+  if ((direction === 'enter' || direction === 'back') && gameplay?.battlesLeft() === 0) return showBattleQuotaNotice();
   let regionId = active.levelPackage.region.id;
   if (direction === 'back') {
     const previousId = `r${Number(regionId.slice(1)) - 1}`;

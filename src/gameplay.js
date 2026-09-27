@@ -25,6 +25,7 @@ import { showWritingTask } from './ui/writingView.js?p13';
 import { createSpeechController } from './learning/audio.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { battleQuestionBadge } from './ui/battleBadge.js';
+import { downloadSaveFile, readSaveFile } from './ui/saveTransfer.js';
 
 const SHOP_ITEM_COPY = Object.freeze({
   heal: item => `Restore ${item.amount} HP during battle`,
@@ -95,7 +96,7 @@ export function innReviewPool(levelPackage, progress) {
   return { regionalWords, review };
 }
 
-export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchRegion = () => {}, onReturnToVillage = () => {}, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
+export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchRegion = () => {}, onReturnToVillage = () => {}, onBattleQuotaExhausted = () => {}, onImportSave = () => { throw new Error('Save import is unavailable.'); }, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
   ensureParentPin(storage);
   const active = () => getActive();
   const speech = createSpeechController();
@@ -184,9 +185,10 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     document.querySelector('[data-run]').addEventListener('click', () => {
       const chance = game.levelPackage.balance.combat.escapeChance ?? 0.65;
       if (escapeSucceeded(Math.random, chance)) {
-        overlay.close();
         commit();
         audio?.setScene('village');
+        if (battle.lastDailyBattle) return onBattleQuotaExhausted();
+        overlay.close();
         toast('You escaped the battle safely.');
         return;
       }
@@ -239,7 +241,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   function creatureFled(battle) {
     commit();
     audio?.setScene('village');
-    overlay.open(`<div class="panel result-panel"><h1>The Golden ${escapeHtml(battle.creature.name)} escaped!</h1><p>Golden creatures flee after four turns. Build a streak and use their weakness to defeat them quickly.</p><button class="primary" data-close-overlay>Return to the village</button></div>`);
+    overlay.open(`<div class="panel result-panel"><h1>The Golden ${escapeHtml(battle.creature.name)} escaped!</h1><p>Golden creatures flee after four turns. Build a streak and use their weakness to defeat them quickly.</p><button class="primary" data-fled-next>${battle.lastDailyBattle ? 'Continue' : 'Return to the village'}</button></div>`);
+    document.querySelector('[data-fled-next]').addEventListener('click', () => battle.lastDailyBattle ? onBattleQuotaExhausted() : overlay.close(), { once: true });
   }
 
   function battleBag(battle) {
@@ -256,7 +259,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (item.effect === 'writing-retry') battle.inkRetry = true;
       if (item.effect === 'attack-boost') battle.attackBoost = Math.max(battle.attackBoost || 0, item.amount || 1);
       if (item.effect === 'defense-boost') battle.defenseBoost = Math.max(battle.defenseBoost || 0, item.amount || 1);
-      if (item.effect === 'escape') { commit(); overlay.close(); audio?.setScene('village'); toast('The Smoke Ball carried you safely home.'); return; }
+      if (item.effect === 'escape') { commit(); audio?.setScene('village'); if (battle.lastDailyBattle) return onBattleQuotaExhausted(); overlay.close(); toast('The Smoke Ball carried you safely home.'); return; }
       commit();
       showBattle(battle, `${item.name} is ready.`);
     });
@@ -284,7 +287,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     audio?.sfx(game.state.player.level > beforeLevel.level ? 'level' : 'win');
     audio?.setScene('village');
     const coinsAwarded = baseRewards.coins + variantCoins;
-    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay type="button">Continue exploring</button></div>`);
+    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-battle-win-next type="button">${battle.lastDailyBattle ? 'Continue' : 'Continue exploring'}</button></div>`, { dismissible: false });
+    document.querySelector('[data-battle-win-next]').addEventListener('click', () => battle.lastDailyBattle ? onBattleQuotaExhausted() : overlay.close(), { once: true });
   }
 
   function faint(battle) {
@@ -297,7 +301,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     }
     commit();
     audio?.setScene('defeat');
-    overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you to the Inn. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`, { onClose: () => audio?.setScene('village') });
+    overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you to the Inn. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`, { onClose: () => { audio?.setScene('village'); if (battle.lastDailyBattle) onBattleQuotaExhausted(); } });
   }
 
   function startBattle(zoneOrLesson, { scholarsLanternActive = false } = {}) {
@@ -306,7 +310,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const lesson = zone?.lesson || zoneOrLesson;
     const cap = game.state.settings.dailyBattles;
     const energy = useBattle(game.state.progress.energy, localDay(), cap);
-    if (!energy.allowed) return toast(game.levelPackage.strings.battleCap);
+    if (!energy.allowed) return onBattleQuotaExhausted();
     const eligibleWords = eligibleBattleWords(wordsForLesson(lesson), game.state.progress.words, scholarsLanternActive);
     const baitIndex = game.state.progress.baits.findIndex(bait => bait.lesson === lesson && eligibleWords.some(candidate => candidate.w === bait.word));
     const bait = baitIndex >= 0 ? game.state.progress.baits[baitIndex] : null;
@@ -317,6 +321,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
+    battle.lastDailyBattle = cap !== 0 && energy.energy.used >= cap;
     battle.review = isReviewDue(game.state.progress.words[word.w], localDay());
     battle.reviewFailed = false;
     commit();
@@ -767,7 +772,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Testing shortcuts</h2><p>Jump directly to a built region without defeating earlier bosses, or set the hero level for battle testing.</p></div></div><div class="parent-shortcuts"><div class="parent-shortcut-row"><label class="answer-field">Jump to region<select data-parent-jump-region>${Object.values(game.levelPackage.campaigns).map(campaign => `<option value="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'selected' : ''}>${escapeHtml(campaign.region.name)}</option>`).join('')}</select></label><button class="secondary parent-shortcut-button" type="button" data-parent-jump>Jump now</button></div><div class="parent-shortcut-row"><label class="answer-field">Main-character level<input data-parent-level type="number" inputmode="numeric" min="1" max="99" value="${game.state.player.level}"></label><button class="secondary parent-shortcut-button" type="button" data-parent-level-save>Apply level</button></div></div><p class="parent-tab-intro">Changing level resets current XP to 0 and fully restores HP. Learning progress is unchanged.</p></section>
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Real-world goal</h2><p>Connect in-game progress to a family reward or milestone.</p></div></div><div class="goal-editor"><input data-goal-label value="${escapeHtml(goal?.label || '')}" placeholder="20 Gold words → ice-cream trip"><select data-goal-type><option value="gold" ${goal?.type === 'gold' ? 'selected' : ''}>Gold words</option><option value="streak" ${goal?.type === 'streak' ? 'selected' : ''}>Streak days</option><option value="region" ${goal?.type === 'region' ? 'selected' : ''}>Region cleared</option></select><input data-goal-target type="number" min="1" value="${goal?.target || 20}"><button data-goal-save>Save goal</button></div>${goal ? `<div class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></div>` : ''}</section>
       <section class="parent-gift"><div class="parent-section-heading"><div><h2>Give a Spirit card—or several</h2><p>Select a lesson, then choose one or more cards to add at Bronze. Their five learning circles remain empty.</p></div></div>${missingRegionWords.length ? `<div class="parent-gift-toolbar"><label>Lesson<select data-gift-lesson aria-label="Lesson to gift from">${giftLessons.map(lesson => `<option value="${lesson}" ${lesson === giftLesson ? 'selected' : ''}>Lesson ${lesson}</option>`).join('')}</select></label><button class="secondary" type="button" data-gift-select-all>Select all</button></div><div class="parent-gift-grid" role="group" aria-label="Lesson ${giftLesson} Spirit cards">${giftLessonWords.map(word => `<label class="gift-word-option"><input type="checkbox" data-gift-word value="${escapeHtml(word.w)}"><span><b>${escapeHtml(word.w)}</b><small>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</small></span></label>`).join('')}</div><div class="parent-gift-actions"><span data-gift-count>0 selected</span><button class="primary" data-gift-spirit-save disabled>Give selected cards</button></div>` : '<p><b>Every Spirit card in this region has been collected.</b></p>'}</section>
-      <section class="parent-section parent-actions"><div class="parent-section-heading"><div><h2>Parent tools</h2><p>Temporary allowances, curriculum selection, and save management.</p></div></div><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-switch-level>Switch curriculum</button><button class="secondary" data-export-save>Export save</button><button class="secondary" data-import-trigger>Import save</button><input data-import-save type="file" accept="application/json,.json" hidden></div></section>
+      <section class="parent-section parent-actions"><div class="parent-section-heading"><div><h2>Parent tools</h2><p>Temporary allowances, curriculum selection, and save management.</p></div></div><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-switch-level>Switch curriculum</button><button class="secondary" data-export-save>Export save</button><label class="secondary save-import-picker">Import save<input data-import-save type="file" accept=".json,application/json" aria-label="Choose a ${escapeHtml(game.levelPackage.label)} save file to import"></label></div></section>
       <details class="pin-settings"><summary>Change parent PIN</summary><div class="pin-editor"><label class="answer-field">New 4–8 digit PIN<input data-new-pin type="password" inputmode="numeric" maxlength="8"></label><button class="primary" data-change-pin>Change PIN</button></div></details>`;
     const summaryHtml = `<div class="summary-toolbar"><p class="parent-tab-intro">Review learning progress, patterns, and work that may need attention.</p><button class="secondary" data-weekly>View weekly summary</button></div>
       <div class="status-grid parent-status-grid"><div>Curriculum<b>${escapeHtml(game.levelPackage.label)}</b></div><div>Player level<b>${game.state.player.level}</b></div><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Bronze / Silver / Gold<b>${bronze} / ${silver} / ${gold}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div><div>Unlocked regions<b>${game.state.settings.unlockedRegions}</b></div></div>
@@ -849,10 +854,24 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     });
     document.querySelector('[data-energy-add]').addEventListener('click', () => { if (game.state.progress.energy.day !== localDay()) game.state.progress.energy = { day: localDay(), used: 0 }; game.state.progress.energy.used = Math.max(0, game.state.progress.energy.used - 5); commit(); toast('Five battles were added for today.'); showParentDashboard('settings'); });
     document.querySelector('[data-switch-level]').addEventListener('click', onSwitchLevel);
-    document.querySelector('[data-export-save]').addEventListener('click', () => { const blob = new Blob([JSON.stringify(exportSaveEnvelope(game.state), null, 2)], { type: 'application/json' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `word-spirit-quest-${game.state.level}-${localDay()}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 0); });
+    document.querySelector('[data-export-save]').addEventListener('click', () => downloadSaveFile(game.state, localDay(), exportSaveEnvelope));
     const fileInput = document.querySelector('[data-import-save]');
-    document.querySelector('[data-import-trigger]').addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', async () => { try { const envelope = JSON.parse(await fileInput.files[0].text()); game.state = importSaveEnvelope(envelope, game.levelPackage); commit({ rewardSound: false }); toast('Save imported successfully.'); showParentDashboard('settings'); } catch (error) { toast(error.message); } });
+    const showImportError = message => {
+      overlay.open(`<div class="panel result-panel"><h1>Could not import save</h1><p>${escapeHtml(message)}</p><p>Your current progress has not been changed.</p><button class="primary" data-import-back>Back to Parent Mode</button></div>`);
+      document.querySelector('[data-import-back]').addEventListener('click', () => showParentDashboard('settings'), { once: true });
+    };
+    fileInput.addEventListener('change', async () => {
+      if (!fileInput.files?.length) return;
+      try {
+        const file = fileInput.files[0];
+        const envelope = JSON.parse(await readSaveFile(file));
+        const imported = importSaveEnvelope(envelope, game.levelPackage);
+        const exportedDate = typeof envelope.exportedAt === 'string' ? envelope.exportedAt.slice(0, 10) : '';
+        overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Save import</p><h1>Restore this save?</h1><p><b>${escapeHtml(file.name)}</b></p><p>${escapeHtml(game.levelPackage.label)} · Hero Level ${imported.player.level} · ${escapeHtml(imported.player.map)}${exportedDate ? ` · Exported ${escapeHtml(exportedDate)}` : ''}</p><p>This will replace the current ${escapeHtml(game.levelPackage.label)} progress. The current save will be kept as a backup.</p><div class="button-row"><button class="primary" data-import-confirm>Import and reopen game</button><button class="secondary" data-import-cancel>Cancel</button></div></div>`);
+        document.querySelector('[data-import-confirm]').addEventListener('click', () => { try { onImportSave(imported); } catch (error) { showImportError(error.message); } }, { once: true });
+        document.querySelector('[data-import-cancel]').addEventListener('click', () => showParentDashboard('settings'), { once: true });
+      } catch (error) { showImportError(error instanceof SyntaxError ? 'This file is not valid JSON. Choose a Word Spirit Quest export.' : error.message); }
+    });
     document.querySelector('[data-change-pin]').addEventListener('click', () => { if (!setParentPin(storage, document.querySelector('[data-new-pin]').value)) return toast('Use 4–8 digits for the new PIN.'); toast('Parent PIN changed.'); });
   }
 

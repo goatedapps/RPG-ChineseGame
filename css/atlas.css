@@ -12,6 +12,11 @@
 
 .game-shell.atlas-enabled.atlas-menu-expanded { --atlas-rail-width: 160px; }
 .game-shell.atlas-enabled.atlas-region-r2 { --atlas-accent: #b56a27; --atlas-accent-light: #fff0bc; }
+.game-shell.atlas-enabled.atlas-region-r3 { --atlas-accent: #247f8d; --atlas-accent-light: #d9f2ed; }
+.game-shell.atlas-enabled.atlas-region-r4 { --atlas-accent: #855a9c; --atlas-accent-light: #f0e4f8; }
+.game-shell.atlas-enabled.atlas-region-r5 { --atlas-accent: #bb4d38; --atlas-accent-light: #ffe5cc; }
+.game-shell.atlas-enabled.atlas-region-r6 { --atlas-accent: #5a7d47; --atlas-accent-light: #e9f0d7; }
+.game-shell.atlas-enabled.atlas-region-r7 { --atlas-accent: #536d9b; --atlas-accent-light: #e8edfb; }
 .atlas-enabled .hud { display: contents; }
 
 .atlas-enabled .hud-overview {
@@ -74,6 +79,13 @@
 
 .atlas-region-r1 .atlas-region-emblem { background-image: url('../assets/images/atlas/scholar-village.webp'); }
 .atlas-region-r2 .atlas-region-emblem { background-image: url('../assets/images/atlas/harvest-crossing.webp'); }
+.atlas-enabled:is(.atlas-region-r3, .atlas-region-r4, .atlas-region-r5, .atlas-region-r6, .atlas-region-r7) .atlas-region-emblem { display: grid; place-items: center; background: radial-gradient(circle at 34% 28%, var(--atlas-accent-light), var(--atlas-accent) 85%); }
+.atlas-enabled:is(.atlas-region-r3, .atlas-region-r4, .atlas-region-r5, .atlas-region-r6, .atlas-region-r7) .atlas-region-emblem::after { color: #fff8dd; font: 900 28px/1 var(--font-hanzi); text-shadow: 0 2px 3px #18304091; }
+.atlas-region-r3 .atlas-region-emblem::after { content: '潮'; }
+.atlas-region-r4 .atlas-region-emblem::after { content: '灯'; }
+.atlas-region-r5 .atlas-region-emblem::after { content: '庆'; }
+.atlas-region-r6 .atlas-region-emblem::after { content: '林'; }
+.atlas-region-r7 .atlas-region-emblem::after { content: '字'; }
 
 .atlas-enabled .hud-status {
   display: flex;

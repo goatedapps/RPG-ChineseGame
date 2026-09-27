@@ -86,7 +86,7 @@ test('music pauses on visibility loss and resumes the same scene', async () => {
 test('ordinary and boss defeats play non-looping recovery music until the recovery panel closes', async () => {
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const adventure = fs.readFileSync('src/adventure.js', 'utf8');
-  assert.match(gameplay, /function faint\(battle\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => audio\?\.setScene\('village'\)/);
+  assert.match(gameplay, /function faint\(battle\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => \{ audio\?\.setScene\('village'\); if \(battle\.lastDailyBattle\) onBattleQuotaExhausted\(\)/);
   assert.match(adventure, /if \(game\.state\.player\.hp === 0\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => audio\?\.setScene\('village'\)/);
   const tracks = [];
   class FakeAudio {

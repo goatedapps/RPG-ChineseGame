@@ -41,46 +41,54 @@ test('exploring one tile reveals adjoining whole blocked areas but not distant p
   assert.ok(routeDiscoveryPercent(map, besideTrees) < 5);
 });
 
-test('a full Mistwood exploration yields about thirty percent of regional spirits at normal encounter odds', async () => {
+test('a full Mistwood exploration samples roughly two thirds of regional spirits at normal encounter odds', async () => {
+  const { loadLevelPackage } = await import('../src/content/loader.js');
   const { isWalkable } = await import('../src/world/map.js');
+  const { isEncounterTerrain, zoneAt } = await import('../src/world/encounters.js');
   const { revealRouteTile, routeDiscoveryPercent } = await import('../src/world/fog.js');
-  const map = read('content/authored/campaign/maps/r1-r2-mistwood.json');
-  let player = map.spawn;
-  let discovered = revealRouteTile(map, [], player.x, player.y);
-  const stepsByZone = [0, 0, 0];
-  while (routeDiscoveryPercent(map, discovered) < 99) {
-    const known = new Set(discovered);
-    const queue = [{ ...player, path: [] }];
-    const visited = new Set([`${player.x},${player.y}`]);
-    let target = null;
-    for (let index = 0; index < queue.length && !target; index += 1) {
-      const current = queue[index];
-      if (!known.has(current.y * map.width + current.x)) { target = current; break; }
-      for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
-        const x = current.x + dx;
-        const y = current.y + dy;
-        const mark = `${x},${y}`;
-        if (!visited.has(mark) && isWalkable(map, x, y)) { visited.add(mark); queue.push({ x, y, path: [...current.path, { x, y }] }); }
+  const fetcher = async url => ({ ok: true, json: async () => read(url.replace(/^\//, '')) });
+  for (const level of ['p2', 'p5']) {
+    const game = await loadLevelPackage(level, fetcher, '');
+    const map = game.campaigns.r1.route;
+    let player = map.spawn;
+    let discovered = revealRouteTile(map, [], player.x, player.y);
+    const stepsByLesson = new Map();
+    while (routeDiscoveryPercent(map, discovered) < 99) {
+      const known = new Set(discovered);
+      const queue = [{ ...player, path: [] }];
+      const visited = new Set([`${player.x},${player.y}`]);
+      let target = null;
+      for (let index = 0; index < queue.length && !target; index += 1) {
+        const current = queue[index];
+        if (!known.has(current.y * map.width + current.x)) { target = current; break; }
+        for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+          const x = current.x + dx;
+          const y = current.y + dy;
+          const mark = `${x},${y}`;
+          if (!visited.has(mark) && isWalkable(map, x, y)) { visited.add(mark); queue.push({ x, y, path: [...current.path, { x, y }] }); }
+        }
+      }
+      assert.ok(target, 'every reachable tile should be discoverable');
+      for (const step of target.path) {
+        player = step;
+        discovered = revealRouteTile(map, discovered, step.x, step.y);
+        if (isEncounterTerrain(map, step.x, step.y)) {
+          const lesson = zoneAt(map, step.x, step.y).lesson;
+          stepsByLesson.set(lesson, (stepsByLesson.get(lesson) || 0) + 1);
+        }
       }
     }
-    assert.ok(target, 'every reachable tile should be discoverable');
-    for (const step of target.path) {
-      player = step;
-      discovered = revealRouteTile(map, discovered, step.x, step.y);
-      stepsByZone[Math.min(2, Math.floor((step.x - 1) / 15))] += 1;
-    }
-  }
-  for (const level of ['p2', 'p5']) {
-    const content = read(`content/generated/${level}.content.json`);
-    const config = read(`content/authored/levels/${level}/level.json`);
-    const rate = config.tuning.routeEncounterRate ?? map.zones[0].encounter.rate;
-    const expectedUnique = stepsByZone.reduce((total, steps, slot) => {
-      const words = content.words.filter(word => word.lesson === config.regionLessons.r1[slot]).length;
+    const lessons = game.config.regionLessons.r1;
+    const regionalWords = game.content.words.filter(word => lessons.includes(word.lesson));
+    const expectedUnique = [...new Set(lessons)].reduce((total, lesson) => {
+      const words = regionalWords.filter(word => word.lesson === lesson).length;
+      const steps = stepsByLesson.get(lesson) || 0;
+      const rate = map.zones.find(zone => zone.lesson === lesson).encounter.rate;
       const expectedBattles = steps * rate / (1 + 2 * rate);
       return total + words * (1 - Math.pow(1 - 1 / words, expectedBattles));
     }, 0);
-    const regionalTotal = content.words.filter(word => config.regionLessons.r1.includes(word.lesson)).length;
-    assert.ok(expectedUnique / regionalTotal >= .25 && expectedUnique / regionalTotal <= .37, `${level} route pacing: ${Math.round(expectedUnique / regionalTotal * 100)}%`);
+    const fraction = expectedUnique / regionalWords.length;
+    assert.ok(fraction >= .60 && fraction <= .72, `${level} route pacing: ${Math.round(fraction * 100)}%`);
   }
 });
 

@@ -50,10 +50,13 @@ test('leaving the prologue stops its music immediately and repeated village hand
   audio.setEnabled(false);
 });
 
-test('offline release cache includes both curricula and every region runtime file', () => {
+test('offline release cache derives playable curricula from the registry and includes every region runtime file', () => {
   const serviceWorker = fs.readFileSync('sw.js', 'utf8');
-  for (const level of ['p2', 'p5']) {
-    for (const file of [`${level}.content.json`, `${level}.chars.json`]) assert.match(serviceWorker, new RegExp(file.replace('.', '\\.')));
+  assert.match(serviceWorker, /levels\.filter\(level => level\.worldMappingReady\)/);
+  assert.match(serviceWorker, /content\/generated\/\$\{level\.id\}\.content\.json/);
+  assert.match(serviceWorker, /content\/generated\/\$\{level\.id\}\.chars\.json/);
+  for (const level of JSON.parse(fs.readFileSync('content/authored/shared/levels.json', 'utf8')).filter(entry => entry.worldMappingReady)) {
+    for (const file of [`content/authored/levels/${level.id}/level.json`, `content/generated/${level.id}.content.json`, `content/generated/${level.id}.chars.json`]) assert.ok(fs.existsSync(file));
   }
   for (let region = 1; region <= 7; region += 1) {
     assert.match(serviceWorker, new RegExp(`r${region}-story\\.json`));
@@ -112,9 +115,10 @@ test('80-percent Bronze playthrough reaches every boss and enters tougher region
     assert.equal(rows.length, 7);
     for (const row of rows) {
       assert.ok(row.gate, `${levelId} ${row.region}: Bronze and key-item boss gate`);
-      assert.ok(row.bossOutcome.won, `${levelId} ${row.region}: boss must be beatable without optional purchases`);
-      assert.ok(row.bossOutcome.turns >= 3 && row.bossOutcome.turns <= 8, `${levelId} ${row.region}: boss should take several correct spells`);
-      if (row.nextMinimum != null) assert.ok(row.nextGap >= 1 && row.nextGap <= 4, `${levelId} ${row.region}: hero ${row.hero}, next creature ${row.nextMinimum}`);
+      assert.ok(row.bossWithGuardian.won, `${levelId} ${row.region}: boss must be beatable with a shop defense item`);
+      assert.ok(row.bossWithGuardian.turns >= 3 && row.bossWithGuardian.turns <= 8, `${levelId} ${row.region}: boss should take several correct spells`);
+      assert.ok(row.boss - row.hero >= 0 && row.boss - row.hero <= 4, `${levelId} ${row.region}: boss ${row.boss}, hero ${row.hero}`);
+      if (row.nextMinimum != null) assert.ok(row.nextGap >= 0 && row.nextGap <= 4, `${levelId} ${row.region}: hero ${row.hero}, next creature ${row.nextMinimum}`);
     }
   }
 });

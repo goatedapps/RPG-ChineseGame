@@ -1,6 +1,8 @@
 import { gateDictationRules } from '../systems/dictation.js';
+import { isWalkable } from '../world/map.js';
+import { ROUTE_MAP_VERSION, scaleRouteCell } from '../world/routeMaps.js';
 
-export const SAVE_SCHEMA_VERSION = 10;
+export const SAVE_SCHEMA_VERSION = 11;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -79,15 +81,43 @@ function numberOr(value, fallback, minimum = 0) {
   return Number.isFinite(value) && value >= minimum ? value : fallback;
 }
 
-function normalizeRoutes(value) {
+function migrateRoutePosition(position, map) {
+  if (!position || !map) return position;
+  const x = scaleRouteCell(position.x, map.legacyWidth, map.width);
+  const y = scaleRouteCell(position.y, map.legacyHeight, map.height);
+  if (isWalkable(map, x, y)) return { ...position, x, y };
+  for (let distance = 1; distance < 8; distance += 1) {
+    for (let dy = -distance; dy <= distance; dy += 1) for (let dx = -distance; dx <= distance; dx += 1) {
+      if (Math.abs(dx) + Math.abs(dy) === distance && isWalkable(map, x + dx, y + dy)) return { ...position, x: x + dx, y: y + dy };
+    }
+  }
+  return { ...position, ...map.spawn };
+}
+
+function migrateRouteFog(discovered, map) {
+  const oldMarks = new Set(discovered);
+  const marks = [];
+  for (let y = 0; y < map.height; y += 1) for (let x = 0; x < map.width; x += 1) {
+    const oldX = Math.min(map.legacyWidth - 1, Math.floor(x * map.legacyWidth / map.width));
+    const oldY = Math.min(map.legacyHeight - 1, Math.floor(y * map.legacyHeight / map.height));
+    if (oldMarks.has(oldY * map.legacyWidth + oldX)) marks.push(y * map.width + x);
+  }
+  return marks;
+}
+
+function normalizeRoutes(value, levelPackage, legacy) {
   return Object.fromEntries(Array.from({ length: 6 }, (_, index) => {
     const key = `r${index + 1}r${index + 2}`;
     const route = value?.[key];
     if (!route || typeof route !== 'object') return null;
+    const map = levelPackage.campaigns?.[`r${index + 1}`]?.route;
+    const needsMigration = legacy && map?.mapVersion === ROUTE_MAP_VERSION && route.mapVersion !== ROUTE_MAP_VERSION;
+    const discovered = Array.isArray(route.discovered) ? [...new Set(route.discovered.filter(mark => Number.isInteger(mark) && mark >= 0))] : [];
     return [key, {
-      discovered: Array.isArray(route.discovered) ? [...new Set(route.discovered.filter(mark => Number.isInteger(mark) && mark >= 0))] : [],
+      mapVersion: map?.mapVersion || route.mapVersion || 1,
+      discovered: needsMigration ? migrateRouteFog(discovered, map) : discovered,
       gateOpened: Boolean(route.gateOpened),
-      ...(route.position && typeof route.position === 'object' ? { position: route.position } : {}),
+      ...(route.position && typeof route.position === 'object' ? { position: needsMigration ? migrateRoutePosition(route.position, map) : route.position } : {}),
       ...(route.villagePosition && typeof route.villagePosition === 'object' ? { villagePosition: route.villagePosition } : {})
     }];
   }).filter(Boolean));
@@ -114,6 +144,10 @@ export function migrateState(candidate, levelPackage) {
   if (candidate.schemaVersion >= 2) {
     if (candidate.level !== levelPackage.id) throw new Error(`This save belongs to ${candidate.level}, not ${levelPackage.id}.`);
     const player = candidate.player || {};
+    const legacyRouteMap = Number(candidate.schemaVersion) < SAVE_SCHEMA_VERSION
+      ? Object.values(levelPackage.campaigns || {}).map(campaign => campaign.route).find(route => route?.id === player.map)
+      : null;
+    const migratedPlayer = legacyRouteMap ? migrateRoutePosition(player, legacyRouteMap) : player;
     const legacyKnots = Math.max(0, Math.floor(Number(candidate.progress?.inventory?.['lucky-knot']) || 0));
     const inventory = { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) };
     delete inventory['lucky-knot'];
@@ -131,8 +165,8 @@ export function migrateState(candidate, levelPackage) {
         hp: numberOr(player.hp, 20),
         maxHp: numberOr(player.maxHp, 20, 1),
         coins: numberOr(player.coins, 20) + legacyKnots * 50,
-        x: numberOr(player.x, fresh.player.x),
-        y: numberOr(player.y, fresh.player.y)
+        x: numberOr(migratedPlayer.x, fresh.player.x),
+        y: numberOr(migratedPlayer.y, fresh.player.y)
       },
       progress: {
         ...fresh.progress,
@@ -170,7 +204,7 @@ export function migrateState(candidate, levelPackage) {
         reading: migrateReading(candidate.progress?.reading, fresh.progress.reading),
         accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
         ,regions: { ...(candidate.progress?.regions || {}) },
-        routes: normalizeRoutes(candidate.progress?.routes)
+        routes: normalizeRoutes(candidate.progress?.routes, levelPackage, Number(candidate.schemaVersion) < SAVE_SCHEMA_VERSION)
       },
       settings: { ...fresh.settings, ...(candidate.settings || {}), ...migrateGateDictationSettings(candidate.settings) },
       session: { ...fresh.session, ...(candidate.session || {}) }

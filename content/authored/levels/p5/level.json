@@ -20,6 +20,8 @@
   },
   "tuning": {
     "profile": "upper-primary",
+    "routeEncounterScale": 1.2,
+    "routeEncounterScales": { "r1": 1.3, "r5": 1.1, "r6": 1.3 },
     "dialogueDensity": "standard",
     "readingChunk": "standard"
   },

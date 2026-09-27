@@ -1,4 +1,4 @@
-import { buildRouteMap } from '../world/routeMaps.js';
+import { buildRouteMap, expandRouteMap } from '../world/routeMaps.js';
 
 async function fetchJson(fetcher, url) {
   const response = await fetcher(url);
@@ -98,10 +98,11 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     zone.lesson = firstRegionLessons[zone.lessonSlot] ?? firstRegionLessons.at(-1);
     zone.encounter.rate = config.tuning?.routeEncounterRate ?? zone.encounter.rate;
   }
-  campaigns.r1.route = route;
+  const routeScale = regionId => config.tuning?.routeEncounterScales?.[regionId] ?? config.tuning?.routeEncounterScale ?? 1.2;
+  campaigns.r1.route = expandRouteMap(route, routeScale('r1'));
   for (const spec of routeSpecs) {
     const lessons = config.regionLessons[spec.region] || [];
-    campaigns[spec.region].route = buildRouteMap(spec, lessons, config.tuning?.routeEncounterRate);
+    campaigns[spec.region].route = expandRouteMap(buildRouteMap(spec, lessons, config.tuning?.routeEncounterRate), routeScale(spec.region));
   }
   if (config.region1?.atticLine) {
     const line = campaigns.r1.regionStory.scenes.arrival.find(command => command.speaker === 'Fogling');

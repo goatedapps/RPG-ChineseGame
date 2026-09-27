@@ -1,5 +1,65 @@
 const WIDTH = 44;
 const HEIGHT = 32;
+export const ROUTE_MAP_VERSION = 2;
+export const ROUTE_WIDTH = 62;
+export const ROUTE_HEIGHT = 45;
+
+export function scaleRouteCell(value, oldSize, newSize) {
+  return Math.max(0, Math.min(newSize - 1, Math.round((value + 0.5) * newSize / oldSize - 0.5)));
+}
+
+const scaleBoundary = (value, oldSize, newSize) => Math.round(value * newSize / oldSize);
+
+export function expandRouteMap(map, encounterScale = 1.2) {
+  const oldWidth = map.width;
+  const oldHeight = map.height;
+  const xCell = x => scaleRouteCell(x, oldWidth, ROUTE_WIDTH);
+  const yCell = y => scaleRouteCell(y, oldHeight, ROUTE_HEIGHT);
+  const position = point => ({ ...point, x: xCell(point.x), y: yCell(point.y) });
+  const rect = value => {
+    const x = scaleBoundary(value.x, oldWidth, ROUTE_WIDTH);
+    const y = scaleBoundary(value.y, oldHeight, ROUTE_HEIGHT);
+    return { x, y, width: Math.max(1, scaleBoundary(value.x + value.width, oldWidth, ROUTE_WIDTH) - x), height: Math.max(1, scaleBoundary(value.y + value.height, oldHeight, ROUTE_HEIGHT) - y) };
+  };
+  const tiles = Array.from({ length: ROUTE_HEIGHT }, (_, y) => Array.from({ length: ROUTE_WIDTH }, (_, x) => {
+    const oldX = Math.min(oldWidth - 1, Math.floor(x * oldWidth / ROUTE_WIDTH));
+    const oldY = Math.min(oldHeight - 1, Math.floor(y * oldHeight / ROUTE_HEIGHT));
+    return map.tiles[oldY][oldX];
+  }));
+  for (const [slot, fraction, opening] of [[0, .24, .7], [1, .48, .28], [2, .72, .73]]) {
+    const x = Math.round(ROUTE_WIDTH * fraction);
+    const gapY = Math.round(ROUTE_HEIGHT * opening);
+    for (let y = 2; y < ROUTE_HEIGHT - 2; y += 1) {
+      if (Math.abs(y - gapY) <= 3 || tiles[y][x] === 'p') continue;
+      if ((y + slot) % 11 !== 0 && map.legend[tiles[y][x]]?.walkable) tiles[y][x] = 't';
+    }
+  }
+  for (let x = 0; x < ROUTE_WIDTH; x += 1) { tiles[0][x] = 't'; tiles[ROUTE_HEIGHT - 1][x] = 't'; }
+  for (let y = 0; y < ROUTE_HEIGHT; y += 1) { tiles[y][0] = 't'; tiles[y][ROUTE_WIDTH - 1] = 't'; }
+  const objects = map.objects.map(object => ({ ...object, ...(object.rect ? { rect: rect(object.rect) } : position(object)), ...(object.door ? { door: position(object.door) } : {}) }));
+  const pavilion = objects.find(object => object.id === 'boss-pavilion-building');
+  const pavilionDoor = objects.find(object => object.id === 'boss-pavilion-door');
+  if (pavilion && pavilionDoor) {
+    pavilionDoor.y = pavilion.rect.y + pavilion.rect.height - 1;
+    const frontY = pavilionDoor.y + 1;
+    const openings = Array.from({ length: pavilion.rect.width }, (_, offset) => pavilion.rect.x + offset);
+    pavilionDoor.x = openings.find(x => tiles[frontY]?.[x] === 'p') ?? openings.find(x => map.legend[tiles[frontY]?.[x]]?.walkable) ?? openings[Math.floor(openings.length / 2)];
+    tiles[frontY][pavilionDoor.x] = 'p';
+    pavilion.door = { x: pavilionDoor.x, y: pavilionDoor.y + 1 };
+  }
+  return {
+    ...map,
+    mapVersion: ROUTE_MAP_VERSION,
+    width: ROUTE_WIDTH,
+    height: ROUTE_HEIGHT,
+    legacyWidth: oldWidth,
+    legacyHeight: oldHeight,
+    spawn: position(map.spawn),
+    tiles: tiles.map(row => row.join('')),
+    zones: map.zones.map(zone => ({ ...zone, rect: rect(zone.rect), encounter: { ...zone.encounter, rate: zone.encounter.rate * encounterScale } })),
+    objects
+  };
+}
 
 function paintRect(tiles, patch) {
   for (let y = patch.y; y < patch.y + patch.height; y += 1) {

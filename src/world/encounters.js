@@ -21,6 +21,7 @@ export function encounterStep(value, map, player, random = Math.random) {
   const scholarsLanternActive = scholarsLanternSteps > 0;
   const state = { ...previous, zone: zone.id, cooldown, scholarsLanternSteps: Math.max(0, scholarsLanternSteps - 1) };
   if (repellentSteps > 0) return { state: { ...state, repellentSteps: repellentSteps - 1 }, zone, entered, encounter: false, scholarsLanternActive };
+  if (scholarsLanternSteps === 1) return { state, zone, entered, encounter: false, scholarsLanternActive };
   const encounter = cooldown === 0 && random() < (zone.encounter?.rate ?? 0.16);
   return {
     state: { ...state, cooldown: encounter ? Math.max(3, zone.encounter?.cooldown || 3) : cooldown },

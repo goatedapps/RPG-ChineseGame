@@ -8,7 +8,7 @@ const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 test('boss thresholds, gate dictation defaults and half-rate battle XP are authored', () => {
   for (let number = 1; number <= 7; number += 1) assert.equal(read(`content/authored/campaign/r${number}-story.json`).gateBronzePct, 0.8);
   assert.equal(read('content/authored/shared/balance.json').combat.battleXp, 12);
-  assert.equal(read('content/authored/levels/p2/level.json').tuning.balance.combat.battleXp, 10.5);
+  assert.equal(read('content/authored/levels/p2/level.json').tuning.balance.combat.battleXp, 10);
   const adventure = fs.readFileSync('src/adventure.js', 'utf8');
   assert.match(adventure, /You need <b>\$\{gate\.required\} Word Spirits<\/b>/);
   assert.doesNotMatch(adventure, /Silver or better:|requiredPct \* 100/);
@@ -55,6 +55,7 @@ test('Scholar Lantern filters mastered spirits for exactly forty forest steps', 
   const map = read('content/authored/campaign/maps/r1-hub.json');
   const step = encounterStep({ cooldown: 0, zone: null, scholarsLanternSteps: 1 }, map, { x: 2, y: 2 }, () => 0);
   assert.equal(step.scholarsLanternActive, true);
+  assert.equal(step.encounter, false);
   assert.equal(step.state.scholarsLanternSteps, 0);
   const villageStep = encounterStep({ ...step.state, scholarsLanternSteps: 3 }, map, { x: 20, y: 14 }, () => 0);
   assert.equal(villageStep.state.scholarsLanternSteps, 3);

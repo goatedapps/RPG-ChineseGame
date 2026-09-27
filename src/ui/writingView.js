@@ -1,7 +1,8 @@
 import { escapeHtml } from './dom.js';
 import { AUTO_COMPLETE_AFTER_MISSES, normalizeCharacterProgress, recordCharacter, WRITING_STAGES, writingResult } from '../learning/writing.js';
+import { createSpeechController } from '../learning/audio.js';
 
-export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, headerHtml = '', onExit = null } = {}) {
+export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, headerHtml = '', onExit = null, speechRate = 0.85, speech = createSpeechController() } = {}) {
   const characters = [...word.w].filter(character => /\p{Script=Han}/u.test(character));
   let index = 0;
   let anyHelp = false;
@@ -10,7 +11,8 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
   const allFromMemory = stages.every(stage => stage === 2);
   let writer = null;
 
-  const finish = () => onDone({ ...writingResult({ gaveUp: false, usedDemonstration: anyHelp, allFromMemory }), gaveUp: false }, nextProgress);
+  const dictate = () => speech.speak(word.w, { rate: speechRate });
+  const finish = () => { speech.stop(); onDone({ ...writingResult({ gaveUp: false, usedDemonstration: anyHelp, allFromMemory }), gaveUp: false }, nextProgress); };
   const draw = () => {
     const character = characters[index];
     const stage = WRITING_STAGES[stages[index]];
@@ -21,10 +23,8 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
     overlay.open(`<article class="panel writing-panel${headerHtml.includes('battle-question-badge') ? ' battle-question' : ''}${headerHtml.includes('boss-battle-arena') ? ' boss-question' : ''}">
       ${headerHtml}
       <p class="panel-kicker">Writing · ${escapeHtml(stage.name)}</p>
-      ${memoryTask
-        ? `<div class="dictation-clue"><p><small>Meaning</small><b>${escapeHtml(word.m)}</b></p><p><small>Hanyu Pinyin</small><span>${escapeHtml(word.p)}</span></p><p><small>Example sentence</small><span>${escapeHtml(example)}</span></p></div>`
-        : `<div class="question-word"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span></div>`}
-      ${memoryTask ? '' : `<p>Example: ${escapeHtml(word.ex)}</p>`}
+      ${memoryTask ? '' : `<div class="question-word"><b>${escapeHtml(word.w)}</b></div>`}
+      <div class="dictation-clue"><p><small>Meaning</small><b>${escapeHtml(word.m)}</b></p><p><small>Hanyu Pinyin</small><span>${escapeHtml(word.p)}</span></p><p><small>Example sentence</small><span>${escapeHtml(memoryTask ? example : word.ex || 'Example sentence unavailable.')}</span></p><button class="dictation-speak" type="button" data-dictate-word aria-label="Hear the word again" title="Hear the word again">🔊 <span>Hear word</span></button></div>
       <div class="writing-layout"><div class="writing-box" data-writing-box></div><div>
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>
@@ -60,9 +60,12 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       writer.animateCharacter({ onComplete: quiz });
     });
     document.querySelector('[data-writing-exit]')?.addEventListener('click', () => {
+      speech.stop();
       writer.cancelQuiz();
       onExit();
     }, { once: true });
+    document.querySelector('[data-dictate-word]').addEventListener('click', dictate);
+    if (index === 0) dictate();
     quiz();
   };
   draw();

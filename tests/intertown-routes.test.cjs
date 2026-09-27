@@ -17,6 +17,7 @@ test('all six inter-town battlefields are distinct, reachable and tied to their 
       const regionId = `r${number}`;
       const campaign = game.campaigns[regionId];
       const map = campaign.route;
+      assert.ok(map.width * map.height >= 44 * 32 * 1.9, `${map.name} has roughly twice the exploration area`);
       assert.equal(campaign.map.safeTown, true);
       assert.equal(isEncounterTerrain(campaign.map, campaign.map.zones[0].rect.x + 1, campaign.map.zones[0].rect.y + 1), false);
       assert.deepEqual(validateMap(map), [], map.name);
@@ -49,21 +50,31 @@ test('all six inter-town battlefields are distinct, reachable and tied to their 
 
 test('route fog, gate opening and village return positions survive a save migration', async () => {
   const { loadLevelPackage } = await import('../src/content/loader.js');
+  const { isWalkable } = await import('../src/world/map.js');
   const { createFreshState, migrateState } = await import('../src/core/state.js');
   const { routeKey } = await import('../src/systems/regions.js');
   const game = await loadLevelPackage('p5', fetcher, '');
   const state = createFreshState(game);
+  state.player.map = game.campaigns.r1.route.id;
+  state.player.x = 8;
+  state.player.y = 9;
   for (let number = 1; number <= 6; number += 1) {
     state.progress.routes[routeKey(`r${number}`)] = { discovered: [11, 12, 12], gateOpened: true, position: { x: 8, y: 9 }, villagePosition: { x: 12, y: 10 } };
   }
   const migrated = migrateState({ ...state, schemaVersion: 9 }, game);
   for (let number = 1; number <= 6; number += 1) {
     const route = migrated.progress.routes[routeKey(`r${number}`)];
-    assert.deepEqual(route.discovered, [11, 12]);
+    assert.ok(route.discovered.length > 2);
+    assert.ok(route.discovered.every(mark => mark >= 0 && mark < game.campaigns[`r${number}`].route.width * game.campaigns[`r${number}`].route.height));
+    assert.equal(route.mapVersion, 2);
     assert.equal(route.gateOpened, true);
-    assert.deepEqual(route.position, { x: 8, y: 9 });
+    assert.ok(route.position.x > 8 && route.position.y > 9);
     assert.deepEqual(route.villagePosition, { x: 12, y: 10 });
   }
+  assert.ok(isWalkable(game.campaigns.r1.route, migrated.player.x, migrated.player.y));
+  const savedAgain = migrateState(migrated, game);
+  assert.deepEqual(savedAgain.progress.routes, migrated.progress.routes);
+  assert.deepEqual(savedAgain.player, migrated.player);
 });
 
 test('town gates lead to roads while their bosses are only challenged at road pavilions', async () => {
@@ -138,7 +149,7 @@ test('each onward gate plays its opening scene only on first crossing', async ()
   }
 });
 
-test('clearing each later road naturally samples roughly one third of its regional spirits', async () => {
+test('clearing each later road naturally samples roughly two thirds of its regional spirits', async () => {
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { isWalkable } = await import('../src/world/map.js');
   const { isEncounterTerrain, zoneAt } = await import('../src/world/encounters.js');
@@ -185,7 +196,7 @@ test('clearing each later road naturally samples roughly one third of its region
         return total + count * (1 - Math.pow(1 - 1 / count, expectedBattles));
       }, 0);
       const fraction = expectedUnique / regionalWords.length;
-      assert.ok(fraction >= .23 && fraction <= .40, `${level} ${map.name}: ${Math.round(fraction * 100)}% expected spirits`);
+      assert.ok(fraction >= .60 && fraction <= .72, `${level} ${map.name}: ${Math.round(fraction * 100)}% expected spirits`);
     }
   }
 });

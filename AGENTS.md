@@ -74,7 +74,8 @@ Production URLs:
 - Reuse the Atlas panel treatment across navigation and building windows, and use the shared building/gate sprites on both towns and fog routes.
 - Reuse the same optimized Word Spirit emblem for the game header, favicon and install icons.
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
-- Every town is safe; six distinct inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition.
+- Every town is safe; six roughly double-area inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition.
+- Tune normal full-route exploration to sample about two thirds of regional spirits, and verify P2 and P5 pacing in route tests.
 - Keep each route's discovery, gate-opening flag and return position persistent across saves.
 - Keep touch targets at least 44 pixels and support reduced motion.
 - Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.

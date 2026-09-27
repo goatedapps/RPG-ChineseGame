@@ -1,6 +1,6 @@
 [
-  { "id": "rice-ball", "name": "Rice Ball 饭团", "price": 25, "effect": "heal", "amount": 10 },
-  { "id": "instant-noodles", "name": "Instant Noodles 方便面", "price": 50, "effect": "heal", "amount": 20 },
+  { "id": "rice-ball", "name": "Rice Ball 饭团", "price": 25, "effect": "heal", "amount": 10, "healFraction": 0.15 },
+  { "id": "instant-noodles", "name": "Instant Noodles 方便面", "price": 50, "effect": "heal", "amount": 20, "healFraction": 0.3 },
   { "id": "mooncake", "name": "Mooncake 月饼", "price": 80, "effect": "full-heal" },
   { "id": "scholars-lantern", "name": "Scholar's Lantern", "price": 40, "effect": "repel-mastered", "amount": 40 },
   { "id": "ink-pot", "name": "Ink Pot", "price": 40, "effect": "writing-retry" },

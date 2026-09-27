@@ -53,7 +53,7 @@ Each Word Spirit tracks Meaning, Pinyin, Hanzi, Usage and Writing.
 Writing has Trace, Guided and From memory stages using local Hanzi Writer data.
 Keep the four-miss help threshold.
 Open written answers are completed by comparing with a model and self-rating; they are never required to be auto-marked correct.
-Every open response offers “I don’t know.”
+Memory writing and dictation provide “Show me how” without a redundant “I don’t know” action.
 
 Battle questions show only the information needed by the selected attack.
 Dictation hides the target Hanzi and shows only its meaning and pinyin.
@@ -66,6 +66,8 @@ Pinyin, meaning and examples appear in answer feedback.
 The battle arena places the player at lower left and the creature at upper right.
 Show exact HP and relevant attack, defense and evasion values.
 Damage uses attacker stats, defender stats, move bonuses and a small random roll.
+Weak spots, writing, streaks and gear scale attacks by percentage, while Guardian items scale defence and food restores a useful fraction of maximum HP.
+Creatures three or more levels above the hero are deliberately dangerous and no longer grant a fourfold XP shortcut.
 Creature levels and stats rise across Lesson 1, Lesson 2 and Lesson 3 areas.
 Battle XP and coins scale with the creature’s level relative to the player, sharply reducing rewards from weaker creatures.
 Battle XP is half its earlier rate to prevent the hero from outlevelling the region while collecting Spirit cards.
@@ -83,12 +85,14 @@ Scholar Village is the intentionally small tutorial town.
 The Scholar Atlas art treatment covers all seven villages, the fog-route pavilions and gates, and the navigation and building panels with reusable illustrated assets.
 Reusable full-body villager and distinct hero sprites appear on all village maps.
 Six separate battlefields now connect the seven towns, each with three lesson bands, persistent fog, a discoverable boss pavilion and an onward gate.
+The routes have roughly twice their former area, with winding thicket barriers; normal full exploration is tuned to sample roughly two thirds of regional Word Spirits across P2 and P5.
 The five later routes use distinct authored terrain layouts and the shared route renderer and progression rules.
 The map includes School, Reading Hall, Inn, Shop, Storyteller, quest villagers, lore villagers and wandering flavor villagers.
 Tablet movement uses the D-pad over the play area.
 The Next step banner rotates among incomplete tasks every 60 seconds.
 Wild encounters on the roads are random, use a staged transition and play scene music and hit effects.
 Each onward gate plays its illustrated opening once, tracked independently in the save.
+The gate transition slows its opening, then fades in the new village without an explanatory title.
 
 The Region 1 story begins automatically with Grandma Wang's welcome and includes the tutorial battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
 School dictation now offers a regional lesson and 5, 10 or all words; menu dictation offers every curriculum lesson as score-only practice.

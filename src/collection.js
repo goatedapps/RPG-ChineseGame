@@ -43,12 +43,12 @@ function addUnique(list, value) {
 }
 
 function battleItemDescription(item) {
-  if (item.effect === 'heal') return `Restores ${item.amount} HP in battle`;
+  if (item.effect === 'heal') return `Restores at least ${item.amount} HP (${Math.round(item.healFraction * 100)}% max HP) in battle`;
   if (item.effect === 'full-heal') return 'Restores all HP in battle';
   if (item.effect === 'writing-retry') return 'Gives another writing attempt';
   if (item.effect === 'escape') return 'Guarantees escape from battle';
-  if (item.effect === 'attack-boost') return `Adds ${item.amount} attack damage for one battle`;
-  if (item.effect === 'defense-boost') return `Reduces incoming damage by ${item.amount} for one battle`;
+  if (item.effect === 'attack-boost') return `Increases attack damage by ${Math.round(item.amount * 8)}% for one battle`;
+  if (item.effect === 'defense-boost') return `Reduces incoming damage by ${Math.round(item.amount * 8)}% for one battle`;
   if (item.effect === 'repellent') return `Prevents encounters for ${item.amount} forest steps`;
   if (item.effect === 'repel-mastered') return `Avoids Silver and Gold Word Spirits for ${item.amount} forest steps`;
   return item.effect;

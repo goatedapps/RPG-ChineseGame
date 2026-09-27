@@ -48,7 +48,7 @@ test('battle escape uses the authored percentage chance', async () => {
 test('battle rewards rise for stronger creatures and collapse for weak farming', async () => {
   const { battleRewardAmounts, relativeRewardMultiplier } = await import('../src/battle/battle.js');
   const balance = readJson('content/authored/shared/balance.json');
-  assert.equal(relativeRewardMultiplier(4, 7), 4);
+  assert.equal(relativeRewardMultiplier(4, 7), 2);
   assert.equal(relativeRewardMultiplier(7, 4), 0.2);
   const stronger = battleRewardAmounts(4, 7, balance);
   const equal = battleRewardAmounts(4, 4, balance);
@@ -126,7 +126,7 @@ test('schema 2 modular saves migrate without losing progress', async () => {
     progress: { words: { '露营': { collected: true } }, battles: 9 }, settings: { dailyBattles: 20 }
   };
   const migrated = migrateState(old, levelPackage);
-  assert.equal(SAVE_SCHEMA_VERSION, 10);
+  assert.equal(SAVE_SCHEMA_VERSION, 11);
   assert.equal(migrated.player.level, 4);
   assert.equal(migrated.player.coins, 77);
   assert.equal(migrated.progress.words['露营'].collected, true);

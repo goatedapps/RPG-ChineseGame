@@ -78,7 +78,7 @@ test('battle skill hint advances as a spirit masters skills during the encounter
   }
   assert.equal(recommendedSkill(progress), null);
   const gameplay = fs.readFileSync(path.join(root, 'src', 'gameplay.js'), 'utf8');
-  assert.match(gameplay, /function showBattle\(battle, message = ''\) \{\s*const game = active\(\);\s*const recommended = recommendedSkill\(game\.state\.progress\.words\[battle\.word\.w\]\)/);
+  assert.match(gameplay, /function showBattle\(battle, message = ''\) \{[\s\S]*?const recommended = recommendedSkill\(game\.state\.progress\.words\[battle\.word\.w\]\)/);
   assert.doesNotMatch(gameplay, /battle\.recommended/);
 });
 

@@ -77,6 +77,14 @@ function render() {
   const zoneLabel = $('#route-zone-label');
   zoneLabel.hidden = !zone;
   if (zone) zoneLabel.textContent = `${zone.name} · Lesson ${zone.lesson}`;
+  const effects = $('#route-effects');
+  const encounter = active.state.progress.encounter;
+  const activeEffects = active.levelPackage.map.route ? [
+    encounter.repellentSteps > 0 ? `🛡 Forest Repellent · ${encounter.repellentSteps} steps` : '',
+    encounter.scholarsLanternSteps > 0 ? `🏮 Scholar’s Lantern · ${encounter.scholarsLanternSteps} steps` : ''
+  ].filter(Boolean) : [];
+  effects.hidden = activeEffects.length === 0;
+  effects.innerHTML = activeEffects.map(effect => `<span>${escapeHtml(effect)}</span>`).join('');
   updateObjective();
 }
 
@@ -134,11 +142,14 @@ function move(direction) {
     }
     const spot = active.levelPackage.map.route ? null : adventure?.scrollSpot();
     if (spot && result.player.x === spot.x && result.player.y === spot.y) adventure.collectDailyScroll();
-    const encounter = encounterStep(active.state.progress.encounter, active.levelPackage.map, result.player);
+    const previousEffects = active.state.progress.encounter;
+    const encounter = encounterStep(previousEffects, active.levelPackage.map, result.player);
     active.state.progress.encounter = encounter.state;
     if (encounter.entered) toast(`${encounter.entered.name} · Lesson ${encounter.entered.lesson}`);
     persist();
     if (encounter.encounter) gameplay.startBattle(encounter.zone, { scholarsLanternActive: encounter.scholarsLanternActive });
+    const expired = [previousEffects.repellentSteps > 0 && encounter.state.repellentSteps === 0 ? 'Forest Repellent' : '', previousEffects.scholarsLanternSteps > 0 && encounter.state.scholarsLanternSteps === 0 ? 'Scholar’s Lantern' : ''].filter(Boolean);
+    if (expired.length) overlay.open(`<div class="panel result-panel effect-expired"><p class="panel-kicker">Travel effect ended</p><h1>${escapeHtml(expired.join(' and '))} wore off</h1><p>${expired.length > 1 ? 'These effects' : 'This effect'} will no longer protect your next forest steps. You can use another from your Bag.</p><button class="primary" data-close-overlay>Continue exploring</button></div>`);
   } else if (result.interaction) {
     events.emit('world:interaction', result.interaction);
     if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
@@ -274,7 +285,7 @@ async function startLevel(levelId) {
     if (loadResult.state.player.map === levelPackage.campaigns[savedRegionId].route?.id) {
       levelPackage.map = levelPackage.campaigns[savedRegionId].route;
       const key = routeKey(savedRegionId);
-      loadResult.state.progress.routes[key] ||= { discovered: [], gateOpened: false };
+      loadResult.state.progress.routes[key] ||= { discovered: [], gateOpened: false, mapVersion: levelPackage.map.mapVersion };
       loadResult.state.progress.routes[key].discovered = revealRouteTile(levelPackage.map, loadResult.state.progress.routes[key].discovered, loadResult.state.player.x, loadResult.state.player.y);
     }
     if (!isWalkable(levelPackage.map, loadResult.state.player.x, loadResult.state.player.y)) {
@@ -354,7 +365,7 @@ function changeRoute(direction) {
   const routeMap = active.levelPackage.campaigns[regionId].route;
   if (!routeMap) return;
   const key = routeKey(regionId);
-  active.state.progress.routes[key] ||= { discovered: [], gateOpened: false };
+  active.state.progress.routes[key] ||= { discovered: [], gateOpened: false, mapVersion: routeMap.mapVersion };
   const route = active.state.progress.routes[key];
   if (direction === 'back') {
     const gate = routeMap.objects.find(object => object.id === 'next-region-gate');

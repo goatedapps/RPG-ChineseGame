@@ -12,7 +12,7 @@ const MUSIC = {
   defeat: '../assets/audio/need-improvement.mp3',
   victory: '../assets/audio/good-result.mp3'
 };
-const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', earn: '../assets/audio/earn.mp3', hit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', majorReward: '../assets/audio/major-reward.wav', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
+const EFFECTS = { button: '../assets/audio/button.mp3', correct: '../assets/audio/correct.mp3', wrong: '../assets/audio/wrong-answer.mp3', earn: '../assets/audio/earn.mp3', hit: '../assets/audio/creature-hit.wav', playerHit: '../assets/audio/creature-hit.wav', win: '../assets/audio/good-result.mp3', majorReward: '../assets/audio/major-reward.wav', purchase: '../assets/audio/purchase.mp3', bag: '../assets/audio/bag-open.mp3', level: '../assets/audio/level-up.mp3', enterShop: '../assets/audio/enter-shop.mp3' };
 
 export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
   if (!AudioClass) return { unlock() {}, setEnabled() {}, setVisible() {}, setScene() {}, setWorld() {}, sfx() {} };

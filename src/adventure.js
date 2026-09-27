@@ -9,8 +9,8 @@ import { showQuestion } from './ui/questionView.js?p18';
 import { showWritingTask } from './ui/writingView.js?p13';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
-import { calculateDamage, heroStats } from './battle/damage.js';
-import { enemyAttack } from './battle/battle.js';
+import { heroStats } from './battle/damage.js';
+import { enemyAttack, heroDamage } from './battle/battle.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
@@ -20,6 +20,7 @@ import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
 import { routeKey } from './systems/regions.js';
 import { battleQuestionBadge } from './ui/battleBadge.js';
+import { animateBattleHealth } from './ui/battleHealth.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -36,11 +37,11 @@ const FRAGMENT_ART = Object.freeze({
 });
 
 const BOSS_ITEM_COPY = Object.freeze({
-  heal: item => `Restore ${item.amount} HP`,
+  heal: item => `Restore at least ${item.amount} HP (${Math.round(item.healFraction * 100)}% max HP)`,
   'full-heal': () => 'Restore all HP',
   escape: () => 'Leave the boss battle safely',
-  'attack-boost': item => `Add ${item.amount} damage to each successful boss attack`,
-  'defense-boost': item => `Reduce each boss counterattack by ${item.amount} damage`
+  'attack-boost': item => `Increase successful boss attacks by ${Math.round(item.amount * 8)}%`,
+  'defense-boost': item => `Reduce boss counterattacks by ${Math.round(item.amount * 8)}%`
 });
 
 export function splitStoryPage(text) {
@@ -367,7 +368,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const regionLessons = active().levelPackage.config.regionLessons[active().levelPackage.region.id] || [];
     const queue = bossGateQueue(active().levelPackage.content, active().levelPackage.config, regionLessons);
     const boss = createBoss(active().levelPackage.balance, regionLessons);
-    const battle = { queue, ...boss, hp: boss.maxHp, index: 0 };
+    const startingPlayer = active().state.player;
+    const battle = { queue, ...boss, hp: boss.maxHp, index: 0, displayedHealth: [startingPlayer.hp / startingPlayer.maxHp, 1] };
     const arena = () => {
       const game = active();
       const hero = heroStats(game.state.player.level);
@@ -413,38 +415,43 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const task = battle.queue.shift();
       const finish = correct => {
         const game = active();
-        const hero = heroStats(game.state.player.level);
         const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
         let damage = 0;
         if (correct) {
-          damage = calculateDamage({ attack: hero.attack, defense: battle.defense, moveBonus: (task.kind === 'writing' ? 3 + bonuses.skillDamage.w : 2) + (battle.attackBoost || 0), roll: Math.random() * 3 });
+          damage = heroDamage(game.state.player.level, battle, { writing: task.kind === 'writing', bonusDamage: (task.kind === 'writing' ? bonuses.skillDamage.w : 0) + (battle.attackBoost || 0), roll: Math.random() * 3 });
           battle.hp = Math.max(0, battle.hp - damage);
           audio?.sfx('hit');
         } else battle.queue.push(task);
         let counter = { damage: 0, evaded: false };
         if (battle.hp > 0) {
-          counter = enemyAttack({ creature: battle }, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense + (battle.defenseBoost || 0), damageMultiplier: correct ? 0.8 : 1 });
+          counter = enemyAttack({ creature: battle }, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense, defenseBoost: battle.defenseBoost, damageMultiplier: correct ? 0.8 : 1 });
           game.state.player = counter.player;
+          if (counter.damage > 0) audio?.sfx('playerHit');
         }
         if (game.state.player.hp === 0) {
-          game.state.player.hp = game.state.player.maxHp;
-          if (game.levelPackage.map.route) onEnterRoute?.('rest');
-          commit();
-          audio?.setScene('defeat');
-          return overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`), { onClose: () => audio?.setScene('village') });
+          overlay.open(bossPanel('<p class="panel-kicker">The final counterattack</p><h1>Your hero needs a rest</h1>'), { dismissible: false });
+          animateBattleHealth(battle, game.state.player, battle.hp);
+          return setTimeout(() => {
+            game.state.player.hp = game.state.player.maxHp;
+            if (game.levelPackage.map.route) onEnterRoute?.('rest');
+            commit();
+            audio?.setScene('defeat');
+            overlay.open(bossPanel(`<h1>The ${escapeHtml(game.levelPackage.regionStory.bossName || 'Muddle King')} overwhelmed you</h1><p>You woke at the Inn with full HP. Your progress is safe; grow stronger and try again.</p><button class="primary" data-close-overlay>Recover</button>`), { onClose: () => audio?.setScene('village') });
+          }, 650);
         }
         commit();
         const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
         if (battle.hp <= 0) {
           audio?.setScene('victory');
           const bossArt = creatureSvg(game.levelPackage.region.boss, '');
-          overlay.open(`<article class="battle-scene boss-victory-scene"><div class="boss-victory-stage"><div class="boss-victory-hero">${heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero')}</div><div class="boss-victory-boss" aria-hidden="true">${bossArt}</div></div><div class="battle-console"><p class="panel-kicker">Victory</p><h1>${escapeHtml(bossName)} defeated!</h1><p>Your final spell dealt ${damage} damage. The Spirit Brush is ready to be restored.</p><button class="primary" data-boss-victory>Continue the story</button></div></article>`, { dismissible: false });
+          overlay.open(`<article class="battle-scene boss-victory-scene"><div class="boss-victory-stage"><div class="boss-victory-hero">${heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero')}</div><div class="boss-victory-boss boss-split-left" aria-hidden="true">${bossArt}</div><div class="boss-victory-boss boss-split-right" aria-hidden="true">${bossArt}</div><div class="boss-victory-slash" aria-hidden="true"></div></div><div class="battle-console"><p class="panel-kicker">Victory</p><h1>${escapeHtml(bossName)} defeated!</h1><p>Your final spell dealt ${damage} damage. The Spirit Brush is ready to be restored.</p><button class="primary" data-boss-victory>Continue the story</button></div></article>`, { dismissible: false });
           document.querySelector('[data-boss-victory]').addEventListener('click', bossWin, { once: true });
           return;
         }
         const counterText = counter.evaded ? ' You dodged the counterattack.' : ` ${bossName} struck back for ${counter.damage} damage.`;
         const showTurnResult = () => {
           overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>${correct ? `You dealt ${damage} damage. ` : ''}${escapeHtml(bossName)} HP ${battle.hp}/${battle.maxHp}.${counterText}</p><div class="button-row"><button class="primary" data-boss-next>Next spell</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });
+          animateBattleHealth(battle, game.state.player, battle.hp);
           document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
           document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showTurnResult), { once: true });
         };
@@ -456,7 +463,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
           game.state.progress.characters = characters;
           audio?.sfx(result.ok ? 'correct' : 'wrong');
           finish(result.ok);
-        }, { runId: `boss-${Date.now()}-${battle.hp}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: arena() + battleQuestionBadge('attack') });
+        }, { runId: `boss-${Date.now()}-${battle.hp}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, forceMemory: true, headerHtml: arena() + battleQuestionBadge('attack') });
         return;
       }
       if (task.item.format === 'Fill-in') {
@@ -520,7 +527,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (game.levelPackage.map.route && route && !route.gateOpened) {
         route.gateOpened = true;
         commit();
-        await onGateOpening?.();
+        if (onGateOpening) {
+          let switched = false;
+          await onGateOpening(() => { switched = true; onSwitchRegion?.(nextRegionId); });
+          if (!switched) onSwitchRegion?.(nextRegionId);
+          return;
+        }
       }
       onSwitchRegion?.(nextRegionId);
     };
@@ -536,7 +548,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
             game.state.progress.story.flags.gateDictationPassed = true;
             commit();
           }
-          overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Gate dictation</p><h1>${success ? 'The gate opens!' : 'Keep practising'}</h1><p>You wrote <b>${correct}/${count}</b> words correctly from memory. ${success ? `You needed ${pass} to pass.` : `You need ${pass} correct answers to pass. Try again when you are ready.`}</p><div class="button-row">${success ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : '<button class="primary" data-gate-retry>Try again</button>'}<button class="secondary" data-close-overlay>Later</button></div></div>`);
+          overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Gate dictation</p><h1>${success ? 'Gate test passed!' : 'Keep practising'}</h1><p>You wrote <b>${correct}/${count}</b> words correctly from memory. ${success ? `You needed ${pass} to pass.` : `You need ${pass} correct answers to pass. Try again when you are ready.`}</p><div class="button-row">${success ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : '<button class="primary" data-gate-retry>Try again</button>'}<button class="secondary" data-close-overlay>Later</button></div></div>`);
           document.querySelector('[data-travel-next]')?.addEventListener('click', travel, { once: true });
           document.querySelector('[data-gate-retry]')?.addEventListener('click', runGateTest, { once: true });
           return;
@@ -547,7 +559,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
           audio?.sfx(result.ok ? 'correct' : 'wrong');
           if (result.ok) correct += 1;
           next();
-        }, { runId: `gate-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: `<p class="panel-kicker">Gate dictation · ${index}/${count}</p>`, onExit: () => { commit(); overlay.close(); } });
+        }, { runId: `gate-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, forceMemory: true, headerHtml: `<p class="panel-kicker">Gate dictation · ${index}/${count}</p>`, onExit: () => { commit(); overlay.close(); } });
       };
       next();
     };

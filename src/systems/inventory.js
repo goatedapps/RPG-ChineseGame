@@ -4,7 +4,8 @@ export function useConsumable(inventory, itemId) {
 }
 
 export function applyHealing(player, item) {
-  const hp = item.effect === 'full-heal' ? player.maxHp : Math.min(player.maxHp, player.hp + item.amount);
+  const restored = Math.max(item.amount || 0, Math.ceil(player.maxHp * (item.healFraction || 0)));
+  const hp = item.effect === 'full-heal' ? player.maxHp : Math.min(player.maxHp, player.hp + restored);
   return { ...player, hp };
 }
 

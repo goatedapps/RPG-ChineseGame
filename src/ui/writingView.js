@@ -1,7 +1,7 @@
 import { escapeHtml } from './dom.js';
 import { AUTO_COMPLETE_AFTER_MISSES, normalizeCharacterProgress, recordCharacter, WRITING_STAGES, writingResult } from '../learning/writing.js';
 
-export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, headerHtml = '' } = {}) {
+export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, headerHtml = '', onExit = null } = {}) {
   const characters = [...word.w].filter(character => /\p{Script=Han}/u.test(character));
   let index = 0;
   let anyHelp = false;
@@ -28,8 +28,8 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       <div class="writing-layout"><div class="writing-box" data-writing-box></div><div>
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>
-        <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${memoryTask ? (itemIndex === index ? '✎' : '') : itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
-        <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button></div>
+        <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
+        <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button>${onExit ? '<button class="secondary" data-writing-exit type="button">Leave dictation</button>' : ''}</div>
       </div></div>
     </article>`, { dismissible: false });
     const box = document.querySelector('[data-writing-box]');
@@ -59,6 +59,10 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       writer.cancelQuiz();
       writer.animateCharacter({ onComplete: quiz });
     });
+    document.querySelector('[data-writing-exit]')?.addEventListener('click', () => {
+      writer.cancelQuiz();
+      onExit();
+    }, { once: true });
     quiz();
   };
   draw();

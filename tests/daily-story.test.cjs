@@ -47,17 +47,17 @@ test('one deterministic Mystery Scroll can be unlocked per day', async () => {
   assert.equal(duplicate.unlocked[0].title, '露营');
 });
 
-test('Region 1 gate derives 22 percent and also requires the Cave Lantern', async () => {
+test('Region 1 boss gate requires 80 percent Bronze spirits and the Cave Lantern', async () => {
   const { gateStatus } = await import('../src/systems/story.js');
   const content = readJson('content/generated/p5.content.json');
   const config = readJson('content/authored/levels/p5/level.json');
   const words = content.words.filter(word => config.regionLessons.r1.includes(word.lesson));
   assert.equal(words.length, 54);
-  const progress = { words: Object.fromEntries(words.slice(0, 12).map(word => [word.w, silver])) };
-  const closed = gateStatus({ content, config }, progress, { keyItems: [] }, 0.22);
-  assert.equal(closed.required, 12);
+  const progress = { words: Object.fromEntries(words.slice(0, 44).map(word => [word.w, silver])) };
+  const closed = gateStatus({ content, config }, progress, { keyItems: [] }, 0.8);
+  assert.equal(closed.required, 44);
   assert.equal(closed.open, false);
-  assert.equal(gateStatus({ content, config }, progress, { keyItems: ['cave-lantern'] }, 0.22).open, true);
+  assert.equal(gateStatus({ content, config }, progress, { keyItems: ['cave-lantern'] }, 0.8).open, true);
 });
 
 test('all three villager chains expose their authored completion conditions', async () => {

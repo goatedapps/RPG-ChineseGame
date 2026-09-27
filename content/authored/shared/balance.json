@@ -10,7 +10,7 @@
     "bossHpBaseMultiplier": 1.35,
     "bossHpMultiplierPerLevelAfter12": 0.023,
     "bossAttackBonusPerLevelAfter18": 0.18,
-    "battleXp": 24,
+    "battleXp": 12,
     "battleCoins": 8,
     "escapeChance": 0.65
   },

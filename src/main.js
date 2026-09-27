@@ -1,5 +1,5 @@
 import { createEventBus } from './core/events.js';
-import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10e';
+import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10f';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p18';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p22';
@@ -9,17 +9,18 @@ import { createOverlay } from './ui/overlay.js?p10d';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p2';
-import { createGameplay } from './gameplay.js?p28';
-import { createCollection } from './collection.js?p17';
-import { createAdventure } from './adventure.js?p25';
+import { createGameplay } from './gameplay.js?p30';
+import { createCollection } from './collection.js?p18';
+import { createAdventure } from './adventure.js?p26';
 import { createAudioManager } from './core/audio.js?p23';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p21';
 import { localDay } from './core/time.js';
-import { encounterStep } from './world/encounters.js?p17';
+import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
 import { tierOf } from './learning/mastery.js?p10f';
-import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p12';
+import { gateDictationRules } from './systems/dictation.js';
+import { enterRegion, regionIdForMap, saveCurrentRegion } from './systems/regions.js?p13';
 import { regionPathGuide } from './systems/regionGuide.js?p2';
 import { revealRouteTile, routeDiscoveryPercent } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
@@ -112,7 +113,7 @@ function move(direction) {
           persist();
           overlay.dialogue({ title: 'The creatures are asleep', lines: ['You have reached today’s battle limit. Stories, writing, School and the Scroll Library are still open. A parent can add five battles from the Parent Panel.'] });
         } else toast(active.levelPackage.strings.battleCap);
-      } else gameplay.startBattle(encounter.zone);
+      } else gameplay.startBattle(encounter.zone, { scholarsLanternActive: encounter.scholarsLanternActive });
     }
   } else if (result.interaction) {
     events.emit('world:interaction', result.interaction);
@@ -162,6 +163,10 @@ function objectiveTasks() {
   const required = Math.ceil(words.length * game.levelPackage.regionStory.gateBronzePct);
   if (!game.state.progress.story.bossDefeated && bronze < required) tasks.push(`Collect ${required - bronze} more Bronze spirits for ${game.levelPackage.regionStory.bossPlace || 'the boss gate'}.`);
   else if (!game.state.progress.story.bossDefeated) tasks.push(`${game.levelPackage.regionStory.bossPlace || 'The boss gate'} is ready. Challenge the ${game.levelPackage.regionStory.bossName || 'Muddle King'}!`);
+  else if (game.levelPackage.campaigns[`r${Number(game.levelPackage.region.id.slice(1)) + 1}`] && !game.state.progress.story.flags.gateDictationPassed) {
+    const { count, pass } = gateDictationRules(game.state.settings);
+    tasks.push(`Pass the gate dictation: write ${pass} of ${count} regional words from memory.`);
+  }
   return tasks.length ? tasks : [`${game.levelPackage.region.name} is restored. Keep turning spirits Gold.`];
 }
 

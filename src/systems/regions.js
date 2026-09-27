@@ -1,11 +1,11 @@
-import { createStoryState, normalizeStory } from './story.js?p11';
+import { createStoryState, normalizeStory } from './story.js?p18';
 
 function freshReading() {
   return { completed: [], active: null, index: 0, questionCount: 0, results: {}, written: [] };
 }
 
 function freshEncounter() {
-  return { cooldown: 3, zone: null, capNoticeDay: '', repellentSteps: 0 };
+  return { cooldown: 3, zone: null, capNoticeDay: '', repellentSteps: 0, scholarsLanternSteps: 0 };
 }
 
 export function saveCurrentRegion(state, regionId) {

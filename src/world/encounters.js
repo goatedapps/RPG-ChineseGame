@@ -13,17 +13,21 @@ export function isEncounterTerrain(map, x, y) {
 export function encounterStep(value, map, player, random = Math.random) {
   const zone = zoneAt(map, player.x, player.y);
   const previous = value || { cooldown: 0, zone: null, capNoticeDay: '' };
-  if (!isEncounterTerrain(map, player.x, player.y)) return { state: { ...previous, zone: null }, zone: null, entered: null, encounter: false };
+  if (!isEncounterTerrain(map, player.x, player.y)) return { state: { ...previous, zone: null }, zone: null, entered: null, encounter: false, scholarsLanternActive: false };
   const entered = previous.zone === zone.id ? null : zone;
   const cooldown = Math.max(0, Number(previous.cooldown || 0) - 1);
   const repellentSteps = Math.max(0, Number(previous.repellentSteps || 0));
-  if (repellentSteps > 0) return { state: { ...previous, zone: zone.id, cooldown, repellentSteps: repellentSteps - 1 }, zone, entered, encounter: false };
+  const scholarsLanternSteps = Math.max(0, Number(previous.scholarsLanternSteps || 0));
+  const scholarsLanternActive = scholarsLanternSteps > 0;
+  const state = { ...previous, zone: zone.id, cooldown, scholarsLanternSteps: Math.max(0, scholarsLanternSteps - 1) };
+  if (repellentSteps > 0) return { state: { ...state, repellentSteps: repellentSteps - 1 }, zone, entered, encounter: false, scholarsLanternActive };
   const encounter = cooldown === 0 && random() < (zone.encounter?.rate ?? 0.16);
   return {
-    state: { ...previous, zone: zone.id, cooldown: encounter ? Math.max(3, zone.encounter?.cooldown || 3) : cooldown },
+    state: { ...state, cooldown: encounter ? Math.max(3, zone.encounter?.cooldown || 3) : cooldown },
     zone,
     entered,
-    encounter
+    encounter,
+    scholarsLanternActive
   };
 }
 

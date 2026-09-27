@@ -60,6 +60,27 @@ test('selection excludes resting Gold words and favours missing words', async ()
   assert.equal(selectWord(words, progress, { day: '2026-09-23', random: () => 0.9 }).w, '乙');
 });
 
+test('battle skill hint advances as a spirit masters skills during the encounter', async () => {
+  const { recommendedSkill } = await import('../src/learning/selection.js');
+  const { recordAnswer } = await import('../src/learning/mastery.js');
+  const day = '2026-09-27';
+  let progress = { collected: false };
+  assert.equal(recommendedSkill(progress), 'm');
+  progress = recordAnswer(progress, { skill: 'm', correct: true, day }).progress;
+  assert.equal(recommendedSkill(progress), 'p');
+  progress = recordAnswer(progress, { skill: 'p', correct: false, day }).progress;
+  assert.equal(recommendedSkill(progress), 'p');
+  progress = recordAnswer(progress, { skill: 'p', correct: true, day, assisted: true }).progress;
+  assert.equal(recommendedSkill(progress), 'p');
+  for (const skill of ['p', 'h', 'u', 'w']) {
+    progress = recordAnswer(progress, { skill, correct: true, day }).progress;
+  }
+  assert.equal(recommendedSkill(progress), null);
+  const gameplay = fs.readFileSync(path.join(root, 'src', 'gameplay.js'), 'utf8');
+  assert.match(gameplay, /function showBattle\(battle, message = ''\) \{\s*const game = active\(\);\s*const recommended = recommendedSkill\(game\.state\.progress\.words\[battle\.word\.w\]\)/);
+  assert.doesNotMatch(gameplay, /battle\.recommended/);
+});
+
 test('all four generated MCQ skills produce a valid answer for P2 and P5 words', async () => {
   const { checkAnswer, makeQuestion } = await import('../src/learning/questions.js');
   for (const level of ['p2', 'p5']) {

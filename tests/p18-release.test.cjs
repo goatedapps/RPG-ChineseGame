@@ -102,7 +102,7 @@ test('parent testing shortcuts keep inputs separate from right-aligned action bu
   assert.match(styles, /\.parent-shortcut-button \{[^}]*justify-self: end/);
 });
 
-test('minimum Silver-gate playthrough reaches every boss and enters tougher regions slightly below their creatures', async () => {
+test('80-percent Bronze playthrough reaches every boss and enters tougher regions below their creatures', async () => {
   const { auditLevel } = await import('../tools/audit-progression.mjs');
   const { xpToNextLevel } = await import('../src/core/progression.js');
   assert.equal(xpToNextLevel(1), 30);
@@ -114,7 +114,7 @@ test('minimum Silver-gate playthrough reaches every boss and enters tougher regi
       assert.ok(row.gate, `${levelId} ${row.region}: Bronze and key-item boss gate`);
       assert.ok(row.bossOutcome.won, `${levelId} ${row.region}: boss must be beatable without optional purchases`);
       assert.ok(row.bossOutcome.turns >= 3 && row.bossOutcome.turns <= 8, `${levelId} ${row.region}: boss should take several correct spells`);
-      if (row.nextMinimum != null) assert.ok(row.nextGap >= 1 && row.nextGap <= 3, `${levelId} ${row.region}: hero ${row.hero}, next creature ${row.nextMinimum}`);
+      if (row.nextMinimum != null) assert.ok(row.nextGap >= 1 && row.nextGap <= 4, `${levelId} ${row.region}: hero ${row.hero}, next creature ${row.nextMinimum}`);
     }
   }
 });
@@ -141,7 +141,7 @@ test('a seven-region state journey can collect keys, defeat each boss, travel an
       }
       const lessons = config.regionLessons[regionId];
       const words = content.words.filter(word => lessons.includes(word.lesson));
-      const required = Math.ceil(words.length * story.nextRegionSilverPct);
+      const required = Math.ceil(words.length * story.gateBronzePct);
       for (const word of words.slice(0, required)) state.progress.words[word.w] = { collected: true, ticks: { m: 1, p: 1, h: 1 } };
       const key = story.readingKeyItem || 'cave-lantern';
       const reading = completePassage(state.progress.reading, `${regionId}-passage`, key, state.progress.inventory);
@@ -154,7 +154,8 @@ test('a seven-region state journey can collect keys, defeat each boss, travel an
       state.progress.story = result.story;
       assert.ok(result.story.bossDefeated, `${levelId} ${regionId}: boss completion`);
       if (number < 7) {
-        assert.ok(required <= words.filter(word => ['m', 'p', 'h'].every(skill => state.progress.words[word.w]?.ticks?.[skill])).length);
+        assert.ok(required >= 15);
+        result.story.flags.gateDictationPassed = true;
         state.settings.unlockedRegions = number + 1;
       } else assert.ok(result.rewards.includes('final-stroke'), `${levelId}: final ending reward`);
     }

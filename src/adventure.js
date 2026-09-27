@@ -3,10 +3,10 @@ import { tierOf } from './learning/mastery.js?p10f';
 import { checkPassageAnswer } from './systems/reading.js?p10f';
 import { regionPathGuide } from './systems/regionGuide.js';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
-import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p17';
+import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p18';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p17b';
-import { showWritingTask } from './ui/writingView.js?p12b';
+import { showWritingTask } from './ui/writingView.js?p12d';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { calculateDamage, heroStats } from './battle/damage.js';
@@ -17,6 +17,7 @@ import { creatureSvg } from './battle/creatureArt.js?p10n';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
+import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -35,7 +36,6 @@ const FRAGMENT_ART = Object.freeze({
 const BOSS_ITEM_COPY = Object.freeze({
   heal: item => `Restore ${item.amount} HP`,
   'full-heal': () => 'Restore all HP',
-  'remove-option': () => 'Remove one wrong choice from the next multiple-choice spell',
   escape: () => 'Leave the boss battle safely',
   'attack-boost': item => `Add ${item.amount} damage to each successful boss attack`,
   'defense-boost': item => `Reduce each boss counterattack by ${item.amount} damage`
@@ -207,6 +207,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const game = active();
     const story = normalizeStory(game.state.progress.story);
     game.state.progress.story = story;
+    const gateRules = gateDictationRules(game.state.settings);
+    const gateTask = story.flags.gateDictationPassed ? '✓ Gate dictation passed' : `○ Gate dictation: ${gateRules.pass} correct out of ${gateRules.count}`;
     if (!story.flags.arrival) return playScene('arrival', storyJournal);
     if (game.levelPackage.region.id !== 'r1') {
       const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
@@ -214,7 +216,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const regionNumber = Number(game.levelPackage.region.id.slice(1));
       const requestTotal = Object.keys(game.levelPackage.regionStory.requests).length;
       const fragmentName = game.levelPackage.regionStory.fragmentName || 'Truth Stroke';
-      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p><p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p></div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>Return to previous region</button></div></div>`);
+      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p><p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>Return to previous region</button></div></div>`);
       document.querySelector('[data-travel-previous]').addEventListener('click', () => onSwitchRegion?.(`r${regionNumber - 1}`));
       return;
     }
@@ -225,7 +227,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       overlay.open('<div class="panel result-panel"><h1>The adventure begins</h1><p>Visit the Storyteller to hear the first village story, then explore Camping Forest.</p><button class="primary" data-close-overlay>Explore</button></div>');
     });
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>Explore Mistwood Road through the north village gate; discover the Muddle Pavilion and the eastern town gate.</p><p>${gate.open ? '✓ Muddle Pavilion ready' : `○ Muddle Pavilion: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p></div>${pathGuideMarkup(game)}${story.bossDefeated ? '<div class="button-row"><button class="secondary" data-museum>Mistake Museum</button></div>' : ''}</div>`);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>Explore Mistwood Road through the north village gate; discover the Muddle Pavilion and the eastern town gate.</p><p>${gate.open ? '✓ Muddle Pavilion ready' : `○ Muddle Pavilion: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p><p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p></div>${pathGuideMarkup(game)}${story.bossDefeated ? '<div class="button-row"><button class="secondary" data-museum>Mistake Museum</button></div>' : ''}</div>`);
     document.querySelector('[data-museum]')?.addEventListener('click', mistakeMuseum);
   }
 
@@ -352,11 +354,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
-    const percent = Math.round(gate.bronze / gate.total * 100);
     const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
     const place = game.levelPackage.regionStory.bossPlace || 'Muddle Cave';
     const keyName = game.levelPackage.regionStory.gateKeyName || 'Cave Lantern';
-    overlay.open(`<div class="panel"><p class="panel-kicker">${escapeHtml(place)} gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>Bronze or better: <b>${gate.bronze}/${gate.total} (${percent}%)</b> · Need ${Math.round(gate.requiredPct * 100)}% (${gate.required} spirits).</p><p>${escapeHtml(keyName)}: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? `<button class="primary" data-boss-start>Challenge ${escapeHtml(bossName)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    overlay.open(`<div class="panel"><p class="panel-kicker">${escapeHtml(place)} gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>You need <b>${gate.required} Word Spirits</b> at Bronze or better. You have ${gate.bronze}.</p><p>${escapeHtml(keyName)}: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? `<button class="primary" data-boss-start>Challenge ${escapeHtml(bossName)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
     document.querySelector('[data-boss-start]')?.addEventListener('click', startBoss, { once: true });
   }
 
@@ -389,7 +390,6 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         if (!consumed.ok) return;
         game.state.progress.inventory = consumed.inventory;
         if (item.effect === 'heal' || item.effect === 'full-heal') game.state.player = applyHealing(game.state.player, item);
-        if (item.effect === 'remove-option') battle.lantern = true;
         if (item.effect === 'attack-boost') battle.attackBoost = Math.max(battle.attackBoost || 0, item.amount || 1);
         if (item.effect === 'defense-boost') battle.defenseBoost = Math.max(battle.defenseBoost || 0, item.amount || 1);
         if (item.effect === 'escape') {
@@ -464,11 +464,6 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         return;
       }
       const question = makeExamQuestion(task.item);
-      if (battle.lantern && question.options.length > 2) {
-        const wrong = question.options.find(option => option !== question.correct);
-        question.options = question.options.filter(option => option !== wrong);
-        battle.lantern = false;
-      }
       showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena(), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
     const showBossReady = () => {
@@ -506,13 +501,13 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const nextCampaign = game.levelPackage.campaigns[nextRegionId];
     if (!nextCampaign) return overlay.dialogue({ title: 'The road ahead', lines: ['This road will open in a future chapter.'] });
     const words = regionWords(game.levelPackage);
-    const silver = words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word.w]))).length;
-    const required = Math.ceil(words.length * game.levelPackage.regionStory.nextRegionSilverPct);
+    const { count, pass } = gateDictationRules(game.state.settings);
+    const available = gateDictationPool(words, game.state.progress.words).length;
     const fragmentReady = Boolean(game.state.progress.story.bossDefeated);
-    const ready = (silver >= required && fragmentReady) || game.state.settings.testMode;
+    const passed = Boolean(game.state.progress.story.flags.gateDictationPassed);
+    const ready = (fragmentReady && passed) || game.state.settings.testMode;
     const fragmentName = game.levelPackage.regionStory.fragmentName || (currentNumber === 1 ? 'Dawn Stroke' : 'Truth Stroke');
-    overlay.open(`<div class="panel"><p class="panel-kicker">Road to ${escapeHtml(nextCampaign.region.name)}</p><h1>${fragmentReady ? `${escapeHtml(fragmentName)} restored` : `Defeat the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</h1><p>Silver or better: <b>${silver}/${words.length}</b> · Need ${Math.round(game.levelPackage.regionStory.nextRegionSilverPct * 100)}% (${required}) before Region ${nextNumber}. Gold spirits are optional bonuses.</p><div class="button-row">${ready ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
-    document.querySelector('[data-travel-next]')?.addEventListener('click', async () => {
+    const travel = async () => {
       game.state.settings.unlockedRegions = Math.max(nextNumber, game.state.settings.unlockedRegions);
       if (game.levelPackage.region.id === 'r1' && game.levelPackage.map.route && !game.state.progress.routes?.r1r2?.gateOpened) {
         game.state.progress.routes.r1r2.gateOpened = true;
@@ -520,7 +515,36 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         await onGateOpening?.();
       }
       onSwitchRegion?.(nextRegionId);
-    }, { once: true });
+    };
+    const runGateTest = () => {
+      const testWords = chooseGateDictationWords(words, game.state.progress.words, count);
+      if (testWords.length < count) return toast(`Collect ${count - testWords.length} more regional Word Spirits before the gate test.`);
+      let index = 0;
+      let correct = 0;
+      const next = () => {
+        if (index === testWords.length) {
+          const success = correct >= pass;
+          if (success) {
+            game.state.progress.story.flags.gateDictationPassed = true;
+            commit();
+          }
+          overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Gate dictation</p><h1>${success ? 'The gate opens!' : 'Keep practising'}</h1><p>You wrote <b>${correct}/${count}</b> words correctly from memory. ${success ? `You needed ${pass} to pass.` : `You need ${pass} correct answers to pass. Try again when you are ready.`}</p><div class="button-row">${success ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : '<button class="primary" data-gate-retry>Try again</button>'}<button class="secondary" data-close-overlay>Later</button></div></div>`);
+          document.querySelector('[data-travel-next]')?.addEventListener('click', travel, { once: true });
+          document.querySelector('[data-gate-retry]')?.addEventListener('click', runGateTest, { once: true });
+          return;
+        }
+        const word = testWords[index++];
+        showWritingTask(overlay, word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
+          game.state.progress.characters = characters;
+          if (result.ok) correct += 1;
+          next();
+        }, { runId: `gate-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: `<p class="panel-kicker">Gate dictation · ${index}/${count}</p>`, onExit: () => { commit(); overlay.close(); } });
+      };
+      next();
+    };
+    overlay.open(`<div class="panel"><p class="panel-kicker">Road to ${escapeHtml(nextCampaign.region.name)}</p><h1>${fragmentReady ? `${escapeHtml(fragmentName)} restored` : `Defeat the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</h1><p>${ready ? 'The gate is open.' : `Pass a ${count}-word dictation from memory: ${pass} correct answers are needed.`}</p>${!ready && fragmentReady && available < count ? `<p>Collect ${count - available} more regional Word Spirits before the test.</p>` : ''}<div class="button-row">${ready ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : fragmentReady && available >= count ? '<button class="primary" data-gate-test>Begin gate dictation</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    document.querySelector('[data-travel-next]')?.addEventListener('click', travel, { once: true });
+    document.querySelector('[data-gate-test]')?.addEventListener('click', runGateTest, { once: true });
   }
 
   function regionalRequest(id) {

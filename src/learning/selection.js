@@ -20,9 +20,12 @@ export function selectWord(words, progressByWord, { day, random = Math.random } 
   return candidates.at(-1).word;
 }
 
-export function recommendedSkill(progressValue, day) {
+export function recommendedSkill(progressValue) {
   const progress = normalizeWordProgress(progressValue);
   const available = Object.keys(progress.ticks).filter(skill => progress.ticks[skill] < SKILL_TICKS_REQUIRED);
-  if (available.length) return available[0];
-  return Object.keys(progress.ticks).reduce((best, skill) => progress.ticks[skill] < progress.ticks[best] ? skill : best, 'm');
+  return available[0] ?? null;
+}
+
+export function eligibleBattleWords(words, progressByWord, avoidMastered = false) {
+  return avoidMastered ? words.filter(word => !['silver', 'gold'].includes(tierOf(progressByWord[word.w]))) : words;
 }

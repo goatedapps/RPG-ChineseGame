@@ -68,12 +68,14 @@ Show exact HP and relevant attack, defense and evasion values.
 Damage uses attacker stats, defender stats, move bonuses and a small random roll.
 Creature levels and stats rise across Lesson 1, Lesson 2 and Lesson 3 areas.
 Battle XP and coins scale with the creature’s level relative to the player, sharply reducing rewards from weaker creatures.
+Battle XP is half its earlier rate to prevent the hero from outlevelling the region while collecting Spirit cards.
 All three areas remain accessible from the start so difficulty, rather than a lock, guides progression.
 
 The shop includes consumables, gear and lesson bait.
 Lesson bait lets the player select the exact missing spirit to attract.
-The Muddle Cave gate requires the configured percentage of distinct Bronze-or-better regional words plus the Cave Lantern.
-Onward region progression uses Silver-or-better words; Gold is an optional mastery bonus.
+Each boss gate requires 80% of distinct regional Word Spirits at Bronze or better plus that region's reading key; the game shows the required number, not a percentage.
+After the boss, the onward gate uses a 15-word from-memory dictation with 13 correct required by default; parents can configure both values, and a pass persists for that region.
+Scholar's Lantern prevents Silver and Gold spirits from appearing for 40 forest steps, while Forest Repellent prevents all encounters for 40 forest steps.
 
 ## Region 1 gameplay
 
@@ -208,7 +210,7 @@ Automated checks cover packaged offline assets, save recovery, migration, export
 Regional music now loads only when played, reducing unnecessary startup requests.
 P2 and P5 loaded without browser errors in a local in-app-browser smoke check; a portrait-tablet viewport had no horizontal overflow and visible controls met the 44-pixel target size.
 Local Lighthouse accessibility scored 100 for both P2 and P5 after the objective contrast fix.
-The minimum-progress audit models 70% Silver cards, one battle and two correct practice answers per card, confirms all seven bosses are beatable without optional purchases, and enters each next region 1–3 levels below its first creatures.
+The minimum-progress audit models 80% Bronze cards, one battle and two correct practice answers per card, confirms all seven bosses are beatable without optional purchases, and enters each next region 1–4 levels below its first creatures.
 The first-paint loading screen shows the illustrated walking hero and waits for the opening art to decode before revealing the prologue.
 Older-iPad verification and a human audio/content proofread remain open.
 The hosted PWA is the release format; double-click `file://` support does not justify a second single-file build because the modular game and content loading require HTTP.

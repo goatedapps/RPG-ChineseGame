@@ -8,37 +8,37 @@ import { gearBonuses } from './systems/gear.js';
 import { partnerBonuses, partnerMove } from './systems/partners.js?p10f';
 import { battlesLeft, useBattle } from './systems/energy.js';
 import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, setTestingPlayerLevel, weeklySummary } from './systems/parent.js?p15';
-import { weightedCreature } from './world/encounters.js?p10d';
-import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10e';
+import { weightedCreature } from './world/encounters.js?p10e';
+import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10f';
 import { xpToNextLevel } from './core/progression.js';
 import { checkPassageAnswer, completePassage, normalizeReading, repairActiveReading, selectPassage } from './systems/reading.js?p10g';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
-import { chooseDictationWords, dictationLessons, dictationResult } from './systems/dictation.js';
+import { chooseDictationWords, dictationLessons, dictationResult, gateDictationRules } from './systems/dictation.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
 import { makeExamQuestion, makeQuestion } from './learning/questions.js';
 import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILLS, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './learning/mastery.js?p10f';
-import { recommendedSkill, selectWord } from './learning/selection.js?p10f';
+import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/selection.js?p10h';
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p17c';
-import { showWritingTask } from './ui/writingView.js?p12c';
+import { showWritingTask } from './ui/writingView.js?p12d';
 import { createSpeechController } from './learning/audio.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
 
 const SHOP_ITEM_COPY = Object.freeze({
   heal: item => `Restore ${item.amount} HP during battle`,
   'full-heal': () => 'Restore all HP during battle',
-  'remove-option': () => 'Remove one wrong answer choice',
   'writing-retry': () => 'Retry one writing challenge safely',
   escape: () => 'Guarantee a safe escape from battle',
-  'double-coins': () => 'Double the coins from one battle',
   'attack-boost': item => `Add ${item.amount} attack damage for one battle`,
   'defense-boost': item => `Reduce incoming damage by ${item.amount} for one battle`,
-  repellent: item => `Prevent forest encounters for ${item.amount} forest steps`
+  repellent: item => `Prevent forest encounters for ${item.amount} forest steps`,
+  'repel-mastered': item => `Avoid Silver and Gold Word Spirits for ${item.amount} forest steps`
 });
 
 const itemDescription = item => (SHOP_ITEM_COPY[item.effect]?.(item) || item.effect);
 const itemIcon = id => `../assets/images/shop/${id}.webp`;
+const BAIT_PRICE = 10;
 const rewardArt = (id, name) => `<div class="major-reward"><img src="../assets/images/rewards/${id}.webp" alt="${escapeHtml(name)}"><div><p class="panel-kicker">Major reward</p><h1>${escapeHtml(name)} received!</h1></div></div>`;
 const passageRewardArt = (id, name) => id === 'cave-lantern' ? rewardArt('cave-lantern', 'Cave Lantern') : rewardArt(id, name);
 const passageScroll = text => `<div class="passage-art"><div class="passage-text" role="region" aria-label="Passage text" tabindex="0">${escapeHtml(text).replaceAll('\n', '<br>')}</div></div>`;
@@ -137,20 +137,15 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       return;
     }
     const question = makeBattleQuestion(battle.word, skill, game.levelPackage.content.words);
-    const assisted = Boolean(battle.lantern);
-    if (battle.lantern && question.options.length > 2) {
-      const wrong = question.options.find(option => option !== question.correct);
-      question.options = question.options.filter(option => option !== wrong);
-      battle.lantern = false;
-    }
     showQuestion(overlay, question, null, result => {
-      recordWord(battle.word, skill, result.ok, assisted, false);
+      recordWord(battle.word, skill, result.ok, false, false);
       done(result.ok, skill);
     }, { title: SKILLS[skill].action, revealWord: battle.word, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: word => speech.speak(`${word.w}。${word.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
   }
 
   function showBattle(battle, message = '') {
     const game = active();
+    const recommended = recommendedSkill(game.state.progress.words[battle.word.w]);
     const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
     const hero = heroStats(game.state.player.level);
     const lead = game.levelPackage.content.words.find(word => word.id === game.state.progress.partners[0]);
@@ -161,7 +156,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <div class="battle-enemy ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="battle-nameplate"><b>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</b><small>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</small><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><strong>HP ${battle.enemyHp}/${battle.creature.maxHp}</strong></div><div class="creature-art">${creatureSvg(battle.creature.id, '？')}</div></div>
       </div>
       <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
-        <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === battle.recommended ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === battle.recommended ? ' · useful now' : ''}</span></button>`).join('')}</div>
+        <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === recommended ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === recommended ? ' · useful now' : ''}</span></button>`).join('')}</div>
         <div class="button-row"><button class="secondary" data-bag type="button">Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button">${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button">Try to run</button></div>
       </div>
     </article>`, { dismissible: false });
@@ -248,7 +243,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function battleBag(battle) {
     const game = active();
-    const owned = game.levelPackage.items.filter(item => item.effect !== 'repellent' && game.state.progress.inventory[item.id] > 0);
+    const owned = game.levelPackage.items.filter(item => !['repellent', 'repel-mastered'].includes(item.effect) && game.state.progress.inventory[item.id] > 0);
     overlay.open(`<div class="panel"><p class="panel-kicker">Battle bag</p><h1>Choose an item</h1><div class="service-grid">${owned.map(item => `<button data-use-item="${item.id}"><b>${escapeHtml(item.name)} × ${game.state.progress.inventory[item.id]}</b><span>${escapeHtml(itemDescription(item))}</span></button>`).join('') || '<p>Your battle bag is empty.</p>'}</div><div class="button-row"><button class="secondary" data-back-battle>Back</button></div></div>`, { dismissible: false });
     document.querySelector('[data-back-battle]').addEventListener('click', () => showBattle(battle));
     for (const button of document.querySelectorAll('[data-use-item]')) button.addEventListener('click', () => {
@@ -257,9 +252,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (!consumed.ok) return;
       game.state.progress.inventory = consumed.inventory;
       if (item.effect === 'heal' || item.effect === 'full-heal') game.state.player = applyHealing(game.state.player, item);
-      if (item.effect === 'remove-option') battle.lantern = true;
       if (item.effect === 'writing-retry') battle.inkRetry = true;
-      if (item.effect === 'double-coins') battle.doubleCoins = true;
       if (item.effect === 'attack-boost') battle.attackBoost = Math.max(battle.attackBoost || 0, item.amount || 1);
       if (item.effect === 'defense-boost') battle.defenseBoost = Math.max(battle.defenseBoost || 0, item.amount || 1);
       if (item.effect === 'escape') { commit(); overlay.close(); audio?.setScene('village'); toast('The Smoke Ball carried you safely home.'); return; }
@@ -280,7 +273,6 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.player = gainBattleRewards(game.state.player, game.levelPackage.balance, rewards);
     const variantCoins = battle.creature.variant === 'elite' ? 6 : battle.creature.variant === 'golden' ? 12 : 0;
     game.state.player.coins += variantCoins;
-    if (battle.doubleCoins) game.state.player.coins += baseRewards.coins;
     const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf', 'ribbon-rat': 'ribbon-knot', 'drum-gremlin': 'drum-hide', 'spark-kite': 'spark-tassel', 'quarrel-macaque': 'jade-bead', 'boastful-lion': 'lion-bell', 'glyph-beetle': 'glyph-shard', 'bone-owl': 'bone-feather', 'ink-vine': 'ink-leaf', 'relic-tortoise': 'relic-scale', 'whisper-moss': 'memory-moss' };
     const material = materialByCreature[battle.creature.id];
     const pouch = game.state.progress.inventory['material-pouch'] ? 2 : 1;
@@ -290,7 +282,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     commit();
     audio?.sfx(game.state.player.level > beforeLevel.level ? 'level' : 'win');
     audio?.setScene('village');
-    const coinsAwarded = baseRewards.coins * (battle.doubleCoins ? 2 : 1) + variantCoins;
+    const coinsAwarded = baseRewards.coins + variantCoins;
     overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay type="button">Continue exploring</button></div>`);
   }
 
@@ -307,24 +299,25 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you to the Inn. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`, { onClose: () => audio?.setScene('village') });
   }
 
-  function startBattle(zoneOrLesson) {
+  function startBattle(zoneOrLesson, { scholarsLanternActive = false } = {}) {
     const game = active();
     const zone = typeof zoneOrLesson === 'object' ? zoneOrLesson : null;
     const lesson = zone?.lesson || zoneOrLesson;
     const cap = game.state.settings.dailyBattles;
     const energy = useBattle(game.state.progress.energy, localDay(), cap);
     if (!energy.allowed) return toast(game.levelPackage.strings.battleCap);
-    const baitIndex = game.state.progress.baits.findIndex(bait => bait.lesson === lesson);
-    const bait = baitIndex >= 0 ? game.state.progress.baits.splice(baitIndex, 1)[0] : null;
-    const word = bait ? wordsForLesson(lesson).find(candidate => candidate.w === bait.word) : selectWord(wordsForLesson(lesson), game.state.progress.words, { day: localDay() });
+    const eligibleWords = eligibleBattleWords(wordsForLesson(lesson), game.state.progress.words, scholarsLanternActive);
+    const baitIndex = game.state.progress.baits.findIndex(bait => bait.lesson === lesson && eligibleWords.some(candidate => candidate.w === bait.word));
+    const bait = baitIndex >= 0 ? game.state.progress.baits[baitIndex] : null;
+    const word = bait ? eligibleWords.find(candidate => candidate.w === bait.word) : selectWord(eligibleWords, game.state.progress.words, { day: localDay() });
     if (!word) return toast(game.levelPackage.strings.peaceful);
+    if (baitIndex >= 0) game.state.progress.baits.splice(baitIndex, 1);
     const creature = createCreature(lesson, game.levelPackage.balance, Math.random, weightedCreature(zone?.encounter?.types));
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
     battle.review = isReviewDue(game.state.progress.words[word.w], localDay());
     battle.reviewFailed = false;
-    battle.recommended = recommendedSkill(game.state.progress.words[word.w], localDay());
     commit();
     audio?.setScene('battle');
     const transition = document.createElement('div');
@@ -466,7 +459,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         clean += result.ok ? 1 : 0;
         lesson3Clean += result.ok && word.lesson === 3 ? 1 : 0;
         next();
-      }, { runId: `dictation-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: `<p class="panel-kicker">${schoolMode ? 'School dictation' : 'All-lesson dictation'} · ${index}/${words.length}</p>` });
+      }, { runId: `dictation-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: `<p class="panel-kicker">${schoolMode ? 'School dictation' : 'All-lesson dictation'} · ${index}/${words.length}</p>`, onExit: () => { commit(); overlay.close(); } });
     };
     next();
   }
@@ -663,9 +656,14 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   function shop() {
     const game = active();
     const shopItems = game.levelPackage.items;
+    const travelSupplies = shopItems.filter(item => item.effect !== 'repel-mastered');
+    const lanterns = shopItems.filter(item => item.effect === 'repel-mastered');
     const redCap = game.levelPackage.gear.find(gear => gear.id === 'red-cap');
     const shopName = game.levelPackage.map.objects.find(object => object.id === 'shop-door')?.interaction?.title || 'Shop';
-    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${shopItems.map(item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>35 coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < 35 ? 'disabled' : ''}>Choose</button></article>`).join('')}<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article></div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`);
+    const itemCard = item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`;
+    const baitCards = game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>${BAIT_PRICE} coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < BAIT_PRICE ? 'disabled' : ''}>Choose</button></article>`).join('');
+    const gearCard = `<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article>`;
+    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${travelSupplies.map(itemCard).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${baitCards}${lanterns.map(itemCard).join('')}${gearCard}</div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`);
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
       const bought = buyItem(game.state.player, game.state.progress.inventory, item.id, item);
@@ -690,11 +688,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   function baitPicker(lesson) {
     const game = active();
     const words = wordsForLesson(lesson).sort((a, b) => Number(Boolean(game.state.progress.words[a.w]?.collected)) - Number(Boolean(game.state.progress.words[b.w]?.collected)));
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Lesson ${lesson} bait</p><h1>Choose a Word Spirit</h1></div><button class="secondary" data-back-shop>Back</button></div><p>The chosen spirit will appear in your next encounter in this lesson's zone.</p><div class="spirit-grid">${words.map(word => `<button class="spirit-card" data-bait-word="${escapeHtml(word.w)}"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span><small>${game.state.progress.words[word.w]?.collected ? 'Collected' : 'Missing spirit'}</small></button>`).join('')}</div></div>`);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Lesson ${lesson} bait</p><h1>Choose a Word Spirit</h1></div><button class="secondary" data-back-shop>Back</button></div><p>The chosen spirit will appear in your next encounter in this lesson's zone. Each bait costs ${BAIT_PRICE} coins.</p><p class="bait-legend"><span class="bait-key missing">Missing spirit</span><span class="bait-key collected">Already collected</span></p><div class="spirit-grid">${words.map(word => { const collected = Boolean(game.state.progress.words[word.w]?.collected); return `<button class="spirit-card bait-word ${collected ? 'collected' : 'missing'}" data-bait-word="${escapeHtml(word.w)}"><b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</span><small>${collected ? 'Already collected' : 'Missing spirit'}</small></button>`; }).join('')}</div></div>`);
     document.querySelector('[data-back-shop]').addEventListener('click', shop);
     for (const button of document.querySelectorAll('[data-bait-word]')) button.addEventListener('click', () => {
-      if (game.state.player.coins < 35) return toast('Not enough coins.');
-      game.state.player.coins -= 35;
+      if (game.state.player.coins < BAIT_PRICE) return toast('Not enough coins.');
+      game.state.player.coins -= BAIT_PRICE;
       game.state.progress.baits.push({ lesson, word: button.dataset.baitWord });
       audio?.sfx('purchase');
       commit();
@@ -749,9 +747,13 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const requestedGiftLesson = Number(selectedGiftLesson);
     const giftLesson = giftLessons.includes(requestedGiftLesson) ? requestedGiftLesson : giftLessons[0];
     const giftLessonWords = missingRegionWords.filter(word => word.lesson === giftLesson);
+    const gateDictation = gateDictationRules(game.state.settings);
     const settingsHtml = `<p class="parent-tab-intro">Set learning options, manage access, and give rewards without changing the child-facing game controls.</p>
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Play and learning</h2><p>Choose how the game behaves during regular play.</p></div></div><div class="parent-settings">
         <label class="answer-field">Daily creature battles<select data-daily-cap>${[10,15,20,30,0].map(value => `<option value="${value}" ${game.state.settings.dailyBattles === value ? 'selected' : ''}>${value || 'No limit'}</option>`).join('')}</select></label>
+        <label class="answer-field">Gate dictation words<input data-gate-dictation-count type="number" inputmode="numeric" min="1" max="30" value="${gateDictation.count}"></label>
+        <label class="answer-field">Correct words needed to pass<input data-gate-dictation-pass type="number" inputmode="numeric" min="1" max="${gateDictation.count}" value="${gateDictation.pass}"></label>
+        <button class="secondary" type="button" data-gate-dictation-save>Save gate test</button>
         <label class="answer-field">Writing check<select data-writing-check><option value="gentle" ${game.state.settings.lenientWriting ? 'selected' : ''}>Gentle</option><option value="strict" ${!game.state.settings.lenientWriting ? 'selected' : ''}>Strict</option></select></label>
         <label class="answer-field">Speech speed<select data-speech-rate>${[[.7,'Slow'],[.85,'Normal'],[1,'Fast']].map(([value,label]) => `<option value="${value}" ${Number(game.state.settings.speechRate) === value ? 'selected' : ''}>${label}</option>`).join('')}</select></label>
         <label class="answer-field">Sound<select data-sound><option value="on" ${game.state.settings.sound ? 'selected' : ''}>On</option><option value="off" ${!game.state.settings.sound ? 'selected' : ''}>Off</option></select></label>
@@ -777,6 +779,23 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       return;
     }
     document.querySelector('[data-daily-cap]').addEventListener('change', event => { game.state.settings.dailyBattles = Number(event.target.value); commit(); });
+    document.querySelector('[data-gate-dictation-count]').addEventListener('input', event => {
+      const passInput = document.querySelector('[data-gate-dictation-pass]');
+      const count = Number(event.target.value);
+      if (!Number.isInteger(count) || count < 1 || count > 30) return;
+      passInput.max = String(count);
+      if (Number(passInput.value) > count) passInput.value = String(count);
+    });
+    document.querySelector('[data-gate-dictation-save]').addEventListener('click', () => {
+      const count = Number(document.querySelector('[data-gate-dictation-count]').value);
+      const pass = Number(document.querySelector('[data-gate-dictation-pass]').value);
+      if (!Number.isInteger(count) || count < 1 || count > 30 || !Number.isInteger(pass) || pass < 1 || pass > count) return toast('Choose 1–30 words and a pass score between 1 and that number.');
+      game.state.settings.gateDictationCount = count;
+      game.state.settings.gateDictationPass = pass;
+      commit();
+      toast(`Gate dictation set to ${pass} correct out of ${count}.`);
+      showParentDashboard('settings');
+    });
     document.querySelector('[data-writing-check]').addEventListener('change', event => { game.state.settings.lenientWriting = event.target.value === 'gentle'; commit(); });
     document.querySelector('[data-speech-rate]').addEventListener('change', event => { game.state.settings.speechRate = Number(event.target.value); commit(); });
     document.querySelector('[data-sound]').addEventListener('change', event => { game.state.settings.sound = event.target.value === 'on'; audio?.setEnabled(game.state.settings.sound); commit(); });

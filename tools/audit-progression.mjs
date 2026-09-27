@@ -41,7 +41,8 @@ export function auditLevel(levelId, { battlesPerCard = 1, practiceAnswersPerCard
     const regionId = `r${regionNumber}`;
     const lessons = config.regionLessons[regionId];
     const words = content.words.filter(word => lessons.includes(word.lesson));
-    const selected = words.slice(0, Math.ceil(words.length * 0.7));
+    const story = readJson(`content/authored/campaign/${regionId}-story.json`);
+    const selected = words.slice(0, Math.ceil(words.length * story.gateBronzePct));
     const progress = { words: {} };
     for (const word of selected) {
       const [minimum, maximum] = balance.combat.lessonLevels[String(word.lesson)];
@@ -54,7 +55,6 @@ export function auditLevel(levelId, { battlesPerCard = 1, practiceAnswersPerCard
       addXp(player, practiceAnswersPerCard * balance.school.xpPerCorrect);
       progress.words[word.w] = { collected: true, ticks: { m: 1, p: 1, h: 1 } };
     }
-    const story = readJson(`content/authored/campaign/${regionId}-story.json`);
     const gate = gateStatus({ content, config, region: { id: regionId }, regionStory: story }, progress, { keyItems: [story.readingKeyItem || 'cave-lantern'] }, story.gateBronzePct);
     const boss = createBoss(balance, lessons);
     const nextLessons = config.regionLessons[`r${regionNumber + 1}`];

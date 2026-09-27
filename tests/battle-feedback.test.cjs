@@ -34,7 +34,7 @@ test('answer feedback fires when Correct appears, before Continue advances battl
 test('regular and boss battles play feedback on answer selection without a second cue on Continue', () => {
   const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
   const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');
-  assert.match(gameplay, /recordWord\(battle\.word, skill, result\.ok, assisted, false\)/);
+  assert.match(gameplay, /recordWord\(battle\.word, skill, result\.ok, false, false\)/);
   assert.match(gameplay, /recordWord\(word, battle\.creature\.attackSkill, result\.ok, false, false\)/);
   assert.equal((gameplay.match(/onAnswer: result => audio\?\.sfx\(result\.ok \? 'correct' : 'wrong'\)/g) || []).length, 2);
   assert.match(adventure, /onAnswer: result => audio\?\.sfx\(result\.ok \? 'correct' : 'wrong'\)/);

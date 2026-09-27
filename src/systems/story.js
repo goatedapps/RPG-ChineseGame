@@ -34,7 +34,7 @@ export function regionWords(levelPackage) {
   return levelPackage.content.words.filter(word => lessons.includes(word.lesson));
 }
 
-export function gateStatus(levelPackage, progress, inventory, requiredPct = 0.22) {
+export function gateStatus(levelPackage, progress, inventory, requiredPct = 0.8) {
   const words = regionWords(levelPackage);
   const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(progress.words[word.w]))).length;
   const required = Math.ceil(new Set(words.map(word => word.w)).size * requiredPct);

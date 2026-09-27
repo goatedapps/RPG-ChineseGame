@@ -1,4 +1,6 @@
-export const SAVE_SCHEMA_VERSION = 8;
+import { gateDictationRules } from '../systems/dictation.js';
+
+export const SAVE_SCHEMA_VERSION = 9;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -34,7 +36,7 @@ export function createFreshState(levelPackage) {
       equipment: { owned: ['bamboo-brush'], equipped: { brush: 'bamboo-brush', charm: null, hat: null } },
       materials: {},
       baits: [],
-      encounter: { cooldown: 3, zone: null, capNoticeDay: '', repellentSteps: 0 },
+      encounter: { cooldown: 3, zone: null, capNoticeDay: '', repellentSteps: 0, scholarsLanternSteps: 0 },
       npcs: {},
       activity: {},
       parent: { goal: null },
@@ -60,6 +62,8 @@ export function createFreshState(levelPackage) {
       sound: true,
       speechRate: 0.85,
       higherChinese: false,
+      gateDictationCount: 15,
+      gateDictationPass: 13,
       unlockedRegions: 1,
       testMode: false,
       sendWrittenAnswers: true
@@ -94,6 +98,11 @@ function migrateReading(value, fallback) {
   };
 }
 
+function migrateGateDictationSettings(settings) {
+  const { count, pass } = gateDictationRules(settings);
+  return { gateDictationCount: count, gateDictationPass: pass };
+}
+
 export function migrateState(candidate, levelPackage) {
   const fresh = createFreshState(levelPackage);
   if (!candidate || typeof candidate !== 'object') return fresh;
@@ -102,6 +111,9 @@ export function migrateState(candidate, levelPackage) {
   if (candidate.schemaVersion >= 2) {
     if (candidate.level !== levelPackage.id) throw new Error(`This save belongs to ${candidate.level}, not ${levelPackage.id}.`);
     const player = candidate.player || {};
+    const legacyKnots = Math.max(0, Math.floor(Number(candidate.progress?.inventory?.['lucky-knot']) || 0));
+    const inventory = { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) };
+    delete inventory['lucky-knot'];
     return {
       ...fresh,
       ...candidate,
@@ -115,7 +127,7 @@ export function migrateState(candidate, levelPackage) {
         xp: numberOr(player.xp, 0),
         hp: numberOr(player.hp, 20),
         maxHp: numberOr(player.maxHp, 20, 1),
-        coins: numberOr(player.coins, 20),
+        coins: numberOr(player.coins, 20) + legacyKnots * 50,
         x: numberOr(player.x, fresh.player.x),
         y: numberOr(player.y, fresh.player.y)
       },
@@ -124,7 +136,7 @@ export function migrateState(candidate, levelPackage) {
         ...(candidate.progress || {}),
         energy: { ...fresh.progress.energy, ...(candidate.progress?.energy || {}) },
         school: { ...fresh.progress.school, ...(candidate.progress?.school || {}) },
-        inventory: { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) },
+        inventory,
         equipment: { ...fresh.progress.equipment, ...(candidate.progress?.equipment || {}) },
         materials: { ...fresh.progress.materials, ...(candidate.progress?.materials || {}) },
         baits: Array.isArray(candidate.progress?.baits) ? candidate.progress.baits : [],
@@ -157,7 +169,7 @@ export function migrateState(candidate, levelPackage) {
         ,regions: { ...(candidate.progress?.regions || {}) },
         routes: normalizeRoutes(candidate.progress?.routes)
       },
-      settings: { ...fresh.settings, ...(candidate.settings || {}) },
+      settings: { ...fresh.settings, ...(candidate.settings || {}), ...migrateGateDictationSettings(candidate.settings) },
       session: { ...fresh.session, ...(candidate.session || {}) }
     };
   }
@@ -203,7 +215,8 @@ export function migrateState(candidate, levelPackage) {
     settings: {
       ...fresh.settings,
       dailyBattles: candidate.settings?.daily ?? fresh.settings.dailyBattles,
-      lenientWriting: candidate.settings?.lenient ?? fresh.settings.lenientWriting
+      lenientWriting: candidate.settings?.lenient ?? fresh.settings.lenientWriting,
+      ...migrateGateDictationSettings(candidate.settings)
     },
     session: {
       ...fresh.session,

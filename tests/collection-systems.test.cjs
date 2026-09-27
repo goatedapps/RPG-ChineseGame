@@ -9,10 +9,10 @@ const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8
 const silver = { collected: true, ticks: { m: 2, p: 2, h: 2, u: 0, w: 0 } };
 const gold = { collected: true, ticks: { m: 2, p: 2, h: 2, u: 2, w: 2 } };
 
-test('all ten shop consumables are authored and inventory use is immutable', async () => {
+test('the nine current shop consumables are authored and inventory use is immutable', async () => {
   const items = readJson('content/authored/shared/items.json');
   const { applyHealing, useConsumable } = await import('../src/systems/inventory.js');
-  assert.deepEqual(items.map(item => item.effect), ['heal', 'heal', 'full-heal', 'remove-option', 'writing-retry', 'escape', 'double-coins', 'attack-boost', 'defense-boost', 'repellent']);
+  assert.deepEqual(items.map(item => item.effect), ['heal', 'heal', 'full-heal', 'repel-mastered', 'writing-retry', 'escape', 'attack-boost', 'defense-boost', 'repellent']);
   const used = useConsumable({ 'rice-ball': 2 }, 'rice-ball');
   assert.equal(used.ok, true);
   assert.equal(used.inventory['rice-ball'], 1);
@@ -92,7 +92,7 @@ test('collection milestones are claimed once and battle XP supports gear multipl
 test('collecting each lesson once keeps player level near the next lesson band', async () => {
   const { gainBattleRewards } = await import('../src/battle/battle.js');
   const shared = readJson('content/authored/shared/balance.json');
-  const expected = { p2: [5, 8], p5: [5, 9] };
+  const expected = { p2: [4, 7], p5: [4, 8] };
   for (const level of ['p2', 'p5']) {
     const content = readJson(`content/generated/${level}.content.json`);
     const config = readJson(`content/authored/levels/${level}/level.json`);

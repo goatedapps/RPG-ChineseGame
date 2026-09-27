@@ -1,18 +1,16 @@
 {
   "gateBronzePct": 0.8,
   "bossPlace": "Muddle Pavilion",
+  "bossName": "Muddle King",
   "passageVillagers": ["grandma-wang", "storyteller", "xiaoqiang", "mr-lin", "chef-mei", "ah-dong", "auntie-bao"],
   "scrollSpots": [{"x": 7, "y": 13}, {"x": 32, "y": 13}, {"x": 18, "y": 24}, {"x": 25, "y": 15}],
   "scenes": {
     "arrival": [
       { "speaker": "Grandma Wang", "say": "Welcome to Scholar Village! Everyone has been mixing up their words since the Muddle King arrived." },
       { "speaker": "Grandma Wang", "say": "Long ago, Word Spirits helped people speak, read and write clearly. The Great Forgetter scattered them across the land." },
-      { "speaker": "Grandma Wang", "say": "Come upstairs. Something in the attic has been waiting for you." },
-      { "setFlag": "arrival" }
-    ],
-    "attic": [
       { "speaker": "Grandma Wang", "say": "This is the handle of the Spirit Brush. It glows when someone truly knows a word." },
       { "speaker": "Fogling", "say": "A Fogling bursts from an old scroll. The word spirit 露营 is trapped inside!" },
+      { "setFlag": "arrival" },
       { "setFlag": "attic" }
     ],
     "reform": [

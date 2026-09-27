@@ -45,14 +45,15 @@ test('region guide suggests a path without closing the others', async () => {
   const config = JSON.parse(fs.readFileSync('content/authored/levels/p5/level.json', 'utf8'));
   const balance = JSON.parse(fs.readFileSync('content/authored/shared/balance.json', 'utf8'));
   const content = JSON.parse(fs.readFileSync('content/generated/p5.content.json', 'utf8'));
-  const map = JSON.parse(fs.readFileSync('content/authored/campaign/maps/r1-hub.json', 'utf8'));
+  const map = JSON.parse(fs.readFileSync('content/authored/campaign/maps/r1-r2-mistwood.json', 'utf8'));
+  map.route = true;
   const levelPackage = { region: { id: 'r1' }, config, balance, content, map };
   const progress = { words: {} };
   const first = regionPathGuide(levelPackage, progress, 1);
   assert.equal(first.length, 3);
   assert.equal(first.filter(path => path.suggested).length, 1);
-  assert.equal(first[0].name, 'Camping Forest');
-  assert.equal(first[0].direction, 'west');
+  assert.equal(first[0].name, 'Mistwood Edge');
+  assert.equal(first[0].direction, 'near the town entrance');
   const firstWords = content.words.filter(word => word.lesson === 1);
   for (const word of firstWords.slice(0, Math.ceil(firstWords.length * .7))) progress.words[word.w] = { collected: true };
   const next = regionPathGuide(levelPackage, progress, 1);

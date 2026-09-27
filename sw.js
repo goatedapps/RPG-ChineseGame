@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p18-v50';
+const CACHE = 'word-spirit-quest-p18-v52';
 const CORE = [
   './game/', './game/index.html', './manifest.webmanifest',
   './css/tokens.css', './css/base.css', './css/stage.css', './css/atlas.css',
@@ -12,7 +12,7 @@ const CORE = [
   './content/generated/p2.content.json', './content/generated/p2.chars.json', './content/generated/p5.content.json', './content/generated/p5.chars.json'
 ];
 const RUNTIME = [
-  './src/main.js', './src/gameplay.js', './src/adventure.js', './src/collection.js', './src/content/loader.js',
+  './src/main.js', './src/gameplay.js', './src/adventure.js', './src/collection.js', './src/content/loader.js', './src/ui/battleBadge.js',
   './src/battle/battle.js', './src/battle/creatureArt.js', './src/battle/creatures.js', './src/battle/damage.js',
   './src/core/assets.js', './src/core/audio.js', './src/core/events.js', './src/core/progression.js', './src/core/rng.js', './src/core/safe.js', './src/core/save.js', './src/core/state.js', './src/core/time.js',
   './src/learning/audio.js', './src/learning/examAdapters.js', './src/learning/mastery.js', './src/learning/pinyin.js', './src/learning/questions.js', './src/learning/selection.js', './src/learning/writing.js',
@@ -24,7 +24,7 @@ const RUNTIME = [
   './assets/images/intro/dictionary-tree.jpg', './assets/images/intro/great-forgetter.jpg', './assets/images/intro/spirits-scattered.jpg', './assets/images/story/open-book.webp', './assets/images/story/reading-scroll.jpg',
   './assets/images/rewards/cave-lantern.webp', './assets/images/rewards/dawn-stroke.webp', './assets/images/rewards/market-seal.webp', './assets/images/rewards/truth-stroke.webp', './assets/images/rewards/harbour-chronometer.webp', './assets/images/rewards/current-stroke.webp', './assets/images/rewards/lantern-stage-pass.webp', './assets/images/rewards/courage-stroke.webp', './assets/images/rewards/festival-medallion.webp', './assets/images/rewards/harmony-stroke.webp', './assets/images/rewards/oracle-rubbing-kit.webp', './assets/images/rewards/memory-stroke.webp', './assets/images/rewards/treeheart-lens.webp', './assets/images/rewards/final-stroke.webp',
   './assets/images/shop/rice-ball.webp', './assets/images/shop/instant-noodles.webp', './assets/images/shop/mooncake.webp', './assets/images/shop/scholars-lantern.webp', './assets/images/shop/ink-pot.webp', './assets/images/shop/smoke-ball.webp', './assets/images/shop/power-tea.webp', './assets/images/shop/guardian-talisman.webp', './assets/images/shop/forest-repellent.webp', './assets/images/shop/spirit-bait.webp', './assets/images/shop/red-cap.webp',
-  './assets/audio/bag-open.mp3', './assets/audio/battle.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/harvest-crossing-bg.mp3', './assets/audio/lantern-theatre-bg.mp3', './assets/audio/festival-city-bg.mp3', './assets/audio/ancient-grove-bg.mp3', './assets/audio/treehouse-summit-bg.mp3', './assets/audio/level-up.mp3', './assets/audio/major-reward.wav', './assets/audio/music-village.wav', './assets/audio/prologue-bg.mp3', './assets/audio/scholar-village-bg.mp3', './assets/audio/tidewater-bg.mp3', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
+  './assets/audio/bag-open.mp3', './assets/audio/battle.mp3', './assets/audio/button.mp3', './assets/audio/correct.mp3', './assets/audio/creature-hit.wav', './assets/audio/earn.mp3', './assets/audio/enter-shop.mp3', './assets/audio/good-result.mp3', './assets/audio/harvest-crossing-bg.mp3', './assets/audio/lantern-theatre-bg.mp3', './assets/audio/festival-city-bg.mp3', './assets/audio/ancient-grove-bg.mp3', './assets/audio/treehouse-summit-bg.mp3', './assets/audio/level-up.mp3', './assets/audio/major-reward.wav', './assets/audio/music-village.wav', './assets/audio/prologue-bg.mp3', './assets/audio/scholar-village-bg.mp3', './assets/audio/tidewater-bg.mp3', './assets/audio/need-improvement.mp3', './assets/audio/purchase.mp3', './assets/audio/wrong-answer.mp3'
 ];
 
 self.addEventListener('install', event => {

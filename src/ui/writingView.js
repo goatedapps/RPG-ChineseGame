@@ -18,7 +18,7 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
     const blank = '＿'.repeat(characters.length);
     const example = String(word.ex || 'Example sentence unavailable.').split(word.w).join(blank);
     let helped = false;
-    overlay.open(`<article class="panel writing-panel">
+    overlay.open(`<article class="panel writing-panel${headerHtml.includes('battle-question-badge') ? ' battle-question' : ''}${headerHtml.includes('boss-battle-arena') ? ' boss-question' : ''}">
       ${headerHtml}
       <p class="panel-kicker">Writing · ${escapeHtml(stage.name)}</p>
       ${memoryTask

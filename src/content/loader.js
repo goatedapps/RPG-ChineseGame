@@ -104,7 +104,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '..')
     campaigns[spec.region].route = buildRouteMap(spec, lessons, config.tuning?.routeEncounterRate);
   }
   if (config.region1?.atticLine) {
-    const line = campaigns.r1.regionStory.scenes.attic.find(command => command.speaker === 'Fogling');
+    const line = campaigns.r1.regionStory.scenes.arrival.find(command => command.speaker === 'Fogling');
     if (line) line.say = config.region1.atticLine;
   }
   return activateRegion({

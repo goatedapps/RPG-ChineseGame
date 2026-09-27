@@ -54,9 +54,9 @@
   letter-spacing: -.025em;
 }
 
-.atlas-enabled .brand-copy { min-width: 0; white-space: nowrap; }
+.atlas-enabled .brand-copy { min-width: 0; white-space: normal; }
 .atlas-enabled .brand-copy > span { color: #b6412d; font: 400 25px/1 var(--font-hanzi); }
-.atlas-enabled .brand small { margin-top: 5px; color: #176c61; font: 800 12px/1.15 var(--font-ui); letter-spacing: .025em; text-transform: none; }
+.atlas-enabled .brand small { margin-top: 5px; color: #16473f; font: 900 12px/1.2 var(--font-ui); letter-spacing: .025em; text-transform: none; }
 .atlas-region-r2 .brand small { color: #8d5521; }
 
 .atlas-enabled .atlas-region-emblem {
@@ -92,21 +92,25 @@
 .atlas-enabled .hud-stat.location,
 .atlas-enabled .hud-stat.streak { display: none; }
 
-.atlas-enabled .hud-stat.player-level { order: 1; min-width: 45px; }
+.atlas-enabled .hud-stat.player-level { order: 1; min-width: 55px; padding: 5px 8px; border-radius: 8px; background: #fff9e8db; box-shadow: inset 0 0 0 1px #b59967; }
 .atlas-enabled .hud-stat.player-level b { font-size: 21px; }
 .atlas-enabled .hud-stat.hp,
 .atlas-enabled .hud-stat.xp {
   display: grid;
   grid-template-columns: minmax(82px, 1fr) auto;
-  flex-basis: 126px;
+  flex-basis: 146px;
   order: 2;
   column-gap: 6px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: #fff9e8e8;
+  box-shadow: inset 0 0 0 1px #b59967;
 }
 .atlas-enabled .hud-stat.xp { order: 3; }
 .atlas-enabled .hud-stat.hp span,
 .atlas-enabled .hud-stat.xp span { grid-column: 1 / -1; }
 .atlas-enabled .hud-stat.hp i,
-.atlas-enabled .hud-stat.xp i { height: 10px; background: #c8cfbf; box-shadow: inset 0 1px 2px #5d674950; }
+.atlas-enabled .hud-stat.xp i { height: 12px; background: #bdc7bd; box-shadow: inset 0 1px 2px #5d674950; }
 .atlas-enabled .hud-stat.hp em { background: linear-gradient(90deg, #1c9c77, #36b98e); }
 .atlas-enabled .hud-stat.xp em { background: linear-gradient(90deg, #e8a52b, #f4c249); }
 .atlas-enabled .hud-stat.hp b,
@@ -242,7 +246,7 @@
   .atlas-enabled .atlas-region-emblem { width: 39px; height: 39px; flex-basis: 39px; border-radius: 9px; }
   .atlas-enabled .brand-copy > span { font-size: 20px; }
   .atlas-enabled .brand small { font-size: 11px; }
-  .atlas-enabled .hud-status { display: grid; grid-template-columns: 42px repeat(2, minmax(0, 1fr)) 64px; gap: 4px 8px; }
+  .atlas-enabled .hud-status { display: grid; grid-template-columns: 56px repeat(2, minmax(0, 1fr)) 64px; gap: 4px 6px; }
   .atlas-enabled .hud-stat.player-level { grid-column: 1; grid-row: 1; }
   .atlas-enabled .hud-stat.hp { grid-column: 2; grid-row: 1; }
   .atlas-enabled .hud-stat.xp { grid-column: 3; grid-row: 1; }
@@ -252,7 +256,9 @@
   .atlas-enabled .hud-stat.hp,
   .atlas-enabled .hud-stat.xp { grid-template-columns: minmax(26px, 1fr) auto; }
   .atlas-enabled .hud-stat.hp b,
-  .atlas-enabled .hud-stat.xp b { font-size: 9px; }
+  .atlas-enabled .hud-stat.xp b { font-size: 10px; }
+  .atlas-enabled .hud-stat.hp,
+  .atlas-enabled .hud-stat.xp { padding: 5px; }
   .atlas-enabled .hud-button { min-height: 48px; padding: 5px; }
   .atlas-enabled .hud-button svg { width: 27px; height: 27px; }
   .atlas-enabled .objective { width: min(280px, calc(100% - 18px)); max-height: 135px; margin: 9px; padding: 8px 10px; font-size: 12px; }

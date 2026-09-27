@@ -1,9 +1,9 @@
 function directionFor(map, zone) {
-  const horizontal = (zone.rect.x + zone.rect.width / 2) / map.width;
-  const vertical = (zone.rect.y + zone.rect.height / 2) / map.height;
-  const eastWest = horizontal < .35 ? 'west' : horizontal > .65 ? 'east' : '';
-  const northSouth = vertical < .35 ? 'north' : vertical > .65 ? 'south' : '';
-  return `${northSouth}${eastWest}` || 'near the village centre';
+  if (map.route) {
+    const horizontal = (zone.rect.x + zone.rect.width / 2) / map.width;
+    return horizontal < 1 / 3 ? 'near the town entrance' : horizontal < 2 / 3 ? 'in the middle of the road' : 'towards the onward gate';
+  }
+  return 'explore the local paths';
 }
 
 export function regionPathGuide(levelPackage, progress, heroLevel) {

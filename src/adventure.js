@@ -1,12 +1,12 @@
 import { makeExamQuestion } from './learning/questions.js';
 import { tierOf } from './learning/mastery.js?p10f';
 import { checkPassageAnswer } from './systems/reading.js?p10f';
-import { regionPathGuide } from './systems/regionGuide.js';
+import { regionPathGuide } from './systems/regionGuide.js?p3';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p18';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js?p17b';
-import { showWritingTask } from './ui/writingView.js?p12d';
+import { showQuestion } from './ui/questionView.js?p18';
+import { showWritingTask } from './ui/writingView.js?p13';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { calculateDamage, heroStats } from './battle/damage.js';
@@ -19,6 +19,7 @@ import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
 import { routeKey } from './systems/regions.js';
+import { battleQuestionBadge } from './ui/battleBadge.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -223,7 +224,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       document.querySelector('[data-travel-previous]').addEventListener('click', () => onEnterRoute?.(returnAction));
       return;
     }
-    if (!story.flags.attic) return playScene('attic', storyJournal);
+    if (!story.flags.attic) {
+      story.flags.attic = true;
+      commit();
+    }
     if (!story.flags.tutorial) return gameplay.tutorialBattle(() => {
       active().state.progress.story.flags.tutorial = true;
       commit();
@@ -450,19 +454,24 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         const game = active();
         showWritingTask(overlay, task.word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
           game.state.progress.characters = characters;
+          audio?.sfx(result.ok ? 'correct' : 'wrong');
           finish(result.ok);
-        }, { runId: `boss-${Date.now()}-${battle.hp}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: arena() });
+        }, { runId: `boss-${Date.now()}-${battle.hp}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: arena() + battleQuestionBadge('attack') });
         return;
       }
       if (task.item.format === 'Fill-in') {
-        overlay.open(`<article class="panel question-panel boss-question">${arena()}<p class="panel-kicker">${escapeHtml(task.phase)} · ${escapeHtml(game.levelPackage.regionStory.bossName)} HP ${battle.hp}/${battle.maxHp}</p><h2>${escapeHtml(task.item.q)}</h2><label class="answer-field">Your answer<input data-boss-answer autocomplete="off"></label><div class="button-row"><button class="primary" data-boss-check>Break spell</button><button class="secondary" data-boss-giveup>I don't know</button></div></article>`, { dismissible: false });
-        const check = answer => finish(checkPassageAnswer(task.item, answer));
+        overlay.open(`<article class="panel question-panel battle-question boss-question">${arena()}${battleQuestionBadge('attack')}<p class="panel-kicker">${escapeHtml(task.phase)} · ${escapeHtml(game.levelPackage.regionStory.bossName)} HP ${battle.hp}/${battle.maxHp}</p><h2>${escapeHtml(task.item.q)}</h2><label class="answer-field">Your answer<input data-boss-answer autocomplete="off"></label><div class="button-row"><button class="primary" data-boss-check>Break spell</button><button class="secondary" data-boss-giveup>I don't know</button></div></article>`, { dismissible: false });
+        const check = answer => {
+          const ok = checkPassageAnswer(task.item, answer);
+          audio?.sfx(ok ? 'correct' : 'wrong');
+          finish(ok);
+        };
         document.querySelector('[data-boss-check]').addEventListener('click', () => check(document.querySelector('[data-boss-answer]').value), { once: true });
         document.querySelector('[data-boss-giveup]').addEventListener('click', () => check(''), { once: true });
         return;
       }
       const question = makeExamQuestion(task.item);
-      showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena(), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
+      showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() + battleQuestionBadge('attack'), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
     const showBossReady = () => {
       overlay.open(bossPanel(`<p class="panel-kicker">Boss challenge</p><h1>${escapeHtml(active().levelPackage.regionStory.bossName)} awaits</h1><p>Prepare before breaking the first spell.</p><div class="button-row"><button class="primary" data-boss-next>Begin battle</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });
@@ -535,13 +544,16 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         const word = testWords[index++];
         showWritingTask(overlay, word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
           game.state.progress.characters = characters;
+          audio?.sfx(result.ok ? 'correct' : 'wrong');
           if (result.ok) correct += 1;
           next();
         }, { runId: `gate-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, forceMemory: true, headerHtml: `<p class="panel-kicker">Gate dictation · ${index}/${count}</p>`, onExit: () => { commit(); overlay.close(); } });
       };
       next();
     };
-    overlay.open(`<div class="panel"><p class="panel-kicker">Road to ${escapeHtml(nextCampaign.region.name)}</p><h1>${fragmentReady ? `${escapeHtml(fragmentName)} restored` : `Defeat the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</h1><p>${ready ? 'The gate is open.' : `Pass a ${count}-word dictation from memory: ${pass} correct answers are needed.`}</p>${!ready && fragmentReady && available < count ? `<p>Collect ${count - available} more regional Word Spirits before the test.</p>` : ''}<div class="button-row">${ready ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : fragmentReady && available >= count ? '<button class="primary" data-gate-test>Begin gate dictation</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    const bossName = game.levelPackage.regionStory.bossName || (currentNumber === 1 ? 'Muddle King' : 'regional boss');
+    const gateInstruction = ready ? 'The gate is open.' : !fragmentReady ? `Defeat the ${bossName} in the ${game.levelPackage.regionStory.bossPlace || 'boss pavilion'}, then return to this gate.` : `Pass a ${count}-word dictation from memory: ${pass} correct answers are needed.`;
+    overlay.open(`<div class="panel"><p class="panel-kicker">Road to ${escapeHtml(nextCampaign.region.name)}</p><h1>${fragmentReady ? `${escapeHtml(fragmentName)} restored` : `Defeat the ${escapeHtml(bossName)}`}</h1><p>${escapeHtml(gateInstruction)}</p>${!ready && fragmentReady && available < count ? `<p>Collect ${count - available} more regional Word Spirits before the test.</p>` : ''}<div class="button-row">${ready ? `<button class="primary" data-travel-next>Travel to ${escapeHtml(nextCampaign.region.name)}</button>` : fragmentReady && available >= count ? '<button class="primary" data-gate-test>Begin gate dictation</button>' : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
     document.querySelector('[data-travel-next]')?.addEventListener('click', travel, { once: true });
     document.querySelector('[data-gate-test]')?.addEventListener('click', runGateTest, { once: true });
   }

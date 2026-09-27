@@ -72,6 +72,8 @@ Production URLs:
 - Keep each route's discovery, gate-opening flag and return position persistent across saves.
 - Keep touch targets at least 44 pixels and support reduced motion.
 - Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.
+- Keep character dialogue typewriter-paced, with the first Next press revealing the line and reduced-motion users seeing it immediately.
+- Play question feedback audio when the result appears and the earn cue when gameplay awards XP or coins.
 - Do not reveal an answer elsewhere on an active question screen.
 - A villager's passage question clears only after a correct answer; answer review or “I don’t know” leaves its question mark available.
 - Do not end an active Lavish annotation session until the user finishes or explicitly requests it.

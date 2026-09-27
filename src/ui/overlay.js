@@ -3,7 +3,33 @@ import { escapeHtml } from './dom.js';
 export function createOverlay(element) {
   let closeHandler = null;
   let returnFocus = null;
+  let typingTimer = null;
+  function typeDialogue() {
+    const line = element.querySelector('.dialog-card > p:not(.speaker), .storyteller-welcome p, [data-type-dialogue]');
+    if (!line || globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    const fullText = line.textContent;
+    if (!fullText) return;
+    const characters = Array.from(fullText);
+    const advance = element.querySelector('[data-dialogue-next], [data-scene-next]');
+    let shown = 0;
+    line.setAttribute('aria-label', fullText);
+    line.textContent = '';
+    const finish = () => { clearTimeout(typingTimer); shown = characters.length; line.textContent = fullText; };
+    advance?.addEventListener('click', event => {
+      if (shown >= characters.length) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      finish();
+    }, true);
+    const tick = () => {
+      shown = Math.min(characters.length, shown + 1);
+      line.textContent = characters.slice(0, shown).join('');
+      if (shown < characters.length) typingTimer = setTimeout(tick, 26);
+    };
+    typingTimer = setTimeout(tick, 80);
+  }
   function open(content, { dismissible = true, onClose = null } = {}) {
+    clearTimeout(typingTimer);
     if (element.hidden) returnFocus = document.activeElement;
     closeHandler = onClose;
     api.dismissible = dismissible;
@@ -15,8 +41,10 @@ export function createOverlay(element) {
     const close = element.querySelector('[data-close-overlay]');
     if (close && dismissible) close.addEventListener('click', api.close, { once: true });
     element.querySelector('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href]')?.focus();
+    typeDialogue();
   }
   function close() {
+    clearTimeout(typingTimer);
     element.hidden = true;
     element.dataset.open = 'false';
     element.innerHTML = '';

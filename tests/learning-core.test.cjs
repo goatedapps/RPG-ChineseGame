@@ -65,13 +65,14 @@ test('battle skill hint advances as a spirit masters skills during the encounter
   const { recordAnswer } = await import('../src/learning/mastery.js');
   const day = '2026-09-27';
   let progress = { collected: false };
-  assert.equal(recommendedSkill(progress), 'm');
+    assert.equal(recommendedSkill(progress, () => 0), 'm');
   progress = recordAnswer(progress, { skill: 'm', correct: true, day }).progress;
-  assert.equal(recommendedSkill(progress), 'p');
+    assert.equal(recommendedSkill(progress, () => 0), 'p');
   progress = recordAnswer(progress, { skill: 'p', correct: false, day }).progress;
-  assert.equal(recommendedSkill(progress), 'p');
+    assert.equal(recommendedSkill(progress, () => 0), 'p');
   progress = recordAnswer(progress, { skill: 'p', correct: true, day, assisted: true }).progress;
-  assert.equal(recommendedSkill(progress), 'p');
+    assert.equal(recommendedSkill(progress, () => 0), 'p');
+    assert.equal(recommendedSkill(progress, () => 0.999), 'w');
   for (const skill of ['p', 'h', 'u', 'w']) {
     progress = recordAnswer(progress, { skill, correct: true, day }).progress;
   }

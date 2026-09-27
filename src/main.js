@@ -1,27 +1,27 @@
 import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10g';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p19';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p20';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p23';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
-import { createOverlay } from './ui/overlay.js?p10d';
+import { createOverlay } from './ui/overlay.js?p10e';
 import { updateHud } from './ui/hud.js';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p2';
-import { createGameplay } from './gameplay.js?p30';
+import { createGameplay } from './gameplay.js?p31';
 import { createCollection } from './collection.js?p18';
-import { createAdventure } from './adventure.js?p27';
-import { createAudioManager } from './core/audio.js?p23';
+import { createAdventure } from './adventure.js?p28';
+import { createAudioManager } from './core/audio.js?p24';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p21';
 import { localDay } from './core/time.js';
-import { encounterStep } from './world/encounters.js?p18';
+import { encounterStep, zoneAt } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
 import { tierOf } from './learning/mastery.js?p10f';
 import { gateDictationRules } from './systems/dictation.js';
 import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './systems/regions.js?p14';
-import { regionPathGuide } from './systems/regionGuide.js?p2';
+import { regionPathGuide } from './systems/regionGuide.js?p3';
 import { revealRouteTile, routeDiscoveryPercent } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 
@@ -59,6 +59,7 @@ let gameplay = null;
 let collection = null;
 let adventure = null;
 let prologueCompleted = false;
+let lastRewardState = null;
 
 function render() {
   if (!active) return;
@@ -72,12 +73,20 @@ function render() {
   active.renderer.render(active.state);
   updateHud(hud, active.levelPackage, active.state);
   if (active.levelPackage.map.route) hud.region.textContent = active.levelPackage.map.name;
+  const zone = active.levelPackage.map.route ? zoneAt(active.levelPackage.map, active.state.player.x, active.state.player.y) : null;
+  const zoneLabel = $('#route-zone-label');
+  zoneLabel.hidden = !zone;
+  if (zone) zoneLabel.textContent = `${zone.name} · Lesson ${zone.lesson}`;
   updateObjective();
 }
 
-function persist() {
+function persist({ rewardSound = true } = {}) {
   if (!active || active.saveBlocked) return;
   try {
+    const player = active.state.player;
+    const rewardState = { level: player.level, xp: player.xp, coins: player.coins };
+    if (rewardSound && lastRewardState && (rewardState.coins > lastRewardState.coins || rewardState.level > lastRewardState.level || (rewardState.level === lastRewardState.level && rewardState.xp > lastRewardState.xp))) audio.sfx('earn');
+    lastRewardState = rewardState;
     active.state = saveLevelState(storage, active.state);
     updateHud(hud, active.levelPackage, active.state);
   } catch (error) {
@@ -265,6 +274,7 @@ async function startLevel(levelId) {
       renderer: createRenderer($('#world'), levelPackage.map),
       saveBlocked: Boolean(loadResult.blocked)
     };
+    lastRewardState = { level: active.state.player.level, xp: active.state.player.xp, coins: active.state.player.coins };
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
     gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: () => changeRoute('rest'), onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
@@ -388,7 +398,7 @@ function switchRegion(regionId) {
 }
 
 function levelStatus(level) {
-  if (level.worldMappingReady) return 'Regions 1–2 ready';
+  if (level.worldMappingReady) return '';
   if (level.sourceReady) return 'Curriculum imported · world mapping in progress';
   return 'Coming soon';
 }
@@ -399,7 +409,7 @@ function showLevelPicker() {
     <p>Every level follows the same seven-region adventure. Learning progress is saved separately for each curriculum.</p>
     <div class="level-grid">
       ${levels.map(level => `<button class="level-card" data-level="${level.id}" ${level.worldMappingReady ? '' : 'disabled'}>
-        <b>${level.label}</b><span>${levelStatus(level)}</span>
+        <b>${level.label}</b>${levelStatus(level) ? `<span>${levelStatus(level)}</span>` : ''}
       </button>`).join('')}
     </div>
     ${active ? '<div class="button-row"><button class="secondary" data-close-overlay>Return to village</button></div>' : ''}

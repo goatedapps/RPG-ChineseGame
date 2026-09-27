@@ -9,8 +9,8 @@
   <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css?p21">
-  <link rel="stylesheet" href="../css/stage.css?p25">
-  <link rel="stylesheet" href="../css/atlas.css?p3">
+  <link rel="stylesheet" href="../css/stage.css?p26">
+  <link rel="stylesheet" href="../css/atlas.css?p4">
 </head>
 <body>
   <div class="boot-loading" id="boot-loading" role="status" aria-live="polite" aria-label="Loading Word Spirit Quest">
@@ -65,6 +65,7 @@
 
     <section class="stage" id="game-stage" tabindex="-1" aria-label="Scholar Village map">
       <canvas id="world" width="640" height="448" aria-label="Game world"></canvas>
+      <div class="route-zone-label" id="route-zone-label" hidden aria-live="polite"></div>
       <div class="toast" id="toast" hidden aria-live="polite"></div>
       <div class="dpad" id="dpad" aria-label="Movement controls">
         <button type="button" data-direction="up" aria-label="Move up">▲</button>
@@ -77,6 +78,6 @@
   </main>
   <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="../vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="../src/main.js?p35"></script>
+  <script type="module" src="../src/main.js?p36"></script>
 </body>
 </html>

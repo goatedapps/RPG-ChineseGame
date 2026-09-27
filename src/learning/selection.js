@@ -20,10 +20,10 @@ export function selectWord(words, progressByWord, { day, random = Math.random } 
   return candidates.at(-1).word;
 }
 
-export function recommendedSkill(progressValue) {
+export function recommendedSkill(progressValue, random = Math.random) {
   const progress = normalizeWordProgress(progressValue);
   const available = Object.keys(progress.ticks).filter(skill => progress.ticks[skill] < SKILL_TICKS_REQUIRED);
-  return available[0] ?? null;
+  return available.length ? available[Math.min(available.length - 1, Math.floor(random() * available.length))] : null;
 }
 
 export function eligibleBattleWords(words, progressByWord, avoidMastered = false) {

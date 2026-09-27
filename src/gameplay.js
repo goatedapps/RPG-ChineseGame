@@ -17,13 +17,14 @@ import { chooseDictationWords, dictationLessons, dictationResult, gateDictationR
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
 import { makeExamQuestion, makeQuestion } from './learning/questions.js';
 import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILLS, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './learning/mastery.js?p10f';
-import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/selection.js?p10h';
+import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/selection.js?p10i';
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js?p17c';
-import { showWritingTask } from './ui/writingView.js?p12d';
+import { showQuestion } from './ui/questionView.js?p18';
+import { showWritingTask } from './ui/writingView.js?p13';
 import { createSpeechController } from './learning/audio.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
+import { battleQuestionBadge } from './ui/battleBadge.js';
 
 const SHOP_ITEM_COPY = Object.freeze({
   heal: item => `Restore ${item.amount} HP during battle`,
@@ -99,7 +100,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   const active = () => getActive();
   const speech = createSpeechController();
   const wordsForLesson = lesson => active().levelPackage.content.words.filter(word => word.lesson === lesson);
-  const commit = () => { persist(); render(); };
+  const commit = (options = {}) => { persist(options); render(); };
   const playLevelUp = (before, after) => { if (after.level > before.level) audio?.sfx('level'); };
 
   function progressionBonuses(game) {
@@ -133,14 +134,14 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         game.state.progress.characters = characters;
         recordWord(battle.word, 'w', result.ok, !result.earnsTick);
         done(result.ok, 'w');
-      }, { runId: `battle-${game.state.progress.battles}-${battle.turn}`, lenient: game.state.settings.lenientWriting });
+      }, { runId: `battle-${game.state.progress.battles}-${battle.turn}`, lenient: game.state.settings.lenientWriting, headerHtml: battleQuestionBadge('attack') });
       return;
     }
     const question = makeBattleQuestion(battle.word, skill, game.levelPackage.content.words);
     showQuestion(overlay, question, null, result => {
       recordWord(battle.word, skill, result.ok, false, false);
       done(result.ok, skill);
-    }, { title: SKILLS[skill].action, revealWord: battle.word, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: word => speech.speak(`${word.w}。${word.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
+    }, { title: SKILLS[skill].action, headerHtml: battleQuestionBadge('attack'), revealWord: battle.word, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: word => speech.speak(`${word.w}。${word.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
   }
 
   function showBattle(battle, message = '') {
@@ -232,7 +233,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (game.state.player.hp <= 0) return faint(battle);
       commit();
       showBattle(battle, shielded ? `${spell} struck your shield. No damage!` : `${spell} dealt ${hit.damage} damage.`);
-    }, { title: `${battle.creature.name} casts ${spell}! Block it`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: revealed => speech.speak(`${revealed.w}。${revealed.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
+    }, { title: `${battle.creature.name} casts ${spell}! Block it`, headerHtml: battleQuestionBadge('defense'), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: revealed => speech.speak(`${revealed.w}。${revealed.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
   }
 
   function creatureFled(battle) {
@@ -345,7 +346,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       overlay.open(`<article class="battle-scene lesson-1"><div class="battle-arena"><div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><div class="enemy-hp player-hp"><i style="width:100%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div><div class="battle-enemy"><div class="battle-nameplate"><b>${escapeHtml(creature.name)} · Lv ${creature.level}</b><div class="enemy-hp"><i style="width:100%"></i></div><strong>HP 1/1</strong></div><div class="creature-art">${creatureSvg(creature.id, '？')}</div></div></div><div class="battle-console"><p class="panel-kicker">First Spirit Brush battle</p><h2>Use Meaning Strike</h2><p>The Word Spirit stays sealed until you defeat the creature.</p><button class="primary" data-tutorial-attack>Meaning Strike</button></div></article>`, { dismissible: false });
       document.querySelector('[data-tutorial-attack]').addEventListener('click', () => {
         showQuestion(overlay, makeBattleQuestion(word, 'm', game.levelPackage.content.words), word, result => {
-          recordWord(word, 'm', result.ok);
+          recordWord(word, 'm', result.ok, false, false);
           if (!result.ok) { toast('The Spirit Brush glows. Try that meaning once more.'); ask(); return; }
           const progress = normalizeWordProgress(game.state.progress.words[word.w]);
           game.state.progress.words[word.w] = { ...progress, collected: true };
@@ -356,7 +357,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
           commit();
           overlay.open(`<div class="panel result-panel"><h1>${escapeHtml(word.w)} is free!</h1><p>The Spirit Book has appeared. Every spirit grows through Meaning, Pinyin, Hanzi, Usage and Writing.</p><button class="primary" data-tutorial-done>Continue</button></div>`, { dismissible: false });
           document.querySelector('[data-tutorial-done]').addEventListener('click', () => { overlay.close(); onDone?.(); }, { once: true });
-        }, { title: 'Tutorial · Meaning Strike', readFeedback: revealed => speech.speak(`${revealed.w}。${revealed.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
+        }, { title: 'Tutorial · Meaning Strike', headerHtml: battleQuestionBadge('attack'), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: revealed => speech.speak(`${revealed.w}。${revealed.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
       }, { once: true });
     };
     ask();
@@ -371,7 +372,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const next = () => {
       if (index >= words.length) { onDone?.(score, words.length); return; }
       const word = words[index++];
-      showQuestion(overlay, makeQuestion(word, index % 2 ? 'm' : 'p', game.levelPackage.content.words), word, result => { score += result.ok ? 1 : 0; next(); }, { title: `Ah Dong duel · ${index}/5` });
+      showQuestion(overlay, makeQuestion(word, index % 2 ? 'm' : 'p', game.levelPackage.content.words), word, result => { score += result.ok ? 1 : 0; next(); }, { title: `Ah Dong duel · ${index}/5`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
     next();
   }
@@ -382,7 +383,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const next = () => {
       if (index >= questions.length) return onComplete(correct, questions.length);
       const question = makeExamQuestion(questions[index++]);
-      showQuestion(overlay, question, null, result => { correct += result.ok ? 1 : 0; next(); }, { title: `${title} · ${index}/${questions.length}` });
+      showQuestion(overlay, question, null, result => { correct += result.ok ? 1 : 0; next(); }, { title: `${title} · ${index}/${questions.length}`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
     next();
   }
@@ -503,7 +504,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const group = game.levelPackage.content.questions.groups.find(candidate => candidate.id === reading.active);
     const item = group?.items[questionIndex];
     if (!item) return false;
-    overlay.open(`<div class="panel"><p class="panel-kicker">Passage question ${questionIndex + 1}/${reading.questionCount}</p><h1>${escapeHtml(object.name || object.interaction?.title || 'Villager')}</h1><p>I heard you read <b>${escapeHtml(group.passage.title)}</b>. May I ask one question?</p><div class="button-row"><button class="primary" data-passage-accept>Answer</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
+    overlay.open(`<div class="panel"><p class="panel-kicker">Passage question ${questionIndex + 1}/${reading.questionCount}</p><h1>${escapeHtml(object.name || object.interaction?.title || 'Villager')}</h1><p data-type-dialogue>I heard you read ${escapeHtml(group.passage.title)}. May I ask one question?</p><div class="button-row"><button class="primary" data-passage-accept>Answer</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
     document.querySelector('[data-passage-accept]').addEventListener('click', () => askPassageItem(group, item, questionIndex), { once: true });
     return true;
   }
@@ -544,6 +545,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
   }
 
   function showPassageHelp(group, item, questionIndex) {
+    audio?.sfx('wrong');
     const answer = item.displayAnswer || item.c || item.accepted?.[0] || item.context || '';
     overlay.open(`<div class="panel result-panel"><h2>Let’s learn from this answer</h2><p>This villager’s question stays open until you answer it correctly.</p>${passageReviewMarkup(group, item, answer)}<div class="button-row"><button class="primary" data-passage-retry>Try again</button><button class="secondary" data-close-overlay>Try later</button></div></div>`);
     document.querySelector('[data-passage-retry]').addEventListener('click', () => askPassageItem(group, item, questionIndex), { once: true });
@@ -606,12 +608,13 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const item = group.items[index];
     if (item.format === 'MCQ') {
       const question = { prompt: item.q, instruction: 'Answer using the passage.', options: item.o, correct: item.c };
-      return showQuestion(overlay, question, null, result => { onProgressEvent('reading-answer', { correct: result.ok }); runPassage(group, index + 1, correct + (result.ok ? 1 : 0)); }, { title: `${group.passage.title} · ${index + 1}/${group.items.length}` });
+      return showQuestion(overlay, question, null, result => { onProgressEvent('reading-answer', { correct: result.ok }); runPassage(group, index + 1, correct + (result.ok ? 1 : 0)); }, { title: `${group.passage.title} · ${index + 1}/${group.items.length}`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     }
     if (item.format === 'Fill-in') {
       overlay.open(`<article class="panel question-panel"><p class="panel-kicker">${escapeHtml(group.passage.title)} · ${index + 1}/${group.items.length}</p><h2>${escapeHtml(item.q)}</h2><label class="answer-field">Your answer<input data-reading-answer autocomplete="off"></label><div class="button-row"><button class="primary" data-reading-check>Check answer</button><button class="secondary" data-reading-giveup>I don't know</button></div></article>`, { dismissible: false });
       const finish = answer => {
         const ok = checkPassageAnswer(item, answer);
+        audio?.sfx(ok ? 'correct' : 'wrong');
         onProgressEvent('reading-answer', { correct: ok });
         overlay.open(`<div class="panel result-panel"><h2>${ok ? 'Correct!' : `Answer: ${escapeHtml(item.displayAnswer || item.accepted?.[0] || '')}`}</h2><button class="primary" data-reading-next>Continue</button></div>`, { dismissible: false });
         document.querySelector('[data-reading-next]').addEventListener('click', () => runPassage(group, index + 1, correct + (ok ? 1 : 0)), { once: true });
@@ -647,9 +650,9 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const next = () => {
       if (index >= review.length) return rest();
       const word = review[index++];
-      showQuestion(overlay, makeQuestion(word, 'm', regionalWords), word, result => { recordWord(word, 'm', result.ok); next(); }, { title: `Bedtime review · ${index}/${review.length}` });
+      showQuestion(overlay, makeQuestion(word, 'm', regionalWords), word, result => { recordWord(word, 'm', result.ok, false, false); next(); }, { title: `Bedtime review · ${index}/${review.length}`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
-    overlay.open(`<div class="panel inn-welcome"><p class="panel-kicker">${escapeHtml(innName)}</p><h1>Welcome to the Inn</h1><p>Would you like to rest and restore your HP?</p>${review.length ? '<p>The innkeeper asks three quick Meaning questions from this region before preparing your room.</p>' : '<p>You have no Word Spirits from this region to review yet, so your first rest here is free.</p>'}<div class="button-row"><button class="primary" data-inn-rest>${review.length ? 'Rest · Answer 3 questions' : 'Rest now'}</button><button class="secondary" data-close-overlay>Not now</button></div></div>`);
+    overlay.open(`<div class="panel inn-welcome"><p class="panel-kicker">${escapeHtml(innName)}</p><h1>Welcome to the Inn</h1><p data-type-dialogue>Would you like to rest and restore your HP?</p>${review.length ? '<p>The innkeeper asks three quick Meaning questions from this region before preparing your room.</p>' : '<p>You have no Word Spirits from this region to review yet, so your first rest here is free.</p>'}<div class="button-row"><button class="primary" data-inn-rest>${review.length ? 'Rest · Answer 3 questions' : 'Rest now'}</button><button class="secondary" data-close-overlay>Not now</button></div></div>`);
     document.querySelector('[data-inn-rest]').addEventListener('click', () => review.length ? next() : rest(), { once: true });
   }
 
@@ -812,7 +815,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     document.querySelector('[data-parent-level-save]').addEventListener('click', () => {
       const bonuses = progressionBonuses(game);
       game.state.player = setTestingPlayerLevel(game.state.player, document.querySelector('[data-parent-level]').value, bonuses.maxHpBonus);
-      commit();
+      commit({ rewardSound: false });
       toast(`Main character set to Level ${game.state.player.level}.`);
       showParentDashboard('settings');
     });
@@ -849,7 +852,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     document.querySelector('[data-export-save]').addEventListener('click', () => { const blob = new Blob([JSON.stringify(exportSaveEnvelope(game.state), null, 2)], { type: 'application/json' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `word-spirit-quest-${game.state.level}-${localDay()}.json`; link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 0); });
     const fileInput = document.querySelector('[data-import-save]');
     document.querySelector('[data-import-trigger]').addEventListener('click', () => fileInput.click());
-    fileInput.addEventListener('change', async () => { try { const envelope = JSON.parse(await fileInput.files[0].text()); game.state = importSaveEnvelope(envelope, game.levelPackage); commit(); toast('Save imported successfully.'); showParentDashboard('settings'); } catch (error) { toast(error.message); } });
+    fileInput.addEventListener('change', async () => { try { const envelope = JSON.parse(await fileInput.files[0].text()); game.state = importSaveEnvelope(envelope, game.levelPackage); commit({ rewardSound: false }); toast('Save imported successfully.'); showParentDashboard('settings'); } catch (error) { toast(error.message); } });
     document.querySelector('[data-change-pin]').addEventListener('click', () => { if (!setParentPin(storage, document.querySelector('[data-new-pin]').value)) return toast('Use 4–8 digits for the new PIN.'); toast('Parent PIN changed.'); });
   }
 

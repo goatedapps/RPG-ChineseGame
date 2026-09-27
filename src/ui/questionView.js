@@ -2,7 +2,7 @@ import { escapeHtml } from './dom.js';
 import { checkAnswer } from '../learning/questions.js';
 
 export function showQuestion(overlay, question, word, onDone, { title = 'Learning challenge', revealWord = word, headerHtml = '', onAnswer = () => {}, readFeedback = null, stopFeedback = () => {} } = {}) {
-  overlay.open(`<article class="panel question-panel">
+  overlay.open(`<article class="panel question-panel${headerHtml.includes('battle-question-badge') ? ' battle-question' : ''}">
     ${headerHtml}
     <p class="panel-kicker">${escapeHtml(title)}</p>
     <h2>${escapeHtml(question.prompt)}</h2>

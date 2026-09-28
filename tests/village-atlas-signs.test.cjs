@@ -8,7 +8,7 @@ test('later villages share illustrated buildings and safe-town terrain rendering
   const renderer = fs.readFileSync('src/world/renderer.js', 'utf8');
   assert.match(renderer, /const atlasRegion = map\.atlasVillage \|\| map\.safeTown \? map\.region : null/);
   assert.match(renderer, /!map\.safeTown && map\.legend\[tile\]\?\.encounter/);
-  for (const id of ['rescue-dock-building', 'theatre-building', 'dragon-gate-building', 'excavation-lodge-building', 'final-seal-building']) {
+  for (const id of ['rescue-dock-building', 'theatre-building', 'dragon-gate-building', 'excavation-lodge-building', 'boss-pavilion-building']) {
     assert.ok(renderer.includes(`'${id}'`), `${id} needs a suitable reusable building sprite`);
   }
 });

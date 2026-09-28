@@ -33,7 +33,7 @@ test('next-step pin points toward the current lesson, reading key, and boss with
   assert.ok(boss.target);
 });
 
-test('final summit guidance sends the child to its encounter glades', async () => {
+test('final summit guidance sends the child out of safe town toward the fog route', async () => {
   const { activateRegion, loadLevelPackage } = await import('../src/content/loader.js');
   const { createFreshState } = await import('../src/core/state.js');
   const { nextStep } = await import('../src/systems/wayfinding.js');
@@ -43,7 +43,12 @@ test('final summit guidance sends the child to its encounter glades', async () =
   const state = createFreshState(summit);
   const step = nextStep(summit, state);
   assert.match(step.text, /Ascent Glade|Whisper Branches|Crown Garden/);
-  assert.ok(isEncounterTerrain(summit.map, step.target.x, step.target.y));
+  assert.equal(summit.map.objects.find(object => object.id === 'route-entrance').x, step.target.x);
+  assert.equal(isEncounterTerrain(summit.map, step.target.x, step.target.y), false);
+  const trail = { ...summit, map: summit.route };
+  const exploring = nextStep(trail, state);
+  assert.match(exploring.text, /Ascent Glade|Whisper Branches|Crown Garden/);
+  assert.ok(isEncounterTerrain(trail.map, exploring.target.x, exploring.target.y));
 });
 
 test('small map names the current route lesson and omits obsolete town lesson labels', async () => {

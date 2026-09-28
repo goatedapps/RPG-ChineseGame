@@ -21,10 +21,3 @@ test('the game uses the generated logo for its header, favicon and install icon'
   }
   assert.doesNotMatch(game, /atlas-region-emblem/);
 });
-
-test('building label studies are a standalone HTML preview using existing sprites and live text', () => {
-  const preview = read('design-previews/building-labels.html');
-  assert.match(preview, /assets\/images\/atlas\/buildings\.webp/);
-  for (const look of ['Hanging plaque', 'Paper scroll', 'Side pennant']) assert.ok(preview.includes(look));
-  assert.match(preview, /textContent = names\[selected\]/);
-});

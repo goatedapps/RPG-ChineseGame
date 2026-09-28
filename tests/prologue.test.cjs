@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { JSDOM } = require('jsdom');
 
 const root = path.resolve(__dirname, '..');
 
@@ -22,4 +23,20 @@ test('startup prologue carries the core story and packaged media', async () => {
   assert.match(prologue, /data-prologue-copy/);
   for (const track of ['prologue-bg.mp3', 'scholar-village-bg.mp3', 'harvest-crossing-bg.mp3', 'tidewater-bg.mp3']) assert.match(audio, new RegExp(track.replace('.', '\\.')));
   assert.match(audio, /setWorld\(regionId\)/);
+});
+
+test('prologue artwork resolves relative to the hosted app, not the CSS folder', async () => {
+  const { createPrologue, PROLOGUE_SLIDES } = await import('../src/ui/prologue.js');
+  const dom = new JSDOM('<div id="prologue"></div>', { url: 'https://example.com/RPG-ChineseGame/?level=p5' });
+  const root = dom.window.document.querySelector('#prologue');
+  const prologue = createPrologue({ root, audio: { unlock() {}, setScene() {} }, onComplete() {} });
+  assert.match(root.querySelector('.prologue-screen').style.getPropertyValue('--prologue-image'), /\/RPG-ChineseGame\/assets\/images\/intro\/dictionary-tree\.jpg/);
+  root.querySelector('[data-prologue-begin]').click();
+  for (const slide of PROLOGUE_SLIDES) {
+    const image = root.querySelector('.prologue-screen').style.getPropertyValue('--prologue-image');
+    assert.ok(image.includes(`https://example.com/RPG-ChineseGame/${slide.image}`), image);
+    root.querySelector('[data-prologue-next]').click();
+    root.querySelector('[data-prologue-next]').click();
+  }
+  prologue.finish();
 });

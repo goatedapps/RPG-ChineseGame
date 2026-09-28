@@ -21,6 +21,8 @@ import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from 
 import { routeKey } from './systems/regions.js';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
+import { completeDictionaryHeart, finaleLedger } from './systems/ending.js';
+import { showFinalBlow, showFinale } from './ui/ending.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -219,7 +221,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const regionNumber = Number(game.levelPackage.region.id.slice(1));
       const requestTotal = Object.keys(game.levelPackage.regionStory.requests).length;
       const fragmentName = game.levelPackage.regionStory.fragmentName || 'Truth Stroke';
-      const routeNote = regionNumber < 7 ? `<p>Explore ${escapeHtml(game.levelPackage.campaigns[game.levelPackage.region.id].route.name)}${game.levelPackage.map.route ? '' : ' beyond the town gate'}. ${story.bossDefeated ? 'Find the onward gate.' : 'Find its pavilion and onward gate.'}</p>` : '';
+      const routeNote = regionNumber < 7 ? `<p>Explore ${escapeHtml(game.levelPackage.campaigns[game.levelPackage.region.id].route.name)}${game.levelPackage.map.route ? '' : ' beyond the town gate'}. ${story.bossDefeated ? 'Find the onward gate.' : 'Find its pavilion and onward gate.'}</p>` : `<p>Explore Crown Veil Trail beyond the summit exit. Find the hidden Final Seal Pavilion after freeing enough spirits.</p>`;
       const returnAction = game.levelPackage.map.route ? 'leave' : 'back';
       overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p>${routeNote}<p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>${returnAction === 'leave' ? 'Return to town' : 'Enter the return road'}</button></div></div>`);
       document.querySelector('[data-travel-previous]').addEventListener('click', () => onEnterRoute?.(returnAction));
@@ -444,6 +446,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         if (battle.hp <= 0) {
           audio?.setScene('victory');
           const bossArt = creatureSvg(game.levelPackage.region.boss, '');
+          if (game.levelPackage.region.id === 'r7') {
+            showFinalBlow(overlay, heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero'), bossArt, bossWin);
+            return;
+          }
           overlay.open(`<article class="battle-scene boss-victory-scene"><div class="boss-victory-stage"><div class="boss-victory-hero">${heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero')}</div><div class="boss-victory-boss boss-split-left" aria-hidden="true">${bossArt}</div><div class="boss-victory-boss boss-split-right" aria-hidden="true">${bossArt}</div><div class="boss-victory-slash" aria-hidden="true"></div></div><div class="battle-console"><p class="panel-kicker">Victory</p><h1>${escapeHtml(bossName)} defeated!</h1><p>Your final spell dealt ${damage} damage. The Spirit Brush is ready to be restored.</p><button class="primary" data-boss-victory>Continue the story</button></div></article>`, { dismissible: false });
           document.querySelector('[data-boss-victory]').addEventListener('click', bossWin, { once: true });
           return;
@@ -498,11 +504,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const fragmentArt = FRAGMENT_ART[fragment] || FRAGMENT_ART['dawn-stroke'];
       if (game.levelPackage.region.id !== 'r1') addUnique(game.state.progress.room.trophies, fragmentName);
       commit();
+      if (game.levelPackage.region.id === 'r7') return dictionaryHeart();
       const secretText = game.levelPackage.region.id === 'r1'
         ? 'The hidden grove is open, and the Muddle King now runs the Mistake Museum.'
-        : game.levelPackage.region.id === 'r7'
-          ? 'The Spirit Brush is whole. Visit the Dictionary Heart to hear the final story.'
-          : `${game.levelPackage.regionStory.secretName || 'The hidden place'} can now be opened.`;
+        : `${game.levelPackage.regionStory.secretName || 'The hidden place'} can now be opened.`;
       overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p><button class="primary" data-close-overlay>${game.levelPackage.map.route ? 'Continue exploring' : `Return to ${escapeHtml(game.levelPackage.region.name)}`}</button></div>`);
     });
   }
@@ -653,13 +658,32 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function dictionaryHeart() {
     const game = active();
     if (!game.state.progress.story.bossDefeated) return overlay.dialogue({ title: 'Sleeping Dictionary Heart', lines: ['The Tree waits for the Final Stroke of the Spirit Brush.'] });
-    if (game.state.progress.story.flags.dictionaryHeart) return overlay.dialogue({ title: 'Dictionary Heart', lines: ['The Tree is bright again. Every word you learn makes room for another story.'] });
-    game.state.progress.story.flags.dictionaryHeart = true;
-    game.state.player.coins += 120;
-    game.state.progress.scrolls.unlocked.unshift({ day: localDay(), title: 'The Great Dictionary Tree', type: 'Final Story Scroll', text: 'The scattered Word Spirits came home. The Tree did not keep words locked away: it shared them with everyone who read, spoke, wrote, listened, and tried again.' });
+    completeDictionaryHeart(game.levelPackage, game.state, localDay());
     commit();
     audio?.sfx('majorReward');
-    overlay.open('<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">The Great Dictionary Tree blooms</p><h1>Your story continues</h1><p>Every Word Spirit has a place again. You found the Final Story Scroll and 120 coins. You can keep practising, exploring, and helping friends in every region.</p><button class="primary" data-close-overlay>Continue exploring</button></div>');
+    audio?.setScene('intro');
+    showFinale(overlay, finaleLedger(game.levelPackage, game.state), () => {
+      game.state.progress.flags.endingSeen = true;
+      commit();
+      onSwitchRegion?.('r1');
+      homecoming();
+    });
+  }
+
+  function homecoming() {
+    const game = active();
+    const ledger = finaleLedger(game.levelPackage, game.state);
+    const remaining = ledger.missing.map(entry => `<li><b>${escapeHtml(entry.region)}:</b> ${escapeHtml(entry.name)}</li>`).join('');
+    game.state.progress.flags.grandmaHomecomingSeen = true;
+    commit();
+    overlay.open(`<div class="panel homecoming-panel"><div class="homecoming-copy"><p class="panel-kicker">Back in Scholar Village</p><h1>Grandma Wang welcomes you home</h1><p>“You brought the Word Spirits home and saved the Great Dictionary Tree. I am so proud of you. Every village now has a Word Portal, so you can visit our friends whenever you wish.”</p>${ledger.missing.length ? `<p>There are still ${ledger.missing.length} optional discoveries to find. Talk to neighbours, finish Spirit sets, and explore the hidden places. Nothing is missable.</p><details><summary>See every remaining discovery</summary><ul>${remaining}</ul></details>` : '<p>You have found every optional discovery. What a wonderful journey!</p>'}</div><div class="homecoming-actions"><button class="primary" data-close-overlay>Explore the restored world</button></div></div>`, { dismissible: false });
+  }
+
+  function wordPortal() {
+    const game = active();
+    if (!game.state.progress.flags.worldRestored) return false;
+    overlay.open(`<div class="panel portal-panel"><p class="panel-kicker">The restored Tree connects the villages</p><h1>Word Portal</h1><p>Choose a village to visit. Your progress and discoveries will stay safe.</p><div class="portal-destinations">${Object.values(game.levelPackage.campaigns).map(campaign => `<button class="secondary" data-portal-region="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'disabled' : ''}>${escapeHtml(campaign.region.name)}</button>`).join('')}</div><button class="secondary" data-close-overlay>Stay here</button></div>`);
+    for (const button of document.querySelectorAll('[data-portal-region]:not([disabled])')) button.addEventListener('click', () => onSwitchRegion?.(button.dataset.portalRegion), { once: true });
   }
 
   function mistakeMuseum() {
@@ -693,9 +717,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       'ah-dong': ahDong,
       'treasure-chest': treasureChest,
       'hidden-grove': hiddenGrove,
+      'word-portal': wordPortal,
       gatekeeper
     };
     if (gameRegion() === 'r1') {
+      handlers['grandma-wang'] = () => active().state.progress.flags.worldRestored ? homecoming() : storyJournal();
       handlers['route-entrance'] = () => onEnterRoute?.('enter');
       handlers['return-village'] = () => onEnterRoute?.('leave');
       handlers['boss-pavilion-door'] = gatekeeper;
@@ -772,8 +798,6 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       handlers['gardener-shui'] = () => regionalRequest('gardener-shui');
       handlers['water-garden'] = () => regionalRequest('gardener-shui');
       handlers['reader-lin'] = () => regionalRequest('reader-lin');
-      handlers['final-seal-door'] = gatekeeper;
-      handlers['tree-warden'] = gatekeeper;
       handlers['return-gate'] = () => onSwitchRegion?.('r6');
       handlers['dictionary-heart'] = dictionaryHeart;
     }
@@ -786,7 +810,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const route = game.levelPackage.campaigns[gameRegion()]?.route;
       if (route) {
         handlers['next-region-gate'] = () => onEnterRoute?.('enter');
-        if (gameRegion() === 'r1') handlers['route-entrance'] = () => onEnterRoute?.('enter');
+        handlers['route-entrance'] = () => onEnterRoute?.('enter');
         for (const bossId of ['granary-door', 'gatekeeper', 'clock-tower-door', 'clock-warden', 'mirror-stage-door', 'mirror-keeper', 'dragon-gate-door', 'dragon-warden', 'ghost-archive-door', 'memory-keeper']) {
           if (handlers[bossId]) handlers[bossId] = () => overlay.dialogue({ title: route.name, lines: [`The boss awaits at the ${route.objects.find(item => item.id === 'boss-pavilion-building').name} beyond the town gate.`] });
         }

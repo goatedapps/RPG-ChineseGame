@@ -365,6 +365,28 @@ function drawLandmark(context, object, offsetX, offsetY) {
   }
 }
 
+function drawPortal(context, object, offsetX, offsetY, tick) {
+  const x = object.x * TILE - offsetX + 16;
+  const y = object.y * TILE - offsetY + 17;
+  context.save();
+  context.fillStyle = '#163b46aa';
+  context.beginPath();
+  context.ellipse(x, y + 13, 17, 6, 0, 0, Math.PI * 2);
+  context.fill();
+  context.shadowColor = '#f6d874';
+  context.shadowBlur = 8 + Math.sin(tick / 12) * 3;
+  context.strokeStyle = '#e6bd66';
+  context.lineWidth = 4;
+  context.beginPath();
+  context.ellipse(x, y - 2, 12, 17, 0, 0, Math.PI * 2);
+  context.stroke();
+  context.fillStyle = '#66beb8b8';
+  context.beginPath();
+  context.ellipse(x, y - 2, 8, 13, 0, 0, Math.PI * 2);
+  context.fill();
+  context.restore();
+}
+
 function drawPerson(context, x, y, color, direction = 'down', isPlayer = false, equipment = {}) {
   context.fillStyle = 'rgba(15,25,30,.22)';
   context.beginPath();
@@ -531,6 +553,7 @@ export function createRenderer(canvas, map) {
 
     for (const object of map.objects.filter(object => object.type === 'landmark')) drawLandmark(context, object, offsetX, offsetY);
     for (const object of map.objects.filter(object => object.type === 'building')) drawBuilding(context, object, offsetX, offsetY, illustratedStructures, art);
+    for (const object of map.objects.filter(object => object.type === 'portal')) drawPortal(context, object, offsetX, offsetY, tick);
     const entities = map.objects.filter(object => object.type === 'npc' || object.type === 'sign')
       .map(object => ({ ...object, sortY: object.y }))
       .concat({ type: 'player', x: state.player.x, y: state.player.y, sortY: state.player.y })

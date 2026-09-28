@@ -19,19 +19,19 @@ test('root homepage is playable and old game links preserve their query and hash
 });
 
 test('the separate walkthrough has an introduction and one page for each region', () => {
-  const intro = new JSDOM(read('design-previews/region1-walkthrough.html'));
+  const intro = new JSDOM(read('walkthrough/index.html'));
   assert.equal(intro.window.document.body.dataset.region, 'intro');
   for (let number = 1; number <= 7; number += 1) {
-    const file = `design-previews/walkthrough-region-${number}.html`;
+    const file = `walkthrough/walkthrough-region-${number}.html`;
     const page = new JSDOM(read(file));
     assert.equal(page.window.document.body.dataset.region, `r${number}`);
     assert.match(read('sw.js'), new RegExp(`walkthrough-region-${number}\\.html`));
   }
-  const guide = read('design-previews/walkthrough.js');
+  const guide = read('walkthrough/walkthrough.js');
   assert.match(guide, /Everything sold at/);
   assert.match(guide, /What each battle move practises/);
   assert.match(guide, /Creature levels/);
   assert.match(guide, /bossLevel/);
   assert.doesNotMatch(guide, /Useful now|default settings|What I learned/);
-  assert.match(read('src/gameplay.js'), /parent-walkthrough-link[\s\S]*region1-walkthrough\.html/);
+  assert.match(read('src/gameplay.js'), /parent-walkthrough-link[\s\S]*walkthrough\/index\.html/);
 });

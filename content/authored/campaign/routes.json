@@ -110,5 +110,31 @@
       { "id": "elder-root-maze", "name": "Elder Root Maze", "tint": "#5d8264", "types": { "ink-vine": 4, "relic-tortoise": 3, "bone-owl": 1 } },
       { "id": "summit-footpath", "name": "Summit Footpath", "tint": "#8faa7b", "types": { "whisper-moss": 4, "relic-tortoise": 3, "ink-vine": 1 } }
     ]
+  },
+  {
+    "id": "r7-crown-veil", "region": "r7", "name": "Crown Veil Trail", "returnTown": "Treehouse Summit", "encounterRate": 0.05,
+    "ground": "canopy moss", "path": "branch path", "flower": "memory blossoms", "thicket": "tangled roots", "water": "cloud gap",
+    "colors": { "ground": "#7aa193", "path": "#b99b72", "flower": "#a7be9b", "thicket": "#385b57", "water": "#8ab6bf", "pavilion": "#655577" },
+    "spawn": { "x": 5, "y": 28, "direction": "up" }, "returnGate": [5, 30], "pavilion": [34, 5], "gate": [39, 29], "terminal": true,
+    "pavilionName": "Final Seal Pavilion", "pavilionLine": "The Great Forgetter waits behind the final broken Brush seal.",
+    "patches": [
+      { "tile": "w", "x": 2, "y": 2, "width": 8, "height": 7 },
+      { "tile": "w", "x": 2, "y": 12, "width": 6, "height": 8 },
+      { "tile": "w", "x": 22, "y": 18, "width": 8, "height": 7 },
+      { "tile": "w", "x": 36, "y": 20, "width": 6, "height": 8 },
+      { "tile": "t", "x": 12, "y": 3, "width": 6, "height": 13 },
+      { "tile": "t", "x": 14, "y": 22, "width": 5, "height": 7 },
+      { "tile": "t", "x": 27, "y": 2, "width": 5, "height": 13 },
+      { "tile": "t", "x": 33, "y": 13, "width": 6, "height": 5 },
+      { "tile": "f", "x": 8, "y": 20, "width": 5, "height": 6 },
+      { "tile": "f", "x": 20, "y": 5, "width": 5, "height": 7 },
+      { "tile": "f", "x": 35, "y": 3, "width": 7, "height": 6 }
+    ],
+    "trails": [ [[5,28],[10,28],[10,20],[20,20],[20,15],[25,15],[25,10],[36,10],[36,9]], [[10,20],[10,10],[20,10]], [[20,20],[20,27],[29,27],[29,20],[35,20]], [[5,28],[5,30]] ],
+    "zones": [
+      { "id": "ascent-glade", "name": "Ascent Glade", "tint": "#c2af67", "types": { "blank-page-wisp": 5, "eraser-moth": 2 } },
+      { "id": "whisper-branches", "name": "Whisper Branches", "tint": "#638d92", "types": { "eraser-moth": 3, "silence-raven": 4, "lost-name-fox": 1 } },
+      { "id": "crown-garden", "name": "Crown Garden", "tint": "#73b5a3", "types": { "lost-name-fox": 4, "hollow-book-golem": 3, "silence-raven": 1 } }
+    ]
   }
 ]

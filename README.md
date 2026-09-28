@@ -7,7 +7,7 @@ Primary 2 and Primary 5 use the same world and engine with separate curriculum c
 
 Serve this repository over HTTP and open its root URL, such as `http://127.0.0.1:4173/?level=p5`.
 The homepage is `index.html`; the old `game/` address redirects to it for existing bookmarks.
-The separate player walkthrough starts at `design-previews/region1-walkthrough.html` and is also linked from Parent Mode.
+The separate player walkthrough starts at `walkthrough/index.html` and is also linked from Parent Mode.
 
 ## Build curriculum content
 
@@ -34,4 +34,3 @@ The test suite covers generated multi-level content, the shared game engine, sev
 
 - `gameplan.md` is the full product and technical specification.
 - `AGENTS.md` is the concise working guide for contributors and coding agents.
-- `.lavish/next-stage-plan.html` records the approved rebuild sequence.

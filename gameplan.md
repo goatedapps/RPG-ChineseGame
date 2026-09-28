@@ -89,7 +89,8 @@ Scholar's Lantern prevents Silver and Gold spirits from appearing for 40 forest 
 Scholar Village is the intentionally small tutorial town.
 The Scholar Atlas art treatment covers all seven villages, the fog-route pavilions and gates, and the navigation and building panels with reusable illustrated assets.
 Reusable full-body villager and distinct hero sprites appear on all village maps.
-Six separate battlefields now connect the seven towns, each with three lesson bands, persistent fog, a discoverable boss pavilion and an onward gate.
+Six separate battlefields connect the seven towns, and a seventh fog-covered trail leads out of Treehouse Summit to the final boss pavilion.
+Each route has three lesson bands and persistent fog; only the six inter-town routes have onward gates.
 The routes have roughly twice their former area, with winding thicket barriers; normal full exploration is tuned to sample roughly two thirds of regional Word Spirits across P2 and P5.
 The five later routes use distinct authored terrain layouts and the shared route renderer and progression rules.
 The map includes School, Reading Hall, Inn, Shop, Storyteller, quest villagers, lore villagers and wandering flavor villagers.
@@ -111,7 +112,7 @@ Parent tools include the PIN, goals, lesson-filtered multi-card gifting from the
 
 The app uses plain HTML, CSS and browser ES modules.
 `index.html` is the playable shell at the repository root; `game/` redirects old bookmarks.
-The separate seven-region walkthrough is linked from Parent Mode and begins at `design-previews/region1-walkthrough.html`.
+The separate seven-region walkthrough is linked from Parent Mode and begins at `walkthrough/index.html`.
 `src/main.js` loads a level package and wires the runtime.
 `src/gameplay.js`, `src/adventure.js` and `src/collection.js` coordinate major flows.
 `src/core/` owns state, saves, dates, events, safety and audio.
@@ -129,7 +130,9 @@ Never hand-edit generated files.
 `content/authored/levels/<level>/level.json` contains readiness, lesson mappings, features and tuning.
 `content/authored/campaign/` contains shared maps, regions, story, daily quests and sets.
 
-The completed annotated review is under `.lavish/`.
+The final Great Forgetter strike fills the screen, then the Dictionary Heart plays a prologue-style ending before full-screen automated rolling credits.
+The credits recall all seven bosses and the optional discoveries collected so far; a separate scrollable layout is available for reduced-motion settings.
+The hero returns to Scholar Village, and every village gains a Word Portal for revisiting unfinished optional tasks.
 
 ## Content pipeline
 

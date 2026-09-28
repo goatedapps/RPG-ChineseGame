@@ -131,6 +131,15 @@ test('town gates lead to roads while their bosses are only challenged at road pa
       assert.match(root.textContent, /Defeat the|dictation/);
       assert.notEqual(calls.at(-1), `r${number + 1}`);
     }
+    active = { levelPackage: activateRegion(game, 'r7'), state };
+    enterRegion(state, active.levelPackage);
+    adventure.handleInteraction(active.levelPackage.map.objects.find(object => object.id === 'route-entrance'));
+    assert.equal(calls.at(-1), 'enter');
+    const warden = active.levelPackage.map.objects.find(object => object.id === 'tree-warden');
+    assert.equal(adventure.handleInteraction(warden), false);
+    active.levelPackage.map = active.levelPackage.route;
+    adventure.handleInteraction(active.levelPackage.map.objects.find(object => object.id === 'return-village'));
+    assert.equal(calls.at(-1), 'leave');
   } finally {
     global.document = oldDocument;
   }
@@ -169,14 +178,14 @@ test('each onward gate plays its opening scene only on first crossing', async ()
   }
 });
 
-test('clearing each later road naturally samples roughly two thirds of its regional spirits', async () => {
+test('clearing each later route naturally samples roughly two thirds of its regional spirits', async () => {
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { isWalkable } = await import('../src/world/map.js');
   const { isEncounterTerrain, zoneAt } = await import('../src/world/encounters.js');
   const { revealRouteTile, routeDiscoveryPercent } = await import('../src/world/fog.js');
   for (const level of playableIds) {
     const game = await loadLevelPackage(level, fetcher, '');
-    for (let number = 2; number <= 6; number += 1) {
+    for (let number = 2; number <= 7; number += 1) {
       const regionId = `r${number}`;
       const map = game.campaigns[regionId].route;
       let player = map.spawn;

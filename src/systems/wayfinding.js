@@ -55,7 +55,9 @@ export function nextStep(levelPackage, state) {
   }
 
   if (story.bossDefeated) {
-    if (regionId === 'r7') return { text: 'Visit the Dictionary Heart to finish the story.', target: objectTarget(map, 'dictionary-heart') };
+    if (regionId === 'r7') return map.route
+      ? { text: 'Return to Treehouse Summit and visit the Dictionary Heart.', target: returnTarget }
+      : { text: 'Visit the Dictionary Heart to finish the story.', target: objectTarget(map, 'dictionary-heart') };
     if (map.route) return { text: story.flags.gateDictationPassed ? `Travel through the gate to ${nextTown}.` : `Find the gate to ${nextTown} and pass its dictation.`, target: objectTarget(map, 'next-region-gate') };
     return { text: `Return to the road and find the gate to ${nextTown}.`, target: townExit };
   }
@@ -84,6 +86,5 @@ export function nextStep(levelPackage, state) {
     }
     return { text: `Enter the ${pavilion?.name || 'boss pavilion'} and challenge the ${levelPackage.regionStory.bossName}.`, target: pavilionTarget };
   }
-  const bossTarget = regionId === 'r7' ? objectTarget(map, 'final-seal-building') : townExit;
-  return { text: regionId === 'r7' ? `Enter the Final Seal and challenge the ${levelPackage.regionStory.bossName}.` : `Return to ${route.name} and find the ${levelPackage.regionStory.bossPlace}.`, target: bossTarget };
+  return { text: `Return to ${route.name} and find the ${levelPackage.regionStory.bossPlace}.`, target: townExit };
 }

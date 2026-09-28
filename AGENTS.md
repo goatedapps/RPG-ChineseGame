@@ -16,7 +16,7 @@ Production URLs:
 ## Repository map
 
 - `index.html` is the playable shell; `game/` redirects old bookmarks.
-- `design-previews/region1-walkthrough.html` introduces the separate seven-region walkthrough linked from Parent Mode.
+- `walkthrough/index.html` introduces the separate seven-region walkthrough linked from Parent Mode.
 - `src/` contains the ES-module runtime.
 - `css/` contains the modular visual system.
 - `content/source/<level>/` contains curriculum source material.
@@ -26,7 +26,7 @@ Production URLs:
 - `content/authored/campaign/` contains the shared world, story, quests and sets.
 - `assets/audio/` contains packaged music and effects.
 - `tests/` contains regression coverage.
-- `.lavish/` contains the completed annotated review.
+- `src/systems/ending.js` owns the post-game portal and optional-discovery ledger; `src/ui/ending.js` presents the finale.
 
 ## Product invariants
 
@@ -42,6 +42,7 @@ Production URLs:
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
+- Keep the Great Forgetter's finishing strike and story ending full-screen, followed by auto-rolling credits with a reduced-motion alternative.
 - Set each regional boss one level above that region's strongest standard creature and let it counterattack until defeated.
 - Use only standalone questions in boss battles; never use questions that depend on an unseen passage.
 - Keep battle vocabulary sealed until the child answers; reveal pinyin and meaning in feedback.
@@ -67,22 +68,23 @@ Production URLs:
 - Preserve local Hanzi data and the vendored Hanzi Writer runtime.
 - Keep runtime illustration assets sized for their displayed use, and update image references, offline cache and asset tests together.
 - Keep the Scholar Atlas shell consistent from curriculum selection through all seven regions, and reuse illustrated buildings and terrain detail across safe villages.
-- Keep village signs and guide dialogue aligned with the inter-town routes; Regions 1–6 towns are safe, while Treehouse Summit has encounter lesson glades.
+- Keep village signs and guide dialogue aligned with the routes; all seven villages are safe, including Treehouse Summit.
 - Keep Parent Mode actions in place with a clear confirmation instead of resetting its scroll position.
 - Keep the Spirit Book, Bag, Daily Board and equipment art lightweight and available offline.
 - Reuse the Atlas panel treatment across navigation and building windows, and use the shared building/gate sprites on both towns and fog routes.
 - Reuse the same optimized Word Spirit emblem for the game header, favicon and install icons.
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
-- Six roughly double-area inter-town routes carry encounters, persistent fog, a boss pavilion and a one-time gate transition; the final summit's glades also carry encounters.
+- Six roughly double-area inter-town routes and one final summit trail carry encounters, persistent fog and a boss pavilion; only inter-town routes have onward gates.
+- Keep a compatibility gate coordinate on the terminal route for older cached clients, but never render an onward gate there.
 - Tune normal full-route exploration to sample about two thirds of regional spirits, and verify P2 and P5 pacing in route tests.
 - Keep each route's discovery, gate-opening flag and return position persistent across saves.
+- After the Dictionary Heart, return to Scholar Village and keep Word Portals in all villages available for optional discoveries.
 - Keep touch targets at least 44 pixels and support reduced motion.
 - Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.
 - Keep character dialogue typewriter-paced, with the first Next press revealing the line and reduced-motion users seeing it immediately.
 - Play question feedback audio when the result appears and the earn cue when gameplay awards XP or coins.
 - Do not reveal an answer elsewhere on an active question screen.
 - A villager's passage question clears only after a correct answer; answer review or “I don’t know” leaves its question mark available.
-- Do not end an active Lavish annotation session until the user finishes or explicitly requests it.
 
 ## Workflow
 

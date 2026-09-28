@@ -90,7 +90,7 @@ export function buildRouteMap(spec, lessons, encounterRate) {
   for (const patch of spec.patches) paintRect(tiles, patch);
   for (const trail of spec.trails) paintTrail(tiles, trail);
   const [buildingX, buildingY] = spec.pavilion;
-  const [gateX, gateY] = spec.gate;
+  const [gateX, gateY] = spec.gate || [];
   const [returnX, returnY] = spec.returnGate;
   return {
     id: spec.id,
@@ -120,7 +120,7 @@ export function buildRouteMap(spec, lessons, encounterRate) {
     objects: [
       { id: 'boss-pavilion-building', type: 'building', name: spec.pavilionName, rect: { x: buildingX, y: buildingY, width: 5, height: 4 }, door: { x: buildingX + 2, y: buildingY + 4 }, solid: true, color: spec.colors.pavilion },
       { id: 'boss-pavilion-door', type: 'door', x: buildingX + 2, y: buildingY + 3, solid: true, interaction: { kind: 'boss', title: spec.pavilionName, lines: [spec.pavilionLine] } },
-      { id: 'next-region-gate', type: 'sign', x: gateX, y: gateY, solid: true, interaction: { kind: 'travel', title: `Gate to ${spec.nextTown}`, lines: ['The road continues beyond this gate.'] } },
+      ...(spec.terminal ? [] : [{ id: 'next-region-gate', type: 'sign', x: gateX, y: gateY, solid: true, interaction: { kind: 'travel', title: `Gate to ${spec.nextTown}`, lines: ['The road continues beyond this gate.'] } }]),
       { id: 'return-village', type: 'sign', x: returnX, y: returnY, solid: true, interaction: { kind: 'travel', title: spec.returnTown, lines: [`Return to ${spec.returnTown}.`] } }
     ]
   };

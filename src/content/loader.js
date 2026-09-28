@@ -92,7 +92,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '.') 
     campaigns[regionId] = { region, map, sets: authoredSets, regionStory: story };
   }
   for (const [regionId, campaign] of Object.entries(campaigns)) {
-    campaign.map.safeTown = regionId !== 'r7';
+    campaign.map.safeTown = true;
     campaign.map.atlasVillage = true;
   }
   const route = JSON.parse(JSON.stringify(route1));

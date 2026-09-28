@@ -2,19 +2,19 @@ import { createEventBus } from './core/events.js';
 import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10g';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p21';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p25';
+import { createRenderer } from './world/renderer.js?p26';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10e';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p37';
+import { createGameplay } from './gameplay.js?p38';
 import { createCollection } from './collection.js?p19';
-import { createAdventure } from './adventure.js?p30';
+import { createAdventure } from './adventure.js?p31';
 import { createAudioManager } from './core/audio.js?p24';
 import { warmImage } from './core/assets.js';
-import { createPrologue } from './ui/prologue.js?p21';
+import { createPrologue } from './ui/prologue.js?p22';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
@@ -23,6 +23,7 @@ import { drawGuideMap } from './ui/guideMap.js?p1';
 import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './systems/regions.js?p14';
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
+import { activateVillagePortals } from './systems/ending.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -73,11 +74,11 @@ function render() {
   if (active.levelPackage.map.route) hud.region.textContent = active.levelPackage.map.name;
   const guideMap = $('#guide-map');
   guideMap.hidden = false;
-  $('#guide-map-heading').textContent = active.levelPackage.map.route ? 'Route map' : active.levelPackage.region.id === 'r7' ? 'Summit map' : 'Village map';
+  $('#guide-map-heading').textContent = active.levelPackage.map.route ? 'Route map' : 'Village map';
   const currentZone = drawGuideMap($('#guide-map-canvas'), active.levelPackage.map, active.state, step);
   const zoneLabel = $('#route-zone-label');
   zoneLabel.hidden = false;
-  zoneLabel.textContent = currentZone ? `${currentZone.name} · Lesson ${currentZone.lesson}` : active.levelPackage.map.route || active.levelPackage.region.id === 'r7' ? 'Between lesson areas' : 'Safe town · battle on the road';
+  zoneLabel.textContent = currentZone ? `${currentZone.name} · Lesson ${currentZone.lesson}` : active.levelPackage.map.route ? 'Between lesson areas' : 'Safe town · battle on the road';
   const effects = $('#route-effects');
   const encounter = active.state.progress.encounter;
   const activeEffects = active.levelPackage.map.route ? [
@@ -237,6 +238,10 @@ async function startLevel(levelId) {
       }
     }
     const loadResult = loadLevelState(storage, levelPackage);
+    if (loadResult.state.progress.flags.worldRestored || loadResult.state.progress.regions?.r7?.story?.flags?.dictionaryHeart || (loadResult.state.player.map === levelPackage.campaigns.r7.map.id && loadResult.state.progress.story?.flags?.dictionaryHeart)) {
+      loadResult.state.progress.flags.worldRestored = true;
+      activateVillagePortals(levelPackage.campaigns);
+    }
     const savedRegionId = regionIdForMap(levelPackage, loadResult.state.player.map);
     levelPackage = activateRegion(levelPackage, savedRegionId);
     if (loadResult.state.player.map === levelPackage.campaigns[savedRegionId].route?.id) {

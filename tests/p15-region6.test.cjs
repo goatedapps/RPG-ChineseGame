@@ -69,5 +69,5 @@ test('P15 creature, boss and reward art are packaged for offline play', () => {
   assert.match(serviceWorker, /r6-ancient-grove\.json/);
   assert.match(serviceWorker, /give-up-ghost\.webp/);
   assert.match(serviceWorker, /memory-stroke\.webp/);
-  assert.match(serviceWorker, /music-village\.wav/);
+  assert.match(serviceWorker, /ancient-grove-bg\.mp3/);
 });

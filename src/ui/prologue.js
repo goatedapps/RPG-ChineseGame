@@ -57,8 +57,9 @@ export function createPrologue({ root, audio, onComplete, skippable = true }) {
   }
 
   function renderSplash() {
+    const imageUrl = new URL(PROLOGUE_SLIDES[0].image, root.ownerDocument.baseURI).href;
     root.hidden = false;
-    root.innerHTML = `<section class="prologue-screen prologue-splash" style="--prologue-image:url('assets/images/intro/dictionary-tree.jpg')" aria-label="Word Spirit Quest introduction">
+    root.innerHTML = `<section class="prologue-screen prologue-splash" style="--prologue-image:url('${escapeHtml(imageUrl)}')" aria-label="Word Spirit Quest introduction">
       <div class="prologue-vignette"></div>
       <div class="prologue-title-lockup"><p>字灵</p><h1>Word Spirit Quest</h1><span>A story about the words only you can save</span></div>
       <div class="prologue-actions"><button class="prologue-begin" data-prologue-begin>Begin the story</button>${skippable ? '<a class="prologue-skip" href="#game" data-prologue-skip>Skip intro</a>' : ''}</div>
@@ -76,8 +77,9 @@ export function createPrologue({ root, audio, onComplete, skippable = true }) {
   function renderSlide() {
     stopTyping();
     const slide = PROLOGUE_SLIDES[index];
+    const imageUrl = new URL(slide.image, root.ownerDocument.baseURI).href;
     const last = index === PROLOGUE_SLIDES.length - 1;
-    root.innerHTML = `<section class="prologue-screen" style="--prologue-image:url('${slide.image}');--prologue-position:${slide.position}" aria-label="Introduction, part ${index + 1} of ${PROLOGUE_SLIDES.length}">
+    root.innerHTML = `<section class="prologue-screen" style="--prologue-image:url('${escapeHtml(imageUrl)}');--prologue-position:${slide.position}" aria-label="Introduction, part ${index + 1} of ${PROLOGUE_SLIDES.length}">
       <div class="prologue-vignette"></div>
       <article class="prologue-story">
         <div class="prologue-progress" aria-label="Part ${index + 1} of ${PROLOGUE_SLIDES.length}">${PROLOGUE_SLIDES.map((_, dot) => `<i class="${dot === index ? 'current' : dot < index ? 'done' : ''}"></i>`).join('')}</div>

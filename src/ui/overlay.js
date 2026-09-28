@@ -34,6 +34,7 @@ export function createOverlay(element) {
     closeHandler = onClose;
     api.dismissible = dismissible;
     element.innerHTML = content;
+    element.classList.toggle('full-screen-overlay', Boolean(element.querySelector('.finale-screen, .homecoming-panel')));
     const panel = element.querySelector('.panel');
     if (panel?.querySelector(':scope > .panel-header') && !panel.matches('.bag-panel, .parent-panel')) panel.classList.add('atlas-window');
     element.hidden = false;
@@ -50,6 +51,7 @@ export function createOverlay(element) {
     element.hidden = true;
     element.dataset.open = 'false';
     element.innerHTML = '';
+    element.classList.remove('full-screen-overlay');
     const handler = closeHandler;
     closeHandler = null;
     handler?.();

@@ -1,7 +1,7 @@
 function directionFor(map, zone) {
   if (map.route) {
     const horizontal = (zone.rect.x + zone.rect.width / 2) / map.width;
-    return horizontal < 1 / 3 ? 'near the town entrance' : horizontal < 2 / 3 ? 'in the middle of the road' : 'towards the onward gate';
+    return horizontal < 1 / 3 ? 'near the town entrance' : horizontal < 2 / 3 ? 'in the middle of the road' : map.region === 'r7' ? 'near the Final Seal Pavilion' : 'towards the onward gate';
   }
   return 'explore the local paths';
 }

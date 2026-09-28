@@ -106,7 +106,7 @@ function migrateRouteFog(discovered, map) {
 }
 
 function normalizeRoutes(value, levelPackage, legacy) {
-  return Object.fromEntries(Array.from({ length: 6 }, (_, index) => {
+  return Object.fromEntries(Array.from({ length: 7 }, (_, index) => {
     const key = `r${index + 1}r${index + 2}`;
     const route = value?.[key];
     if (!route || typeof route !== 'object') return null;

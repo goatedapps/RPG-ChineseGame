@@ -3,7 +3,7 @@
   "readingKeyItem": "treeheart-lens",
   "gateKeyName": "Treeheart Lens",
   "bossName": "Great Forgetter",
-  "bossPlace": "Final Seal",
+  "bossPlace": "Final Seal Pavilion",
   "fragmentName": "Final Stroke",
   "fragmentKey": "final-stroke",
   "secretName": "Dictionary Heart",
@@ -12,7 +12,7 @@
   "scenes": {
     "arrival": [
       { "speaker": "Keeper Ming", "say": "You have reached Treehouse Summit. The Great Dictionary Tree once sheltered every Word Spirit, but its heart has gone quiet." },
-      { "speaker": "Keeper Ming", "say": "Your Brush Fragments have carried memories from every region. Find the final spirits, restore the Treeheart Lens, and face the Great Forgetter." },
+      { "speaker": "Keeper Ming", "say": "Your Brush Fragments have carried memories from every region. Beyond this safe village, explore the misty Crown Veil Trail, free the final spirits, restore the Treeheart Lens, and find the Great Forgetter's pavilion." },
       { "speaker": "Keeper Ming", "say": "The words you saved belong to everyone. Let us bring them home together." },
       { "setFlag": "arrival" }
     ],

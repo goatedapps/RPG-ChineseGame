@@ -93,7 +93,7 @@ test('corrupt active saves restore the last known-good backup and future saves a
 });
 
 test('tablet shell exposes accessibility landmarks and an offline application cache', () => {
-  const html = fs.readFileSync(path.join(root, 'game/index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const dom = new JSDOM(html);
   assert.ok(dom.window.document.querySelector('.skip-link[href="#game-stage"]'));
   assert.equal(dom.window.document.querySelector('#objective-text').parentElement.getAttribute('aria-live'), 'polite');
@@ -195,7 +195,7 @@ test('Storyteller uses an open book, two-page text and page dictation', async ()
 });
 
 test('Hero Status shows the main character and leaves partner selection in My Room', () => {
-  const html = fs.readFileSync(path.join(root, 'game/index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
   const dom = new JSDOM(html);
   assert.equal(dom.window.document.querySelector('#character-button span').textContent, 'Hero Status');

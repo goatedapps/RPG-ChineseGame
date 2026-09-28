@@ -68,7 +68,7 @@ test('offline release cache derives playable curricula from the registry and inc
 });
 
 test('first paint shows an illustrated walking-hero loader until the opening art decodes', () => {
-  const shell = fs.readFileSync('game/index.html', 'utf8');
+  const shell = fs.readFileSync('index.html', 'utf8');
   const startup = fs.readFileSync('src/main.js', 'utf8');
   const styles = fs.readFileSync('css/base.css', 'utf8');
   assert.match(shell, /id="boot-loading"[^>]*role="status"/);

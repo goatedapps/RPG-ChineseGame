@@ -12,7 +12,7 @@ test('startup prologue carries the core story and packaged media', async () => {
   for (const phrase of ['Word Spirit', '字灵', 'Great Dictionary Tree', '字典树', 'Great Forgetter', '遗忘大王', 'Spirit Brush']) assert.match(story, new RegExp(phrase));
   for (const image of new Set(PROLOGUE_SLIDES.map(slide => slide.image))) assert.equal(fs.existsSync(path.join(root, image.replace('../', ''))), true, image);
   assert.equal(fs.existsSync(path.join(root, 'assets/audio/prologue-bg.mp3')), true);
-  assert.match(fs.readFileSync(path.join(root, 'game/index.html'), 'utf8'), /id="prologue"/);
+  assert.match(fs.readFileSync(path.join(root, 'index.html'), 'utf8'), /id="prologue"/);
   const main = fs.readFileSync(path.join(root, 'src/main.js'), 'utf8');
   const prologue = fs.readFileSync(path.join(root, 'src/ui/prologue.js'), 'utf8');
   const audio = fs.readFileSync(path.join(root, 'src/core/audio.js'), 'utf8');

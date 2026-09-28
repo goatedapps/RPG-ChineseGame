@@ -8,11 +8,11 @@ const root = path.resolve(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
 test('modular game shell exposes Region 1 services and local writing runtime', () => {
-  const html = fs.readFileSync(path.join(root, 'game', 'index.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const dom = new JSDOM(html);
   assert.ok(dom.window.document.querySelector('#book-button'));
   assert.ok(dom.window.document.querySelector('#parent-button'));
-  assert.equal(dom.window.document.querySelector('script[src*="hanzi-writer.min.js"]').getAttribute('src'), '../vendor/hanzi-writer/hanzi-writer.min.js');
+  assert.equal(dom.window.document.querySelector('script[src*="hanzi-writer.min.js"]').getAttribute('src'), './vendor/hanzi-writer/hanzi-writer.min.js');
 });
 
 test('creature difficulty rises sharply across the three Region 1 lessons', async () => {

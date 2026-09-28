@@ -93,7 +93,7 @@ test('regional bosses are one level above the strongest regional creature', asyn
 });
 
 test('P6 and P7 surfaces and Region 1 characters are present in the modular shell', () => {
-  const dom = new JSDOM(fs.readFileSync(path.join(root, 'game', 'index.html'), 'utf8'));
+  const dom = new JSDOM(fs.readFileSync(path.join(root, 'index.html'), 'utf8'));
   assert.ok(dom.window.document.querySelector('#daily-button'));
   assert.ok(dom.window.document.querySelector('#story-button'));
   const map = readJson('content/authored/campaign/maps/r1-hub.json');

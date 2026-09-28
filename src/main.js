@@ -493,7 +493,7 @@ async function boot() {
 }
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), { scope: '../' }).catch(error => console.warn('Offline support could not start.', error));
+  navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), { scope: new URL('../', import.meta.url).href }).catch(error => console.warn('Offline support could not start.', error));
 }
 
 addEventListener('offline', () => { hud.status.textContent = 'Offline · progress stays on this device'; hud.status.classList.add('warning'); });

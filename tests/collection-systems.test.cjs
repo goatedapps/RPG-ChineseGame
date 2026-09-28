@@ -116,7 +116,7 @@ test('fresh saves and the game shell expose the P4 and P5 collection surfaces', 
   assert.deepEqual(state.progress.partners, []);
   assert.equal(state.progress.equipment.equipped.brush, 'bamboo-brush');
   assert.equal(state.settings.dailyBattles, 30);
-  const dom = new JSDOM(fs.readFileSync(path.join(root, 'game', 'index.html'), 'utf8'));
+  const dom = new JSDOM(fs.readFileSync(path.join(root, 'index.html'), 'utf8'));
   assert.ok(dom.window.document.querySelector('#character-button'));
   assert.equal(dom.window.document.querySelector('#bag-button span').textContent, 'Bag');
   assert.ok(dom.window.document.querySelector('#room-button'));

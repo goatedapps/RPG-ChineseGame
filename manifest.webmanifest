@@ -2,7 +2,7 @@
   "name": "Word Spirit Quest",
   "short_name": "Word Spirits",
   "description": "A tablet-friendly Chinese vocabulary adventure.",
-  "start_url": "./game/",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "icons": [

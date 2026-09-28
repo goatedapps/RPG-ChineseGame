@@ -1,6 +1,8 @@
-const CACHE = 'word-spirit-quest-p18-v65';
+const CACHE = 'word-spirit-quest-p18-v66';
 const CORE = [
-  './game/', './game/index.html', './manifest.webmanifest',
+  './', './index.html', './lab.html', './game/', './game/index.html', './game/lab.html', './manifest.webmanifest',
+  './design-previews/region1-walkthrough.html', './design-previews/walkthrough.css', './design-previews/walkthrough.js',
+  './design-previews/walkthrough-region-1.html', './design-previews/walkthrough-region-2.html', './design-previews/walkthrough-region-3.html', './design-previews/walkthrough-region-4.html', './design-previews/walkthrough-region-5.html', './design-previews/walkthrough-region-6.html', './design-previews/walkthrough-region-7.html',
   './css/tokens.css', './css/base.css', './css/stage.css', './css/atlas.css',
   './vendor/hanzi-writer/hanzi-writer.min.js',
   './content/authored/shared/levels.json', './content/authored/shared/balance.json', './content/authored/shared/strings.json',
@@ -47,11 +49,16 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
-  event.respondWith(caches.match(event.request).then(cached => {
+  event.respondWith((async () => {
+    const url = new URL(event.request.url);
+    const cached = await caches.match(event.request) || (url.search ? await caches.match(`${url.origin}${url.pathname}`) : null);
     if (cached) return cached;
-    return fetch(event.request).then(response => {
+    try {
+      const response = await fetch(event.request);
       if (response.ok) caches.open(CACHE).then(cache => cache.put(event.request, response.clone()));
       return response;
-    }).catch(() => event.request.mode === 'navigate' ? caches.match('./game/index.html') : Response.error());
-  }));
+    } catch {
+      return event.request.mode === 'navigate' ? caches.match('./index.html') : Response.error();
+    }
+  })());
 });

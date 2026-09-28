@@ -2,31 +2,31 @@ import { escapeHtml } from './dom.js';
 
 export const PROLOGUE_SLIDES = Object.freeze([
   {
-    image: '../assets/images/intro/dictionary-tree.jpg',
+    image: 'assets/images/intro/dictionary-tree.jpg',
     position: 'center',
     title: 'Every word was alive',
     body: 'Long ago, every word in the land lived as a Word Spirit — 字灵 — in the Great Dictionary Tree, 字典树. With their help, people could speak clearly, read bravely and write down the stories that mattered.'
   },
   {
-    image: '../assets/images/intro/great-forgetter.jpg',
+    image: 'assets/images/intro/great-forgetter.jpg',
     position: 'center',
     title: 'Then remembering had an enemy',
     body: 'The Great Forgetter — 遗忘大王 — wanted every name, letter and promise to disappear. He reached for the Spirit Brush that guarded the Tree.'
   },
   {
-    image: '../assets/images/intro/spirits-scattered.jpg',
+    image: 'assets/images/intro/spirits-scattered.jpg',
     position: 'center',
     title: 'The Spirit Brush shattered',
     body: 'Seven bright fragments flew across the world. The Word Spirits scattered with them and were sealed inside wild creatures.'
   },
   {
-    image: '../assets/images/intro/spirits-scattered.jpg',
+    image: 'assets/images/intro/spirits-scattered.jpg',
     position: '66% center',
     title: 'Now the whole world is muddled',
     body: 'People forget names, signs point the wrong way, and cooks mix up salt and sugar. Without their words, people may soon lose their stories and the promises they made.'
   },
   {
-    image: '../assets/images/intro/spirits-scattered.jpg',
+    image: 'assets/images/intro/spirits-scattered.jpg',
     position: '54% center',
     title: 'The empty brush handle chose you',
     body: 'Find the lost Word Spirits. Restore the seven Brush Fragments. Help every town remember — before the Great Forgetter reaches the Tree again.'
@@ -58,7 +58,7 @@ export function createPrologue({ root, audio, onComplete, skippable = true }) {
 
   function renderSplash() {
     root.hidden = false;
-    root.innerHTML = `<section class="prologue-screen prologue-splash" style="--prologue-image:url('../assets/images/intro/dictionary-tree.jpg')" aria-label="Word Spirit Quest introduction">
+    root.innerHTML = `<section class="prologue-screen prologue-splash" style="--prologue-image:url('assets/images/intro/dictionary-tree.jpg')" aria-label="Word Spirit Quest introduction">
       <div class="prologue-vignette"></div>
       <div class="prologue-title-lockup"><p>字灵</p><h1>Word Spirit Quest</h1><span>A story about the words only you can save</span></div>
       <div class="prologue-actions"><button class="prologue-begin" data-prologue-begin>Begin the story</button>${skippable ? '<a class="prologue-skip" href="#game" data-prologue-skip>Skip intro</a>' : ''}</div>

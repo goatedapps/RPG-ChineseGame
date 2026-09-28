@@ -9,13 +9,13 @@ const root = path.resolve(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
 test('content lab loads curricula from the registry and local Hanzi Writer', () => {
-  const html = fs.readFileSync(path.join(root, 'game', 'lab.html'), 'utf8');
+  const html = fs.readFileSync(path.join(root, 'lab.html'), 'utf8');
   const dom = new JSDOM(html);
   const levels = [...dom.window.document.querySelectorAll('#lab-level option')].map(option => option.value);
   assert.deepEqual(levels, []);
   assert.match(fs.readFileSync(path.join(root, 'src', 'content-lab.js'), 'utf8'), /await listLevels\(\)/);
-  assert.equal(dom.window.document.querySelector('script[src*="hanzi-writer.min.js"]').getAttribute('src'), '../vendor/hanzi-writer/hanzi-writer.min.js');
-  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\.\/src\/content-lab\.js(?:\?p\d+)?$/);
+  assert.equal(dom.window.document.querySelector('script[src*="hanzi-writer.min.js"]').getAttribute('src'), './vendor/hanzi-writer/hanzi-writer.min.js');
+  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\/src\/content-lab\.js(?:\?p\d+)?$/);
 });
 
 test('one clean correct answer fills a skill circle and five skills reach Gold', async () => {

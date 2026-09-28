@@ -2,21 +2,21 @@
 
 ## Start here
 
-The deployed app is the modular game under `game/`.
+The deployed app opens from the repository root `index.html`.
 Each playable curriculum in the level registry shares Regions 1–7 and keeps a separate save.
 P0–P17 engineering and the earlier physical child-and-parent tablet pilot are complete.
 P18 release polish is in progress; browser smoke checks and local Lighthouse accessibility passed, while older-iPad verification remains outstanding.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
-Use `prototype/` only as the frozen visual and behavioral reference when parity is unclear.
 
 Production URLs:
 
-- P2: `https://goatedapps.github.io/RPG-ChineseGame/game/?level=p2`
-- P5: `https://goatedapps.github.io/RPG-ChineseGame/game/?level=p5`
+- P2: `https://goatedapps.github.io/RPG-ChineseGame/?level=p2`
+- P5: `https://goatedapps.github.io/RPG-ChineseGame/?level=p5`
 
 ## Repository map
 
-- `game/index.html` is the playable shell.
+- `index.html` is the playable shell; `game/` redirects old bookmarks.
+- `design-previews/region1-walkthrough.html` introduces the separate seven-region walkthrough linked from Parent Mode.
 - `src/` contains the ES-module runtime.
 - `css/` contains the modular visual system.
 - `content/source/<level>/` contains curriculum source material.
@@ -26,7 +26,6 @@ Production URLs:
 - `content/authored/campaign/` contains the shared world, story, quests and sets.
 - `assets/audio/` contains packaged music and effects.
 - `tests/` contains regression coverage.
-- `prototype/` is the frozen reference implementation.
 - `.lavish/` contains the completed annotated review.
 
 ## Product invariants

@@ -1,18 +1,13 @@
 # Word Spirit Quest
 
-Word Spirit Quest is a tablet-friendly exploration RPG for learning primary-school Chinese.
-The current playable reference is the Primary 5 Region 1 prototype under `prototype/`.
-The modular rebuild is being developed alongside it and now completes phases P0–P8.
+Word Spirit Quest is a tablet-friendly Chinese vocabulary RPG set across seven shared story regions.
+Primary 2 and Primary 5 use the same world and engine with separate curriculum content and saves.
 
-## Run the reference prototype
+## Play locally
 
-Serve the repository with any static HTTP server and open `prototype/`.
-The published reference remains available through GitHub Pages while the rebuild reaches parity.
-
-The current modular engine preview is served from `game/`.
-It covers the complete Region 1 learning loop, collection systems, daily quests and scrolls, villager requests, rival duels and the four-phase Muddle King story finale.
-The content lab at `game/lab.html` runs P2 and P5 questions, speech and local handwriting tasks against real curriculum data.
-On GitHub Pages it is available at `/RPG-ChineseGame/game/`; the main project URL continues to open the stable prototype.
+Serve this repository over HTTP and open its root URL, such as `http://127.0.0.1:4173/?level=p5`.
+The homepage is `index.html`; the old `game/` address redirects to it for existing bookmarks.
+The separate player walkthrough starts at `design-previews/region1-walkthrough.html` and is also linked from Parent Mode.
 
 ## Build curriculum content
 
@@ -33,7 +28,7 @@ Each level supplies its own lesson mapping, supported question types and tuning 
 npm test
 ```
 
-The test suite covers the playable prototype, generated multi-level content, modular engine, Learning Core, Region 1 gameplay and collection systems.
+The test suite covers generated multi-level content, the shared game engine, seven-region progression and collection systems.
 
 ## Project references
 

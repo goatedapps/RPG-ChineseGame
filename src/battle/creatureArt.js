@@ -48,5 +48,5 @@ const CREATURE_IMAGES = {
 export function creatureSvg(id, word = '字') {
   const file = CREATURE_IMAGES[id] || CREATURE_IMAGES.fogling;
   const label = id.split('-').map(part => part[0].toUpperCase() + part.slice(1)).join(' ');
-  return `<div class="creature-portrait"><img class="creature-image creature-${escapeHtml(id)}" src="../assets/images/creatures/${file}" alt="${escapeHtml(label)}">${word ? `<span class="word-seal" aria-label="Word Spirit identity sealed">${escapeHtml(word)}</span>` : ''}</div>`;
+  return `<div class="creature-portrait"><img class="creature-image creature-${escapeHtml(id)}" src="assets/images/creatures/${file}" alt="${escapeHtml(label)}">${word ? `<span class="word-seal" aria-label="Word Spirit identity sealed">${escapeHtml(word)}</span>` : ''}</div>`;
 }

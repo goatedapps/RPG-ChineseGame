@@ -7,12 +7,12 @@ const { JSDOM } = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
 
-test('modular preview shell exposes the shared map and touch controls', () => {
-  const html = fs.readFileSync(path.join(root, 'game', 'index.html'), 'utf8');
+test('root game shell exposes the shared map and touch controls', () => {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const dom = new JSDOM(html);
   assert.ok(dom.window.document.querySelector('canvas#world'));
   assert.equal(dom.window.document.querySelectorAll('#dpad [data-direction]').length, 4);
-  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\.\/src\/main\.js\?p\d+/);
+  assert.match(dom.window.document.querySelector('script[type="module"]').getAttribute('src'), /^\.\/src\/main\.js\?p\d+/);
 });
 test('shared Region 1 map validates and supports movement interactions', async () => {
   const { attemptStep, validateMap } = await import('../src/world/map.js');

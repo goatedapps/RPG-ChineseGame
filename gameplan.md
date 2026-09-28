@@ -15,8 +15,8 @@ P18 release polish is in progress.
 
 Production URLs:
 
-- P2: `https://goatedapps.github.io/RPG-ChineseGame/game/?level=p2`
-- P5: `https://goatedapps.github.io/RPG-ChineseGame/game/?level=p5`
+- P2: `https://goatedapps.github.io/RPG-ChineseGame/?level=p2`
+- P5: `https://goatedapps.github.io/RPG-ChineseGame/?level=p5`
 
 ## Design rules
 
@@ -110,7 +110,8 @@ Parent tools include the PIN, goals, lesson-filtered multi-card gifting from the
 ## Architecture
 
 The app uses plain HTML, CSS and browser ES modules.
-`game/index.html` is a small shell.
+`index.html` is the playable shell at the repository root; `game/` redirects old bookmarks.
+The separate seven-region walkthrough is linked from Parent Mode and begins at `design-previews/region1-walkthrough.html`.
 `src/main.js` loads a level package and wires the runtime.
 `src/gameplay.js`, `src/adventure.js` and `src/collection.js` coordinate major flows.
 `src/core/` owns state, saves, dates, events, safety and audio.
@@ -128,8 +129,6 @@ Never hand-edit generated files.
 `content/authored/levels/<level>/level.json` contains readiness, lesson mappings, features and tuning.
 `content/authored/campaign/` contains shared maps, regions, story, daily quests and sets.
 
-The frozen reference prototype is under `prototype/`.
-Use it to resolve visual or behavioral parity questions, but implement changes in the modular game.
 The completed annotated review is under `.lavish/`.
 
 ## Content pipeline

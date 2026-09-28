@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 
 test('the game uses the generated logo for its header, favicon and install icon', () => {
-  const game = read('game/index.html');
+  const game = read('index.html');
   const manifest = JSON.parse(read('manifest.webmanifest'));
   const cache = read('sw.js');
   assert.match(game, /class="game-logo"[^>]+word-spirit-logo\.webp/);

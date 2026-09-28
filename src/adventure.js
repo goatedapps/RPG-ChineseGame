@@ -27,13 +27,13 @@ function addUnique(list, value) {
 }
 
 const FRAGMENT_ART = Object.freeze({
-  'dawn-stroke': '../assets/images/rewards/dawn-stroke.webp',
-  'truth-stroke': '../assets/images/rewards/truth-stroke.webp',
-  'current-stroke': '../assets/images/rewards/current-stroke.webp',
-  'courage-stroke': '../assets/images/rewards/courage-stroke.webp',
-  'harmony-stroke': '../assets/images/rewards/harmony-stroke.webp',
-  'memory-stroke': '../assets/images/rewards/memory-stroke.webp',
-  'final-stroke': '../assets/images/rewards/final-stroke.webp'
+  'dawn-stroke': 'assets/images/rewards/dawn-stroke.webp',
+  'truth-stroke': 'assets/images/rewards/truth-stroke.webp',
+  'current-stroke': 'assets/images/rewards/current-stroke.webp',
+  'courage-stroke': 'assets/images/rewards/courage-stroke.webp',
+  'harmony-stroke': 'assets/images/rewards/harmony-stroke.webp',
+  'memory-stroke': 'assets/images/rewards/memory-stroke.webp',
+  'final-stroke': 'assets/images/rewards/final-stroke.webp'
 });
 
 const BOSS_ITEM_COPY = Object.freeze({
@@ -121,7 +121,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const chestAction = ready
       ? '<button class="primary" data-daily-chest>Open Daily Chest</button>'
       : `<span class="quest-chest-status" role="status">${daily.chestClaimed ? 'Daily Chest claimed — come back tomorrow.' : `${completeCount}/${daily.quests.length} quests complete — finish the remaining quests to open the chest.`}</span>`;
-    overlay.open(`<div class="panel daily-board-panel"><div class="collection-banner daily-board-banner"><div><p class="panel-kicker">Resets at local midnight</p><h1>Daily Quest Board</h1><p>Complete all three quests to open today's chest. Battle quests pause when the daily battle cap is reached.</p></div><img src="../assets/images/ui/daily-board.webp" alt="" width="200" height="133"><button class="secondary" data-close-overlay>Close</button></div><div class="daily-board-progress"><strong>${completeCount} of ${daily.quests.length} complete</strong><div role="progressbar" aria-label="Daily quests complete" aria-valuemin="0" aria-valuemax="${daily.quests.length}" aria-valuenow="${completeCount}"><i style="width:${daily.quests.length ? completeCount / daily.quests.length * 100 : 0}%"></i></div></div><div class="quest-list">${daily.quests.map((quest, index) => `<article class="quest-card ${quest.complete ? 'complete' : ''} ${quest.event === 'battle-win' && battlePaused && !quest.complete ? 'paused' : ''}"><span class="quest-number">${quest.complete ? '✓' : index + 1}</span><div><b>${escapeHtml(quest.text)}</b><small>${quest.event === 'battle-win' && battlePaused && !quest.complete ? 'Battle quota reached · resumes tomorrow' : quest.complete ? 'Complete' : 'In progress'}</small></div><span class="quest-count">${quest.progress}/${quest.target}</span></article>`).join('')}</div><div class="button-row">${chestAction}<button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
+    overlay.open(`<div class="panel daily-board-panel"><div class="collection-banner daily-board-banner"><div><p class="panel-kicker">Resets at local midnight</p><h1>Daily Quest Board</h1><p>Complete all three quests to open today's chest. Battle quests pause when the daily battle cap is reached.</p></div><img src="assets/images/ui/daily-board.webp" alt="" width="200" height="133"><button class="secondary" data-close-overlay>Close</button></div><div class="daily-board-progress"><strong>${completeCount} of ${daily.quests.length} complete</strong><div role="progressbar" aria-label="Daily quests complete" aria-valuemin="0" aria-valuemax="${daily.quests.length}" aria-valuenow="${completeCount}"><i style="width:${daily.quests.length ? completeCount / daily.quests.length * 100 : 0}%"></i></div></div><div class="quest-list">${daily.quests.map((quest, index) => `<article class="quest-card ${quest.complete ? 'complete' : ''} ${quest.event === 'battle-win' && battlePaused && !quest.complete ? 'paused' : ''}"><span class="quest-number">${quest.complete ? '✓' : index + 1}</span><div><b>${escapeHtml(quest.text)}</b><small>${quest.event === 'battle-win' && battlePaused && !quest.complete ? 'Battle quota reached · resumes tomorrow' : quest.complete ? 'Complete' : 'In progress'}</small></div><span class="quest-count">${quest.progress}/${quest.target}</span></article>`).join('')}</div><div class="button-row">${chestAction}<button class="secondary" data-scroll-library>Scroll Library</button></div></div>`);
     document.querySelector('[data-daily-chest]')?.addEventListener('click', () => {
       const claimed = claimDailyChest(game.state.progress.daily);
       if (!claimed.ok) return;

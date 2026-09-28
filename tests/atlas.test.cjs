@@ -43,7 +43,7 @@ test('Atlas menu expands accessibly while preserving the world controls', async 
   assert.equal(button.getAttribute('aria-expanded'), 'false');
   assert.equal(resizeCount, 2);
 
-  const shellHtml = fs.readFileSync('game/index.html', 'utf8');
+  const shellHtml = fs.readFileSync('index.html', 'utf8');
   assert.match(shellHtml, /id="dpad"/);
   assert.match(shellHtml, /id="atlas-menu-toggle"/);
   assert.match(shellHtml, /atlas\.css/);
@@ -62,7 +62,7 @@ test('wide layouts can start with the Atlas menu expanded', async () => {
 
 test('curriculum selection uses Atlas chrome without placeholder player stats', async () => {
   const { setAtlasRegion } = await import('../src/ui/atlas.js');
-  const html = fs.readFileSync('game/index.html', 'utf8');
+  const html = fs.readFileSync('index.html', 'utf8');
   const styles = fs.readFileSync('css/atlas.css', 'utf8');
   const shell = new JSDOM(html).window.document.querySelector('.game-shell');
   assert.ok(shell.classList.contains('atlas-pregame'));

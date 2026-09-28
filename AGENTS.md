@@ -43,6 +43,7 @@ Production URLs:
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
+- Keep Tidewater Bay's three collected-word rescue dictations, Keeper Lan's clue comparison, and the post-boss whale rescue distinct from optional neighbour requests.
 - Keep the Great Forgetter's finishing strike and story ending full-screen, followed by auto-rolling credits with a reduced-motion alternative.
 - Set each regional boss one level above that region's strongest standard creature and let it counterattack until defeated.
 - Use only standalone questions in boss battles; never use questions that depend on an unseen passage.
@@ -78,7 +79,7 @@ Production URLs:
 - Six roughly double-area inter-town routes and one final summit trail carry encounters, persistent fog and a boss pavilion; only inter-town routes have onward gates.
 - Keep a compatibility gate coordinate on the terminal route for older cached clients, but never render an onward gate there.
 - Tune normal full-route exploration to sample about two thirds of regional spirits, and verify P2 and P5 pacing in route tests.
-- Keep each route's discovery, gate-opening flag and return position persistent across saves.
+- Keep route discovery, gate-opening flags and saved on-route positions persistent; entering from a village starts at that route's entrance.
 - After the Dictionary Heart, return to Scholar Village and keep Word Portals in all villages available for optional discoveries.
 - Keep touch targets at least 44 pixels and support reduced motion.
 - Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.

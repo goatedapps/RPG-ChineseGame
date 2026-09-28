@@ -32,6 +32,10 @@ test('the separate walkthrough has an introduction and one page for each region'
   assert.match(guide, /What each battle move practises/);
   assert.match(guide, /Creature levels/);
   assert.match(guide, /bossLevel/);
+  assert.match(guide, /Tidewater Bay chapter/);
+  assert.match(guide, /Fisher Yu[\s\S]*Maker Chen[\s\S]*Watcher An/);
+  assert.match(guide, /tidewater-whale-rescue\.webp/);
+  assert.match(guide, /entering again from town starts me at the route entrance/);
   assert.doesNotMatch(guide, /Useful now|default settings|What I learned/);
   assert.match(read('src/gameplay.js'), /parent-walkthrough-link[\s\S]*walkthrough\/index\.html/);
 });

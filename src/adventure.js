@@ -1,5 +1,5 @@
 import { makeExamQuestion } from './learning/questions.js';
-import { tierOf } from './learning/mastery.js?p10f';
+import { recordAnswer, tierOf } from './learning/mastery.js?p10f';
 import { checkPassageAnswer } from './systems/reading.js?p10f';
 import { regionPathGuide } from './systems/regionGuide.js?p3';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
@@ -18,6 +18,7 @@ import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
+import { completeTidewaterClue, tidewaterClue, tidewaterCluesComplete, tidewaterDictationWords, tidewaterEvidenceReady } from './systems/tidewaterRescue.js';
 import { routeKey } from './systems/regions.js';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
@@ -71,7 +72,7 @@ function fitStoryPages(spread) {
   }
 }
 
-export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio, onSwitchRegion, onEnterRoute, onGateOpening }) {
+export function createAdventure({ overlay, getActive, persist, render, toast, gameplay, audio, onSwitchRegion, onEnterRoute, onGateOpening, onCollectionChanged = () => {} }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
   const speech = createSpeechController();
@@ -208,6 +209,98 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     return `<section class="path-guide" aria-label="Explore this region"><div class="path-guide-heading"><div><p class="panel-kicker">Choose your route</p><h2>Where to explore next</h2></div><span>All paths are open</span></div><div class="path-guide-grid">${paths.map(path => `<article class="path-guide-card${path.suggested ? ' suggested' : ''}"><div class="path-guide-card-head"><h3>${escapeHtml(path.name)}</h3>${path.suggested ? '<strong>Suggested next</strong>' : ''}</div><p>Lesson ${path.lesson} · ${escapeHtml(path.direction)}</p><p>Creatures Lv ${path.minimum}–${path.maximum} · ${escapeHtml(path.challenge)} for your hero</p><small>${path.collected}/${path.total} spirits found</small></article>`).join('')}</div><p class="path-guide-note">This is a guide, not a required order. Explore whichever path you like.</p></section>`;
   }
 
+  function tidewaterJournalMarkup(game, story) {
+    if (game.levelPackage.region.id !== 'r3') return '';
+    const clues = Object.keys(game.levelPackage.regionStory.rescue.clues).map(id => {
+      const clue = tidewaterClue(game.levelPackage, id);
+      const done = story.flags.tideClues?.[id] === true;
+      return `<p class="${done ? 'done' : ''}">${done ? '✓' : '○'} ${escapeHtml(clue.person)}: ${escapeHtml(clue.name)} · three Lesson ${clue.lesson} words</p>`;
+    }).join('');
+    const compared = story.flags.tideEvidenceCompared;
+    const rescued = story.flags.tideWhaleRescued;
+    return `<div class="rescue-journal"><h2>Help the stranded whale</h2><p>Collect at least three words from each lesson, then pass each neighbour’s three-word dictation. Two correct answers earn that clue. Follow the leads in any order.</p>${clues}<p class="${compared ? 'done' : ''}">${compared ? '✓' : '○'} Bring all three clues and the Harbour Chronometer to Keeper Lan</p><p class="${rescued ? 'done' : ''}">${rescued ? '✓' : '○'} ${story.bossDefeated ? 'Return to the Whale Rescue Dock to guide the whale' : 'Set the Clock Tower moving by defeating the Idle Clock'}</p></div>`;
+  }
+
+  function tidewaterKeeperLan() {
+    const game = active();
+    const story = normalizeStory(game.state.progress.story);
+    if (!story.flags.tideEvidenceCompared && !story.bossDefeated && tidewaterEvidenceReady(story, game.levelPackage.regionStory, game.state.progress.inventory)) {
+      return playScene('compare', storyJournal);
+    }
+    storyJournal();
+  }
+
+  function tidewaterClueConversation(id) {
+    const game = active();
+    const story = normalizeStory(game.state.progress.story);
+    const clue = tidewaterClue(game.levelPackage, id);
+    if (!clue) return;
+    const collected = tidewaterDictationWords(game.levelPackage, game.state.progress, id);
+    const count = game.levelPackage.regionStory.rescue.wordsPerTest;
+    const pass = game.levelPackage.regionStory.rescue.correctToPass;
+    const complete = story.flags.tideClues?.[id] === true;
+    const regionZone = game.levelPackage.campaigns.r3.route.zones.find(zone => zone.lesson === clue.lesson);
+    const status = complete ? clue.found : collected.length < count
+      ? `You have ${collected.length}/${count} collected Lesson ${clue.lesson} words. Explore ${regionZone?.name || 'Saltwind Coast'} to find more, then come back for my dictation.`
+      : `${clue.prompt} Write ${count} collected Lesson ${clue.lesson} words from memory. Get ${pass} correct to earn the ${clue.name.toLowerCase()} clue.`;
+    overlay.open(`<div class="panel tidewater-clue-panel"><p class="panel-kicker">Whale rescue · ${escapeHtml(clue.name)}</p><h1>${escapeHtml(clue.person)}</h1><p data-type-dialogue>${escapeHtml(status)}</p><div class="button-row">${!complete && collected.length >= count ? '<button class="primary" data-dialogue-next data-tide-test>Start dictation</button>' : ''}<button class="secondary" data-tide-request>Optional request</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
+    document.querySelector('[data-tide-test]')?.addEventListener('click', () => runTidewaterClueTest(id, collected), { once: true });
+    document.querySelector('[data-tide-request]').addEventListener('click', () => regionalRequest(id), { once: true });
+  }
+
+  function runTidewaterClueTest(id, words) {
+    const game = active();
+    const clue = tidewaterClue(game.levelPackage, id);
+    const pass = game.levelPackage.regionStory.rescue.correctToPass;
+    let index = 0;
+    let correct = 0;
+    const next = () => {
+      if (index === words.length) {
+        const success = correct >= pass;
+        if (success) {
+          game.state.progress.story = completeTidewaterClue(game.state.progress.story, game.levelPackage.regionStory, id, correct);
+          audio?.sfx('majorReward');
+        }
+        commit();
+        overlay.open(`<div class="panel result-panel tidewater-clue-panel"><p class="panel-kicker">${escapeHtml(clue.person)} · rescue clue</p><h1>${success ? `${escapeHtml(clue.name)} found!` : 'Practise and try again'}</h1><p>You wrote <b>${correct}/${words.length}</b> words from memory. ${success ? escapeHtml(clue.found) : `You need ${pass} correct answers to earn this clue.`}</p><div class="button-row">${success ? '<button class="primary" data-tide-journal>See rescue plan</button>' : '<button class="primary" data-tide-retry>Try again</button>'}<button class="secondary" data-close-overlay>Later</button></div></div>`);
+        document.querySelector('[data-tide-journal]')?.addEventListener('click', storyJournal, { once: true });
+        document.querySelector('[data-tide-retry]')?.addEventListener('click', () => runTidewaterClueTest(id, words), { once: true });
+        return;
+      }
+      const word = words[index++];
+      showWritingTask(overlay, word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
+        game.state.progress.characters = characters;
+        const recorded = recordAnswer(game.state.progress.words[word.w], { skill: 'w', correct: result.ok, day: localDay(), assisted: !result.earnsTick });
+        game.state.progress.words[word.w] = recorded.progress;
+        const accuracy = game.state.progress.accuracy.w || { correct: 0, total: 0 };
+        game.state.progress.accuracy.w = { correct: accuracy.correct + Number(result.ok), total: accuracy.total + 1 };
+        if (result.ok) {
+          correct += 1;
+          recordEvent('writing-success', { word: word.w, lesson: word.lesson });
+        }
+        if (recorded.tickEarned) onCollectionChanged();
+        audio?.sfx(result.ok ? 'correct' : 'wrong');
+        commit();
+        overlay.open(`<div class="panel result-panel tidewater-clue-panel"><p class="panel-kicker">${escapeHtml(clue.person)} · ${index}/${words.length}</p><h1>${result.ok ? 'Correct!' : 'Keep practising'}</h1><p>${escapeHtml(word.w)} · ${escapeHtml(word.p)} · ${escapeHtml(word.m)}</p><p>${result.ok ? 'This word counts towards the clue.' : 'Using Show me how helps you learn, but does not count as a correct word this time.'}</p><button class="primary" data-tide-next>Continue</button></div>`, { dismissible: false });
+        document.querySelector('[data-tide-next]').addEventListener('click', next, { once: true });
+      }, { runId: `tide-${id}-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, forceMemory: true, headerHtml: `<p class="panel-kicker">${escapeHtml(clue.person)} · rescue dictation ${index}/${words.length}</p>`, onExit: () => { commit(); overlay.close(); } });
+    };
+    next();
+  }
+
+  function tidewaterRescueDock() {
+    const game = active();
+    const story = game.state.progress.story;
+    if (story.flags.tideWhaleRescued) return overlay.dialogue({ title: 'Whale Rescue Dock', lines: ['The young whale is safely in deep water. Sometimes we can see her beyond the harbour markers.'] });
+    if (story.bossDefeated) return playScene('rescue', () => {
+      audio?.sfx('majorReward');
+      overlay.open('<div class="panel tidewater-rescue-panel"><img src="assets/images/story/tidewater-whale-rescue.webp" alt="The rescued young whale swims into deep water beside the harbour boats at sunrise" width="1200" height="675"><div><p class="panel-kicker">Tidewater Bay restored</p><h1>The whale is free!</h1><p>Fisher Yu’s route, Maker Chen’s gauge and Watcher An’s timing brought the rescue crew together. The Clock Tower is moving again.</p><button class="primary" data-close-overlay>Continue the journey</button></div></div>');
+    });
+    const clues = Object.keys(game.levelPackage.regionStory.rescue.clues).filter(id => story.flags.tideClues?.[id]).length;
+    overlay.open(`<div class="panel tidewater-clue-panel"><p class="panel-kicker">Whale Rescue Dock</p><h1>Prepare the rescue</h1><p>The whale is waiting in the shallows. The crew has ${clues}/3 clues. Talk to Fisher Yu, Maker Chen and Watcher An in any order; each needs a three-word dictation. Then bring the clues and the Harbour Chronometer to Keeper Lan.</p><div class="button-row"><button class="primary" data-tide-fisher>Talk to Fisher Yu</button><button class="secondary" data-close-overlay>Return to town</button></div></div>`);
+    document.querySelector('[data-tide-fisher]').addEventListener('click', () => tidewaterClueConversation('fisher-yu'), { once: true });
+  }
+
   function storyJournal() {
     const game = active();
     const story = normalizeStory(game.state.progress.story);
@@ -221,9 +314,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const regionNumber = Number(game.levelPackage.region.id.slice(1));
       const requestTotal = Object.keys(game.levelPackage.regionStory.requests).length;
       const fragmentName = game.levelPackage.regionStory.fragmentName || 'Truth Stroke';
-      const routeNote = regionNumber < 7 ? `<p>Explore ${escapeHtml(game.levelPackage.campaigns[game.levelPackage.region.id].route.name)}${game.levelPackage.map.route ? '' : ' beyond the town gate'}. ${story.bossDefeated ? 'Find the onward gate.' : 'Find its pavilion and onward gate.'}</p>` : `<p>Explore Crown Veil Trail beyond the summit exit. Find the hidden Final Seal Pavilion after freeing enough spirits.</p>`;
+      const bossReady = gate.open && (regionNumber !== 3 || story.flags.tideEvidenceCompared);
+      const routeNote = regionNumber < 7 ? `<p>Explore ${escapeHtml(game.levelPackage.campaigns[game.levelPackage.region.id].route.name)}${game.levelPackage.map.route ? '' : ' beyond the town gate'}. ${regionNumber === 3 && story.bossDefeated && !story.flags.tideWhaleRescued ? 'Return to the Whale Rescue Dock before using the onward gate.' : story.bossDefeated ? 'Find the onward gate.' : 'Find its pavilion and onward gate.'}</p>` : `<p>Explore Crown Veil Trail beyond the summit exit. Find the hidden Final Seal Pavilion after freeing enough spirits.</p>`;
+      const rescueJournal = tidewaterJournalMarkup(game, story);
       const returnAction = game.levelPackage.map.route ? 'leave' : 'back';
-      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} Helped ${requestsDone}/${requestTotal} neighbours</p>${routeNote}<p>${gate.open ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>${returnAction === 'leave' ? 'Return to town' : 'Enter the return road'}</button></div></div>`);
+      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p><p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} ${regionNumber === 3 ? 'Optional neighbour requests' : 'Helped neighbours'}: ${requestsDone}/${requestTotal}</p>${rescueJournal}${routeNote}<p>${bossReady ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}${regionNumber === 3 && !story.flags.tideEvidenceCompared ? ' · compare rescue clues with Keeper Lan' : ''}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>${returnAction === 'leave' ? 'Return to town' : 'Enter the return road'}</button></div></div>`);
       document.querySelector('[data-travel-previous]').addEventListener('click', () => onEnterRoute?.(returnAction));
       return;
     }
@@ -356,6 +451,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     if (story.bossDefeated) {
       if (game.levelPackage.region.id === 'r7') return dictionaryHeart();
       return overlay.dialogue({ title: game.levelPackage.map.objects?.find(object => object.id === 'boss-pavilion-building')?.name || 'Boss Pavilion', lines: ['The boss has left this pavilion. Find the onward gate to continue your journey.'] });
+    }
+    if (game.levelPackage.region.id === 'r3' && !story.flags.tideEvidenceCompared && !game.state.settings.testMode) {
+      const missing = tidewaterCluesComplete(story, game.levelPackage.regionStory)
+        ? 'Bring the three clues and the Harbour Chronometer to Keeper Lan before challenging the Idle Clock.'
+        : 'Fisher Yu, Maker Chen and Watcher An each have a three-word dictation. Earn all three rescue clues, then speak to Keeper Lan.';
+      return overlay.dialogue({ title: 'Tide Pavilion', lines: [missing] });
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
     const open = gate.open || game.state.settings.testMode;
@@ -505,7 +606,9 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (game.levelPackage.region.id !== 'r1') addUnique(game.state.progress.room.trophies, fragmentName);
       commit();
       if (game.levelPackage.region.id === 'r7') return dictionaryHeart();
-      const secretText = game.levelPackage.region.id === 'r1'
+      const secretText = game.levelPackage.region.id === 'r3'
+        ? 'The Clock Tower moves again. Return to the Whale Rescue Dock to guide the young whale into deep water.'
+        : game.levelPackage.region.id === 'r1'
         ? 'The hidden grove is open, and the Muddle King now runs the Mistake Museum.'
         : `${game.levelPackage.regionStory.secretName || 'The hidden place'} can now be opened.`;
       overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p><button class="primary" data-close-overlay>${game.levelPackage.map.route ? 'Continue exploring' : `Return to ${escapeHtml(game.levelPackage.region.name)}`}</button></div>`);
@@ -514,6 +617,9 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
 
   function nextRegionGate() {
     const game = active();
+    if (game.levelPackage.region.id === 'r3' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.tideWhaleRescued && !game.state.settings.testMode) {
+      return overlay.dialogue({ title: 'Road to Lantern Theatre', lines: ['The Clock Tower is moving, but the whale is still in the shallows. Return to the Whale Rescue Dock and help the crew guide her to deep water first.'] });
+    }
     const currentNumber = Number(game.levelPackage.region.id.slice(1));
     const nextNumber = currentNumber + 1;
     const nextRegionId = `r${nextNumber}`;
@@ -740,12 +846,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       handlers['truth-terrace'] = truthTerrace;
     }
     if (gameRegion() === 'r3') {
-      handlers['keeper-lan'] = storyJournal;
-      handlers['fisher-yu'] = () => regionalRequest('fisher-yu');
-      handlers['rescue-dock'] = () => regionalRequest('fisher-yu');
-      handlers['maker-chen'] = () => regionalRequest('maker-chen');
-      handlers['watcher-an'] = () => regionalRequest('watcher-an');
-      handlers['tide-workshop'] = () => regionalRequest('watcher-an');
+      handlers['keeper-lan'] = tidewaterKeeperLan;
+      handlers['fisher-yu'] = () => tidewaterClueConversation('fisher-yu');
+      handlers['rescue-dock'] = tidewaterRescueDock;
+      handlers['maker-chen'] = () => tidewaterClueConversation('maker-chen');
+      handlers['watcher-an'] = () => tidewaterClueConversation('watcher-an');
+      handlers['tide-workshop'] = () => tidewaterClueConversation('maker-chen');
       handlers['clock-tower-door'] = gatekeeper;
       handlers['clock-warden'] = gatekeeper;
       handlers['return-gate'] = () => onSwitchRegion?.('r2');

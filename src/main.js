@@ -11,14 +11,14 @@ import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
 import { createGameplay } from './gameplay.js?p39';
 import { createCollection } from './collection.js?p19';
-import { createAdventure } from './adventure.js?p31';
+import { createAdventure } from './adventure.js?p32';
 import { createAudioManager } from './core/audio.js?p24';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p22';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
-import { nextStep } from './systems/wayfinding.js?p1';
+import { nextStep } from './systems/wayfinding.js?p2';
 import { drawGuideMap } from './ui/guideMap.js?p1';
 import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './systems/regions.js?p14';
 import { revealRouteTile } from './world/fog.js?p2';
@@ -266,7 +266,7 @@ async function startLevel(levelId) {
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
     gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: () => changeRoute('rest'), onBattleQuotaExhausted: showBattleQuotaNotice, onImportSave: importCurrentLevelSave, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
-    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion, onEnterRoute: changeRoute, onGateOpening: showGateOpening });
+    adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion, onEnterRoute: changeRoute, onGateOpening: showGateOpening, onCollectionChanged: () => collection.applyMilestones() });
     adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
@@ -341,7 +341,7 @@ function changeRoute(direction) {
   if (direction === 'enter' && !active.levelPackage.map.route) {
     saveCurrentRegion(active.state, regionId);
     route.villagePosition = { x: active.state.player.x, y: active.state.player.y, direction: active.state.player.direction };
-    const position = Number.isInteger(route.position?.x) && Number.isInteger(route.position?.y) && isWalkable(routeMap, route.position.x, route.position.y) ? route.position : routeMap.spawn;
+    const position = routeMap.spawn;
     active.levelPackage.map = routeMap;
     active.state.player = { ...active.state.player, ...position, map: routeMap.id };
     route.discovered = revealRouteTile(routeMap, route.discovered, position.x, position.y);

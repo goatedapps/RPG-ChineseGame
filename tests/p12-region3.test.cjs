@@ -59,6 +59,64 @@ test('Region 3 travel state remains isolated and its boss scales above its creat
   assert.equal(createBoss(r3.balance, lessons).level, strongest + 1);
 });
 
+test('both curricula can earn three Tidewater clues through three-word dictations', async () => {
+  const { activateRegion, loadLevelPackage } = await import('../src/content/loader.js');
+  const { createFreshState } = await import('../src/core/state.js');
+  const { completeTidewaterClue, tidewaterClue, tidewaterCluesComplete, tidewaterDictationWords, tidewaterEvidenceReady } = await import('../src/systems/tidewaterRescue.js');
+  for (const level of ['p2', 'p5']) {
+    const game = activateRegion(await loadLevelPackage(level, fetcher, ''), 'r3');
+    const state = createFreshState(game);
+    let story = state.progress.story;
+    const clueIds = Object.keys(game.regionStory.rescue.clues);
+    assert.deepEqual(clueIds, ['fisher-yu', 'maker-chen', 'watcher-an']);
+    for (const id of clueIds) {
+      const clue = tidewaterClue(game, id);
+      assert.ok(game.config.regionLessons.r3.includes(clue.lesson), `${level}: ${id} uses a regional lesson`);
+      if (id === clueIds[0]) assert.equal(tidewaterDictationWords(game, state.progress, id).length, 0);
+      const words = game.content.words.filter(word => word.lesson === clue.lesson).slice(0, 3);
+      assert.equal(words.length, 3);
+      for (const word of words) state.progress.words[word.w] = { collected: true };
+      const testWords = tidewaterDictationWords(game, state.progress, id, () => 0);
+      assert.equal(testWords.length, 3);
+      assert.ok(testWords.every(word => word.lesson === clue.lesson));
+      assert.equal(completeTidewaterClue(story, game.regionStory, id, 1), story);
+      story = completeTidewaterClue(story, game.regionStory, id, 2);
+      assert.equal(story.flags.tideClues[id], true);
+    }
+    assert.equal(tidewaterCluesComplete(story, game.regionStory), true);
+    assert.equal(tidewaterEvidenceReady(story, game.regionStory, state.progress.inventory), false);
+    state.progress.inventory.keyItems.push('harbour-chronometer');
+    assert.equal(tidewaterEvidenceReady(story, game.regionStory, state.progress.inventory), true);
+  }
+});
+
+test('Tidewater guidance follows clues, evidence, boss and whale rescue without resetting saved state', async () => {
+  const { activateRegion, loadLevelPackage } = await import('../src/content/loader.js');
+  const { createFreshState } = await import('../src/core/state.js');
+  const { nextStep } = await import('../src/systems/wayfinding.js');
+  const { enterRegion, saveCurrentRegion } = await import('../src/systems/regions.js');
+  const base = await loadLevelPackage('p5', fetcher, '');
+  const game = activateRegion(base, 'r3');
+  const state = createFreshState(game);
+  enterRegion(state, game);
+  const first = game.content.words.filter(word => word.lesson === game.config.regionLessons.r3[0]).slice(0, 3);
+  for (const word of first) state.progress.words[word.w] = { collected: true };
+  assert.match(nextStep(game, state).text, /Fisher Yu.*three-word dictation/);
+  state.progress.story.flags.tideClues = { 'fisher-yu': true, 'maker-chen': true, 'watcher-an': true };
+  assert.match(nextStep(game, state).text, /Tide Archive/);
+  state.progress.inventory.keyItems.push('harbour-chronometer');
+  assert.match(nextStep(game, state).text, /Keeper Lan/);
+  state.progress.story.flags.tideEvidenceCompared = true;
+  state.progress.story.bossDefeated = true;
+  assert.match(nextStep(game, state).text, /Whale Rescue Dock/);
+  saveCurrentRegion(state, 'r3');
+  enterRegion(state, activateRegion(base, 'r1'));
+  enterRegion(state, game);
+  assert.equal(state.progress.story.flags.tideEvidenceCompared, true);
+  state.progress.story.flags.tideWhaleRescued = true;
+  assert.match(nextStep(game, state).text, /gate to Lantern Theatre/);
+});
+
 test('P12 creature, boss and reward art are packaged for offline play', () => {
   for (const file of ['tangle-crab', 'drift-jelly', 'rust-gull', 'minute-mite', 'tide-hare', 'idle-clock']) {
     assert.ok(fs.statSync(path.join(root, 'assets/images/creatures', `${file}.webp`)).size > 10000, file);
@@ -71,4 +129,7 @@ test('P12 creature, boss and reward art are packaged for offline play', () => {
   assert.match(serviceWorker, /idle-clock\.webp/);
   assert.match(serviceWorker, /current-stroke\.webp/);
   assert.match(serviceWorker, /tidewater-bg\.mp3/);
+  assert.match(serviceWorker, /tidewaterRescue\.js/);
+  assert.match(serviceWorker, /tidewater-whale-rescue\.webp/);
+  assert.ok(fs.statSync(path.join(root, 'assets/images/story/tidewater-whale-rescue.webp')).size < 180000);
 });

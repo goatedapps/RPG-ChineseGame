@@ -1,6 +1,7 @@
 import { gateStatus } from './story.js';
 import { regionPathGuide } from './regionGuide.js';
 import { routeKey } from './regions.js';
+import { tidewaterClue, tidewaterCluesComplete } from './tidewaterRescue.js';
 
 const objectTarget = (map, id) => {
   const object = map.objects.find(candidate => candidate.id === id);
@@ -54,7 +55,38 @@ export function nextStep(levelPackage, state) {
       : { text: 'Find the villager marked ? and answer the passage question.', target: objectTarget(map, villagerId) };
   }
 
+  if (regionId === 'r3' && !story.bossDefeated) {
+    const rescue = levelPackage.regionStory.rescue;
+    if (!tidewaterCluesComplete(story, levelPackage.regionStory)) {
+      const pending = Object.keys(rescue.clues).filter(id => !story.flags.tideClues?.[id]);
+      const ready = pending.find(id => {
+        const clue = tidewaterClue(levelPackage, id);
+        return levelPackage.content.words.filter(word => word.lesson === clue.lesson && (state.progress.words[word.w]?.collected || state.progress.words[word.w]?.c)).length >= rescue.wordsPerTest;
+      });
+      const id = ready || pending[0];
+      const clue = tidewaterClue(levelPackage, id);
+      const zone = route?.zones.find(candidate => candidate.lesson === clue.lesson);
+      if (ready) return map.route
+        ? { text: `Return to Tidewater Bay for ${clue.person}'s three-word dictation and the ${clue.name.toLowerCase()} clue.`, target: returnTarget }
+        : { text: `Talk to ${clue.person} and pass a three-word dictation for the ${clue.name.toLowerCase()} clue.`, target: objectTarget(map, id) };
+      return map.route
+        ? { text: `Battle in ${zone?.name || route.name} (Lesson ${clue.lesson}) to collect three words for ${clue.person}'s dictation.`, target: walkableZoneTarget(map, zone), lesson: clue.lesson }
+        : { text: `Explore ${zone?.name || route.name} (Lesson ${clue.lesson}) to collect three words for ${clue.person}.`, target: townExit, lesson: clue.lesson };
+    }
+    if (!story.flags.tideEvidenceCompared) {
+      const hasChronometer = (state.progress.inventory.keyItems || []).includes(levelPackage.regionStory.readingKeyItem);
+      return map.route
+        ? { text: `Return to Tidewater Bay to ${hasChronometer ? 'compare the rescue clues with Keeper Lan' : 'earn the Harbour Chronometer at the Tide Archive'}.`, target: returnTarget }
+        : hasChronometer
+          ? { text: 'Bring all three rescue clues and the Harbour Chronometer to Keeper Lan.', target: objectTarget(map, 'keeper-lan') }
+          : { text: 'Visit the Tide Archive to earn the Harbour Chronometer, then talk to Keeper Lan.', target: objectTarget(map, 'reading-hall') };
+    }
+  }
+
   if (story.bossDefeated) {
+    if (regionId === 'r3' && !story.flags.tideWhaleRescued) return map.route
+      ? { text: 'The clock moves again. Return to town and help the crew at the Whale Rescue Dock.', target: returnTarget }
+      : { text: 'Visit the Whale Rescue Dock to guide the young whale into deep water.', target: objectTarget(map, 'rescue-dock-building') };
     if (regionId === 'r7') return map.route
       ? { text: 'Return to Treehouse Summit and visit the Dictionary Heart.', target: returnTarget }
       : { text: 'Visit the Dictionary Heart to finish the story.', target: objectTarget(map, 'dictionary-heart') };

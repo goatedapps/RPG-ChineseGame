@@ -295,6 +295,14 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .major-reward { display: flex; align-items: center; justify-content: center; gap: 20px; margin: -6px 0 14px; text-align: left; }
 .major-reward img { width: min(210px,42vw); height: 210px; object-fit: contain; filter: drop-shadow(0 9px 8px rgba(105,69,21,.3)); animation: encounter-pop .65s cubic-bezier(.18,.9,.25,1.25); }
 .major-reward h1, .major-reward p { margin: 3px 0; }
+.rescue-journal { margin: 12px 0; padding: 14px 17px; border-left: 5px solid #32808a; border-radius: 9px; background: #e8f3ee; }
+.rescue-journal h2 { margin: 0 0 8px; font-size: 21px; }
+.rescue-journal p { margin: 7px 0; }
+.tidewater-clue-panel { border-color: #2f7585; background: linear-gradient(145deg, #f3f5e9, #e1ede9); }
+.tidewater-rescue-panel { width: min(900px, 100%); max-height: min(94vh, 900px); padding: 0; overflow: auto; border-color: #3e8191; background: #f3f0df; }
+.tidewater-rescue-panel img { display: block; width: 100%; max-height: 47vh; object-fit: cover; }
+.tidewater-rescue-panel > div { padding: clamp(18px, 3vw, 30px); }
+.tidewater-rescue-panel h1 { margin: 4px 0 12px; color: #195463; }
 .inn-welcome { border-top: 8px solid var(--jade); background: linear-gradient(145deg,#f4efe2,#fff8d8); }
 .save-warning { padding: 12px; border-left: 5px solid var(--seal); border-radius: 8px; background: #fae3de; font-weight: 800; }
 .craft-message { margin: 12px 0; padding: 12px 14px; border: 3px solid var(--seal); border-radius: 9px; color: #76271f; background: #ffe6df; font-weight: 900; box-shadow: 0 4px 0 rgba(118,39,31,.18); }

@@ -201,7 +201,7 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | P9 | P2 Lessons 1–3 in the shared world with younger tuning, compatible story words and separate progress. |
 | P10 engineering | Recovery, offline cache, accessibility, responsive checks and pilot checklist. |
 | P11 | Harvest Crossing, regional travel saves, Lessons 4–6, five creatures, Doubt Serpent, Truth Stroke and Truth Terrace. |
-| P12 | Tidewater Bay and Clock Tower, curriculum-specific Lessons 7–9, whale rescue, five creatures, Idle Clock, Current Stroke and Tide Vault. |
+| P12 | Tidewater Bay and Clock Tower, curriculum-specific regional lessons, three dictation clues and whale rescue, five creatures, Idle Clock, Current Stroke and Tide Vault. |
 | P13 | Lantern Theatre and Farm Fields, curriculum-specific Lessons 9–12, performance and farming requests, five creatures, Mocking Mirror, Courage Stroke and Courage Loft. |
 | P14 | Festival City, curriculum-specific Lessons 11–15, martial arts and celebration requests, five creatures, Grudge Dragon, Harmony Stroke and Harmony Pavilion. |
 | P15 | Ancient Grove, curriculum-specific Lessons 13–17, archaeology and Hanzi-history requests, five creatures, Give-Up Ghost, Memory Stroke and Memory Vault. |

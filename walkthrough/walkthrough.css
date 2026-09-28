@@ -74,9 +74,27 @@ p { max-width:76ch; margin:0 0 16px; }
 .intro-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
 .intro-steps article { padding:18px; border-top:5px solid var(--jade); background:#f1e6ca; }
 .intro-steps strong { display:block; margin-bottom:7px; font:700 21px Georgia,serif; }
+.story-preview { margin:0 -18px; padding:29px 18px 34px; background:linear-gradient(145deg,#e8f1e5,#f7efd8 58%,#e7e3cd); border-bottom:3px solid #5c9291; }
+.story-preview blockquote { max-width:70ch; margin:20px 0 25px; padding:14px 20px; border-left:5px solid #3d7c80; color:#254957; background:#ffffffa8; font:italic 19px/1.5 Georgia,serif; }
+.rescue-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.rescue-steps article { padding:19px; border-top:5px solid #43888a; background:#fffaf0; box-shadow:0 2px 9px #17374718; }
+.rescue-steps article:nth-child(2) { border-color:#ad8551; }
+.rescue-steps article:nth-child(3) { border-color:#a34e3e; }
+.rescue-steps article span { display:block; margin-bottom:9px; color:#356c70; font-size:13px; font-weight:900; letter-spacing:.06em; text-transform:uppercase; }
+.rescue-steps article h3 { font-size:23px; }
+.rescue-steps article p { font-size:15px; }
+.rescue-steps article p:last-child { margin-bottom:0; }
+.journal-sample { margin:20px 0 12px; padding:18px 20px; border:1px solid #7f9a89; background:#edf2e6; }
+.journal-sample b { display:block; margin-bottom:7px; font:700 21px Georgia,serif; }
+.journal-sample p { margin-bottom:8px; }
+.journal-sample p:last-child { margin-bottom:0; }
+.rescue-scene { margin:20px 0 0; border:5px solid #eee2bd; background:#f7f1dc; }
+.rescue-scene img { display:block; width:100%; height:auto; }
+.rescue-scene figcaption { padding:9px 13px; color:#365961; font-size:14px; font-weight:700; }
 .loading { margin:30vh auto; padding:30px; max-width:60ch; text-align:center; }
 .error { padding:20px; border-left:5px solid var(--red); background:#f8e4d9; }
 footer { padding:25px clamp(24px,5vw,58px); color:#e9dfc7; background:var(--deep); font-size:14px; }
 @media (max-width:760px) { .split,.legend-spots,.checkpoint,.intro-scene,.intro-steps { grid-template-columns:1fr; } main { padding-top:12px; } section { padding:26px 0; } .map-wrap { margin-inline:-12px; padding:11px; } }
+@media (max-width:850px) { .rescue-steps { grid-template-columns:1fr; } }
 @media (max-width:550px) { .creatures,.item-table,.attacks { font-size:13px; } .creatures th,.creatures td,.item-table th,.item-table td,.attacks th,.attacks td { padding:8px; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }

@@ -6,6 +6,12 @@ const { playableIds } = require('./support/levels.cjs');
 
 const fetcher = async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(url.replace(/^\//, ''), 'utf8')) });
 
+test('re-entering a battlefield from its village starts at the route entrance', () => {
+  const main = fs.readFileSync('src/main.js', 'utf8');
+  assert.match(main, /if \(direction === 'enter' && !active\.levelPackage\.map\.route\) \{[\s\S]*?const position = routeMap\.spawn;[\s\S]*?route\.discovered = revealRouteTile/);
+  assert.match(main, /if \(direction === 'back'\) \{[\s\S]*?const gate = routeMap\.objects/);
+});
+
 test('all six inter-town battlefields are distinct, reachable and tied to their regional lessons', async () => {
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { isWalkable, validateMap } = await import('../src/world/map.js');

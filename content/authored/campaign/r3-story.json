@@ -7,20 +7,53 @@
   "fragmentName": "Current Stroke",
   "fragmentKey": "current-stroke",
   "secretName": "Tide Vault",
+  "rescue": {
+    "wordsPerTest": 3,
+    "correctToPass": 2,
+    "clues": {
+      "fisher-yu": {
+        "name": "Deep-water route",
+        "prompt": "The channel markers have lost their labels. Dictate three words from this shore's lesson so I can mark a safe route for the whale.",
+        "found": "Fisher Yu has marked the deep-water channel. The rescue crew knows where to sail."
+      },
+      "maker-chen": {
+        "name": "Water depth",
+        "prompt": "My tide gauge has muddled its instructions. Dictate three words from this stretch of coast so I can measure the water safely.",
+        "found": "Maker Chen's tide gauge is working again. The crew knows how deep the water must be."
+      },
+      "watcher-an": {
+        "name": "The right moment",
+        "prompt": "The old clock records disagree. Dictate three words from the cliffs' lesson so I can check when the tide should rise.",
+        "found": "Watcher An has checked the old records. The crew knows when the tide should rise."
+      }
+    }
+  },
   "passageVillagers": ["keeper-lan", "storyteller", "fisher-yu", "maker-chen", "watcher-an", "harbour-guide", "clock-warden"],
   "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 40, "y": 28}],
   "scenes": {
     "arrival": [
       { "speaker": "Keeper Lan", "say": "Welcome to Tidewater Bay. The Great Forgetter has stopped our Clock Tower, and the sea can no longer remember when to rise or fall." },
-      { "speaker": "Keeper Lan", "say": "A young whale is stranded in the shallows. Restore the harbour words, help the rescue crew, and set time moving again." },
+      { "speaker": "Keeper Lan", "say": "A young whale is stranded in the shallows. Fisher Yu knows a route, Maker Chen can measure the water, and Watcher An studies the clock. Help each of them with a three-word dictation, then bring their clues to me." },
       { "setFlag": "arrival" }
+    ],
+    "compare": [
+      { "speaker": "Keeper Lan", "say": "Fisher Yu found the route, Maker Chen measured the depth, and Watcher An checked the hour. But these clues cannot all be right while the Clock Tower stands still." },
+      { "speaker": "Keeper Lan", "say": "The Harbour Chronometer confirms it: the Idle Clock is holding part of the bay at the wrong moment. Free more Word Spirits, then find the Tide Pavilion beyond town." },
+      { "setFlag": "tideEvidenceCompared" }
     ],
     "reform": [
       { "speaker": "Idle Clock", "say": "I let every useful moment drift away. If time never moves, no one can finish what they begin." },
-      { "speaker": "Keeper Lan", "say": "Rest is precious, but a life without purpose is only a stopped clock." },
+      { "speaker": "Keeper Lan", "say": "The clock is moving again! The route, depth, and timing we found can guide the young whale home. Come back to the Rescue Dock." },
       { "speaker": "Spirit Brush", "say": "Current Stroke restored. The hidden Tide Vault can now be opened." },
       { "setFlag": "bossDefeated" },
       { "rewardKey": "current-stroke" }
+    ],
+    "rescue": [
+      { "speaker": "Fisher Yu", "say": "The channel markers are clear. Steer between them and the whale will reach deep water." },
+      { "speaker": "Maker Chen", "say": "The gauge says the water is deep enough. We can guide her now." },
+      { "speaker": "Watcher An", "say": "The tower has started turning. This is the right moment." },
+      { "speaker": "Keeper Lan", "say": "There she goes! You helped the whole harbour work together. The whale is safe, and Tidewater Bay remembers its rhythm." },
+      { "setFlag": "tideWhaleRescued" }
     ]
   },
   "stories": [],

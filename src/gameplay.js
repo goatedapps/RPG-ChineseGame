@@ -83,9 +83,29 @@ function accuracyLabel(skill) {
   return SKILLS[skill]?.name || skill;
 }
 
-export function makeBattleQuestion(word, skill, words) {
+export function makeBattleQuestion(word, skill, words, authoredQuestions = []) {
+  if (skill === 'u') {
+    const matches = authoredQuestions.filter(question => (
+      (question.kind === 'usage' || question.kind === 'vocab')
+      && question.word === word.w
+      && question.lessons?.includes(word.lesson)
+      && question.subject !== 'Higher Chinese'
+      && Array.isArray(question.o)
+      && question.o.length >= 2
+      && question.o.includes(question.c)
+    ));
+    const usage = matches.filter(question => question.kind === 'usage');
+    const candidates = usage.length ? usage : matches;
+    if (candidates.length) return { ...makeExamQuestion(candidates[Math.floor(Math.random() * candidates.length)]), skill };
+  }
   const question = makeQuestion(word, skill, words);
   return skill === 'h' ? { ...question, prompt: word.m } : question;
+}
+
+export function schoolQuestionPool(levelPackage) {
+  const lessons = new Set(levelPackage.config.regionLessons[levelPackage.region.id] || []);
+  return filterSupportedQuestions(levelPackage.content, levelPackage.config)
+    .filter(question => question.lessons?.length && question.lessons.every(lesson => lessons.has(lesson)));
 }
 
 export function innReviewPool(levelPackage, progress) {
@@ -140,7 +160,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       }, { runId: `battle-${game.state.progress.battles}-${battle.turn}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, headerHtml: battleQuestionBadge('attack') });
       return;
     }
-    const question = makeBattleQuestion(battle.word, skill, game.levelPackage.content.words);
+    const question = makeBattleQuestion(battle.word, skill, game.levelPackage.content.words, game.levelPackage.content.questions.single);
     showQuestion(overlay, question, null, result => {
       recordWord(battle.word, skill, result.ok, false, false);
       done(result.ok, skill);
@@ -234,7 +254,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const source = collected.length && Math.random() < 0.7 ? collected : pool;
     const word = source[Math.floor(Math.random() * source.length)] || battle.word;
     const spell = creatureSpellName(battle.creature);
-    const question = makeBattleQuestion(word, battle.creature.attackSkill, game.levelPackage.content.words);
+    const question = makeBattleQuestion(word, battle.creature.attackSkill, game.levelPackage.content.words, game.levelPackage.content.questions.single);
     showQuestion(overlay, question, word, result => {
       recordWord(word, battle.creature.attackSkill, result.ok, false, false);
       if (result.ok) { commit(); showBattle(battle, `You blocked ${battle.creature.name}’s ${spell}!`); return; }
@@ -413,7 +433,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const game = active();
     const schoolState = normalizeSchool(game.state.progress.school, localDay());
     const currentWeek = weekKey();
-    overlay.open(`<div class="panel school-panel"><div class="panel-header"><div><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} School</p><h1>Choose a learning activity</h1></div><button class="secondary" data-close-overlay>Leave School</button></div><p>School XP always continues. Coin rewards apply to the first ${game.levelPackage.balance.school.paidRunsPerDay} sessions each day.</p><div class="service-grid"><button data-school-quiz><b>Exam quiz</b><span>Five real curriculum questions</span></button><button data-school-writing><b>Tingxie</b><span>Choose a regional lesson and test length</span></button><button data-school-exam ${schoolState.examWeek === currentWeek ? 'disabled' : ''}><b>Exam Day</b><span>${schoolState.examWeek === currentWeek ? 'Completed this week' : 'Weekly mixed challenge'}</span></button></div></div>`);
+    overlay.open(`<div class="panel school-panel"><div class="panel-header"><div><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} School</p><h1>Choose a learning activity</h1></div><button class="secondary" data-close-overlay>Leave School</button></div><p>School XP always continues. Coin rewards apply to the first ${game.levelPackage.balance.school.paidRunsPerDay} sessions each day.</p><div class="service-grid"><button data-school-quiz><b>Exam quiz</b><span>Questions from this region</span></button><button data-school-writing><b>Tingxie</b><span>Choose a regional lesson and test length</span></button><button data-school-exam ${schoolState.examWeek === currentWeek ? 'disabled' : ''}><b>Exam Day</b><span>${schoolState.examWeek === currentWeek ? 'Completed this week' : 'Weekly regional challenge'}</span></button></div></div>`);
     document.querySelector('[data-school-quiz]').addEventListener('click', () => startSchoolQuiz('School Quiz'));
     document.querySelector('[data-school-writing]').addEventListener('click', () => dictationPicker(false));
     document.querySelector('[data-school-exam]:not([disabled])')?.addEventListener('click', () => startSchoolQuiz('Exam Day', true));
@@ -421,7 +441,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function startSchoolQuiz(title, examDay = false) {
     const game = active();
-    const pool = filterSupportedQuestions(game.levelPackage.content, game.levelPackage.config);
+    const pool = schoolQuestionPool(game.levelPackage);
     const count = game.levelPackage.balance.school.questionsPerQuiz;
     const questions = [...pool].sort(() => Math.random() - 0.5).slice(0, count);
     runQuiz(title, questions, (correct, total) => {

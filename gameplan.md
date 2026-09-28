@@ -214,6 +214,8 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 
 Run performance and accessibility checks on an older target iPad.
 Proofread audio and content.
+TODO: Replace the runtime-generated battle Usage fallback with pre-authored, parent-vetted vocabulary or usage questions in the curriculum source banks.
+Matching vetted questions currently cover 253 of 460 P2 words and 197 of 327 P5 words; keep the fallback until the remaining questions have been reviewed.
 Verify offline restart, update behavior, save migration, export/import and curriculum switching.
 Reach at least 90 Lighthouse accessibility on menu screens.
 Produce the final distributable only after deciding whether double-click `file://` support still justifies a single-file bundle.

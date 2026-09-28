@@ -9,7 +9,7 @@ import { createOverlay } from './ui/overlay.js?p10e';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p38';
+import { createGameplay } from './gameplay.js?p39';
 import { createCollection } from './collection.js?p19';
 import { createAdventure } from './adventure.js?p31';
 import { createAudioManager } from './core/audio.js?p24';

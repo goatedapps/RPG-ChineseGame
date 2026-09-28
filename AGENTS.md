@@ -37,6 +37,7 @@ Production URLs:
 - Keep the four-miss handwriting help threshold; one correct unassisted answer fills a skill circle.
 - Keep Higher Chinese disabled by default and make its Reading Hall availability parent-controlled.
 - Keep School XP after the first three rewarded daily runs.
+- Keep School Quiz and Exam Day questions within the current region, and prefer matching vetted vocabulary or usage questions for battle Usage.
 - Keep the parent battle cap and the intended 30–60 minute session without a mandatory timer.
 - Keep fog-route entry closed at zero remaining battles and return the player to the Inn after the final allowed battle.
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.

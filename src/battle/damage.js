@@ -14,3 +14,8 @@ export function didEvade(evasion, random = Math.random) {
   return random() < Math.max(0, Math.min(0.9, evasion));
 }
 
+export function capBossDamage(damage, maxHp, minimumQuestions = 10) {
+  const cap = Math.max(1, Math.floor(maxHp / minimumQuestions));
+  return Math.min(Math.max(0, damage), cap);
+}
+

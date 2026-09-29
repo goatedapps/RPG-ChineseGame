@@ -1,29 +1,30 @@
 import { createEventBus } from './core/events.js';
-import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10g';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p21';
+import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10h';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p22';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p26';
+import { createRenderer } from './world/renderer.js?p27';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
-import { createOverlay } from './ui/overlay.js?p10e';
+import { createOverlay } from './ui/overlay.js?p10g';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p39';
-import { createCollection } from './collection.js?p19';
-import { createAdventure } from './adventure.js?p32';
-import { createAudioManager } from './core/audio.js?p24';
+import { createGameplay } from './gameplay.js?p43';
+import { createCollection } from './collection.js?p22';
+import { createAdventure } from './adventure.js?p34';
+import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p22';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
-import { nextStep } from './systems/wayfinding.js?p2';
+import { nextStep } from './systems/wayfinding.js?p3';
 import { drawGuideMap } from './ui/guideMap.js?p1';
 import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './systems/regions.js?p14';
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 import { activateVillagePortals } from './systems/ending.js';
+import { createTutorial } from './tutorial.js?p2';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -56,6 +57,7 @@ let stageObserver = null;
 let gameplay = null;
 let collection = null;
 let adventure = null;
+let tutorial = null;
 let prologueCompleted = false;
 let lastRewardState = null;
 
@@ -87,6 +89,7 @@ function render() {
   ].filter(Boolean) : [];
   effects.hidden = activeEffects.length === 0;
   effects.innerHTML = activeEffects.map(effect => `<span>${escapeHtml(effect)}</span>`).join('');
+  tutorial?.show();
 }
 
 function persist({ rewardSound = true } = {}) {
@@ -131,6 +134,7 @@ function showBattleQuotaNotice() {
 
 function move(direction) {
   if (!active || overlay.isOpen) return;
+  if (gameplay?.battleInProgress()) return;
   if (active.levelPackage.map.route && gameplay.battlesLeft() === 0) return showBattleQuotaNotice();
   const result = attemptStep(active.state.player, active.levelPackage.map, direction);
   active.state = { ...active.state, player: result.player };
@@ -148,12 +152,25 @@ function move(direction) {
     active.state.progress.encounter = encounter.state;
     if (encounter.entered) toast(`${encounter.entered.name} · Lesson ${encounter.entered.lesson}`);
     persist();
-    if (encounter.encounter) gameplay.startBattle(encounter.zone, { scholarsLanternActive: encounter.scholarsLanternActive });
+    if (encounter.encounter || (tutorial?.current() === 5 && encounter.entered)) {
+      if (tutorial?.current() === 5) active.state.progress.encounter.cooldown = Math.max(3, encounter.zone.encounter?.cooldown || 3);
+      gameplay.startBattle(encounter.zone, { scholarsLanternActive: encounter.scholarsLanternActive });
+    }
+    tutorial?.action('moved');
     const expired = [previousEffects.repellentSteps > 0 && encounter.state.repellentSteps === 0 ? 'Forest Repellent' : '', previousEffects.scholarsLanternSteps > 0 && encounter.state.scholarsLanternSteps === 0 ? 'Scholar’s Lantern' : ''].filter(Boolean);
     if (expired.length) overlay.open(`<div class="panel result-panel effect-expired"><p class="panel-kicker">Travel effect ended</p><h1>${escapeHtml(expired.join(' and '))} wore off</h1><p>${expired.length > 1 ? 'These effects' : 'This effect'} will no longer protect your next forest steps. You can use another from your Bag.</p><button class="primary" data-close-overlay>Continue exploring</button></div>`);
   } else if (result.interaction) {
+    if (tutorial?.current() && !['school-door', 'shop-door', 'inn-door'].includes(result.interaction.id) && !tutorial.allowsStoryInteraction(result.interaction)) {
+      overlay.tutorialDialogue([`Let’s finish this step first: ${tutorial.objective()?.text || 'Follow Next step.'}`]);
+      render();
+      return;
+    }
+    tutorial?.action('interact', { id: result.interaction.id, kind: result.interaction.type });
     events.emit('world:interaction', result.interaction);
-    if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) overlay.dialogue(result.interaction.interaction);
+    if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) {
+      if (result.interaction.id === 'apprentice-jun') overlay.tutorialDialogue(result.interaction.interaction.lines);
+      else overlay.dialogue(result.interaction.interaction);
+    }
   }
   render();
 }
@@ -171,7 +188,7 @@ function startAutosave() {
 }
 
 function updateObjective() {
-  const step = nextStep(active.levelPackage, active.state);
+  const step = tutorial?.objective() || nextStep(active.levelPackage, active.state);
   $('#objective-text').textContent = step.text;
   return step;
 }
@@ -264,9 +281,11 @@ async function startLevel(levelId) {
     };
     lastRewardState = { level: active.state.player.level, xp: active.state.player.xp, coins: active.state.player.coins };
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
-    collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: () => changeRoute('rest'), onBattleQuotaExhausted: showBattleQuotaNotice, onImportSave: importCurrentLevelSave, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload) });
+    collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio, onTutorialAction: (type, detail) => tutorial?.action(type, detail), tutorialStep: () => tutorial?.current() });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: direction => changeRoute(direction || 'rest'), onBattleQuotaExhausted: showBattleQuotaNotice, onImportSave: importCurrentLevelSave, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload), onTutorialAction: (type, detail) => tutorial?.action(type, detail), onSkipTutorial: () => tutorial?.skipByParent(), tutorialStep: () => tutorial?.current() });
     adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion, onEnterRoute: changeRoute, onGateOpening: showGateOpening, onCollectionChanged: () => collection.applyMilestones() });
+    tutorial?.destroy();
+    tutorial = createTutorial({ getActive: () => active, persist, render, overlay });
     adventure.initialize();
     collection.refreshMaxHp();
     unbindInput?.();
@@ -450,14 +469,15 @@ async function boot() {
     for (const element of document.querySelectorAll('.debug-only')) element.hidden = false;
   }
   $('#status-button').addEventListener('click', showBuildStatus);
-  $('#book-button').addEventListener('click', () => gameplay?.spiritBook());
-  $('#dictation-button').addEventListener('click', () => gameplay?.dictationPractice());
-  $('#character-button').addEventListener('click', () => collection?.character());
-  $('#bag-button').addEventListener('click', () => collection?.bag());
-  $('#room-button').addEventListener('click', () => collection?.room());
-  $('#daily-button').addEventListener('click', () => adventure?.questBoard());
-  $('#story-button').addEventListener('click', () => adventure?.storyJournal());
+  $('#book-button').addEventListener('click', () => { gameplay?.spiritBook(); tutorial?.action('open-book'); });
+  $('#dictation-button').addEventListener('click', () => { gameplay?.dictationPractice(); tutorial?.action('open-dictation'); });
+  $('#character-button').addEventListener('click', () => { collection?.character(); tutorial?.action('open-hero'); });
+  $('#bag-button').addEventListener('click', () => { collection?.bag(); tutorial?.action('open-bag'); });
+  $('#room-button').addEventListener('click', () => { collection?.room(); tutorial?.action('open-room'); });
+  $('#daily-button').addEventListener('click', () => { adventure?.questBoard(); tutorial?.action('open-daily'); });
+  $('#story-button').addEventListener('click', () => { adventure?.storyJournal(); tutorial?.action('open-journal'); });
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
+  $('#overlay').addEventListener('overlay:changed', () => tutorial?.show());
   $('#sound-button').addEventListener('click', event => {
     if (!active) return;
     active.state.settings.sound = !active.state.settings.sound;

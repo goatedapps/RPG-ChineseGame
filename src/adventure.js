@@ -9,7 +9,7 @@ import { showQuestion } from './ui/questionView.js?p18';
 import { showWritingTask } from './ui/writingView.js?p13';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
-import { heroStats } from './battle/damage.js';
+import { capBossDamage, heroStats } from './battle/damage.js?p1';
 import { enemyAttack, heroDamage } from './battle/battle.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
@@ -18,7 +18,7 @@ import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
-import { completeTidewaterClue, tidewaterClue, tidewaterCluesComplete, tidewaterDictationWords, tidewaterEvidenceReady } from './systems/tidewaterRescue.js';
+import { completeTidewaterClue, tidewaterClue, tidewaterCluesComplete, tidewaterDictationWords, tidewaterEvidenceReady } from './systems/tidewaterRescue.js?p1';
 import { routeKey } from './systems/regions.js';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
@@ -214,11 +214,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const clues = Object.keys(game.levelPackage.regionStory.rescue.clues).map(id => {
       const clue = tidewaterClue(game.levelPackage, id);
       const done = story.flags.tideClues?.[id] === true;
-      return `<p class="${done ? 'done' : ''}">${done ? '✓' : '○'} ${escapeHtml(clue.person)}: ${escapeHtml(clue.name)} · three Lesson ${clue.lesson} words</p>`;
+      return `<p class="${done ? 'done' : ''}">${done ? '✓' : '○'} ${escapeHtml(clue.person)}: ${escapeHtml(clue.name)} · ${clue.requiredCollected} Lesson ${clue.lesson} spirits collected</p>`;
     }).join('');
     const compared = story.flags.tideEvidenceCompared;
     const rescued = story.flags.tideWhaleRescued;
-    return `<div class="rescue-journal"><h2>Help the stranded whale</h2><p>Collect at least three words from each lesson, then pass each neighbour’s three-word dictation. Two correct answers earn that clue. Follow the leads in any order.</p>${clues}<p class="${compared ? 'done' : ''}">${compared ? '✓' : '○'} Bring all three clues and the Harbour Chronometer to Keeper Lan</p><p class="${rescued ? 'done' : ''}">${rescued ? '✓' : '○'} ${story.bossDefeated ? 'Return to the Whale Rescue Dock to guide the whale' : 'Set the Clock Tower moving by defeating the Idle Clock'}</p></div>`;
+    return `<div class="rescue-journal"><h2>Help the stranded whale</h2><p>Each neighbour reserves three different collected spirits for a three-word dictation. If two neighbours share a lesson, collect three more spirits before the second clue opens. Two correct answers earn a clue.</p>${clues}<p class="${compared ? 'done' : ''}">${compared ? '✓' : '○'} Bring all three clues and the Harbour Chronometer to Keeper Lan</p><p class="${rescued ? 'done' : ''}">${rescued ? '✓' : '○'} ${story.bossDefeated ? 'Return to the Whale Rescue Dock to guide the whale' : 'Set the Clock Tower moving by defeating the Idle Clock'}</p></div>`;
   }
 
   function tidewaterKeeperLan() {
@@ -236,12 +236,13 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const clue = tidewaterClue(game.levelPackage, id);
     if (!clue) return;
     const collected = tidewaterDictationWords(game.levelPackage, game.state.progress, id);
+    const collectedCount = game.levelPackage.content.words.filter(word => word.lesson === clue.lesson && (game.state.progress.words[word.w]?.collected || game.state.progress.words[word.w]?.c)).length;
     const count = game.levelPackage.regionStory.rescue.wordsPerTest;
     const pass = game.levelPackage.regionStory.rescue.correctToPass;
     const complete = story.flags.tideClues?.[id] === true;
     const regionZone = game.levelPackage.campaigns.r3.route.zones.find(zone => zone.lesson === clue.lesson);
     const status = complete ? clue.found : collected.length < count
-      ? `You have ${collected.length}/${count} collected Lesson ${clue.lesson} words. Explore ${regionZone?.name || 'Saltwind Coast'} to find more, then come back for my dictation.`
+      ? `You have ${collectedCount}/${clue.requiredCollected} collected Lesson ${clue.lesson} spirits for this clue. Explore ${regionZone?.name || 'Saltwind Coast'} to find more, then come back for my dictation.`
       : `${clue.prompt} Write ${count} collected Lesson ${clue.lesson} words from memory. Get ${pass} correct to earn the ${clue.name.toLowerCase()} clue.`;
     overlay.open(`<div class="panel tidewater-clue-panel"><p class="panel-kicker">Whale rescue · ${escapeHtml(clue.name)}</p><h1>${escapeHtml(clue.person)}</h1><p data-type-dialogue>${escapeHtml(status)}</p><div class="button-row">${!complete && collected.length >= count ? '<button class="primary" data-dialogue-next data-tide-test>Start dictation</button>' : ''}<button class="secondary" data-tide-request>Optional request</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
     document.querySelector('[data-tide-test]')?.addEventListener('click', () => runTidewaterClueTest(id, collected), { once: true });
@@ -307,7 +308,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     game.state.progress.story = story;
     const gateRules = gateDictationRules(game.state.settings);
     const gateTask = story.flags.gateDictationPassed ? '✓ Gate dictation passed' : `○ Gate dictation: ${gateRules.pass} correct out of ${gateRules.count}`;
-    if (!story.flags.arrival) return playScene('arrival', storyJournal);
+    if (!story.flags.arrival) return playScene('arrival', () => {
+      if (game.state.progress.tutorial?.step < 16) {
+        game.state.progress.story.flags.tutorial = true;
+        commit();
+      } else storyJournal();
+    });
     if (game.levelPackage.region.id !== 'r1') {
       const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
       const requestsDone = Object.keys(game.levelPackage.regionStory.requests).filter(id => (story.requests[id] || 0) >= 3).length;
@@ -521,7 +527,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
         let damage = 0;
         if (correct) {
-          damage = heroDamage(game.state.player.level, battle, { writing: task.kind === 'writing', bonusDamage: (task.kind === 'writing' ? bonuses.skillDamage.w : 0) + (battle.attackBoost || 0), roll: Math.random() * 3 });
+          damage = capBossDamage(heroDamage(game.state.player.level, battle, { writing: task.kind === 'writing', bonusDamage: (task.kind === 'writing' ? bonuses.skillDamage.w : 0) + (battle.attackBoost || 0), roll: Math.random() * 3 }), battle.maxHp);
           battle.hp = Math.max(0, battle.hp - damage);
           audio?.sfx('hit');
         } else battle.queue.push(task);

@@ -13,7 +13,8 @@ function shuffle(values, random) {
 }
 
 function options(correct, distractors, random) {
-  return shuffle([...new Set([correct, ...distractors].filter(Boolean))].slice(0, 4), random);
+  const alternatives = [...new Set(distractors.filter(option => option && option !== correct))];
+  return shuffle([correct, ...shuffle(alternatives, random).slice(0, 3)], random);
 }
 
 function otherWords(word, words, predicate = () => true) {

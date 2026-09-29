@@ -38,6 +38,7 @@ export function createOverlay(element) {
     const panel = element.querySelector('.panel');
     if (panel?.querySelector(':scope > .panel-header') && !panel.matches('.bag-panel, .parent-panel')) panel.classList.add('atlas-window');
     element.hidden = false;
+    element.dispatchEvent(new element.ownerDocument.defaultView.Event('overlay:changed'));
     element.dataset.open = 'true';
     element.setAttribute('role', 'dialog');
     element.setAttribute('aria-modal', 'true');
@@ -49,6 +50,7 @@ export function createOverlay(element) {
   function close() {
     clearTimeout(typingTimer);
     element.hidden = true;
+    element.dispatchEvent(new element.ownerDocument.defaultView.Event('overlay:changed'));
     element.dataset.open = 'false';
     element.innerHTML = '';
     element.classList.remove('full-screen-overlay');
@@ -74,6 +76,18 @@ export function createOverlay(element) {
     };
     render();
   }
+  function tutorialDialogue(lines, onDone = () => {}) {
+    let index = 0;
+    const render = () => {
+      const last = index === lines.length - 1;
+      open(`<div class="dialog-card tutorial-dialog-card"><div class="tutorial-guide-mark" aria-hidden="true">俊</div><div class="tutorial-dialog-copy"><p class="speaker">Apprentice Jun</p><p data-type-dialogue>${escapeHtml(lines[index])}</p></div><button class="primary" data-dialogue-next>${last ? 'Continue' : 'Next'}</button></div>`, { dismissible: false });
+      element.querySelector('[data-dialogue-next]').addEventListener('click', () => {
+        if (last) { close(); onDone(); }
+        else { index += 1; render(); }
+      }, { once: true });
+    };
+    render();
+  }
   element.addEventListener('keydown', event => {
     if (event.key === 'Escape' && api.dismissible) { event.preventDefault(); close(); return; }
     if (event.key !== 'Tab') return;
@@ -84,6 +98,6 @@ export function createOverlay(element) {
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
-  const api = { open, close, dialogue, dismissible: true, get isOpen() { return !element.hidden; } };
+  const api = { open, close, dialogue, tutorialDialogue, dismissible: true, get isOpen() { return !element.hidden; } };
   return api;
 }

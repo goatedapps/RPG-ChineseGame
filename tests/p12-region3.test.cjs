@@ -73,8 +73,8 @@ test('both curricula can earn three Tidewater clues through three-word dictation
       const clue = tidewaterClue(game, id);
       assert.ok(game.config.regionLessons.r3.includes(clue.lesson), `${level}: ${id} uses a regional lesson`);
       if (id === clueIds[0]) assert.equal(tidewaterDictationWords(game, state.progress, id).length, 0);
-      const words = game.content.words.filter(word => word.lesson === clue.lesson).slice(0, 3);
-      assert.equal(words.length, 3);
+      const words = game.content.words.filter(word => word.lesson === clue.lesson).slice(0, clue.requiredCollected);
+      assert.equal(words.length, clue.requiredCollected);
       for (const word of words) state.progress.words[word.w] = { collected: true };
       const testWords = tidewaterDictationWords(game, state.progress, id, () => 0);
       assert.equal(testWords.length, 3);
@@ -88,6 +88,25 @@ test('both curricula can earn three Tidewater clues through three-word dictation
     state.progress.inventory.keyItems.push('harbour-chronometer');
     assert.equal(tidewaterEvidenceReady(story, game.regionStory, state.progress.inventory), true);
   }
+});
+
+test('Primary 5 reserves separate groups of Lesson 8 spirits for its two clue-givers', async () => {
+  const { activateRegion, loadLevelPackage } = await import('../src/content/loader.js');
+  const { createFreshState } = await import('../src/core/state.js');
+  const { tidewaterClue, tidewaterDictationWords } = await import('../src/systems/tidewaterRescue.js');
+  const game = activateRegion(await loadLevelPackage('p5', fetcher, ''), 'r3');
+  const state = createFreshState(game);
+  const lessonEight = game.content.words.filter(word => word.lesson === 8);
+  for (const word of lessonEight.slice(0, 3)) state.progress.words[word.w] = { collected: true };
+  assert.equal(tidewaterClue(game, 'maker-chen').requiredCollected, 3);
+  assert.equal(tidewaterClue(game, 'watcher-an').requiredCollected, 6);
+  const makerWords = tidewaterDictationWords(game, state.progress, 'maker-chen', () => 0);
+  assert.equal(makerWords.length, 3);
+  assert.equal(tidewaterDictationWords(game, state.progress, 'watcher-an', () => 0).length, 0);
+  for (const word of lessonEight.slice(3, 6)) state.progress.words[word.w] = { collected: true };
+  const watcherWords = tidewaterDictationWords(game, state.progress, 'watcher-an', () => 0);
+  assert.equal(watcherWords.length, 3);
+  assert.equal(watcherWords.some(word => makerWords.includes(word)), false);
 });
 
 test('Tidewater guidance follows clues, evidence, boss and whale rescue without resetting saved state', async () => {

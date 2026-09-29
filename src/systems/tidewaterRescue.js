@@ -5,14 +5,25 @@ export function tidewaterClue(levelPackage, id) {
   const request = levelPackage.regionStory.requests?.[id];
   if (!clue || !request) return null;
   const lesson = request.lesson ?? levelPackage.config.regionLessons.r3[request.lessonSlot];
-  return { ...clue, id, lesson, person: request.name };
+  const clueIds = Object.keys(levelPackage.regionStory.rescue?.clues || {});
+  const matchingIds = clueIds.filter(clueId => {
+    const matchingRequest = levelPackage.regionStory.requests?.[clueId];
+    const matchingLesson = matchingRequest?.lesson ?? levelPackage.config.regionLessons.r3[matchingRequest?.lessonSlot];
+    return matchingLesson === lesson;
+  });
+  const lessonGroup = matchingIds.indexOf(id);
+  const wordsPerTest = levelPackage.regionStory.rescue.wordsPerTest;
+  return { ...clue, id, lesson, person: request.name, lessonGroup, requiredCollected: (lessonGroup + 1) * wordsPerTest };
 }
 
 export function tidewaterDictationWords(levelPackage, progress, id, random = Math.random) {
   const clue = tidewaterClue(levelPackage, id);
   if (!clue) return [];
   const collected = levelPackage.content.words.filter(word => word.lesson === clue.lesson && (progress.words[word.w]?.collected || progress.words[word.w]?.c));
-  return chooseDictationWords(collected, clue.lesson, levelPackage.regionStory.rescue.wordsPerTest, random);
+  if (collected.length < clue.requiredCollected) return [];
+  const count = levelPackage.regionStory.rescue.wordsPerTest;
+  const reserved = collected.slice(clue.lessonGroup * count, clue.requiredCollected);
+  return chooseDictationWords(reserved, clue.lesson, count, random);
 }
 
 export function tidewaterCluesComplete(story, regionStory) {

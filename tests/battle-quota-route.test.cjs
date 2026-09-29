@@ -25,7 +25,9 @@ test('the final field battle returns to the Inn and zero quota blocks re-entry',
   assert.match(main, /if \(active\.levelPackage\.map\.route\) changeRoute\('rest'\)/);
   assert.match(main, /direction === 'enter' \|\| direction === 'back'/);
   assert.match(main, /active\.levelPackage\.map\.route && gameplay\.battlesLeft\(\) === 0/);
-  assert.match(gameplay, /battle\.lastDailyBattle = cap !== 0 && energy\.energy\.used >= cap/);
+  assert.match(gameplay, /battle\.lastDailyBattle = !guided && cap !== 0 && energy\.energy\.used >= cap/);
+  assert.match(gameplay, /battleInProgress: \(\) => battleActive/);
+  assert.match(main, /if \(gameplay\?\.battleInProgress\(\)\) return;[\s\S]*?gameplay\.battlesLeft\(\) === 0/);
   assert.match(gameplay, /data-battle-win-next/);
 });
 

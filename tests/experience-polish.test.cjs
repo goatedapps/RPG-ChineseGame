@@ -86,7 +86,7 @@ test('music pauses on visibility loss and resumes the same scene', async () => {
 test('ordinary and boss defeats play non-looping recovery music until the recovery panel closes', async () => {
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const adventure = fs.readFileSync('src/adventure.js', 'utf8');
-  assert.match(gameplay, /function faint\(battle\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => \{ audio\?\.setScene\('village'\); if \(battle\.lastDailyBattle\) onBattleQuotaExhausted\(\)/);
+  assert.match(gameplay, /function faint\(battle\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => \{ battleActive = false; audio\?\.setScene\('village'\); if \(battle\.lastDailyBattle\) onBattleQuotaExhausted\(\)/);
   assert.match(adventure, /if \(game\.state\.player\.hp === 0\)[\s\S]*?setScene\('defeat'\)[\s\S]*?onClose: \(\) => audio\?\.setScene\('village'\)/);
   const tracks = [];
   class FakeAudio {
@@ -118,6 +118,27 @@ test('ordinary and boss defeats play non-looping recovery music until the recove
   assert.equal(village.playing, true);
   audio.setScene('defeat');
   assert.equal(defeat.playing, true);
+  audio.setEnabled(false);
+});
+
+test('leaving boss victory restarts Tidewater music immediately', async () => {
+  const tracks = [];
+  class FakeAudio {
+    constructor(source) { this.source = source; this.currentTime = 0; this.volume = 0; this.playing = false; tracks.push(this); }
+    play() { this.playing = true; return Promise.resolve(); }
+    pause() { this.playing = false; }
+    cloneNode() { return new FakeAudio(this.source); }
+  }
+  const { createAudioManager } = await import('../src/core/audio.js');
+  const audio = createAudioManager({ AudioClass: FakeAudio });
+  audio.unlock();
+  audio.setWorld('r3');
+  audio.setScene('victory');
+  audio.setScene('village');
+  const tidewater = tracks.find(track => track.source.includes('tidewater-bg.mp3'));
+  assert.equal(tidewater.playing, true);
+  assert.equal(tidewater.volume, .25);
+  assert.deepEqual(tracks.filter(track => track.loop && track.playing), [tidewater]);
   audio.setEnabled(false);
 });
 

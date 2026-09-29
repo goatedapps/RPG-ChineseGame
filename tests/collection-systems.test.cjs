@@ -62,6 +62,21 @@ test('partners require Silver, stop at three, and Gold unlocks authored or idiom
   assert.equal(partnerMove(words[0], silver, { '露营': 'Outdoors' }), null);
   assert.equal(partnerMove(words[1], gold, { '绑': 'Actions' }).id, 'damage-1');
   assert.equal(partnerMove(words[3], gold, {}).id, 'full-heal');
+  const renderer = fs.readFileSync(path.join(root, 'src/world/renderer.js'), 'utf8');
+  assert.match(renderer, /partners = \(state\.progress\?\.partners \|\| \[\]\)\.slice\(0, 3\)/);
+});
+
+test('restoration rewards use generated art in the room and a dedicated reveal event', () => {
+  const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
+  const styles = fs.readFileSync(path.join(root, 'css/stage.css'), 'utf8');
+  const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');
+  const atlas = path.join(root, 'assets/images/restorations/restoration-atlas.webp');
+  assert.ok(fs.statSync(atlas).size > 100_000);
+  assert.match(collection, /class="panel restoration-reveal"/);
+  assert.match(collection, /room-restoration-display/);
+  assert.match(collection, /RESTORATION_ICON_INDEX/);
+  assert.match(styles, /restoration-atlas\.webp/);
+  assert.match(serviceWorker, /restorations\/restoration-atlas\.webp/);
 });
 
 test('the Campfire set requires Silver words and can only be offered when ready', async () => {

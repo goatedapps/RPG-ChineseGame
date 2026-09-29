@@ -586,13 +586,16 @@ export function createRenderer(canvas, map) {
       context.beginPath(); context.arc(4 * TILE - offsetX, 8 * TILE - offsetY, 24, 0, Math.PI * 2); context.fill();
       context.fillStyle = '#f4efe2'; context.font = '700 11px system-ui'; context.fillText('Hidden Grove', 4 * TILE - offsetX, 8 * TILE - offsetY);
     }
-    const partner = state.progress?.partners?.[0];
-    if (partner) {
+    const partners = (state.progress?.partners || []).slice(0, 3);
+    const partnerOffsets = [[-7, 7], [9, 13], [-16, 20]];
+    partners.forEach((partner, index) => {
       const glyph = partner.split('-').slice(2).join('-').slice(0, 1);
+      const [partnerX, partnerY] = partnerOffsets[index];
       context.fillStyle = '#f4efe2'; context.strokeStyle = '#d9a62e'; context.lineWidth = 2;
-      context.beginPath(); context.arc(playerPx - offsetX - 5, playerPy - offsetY + 5, 11, 0, Math.PI * 2); context.fill(); context.stroke();
-      context.fillStyle = '#1b2430'; context.font = '700 13px serif'; context.fillText(glyph, playerPx - offsetX - 5, playerPy - offsetY + 5);
-    }
+      context.beginPath(); context.arc(playerPx - offsetX + partnerX, playerPy - offsetY + partnerY, 11, 0, Math.PI * 2); context.fill(); context.stroke();
+      context.fillStyle = '#1b2430'; context.font = '700 13px serif';
+      context.fillText(glyph, playerPx - offsetX + partnerX, playerPy - offsetY + partnerY);
+    });
     if (map.route) {
       const discovered = new Set(state.progress?.routes?.[routeKey(map.region)]?.discovered || []);
       for (let row = firstRow; row <= lastRow; row += 1) {

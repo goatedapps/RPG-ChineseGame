@@ -38,7 +38,7 @@ export function createAudioManager({ AudioClass = globalThis.Audio } = {}) {
     const previous = current;
     current = next;
     next.currentTime = 0;
-    if ((previous === music.intro || previous === music.defeat) && scene === 'village') {
+    if ((previous === music.intro || previous === music.defeat || previous === music.victory) && scene === 'village') {
       previous.pause(); previous.currentTime = 0; previous.volume = 0;
       next.volume = .25;
       return void next.play().catch(() => {});

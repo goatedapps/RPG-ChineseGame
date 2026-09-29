@@ -1,4 +1,4 @@
-import { createFreshState, migrateState } from './state.js?p10g';
+import { createFreshState, migrateState } from './state.js?p10h';
 
 const SAVE_PREFIX = 'WSQ2';
 const SAVE_SALT = 'word-spirit-quest|modular|v2|';

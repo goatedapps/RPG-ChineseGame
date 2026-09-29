@@ -9,13 +9,13 @@ import { partnerBonuses, partnerMove } from './systems/partners.js?p10f';
 import { battlesLeft, useBattle } from './systems/energy.js';
 import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, setTestingPlayerLevel, weeklySummary } from './systems/parent.js?p15';
 import { weightedCreature } from './world/encounters.js?p10e';
-import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10f';
+import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10h';
 import { xpToNextLevel } from './core/progression.js';
 import { checkPassageAnswer, completePassage, normalizeReading, repairActiveReading, selectPassage } from './systems/reading.js?p10g';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
 import { chooseDictationWords, dictationLessons, dictationResult, gateDictationRules } from './systems/dictation.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
-import { makeExamQuestion, makeQuestion } from './learning/questions.js';
+import { makeExamQuestion, makeQuestion } from './learning/questions.js?p1';
 import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILLS, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './learning/mastery.js?p10f';
 import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/selection.js?p10i';
 import { localDay } from './core/time.js';
@@ -117,9 +117,10 @@ export function innReviewPool(levelPackage, progress) {
   return { regionalWords, review };
 }
 
-export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchRegion = () => {}, onReturnToVillage = () => {}, onBattleQuotaExhausted = () => {}, onImportSave = () => { throw new Error('Save import is unavailable.'); }, onCollectionChanged = () => {}, onProgressEvent = () => {} }) {
+export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchRegion = () => {}, onReturnToVillage = () => {}, onBattleQuotaExhausted = () => {}, onImportSave = () => { throw new Error('Save import is unavailable.'); }, onCollectionChanged = () => {}, onProgressEvent = () => {}, onTutorialAction = () => {}, onSkipTutorial = () => {}, tutorialStep = () => null }) {
   ensureParentPin(storage);
   let parentNoticeTimer = null;
+  let battleActive = false;
   const active = () => getActive();
   const speech = createSpeechController();
   const wordsForLesson = lesson => active().levelPackage.content.words.filter(word => word.lesson === lesson);
@@ -167,6 +168,10 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     }, { title: SKILLS[skill].action, headerHtml: battleQuestionBadge('attack'), revealWord: battle.word, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: word => speech.speak(`${word.w}。${word.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
   }
 
+  function guidedBattlePrompt(lines, onDone) {
+    overlay.tutorialDialogue(lines, onDone);
+  }
+
   function showBattle(battle, message = '') {
     const game = active();
     const resolving = battle.finished || game.state.player.hp <= 0;
@@ -181,9 +186,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <div class="battle-enemy ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="battle-nameplate"><b>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</b><small>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</small><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><strong>HP ${battle.enemyHp}/${battle.creature.maxHp}</strong></div><div class="creature-art">${creatureSvg(battle.creature.id, '？')}</div></div>
       </div>
       <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
-        <p class="battle-skill-tip">Answer an attack correctly to help this Spirit learn that skill. An empty circle in your Spirit Book can fill up.</p>
-        <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" ${resolving ? 'disabled' : ''} class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === recommended ? 'recommended' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === recommended ? ' · can fill an empty skill circle' : ''}</span></button>`).join('')}</div>
-        <div class="button-row"><button class="secondary" data-bag type="button" ${resolving ? 'disabled' : ''}>Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button" ${resolving ? 'disabled' : ''}>${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button" ${resolving ? 'disabled' : ''}>Try to run</button></div>
+        <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" ${resolving || battle.tutorialNeedsBag ? 'disabled' : ''} class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === recommended ? 'recommended' : ''} ${battle.guided && !battle.tutorialNeedsBag && key === recommended ? 'tutorial-arrow' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === recommended ? ' · can fill an empty skill circle' : ''}</span></button>`).join('')}</div>
+        <div class="button-row"><button class="secondary ${battle.tutorialNeedsBag ? 'tutorial-bag-cue tutorial-arrow' : ''}" data-bag type="button" ${resolving ? 'disabled' : ''}>Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button" ${resolving || battle.tutorialNeedsBag ? 'disabled' : ''}>${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button" ${resolving || battle.guided ? 'disabled' : ''}>Try to run</button></div>
       </div>
     </article>`, { dismissible: false });
     animateBattleHealth({ ...battle, maxHp: battle.creature.maxHp, displayedHealth: battle.displayedHealth }, game.state.player, battle.enemyHp);
@@ -195,6 +199,15 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       battle.partnerBoost = 0;
       battle.doubleHit = false;
       battle = playerResult.battle;
+      if (battle.guided && !battle.tutorialSupplyUsed) {
+        battle.enemyHp = Math.max(1, battle.enemyHp);
+        battle.finished = false;
+        battle.tutorialNeedsBag = true;
+        game.state.player.hp = Math.max(1, game.state.player.hp - 2);
+        commit();
+        guidedBattlePrompt(['The creature grazed you, so you lost 2 HP.', 'Open your battle Bag and use the Rice Ball to recover before you attack again.'], () => showBattle(battle));
+        return;
+      }
       if (battle.finished) {
         showBattle(battle, `Final blow! You dealt ${playerResult.damage} damage.`);
         return setTimeout(() => battleWin(battle, playerResult.damage), 650);
@@ -206,6 +219,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion + (ok ? battle.streak >= 3 ? 0.3 : 0.18 : 0), damageReduction: bonuses.spellDefense + (battle.partnerShield || blocksMiss ? 999 : 0), defenseBoost: battle.defenseBoost, damageMultiplier: ok ? 1 : 1.5 });
       battle.partnerShield = false;
       game.state.player = enemyResult.player;
+      if (battle.guided) game.state.player.hp = Math.max(1, game.state.player.hp);
       if (enemyResult.damage > 0) audio?.sfx('playerHit');
       if (game.state.player.hp <= 0) { showBattle({ ...battle, finished: true }, `${battle.creature.name} dealt ${enemyResult.damage} damage.`); return setTimeout(() => faint(battle), 650); }
       commit();
@@ -215,6 +229,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     document.querySelector('[data-run]').addEventListener('click', () => {
       const chance = game.levelPackage.balance.combat.escapeChance ?? 0.65;
       if (escapeSucceeded(Math.random, chance)) {
+        battleActive = false;
         commit();
         audio?.setScene('village');
         if (battle.lastDailyBattle) return onBattleQuotaExhausted();
@@ -224,6 +239,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       }
       const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion, defenseBoost: battle.defenseBoost });
       game.state.player = enemyResult.player;
+      if (battle.guided) game.state.player.hp = Math.max(1, game.state.player.hp);
       if (enemyResult.damage > 0) audio?.sfx('playerHit');
       if (game.state.player.hp <= 0) { showBattle({ ...battle, finished: true }, `${battle.creature.name} dealt ${enemyResult.damage} damage.`); return setTimeout(() => faint(battle), 650); }
       commit();
@@ -262,6 +278,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       battle.partnerShield = false;
       const hit = enemyAttack(battle, game.state.player, () => 1, { damageReduction: bonuses.spellDefense + (shielded ? 999 : 0), defenseBoost: battle.defenseBoost, damageMultiplier: lastCorrect ? 1 : 1.5 });
       game.state.player = hit.player;
+      if (battle.guided) game.state.player.hp = Math.max(1, game.state.player.hp);
       if (hit.damage > 0) audio?.sfx('playerHit');
       if (game.state.player.hp <= 0) { showBattle({ ...battle, finished: true }, `${spell} dealt ${hit.damage} damage.`); return setTimeout(() => faint(battle), 650); }
       commit();
@@ -273,11 +290,19 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     commit();
     audio?.setScene('village');
     overlay.open(`<div class="panel result-panel"><h1>The Golden ${escapeHtml(battle.creature.name)} escaped!</h1><p>Golden creatures flee after four turns. Build a streak and use their weakness to defeat them quickly.</p><button class="primary" data-fled-next>${battle.lastDailyBattle ? 'Continue' : 'Return to the village'}</button></div>`);
-    document.querySelector('[data-fled-next]').addEventListener('click', () => battle.lastDailyBattle ? onBattleQuotaExhausted() : overlay.close(), { once: true });
+    document.querySelector('[data-fled-next]').addEventListener('click', () => {
+      battleActive = false;
+      return battle.lastDailyBattle ? onBattleQuotaExhausted() : overlay.close();
+    }, { once: true });
   }
 
   function battleBag(battle) {
     const game = active();
+    if (battle.guided && battle.tutorialNeedsBag && !battle.tutorialBagExplained) {
+      battle.tutorialBagExplained = true;
+      guidedBattlePrompt(['This is your battle Bag. Find the Rice Ball and tap it to use it.', 'Supplies are used up when you use them, so the Rice Ball will disappear after it restores HP.'], () => battleBag(battle));
+      return;
+    }
     const owned = game.levelPackage.items.filter(item => !['repellent', 'repel-mastered'].includes(item.effect) && game.state.progress.inventory[item.id] > 0);
     overlay.open(`<div class="panel"><p class="panel-kicker">Battle bag</p><h1>Choose an item</h1><div class="service-grid">${owned.map(item => `<button data-use-item="${item.id}"><b>${escapeHtml(item.name)} × ${game.state.progress.inventory[item.id]}</b><span>${escapeHtml(itemDescription(item))}</span></button>`).join('') || '<p>Your battle bag is empty.</p>'}</div><div class="button-row"><button class="secondary" data-back-battle>Back</button></div></div>`, { dismissible: false });
     document.querySelector('[data-back-battle]').addEventListener('click', () => showBattle(battle));
@@ -287,12 +312,19 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (!consumed.ok) return;
       game.state.progress.inventory = consumed.inventory;
       if (item.effect === 'heal' || item.effect === 'full-heal') game.state.player = applyHealing(game.state.player, item);
+      if (battle.guided && item.id === 'rice-ball') {
+        battle.tutorialSupplyUsed = true;
+        battle.tutorialNeedsBag = false;
+        battle.enemyHp = 1;
+      }
       if (item.effect === 'writing-retry') battle.inkRetry = true;
       if (item.effect === 'attack-boost') battle.attackBoost = Math.max(battle.attackBoost || 0, item.amount || 1);
       if (item.effect === 'defense-boost') battle.defenseBoost = Math.max(battle.defenseBoost || 0, item.amount || 1);
-      if (item.effect === 'escape') { commit(); audio?.setScene('village'); if (battle.lastDailyBattle) return onBattleQuotaExhausted(); overlay.close(); toast('The Smoke Ball carried you safely home.'); return; }
+      if (item.effect === 'escape') { battleActive = false; commit(); audio?.setScene('village'); if (battle.lastDailyBattle) return onBattleQuotaExhausted(); overlay.close(); toast('The Smoke Ball carried you safely home.'); return; }
       commit();
-      showBattle(battle, `${item.name} is ready.`);
+      if (battle.guided && item.id === 'rice-ball') guidedBattlePrompt(['Good! The Rice Ball restored your HP. It has been used up.', 'Choose another attack and answer to free the Word Spirit.'], () => showBattle(battle));
+      else if (battle.guided && battle.tutorialNeedsBag) guidedBattlePrompt(['That item is useful later. For now, use your Rice Ball to recover HP.'], () => showBattle(battle));
+      else showBattle(battle, `${item.name} is ready.`);
     });
   }
 
@@ -319,12 +351,17 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     onProgressEvent('battle-win', { creature: battle.creature.id, word: battle.word.w });
     onCollectionChanged();
     commit();
+    onTutorialAction('battle-win', { collected: !progress.collected, word: battle.word.w });
     audio?.sfx(game.state.player.level > beforeLevel.level ? 'level' : 'win');
     audio?.setScene('village');
     const coinsAwarded = baseRewards.coins + variantCoins;
     const victoryTitle = battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : progress.collected ? `${escapeHtml(battle.word.w)} grew stronger!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`;
-    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${victoryTitle}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${showBaitTip ? `<aside class="battle-bait-tip"><b>Looking for a missing Spirit?</b><p>Visit the town Shop and choose a 10-coin Lesson ${battle.word.lesson} Spirit Bait. It lets you pick the exact missing word for your next battle in this lesson area.</p></aside>` : ''}${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-battle-win-next type="button">${battle.lastDailyBattle ? 'Continue' : 'Continue exploring'}</button></div>`, { dismissible: false });
-    document.querySelector('[data-battle-win-next]').addEventListener('click', () => battle.lastDailyBattle ? onBattleQuotaExhausted() : overlay.close(), { once: true });
+    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${victoryTitle}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${showBaitTip ? `<aside class="battle-bait-tip"><b>Looking for a missing Spirit?</b><p>Visit the town Shop and choose a 10-coin Lesson ${battle.word.lesson} Spirit Bait. It lets you pick the exact missing word for your next battle in this lesson area.</p></aside>` : ''}${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-battle-win-next type="button">${battle.guided ? 'Return to the village' : battle.lastDailyBattle ? 'Continue' : 'Continue exploring'}</button></div>`, { dismissible: false });
+    document.querySelector('[data-battle-win-next]').addEventListener('click', () => {
+      battleActive = false;
+      if (battle.guided) return onReturnToVillage('leave');
+      return battle.lastDailyBattle ? onBattleQuotaExhausted() : overlay.close();
+    }, { once: true });
   }
 
   function faint(battle) {
@@ -337,27 +374,32 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     }
     commit();
     audio?.setScene('defeat');
-    overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you to the Inn. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`, { onClose: () => { audio?.setScene('village'); if (battle.lastDailyBattle) onBattleQuotaExhausted(); } });
+    overlay.open(`<div class="panel result-panel"><h1>You need a rest</h1><p>${escapeHtml(battle.creature.name)} was too strong, so the villagers carried you to the Inn. You lost nothing and your HP was restored.</p><button class="primary" data-close-overlay type="button">Continue</button></div>`, { onClose: () => { battleActive = false; audio?.setScene('village'); if (battle.lastDailyBattle) onBattleQuotaExhausted(); } });
   }
 
   function startBattle(zoneOrLesson, { scholarsLanternActive = false } = {}) {
+    if (battleActive) return false;
     const game = active();
     const zone = typeof zoneOrLesson === 'object' ? zoneOrLesson : null;
     const lesson = zone?.lesson || zoneOrLesson;
     const cap = game.state.settings.dailyBattles;
-    const energy = useBattle(game.state.progress.energy, localDay(), cap);
+    const guided = tutorialStep() === 5;
+    if (guided && !game.state.progress.inventory['rice-ball']) return toast('Buy a Rice Ball at the Shop before this practice battle.');
+    const energy = guided ? { allowed: true, energy: game.state.progress.energy } : useBattle(game.state.progress.energy, localDay(), cap);
     if (!energy.allowed) return onBattleQuotaExhausted();
     const eligibleWords = eligibleBattleWords(wordsForLesson(lesson), game.state.progress.words, scholarsLanternActive);
     const baitIndex = game.state.progress.baits.findIndex(bait => bait.lesson === lesson && eligibleWords.some(candidate => candidate.w === bait.word));
     const bait = baitIndex >= 0 ? game.state.progress.baits[baitIndex] : null;
     const word = bait ? eligibleWords.find(candidate => candidate.w === bait.word) : selectWord(eligibleWords, game.state.progress.words, { day: localDay() });
     if (!word) return toast(game.levelPackage.strings.peaceful);
+    battleActive = true;
     if (baitIndex >= 0) game.state.progress.baits.splice(baitIndex, 1);
-    const creature = createCreature(lesson, game.levelPackage.balance, Math.random, weightedCreature(zone?.encounter?.types));
+    const creature = guided ? createCreature(1, game.levelPackage.balance, () => 0.5, 'fogling') : createCreature(lesson, game.levelPackage.balance, Math.random, weightedCreature(zone?.encounter?.types));
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
-    battle.lastDailyBattle = cap !== 0 && energy.energy.used >= cap;
+    battle.guided = guided;
+    battle.lastDailyBattle = !guided && cap !== 0 && energy.energy.used >= cap;
     battle.review = isReviewDue(game.state.progress.words[word.w], localDay());
     battle.reviewFailed = false;
     commit();
@@ -371,7 +413,10 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       setTimeout(() => {
         transition.remove();
         overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, '？')}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? 'Your bait worked. It carries the exact spirit you chose.' : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
-        document.querySelector('[data-fight]').addEventListener('click', () => showBattle(battle), { once: true });
+        document.querySelector('[data-fight]').addEventListener('click', () => {
+          if (guided) guidedBattlePrompt(['This Fogling has a Word Spirit trapped inside. Choose an attack to help free it.', 'You can choose an attack even if its Spirit Book circle is empty. A correct answer will fill that skill.'], () => showBattle(battle));
+          else showBattle(battle);
+        }, { once: true });
       }, 220);
     }, 720);
     return true;
@@ -454,6 +499,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       if (run.rewarded) game.state.player.coins += correct * game.levelPackage.balance.school.coinsPerCorrect;
       onProgressEvent('school-run', { kind: examDay ? 'exam' : 'quiz', correct });
       commit();
+      if (!examDay) onTutorialAction('school-quiz');
       playLevelUp(beforeLevel, game.state.player);
       overlay.open(`<div class="panel result-panel"><h1>${escapeHtml(title)} complete</h1><p>You answered <b>${correct}/${total}</b> correctly and earned ${xpAwarded} XP${run.rewarded ? ` plus ${correct * game.levelPackage.balance.school.coinsPerCorrect} coins` : ''}.</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
     });
@@ -463,7 +509,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const game = active();
     const regional = game.levelPackage.config.regionLessons[game.levelPackage.region.id] || [];
     const lessons = dictationLessons(game.levelPackage.content.words, allLessons ? null : regional);
-    overlay.open(`<div class="panel dictation-picker"><div class="panel-header"><div><p class="panel-kicker">${allLessons ? 'All-lesson practice' : `${escapeHtml(game.levelPackage.region.name)} School`}</p><h1>Choose your dictation</h1></div><button class="secondary" data-close-overlay>Cancel</button></div><p>${allLessons ? 'Practise any lesson in your curriculum. This is a score-only practice session.' : 'Choose a lesson from this region. School rewards are capped at three correct words per run to keep progression balanced.'}</p><label class="answer-field">Lesson<select data-dictation-lesson>${lessons.map(lesson => `<option value="${lesson}">Lesson ${lesson}</option>`).join('')}</select></label><fieldset class="dictation-count"><legend>How many words?</legend><label><input type="radio" name="dictation-count" value="5" checked> 5</label><label><input type="radio" name="dictation-count" value="10"> 10</label><label><input type="radio" name="dictation-count" value="all"> All</label></fieldset><div class="button-row"><button class="primary" data-dictation-start>Start dictation</button></div></div>`);
+    const guided = allLessons && tutorialStep() === 14;
+    overlay.open(`<div class="panel dictation-picker"><div class="panel-header"><div><p class="panel-kicker">${allLessons ? 'All-lesson practice' : `${escapeHtml(game.levelPackage.region.name)} School`}</p><h1>Choose your dictation</h1></div><button class="secondary" data-close-overlay>Cancel</button></div><p>${allLessons ? 'Practise any lesson in your curriculum. This is a score-only practice session.' : 'Choose a lesson from this region. School rewards are capped at three correct words per run to keep progression balanced.'}</p><label class="answer-field">Lesson<select data-dictation-lesson>${lessons.map(lesson => `<option value="${lesson}">Lesson ${lesson}</option>`).join('')}</select></label><fieldset class="dictation-count"><legend>How many words?</legend>${guided ? '<label><input type="radio" name="dictation-count" value="1" checked> 1 guided word</label>' : ''}<label><input type="radio" name="dictation-count" value="5" ${guided ? '' : 'checked'}> 5</label><label><input type="radio" name="dictation-count" value="10"> 10</label><label><input type="radio" name="dictation-count" value="all"> All</label></fieldset><div class="button-row"><button class="primary" data-dictation-start>Start dictation</button></div></div>`);
     document.querySelector('[data-dictation-start]').addEventListener('click', () => {
       const lesson = Number(document.querySelector('[data-dictation-lesson]').value);
       const count = document.querySelector('[name="dictation-count"]:checked').value;
@@ -500,6 +547,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         recordWord(word, 'w', result.ok, !result.earnsTick);
         clean += result.ok ? 1 : 0;
         lesson3Clean += result.ok && word.lesson === 3 ? 1 : 0;
+        onTutorialAction('dictation-word');
         next();
       }, { runId: `dictation-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, forceMemory: true, headerHtml: `<p class="panel-kicker">${schoolMode ? 'School dictation' : 'All-lesson dictation'} · ${index}/${words.length}</p>`, onExit: () => { commit(); overlay.close(); } });
     };
@@ -717,6 +765,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       commit();
       toast(`${item.name} added to your bag.`);
       audio?.sfx('purchase');
+      onTutorialAction('buy-item', { id: item.id });
       shop();
     });
     for (const button of document.querySelectorAll('[data-bait-lesson]')) button.addEventListener('click', () => baitPicker(Number(button.dataset.baitLesson)));
@@ -741,6 +790,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       audio?.sfx('purchase');
       commit();
       toast(`Bait prepared for ${button.dataset.baitWord}.`);
+      onTutorialAction('buy-bait');
       shop();
     }, { once: true });
   }
@@ -750,12 +800,55 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const lessons = game.levelPackage.config.regionLessons[game.levelPackage.region.id] || [];
     const words = game.levelPackage.content.words.filter(word => lessons.includes(word.lesson));
     const lessonNumbers = [...new Set(words.map(word => word.lesson))].sort((a, b) => a - b);
-    const lesson = lessonNumbers.includes(Number(selectedLesson)) ? Number(selectedLesson) : lessonNumbers[0];
+    const firstWord = tutorialStep() === 6 ? words.find(word => word.w === game.state.progress.tutorial.firstWord) || words.find(word => game.state.progress.words[word.w]?.collected) : null;
+    const preferredLesson = selectedLesson ?? firstWord?.lesson;
+    const lesson = lessonNumbers.includes(Number(preferredLesson)) ? Number(preferredLesson) : lessonNumbers[0];
     const lessonWords = words.filter(word => word.lesson === lesson);
     const counts = { bronze: 0, silver: 0, gold: 0 };
     words.forEach(word => { const tier = tierOf(game.state.progress.words[word.w]); if (tier) counts[tier] += 1; });
-    overlay.open(`<div class="panel book-panel"><div class="collection-banner book-banner"><div><p class="panel-kicker">字灵图鉴 · The collection</p><h1>Spirit Book</h1><p>Each skill circle fills after one correct answer without help. Three filled skills make Silver; all five make Gold.</p></div><img src="assets/images/ui/spirit-book.webp" alt="" width="210" height="140"><button class="secondary" data-close-overlay>Close</button></div><div class="book-summary"><b>${counts.bronze} Bronze</b><b>${counts.silver} Silver</b><b>${counts.gold} Gold</b><b>${words.length} regional spirits</b></div><nav class="lesson-tabs" role="tablist" aria-label="Spirit Book lessons">${lessonNumbers.map(number => `<button type="button" role="tab" aria-selected="${number === lesson}" data-book-lesson="${number}">Lesson ${number}<small>${words.filter(word => word.lesson === number && tierOf(game.state.progress.words[word.w])).length}/${words.filter(word => word.lesson === number).length} collected</small></button>`).join('')}</nav><section class="lesson-spirit-list" role="tabpanel" aria-label="Lesson ${lesson} Spirit cards"><h2>Lesson ${lesson}</h2><div class="spirit-grid">${lessonWords.map(word => { const progress = normalizeWordProgress(game.state.progress.words[word.w]); const tier = tierOf(progress); return `<article class="spirit-card ${tier || 'unknown'}"><b>${tier ? escapeHtml(word.w) : '？'}</b><span>${tier ? `${escapeHtml(word.p)} · ${escapeHtml(word.m)}` : 'Not collected'}</span><small aria-label="${starsOf(progress)} of 5 skills filled">${Object.keys(SKILLS).map(skill => progress.ticks[skill] >= SKILL_TICKS_REQUIRED ? '●' : '○').join(' ')}</small></article>`; }).join('')}</div></section></div>`);
+    if (tutorialStep() === 7 && !game.state.progress.tutorial.tierExplained) {
+      game.state.progress.tutorial.tierExplained = true;
+      commit();
+      overlay.tutorialDialogue([`Your Spirit Book has ${counts.bronze} Bronze, ${counts.silver} Silver, and ${counts.gold} Gold Spirits in this region.`, 'A Spirit is Bronze when you free it. Fill three different skill circles to make it Silver. Fill all five to make it Gold.'], () => spiritBook(selectedLesson));
+      return;
+    }
+    const guidedTierNote = tutorialStep() === 7 ? `<div class="button-row">${counts.silver + counts.gold ? '<button class="primary" data-tutorial-tier-done>I understand tiers</button>' : '<button class="primary" data-guided-spirit-practice>Practice an empty skill circle</button>'}</div>` : '';
+    const guidedCardNote = firstWord ? `<aside class="battle-skill-tip">Tap the glowing ${escapeHtml(firstWord.w)} card to see its skill circles.</aside>` : '';
+    const spiritCards = lessonWords.map(word => {
+      const progress = normalizeWordProgress(game.state.progress.words[word.w]);
+      const tier = tierOf(progress);
+      const spotlight = firstWord?.w === word.w;
+      const tag = spotlight ? 'button' : 'article';
+      return `<${tag} class="spirit-card ${tier || 'unknown'} ${spotlight ? 'tutorial-spirit-card' : ''}" ${spotlight ? `type="button" data-tutorial-word="${escapeHtml(word.w)}"` : ''}><b>${tier ? escapeHtml(word.w) : '？'}</b><span>${tier ? `${escapeHtml(word.p)} · ${escapeHtml(word.m)}` : 'Not collected'}</span><small aria-label="${starsOf(progress)} of 5 skills filled">${Object.keys(SKILLS).map(skill => progress.ticks[skill] >= SKILL_TICKS_REQUIRED ? '●' : '○').join(' ')}</small></${tag}>`;
+    }).join('');
+    overlay.open(`<div class="panel book-panel"><div class="collection-banner book-banner"><div><p class="panel-kicker">字灵图鉴 · The collection</p><h1>Spirit Book</h1><p>Each skill circle fills after one correct answer without help. Three filled skills make Silver; all five make Gold.</p></div><img src="assets/images/ui/spirit-book.webp" alt="" width="210" height="140"><button class="secondary" data-close-overlay>Close</button></div><div class="book-summary"><b>${counts.bronze} Bronze</b><b>${counts.silver} Silver</b><b>${counts.gold} Gold</b><b>${words.length} regional spirits</b></div>${guidedTierNote}${guidedCardNote}<nav class="lesson-tabs" role="tablist" aria-label="Spirit Book lessons">${lessonNumbers.map(number => `<button type="button" role="tab" aria-selected="${number === lesson}" data-book-lesson="${number}">Lesson ${number}<small>${words.filter(word => word.lesson === number && tierOf(game.state.progress.words[word.w])).length}/${words.filter(word => word.lesson === number).length} collected</small></button>`).join('')}</nav><section class="lesson-spirit-list" role="tabpanel" aria-label="Lesson ${lesson} Spirit cards"><h2>Lesson ${lesson}</h2><div class="spirit-grid">${spiritCards}</div></section></div>`);
+    document.querySelector('[data-tutorial-word]')?.addEventListener('click', () => {
+      const progress = normalizeWordProgress(game.state.progress.words[firstWord.w]);
+      const skills = Object.entries(SKILLS).map(([key, skill]) => `<li><b>${escapeHtml(skill.name)}</b> ${progress.ticks[key] >= SKILL_TICKS_REQUIRED ? '● Filled' : '○ Not filled yet'}</li>`).join('');
+      onTutorialAction('open-word-card', { word: firstWord.w });
+      overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Spirit Book · skill circles</p><h1>${escapeHtml(firstWord.w)}</h1><p>${escapeHtml(firstWord.p)} · ${escapeHtml(firstWord.m)}</p><ul class="tutorial-skill-list">${skills}</ul><button type="button" class="primary" data-close-overlay>Continue</button></div>`);
+    }, { once: true });
+    document.querySelector('[data-guided-spirit-practice]')?.addEventListener('click', guidedSpiritPractice);
+    document.querySelector('[data-tutorial-tier-done]')?.addEventListener('click', () => { onTutorialAction('tier-acknowledged'); overlay.close(); }, { once: true });
     for (const button of document.querySelectorAll('[data-book-lesson]')) button.addEventListener('click', () => spiritBook(Number(button.dataset.bookLesson)));
+  }
+
+  function guidedSpiritPractice() {
+    const game = active();
+    const word = game.levelPackage.content.words
+      .filter(candidate => tierOf(game.state.progress.words[candidate.w]) === 'bronze')
+      .sort((a, b) => starsOf(game.state.progress.words[b.w]) - starsOf(game.state.progress.words[a.w]))[0];
+    if (!word) return toast('Free a Bronze Spirit on the road first.');
+    const progress = normalizeWordProgress(game.state.progress.words[word.w]);
+    const skill = ['m', 'p', 'h', 'u'].find(key => !progress.ticks[key]);
+    if (!skill) return toast('This Spirit has no short practice left.');
+    showQuestion(overlay, makeBattleQuestion(word, skill, game.levelPackage.content.words), word, result => {
+      recordWord(word, skill, result.ok, false, false);
+      commit();
+      onTutorialAction('practice-complete');
+      spiritBook(word.lesson);
+      if (!result.ok) toast('Try another answer when you are ready.');
+    }, { title: `Jun’s ${SKILLS[skill].name} practice`, onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
   }
 
   function parentPanel() {
@@ -816,7 +909,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Testing shortcuts</h2><p>Jump directly to a built region without defeating earlier bosses, or set the hero level for battle testing.</p></div></div><div class="parent-shortcuts"><div class="parent-shortcut-row"><label class="answer-field">Jump to region<select data-parent-jump-region>${Object.values(game.levelPackage.campaigns).map(campaign => `<option value="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'selected' : ''}>${escapeHtml(campaign.region.name)}</option>`).join('')}</select></label><button class="secondary parent-shortcut-button" type="button" data-parent-jump>Jump now</button></div><div class="parent-shortcut-row"><label class="answer-field">Main-character level<input data-parent-level type="number" inputmode="numeric" min="1" max="99" value="${game.state.player.level}"></label><button class="secondary parent-shortcut-button" type="button" data-parent-level-save>Apply level</button></div></div><p class="parent-tab-intro">Changing level resets current XP to 0 and fully restores HP. Learning progress is unchanged.</p></section>
       <section class="parent-section"><div class="parent-section-heading"><div><h2>Real-world goal</h2><p>Connect in-game progress to a family reward or milestone.</p></div></div><div class="goal-editor"><label>Goal name<input data-goal-label value="${escapeHtml(goal?.label || '')}" placeholder="Ice-cream trip"></label><label>Measure<select data-goal-type><option value="gold" ${goal?.type === 'gold' ? 'selected' : ''}>Gold words</option><option value="streak" ${goal?.type === 'streak' ? 'selected' : ''}>Streak days</option><option value="region" ${goal?.type === 'region' ? 'selected' : ''}>Region cleared</option></select></label><label>Target<input data-goal-target type="number" min="1" value="${goal?.target || 20}"></label><button data-goal-save>Save goal</button></div>${goal ? `<div class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></div>` : ''}</section>
       <section class="parent-gift"><div class="parent-section-heading"><div><h2>Give a Spirit card—or several</h2><p>Select a lesson, then choose one or more cards to add at Bronze. Their five learning circles remain empty.</p></div></div>${missingRegionWords.length ? `<div class="parent-gift-toolbar"><label>Lesson<select data-gift-lesson aria-label="Lesson to gift from">${giftLessons.map(lesson => `<option value="${lesson}" ${lesson === giftLesson ? 'selected' : ''}>Lesson ${lesson}</option>`).join('')}</select></label><button class="secondary" type="button" data-gift-select-all>Select all</button></div><div class="parent-gift-grid" role="group" aria-label="Lesson ${giftLesson} Spirit cards">${giftLessonWords.map(word => `<label class="gift-word-option"><input type="checkbox" data-gift-word value="${escapeHtml(word.w)}"><span><b>${escapeHtml(word.w)}</b><small>${escapeHtml(word.p)} · ${escapeHtml(word.m)}</small></span></label>`).join('')}</div><div class="parent-gift-actions"><span data-gift-count>0 selected</span><button class="primary" data-gift-spirit-save disabled>Give selected cards</button></div>` : '<p><b>Every Spirit card in this region has been collected.</b></p>'}</section>
-      <section class="parent-section parent-actions"><div class="parent-section-heading"><div><h2>Parent tools</h2><p>Temporary allowances, curriculum selection, the walkthrough, and save management.</p></div></div><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button><button class="secondary" data-switch-level>Switch curriculum</button><a class="secondary parent-walkthrough-link" href="./walkthrough/index.html?level=${encodeURIComponent(game.levelPackage.id)}" target="_blank" rel="noopener">Open walkthrough</a><button class="secondary" data-export-save>Export save</button><label class="secondary save-import-picker">Import save<input data-import-save type="file" accept=".json,application/json" aria-label="Choose a ${escapeHtml(game.levelPackage.label)} save file to import"></label></div></section>
+      <section class="parent-section parent-actions"><div class="parent-section-heading"><div><h2>Parent tools</h2><p>Temporary allowances, curriculum selection, the walkthrough, and save management.</p></div></div><div class="button-row"><button class="secondary" data-energy-add>Add 5 battles today</button>${game.state.progress.tutorial?.step < 16 ? '<button class="secondary" data-tutorial-parent-skip>Skip child tutorial</button>' : ''}<button class="secondary" data-switch-level>Switch curriculum</button><a class="secondary parent-walkthrough-link" href="./walkthrough/index.html?level=${encodeURIComponent(game.levelPackage.id)}" target="_blank" rel="noopener">Open walkthrough</a><button class="secondary" data-export-save>Export save</button><label class="secondary save-import-picker">Import save<input data-import-save type="file" accept=".json,application/json" aria-label="Choose a ${escapeHtml(game.levelPackage.label)} save file to import"></label></div></section>
       <details class="pin-settings"><summary>Change parent PIN</summary><div class="pin-editor"><label class="answer-field">New 4–8 digit PIN<input data-new-pin type="password" inputmode="numeric" maxlength="8"></label><button class="primary" data-change-pin>Change PIN</button></div></details>`;
     const summaryHtml = `<div class="summary-toolbar"><p class="parent-tab-intro">Review learning progress, patterns, and work that may need attention.</p><button class="secondary" data-weekly>View weekly summary</button></div>
       <div class="status-grid parent-status-grid"><div>Curriculum<b>${escapeHtml(game.levelPackage.label)}</b></div><div>Player level<b>${game.state.player.level}</b></div><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Bronze / Silver / Gold<b>${bronze} / ${silver} / ${gold}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div><div>Unlocked regions<b>${game.state.settings.unlockedRegions}</b></div></div>
@@ -832,6 +925,17 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       document.querySelector('[data-weekly]').addEventListener('click', showWeeklySummary);
       return;
     }
+    document.querySelector('[data-tutorial-parent-skip]')?.addEventListener('click', event => {
+      const button = event.currentTarget;
+      if (button.dataset.confirm !== 'true') {
+        button.dataset.confirm = 'true';
+        button.textContent = 'Confirm skip tutorial';
+        showParentChange('This permanently ends the child tutorial on this save. No tutorial rewards are granted.', 'error');
+        return;
+      }
+      onSkipTutorial();
+      showParentDashboard('settings', null, { keepPosition: true, message: 'Child tutorial skipped for this save.' });
+    });
     document.querySelector('[data-daily-cap]').addEventListener('change', event => { game.state.settings.dailyBattles = Number(event.target.value); commit(); showParentChange(`Daily battle limit: ${game.state.settings.dailyBattles || 'no limit'}.`); });
     document.querySelector('[data-gate-dictation-count]').addEventListener('input', event => {
       const passInput = document.querySelector('[data-gate-dictation-pass]');
@@ -939,5 +1043,5 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     return false;
   }
 
-  return { handleInteraction, startBattle, tutorialBattle, rivalDuel, school, dictationPractice: () => dictationPicker(true), readingHall, inn, shop, spiritBook, parentPanel, battlesLeft: () => battlesLeft(active().state.progress.energy, localDay(), active().state.settings.dailyBattles) };
+  return { handleInteraction, startBattle, tutorialBattle, rivalDuel, school, dictationPractice: () => dictationPicker(true), guidedSpiritPractice, readingHall, inn, shop, spiritBook, parentPanel, battlesLeft: () => battlesLeft(active().state.progress.energy, localDay(), active().state.settings.dailyBattles), battleInProgress: () => battleActive };
 }

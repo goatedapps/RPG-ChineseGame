@@ -30,6 +30,21 @@ const SPECIAL_ITEM_NAMES = Object.freeze({
   'material-pouch': 'Material Pouch'
 });
 
+const RESTORATION_ICON_INDEX = Object.freeze(Object.fromEntries([
+  'campfire', 'kitchen', 'healthy-eyes', 'kind-words', 'team-spirit', 'forest-shapes', 'finding-the-way',
+  'safe-journey', 'open-pantry', 'clear-evidence', 'honest-breakfast', 'harbour-breakfast', 'helping-hands', 'weather-watch',
+  'whale-rescue', 'future-clock', 'shore-and-sea', 'garden-friends', 'play-together', 'birthday-stage', 'mulan-stage',
+  'important-things', 'kind-applause', 'pet-island-friends', 'rainbow-team', 'festival-harvest', 'martial-foundations', 'settle-the-misunderstanding',
+  'national-night', 'story-roots', 'grove-night-market', 'quiet-and-lively', 'oracle-record', 'patient-team', 'ancient-tree',
+  'summit-city-stories', 'summit-water-care', 'summit-open-air', 'summit-living-museum', 'summit-treehouse', 'summit-kindness'
+].map((id, index) => [id, index])));
+
+function restorationArt(id, label, extraClass = '') {
+  const index = RESTORATION_ICON_INDEX[id];
+  if (!Number.isInteger(index)) return '<span aria-hidden="true">✦</span>';
+  return `<span class="restoration-art ${extraClass}" role="img" aria-label="${escapeHtml(label)}" style="--icon-column:${index % 7};--icon-row:${Math.floor(index / 7)}"></span>`;
+}
+
 function itemName(id) {
   return SPECIAL_ITEM_NAMES[id] || id.split('-').map(part => `${part[0]?.toUpperCase() || ''}${part.slice(1)}`).join(' ');
 }
@@ -54,7 +69,7 @@ function battleItemDescription(item) {
   return item.effect;
 }
 
-export function createCollection({ overlay, getActive, persist, render, toast, audio }) {
+export function createCollection({ overlay, getActive, persist, render, toast, audio, onTutorialAction = () => {}, tutorialStep = () => null }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
 
@@ -120,6 +135,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
   function crafting() {
     const game = active();
     overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Materials: ${Object.entries(game.state.progress.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(' · ') || 'None yet'}</p><p class="craft-message" data-craft-message role="alert" tabindex="-1" hidden></p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => `<article><b>${escapeHtml(recipe.name)}</b><span>${recipe.coins} coins · ${Object.entries(recipe.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(', ')}</span><button data-craft="${recipe.id}">Craft</button></article>`).join('')}</div></div>`);
+    onTutorialAction('open-craft');
     for (const button of document.querySelectorAll('[data-craft]')) button.addEventListener('click', () => {
       const recipe = game.levelPackage.recipes.find(item => item.id === button.dataset.craft);
       const result = craft(recipe, game.state.player, game.state.progress.materials, game.state.progress.equipment);
@@ -175,13 +191,27 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     const game = active();
     const eligible = eligiblePartners(game.levelPackage.content.words, game.state.progress.words);
     const eligibleIds = eligible.map(word => word.id);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Party of three</p><h1>Partner Spirits</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Silver partners give +1 max HP. Gold partners give +2 max HP and later unlock their lesson skill.</p>${eligible.length ? `<div class="spirit-grid">${eligible.map(word => `<label class="spirit-card ${tierOf(game.state.progress.words[word.w])}"><input type="checkbox" data-partner="${word.id}" ${game.state.progress.partners.includes(word.id) ? 'checked' : ''}> <b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.m)}</span></label>`).join('')}</div><div class="button-row"><button class="primary" data-save-partners>Save partners</button></div>` : '<p>No spirits are Silver yet. Complete three skill stars to make one eligible.</p>'}</div>`);
+    overlay.open(`<div class="panel partner-panel"><div class="panel-header"><div><p class="panel-kicker">Travelling party</p><h1>Choose Partner Spirits</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Choose up to three Silver or Gold Spirits. All selected partners follow you on the map; the first Gold partner leads your once-per-battle move.</p>${eligible.length ? `<p class="partner-count" data-partner-count>${game.state.progress.partners.length}/3 travelling</p><div class="spirit-grid">${eligible.map(word => `<label class="spirit-card partner-choice ${tierOf(game.state.progress.words[word.w])}"><input type="checkbox" data-partner="${word.id}" ${game.state.progress.partners.includes(word.id) ? 'checked' : ''}> <b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.m)}</span></label>`).join('')}</div><div class="button-row"><button class="primary" data-save-partners>Travel with selected spirits</button></div>` : '<p>No spirits are Silver yet. Complete three skill stars to make one eligible.</p>'}</div>`);
+    for (const input of document.querySelectorAll('[data-partner]')) input.addEventListener('change', () => {
+      const selected = [...document.querySelectorAll('[data-partner]:checked')];
+      if (selected.length > 3) {
+        input.checked = false;
+        toast('Your travelling party can have up to three Partner Spirits.');
+      }
+      const count = document.querySelector('[data-partner-count]');
+      if (count) count.textContent = `${document.querySelectorAll('[data-partner]:checked').length}/3 travelling`;
+      onTutorialAction('partner-selection');
+    });
     document.querySelector('[data-save-partners]')?.addEventListener('click', () => {
+      const guidedChoice = tutorialStep() === 8;
       const selected = [...document.querySelectorAll('[data-partner]:checked')].map(input => input.dataset.partner);
       game.state.progress.partners = setPartners(game.state.progress.partners, selected, eligibleIds);
       refreshMaxHp();
       commit();
-      partners();
+      toast(`${game.state.progress.partners.length || 'No'} Partner Spirit${game.state.progress.partners.length === 1 ? '' : 's'} travelling with you.`);
+      onTutorialAction('partners-saved');
+      if (guidedChoice && game.state.progress.partners.length) overlay.close();
+      else room();
     });
   }
 
@@ -189,17 +219,33 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     const game = active();
     const completed = game.state.progress.sets;
     const states = game.levelPackage.sets.map(set => ({ set, ...setProgress(set, game.state.progress.words, game.levelPackage.content.words), completed: Boolean(completed[set.id]) })).filter(state => state.words.length >= 3);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)}</p><h1>Restoration Board</h1></div><button class="secondary" data-close-overlay>Close</button></div><aside class="board-explainer"><b>Repair the region with mastered words</b><span>Raise every Spirit card in a themed set to Silver or Gold, then offer the completed set to restore part of ${escapeHtml(game.levelPackage.region.name)} and earn a room decoration. Your Spirit cards are never consumed.</span></aside><div class="set-grid">${states.map(state => `<article class="set-card ${state.completed ? 'complete' : ''}"><h2>${escapeHtml(state.set.name)}</h2><p>${state.words.map(word => `${['silver','gold'].includes(tierOf(game.state.progress.words[word])) ? '✓' : '○'} ${escapeHtml(word)}`).join(' · ')}</p><small>${escapeHtml(state.set.restoration)}</small><button data-offer="${state.set.id}" ${state.ready && !state.completed ? '' : 'disabled'}>${state.completed ? 'Restored' : state.ready ? 'Restore region' : 'Keep learning'}</button></article>`).join('') || '<p>No Restoration Sets are available for this curriculum yet.</p>'}</div></div>`);
+    const first = states[0];
+    const firstReady = first?.words.filter(word => ['silver', 'gold'].includes(tierOf(game.state.progress.words[word]))).length || 0;
+    if (tutorialStep() === 9 && first && !game.state.progress.tutorial.boardExplained) {
+      game.state.progress.tutorial.boardExplained = true;
+      commit();
+      onTutorialAction('open-board');
+      overlay.tutorialDialogue([`This first set is ${first.set.name}. You have ${firstReady} of the ${first.words.length} Silver Spirits it needs.`, firstReady === first.words.length ? 'It is ready to restore now. That will earn a decoration for your room.' : 'Grow the remaining Spirits to Silver to earn a decoration for your room. You can finish the set later.'], () => restorationBoard());
+      return;
+    }
+    const junNote = tutorialStep() === 9 && first ? '<div class="button-row tutorial-board-note"><button type="button" class="primary" data-tutorial-board-done>I see what this set needs</button></div>' : '';
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)}</p><h1>Restoration Board</h1></div><button class="secondary" data-close-overlay>Close</button></div><aside class="board-explainer"><b>Repair the region with mastered words</b><span>Raise every Spirit card in a themed set to Silver or Gold, then offer the completed set to restore part of ${escapeHtml(game.levelPackage.region.name)} and earn a room decoration. Your Spirit cards are never consumed.</span></aside>${junNote}<div class="set-grid">${states.map(state => `<article class="set-card ${state.completed ? 'complete' : ''}"><h2>${escapeHtml(state.set.name)}</h2><p>${state.words.map(word => `${['silver','gold'].includes(tierOf(game.state.progress.words[word])) ? '✓' : '○'} ${escapeHtml(word)}`).join(' · ')}</p><small>${escapeHtml(state.set.restoration)}</small><button data-offer="${state.set.id}" ${state.ready && !state.completed ? '' : 'disabled'}>${state.completed ? 'Restored' : state.ready ? 'Restore region' : 'Keep learning'}</button></article>`).join('') || '<p>No Restoration Sets are available for this curriculum yet.</p>'}</div></div>`);
+    onTutorialAction('open-board');
+    document.querySelector('[data-tutorial-board-done]')?.addEventListener('click', () => {
+      onTutorialAction('board-acknowledged');
+      overlay.close();
+    }, { once: true });
     for (const button of document.querySelectorAll('[data-offer]:not([disabled])')) button.addEventListener('click', () => {
       const state = states.find(item => item.set.id === button.dataset.offer);
       const result = offerSet(state.set, state);
       if (!result.completed) return;
       game.state.progress.sets[state.set.id] = true;
-      game.state.progress.room.decorations.push(state.set.id);
+      addUnique(game.state.progress.room.decorations, state.set.id);
       if (states.every(item => item.set.id === state.set.id || item.completed)) addUnique(game.state.progress.room.trophies, `${game.levelPackage.region.name} Trophy`);
       commit();
-      toast(result.restoration);
-      restorationBoard();
+      audio?.sfx('majorReward');
+      overlay.open(`<div class="panel restoration-reveal"><div class="restoration-radiance" aria-hidden="true"></div>${restorationArt(state.set.id, `${state.set.name} decoration`, 'restoration-reward-art')}<p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><h1>${escapeHtml(state.set.name)} lives again!</h1><p>${escapeHtml(result.restoration)}</p><p class="restoration-room-note">A keepsake has appeared in My Room.</p><button class="primary" data-restoration-continue>Place it in my room</button></div>`, { dismissible: false });
+      document.querySelector('[data-restoration-continue]').addEventListener('click', room, { once: true });
     });
   }
 
@@ -223,10 +269,11 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       <div class="panel-header room-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>My Room</h1><p>A place for your partners and the things you have restored.</p></div><button class="secondary" data-close-overlay>Leave room</button></div>
       <div class="room-scene" role="img" aria-label="Warm bedroom with trophy shelf, village window, desk and bed">
         <div class="room-shelf-count"><b>${trophies.length}</b><span>keepsakes earned</span></div>
+        <div class="room-restoration-display" aria-label="Restoration keepsakes displayed in the room">${decorations.slice(-4).map(id => restorationArt(id, `${itemName(id)} decoration`)).join('')}</div>
         <div class="room-companion-nook"><b>Partner Spirits</b><div>${partners.length ? partners.map(word => `<span class="room-spirit" title="${escapeHtml(word.m)}">${escapeHtml(word.w)}</span>`).join('') : '<span class="room-companion-empty">Your chosen spirits will appear here.</span>'}</div></div>
       </div>
       <div class="room-progress"><section class="room-streak"><span>Lantern Streak</span><b>${game.state.progress.streak?.count || 0} days</b></section>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div role="progressbar" aria-label="Real-world goal progress" aria-valuemin="0" aria-valuemax="${goal.target}" aria-valuenow="${goal.value}"><i style="width:${goal.percent}%"></i></div></section>` : '<section class="room-goal room-goal-empty"><b>Real-world goal</b><span>A parent can add a goal in Parent Mode.</span></section>'}</div>
-      <section class="room-keepsakes"><div class="room-section-heading"><h2>What you have earned</h2><span>${trophies.length} trophies · ${decorations.length} decorations</span></div>${trophies.length || decorations.length ? `<div class="room-keepsake-grid">${trophies.map(name => `<div class="room-keepsake">${trophyArt(name)}<b>${escapeHtml(name)}</b></div>`).join('')}${decorations.map(id => `<div class="room-keepsake room-decoration"><span aria-hidden="true">✿</span><b>${escapeHtml(itemName(id))}</b></div>`).join('')}</div>` : '<p class="room-empty">Your shelf will fill as you restore regions and complete Spirit sets.</p>'}</section>
+      <section class="room-keepsakes"><div class="room-section-heading"><h2>What you have earned</h2><span>${trophies.length} trophies · ${decorations.length} decorations</span></div>${trophies.length || decorations.length ? `<div class="room-keepsake-grid">${trophies.map(name => `<div class="room-keepsake">${trophyArt(name)}<b>${escapeHtml(name)}</b></div>`).join('')}${decorations.map(id => `<div class="room-keepsake room-decoration">${restorationArt(id, `${itemName(id)} decoration`)}<b>${escapeHtml(itemName(id))}</b></div>`).join('')}</div>` : '<p class="room-empty">Your shelf will fill as you restore regions and complete Spirit sets.</p>'}</section>
       <div class="room-action-grid"><button type="button" class="room-action" data-room-partners><b>Choose Partner Spirits</b><span>Pick up to three Silver or Gold Spirits to travel with you.</span></button>${hasSets ? `<button type="button" class="room-action" data-board-open><b>View Restoration Board</b><span>Offer complete Spirit sets to repair ${escapeHtml(game.levelPackage.region.name)}.</span></button>` : ''}</div>
       <div class="room-explainers"><details><summary>What are Partner Spirits?</summary><p>Silver partners increase your maximum HP. Gold partners increase it further and may unlock a battle move.</p></details>${hasSets ? `<details><summary>What is the Restoration Board?</summary><p>Raise every Spirit card in a themed set to Silver or Gold, then restore part of ${escapeHtml(game.levelPackage.region.name)}. Your cards are never used up.</p></details>` : ''}</div>
     </div>`);

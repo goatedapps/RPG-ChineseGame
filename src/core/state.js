@@ -2,7 +2,7 @@ import { gateDictationRules } from '../systems/dictation.js';
 import { isWalkable } from '../world/map.js';
 import { ROUTE_MAP_VERSION, scaleRouteCell } from '../world/routeMaps.js';
 
-export const SAVE_SCHEMA_VERSION = 11;
+export const SAVE_SCHEMA_VERSION = 12;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -55,8 +55,9 @@ export function createFreshState(levelPackage) {
         counters: { creatures: {}, writing: {}, tingxieLesson3: 0 }, storiesRead: []
       },
       reading: { completed: [], active: null, index: 0, questionCount: 0, results: {}, written: [] },
-      accuracy: {}
-      ,regions: {}, routes: {}
+      accuracy: {},
+      tutorial: { step: 1, villagers: [], firstWord: null, bookSeen: false, breakSeen: false, heroSeen: false, repellentBought: false, baitBought: false, allowanceGiven: false, skipped: false },
+      regions: {}, routes: {}
     },
     settings: {
       dailyBattles: 30,
@@ -202,8 +203,11 @@ export function migrateState(candidate, levelPackage) {
           storiesRead: Array.isArray(candidate.progress?.story?.storiesRead) ? candidate.progress.story.storiesRead : []
         },
         reading: migrateReading(candidate.progress?.reading, fresh.progress.reading),
-        accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) }
-        ,regions: { ...(candidate.progress?.regions || {}) },
+        accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) },
+        tutorial: Number(candidate.schemaVersion) >= 12
+          ? { ...fresh.progress.tutorial, ...(candidate.progress?.tutorial || {}), villagers: Array.isArray(candidate.progress?.tutorial?.villagers) ? candidate.progress.tutorial.villagers : [] }
+          : { ...fresh.progress.tutorial, step: 16 },
+        regions: { ...(candidate.progress?.regions || {}) },
         routes: normalizeRoutes(candidate.progress?.routes, levelPackage, Number(candidate.schemaVersion) < SAVE_SCHEMA_VERSION)
       },
       settings: { ...fresh.settings, ...(candidate.settings || {}), ...migrateGateDictationSettings(candidate.settings) },
@@ -243,6 +247,7 @@ export function migrateState(candidate, levelPackage) {
         keyItems: candidate.keyItems || []
       },
       reading: { ...migrateReading(candidate.reading, fresh.progress.reading), written: candidate.written || [] },
+      tutorial: { ...fresh.progress.tutorial, step: 16 },
       legacySnapshot: {
         boss: Boolean(candidate.boss),
         keyItems: candidate.keyItems || [],

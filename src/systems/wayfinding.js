@@ -1,7 +1,7 @@
 import { gateStatus } from './story.js';
 import { regionPathGuide } from './regionGuide.js';
 import { routeKey } from './regions.js';
-import { tidewaterClue, tidewaterCluesComplete } from './tidewaterRescue.js';
+import { tidewaterClue, tidewaterCluesComplete } from './tidewaterRescue.js?p1';
 
 const objectTarget = (map, id) => {
   const object = map.objects.find(candidate => candidate.id === id);
@@ -61,7 +61,7 @@ export function nextStep(levelPackage, state) {
       const pending = Object.keys(rescue.clues).filter(id => !story.flags.tideClues?.[id]);
       const ready = pending.find(id => {
         const clue = tidewaterClue(levelPackage, id);
-        return levelPackage.content.words.filter(word => word.lesson === clue.lesson && (state.progress.words[word.w]?.collected || state.progress.words[word.w]?.c)).length >= rescue.wordsPerTest;
+        return levelPackage.content.words.filter(word => word.lesson === clue.lesson && (state.progress.words[word.w]?.collected || state.progress.words[word.w]?.c)).length >= clue.requiredCollected;
       });
       const id = ready || pending[0];
       const clue = tidewaterClue(levelPackage, id);
@@ -70,8 +70,8 @@ export function nextStep(levelPackage, state) {
         ? { text: `Return to Tidewater Bay for ${clue.person}'s three-word dictation and the ${clue.name.toLowerCase()} clue.`, target: returnTarget }
         : { text: `Talk to ${clue.person} and pass a three-word dictation for the ${clue.name.toLowerCase()} clue.`, target: objectTarget(map, id) };
       return map.route
-        ? { text: `Battle in ${zone?.name || route.name} (Lesson ${clue.lesson}) to collect three words for ${clue.person}'s dictation.`, target: walkableZoneTarget(map, zone), lesson: clue.lesson }
-        : { text: `Explore ${zone?.name || route.name} (Lesson ${clue.lesson}) to collect three words for ${clue.person}.`, target: townExit, lesson: clue.lesson };
+        ? { text: `Battle in ${zone?.name || route.name} (Lesson ${clue.lesson}) until you have ${clue.requiredCollected} spirits for ${clue.person}'s dictation.`, target: walkableZoneTarget(map, zone), lesson: clue.lesson }
+        : { text: `Explore ${zone?.name || route.name} (Lesson ${clue.lesson}) until you have ${clue.requiredCollected} spirits for ${clue.person}.`, target: townExit, lesson: clue.lesson };
     }
     if (!story.flags.tideEvidenceCompared) {
       const hasChronometer = (state.progress.inventory.keyItems || []).includes(levelPackage.regionStory.readingKeyItem);

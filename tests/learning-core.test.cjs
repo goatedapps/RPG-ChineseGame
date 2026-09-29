@@ -98,6 +98,19 @@ test('all four generated MCQ skills produce a valid answer for each playable cur
   }
 });
 
+test('battle meaning and Hanzi distractors are sampled instead of reusing the first three words', async () => {
+  const { makeQuestion } = await import('../src/learning/questions.js');
+  const content = readJson('content/generated/p5.content.json');
+  const word = content.words[10];
+  for (const skill of ['m', 'h']) {
+    const first = makeQuestion(word, skill, content.words, { random: () => 0 });
+    const last = makeQuestion(word, skill, content.words, { random: () => 0.999999 });
+    assert.notDeepEqual(new Set(first.options), new Set(last.options), `${skill} should sample different distractors`);
+    assert.ok(first.options.includes(first.correct));
+    assert.ok(last.options.includes(last.correct));
+  }
+});
+
 test('exam adapters exclude disabled kinds, Higher Chinese, and malformed options', async () => {
   const { filterSupportedQuestions } = await import('../src/learning/examAdapters.js');
   const content = {

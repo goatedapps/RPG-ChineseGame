@@ -6,6 +6,7 @@ The deployed app opens from the repository root `index.html`.
 Each playable curriculum in the level registry shares Regions 1–7 and keeps a separate save.
 P0–P17 engineering and the earlier physical child-and-parent tablet pilot are complete.
 P18 release polish is in progress; browser smoke checks and local Lighthouse accessibility passed, while older-iPad verification remains outstanding.
+Fresh saves have a two-part Apprentice Jun tutorial after Grandma Wang: five village steps summon his typed, closable guide dialogue, then six first-day actions and a level-3 return; existing saves are not retroactively enrolled.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
 
 Production URLs:
@@ -32,6 +33,8 @@ Production URLs:
 
 - Keep one shared engine, world and campaign with separate curriculum packs and saves.
 - Keep the illustrated, typewriter-paced startup prologue skippable as a permanent feature.
+- Keep the child tutorial one-time and action-gated, with a confirmed Parent Mode skip; preserve its exact step across saves.
+- Keep Jun's teaching in short green conversations with visible arrow handoffs and a completion comment before each new action.
 - Keep English for interface and campaign dialogue; present Storyteller chapters from the original Chinese curriculum stories without English translation.
 - Keep Meaning, Pinyin, Hanzi, Usage and Writing as the five vocabulary skills.
 - Keep the four-miss handwriting help threshold; one correct unassisted answer fills a skill circle.

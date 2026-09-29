@@ -8,6 +8,11 @@ Primary 2 and Primary 5 use the same engine, world, cast and campaign with separ
 The intended session is 30–60 minutes, but the game has no mandatory timer.
 The game opens with an illustrated, musical, typewriter-paced prologue that introduces the Dictionary Tree, Word Spirits, the Spirit Brush and the Great Forgetter.
 The prologue has a permanent, unobtrusive Skip intro link.
+After Grandma Wang hands over the Spirit Brush, five village steps summon Apprentice Jun's required, one-time guided start; only a parent can skip it through Parent Mode.
+Jun uses short, typed green conversations followed by blinking-arrow handoffs to the Next step box, map and activity controls.
+Six action-gated missions introduce the Shop, villagers, School, battle supplies and Spirit Book, with a brief completion comment at each transition, then Jun releases the child to explore until level 3.
+At level 3 Jun returns for mastery tiers, partners, restoration, the child-facing Atlas panels, dictation, crafting, and a Repellent-and-Bait Shop visit.
+Tutorial progress resumes at the exact incomplete action; pre-existing saves retain their current progression without being enrolled.
 
 The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
 P0–P17 engineering and the earlier physical tablet pilot are complete.
@@ -100,7 +105,7 @@ Wild encounters on the roads are random, use a staged transition and play scene 
 Each onward gate plays its illustrated opening once, tracked independently in the save.
 The gate transition slows its opening, then fades in the new village without an explanatory title.
 
-The Region 1 story begins automatically with Grandma Wang's welcome and includes the tutorial battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
+The Region 1 story begins automatically with Grandma Wang's welcome and includes Jun's guided first field battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
 School dictation now offers a regional lesson and 5, 10 or all words; menu dictation offers every curriculum lesson as score-only practice.
 Wrong or skipped villager passage answers show the passage, question and correct answer for review, but only a correct attempt clears the villager's question mark.
 Storyteller chapters use a two-page illustrated book with page dictation controls.

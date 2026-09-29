@@ -30,7 +30,8 @@ test('dialogue types each line and the first Next press reveals it without skipp
 test('the opening story and onward gate identify the brush handle and Muddle King', () => {
   const story = JSON.parse(fs.readFileSync(path.join(root, 'content/authored/campaign/r1-story.json'), 'utf8'));
   const arrival = story.scenes.arrival.map(command => command.say || '').join(' ');
-  assert.match(arrival, /handle of the Spirit Brush/);
+  assert.match(arrival, /Take this Spirit Brush handle, and use it to bring the Word Spirits home/);
+  assert.doesNotMatch(arrival, /Fogling bursts/);
   assert.doesNotMatch(arrival, /attic|upstairs/i);
   assert.equal(story.bossName, 'Muddle King');
   const adventure = fs.readFileSync(path.join(root, 'src/adventure.js'), 'utf8');

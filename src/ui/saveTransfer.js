@@ -12,11 +12,12 @@ export async function readSaveFile(file, FileReaderClass = globalThis.FileReader
   });
 }
 
-export function downloadSaveFile(state, day, exportSaveEnvelope, documentObject = document, urlApi = URL) {
+export function downloadSaveFile(state, day, exportSaveEnvelope, documentObject = document, urlApi = URL, playerName = '') {
   const blob = new Blob([JSON.stringify(exportSaveEnvelope(state), null, 2)], { type: 'application/json' });
   const link = documentObject.createElement('a');
   link.href = urlApi.createObjectURL(blob);
-  link.download = `word-spirit-quest-${state.level}-${day}.json`;
+  const safeName = playerName.trim().replace(/[^\p{L}\p{N}-]+/gu, '-').replace(/^-|-$/g, '').slice(0, 32);
+  link.download = `word-spirit-quest-${safeName ? `${safeName}-` : ''}${state.level}-${day}.json`;
   documentObject.body.append(link);
   link.click();
   setTimeout(() => { link.remove(); urlApi.revokeObjectURL(link.href); }, 30000);

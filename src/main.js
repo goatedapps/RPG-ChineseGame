@@ -1,5 +1,5 @@
 import { createEventBus } from './core/events.js';
-import { exportSaveEnvelope, loadLevelState, loadProfile, recoveryKey, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p10h';
+import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p11';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p22';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p27';
@@ -9,7 +9,7 @@ import { createOverlay } from './ui/overlay.js?p10k';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p50';
+import { createGameplay } from './gameplay.js?p51';
 import { createCollection } from './collection.js?p24';
 import { createAdventure } from './adventure.js?p34';
 import { createAudioManager } from './core/audio.js?p25';
@@ -51,6 +51,7 @@ const hud = {
 
 let levels = [];
 let active = null;
+let selectedPlayer = null;
 let unbindInput = null;
 let autosave = null;
 let wanderTimer = null;
@@ -100,7 +101,7 @@ function persist({ rewardSound = true } = {}) {
     const rewardState = { level: player.level, xp: player.xp, coins: player.coins };
     if (rewardSound && lastRewardState && (rewardState.coins > lastRewardState.coins || rewardState.level > lastRewardState.level || (rewardState.level === lastRewardState.level && rewardState.xp > lastRewardState.xp))) audio.sfx('earn');
     lastRewardState = rewardState;
-    active.state = saveLevelState(storage, active.state);
+    active.state = saveLevelState(storage, active.state, active.playerId);
     updateHud(hud, active.levelPackage, active.state);
   } catch (error) {
     active.saveBlocked = true;
@@ -115,7 +116,7 @@ function importCurrentLevelSave(state) {
   if (!active || state.level !== active.levelPackage.id) throw new Error('This save belongs to a different curriculum. Switch curriculum first.');
   const matchingMap = Object.values(active.levelPackage.campaigns).some(campaign => campaign.map.id === state.player.map || campaign.route?.id === state.player.map);
   if (!matchingMap) throw new Error('This save refers to a map that is not in this version of the game.');
-  saveLevelState(storage, state);
+  saveLevelState(storage, state, active.playerId);
   window.location.reload();
 }
 
@@ -222,7 +223,7 @@ function showWelcome(loadResult) {
     if (!active.state.progress.story.flags.arrival) adventure?.storyJournal();
   }, { once: true });
   $('[data-download-recovery]')?.addEventListener('click', () => {
-    const payload = storage.getItem(recoveryKey(active.levelPackage.id)) || '';
+    const payload = storage.getItem(recoveryKey(active.levelPackage.id, active.playerId)) || '';
     const link = document.createElement('a');
     link.href = URL.createObjectURL(new Blob([payload], { type: 'text/plain' }));
     link.download = `word-spirit-quest-${active.levelPackage.id}-damaged-save.txt`;
@@ -236,7 +237,7 @@ function showWelcome(loadResult) {
       toast('Download the damaged save first if you want to keep it for support.');
       return;
     }
-    active.state = startFreshLevelState(storage, active.levelPackage);
+    active.state = startFreshLevelState(storage, active.levelPackage, active.playerId);
     active.saveBlocked = false;
     active.state.session.seenWelcome = true;
     persist();
@@ -246,6 +247,8 @@ function showWelcome(loadResult) {
 }
 
 async function startLevel(levelId) {
+  if (!selectedPlayer) return showPlayerPicker();
+  if (active) persist();
   overlay.open('<div class="panel"><h2>Opening the shared world…</h2><p>Loading curriculum, map and save data.</p></div>', { dismissible: false });
   try {
     let levelPackage = await loadLevelPackage(levelId);
@@ -255,7 +258,7 @@ async function startLevel(levelId) {
         if (mapErrors.length) throw new Error(`${map.name}: ${mapErrors.join(' ')}`);
       }
     }
-    const loadResult = loadLevelState(storage, levelPackage);
+    const loadResult = loadLevelState(storage, levelPackage, selectedPlayer.id);
     if (loadResult.state.progress.flags.worldRestored || loadResult.state.progress.regions?.r7?.story?.flags?.dictionaryHeart || (loadResult.state.player.map === levelPackage.campaigns.r7.map.id && loadResult.state.progress.story?.flags?.dictionaryHeart)) {
       loadResult.state.progress.flags.worldRestored = true;
       activateVillagePortals(levelPackage.campaigns);
@@ -273,8 +276,11 @@ async function startLevel(levelId) {
       loadResult.state.player.y = levelPackage.map.spawn.y;
       loadResult.warning = [loadResult.warning, 'The saved position was moved to the village entrance.'].filter(Boolean).join(' ');
     }
-    saveProfile(storage, levelId);
+    saveProfile(storage, levelId, selectedPlayer.id);
+    active?.renderer.dispose?.();
     active = {
+      playerId: selectedPlayer.id,
+      playerName: selectedPlayer.name,
       levelPackage,
       state: loadResult.state,
       renderer: createRenderer($('#world'), levelPackage.map),
@@ -283,7 +289,7 @@ async function startLevel(levelId) {
     lastRewardState = { level: active.state.player.level, xp: active.state.player.xp, coins: active.state.player.coins };
     restoreNpcPositions(levelPackage.map, active.state.progress.npcs);
     collection = createCollection({ overlay, getActive: () => active, persist, render, toast, audio, onTutorialAction: (type, detail) => tutorial?.action(type, detail), tutorialStep: () => tutorial?.current() });
-    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: showLevelPicker, onSwitchRegion: switchRegion, onReturnToVillage: direction => changeRoute(direction || 'rest'), onBattleQuotaExhausted: showBattleQuotaNotice, onImportSave: importCurrentLevelSave, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload), onTutorialAction: (type, detail) => tutorial?.action(type, detail), onSkipTutorial: () => tutorial?.skipByParent(), tutorialStep: () => tutorial?.current() });
+    gameplay = createGameplay({ overlay, storage, getActive: () => active, persist, render, toast, audio, onSwitchLevel: () => showLevelPicker(true), onSwitchPlayer: () => showPlayerPicker(), onSwitchRegion: switchRegion, onReturnToVillage: direction => changeRoute(direction || 'rest'), onBattleQuotaExhausted: showBattleQuotaNotice, onImportSave: importCurrentLevelSave, onCollectionChanged: () => collection.applyMilestones(), onProgressEvent: (event, payload) => adventure?.recordEvent(event, payload), onTutorialAction: (type, detail) => tutorial?.action(type, detail), onSkipTutorial: () => tutorial?.skipByParent(), tutorialStep: () => tutorial?.current() });
     adventure = createAdventure({ overlay, getActive: () => active, persist, render, toast, gameplay, audio, onSwitchRegion: switchRegion, onEnterRoute: changeRoute, onGateOpening: showGateOpening, onCollectionChanged: () => collection.applyMilestones() });
     tutorial?.destroy();
     tutorial = createTutorial({ getActive: () => active, persist, render, overlay });
@@ -411,21 +417,75 @@ function levelStatus(level) {
   return 'Coming soon';
 }
 
-function showLevelPicker() {
+function restoreActivePlayerSelection() {
+  if (active) selectedPlayer = listPlayers(storage, levels.map(level => level.id)).find(player => player.id === active.playerId) || selectedPlayer;
+}
+
+function showPlayerPicker(requestedLevel = null) {
+  if (!active) $('#game-stage').setAttribute('aria-label', 'Player selection');
+  let players;
+  try { players = listPlayers(storage, levels.map(level => level.id)); }
+  catch (error) {
+    overlay.open(`<div class="panel atlas-level-picker"><h1>Player list unavailable</h1><p>${escapeHtml(error.message)}</p></div>`, { dismissible: false });
+    return;
+  }
+  const lastPlayerId = loadProfile(storage)?.playerId;
+  let renamingId = null;
+  overlay.open(`<div class="panel atlas-level-picker atlas-player-picker">
+    <h1>Who is playing?</h1>
+    <p>Choose your name to continue your adventure, or add a new player on this device.</p>
+    ${players.length ? `<div class="player-grid">${players.map(player => `<div class="player-row"><button class="player-card" type="button" data-player-id="${escapeHtml(player.id)}"><b>${escapeHtml(player.name)}</b><span>${player.id === lastPlayerId ? 'Last played · ' : ''}Continue your adventure</span></button><button class="secondary" type="button" data-rename-player="${escapeHtml(player.id)}" aria-label="Rename ${escapeHtml(player.name)}">Rename</button></div>`).join('')}</div>` : ''}
+    <form id="new-player-form" class="player-name-form"><label for="new-player-name">New player name</label><div><input id="new-player-name" name="name" type="text" maxlength="32" autocomplete="off" required placeholder="Enter a name"><button class="primary" type="submit">Add player</button></div><p class="player-error" role="alert" hidden></p></form>
+    ${active ? '<div class="button-row"><button class="secondary" data-close-overlay>Return to village</button></div>' : ''}
+  </div>`, { dismissible: Boolean(active), onClose: restoreActivePlayerSelection });
+  for (const button of document.querySelectorAll('[data-player-id]')) button.addEventListener('click', () => {
+    selectedPlayer = players.find(player => player.id === button.dataset.playerId);
+    if (requestedLevel) startLevel(requestedLevel);
+    else showLevelPicker();
+  }, { once: true });
+  for (const button of document.querySelectorAll('[data-rename-player]')) button.addEventListener('click', () => {
+    renamingId = button.dataset.renamePlayer;
+    const player = players.find(candidate => candidate.id === renamingId);
+    document.querySelector('.player-name-form label').textContent = `Rename ${player.name}`;
+    document.querySelector('.player-name-form button[type="submit"]').textContent = 'Save name';
+    $('#new-player-name').value = player.name;
+    $('#new-player-name').focus();
+  });
+  $('#new-player-form').addEventListener('submit', event => {
+    event.preventDefault();
+    try {
+      selectedPlayer = renamingId
+        ? renamePlayer(storage, renamingId, $('#new-player-name').value, levels.map(level => level.id))
+        : createPlayer(storage, $('#new-player-name').value, levels.map(level => level.id));
+      if (requestedLevel) startLevel(requestedLevel);
+      else showLevelPicker();
+    } catch (error) {
+      const message = document.querySelector('.player-error');
+      message.textContent = error.message;
+      message.hidden = false;
+    }
+  });
+}
+
+function showLevelPicker(resetToActive = false) {
+  if (resetToActive) restoreActivePlayerSelection();
+  if (!selectedPlayer) return showPlayerPicker();
   if (!active) $('#game-stage').setAttribute('aria-label', 'Curriculum selection');
   overlay.open(`<div class="panel atlas-level-picker">
+    <p class="panel-kicker">${escapeHtml(selectedPlayer.name)}'s adventure</p>
     <h1>Choose your curriculum</h1>
-    <p>Every level follows the same seven-region adventure. Learning progress is saved separately for each curriculum.</p>
+    <p>Every level follows the same seven-region adventure. Each player keeps separate progress in each curriculum.</p>
     <div class="level-grid">
       ${levels.map(level => `<button class="level-card" data-level="${level.id}" ${level.worldMappingReady ? '' : 'disabled'}>
         <i aria-hidden="true">${escapeHtml(level.badge || '学')}</i><b>${escapeHtml(level.label)}</b><span>${levelStatus(level) || 'Enter the seven-region adventure'}</span>
       </button>`).join('')}
     </div>
-    ${active ? '<div class="button-row"><button class="secondary" data-close-overlay>Return to village</button></div>' : ''}
-  </div>`, { dismissible: Boolean(active) });
+    <div class="button-row"><button class="secondary" data-change-player>Choose another player</button>${active ? '<button class="secondary" data-close-overlay>Return to village</button>' : ''}</div>
+  </div>`, { dismissible: Boolean(active), onClose: restoreActivePlayerSelection });
   for (const button of document.querySelectorAll('[data-level]:not([disabled])')) {
     button.addEventListener('click', () => startLevel(button.dataset.level), { once: true });
   }
+  $('[data-change-player]').addEventListener('click', () => showPlayerPicker(), { once: true });
 }
 
 function showBuildStatus() {
@@ -445,7 +505,7 @@ function showBuildStatus() {
     </div>
     <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-replay-intro>Replay introduction</button><button class="secondary" data-switch-level>Switch curriculum</button>${Object.values(levelPackage.campaigns).map(campaign => `<button class="secondary" data-debug-region="${campaign.region.id}" ${campaign.region.id === levelPackage.region.id ? 'disabled' : ''}>Open ${escapeHtml(campaign.region.name)}</button>`).join('')}</div>
   </div>`);
-  $('[data-switch-level]').addEventListener('click', showLevelPicker, { once: true });
+  $('[data-switch-level]').addEventListener('click', () => showLevelPicker(true), { once: true });
   $('[data-replay-intro]').addEventListener('click', () => {
     overlay.close();
     createPrologue({ root: $('#prologue'), audio, onComplete: render, skippable: true });
@@ -495,9 +555,6 @@ async function boot() {
   addEventListener('click', event => { if (event.target.closest('button')) audio.sfx('button'); });
   try {
     levels = await listLevels();
-    const requestedLevel = new URLSearchParams(location.search).get('level');
-    const profile = loadProfile(storage);
-    const level = levels.find(candidate => candidate.id === (requestedLevel || profile?.level) && candidate.worldMappingReady);
     await openingImage.decode().catch(() => {});
     if (isPhoneDevice(window)) {
       const noticeDismissed = showPhoneNotice($('#prologue'));
@@ -510,8 +567,8 @@ async function boot() {
       skippable: true,
       onComplete: async () => {
         prologueCompleted = true;
-        if (level) await startLevel(level.id);
-        else showLevelPicker();
+        const requestedLevel = new URLSearchParams(location.search).get('level');
+        showPlayerPicker(levels.some(level => level.id === requestedLevel && level.worldMappingReady) ? requestedLevel : null);
       }
     });
     requestAnimationFrame(() => $('#boot-loading')?.remove());

@@ -24,6 +24,6 @@ test('import uses a native picker, confirms replacement, and reloads the saved m
   assert.doesNotMatch(gameplay, /data-import-trigger/);
   assert.match(gameplay, /data-import-confirm/);
   assert.match(main, /function importCurrentLevelSave\(state\)/);
-  assert.match(main, /saveLevelState\(storage, state\);\s*window\.location\.reload\(\)/);
+  assert.match(main, /saveLevelState\(storage, state, active\.playerId\);\s*window\.location\.reload\(\)/);
   assert.match(serviceWorker, /src\/ui\/saveTransfer\.js/);
 });

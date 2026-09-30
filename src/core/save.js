@@ -4,9 +4,51 @@ const SAVE_PREFIX = 'WSQ2';
 const SAVE_SALT = 'word-spirit-quest|modular|v2|';
 const LEGACY_SALT = 'wsq·字灵·v1';
 export const PROFILE_KEY = 'wsq-next-profile';
-export const saveKey = level => `wsq-next-save-${level}`;
-export const recoveryKey = level => `${saveKey(level)}-recovery`;
-export const backupKey = level => `${saveKey(level)}-backup`;
+export const PLAYERS_KEY = 'wsq-next-players';
+export const LEGACY_PLAYER_ID = 'legacy';
+export const saveKey = (level, playerId = LEGACY_PLAYER_ID) => playerId === LEGACY_PLAYER_ID ? `wsq-next-save-${level}` : `wsq-next-save-${playerId}-${level}`;
+export const recoveryKey = (level, playerId = LEGACY_PLAYER_ID) => `${saveKey(level, playerId)}-recovery`;
+export const backupKey = (level, playerId = LEGACY_PLAYER_ID) => `${saveKey(level, playerId)}-backup`;
+
+export function listPlayers(storage, levelIds = ['p2', 'p5']) {
+  const raw = storage.getItem(PLAYERS_KEY);
+  let players = [];
+  if (raw !== null) {
+    try { players = JSON.parse(raw); }
+    catch { throw new Error('The saved player list is unreadable. Its original data has been left in place.'); }
+    if (!Array.isArray(players) || players.some(player => !player || (player.id !== LEGACY_PLAYER_ID && !/^player-[a-z0-9]+$/.test(player.id)) || typeof player.name !== 'string' || !player.name.trim()) || new Set(players.map(player => player.id)).size !== players.length) {
+      throw new Error('The saved player list is unreadable. Its original data has been left in place.');
+    }
+  }
+  const lastProfile = loadProfile(storage);
+  const legacySave = levelIds.some(level => storage.getItem(saveKey(level)) || storage.getItem(`wsq-save-${level}`))
+    || storage.getItem('zilin-save-v1') || (lastProfile && (!lastProfile.playerId || lastProfile.playerId === LEGACY_PLAYER_ID));
+  if (legacySave && !players.some(player => player.id === LEGACY_PLAYER_ID)) return [{ id: LEGACY_PLAYER_ID, name: 'Player 1' }, ...players];
+  return players;
+}
+
+export function createPlayer(storage, name, levelIds) {
+  const clean = String(name || '').trim().replace(/\s+/g, ' ');
+  if (!clean || clean.length > 32 || /[\p{Cc}\p{Cf}]/u.test(clean)) throw new Error('Enter a name of 1–32 characters.');
+  const players = listPlayers(storage, levelIds);
+  if (players.some(player => player.name.toLocaleLowerCase() === clean.toLocaleLowerCase())) throw new Error('That name is already in use. Choose it above or enter another name.');
+  let id;
+  do { id = `player-${Math.random().toString(36).slice(2, 10)}`; } while (players.some(player => player.id === id));
+  const player = { id, name: clean };
+  storage.setItem(PLAYERS_KEY, JSON.stringify([...players, player]));
+  return player;
+}
+
+export function renamePlayer(storage, playerId, name, levelIds) {
+  const clean = String(name || '').trim().replace(/\s+/g, ' ');
+  if (!clean || clean.length > 32 || /[\p{Cc}\p{Cf}]/u.test(clean)) throw new Error('Enter a name of 1–32 characters.');
+  const players = listPlayers(storage, levelIds);
+  if (!players.some(player => player.id === playerId)) throw new Error('Choose an existing player first.');
+  if (players.some(player => player.id !== playerId && player.name.toLocaleLowerCase() === clean.toLocaleLowerCase())) throw new Error('That name is already in use.');
+  const updated = players.map(player => player.id === playerId ? { ...player, name: clean } : player);
+  storage.setItem(PLAYERS_KEY, JSON.stringify(updated));
+  return updated.find(player => player.id === playerId);
+}
 
 export function checksum(text, salt = SAVE_SALT) {
   let hash = 0x811c9dc5;
@@ -58,15 +100,15 @@ export function decodeSave(raw) {
   throw new Error('Unsupported save format.');
 }
 
-export function loadLevelState(storage, levelPackage) {
-  const key = saveKey(levelPackage.id);
+export function loadLevelState(storage, levelPackage, playerId = LEGACY_PLAYER_ID) {
+  const key = saveKey(levelPackage.id, playerId);
   const current = storage.getItem(key);
   if (current) {
     try {
       return { state: migrateState(decodeSave(current), levelPackage), migrated: false, warning: '' };
     } catch (error) {
-      storage.setItem(recoveryKey(levelPackage.id), current);
-      const backup = storage.getItem(backupKey(levelPackage.id));
+      storage.setItem(recoveryKey(levelPackage.id, playerId), current);
+      const backup = storage.getItem(backupKey(levelPackage.id, playerId));
       if (backup) {
         try {
           const state = migrateState(decodeSave(backup), levelPackage);
@@ -80,35 +122,35 @@ export function loadLevelState(storage, levelPackage) {
     }
   }
 
-  const legacy = storage.getItem(`wsq-save-${levelPackage.id}`)
-    || (levelPackage.id === 'p5' ? storage.getItem('zilin-save-v1') : null);
+  const legacy = playerId === LEGACY_PLAYER_ID ? storage.getItem(`wsq-save-${levelPackage.id}`)
+    || (levelPackage.id === 'p5' ? storage.getItem('zilin-save-v1') : null) : null;
   if (legacy) {
     try {
       const state = migrateState(decodeSave(legacy), levelPackage);
       storage.setItem(key, encodeSave(state));
       return { state, migrated: true, warning: '' };
     } catch (error) {
-      storage.setItem(recoveryKey(levelPackage.id), legacy);
+      storage.setItem(recoveryKey(levelPackage.id, playerId), legacy);
       return { state: migrateState(null, levelPackage), migrated: false, warning: error.message, blocked: true };
     }
   }
   return { state: migrateState(null, levelPackage), migrated: false, warning: '' };
 }
 
-export function saveLevelState(storage, state) {
+export function saveLevelState(storage, state, playerId = LEGACY_PLAYER_ID) {
   const next = { ...state, updatedAt: new Date().toISOString() };
-  const key = saveKey(state.level);
+  const key = saveKey(state.level, playerId);
   const previous = storage.getItem(key);
-  if (previous) storage.setItem(backupKey(state.level), previous);
+  if (previous) storage.setItem(backupKey(state.level, playerId), previous);
   storage.setItem(key, encodeSave(next));
   return next;
 }
 
-export function startFreshLevelState(storage, levelPackage) {
+export function startFreshLevelState(storage, levelPackage, playerId = LEGACY_PLAYER_ID) {
   const state = createFreshState(levelPackage);
-  storage.removeItem(saveKey(levelPackage.id));
-  storage.removeItem(backupKey(levelPackage.id));
-  storage.setItem(saveKey(levelPackage.id), encodeSave(state));
+  storage.removeItem(saveKey(levelPackage.id, playerId));
+  storage.removeItem(backupKey(levelPackage.id, playerId));
+  storage.setItem(saveKey(levelPackage.id, playerId), encodeSave(state));
   return state;
 }
 
@@ -120,8 +162,8 @@ export function loadProfile(storage) {
   }
 }
 
-export function saveProfile(storage, level) {
-  storage.setItem(PROFILE_KEY, JSON.stringify({ level }));
+export function saveProfile(storage, level, playerId = LEGACY_PLAYER_ID) {
+  storage.setItem(PROFILE_KEY, JSON.stringify({ level, playerId }));
 }
 
 export function exportSaveEnvelope(state) {

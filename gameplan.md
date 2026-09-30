@@ -4,7 +4,10 @@
 
 Word Spirit Quest is a tablet-friendly exploration RPG for Singapore primary-school Chinese.
 Every creature contains a collectible vocabulary word, and combat actions are powered by learning tasks.
-Primary 2 and Primary 5 use the same engine, world, cast and campaign with separate curriculum packs and saves.
+Primary 2 and Primary 5 use the same engine, world, cast and campaign with separate curriculum packs and per-player saves.
+After the prologue, the player chooses an existing local name or creates one, then chooses a curriculum unless the P2 or P5 link already selected it.
+Player 1 retains all saves made before named profiles were introduced and can be renamed.
+Parent Mode can reopen the player picker so several children can share one device without sharing progress.
 The intended session is 30–60 minutes, but the game has no mandatory timer.
 The game opens with an illustrated, musical, typewriter-paced prologue that introduces the Dictionary Tree, Word Spirits, the Spirit Brush and the Great Forgetter.
 The prologue has a permanent, unobtrusive Skip intro link.

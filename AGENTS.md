@@ -47,10 +47,14 @@ Production URLs:
 - Keep stat-based combat with visible HP, attack, defense and evasion.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
 - Keep Tidewater Bay's three collected-word rescue dictations, Keeper Lan's clue comparison, and the post-boss whale rescue distinct from optional neighbour requests.
+- Keep Lantern Theatre's three cue dictations, earlier-region revision journey through Scholar Village, rehearsal and post-boss performance distinct from optional requests.
+- Keep Ancient Grove's three evidence dictations, Curator Wen's evidence board and post-boss account display distinct from optional requests.
 - Keep the Great Forgetter's finishing strike and story ending full-screen, followed by auto-rolling credits with a reduced-motion alternative.
 - Set each regional boss one level above that region's strongest standard creature and let it counterattack until defeated.
 - Use only standalone questions in boss battles; never use questions that depend on an unseen passage.
 - Keep battle vocabulary sealed until the child answers; reveal pinyin and meaning in feedback.
+- Keep sidebar panels from replacing live battles or other locked activities.
+- Use target-word tone variants as Sound Blast pinyin distractors before unrelated words.
 - Keep writing-from-memory prompts free of the target Hanzi; show only meaning, Hanyu Pinyin and a blanked example sentence.
 - For writing-from-memory and dictation, offer “Show me how” without a redundant “I don’t know” action.
 - Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.

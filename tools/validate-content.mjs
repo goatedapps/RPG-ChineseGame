@@ -196,6 +196,36 @@ function validateSharedConfiguration(reports) {
         } else if (Math.ceil(uniqueWords.size * story.gateBronzePct) < gateWordCount) {
           errors.push(`${level} ${regionId} needs at least ${gateWordCount} distinct words available at the Bronze boss threshold for default gate dictation.`);
         }
+        if (story.chapter) {
+          const chapter = story.chapter;
+          if (!Number.isInteger(chapter.wordsPerTest) || chapter.wordsPerTest < 1 || !Number.isInteger(chapter.correctToPass) || chapter.correctToPass < 1 || chapter.correctToPass > chapter.wordsPerTest) {
+            errors.push(`${regionId}-story.json has invalid chapter dictation rules.`);
+          }
+          for (const asset of Object.values(chapter.art || {})) {
+            if (typeof asset !== 'string' || !fs.existsSync(path.join(projectRoot, asset))) errors.push(`${regionId}-story.json refers to missing chapter art ${asset}.`);
+          }
+          if (chapter.board) {
+            const evidence = chapter.board.evidence || [];
+            const choices = chapter.board.choices || [];
+            if (!chapter.board.intro || !chapter.board.question || evidence.length < 2 || choices.length < 2 || choices.filter(choice => choice.correct === true).length !== 1 || evidence.some(item => !chapter.tasks?.[item.id] || !item.label || !item.detail) || choices.some(choice => !choice.id || !choice.label)) {
+              errors.push(`${regionId}-story.json has an incomplete chapter evidence board.`);
+            }
+          }
+          const groupCounts = new Map();
+          for (const [id, task] of Object.entries(chapter.tasks || {})) {
+            const taskLessons = config.regionLessons?.[task.region] || [];
+            const lesson = Number.isInteger(task.lessonSlot) ? taskLessons[task.lessonSlot] ?? taskLessons.at(-1) : null;
+            if (!regionIds.includes(task.region) || !taskLessons.length || (Number.isInteger(task.lessonSlot) && task.lessonSlot < 0) || !task.group || !task.name || !task.person || !task.prompt || !task.found) {
+              errors.push(`${level} ${regionId} chapter task ${id} has invalid binding or missing text.`);
+              continue;
+            }
+            const poolKey = `${task.region}:${lesson ?? 'all'}`;
+            const count = (groupCounts.get(poolKey) || 0) + 1;
+            groupCounts.set(poolKey, count);
+            const pool = new Set((lesson === null ? taskLessons : [lesson]).flatMap(value => report.wordsByLesson.get(value) || []));
+            if (pool.size < count * chapter.wordsPerTest) errors.push(`${level} ${regionId} chapter task ${id} needs ${count * chapter.wordsPerTest} distinct words in ${poolKey}.`);
+          }
+        }
       }
     }
     const core = config.coreQuestionKinds || [];

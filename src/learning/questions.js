@@ -34,7 +34,7 @@ export function makeQuestion(word, skill, words, { random = Math.random } = {}) 
     const matching = otherWords(word, words, candidate => candidate.p.split(/\s+/).length === word.p.split(/\s+/).length);
     return {
       source: 'generated', skill, prompt: word.w, instruction: 'Pick the correct pinyin.',
-      options: options(word.p, [...pinyinVariants(word.p), ...matching.map(candidate => candidate.p)], random), correct: word.p, word: word.w
+      options: options(word.p, [...pinyinVariants(word.p), ...matching.map(candidate => candidate.p)].slice(0, 3), random), correct: word.p, word: word.w
     };
   }
   if (skill === 'h') {

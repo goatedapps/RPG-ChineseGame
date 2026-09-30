@@ -49,6 +49,31 @@ test('Atlas menu expands accessibly while preserving the world controls', async 
   assert.match(shellHtml, /atlas\.css/);
 });
 
+test('sidebar panels cannot replace a live battle or other locked activity', async () => {
+  const { guardAtlasPanels } = await import('../src/ui/atlas.js');
+  const dom = new JSDOM('<nav id="game-menus"><button id="atlas-menu-toggle"></button><button id="book-button"></button><button id="sound-button"></button></nav>');
+  const menu = dom.window.document.querySelector('#game-menus');
+  let battleActive = false;
+  let lockedOverlay = false;
+  let opened = 0;
+  guardAtlasPanels(menu, () => !battleActive && !lockedOverlay);
+  dom.window.document.querySelector('#book-button').addEventListener('click', () => { opened += 1; });
+  const book = dom.window.document.querySelector('#book-button');
+  book.click();
+  assert.equal(opened, 1);
+  battleActive = true;
+  book.click();
+  assert.equal(opened, 1);
+  battleActive = false;
+  lockedOverlay = true;
+  book.click();
+  assert.equal(opened, 1);
+  dom.window.document.querySelector('#sound-button').click();
+  lockedOverlay = false;
+  book.click();
+  assert.equal(opened, 2);
+});
+
 test('wide layouts can start with the Atlas menu expanded', async () => {
   const { bindAtlasMenu } = await import('../src/ui/atlas.js');
   const dom = new JSDOM('<main class="game-shell"><button><span class="atlas-menu-chevron"></span><span class="atlas-menu-label"></span></button></main>');

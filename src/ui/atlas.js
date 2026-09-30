@@ -28,3 +28,11 @@ export function bindAtlasMenu(shell, button, onLayoutChange, initiallyExpanded =
     onLayoutChange();
   });
 }
+
+export function guardAtlasPanels(menu, canOpen) {
+  menu.addEventListener('click', event => {
+    if (event.target.closest('#atlas-menu-toggle, #sound-button') || canOpen()) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }, true);
+}

@@ -8,7 +8,7 @@ import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10k';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
-import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
+import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
 import { createGameplay } from './gameplay.js?p50';
 import { createCollection } from './collection.js?p24';
 import { createAdventure } from './adventure.js?p34';
@@ -462,6 +462,7 @@ function showBuildStatus() {
 
 async function boot() {
   bindAtlasMenu($('.game-shell'), $('#atlas-menu-toggle'), render, matchMedia('(min-width: 1000px)').matches);
+  guardAtlasPanels($('#game-menus'), () => !gameplay?.battleInProgress() && (!overlay.isOpen || overlay.dismissible));
   const walkingHero = $('#boot-loading-hero');
   walkingHero?.decode().then(() => walkingHero.classList.add('ready')).catch(() => {});
   const openingImage = new Image();

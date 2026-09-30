@@ -2,7 +2,7 @@ import { gateDictationRules } from '../systems/dictation.js';
 import { isWalkable } from '../world/map.js';
 import { ROUTE_MAP_VERSION, scaleRouteCell } from '../world/routeMaps.js';
 
-export const SAVE_SCHEMA_VERSION = 12;
+export const SAVE_SCHEMA_VERSION = 13;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -137,6 +137,21 @@ function migrateGateDictationSettings(settings) {
   return { gateDictationCount: count, gateDictationPass: pass };
 }
 
+function migrateChapterStory(story, regionId, sourceVersion, levelPackage) {
+  if (!story || Number(sourceVersion) >= 13 || !story.bossDefeated || !['r4', 'r6'].includes(regionId)) return story;
+  const chapter = levelPackage.campaigns?.[regionId]?.regionStory.chapter;
+  const flags = { ...story.flags, chapterTasks: { ...story.flags?.chapterTasks } };
+  for (const id of Object.keys(chapter?.tasks || {})) flags.chapterTasks[id] = true;
+  if (regionId === 'r4') {
+    flags.lanternRehearsed = true;
+    flags.lanternPerformed = true;
+  } else {
+    flags.groveAccountCompared = true;
+    flags.groveDisplayed = true;
+  }
+  return { ...story, flags };
+}
+
 export function migrateState(candidate, levelPackage) {
   const fresh = createFreshState(levelPackage);
   if (!candidate || typeof candidate !== 'object') return fresh;
@@ -145,10 +160,11 @@ export function migrateState(candidate, levelPackage) {
   if (candidate.schemaVersion >= 2) {
     if (candidate.level !== levelPackage.id) throw new Error(`This save belongs to ${candidate.level}, not ${levelPackage.id}.`);
     const player = candidate.player || {};
-    const legacyRouteMap = Number(candidate.schemaVersion) < SAVE_SCHEMA_VERSION
+    const legacyRouteMap = Number(candidate.schemaVersion) < 12
       ? Object.values(levelPackage.campaigns || {}).map(campaign => campaign.route).find(route => route?.id === player.map)
       : null;
     const migratedPlayer = legacyRouteMap ? migrateRoutePosition(player, legacyRouteMap) : player;
+    const currentRegionId = Object.entries(levelPackage.campaigns || {}).find(([, campaign]) => campaign.map?.id === player.map || campaign.route?.id === player.map)?.[0] || levelPackage.region?.id || 'r1';
     const legacyKnots = Math.max(0, Math.floor(Number(candidate.progress?.inventory?.['lucky-knot']) || 0));
     const inventory = { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) };
     delete inventory['lucky-knot'];
@@ -189,7 +205,7 @@ export function migrateState(candidate, levelPackage) {
         daily: { ...fresh.progress.daily, ...(candidate.progress?.daily || {}) },
         streak: { ...fresh.progress.streak, ...(candidate.progress?.streak || {}) },
         scrolls: { ...fresh.progress.scrolls, ...(candidate.progress?.scrolls || {}) },
-        story: {
+        story: migrateChapterStory({
           ...fresh.progress.story,
           ...(candidate.progress?.story || {}),
           flags: { ...fresh.progress.story.flags, ...(candidate.progress?.story?.flags || {}) },
@@ -201,14 +217,14 @@ export function migrateState(candidate, levelPackage) {
             writing: { ...fresh.progress.story.counters.writing, ...(candidate.progress?.story?.counters?.writing || {}) }
           },
           storiesRead: Array.isArray(candidate.progress?.story?.storiesRead) ? candidate.progress.story.storiesRead : []
-        },
+        }, currentRegionId, candidate.schemaVersion, levelPackage),
         reading: migrateReading(candidate.progress?.reading, fresh.progress.reading),
         accuracy: { ...fresh.progress.accuracy, ...(candidate.progress?.accuracy || {}) },
         tutorial: Number(candidate.schemaVersion) >= 12
           ? { ...fresh.progress.tutorial, ...(candidate.progress?.tutorial || {}), villagers: Array.isArray(candidate.progress?.tutorial?.villagers) ? candidate.progress.tutorial.villagers : [] }
           : { ...fresh.progress.tutorial, step: 16 },
-        regions: { ...(candidate.progress?.regions || {}) },
-        routes: normalizeRoutes(candidate.progress?.routes, levelPackage, Number(candidate.schemaVersion) < SAVE_SCHEMA_VERSION)
+        regions: Object.fromEntries(Object.entries(candidate.progress?.regions || {}).map(([id, entry]) => [id, entry && typeof entry === 'object' ? { ...entry, story: migrateChapterStory(entry.story, id, candidate.schemaVersion, levelPackage) } : entry])),
+        routes: normalizeRoutes(candidate.progress?.routes, levelPackage, Number(candidate.schemaVersion) < 12)
       },
       settings: { ...fresh.settings, ...(candidate.settings || {}), ...migrateGateDictationSettings(candidate.settings) },
       session: { ...fresh.session, ...(candidate.session || {}) }

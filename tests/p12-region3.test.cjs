@@ -120,7 +120,7 @@ test('Tidewater guidance follows clues, evidence, boss and whale rescue without 
   enterRegion(state, game);
   const first = game.content.words.filter(word => word.lesson === game.config.regionLessons.r3[0]).slice(0, 3);
   for (const word of first) state.progress.words[word.w] = { collected: true };
-  assert.match(nextStep(game, state).text, /Fisher Yu.*three-word dictation/);
+  assert.match(nextStep(game, state).text, /Fisher Yu.*deep-water route/);
   state.progress.story.flags.tideClues = { 'fisher-yu': true, 'maker-chen': true, 'watcher-an': true };
   assert.match(nextStep(game, state).text, /Tide Archive/);
   state.progress.inventory.keyItems.push('harbour-chronometer');

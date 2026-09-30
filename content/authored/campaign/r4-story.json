@@ -7,20 +7,44 @@
   "fragmentName": "Courage Stroke",
   "fragmentKey": "courage-stroke",
   "secretName": "Courage Loft",
+  "chapter": {
+    "wordsPerTest": 3,
+    "correctToPass": 2,
+    "art": { "rehearsal": "assets/images/story/lantern-rehearsal.webp", "performance": "assets/images/story/lantern-performance.webp" },
+    "tasks": {
+      "actor-min": { "group": "cues", "region": "r4", "lessonSlot": 0, "name": "Spoken cue", "person": "Actor Min", "prompt": "The Mirror changed my opening line. Help me recover our real cue so the play can begin.", "found": "Min remembers the opening line and is ready to try it aloud." },
+      "farmer-qiao": { "group": "cues", "region": "r4", "lessonSlot": 1, "name": "Harvest scene", "person": "Farmer Qiao", "prompt": "The feast scene belongs to everyone. Help me set out the grain props for the whole company.", "found": "Qiao has brought the grain props for the shared feast." },
+      "gardener-su": { "group": "cues", "region": "r4", "lessonSlot": 2, "name": "Lantern cue", "person": "Gardener Su", "prompt": "The lantern flowers mark the hopeful ending. Help me place them at the right moment.", "found": "Su has placed the lantern flowers for the final scene." },
+      "memory-r3": { "group": "memories", "region": "r3", "name": "Tide rhythm", "person": "Keeper Lan", "prompt": "The old play followed the tide. Help me recall when the lanterns first rose.", "found": "Keeper Lan remembers the tide rhythm for the play." },
+      "memory-r2": { "group": "memories", "region": "r2", "name": "Fair-trade promise", "person": "Elder Sun", "prompt": "The market once made this company a promise. Help me bring it back to the stage.", "found": "Elder Sun remembers that the feast must be shared fairly." },
+      "memory-r1": { "group": "memories", "region": "r1", "name": "First promise", "person": "Grandma Wang", "prompt": "A good company helps a speaker begin again. Help me recover the promise that started this play.", "found": "Grandma Wang remembers the company's first promise." }
+    }
+  },
   "passageVillagers": ["director-luo", "storyteller", "actor-min", "farmer-qiao", "gardener-su", "field-guide", "mirror-keeper"],
   "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 40, "y": 28}],
   "scenes": {
     "arrival": [
       { "speaker": "Director Luo", "say": "Welcome to Lantern Theatre. The Mocking Mirror repeats every mistake until our performers are too afraid to speak." },
-      { "speaker": "Director Luo", "say": "The farm fields are suffering too. Help our company and neighbours remember that courage grows through practice." },
+      { "speaker": "Director Luo", "say": "Collect Word Spirits and speak to Min, Qiao and Su to prepare the stage cues. Then follow the old play's trail through Tidewater Bay and Harvest Crossing to Scholar Village, and ask Keeper Lan, Elder Sun and Grandma Wang what they remember." },
       { "setFlag": "arrival" }
+    ],
+    "rehearsal": [
+      { "speaker": "Director Luo", "say": "Min's line, Qiao's harvest props and Su's flowers are ready. Keeper Lan, Elder Sun and Grandma Wang helped us remember why this play began." },
+      { "speaker": "Actor Min", "say": "I missed a line. Please don't start the whole play over. Give me the cue and I'll keep going." },
+      { "speaker": "Director Luo", "say": "That is our promise: we help one another begin again. The Mocking Mirror cannot decide how our story ends." },
+      { "setFlag": "lanternRehearsed" }
     ],
     "reform": [
       { "speaker": "Mocking Mirror", "say": "I made every stumble look enormous. I thought laughter could stop anyone from trying again." },
-      { "speaker": "Director Luo", "say": "A mistake is one moment, not the whole performance. We learn, breathe, and continue." },
+      { "speaker": "Director Luo", "say": "The cast is waiting at Lantern Theatre. Come back and let them finish the play together." },
       { "speaker": "Spirit Brush", "say": "Courage Stroke restored. The hidden Courage Loft can now be opened." },
       { "setFlag": "bossDefeated" },
       { "rewardKey": "courage-stroke" }
+    ],
+    "performance": [
+      { "speaker": "Actor Min", "say": "I stumbled again. This time the company gave me my cue, and I carried on." },
+      { "speaker": "Director Luo", "say": "The harvest belongs to everyone, the lanterns shine, and our first promise is still alive. The play has its ending." },
+      { "setFlag": "lanternPerformed" }
     ]
   },
   "stories": [],

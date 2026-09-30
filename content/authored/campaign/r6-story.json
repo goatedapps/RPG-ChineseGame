@@ -7,20 +7,56 @@
   "fragmentName": "Memory Stroke",
   "fragmentKey": "memory-stroke",
   "secretName": "Memory Vault",
+  "chapter": {
+    "wordsPerTest": 3,
+    "correctToPass": 2,
+    "art": { "compare": "assets/images/story/grove-evidence.webp", "display": "assets/images/story/grove-account.webp" },
+    "board": {
+      "intro": "Set the three records side by side. Read each one before deciding how the account should be displayed.",
+      "evidence": [
+        { "id": "researcher-mo", "label": "Mo's fragments", "detail": "The pieces fit, but one join is uncertain. Mo has marked it for the next reader." },
+        { "id": "scribe-yu", "label": "Yu's copied line", "detail": "The older copy includes a crossed-out line that the later copy omitted." },
+        { "id": "arborist-he", "label": "He's root marks", "detail": "The living roots show that the instruction to give up was written in the margin much later." }
+      ],
+      "question": "What should the team put on display?",
+      "choices": [
+        { "id": "clean", "label": "Only the smooth later copy, without its crossed-out line" },
+        { "id": "complete", "label": "The older account, its correction and the uncertain join", "correct": true },
+        { "id": "discard", "label": "Nothing until every mark is certain" }
+      ]
+    },
+    "tasks": {
+      "researcher-mo": { "group": "evidence", "region": "r6", "lessonSlot": 0, "name": "Fragment order", "person": "Researcher Mo", "prompt": "The oracle pieces fit more than one way. Help me find their order without hiding the uncertain joins.", "found": "Mo has ordered the fragments and marked the uncertain joins." },
+      "scribe-yu": { "group": "evidence", "region": "r6", "lessonSlot": 1, "name": "Copied lines", "person": "Scribe Yu", "prompt": "One copy hid a crossed-out line. Help me restore the full record so everyone can see its correction.", "found": "Yu has recovered the crossed-out line without concealing the correction." },
+      "arborist-he": { "group": "evidence", "region": "r6", "lessonSlot": 2, "name": "Living tree", "person": "Arborist He", "prompt": "These marks may match the living roots. Help me discover which marks were added later.", "found": "He has matched the old marks to living roots and identified a later note." }
+    }
+  },
   "passageVillagers": ["curator-wen", "storyteller", "researcher-mo", "scribe-yu", "arborist-he", "grove-guide", "memory-keeper"],
   "scrollSpots": [{"x": 12, "y": 9}, {"x": 30, "y": 9}, {"x": 11, "y": 24}, {"x": 46, "y": 28}],
   "scenes": {
     "arrival": [
       { "speaker": "Curator Wen", "say": "Welcome to Ancient Grove. Every root holds a memory, but the Give-Up Ghost is erasing discoveries before they can be understood." },
-      { "speaker": "Curator Wen", "say": "Recover the scattered words, help our researchers, and prove that a difficult beginning is not the end." },
+      { "speaker": "Curator Wen", "say": "Mo, Yu and He each stopped at an uncertain mark. Collect Word Spirits and speak to each of them to recover their evidence, then bring it to me with the Oracle Rubbing Kit." },
       { "setFlag": "arrival" }
+    ],
+    "compare": [
+      { "speaker": "Researcher Mo", "say": "The fragments fit, but this join remains uncertain. I have marked it instead of hiding it." },
+      { "speaker": "Scribe Yu", "say": "A later copy left out the crossed-out line. The older account never told anyone to abandon the work." },
+      { "speaker": "Arborist He", "say": "The living roots show which marks came later. The first keepers returned to revise the account together." },
+      { "speaker": "Curator Wen", "say": "We can show both the old line and its correction. First, face the Give-Up Ghost at the Memory Pavilion." },
+      { "setFlag": "groveAccountCompared" }
     ],
     "reform": [
       { "speaker": "Give-Up Ghost", "say": "I whispered that one mistake meant failure. Every abandoned attempt made me larger." },
-      { "speaker": "Curator Wen", "say": "Learning survives because we return, revise, and try another path." },
+      { "speaker": "Curator Wen", "say": "Return to the Excavation Lodge. The team can finish the account and display its corrections together." },
       { "speaker": "Spirit Brush", "say": "Memory Stroke restored. The hidden Memory Vault can now be opened." },
       { "setFlag": "bossDefeated" },
       { "rewardKey": "memory-stroke" }
+    ],
+    "display": [
+      { "speaker": "Curator Wen", "say": "Here is the account, with its uncertain mark and correction visible. The next reader can see how we reached this version." },
+      { "speaker": "Scribe Yu", "say": "We finished because we returned, compared what we knew and tried another path." },
+      { "setFlag": "groveDisplayed" }
     ]
   },
   "stories": [],

@@ -106,6 +106,9 @@ Each onward gate plays its illustrated opening once, tracked independently in th
 The gate transition slows its opening, then fades in the new village without an explanatory title.
 
 The Region 1 story begins automatically with Grandma Wang's welcome and includes Jun's guided first field battle, Storyteller chapters, Xiaoqiang, Mr Lin and Chef Mei requests, rival duels, the Cave Lantern, the four-phase Muddle King battle, Dawn Stroke, the hidden grove and the next-region gate.
+Lantern Theatre now uses three cue dictations, a return journey through Tidewater Bay and Harvest Crossing to Scholar Village for regional revision dictations, a rehearsal with Director Luo, and a post-boss performance before the onward gate.
+Ancient Grove now uses three evidence dictations, an interactive evidence board with Curator Wen, and a post-boss display at the Excavation Lodge before the onward gate.
+The chapter dictations use three collected words with two correct required, reserve separate word groups when two tasks share a lesson, and stay separate from the neighbours' longer optional requests.
 School dictation now offers a regional lesson and 5, 10 or all words; menu dictation offers every curriculum lesson as score-only practice.
 Wrong or skipped villager passage answers show the passage, question and correct answer for review, but only a correct attempt clears the villager's question mark.
 Storyteller chapters use a two-page illustrated book with page dictation controls.
@@ -207,9 +210,9 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 | P10 engineering | Recovery, offline cache, accessibility, responsive checks and pilot checklist. |
 | P11 | Harvest Crossing, regional travel saves, Lessons 4–6, five creatures, Doubt Serpent, Truth Stroke and Truth Terrace. |
 | P12 | Tidewater Bay and Clock Tower, curriculum-specific regional lessons, three dictation clues and whale rescue, five creatures, Idle Clock, Current Stroke and Tide Vault. |
-| P13 | Lantern Theatre and Farm Fields, curriculum-specific Lessons 9–12, performance and farming requests, five creatures, Mocking Mirror, Courage Stroke and Courage Loft. |
+| P13 | Lantern Theatre and Farm Fields, curriculum-specific Lessons 9–12, cue dictations, earlier-region revision journey, rehearsal and final performance, five creatures, Mocking Mirror, Courage Stroke and Courage Loft. |
 | P14 | Festival City, curriculum-specific Lessons 11–15, martial arts and celebration requests, five creatures, Grudge Dragon, Harmony Stroke and Harmony Pavilion. |
-| P15 | Ancient Grove, curriculum-specific Lessons 13–17, archaeology and Hanzi-history requests, five creatures, Give-Up Ghost, Memory Stroke and Memory Vault. |
+| P15 | Ancient Grove, curriculum-specific Lessons 13–17, evidence dictations, account comparison and completed display, five creatures, Give-Up Ghost, Memory Stroke and Memory Vault. |
 | P16 | Treehouse Summit and Great Dictionary Tree, curriculum-specific P2 Lessons 18–19 and P5 Lessons 16–17, final requests, five creatures, Great Forgetter, Final Stroke and Dictionary Heart. |
 | P17 | Seven-region curriculum and boss-pool audit, late-level balance smoothing, twelve reviewed P5 final-lesson questions and Daily Quest Board polish. |
 

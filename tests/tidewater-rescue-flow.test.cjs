@@ -38,8 +38,10 @@ test('Tidewater dictation awards a clue at two of three and the rescue gates tra
     const overlay = createOverlay(dom.window.document.querySelector('#overlay'));
     const active = { levelPackage: game, state };
     const adventure = createAdventure({ overlay, getActive: () => active, persist: () => {}, render: () => {}, toast: () => {}, gameplay: { battlesLeft: () => 30 }, audio: { sfx() {}, setScene() {} } });
+    adventure.storyJournal();
+    assert.doesNotMatch(dom.window.document.querySelector('.rescue-journal').textContent, /dictation|from memory|2\/3/i);
     adventure.gatekeeper();
-    assert.match(dom.window.document.querySelector('#overlay').textContent, /three-word dictation/);
+    assert.match(dom.window.document.querySelector('#overlay').textContent, /Collect Word Spirits.*Fisher Yu/);
     adventure.handleInteraction({ id: 'fisher-yu' });
     dom.window.document.querySelector('[data-tide-test]').click();
     for (let index = 0; index < 3; index += 1) {

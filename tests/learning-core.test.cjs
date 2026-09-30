@@ -111,6 +111,19 @@ test('battle meaning and Hanzi distractors are sampled instead of reusing the fi
   }
 });
 
+test('Sound Blast pinyin distractors change tones on the target word', async () => {
+  const { makeQuestion } = await import('../src/learning/questions.js');
+  const word = { id: 'target', w: '花园', p: 'huā yuán', m: 'garden', sb: [] };
+  const unrelated = [
+    { id: 'a', w: '天气', p: 'tiān qì' },
+    { id: 'b', w: '学习', p: 'xué xí' },
+    { id: 'c', w: '朋友', p: 'péng you' }
+  ];
+  const question = makeQuestion(word, 'p', [word, ...unrelated], { random: () => 0.5 });
+  assert.equal(question.options.length, 4);
+  assert.ok(question.options.every(option => option.startsWith('hu') && option.endsWith('yuán')));
+});
+
 test('exam adapters exclude disabled kinds, Higher Chinese, and malformed options', async () => {
   const { filterSupportedQuestions } = await import('../src/learning/examAdapters.js');
   const content = {

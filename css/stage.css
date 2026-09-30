@@ -305,6 +305,21 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .tidewater-rescue-panel img { display: block; width: 100%; max-height: 47vh; object-fit: cover; }
 .tidewater-rescue-panel > div { padding: clamp(18px, 3vw, 30px); }
 .tidewater-rescue-panel h1 { margin: 4px 0 12px; color: #195463; }
+.chapter-task-panel { border-color: #8c705c; background: linear-gradient(145deg, #fbf6e9, #e9eee4); }
+.chapter-scene-panel { width: min(900px, 100%); max-height: min(94vh, 900px); padding: 0; overflow: auto; border-color: #7c785d; background: #f5efdd; }
+.chapter-scene-panel img { display: block; width: 100%; max-height: 47vh; object-fit: cover; }
+.chapter-scene-panel > div { padding: clamp(18px, 3vw, 30px); }
+.chapter-scene-panel h1 { margin: 4px 0 12px; color: #5d453c; }
+.chapter-evidence-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 18px 0; }
+.chapter-evidence-grid button { min-height: 120px; padding: 14px; text-align: left; background: #f6f1df; border: 2px solid #9e9477; border-radius: 10px; }
+.chapter-evidence-grid button[aria-pressed="true"] { background: #e5efe5; border-color: #56846b; }
+.chapter-evidence-grid b, .chapter-evidence-grid span { display: block; }
+.chapter-evidence-grid span { margin-top: 9px; font-size: 14px; }
+.chapter-evidence-choices { display: grid; gap: 8px; margin: 16px 0 0; padding: 12px; border: 1px solid #9e9477; }
+.chapter-evidence-choices legend { padding: 0 6px; font-weight: 800; }
+.chapter-evidence-choices button { min-height: 44px; text-align: left; }
+.chapter-evidence-feedback { min-height: 1.5em; color: #8a3d35; font-weight: 700; }
+@media (max-width: 700px) { .chapter-evidence-grid { grid-template-columns: 1fr; } .chapter-evidence-grid button { min-height: 70px; } }
 .inn-welcome { border-top: 8px solid var(--jade); background: linear-gradient(145deg,#f4efe2,#fff8d8); }
 .save-warning { padding: 12px; border-left: 5px solid var(--seal); border-radius: 8px; background: #fae3de; font-weight: 800; }
 .craft-message { margin: 12px 0; padding: 12px 14px; border: 3px solid var(--seal); border-radius: 9px; color: #76271f; background: #ffe6df; font-weight: 900; box-shadow: 0 4px 0 rgba(118,39,31,.18); }

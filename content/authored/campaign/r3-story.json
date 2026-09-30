@@ -13,17 +13,17 @@
     "clues": {
       "fisher-yu": {
         "name": "Deep-water route",
-        "prompt": "The channel markers have lost their labels. Dictate three words from this shore's lesson so I can mark a safe route for the whale.",
+        "prompt": "The channel markers have lost their labels. Help me mark a safe route through deep water for the whale.",
         "found": "Fisher Yu has marked the deep-water channel. The rescue crew knows where to sail."
       },
       "maker-chen": {
         "name": "Water depth",
-        "prompt": "My tide gauge has muddled its instructions. Dictate three words from this stretch of coast so I can measure the water safely.",
+        "prompt": "My tide gauge has muddled its instructions. Help me measure how deep the water must be for the whale.",
         "found": "Maker Chen's tide gauge is working again. The crew knows how deep the water must be."
       },
       "watcher-an": {
         "name": "The right moment",
-        "prompt": "The old clock records disagree. Dictate three words from the cliffs' lesson so I can check when the tide should rise.",
+        "prompt": "The old clock records disagree. Help me find the right moment for the whale to leave the shallows.",
         "found": "Watcher An has checked the old records. The crew knows when the tide should rise."
       }
     }
@@ -33,7 +33,7 @@
   "scenes": {
     "arrival": [
       { "speaker": "Keeper Lan", "say": "Welcome to Tidewater Bay. The Great Forgetter has stopped our Clock Tower, and the sea can no longer remember when to rise or fall." },
-      { "speaker": "Keeper Lan", "say": "A young whale is stranded in the shallows. Fisher Yu knows a route, Maker Chen can measure the water, and Watcher An studies the clock. Help each of them with a three-word dictation, then bring their clues to me." },
+      { "speaker": "Keeper Lan", "say": "A young whale is stranded in the shallows. Collect Word Spirits and speak to Fisher Yu about the route, Maker Chen about the depth, and Watcher An about the tide. Then bring their clues to me." },
       { "setFlag": "arrival" }
     ],
     "compare": [

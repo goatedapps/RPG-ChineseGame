@@ -2,6 +2,7 @@ import { gateStatus } from './story.js';
 import { regionPathGuide } from './regionGuide.js';
 import { routeKey } from './regions.js';
 import { tidewaterClue, tidewaterCluesComplete } from './tidewaterRescue.js?p1';
+import { chapterDictationWords, chapterGroupComplete, chapterTask } from './chapterQuests.js';
 
 const objectTarget = (map, id) => {
   const object = map.objects.find(candidate => candidate.id === id);
@@ -55,6 +56,51 @@ export function nextStep(levelPackage, state) {
       : { text: 'Find the villager marked ? and answer the passage question.', target: objectTarget(map, villagerId) };
   }
 
+  const lanternJourney = state.progress.regions?.r4?.story;
+  const lanternChapter = levelPackage.campaigns.r4?.regionStory.chapter;
+  if (['r1', 'r2', 'r3'].includes(regionId) && lanternJourney && !lanternJourney.bossDefeated && !lanternJourney.flags?.lanternRehearsed && chapterGroupComplete(lanternJourney, lanternChapter, 'cues')) {
+    const memoryId = { r3: 'memory-r3', r2: 'memory-r2', r1: 'memory-r1' }[regionId];
+    const done = lanternJourney.flags?.chapterTasks?.[memoryId];
+    if (map.route) return lanternJourney.flags?.chapterTasks?.['memory-r1']
+      ? { text: `Cross ${map.name} toward Lantern Theatre and Director Luo.`, target: objectTarget(map, 'next-region-gate') }
+      : { text: `Cross ${map.name} to recover the old play's missing promises.`, target: returnTarget };
+    if (!done) {
+      const person = chapterTask(levelPackage, 'r4', memoryId).person;
+      return { text: `Talk to ${person} about the old play's ${chapterTask(levelPackage, 'r4', memoryId).name.toLowerCase()}.`, target: objectTarget(map, { r3: 'keeper-lan', r2: 'elder-sun', r1: 'grandma-wang' }[regionId]) };
+    }
+    if (regionId === 'r1' || lanternJourney.flags?.chapterTasks?.['memory-r1']) return { text: 'Return east through the earlier roads to Director Luo at Lantern Theatre.', target: townExit };
+    return { text: 'Continue west through the return road for the next theatre memory.', target: objectTarget(map, 'return-gate') };
+  }
+
+  if ((regionId === 'r4' || regionId === 'r6') && !story.bossDefeated) {
+    const chapter = levelPackage.regionStory.chapter;
+    const group = regionId === 'r4' ? 'cues' : 'evidence';
+    const pending = Object.keys(chapter.tasks).filter(id => chapter.tasks[id].group === group && !story.flags.chapterTasks?.[id]);
+    if (pending.length) {
+      const ready = pending.find(id => chapterDictationWords(levelPackage, state.progress, regionId, id).length === chapter.wordsPerTest);
+      const task = chapterTask(levelPackage, regionId, ready || pending[0]);
+      const zone = route?.zones.find(candidate => candidate.lesson === task.lesson);
+      if (ready) return map.route
+        ? { text: `Return to town and speak to ${task.person} about ${task.name.toLowerCase()}.`, target: returnTarget }
+        : { text: `Talk to ${task.person} about ${task.name.toLowerCase()}.`, target: objectTarget(map, task.id) };
+      return map.route
+        ? { text: `Collect ${task.requiredCollected} Lesson ${task.lesson} spirits in ${zone?.name || route.name} for ${task.person}.`, target: walkableZoneTarget(map, zone), lesson: task.lesson }
+        : { text: `Explore ${zone?.name || route.name} for Lesson ${task.lesson} spirits to help ${task.person}.`, target: townExit, lesson: task.lesson };
+    }
+    if (regionId === 'r4' && !chapterGroupComplete(story, chapter, 'memories')) return map.route
+      ? { text: 'Return to Lantern Theatre and take the west road toward Tidewater Bay for the earlier memories.', target: returnTarget }
+      : { text: 'Take the west road through Tidewater Bay and Harvest Crossing to Scholar Village. Keeper Lan, Elder Sun and Grandma Wang remember how the old play began.', target: objectTarget(map, 'return-gate') };
+    const compared = regionId === 'r4' ? story.flags.lanternRehearsed : story.flags.groveAccountCompared;
+    if (!compared) {
+      const hasKey = (state.progress.inventory.keyItems || []).includes(levelPackage.regionStory.readingKeyItem);
+      const person = regionId === 'r4' ? 'Director Luo' : 'Curator Wen';
+      const id = regionId === 'r4' ? 'director-luo' : 'curator-wen';
+      return map.route
+        ? { text: `Return to town to ${hasKey ? `compare the chapter clues with ${person}` : `earn the ${key}`}.`, target: returnTarget }
+        : { text: hasKey ? `Bring the clues and ${key} to ${person}.` : `Visit the reading hall to earn the ${key}, then talk to ${person}.`, target: objectTarget(map, hasKey ? id : 'reading-hall') };
+    }
+  }
+
   if (regionId === 'r3' && !story.bossDefeated) {
     const rescue = levelPackage.regionStory.rescue;
     if (!tidewaterCluesComplete(story, levelPackage.regionStory)) {
@@ -67,10 +113,10 @@ export function nextStep(levelPackage, state) {
       const clue = tidewaterClue(levelPackage, id);
       const zone = route?.zones.find(candidate => candidate.lesson === clue.lesson);
       if (ready) return map.route
-        ? { text: `Return to Tidewater Bay for ${clue.person}'s three-word dictation and the ${clue.name.toLowerCase()} clue.`, target: returnTarget }
-        : { text: `Talk to ${clue.person} and pass a three-word dictation for the ${clue.name.toLowerCase()} clue.`, target: objectTarget(map, id) };
+        ? { text: `Return to Tidewater Bay and speak to ${clue.person} about the ${clue.name.toLowerCase()} clue.`, target: returnTarget }
+        : { text: `Talk to ${clue.person} about the ${clue.name.toLowerCase()} clue.`, target: objectTarget(map, id) };
       return map.route
-        ? { text: `Battle in ${zone?.name || route.name} (Lesson ${clue.lesson}) until you have ${clue.requiredCollected} spirits for ${clue.person}'s dictation.`, target: walkableZoneTarget(map, zone), lesson: clue.lesson }
+        ? { text: `Collect ${clue.requiredCollected} Lesson ${clue.lesson} spirits in ${zone?.name || route.name} to help ${clue.person} find the ${clue.name.toLowerCase()} clue.`, target: walkableZoneTarget(map, zone), lesson: clue.lesson }
         : { text: `Explore ${zone?.name || route.name} (Lesson ${clue.lesson}) until you have ${clue.requiredCollected} spirits for ${clue.person}.`, target: townExit, lesson: clue.lesson };
     }
     if (!story.flags.tideEvidenceCompared) {
@@ -87,6 +133,12 @@ export function nextStep(levelPackage, state) {
     if (regionId === 'r3' && !story.flags.tideWhaleRescued) return map.route
       ? { text: 'The clock moves again. Return to town and help the crew at the Whale Rescue Dock.', target: returnTarget }
       : { text: 'Visit the Whale Rescue Dock to guide the young whale into deep water.', target: objectTarget(map, 'rescue-dock-building') };
+    if (regionId === 'r4' && !story.flags.lanternPerformed) return map.route
+      ? { text: 'Return to Lantern Theatre for the completed performance.', target: returnTarget }
+      : { text: 'Visit Lantern Theatre and watch the cast finish the play.', target: objectTarget(map, 'theatre-building') };
+    if (regionId === 'r6' && !story.flags.groveDisplayed) return map.route
+      ? { text: 'Return to Ancient Grove to finish the account.', target: returnTarget }
+      : { text: 'Visit the Excavation Lodge and display the reconstructed account.', target: objectTarget(map, 'excavation-lodge-building') };
     if (regionId === 'r7') return map.route
       ? { text: 'Return to Treehouse Summit and visit the Dictionary Heart.', target: returnTarget }
       : { text: 'Visit the Dictionary Heart to finish the story.', target: objectTarget(map, 'dictionary-heart') };

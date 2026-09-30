@@ -13,15 +13,15 @@ import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10h';
 import { xpToNextLevel } from './core/progression.js';
 import { checkPassageAnswer, completePassage, normalizeReading, repairActiveReading, selectPassage } from './systems/reading.js?p10g';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
-import { chooseDictationWords, dictationLessons, dictationResult, gateDictationRules } from './systems/dictation.js';
+import { chooseDictationWords, chooseGuidedDictationWord, dictationLessons, dictationResult, gateDictationRules } from './systems/dictation.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
 import { makeExamQuestion, makeQuestion } from './learning/questions.js?p1';
 import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILLS, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './learning/mastery.js?p10f';
 import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/selection.js?p10i';
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
-import { showQuestion } from './ui/questionView.js?p18';
-import { showWritingTask } from './ui/writingView.js?p13';
+import { showQuestion } from './ui/questionView.js?p19';
+import { showWritingTask } from './ui/writingView.js?p14';
 import { createSpeechController } from './learning/audio.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { battleQuestionBadge } from './ui/battleBadge.js';
@@ -185,11 +185,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion * 100)}%</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
         <div class="battle-enemy ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="battle-nameplate"><b>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</b><small>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</small><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><strong>HP ${battle.enemyHp}/${battle.creature.maxHp}</strong></div><div class="creature-art">${creatureSvg(battle.creature.id, '？')}</div></div>
       </div>
-      <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
+      <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2 tabindex="-1" data-battle-title>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
         <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" ${resolving || battle.tutorialNeedsBag ? 'disabled' : ''} class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === recommended ? 'recommended' : ''} ${battle.guided && !battle.tutorialNeedsBag && key === recommended ? 'tutorial-arrow' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === recommended ? ' · can fill an empty skill circle' : ''}</span></button>`).join('')}</div>
         <div class="button-row"><button class="secondary ${battle.tutorialNeedsBag ? 'tutorial-bag-cue tutorial-arrow' : ''}" data-bag type="button" ${resolving ? 'disabled' : ''}>Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button" ${resolving || battle.tutorialNeedsBag ? 'disabled' : ''}>${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button" ${resolving || battle.guided ? 'disabled' : ''}>Try to run</button></div>
       </div>
-    </article>`, { dismissible: false });
+    </article>`, { dismissible: false, focusSelector: '[data-battle-title]' });
     animateBattleHealth({ ...battle, maxHp: battle.creature.maxHp, displayedHealth: battle.displayedHealth }, game.state.player, battle.enemyHp);
     battle.displayedHealth = [game.state.player.hp / game.state.player.maxHp, battle.enemyHp / battle.creature.maxHp];
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
@@ -510,17 +510,20 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const regional = game.levelPackage.config.regionLessons[game.levelPackage.region.id] || [];
     const lessons = dictationLessons(game.levelPackage.content.words, allLessons ? null : regional);
     const guided = allLessons && tutorialStep() === 14;
-    overlay.open(`<div class="panel dictation-picker"><div class="panel-header"><div><p class="panel-kicker">${allLessons ? 'All-lesson practice' : `${escapeHtml(game.levelPackage.region.name)} School`}</p><h1>Choose your dictation</h1></div><button class="secondary" data-close-overlay>Cancel</button></div><p>${allLessons ? 'Practise any lesson in your curriculum. This is a score-only practice session.' : 'Choose a lesson from this region. School rewards are capped at three correct words per run to keep progression balanced.'}</p><label class="answer-field">Lesson<select data-dictation-lesson>${lessons.map(lesson => `<option value="${lesson}">Lesson ${lesson}</option>`).join('')}</select></label><fieldset class="dictation-count"><legend>How many words?</legend>${guided ? '<label><input type="radio" name="dictation-count" value="1" checked> 1 guided word</label>' : ''}<label><input type="radio" name="dictation-count" value="5" ${guided ? '' : 'checked'}> 5</label><label><input type="radio" name="dictation-count" value="10"> 10</label><label><input type="radio" name="dictation-count" value="all"> All</label></fieldset><div class="button-row"><button class="primary" data-dictation-start>Start dictation</button></div></div>`);
+    overlay.open(`<div class="panel dictation-picker"><div class="panel-header"><div><p class="panel-kicker">${allLessons ? 'All-lesson practice' : `${escapeHtml(game.levelPackage.region.name)} School`}</p><h1>Choose your dictation</h1></div><button class="secondary" data-close-overlay>Cancel</button></div><p>${allLessons ? 'Practise any lesson in your curriculum. This is a score-only practice session.' : 'Choose a lesson from this region. School rewards are capped at three correct words per run to keep progression balanced.'}</p><label class="answer-field">Lesson<select data-dictation-lesson>${lessons.map(lesson => `<option value="${lesson}">Lesson ${lesson}</option>`).join('')}</select></label><fieldset class="dictation-count"><legend>How many words?</legend>${guided ? '<label><input type="radio" name="dictation-count" value="1" checked> 1 guided word</label>' : '<label><input type="radio" name="dictation-count" value="5" checked> 5</label><label><input type="radio" name="dictation-count" value="10"> 10</label><label><input type="radio" name="dictation-count" value="all"> All</label>'}</fieldset><div class="button-row"><button class="primary" data-dictation-start>Start dictation</button></div></div>`);
     document.querySelector('[data-dictation-start]').addEventListener('click', () => {
       const lesson = Number(document.querySelector('[data-dictation-lesson]').value);
       const count = document.querySelector('[name="dictation-count"]:checked').value;
-      const words = chooseDictationWords(game.levelPackage.content.words, lesson, count);
+      const words = guided && count === '1'
+        ? chooseGuidedDictationWord(game.levelPackage.content.words, lesson)
+        : chooseDictationWords(game.levelPackage.content.words, lesson, count);
       if (words.length) runDictation(words, !allLessons);
     }, { once: true });
   }
 
   function runDictation(words, schoolMode) {
     const game = active();
+    const guidedPractice = tutorialStep() === 14;
     let index = 0;
     let clean = 0;
     let lesson3Clean = 0;
@@ -539,7 +542,10 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         }
         commit();
         playLevelUp(beforeLevel, game.state.player);
-        return overlay.open(`<div class="panel result-panel"><h1>Dictation complete</h1><p>You wrote <b>${clean}/${words.length}</b> words without help (${result.percent}%).</p><p>${result.message}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
+        const summary = guidedPractice && !clean
+          ? 'You tried a word with a demonstration. Try it from memory later to fill its Writing circle.'
+          : `You wrote <b>${clean}/${words.length}</b> words without help (${result.percent}%). ${result.message}`;
+        return overlay.open(`<div class="panel result-panel"><h1>Dictation complete</h1><p>${summary}</p>${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-close-overlay>Continue</button></div>`);
       }
       const word = words[index++];
       showWritingTask(overlay, word, game.levelPackage.characters.characters, game.state.progress.characters, (result, characters) => {
@@ -549,7 +555,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         lesson3Clean += result.ok && word.lesson === 3 ? 1 : 0;
         onTutorialAction('dictation-word');
         next();
-      }, { runId: `dictation-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, forceMemory: true, headerHtml: `<p class="panel-kicker">${schoolMode ? 'School dictation' : 'All-lesson dictation'} · ${index}/${words.length}</p>`, onExit: () => { commit(); overlay.close(); } });
+      }, { runId: `dictation-${Date.now()}-${index}`, lenient: game.state.settings.lenientWriting, speechRate: game.state.settings.speechRate, forceMemory: true, completeOnHelp: guidedPractice, headerHtml: `<p class="panel-kicker">${schoolMode ? 'School dictation' : 'All-lesson dictation'} · ${index}/${words.length}</p>`, onExit: () => { commit(); overlay.close(); } });
     };
     next();
   }
@@ -755,9 +761,11 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const itemCard = item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`;
     const baitCards = game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>${BAIT_PRICE} coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < BAIT_PRICE ? 'disabled' : ''}>Choose</button></article>`).join('');
     const gearCard = `<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article>`;
-    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${travelSupplies.map(itemCard).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${baitCards}${lanterns.map(itemCard).join('')}${gearCard}</div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`);
+    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1 tabindex="-1" data-shop-title>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><strong>${game.state.player.coins} coins</strong></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${travelSupplies.map(itemCard).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${baitCards}${lanterns.map(itemCard).join('')}${gearCard}</div></section><div class="button-row"><button class="secondary" data-close-overlay>Leave shop</button></div></div>`, { focusSelector: '[data-shop-title]' });
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
+      const completesFirstShopVisit = tutorialStep() === 2 && item.id === 'rice-ball';
+      const completesSupplyTutorial = tutorialStep() === 15 && item.id === 'forest-repellent' && game.state.progress.tutorial.baitBought;
       const bought = buyItem(game.state.player, game.state.progress.inventory, item.id, item);
       if (!bought.ok) return toast(bought.reason);
       game.state.player = bought.player;
@@ -766,7 +774,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       toast(`${item.name} added to your bag.`);
       audio?.sfx('purchase');
       onTutorialAction('buy-item', { id: item.id });
-      shop();
+      if (completesFirstShopVisit || completesSupplyTutorial) overlay.close();
+      else shop();
     });
     for (const button of document.querySelectorAll('[data-bait-lesson]')) button.addEventListener('click', () => baitPicker(Number(button.dataset.baitLesson)));
     document.querySelector('[data-buy-gear]:not([disabled])')?.addEventListener('click', () => {
@@ -785,13 +794,15 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     document.querySelector('[data-back-shop]').addEventListener('click', shop);
     for (const button of document.querySelectorAll('[data-bait-word]')) button.addEventListener('click', () => {
       if (game.state.player.coins < BAIT_PRICE) return toast('Not enough coins.');
+      const completesSupplyTutorial = tutorialStep() === 15 && game.state.progress.tutorial.repellentBought;
       game.state.player.coins -= BAIT_PRICE;
       game.state.progress.baits.push({ lesson, word: button.dataset.baitWord });
       audio?.sfx('purchase');
       commit();
       toast(`Bait prepared for ${button.dataset.baitWord}.`);
       onTutorialAction('buy-bait');
-      shop();
+      if (completesSupplyTutorial) overlay.close();
+      else shop();
     }, { once: true });
   }
 

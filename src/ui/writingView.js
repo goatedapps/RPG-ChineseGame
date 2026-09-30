@@ -2,7 +2,7 @@ import { escapeHtml } from './dom.js';
 import { AUTO_COMPLETE_AFTER_MISSES, normalizeCharacterProgress, recordCharacter, WRITING_STAGES, writingResult } from '../learning/writing.js';
 import { createSpeechController } from '../learning/audio.js';
 
-export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, headerHtml = '', onExit = null, speechRate = 0.85, speech = createSpeechController() } = {}) {
+export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, completeOnHelp = false, headerHtml = '', onExit = null, speechRate = 0.85, speech = createSpeechController() } = {}) {
   const characters = [...word.w].filter(character => /\p{Script=Han}/u.test(character));
   let index = 0;
   let anyHelp = false;
@@ -57,7 +57,16 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
     document.querySelector('[data-writing-show]').addEventListener('click', () => {
       helped = true;
       writer.cancelQuiz();
-      writer.animateCharacter({ onComplete: quiz });
+      if (completeOnHelp) {
+        document.querySelector('[data-writing-show]').disabled = true;
+        const exit = document.querySelector('[data-writing-exit]');
+        if (exit) exit.disabled = true;
+      }
+      writer.animateCharacter({ onComplete: completeOnHelp ? () => {
+        anyHelp = true;
+        nextProgress[character] = recordCharacter(nextProgress[character], { helped: true, runId });
+        window.setTimeout(() => { index += 1; index < characters.length ? draw() : finish(); }, 400);
+      } : quiz });
     });
     document.querySelector('[data-writing-exit]')?.addEventListener('click', () => {
       speech.stop();

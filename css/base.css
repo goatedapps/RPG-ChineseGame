@@ -11,7 +11,8 @@ body {
   font-family: var(--font-ui);
 }
 button { min-width: var(--touch-target); min-height: var(--touch-target); font: inherit; cursor: pointer; }
-button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid #216c87; outline-offset: 3px; }
+.restored-pointer-focus:not(.tutorial-arrow):focus-visible { outline: none; }
 .skip-link { position: fixed; z-index: 100; top: 8px; left: 8px; padding: 10px 14px; color: white; background: var(--jade); border-radius: 8px; transform: translateY(-160%); }
 .skip-link:focus { transform: none; }
 .game-shell { width: min(1100px, 100%); height: 100%; margin: 0 auto; display: grid; grid-template-rows: auto auto minmax(0,1fr); gap: 8px; }
@@ -86,6 +87,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 @keyframes hero-walk { from { transform: translate(-7px,2px) rotate(-1deg); } to { transform: translate(7px,-3px) rotate(1deg); } }
 @keyframes loading-track { from { transform: translateX(0); } to { transform: translateX(195%); } }
 .prologue-root { position: fixed; inset: 0; z-index: 100; color: #f5ebcf; background: #111a2a; }
+.phone-notice-screen { display: grid; min-height: 100dvh; place-items: center; overflow-y: auto; padding: 24px; background: radial-gradient(circle at 50% 25%,#294248,#111a2a 72%); }
+.phone-notice-card { width: min(100%,460px); padding: clamp(24px,7vw,38px); border: 2px solid #d8b966; border-radius: 16px; background: #193039; box-shadow: 0 20px 55px #070d18; text-align: center; }
+.phone-notice-mark { display: block; margin-bottom: 8px; color: #e5b947; font: 400 44px/1 var(--font-hanzi); }
+.phone-notice-card h1 { margin: 0 0 15px; color: #fff5d8; font: 900 clamp(26px,7vw,34px)/1.13 var(--font-ui); }
+.phone-notice-card p { margin: 0 0 25px; color: #f5ebcf; font: 650 17px/1.5 var(--font-ui); }
+.phone-notice-card button { width: 100%; }
 .prologue-screen { position: relative; display: grid; width: 100%; height: 100%; min-height: 100dvh; overflow: hidden; isolation: isolate; background: #111a2a var(--prologue-image) var(--prologue-position,center) / cover no-repeat; }
 .prologue-screen::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg,rgba(8,14,25,.91) 0,rgba(8,14,25,.7) 33%,rgba(8,14,25,.08) 68%),linear-gradient(0deg,rgba(8,14,25,.74),transparent 54%); }
 .prologue-screen::after { content: ''; position: absolute; inset: 0; z-index: -1; box-shadow: inset 0 0 110px 22px rgba(5,9,16,.8); pointer-events: none; }

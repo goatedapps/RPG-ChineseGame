@@ -12,6 +12,11 @@ export function chooseDictationWords(words, lesson, count, random = Math.random)
   return pool.slice(0, count === 'all' ? pool.length : Math.min(Number(count) || 5, pool.length));
 }
 
+export function chooseGuidedDictationWord(words, lesson) {
+  const candidates = words.filter(word => Number(word.lesson) === Number(lesson));
+  return candidates.sort((a, b) => Array.from(a.w).length - Array.from(b.w).length).slice(0, 1);
+}
+
 export function dictationResult(correct, total) {
   const percent = total ? Math.round(correct / total * 100) : 0;
   return { percent, message: percent >= 80 ? 'Good work!' : 'Practise more and try again.' };

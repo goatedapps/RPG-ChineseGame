@@ -1,9 +1,17 @@
 import { escapeHtml } from './dom.js';
 
 export function createOverlay(element) {
+  const ownerDocument = element.ownerDocument;
   let closeHandler = null;
   let returnFocus = null;
+  let returnFocusWasPointer = false;
   let typingTimer = null;
+  let lastInputWasPointer = false;
+  ownerDocument.addEventListener('pointerdown', () => { lastInputWasPointer = true; }, true);
+  ownerDocument.addEventListener('keydown', () => {
+    lastInputWasPointer = false;
+    ownerDocument.querySelectorAll('.restored-pointer-focus').forEach(target => target.classList.remove('restored-pointer-focus'));
+  }, true);
   function typeDialogue() {
     const line = element.querySelector('.dialog-card > p:not(.speaker), .storyteller-welcome p, [data-type-dialogue]');
     if (!line || globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
@@ -28,9 +36,12 @@ export function createOverlay(element) {
     };
     typingTimer = setTimeout(tick, 80);
   }
-  function open(content, { dismissible = true, onClose = null } = {}) {
+  function open(content, { dismissible = true, onClose = null, focusSelector = null } = {}) {
     clearTimeout(typingTimer);
-    if (element.hidden) returnFocus = document.activeElement;
+    if (element.hidden) {
+      returnFocus = document.activeElement;
+      returnFocusWasPointer = lastInputWasPointer;
+    }
     closeHandler = onClose;
     api.dismissible = dismissible;
     element.innerHTML = content;
@@ -44,21 +55,30 @@ export function createOverlay(element) {
     element.setAttribute('aria-modal', 'true');
     const close = element.querySelector('[data-close-overlay]');
     if (close) close.addEventListener('click', api.close, { once: true });
-    element.querySelector('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href]')?.focus();
+    (focusSelector ? element.querySelector(focusSelector) : null)?.focus();
+    if (!element.contains(document.activeElement)) element.querySelector('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href]')?.focus();
     typeDialogue();
   }
   function close() {
     clearTimeout(typingTimer);
     element.hidden = true;
-    element.dispatchEvent(new element.ownerDocument.defaultView.Event('overlay:changed'));
     element.dataset.open = 'false';
     element.innerHTML = '';
     element.classList.remove('full-screen-overlay');
     const handler = closeHandler;
     closeHandler = null;
-    handler?.();
-    if (returnFocus?.isConnected) returnFocus.focus();
+    if (returnFocus?.isConnected) {
+      if (returnFocusWasPointer && returnFocus !== ownerDocument.body) {
+        const target = returnFocus;
+        target.classList.add('restored-pointer-focus');
+        target.addEventListener('blur', () => target.classList.remove('restored-pointer-focus'), { once: true });
+      }
+      returnFocus.focus();
+    }
     returnFocus = null;
+    returnFocusWasPointer = false;
+    handler?.();
+    element.dispatchEvent(new element.ownerDocument.defaultView.Event('overlay:changed'));
   }
   function dialogue(interaction) {
     let index = 0;

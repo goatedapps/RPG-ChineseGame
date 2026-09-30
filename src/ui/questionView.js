@@ -5,11 +5,11 @@ export function showQuestion(overlay, question, word, onDone, { title = 'Learnin
   overlay.open(`<article class="panel question-panel${headerHtml.includes('battle-question-badge') ? ' battle-question' : ''}">
     ${headerHtml}
     <p class="panel-kicker">${escapeHtml(title)}</p>
-    <h2>${escapeHtml(question.prompt)}</h2>
+    <h2 tabindex="-1" data-question-title>${escapeHtml(question.prompt)}</h2>
     <p class="question-instruction">${escapeHtml(question.instruction)}</p>
     <div class="question-options">${question.options.map((option, index) => `<button type="button" data-answer="${index}">${escapeHtml(option)}</button>`).join('')}</div>
     <div data-feedback></div>
-  </article>`, { dismissible: false });
+  </article>`, { dismissible: false, focusSelector: '[data-question-title]' });
   const buttons = [...document.querySelectorAll('[data-answer]')];
   buttons.forEach((button, index) => button.addEventListener('click', () => {
     const result = checkAnswer(question, question.options[index]);

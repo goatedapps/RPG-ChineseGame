@@ -5,16 +5,17 @@ import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p27';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
-import { createOverlay } from './ui/overlay.js?p10g';
+import { createOverlay } from './ui/overlay.js?p10k';
 import { updateHud } from './ui/hud.js?p2';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p43';
-import { createCollection } from './collection.js?p22';
+import { createGameplay } from './gameplay.js?p50';
+import { createCollection } from './collection.js?p24';
 import { createAdventure } from './adventure.js?p34';
 import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p22';
+import { isPhoneDevice, showPhoneNotice } from './ui/phoneNotice.js';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p18';
 import { restoreNpcPositions, wanderNpcs } from './world/npcs.js?p17c';
@@ -24,7 +25,7 @@ import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './syst
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 import { activateVillagePortals } from './systems/ending.js';
-import { createTutorial } from './tutorial.js?p2';
+import { createTutorial } from './tutorial.js?p7';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -165,12 +166,12 @@ function move(direction) {
       render();
       return;
     }
-    tutorial?.action('interact', { id: result.interaction.id, kind: result.interaction.type });
     events.emit('world:interaction', result.interaction);
     if (!gameplay?.handleInteraction(result.interaction) && !adventure?.handleInteraction(result.interaction)) {
       if (result.interaction.id === 'apprentice-jun') overlay.tutorialDialogue(result.interaction.interaction.lines);
       else overlay.dialogue(result.interaction.interaction);
     }
+    tutorial?.action('interact', { id: result.interaction.id, kind: result.interaction.type });
   }
   render();
 }
@@ -497,6 +498,11 @@ async function boot() {
     const profile = loadProfile(storage);
     const level = levels.find(candidate => candidate.id === (requestedLevel || profile?.level) && candidate.worldMappingReady);
     await openingImage.decode().catch(() => {});
+    if (isPhoneDevice(window)) {
+      const noticeDismissed = showPhoneNotice($('#prologue'));
+      $('#boot-loading')?.remove();
+      await noticeDismissed;
+    }
     createPrologue({
       root: $('#prologue'),
       audio,

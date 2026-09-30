@@ -45,6 +45,28 @@ export function createTutorial({ getActive, persist, render, overlay }) {
   let reminder = false;
   let dialogueBusy = false;
   let introTimer = null;
+  let arrowTarget = null;
+  let destroyed = false;
+  const pointer = document.createElement('span');
+  pointer.className = 'tutorial-pointer';
+  pointer.setAttribute('aria-hidden', 'true');
+  pointer.hidden = true;
+  document.body.appendChild(pointer);
+
+  function positionPointer() {
+    if (!arrowTarget?.isConnected) { pointer.hidden = true; return; }
+    const bounds = arrowTarget.getBoundingClientRect();
+    const viewport = document.defaultView;
+    if (bounds.bottom < 0 || bounds.top > viewport.innerHeight) { pointer.hidden = true; return; }
+    const rightSide = bounds.left < 54;
+    pointer.classList.toggle('points-left', rightSide);
+    pointer.style.left = `${Math.max(6, Math.min(viewport.innerWidth - 48, rightSide ? bounds.right + 6 : bounds.left - 48))}px`;
+    pointer.style.top = `${Math.max(6, Math.min(viewport.innerHeight - 40, bounds.top + bounds.height / 2 - 18))}px`;
+    pointer.hidden = false;
+  }
+
+  document.defaultView.addEventListener('resize', positionPointer);
+  document.querySelector('#overlay')?.addEventListener('scroll', positionPointer, true);
 
   const state = () => getActive()?.state.progress.tutorial;
   const current = () => {
@@ -59,9 +81,14 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (!step || !game) return null;
     const map = game.levelPackage.map;
     const tutorial = state();
+    if (tutorial.awaitingPanelClose === step) {
+      const names = { 10: 'Adventure Journal', 11: 'Daily Board', 12: 'Bag', 13: 'Craft Table' };
+      return { text: `Close ${names[step]} to continue with Jun.`, target: null };
+    }
     if (step === 1) return { text: (tutorial.walkSteps || 0) < 5 ? `Walk around the village: ${tutorial.walkSteps || 0}/5 steps.` : 'Listen to Apprentice Jun.', target: null };
     if (step === 3 && tutorial.villagers.length) return { text: `${tutorial.villagers.length}/2 villagers heard. Talk to one more villager.`, target: null };
     if (step === 5 && !game.state.progress.inventory['rice-ball']) return { text: 'Buy another Rice Ball at the Shop before your practice battle.', target: map.route ? itemTarget(map, 'return-village') : itemTarget(map, 'shop-door') };
+    if (step === 5 && !map.route) return { text: 'Go around the sign on the north path and enter Mistwood Road for a battle.', target: itemTarget(map, 'route-entrance') };
     if (step === 6 && tutorial.bookSeen) return { text: 'Tap the glowing card for the Word Spirit you just freed.', target: null };
     if (step === 7 && tutorial.bookSeen) return { text: silverCount(game) ? 'Read Jun’s tier explanation in Spirit Book, then tap I understand tiers.' : 'In Spirit Book, tap Practice an empty skill circle until a Spirit turns Silver.', target: null };
     if (step === 9 && tutorial.boardSeen) return { text: 'Read Jun’s note on the first Restoration Set, then tap I see what this set needs.', target: null };
@@ -133,11 +160,11 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (step === 8 && type === 'partner-selection') return saveAndShow();
     if (step === 9 && type === 'open-board') { tutorial.boardSeen = true; return saveAndShow(); }
     if (step === 9 && type === 'board-acknowledged' && tutorial.boardSeen) return advance();
-    if (step === 10 && type === 'open-journal') return advance();
-    if (step === 11 && type === 'open-daily') return advance();
-    if (step === 12 && type === 'open-bag') return advance();
+    if (step === 10 && type === 'open-journal') { tutorial.awaitingPanelClose = step; return saveAndShow(); }
+    if (step === 11 && type === 'open-daily') { tutorial.awaitingPanelClose = step; return saveAndShow(); }
+    if (step === 12 && type === 'open-bag') { tutorial.awaitingPanelClose = step; return saveAndShow(); }
     if (step === 13 && type === 'open-hero') { tutorial.heroSeen = true; return saveAndShow(); }
-    if (step === 13 && type === 'open-craft' && tutorial.heroSeen) return advance();
+    if (step === 13 && type === 'open-craft' && tutorial.heroSeen) { tutorial.awaitingPanelClose = step; return saveAndShow(); }
     if (step === 14 && type === 'dictation-word') return advance();
     if (step === 15 && type === 'buy-item' && detail.id === 'forest-repellent') tutorial.repellentBought = true;
     if (step === 15 && type === 'buy-bait') tutorial.baitBought = true;
@@ -164,23 +191,39 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     const step = current();
     if (!step || object.id === 'return-village' || object.id === 'apprentice-jun') return true;
     if (step === 3 && object.type === 'npc') return true;
-    if ((step === 5 || step === 15) && object.id === 'route-entrance') return true;
+    if (step === 5 && (object.id === 'route-entrance' || object.id === 'tree-sign')) return true;
+    if (step === 15 && object.id === 'route-entrance') return true;
     return false;
   }
 
   function show() {
+    if (destroyed) return;
     const game = getActive();
     document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow'));
+    arrowTarget = null;
+    pointer.hidden = true;
+    document.body.removeAttribute('data-tutorial-step');
     const tutorial = state();
-    if (!game || !tutorial || !game.state.progress.story.flags.arrival || tutorial.step >= 16) {
-      document.body.removeAttribute('data-tutorial-step');
+    if (!game || !tutorial || !game.state.progress.story.flags.arrival || (tutorial.step >= 16 && !tutorial.pending)) {
       return;
     }
     const step = current();
     if (step) document.body.dataset.tutorialStep = String(step);
-    else document.body.removeAttribute('data-tutorial-step');
+    if (dialogueBusy && !document.querySelector('#overlay .tutorial-dialog-card')) {
+      queueMicrotask(() => {
+        if (destroyed || !dialogueBusy || document.querySelector('#overlay .tutorial-dialog-card')) return;
+        dialogueBusy = false;
+        show();
+      });
+      return;
+    }
     if (dialogueBusy) return;
     if (overlay.isOpen) { markArrow(step, tutorial, true); return; }
+    if (step && tutorial.awaitingPanelClose === step) {
+      tutorial.awaitingPanelClose = null;
+      advance();
+      return;
+    }
     if (tutorial.pending) {
       const completed = tutorial.pending;
       speak(transitions[completed] || [], () => {
@@ -248,10 +291,15 @@ export function createTutorial({ getActive, persist, render, overlay }) {
   function markArrow(step, tutorial, inOverlay) {
     let selector = '';
     if (step === 1) selector = tutorial.introStage === 'point-next' ? '.objective' : tutorial.introStage === 'point-map' ? '.guide-map' : '';
+    else if (inOverlay && tutorial.awaitingPanelClose === step) selector = '[data-close-overlay]';
     else if (inOverlay) selector = ({ 2: '[data-buy="rice-ball"]', 4: '[data-school-quiz]', 5: '[data-fight], [data-use-item="rice-ball"], [data-bag].tutorial-bag-cue, [data-attack].recommended:not([disabled])', 6: '[data-tutorial-word]', 7: '[data-tutorial-tier-done], [data-guided-spirit-practice]', 8: document.querySelector('[data-partner]:checked') ? '[data-save-partners]' : '[data-room-partners], .partner-choice', 9: '[data-board-open], [data-tutorial-board-done]', 13: '[data-craft-open]', 15: tutorial.repellentBought ? '[data-bait-word]:not(.collected), [data-bait-lesson]' : '[data-buy="forest-repellent"]' })[step] || '';
     else selector = ({ 2: '.guide-map', 3: '.objective', 4: '.guide-map', 5: '.guide-map', 6: '#book-button', 7: '#book-button', 8: '#room-button', 9: '#room-button', 10: '#story-button', 11: '#daily-button', 12: '#bag-button', 13: '#character-button', 14: '#dictation-button', 15: '.guide-map' })[step] || '';
     if (!inOverlay && step >= 6 && step <= 14 && !document.querySelector('.game-shell')?.classList.contains('atlas-menu-expanded')) selector = '.atlas-menu-toggle';
-    if (selector) document.querySelector(selector)?.classList.add('tutorial-arrow');
+    if (selector) {
+      arrowTarget = document.querySelector(selector);
+      arrowTarget?.classList.add('tutorial-arrow');
+      positionPointer();
+    }
   }
 
   const reminderTimer = setInterval(() => {
@@ -260,5 +308,5 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     show();
   }, 5000);
 
-  return { action, objective, show, skipByParent, allowsStoryInteraction, current, destroy: () => { clearInterval(reminderTimer); clearTimeout(introTimer); } };
+  return { action, objective, show, skipByParent, allowsStoryInteraction, current, destroy: () => { destroyed = true; clearInterval(reminderTimer); clearTimeout(introTimer); document.defaultView.removeEventListener('resize', positionPointer); document.querySelector('#overlay')?.removeEventListener('scroll', positionPointer, true); document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow')); document.body.removeAttribute('data-tutorial-step'); pointer.remove(); } };
 }

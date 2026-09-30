@@ -94,7 +94,7 @@ test('a full Mistwood exploration samples roughly two thirds of regional spirits
 });
 
 test('dictation selection limits school to regional lessons and scores the chosen length', async () => {
-  const { dictationLessons, chooseDictationWords, dictationResult } = await import('../src/systems/dictation.js');
+  const { dictationLessons, chooseDictationWords, chooseGuidedDictationWord, dictationResult } = await import('../src/systems/dictation.js');
   const content = read('content/generated/p5.content.json');
   const config = read('content/authored/levels/p5/level.json');
   const lessons = dictationLessons(content.words, config.regionLessons.r1);
@@ -103,6 +103,7 @@ test('dictation selection limits school to regional lessons and scores the chose
   assert.equal(chooseDictationWords(content.words, lessons[0], 5, () => .5).length, 5);
   assert.equal(chooseDictationWords(content.words, lessons[0], 10, () => .5).length, 10);
   assert.equal(chooseDictationWords(content.words, lessons[0], 'all', () => .5).length, content.words.filter(word => word.lesson === lessons[0]).length);
+  assert.equal(Array.from(chooseGuidedDictationWord(content.words, lessons[0])[0].w).length, 1);
   assert.equal(dictationResult(4, 5).message, 'Good work!');
   assert.equal(dictationResult(3, 5).message, 'Practise more and try again.');
 });

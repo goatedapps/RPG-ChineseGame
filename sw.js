@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p18-v78';
+const CACHE = 'word-spirit-quest-p18-v92';
 const CORE = [
   './', './index.html', './lab.html', './game/', './game/index.html', './game/lab.html', './manifest.webmanifest',
   './walkthrough/index.html', './walkthrough/walkthrough.css', './walkthrough/walkthrough.js',
@@ -12,7 +12,7 @@ const CORE = [
   './content/authored/campaign/r1-story.json', './content/authored/campaign/r1-sets.json', './content/authored/campaign/r2-story.json', './content/authored/campaign/r2-sets.json', './content/authored/campaign/r3-story.json', './content/authored/campaign/r3-sets.json', './content/authored/campaign/r4-story.json', './content/authored/campaign/r4-sets.json', './content/authored/campaign/r5-story.json', './content/authored/campaign/r5-sets.json', './content/authored/campaign/r6-story.json', './content/authored/campaign/r6-sets.json', './content/authored/campaign/r7-story.json', './content/authored/campaign/r7-sets.json', './content/authored/campaign/daily-quests.json',
 ];
 const RUNTIME = [
-  './src/main.js', './src/gameplay.js', './src/adventure.js', './src/collection.js', './src/tutorial.js', './src/content/loader.js', './src/ui/battleBadge.js', './src/ui/ending.js',
+  './src/main.js', './src/gameplay.js', './src/adventure.js', './src/collection.js', './src/tutorial.js', './src/content/loader.js', './src/ui/battleBadge.js', './src/ui/ending.js', './src/ui/phoneNotice.js',
   './src/battle/battle.js', './src/battle/creatureArt.js', './src/battle/creatures.js', './src/battle/damage.js',
   './src/core/assets.js', './src/core/audio.js', './src/core/events.js', './src/core/progression.js', './src/core/rng.js', './src/core/safe.js', './src/core/save.js', './src/core/state.js', './src/core/time.js',
   './src/learning/audio.js', './src/learning/examAdapters.js', './src/learning/mastery.js', './src/learning/pinyin.js', './src/learning/questions.js', './src/learning/selection.js', './src/learning/writing.js',

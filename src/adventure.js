@@ -1005,6 +1005,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Hidden Grove chest</p><h1>${escapeHtml(featured?.w || scrollType)}</h1><p>You found a ${supportsIdioms ? 'special idiom' : 'word wisdom'} scroll and 30 coins. Elite creatures now guard this clearing for advanced practice.</p><button class="primary" data-close-overlay>Continue</button></div>`);
   }
 
+  function whisperingTree() {
+    const image = 'assets/images/secrets/spirit-brush-whisper.png';
+    overlay.open(`<div class="panel secret-tree-panel"><img src="${image}" alt="A glowing Spirit Brush rests among old tree roots and drifting Word Spirits" width="960" height="720"><div><p class="panel-kicker">Scholar Village · old tree</p><h1>A picture in the roots</h1><p>The Spirit Brush left a trace here. The picture seems to hold more than it shows.</p><div class="button-row"><a class="primary" href="${image}" download="spirit-brush-whisper.png">Save picture</a><button class="secondary" data-close-overlay>Continue exploring</button></div></div></div>`);
+  }
+
   function handleInteraction(object) {
     const handlers = {
       'quest-board': questBoard,
@@ -1015,6 +1020,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       'ah-dong': ahDong,
       'treasure-chest': treasureChest,
       'hidden-grove': hiddenGrove,
+      'whispering-tree': whisperingTree,
       'word-portal': wordPortal,
       gatekeeper
     };

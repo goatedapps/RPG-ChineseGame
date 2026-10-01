@@ -40,3 +40,64 @@ test('prologue artwork resolves relative to the hosted app, not the CSS folder',
   }
   prologue.finish();
 });
+
+test('the opening subtitle carries a StegZero compatibility frame with the hidden message', async () => {
+  const { createPrologue } = await import('../src/ui/prologue.js');
+  const dom = new JSDOM('<div id="prologue"></div>', { url: 'https://example.com/' });
+  const root = dom.window.document.querySelector('#prologue');
+  createPrologue({ root, audio: {}, onComplete() {} });
+  const subtitle = root.querySelector('.prologue-title-lockup span');
+  const visible = 'A story about the words only you can save';
+  const source = fs.readFileSync(path.resolve(__dirname, '../src/ui/prologue.js'), 'utf8');
+  const hidden = [...subtitle.textContent].filter(character => character === '\u200B' || character === '\u200C');
+  const bits = hidden.map(character => character === '\u200B' ? '0' : '1').join('');
+  const bytes = bits.match(/.{8}/g).map(byte => Number.parseInt(byte, 2));
+  const messageLength = (bytes[5] << 8) | bytes[6];
+  let state = ((bytes[3] << 24) | (bytes[4] << 16) | 0xB100) >>> 0;
+  let mask = 0;
+  let maskBits = 0;
+  const decoded = [];
+  for (let offset = 11; offset < bytes.length; offset += 1) {
+    let byte = 0;
+    for (let bit = 0; bit < 8; bit += 1) {
+      if (maskBits === 0) {
+        if (state === 0) state = 0x9E3779B9;
+        state ^= state << 13;
+        state >>>= 0;
+        state ^= state >>> 17;
+        state >>>= 0;
+        state ^= state << 5;
+        state >>>= 0;
+        mask = state;
+        maskBits = 32;
+      }
+      const encodedBit = Number(bits[(offset * 8) + bit]);
+      byte = (byte << 1) | (encodedBit ^ (mask & 1));
+      mask >>>= 1;
+      maskBits -= 1;
+    }
+    decoded.push(byte);
+  }
+  const message = new TextDecoder().decode(new Uint8Array(decoded));
+  let fingerprint = 0x811c9dc5;
+  for (const character of message) {
+    fingerprint ^= character.charCodeAt(0);
+    fingerprint = Math.imul(fingerprint, 0x01000193) >>> 0;
+  }
+  assert.equal(message.length, 165);
+  assert.equal(fingerprint.toString(16), 'db00b089');
+  assert.equal(source.includes(message), false);
+  assert.equal(subtitle.childNodes.length, 1);
+  const selection = dom.window.document.createRange();
+  selection.selectNodeContents(subtitle);
+  assert.equal(selection.toString(), subtitle.textContent);
+  assert.equal(subtitle.textContent.replace(/[\u200B\u200C]/g, ''), visible);
+  for (const word of subtitle.textContent.split(' ')) assert.match(word, /^[^\u200B\u200C]+[\u200B\u200C]*$/);
+  assert.equal(subtitle.getAttribute('aria-label'), visible);
+  assert.equal(bytes[0], 0xB1);
+  assert.equal(bytes[1], 0x00);
+  assert.equal(bytes[2], 1);
+  assert.equal(messageLength, 165);
+  assert.equal(hidden.length, (11 + messageLength) * 8);
+  assert.ok(subtitle.outerHTML.includes('\u200B'));
+});

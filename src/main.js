@@ -14,7 +14,7 @@ import { createCollection } from './collection.js?p24';
 import { createAdventure } from './adventure.js?p34';
 import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js';
-import { createPrologue } from './ui/prologue.js?p22';
+import { createPrologue } from './ui/prologue.js?p23';
 import { isPhoneDevice, showPhoneNotice } from './ui/phoneNotice.js';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p18';

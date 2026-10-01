@@ -417,6 +417,19 @@
           "Explore the fog to find the Muddle Pavilion and the gate to Harvest Crossing."
         ]
       }
+    },
+    {
+      "id": "whispering-tree",
+      "type": "tree",
+      "name": "Old tree",
+      "x": 39,
+      "y": 26,
+      "solid": true,
+      "interaction": {
+        "kind": "secret",
+        "title": "Old tree",
+        "lines": ["A faint glow stirs among the roots."]
+      }
     }
   ]
 }

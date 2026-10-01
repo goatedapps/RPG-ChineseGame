@@ -1,5 +1,25 @@
 import { escapeHtml } from './dom.js';
 
+const SPLASH_SECRET_FRAME = 'sQABWhcApUKiOn6dT70z7DdHMz0yKd4jJ24YeLDsfHcjVeM/I2EYN08Uh/4GFN6ihbfZ3BwrUNHQx/BNZGdC06WyDUZXukBV7gahA1pyZQsDNoBI3wegMP1JsR4h06/08C9v8lYzZA5f7uSuOwHktuXSYdYFRVeS0dJszxfHXaCFysip3J2LKkJhJM2LZyhfRPevDputmlrcnDl3dSN1y/STOKZbMnMBfX8xrZIsOPw=';
+const SPLASH_SUBTITLE = 'A story about the words only you can save';
+
+function encodedSplashSubtitle() {
+  const carriers = [...atob(SPLASH_SECRET_FRAME)].flatMap(character =>
+    [...character.charCodeAt(0).toString(2).padStart(8, '0')].map(bit => bit === '0' ? '\u200B' : '\u200C')
+  );
+  const words = SPLASH_SUBTITLE.split(' ');
+  const perSlot = Math.ceil(carriers.length / (words.length - 1));
+  let carrierIndex = 0;
+  return words.map((word, index) => {
+    if (index === words.length - 1) return word;
+    const chunk = carriers.slice(carrierIndex, carrierIndex + perSlot).join('');
+    carrierIndex += perSlot;
+    return word + chunk + ' ';
+  }).join('');
+}
+
+const SPLASH_SUBTITLE_ENCODED = encodedSplashSubtitle();
+
 export const PROLOGUE_SLIDES = Object.freeze([
   {
     image: 'assets/images/intro/dictionary-tree.jpg',
@@ -61,7 +81,7 @@ export function createPrologue({ root, audio, onComplete, skippable = true }) {
     root.hidden = false;
     root.innerHTML = `<section class="prologue-screen prologue-splash" style="--prologue-image:url('${escapeHtml(imageUrl)}')" aria-label="Word Spirit Quest introduction">
       <div class="prologue-vignette"></div>
-      <div class="prologue-title-lockup"><p>字灵</p><h1>Word Spirit Quest</h1><span>A story about the words only you can save</span></div>
+      <div class="prologue-title-lockup"><p>字灵</p><h1>Word Spirit Quest</h1><span aria-label="${SPLASH_SUBTITLE}">${SPLASH_SUBTITLE_ENCODED}</span></div>
       <div class="prologue-actions"><button class="prologue-begin" data-prologue-begin>Begin the story</button>${skippable ? '<a class="prologue-skip" href="#game" data-prologue-skip>Skip intro</a>' : ''}</div>
     </section>`;
     root.querySelector('[data-prologue-begin]').addEventListener('click', () => {

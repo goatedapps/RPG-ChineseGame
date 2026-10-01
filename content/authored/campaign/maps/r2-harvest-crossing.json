@@ -82,6 +82,7 @@
     { "id": "return-gate", "type": "sign", "x": 24, "y": 30, "solid": true, "interaction": { "kind": "travel", "title": "Road to Scholar Village", "lines": ["Return to Scholar Village."] } },
     { "id": "next-region-gate", "type": "sign", "x": 46, "y": 16, "solid": true, "interaction": { "kind": "travel", "title": "Golden Reed Way", "lines": ["Enter the misty battlefield. The far gate leads to Tidewater Bay."] } },
     { "id": "truth-terrace", "type": "sign", "x": 43, "y": 25, "solid": true, "interaction": { "kind": "secret", "title": "Truth Terrace", "lines": ["Faded writing covers the stone."] } },
+    { "id": "harvest-decoy-tree", "type": "tree", "x": 47, "y": 30, "solid": true, "interaction": { "kind": "dialogue", "title": "Old tree", "lines": ["Not so easy! The real easter egg is somewhere else in this town"] } },
     { "id": "quest-board", "type": "sign", "x": 18, "y": 16, "solid": true, "interaction": { "kind": "daily", "title": "Crossing Board", "lines": ["Daily work keeps the market clear."] } },
     { "id": "field-sign", "type": "sign", "x": 8, "y": 10, "solid": true, "interaction": { "kind": "dialogue", "title": "Crossing sign", "lines": ["Harvest Crossing is safe. Visit the Schoolhouse, market and Rest House before setting out."] } },
     { "id": "market-sign", "type": "sign", "x": 17, "y": 10, "solid": true, "interaction": { "kind": "dialogue", "title": "Crossing sign", "lines": ["Golden Reed Way: take the east gate for creatures and Word Spirits."] } },

@@ -702,6 +702,11 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .scroll-grid article p { margin: 3px 0 0; font: 15px/1.55 var(--font-chinese); }
 .scroll-grid small { color: #647180; }
 .storyteller-panel { border-top: 8px solid #78689c; }
+.harvest-pond-panel { width: min(760px,100%); max-height: min(82vh,720px); overflow: auto; border-color: #638e89; background: #f5efda; }
+.harvest-pond-panel .pond-header { position: sticky; top: -1px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 5px 0 14px; background: #f5efda; }
+.harvest-pond-panel .pond-header h1 { margin: 0; }
+.harvest-pond-panel .pond-passage { white-space: pre-line; user-select: text; color: #314d4c; font: 17px/1.75 Georgia, serif; }
+#world { touch-action: manipulation; }
 .storyteller-welcome { display: flex; align-items: center; gap: 13px; margin: 8px 0 18px; padding: 12px 14px; border-radius: 10px; background: #eee9f5; }
 .storyteller-welcome span { display: grid; place-items: center; width: 46px; height: 46px; flex: 0 0 auto; color: white; border-radius: 50%; background: #78689c; font: 900 24px var(--font-chinese); }
 .storyteller-welcome p { margin: 0; font-weight: 800; }

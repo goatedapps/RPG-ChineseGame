@@ -23,6 +23,7 @@ import { routeKey } from './systems/regions.js';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
 import { completeDictionaryHeart, finaleLedger } from './systems/ending.js';
+import { harvestPondPassage } from './content/harvestPond.js';
 import { showFinalBlow, showFinalReform, showFinale } from './ui/ending.js';
 
 function addUnique(list, value) {
@@ -1010,6 +1011,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     overlay.open(`<div class="panel secret-tree-panel"><img src="${image}" alt="A glowing Spirit Brush rests among old tree roots and drifting Word Spirits" width="960" height="720"><div><p class="panel-kicker">Scholar Village · old tree</p><h1>A picture in the roots</h1><p>The Spirit Brush left a trace here. The picture seems to hold more than it shows.</p><div class="button-row"><a class="primary" href="${image}" download="spirit-brush-whisper.png">Save picture</a><button class="secondary" data-close-overlay>Continue exploring</button></div></div></div>`);
   }
 
+  function harvestPond() {
+    overlay.open(`<div class="panel harvest-pond-panel"><div class="pond-header"><div><p class="panel-kicker">Harvest Crossing / Schoolhouse Pond</p><h1>The Brush and the wandering pond</h1></div><button class="secondary" data-close-overlay>Close</button></div><p class="pond-passage">${escapeHtml(harvestPondPassage)}</p></div>`);
+  }
+
   function handleInteraction(object) {
     const handlers = {
       'quest-board': questBoard,
@@ -1021,6 +1026,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       'treasure-chest': treasureChest,
       'hidden-grove': hiddenGrove,
       'whispering-tree': whisperingTree,
+      'harvest-decoy-tree': () => overlay.dialogue({ title: 'Old tree', lines: ['Not so easy! The real easter egg is somewhere else in this town'] }),
       'word-portal': wordPortal,
       gatekeeper
     };
@@ -1130,5 +1136,5 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     return active().levelPackage.region.id;
   }
 
-  return { initialize, recordEvent, questBoard, scrollLibrary, scrollSpot, collectDailyScroll, storyJournal, storyteller, handleInteraction, gatekeeper, startBoss };
+  return { initialize, recordEvent, questBoard, scrollLibrary, scrollSpot, collectDailyScroll, storyJournal, storyteller, handleInteraction, harvestPond, gatekeeper, startBoss };
 }

@@ -528,17 +528,31 @@ export function createRenderer(canvas, map) {
     }
   }
   let tick = 0;
+  function offsets(player) {
+    const playerPx = player.x * TILE;
+    const playerPy = player.y * TILE;
+    return {
+      x: Math.round(Math.max(0, Math.min(map.width * TILE - canvas.width, playerPx - canvas.width / 2 + TILE / 2))),
+      y: Math.round(Math.max(0, Math.min(map.height * TILE - canvas.height, playerPy - canvas.height / 2 + TILE / 2)))
+    };
+  }
+  function tileAtClientPoint(clientX, clientY, player) {
+    const bounds = canvas.getBoundingClientRect();
+    if (!bounds.width || !bounds.height || clientX < bounds.left || clientX >= bounds.right || clientY < bounds.top || clientY >= bounds.bottom) return null;
+    const offset = offsets(player);
+    return {
+      x: Math.floor((offset.x + (clientX - bounds.left) * canvas.width / bounds.width) / TILE),
+      y: Math.floor((offset.y + (clientY - bounds.top) * canvas.height / bounds.height) / TILE)
+    };
+  }
   function render(state) {
     lastState = state;
     tick += 1;
     const viewWidth = canvas.width;
     const viewHeight = canvas.height;
-    const worldWidth = map.width * TILE;
-    const worldHeight = map.height * TILE;
     const playerPx = state.player.x * TILE;
     const playerPy = state.player.y * TILE;
-    const offsetX = Math.round(Math.max(0, Math.min(worldWidth - viewWidth, playerPx - viewWidth / 2 + TILE / 2)));
-    const offsetY = Math.round(Math.max(0, Math.min(worldHeight - viewHeight, playerPy - viewHeight / 2 + TILE / 2)));
+    const { x: offsetX, y: offsetY } = offsets(state.player);
     const firstColumn = Math.floor(offsetX / TILE);
     const firstRow = Math.floor(offsetY / TILE);
     const lastColumn = Math.min(map.width - 1, Math.ceil((offsetX + viewWidth) / TILE));
@@ -633,7 +647,7 @@ export function createRenderer(canvas, map) {
       context.restore();
     }
   }
-  return { render, dispose() { disposed = true; } };
+  return { render, tileAtClientPoint, dispose() { disposed = true; } };
 }
 
 export { TILE };

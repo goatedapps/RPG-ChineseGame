@@ -2,7 +2,8 @@ import { createEventBus } from './core/events.js';
 import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p11';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p22';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p27';
+import { createRenderer } from './world/renderer.js?p28';
+import { isHarvestPondCenter } from './world/harvestPond.js';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
 import { createOverlay } from './ui/overlay.js?p10k';
@@ -11,7 +12,7 @@ import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
 import { createGameplay } from './gameplay.js?p51';
 import { createCollection } from './collection.js?p24';
-import { createAdventure } from './adventure.js?p34';
+import { createAdventure } from './adventure.js?p36';
 import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p23';
@@ -62,6 +63,7 @@ let adventure = null;
 let tutorial = null;
 let prologueCompleted = false;
 let lastRewardState = null;
+let lastPondTap = null;
 
 function render() {
   if (!active) return;
@@ -540,6 +542,25 @@ async function boot() {
   $('#story-button').addEventListener('click', () => { adventure?.storyJournal(); tutorial?.action('open-journal'); });
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
   $('#overlay').addEventListener('overlay:changed', () => tutorial?.show());
+  const pondCanOpen = event => {
+    if (!active || overlay.isOpen || gameplay?.battleInProgress() || tutorial?.current()) return false;
+    const tile = active.renderer.tileAtClientPoint(event.clientX, event.clientY, active.state.player);
+    return isHarvestPondCenter(active.levelPackage.map, tile);
+  };
+  $('#world').addEventListener('dblclick', event => {
+    if (event.button !== 0 || !pondCanOpen(event)) return;
+    event.preventDefault();
+    adventure?.harvestPond();
+  });
+  $('#world').addEventListener('pointerup', event => {
+    if (event.pointerType === 'mouse' || !pondCanOpen(event)) { lastPondTap = null; return; }
+    const now = performance.now();
+    if (lastPondTap && now - lastPondTap < 750) {
+      lastPondTap = null;
+      event.preventDefault();
+      adventure?.harvestPond();
+    } else lastPondTap = now;
+  });
   $('#sound-button').addEventListener('click', event => {
     if (!active) return;
     active.state.settings.sound = !active.state.settings.sound;

@@ -65,7 +65,7 @@ Production URLs:
 - Preserve old saves through validated migrations, last-known-good recovery and explicit fresh-start confirmation.
 - Keep legacy curriculum saves under the selectable Player 1 profile; scope new saves and recovery copies to the selected player.
 - Never silently discard an invalid or future-version save.
-- Store the changeable parent PIN as a salted code rather than plain text.
+- Default the changeable parent PIN to 0000, migrate the former default, and store it as a salted code rather than plain text.
 - Avoid timers, guilt messages, paid randomness and purchasable learning progress.
 
 ## Engineering rules

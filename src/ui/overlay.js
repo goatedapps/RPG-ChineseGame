@@ -55,8 +55,12 @@ export function createOverlay(element) {
     element.setAttribute('aria-modal', 'true');
     const close = element.querySelector('[data-close-overlay]');
     if (close) close.addEventListener('click', api.close, { once: true });
-    (focusSelector ? element.querySelector(focusSelector) : null)?.focus();
-    if (!element.contains(document.activeElement)) element.querySelector('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href]')?.focus();
+    const explicitFocus = focusSelector ? element.querySelector(focusSelector) : null;
+    const neutralFocus = element.querySelector('.panel h1, .panel h2, .dialog-card .speaker, .battle-scene h1, .battle-scene h2') || element.firstElementChild;
+    const firstControl = element.querySelector('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href]');
+    const focusTarget = explicitFocus || (element.querySelector('.tutorial-dialog-card') ? firstControl : neutralFocus);
+    if (focusTarget && !focusTarget.matches('button, input, textarea, select, a[href]')) focusTarget.tabIndex = -1;
+    focusTarget?.focus({ preventScroll: true });
     typeDialogue();
   }
   function close() {

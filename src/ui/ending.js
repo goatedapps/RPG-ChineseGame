@@ -22,9 +22,41 @@ const storyScenes = [
   }
 ];
 
-export function showFinalBlow(overlay, heroArt, bossArt, onContinue) {
-  overlay.open(`<section class="finale-screen final-blow-screen" aria-label="Final victory over the Great Forgetter"><div class="final-blow-arena"><div class="final-blow-hero">${heroArt}</div><div class="final-blow-boss final-blow-left" aria-hidden="true">${bossArt}</div><div class="final-blow-boss final-blow-right" aria-hidden="true">${bossArt}</div><div class="final-blow-slash" aria-hidden="true"></div><div class="final-blow-flash" aria-hidden="true"></div></div><div class="final-blow-caption"><p class="ending-eyebrow">The final stroke</p><h1>The Great Forgetter’s spell is broken</h1><p>The Spirit Brush is whole. The words can return.</p><button class="primary" type="button" data-final-blow-continue>Continue the story</button></div></section>`, { dismissible: false });
-  document.querySelector('[data-final-blow-continue]').addEventListener('click', onContinue, { once: true });
+export function showFinalBlow(overlay, onContinue) {
+  const frames = [
+    { image: 'assets/images/ending/final-hero-sword.webp', title: 'One final stroke', body: 'The hero drew the gathered Brush Fragments into a blade of light.', action: 'Strike' },
+    { image: 'assets/images/ending/final-forgetter-split.webp', title: 'The spell breaks', body: 'The Great Forgetter’s vast shadow split apart, and the stolen words began to return.', action: 'Continue the story' }
+  ];
+  let index = 0;
+  const render = () => {
+    const frame = frames[index];
+    overlay.open(`<section class="finale-screen ending-story-screen final-blow-screen final-blow-frame-${index + 1}" aria-label="Final strike, part ${index + 1} of ${frames.length}"><img class="ending-story-image" src="${frame.image}" alt="${index ? 'The towering Great Forgetter divides into two dissolving halves beneath the hero’s glowing strike' : 'The hero lunges in side view with a glowing sword'}"><div class="ending-story-shade"></div><article class="ending-story-card"><p class="ending-eyebrow">The final stroke · ${index + 1} / ${frames.length}</p><h1>${frame.title}</h1><p>${frame.body}</p><button class="primary" type="button" data-final-blow-continue>${frame.action}</button></article></section>`, { dismissible: false });
+    document.querySelector('[data-final-blow-continue]').addEventListener('click', () => {
+      if (index === frames.length - 1) onContinue();
+      else { index += 1; render(); }
+    }, { once: true });
+  };
+  render();
+}
+
+export function showFinalReform(overlay, dialogue, onComplete) {
+  const images = {
+    'Great Forgetter': 'assets/images/ending/final-forgetter-reflects.webp',
+    'Keeper Ming': 'assets/images/ending/final-keeper-ming.webp',
+    Hero: 'assets/images/ending/final-hero-sword.webp',
+    'Spirit Brush': 'assets/images/ending/final-brush-restored.webp'
+  };
+  let index = 0;
+  const render = () => {
+    const line = dialogue[index];
+    const brush = line.speaker === 'Spirit Brush';
+    overlay.open(`<section class="finale-screen ending-story-screen final-reform-screen${brush ? ' final-brush-screen' : ''}" data-speaker="${escapeHtml(line.speaker)}" aria-label="Final conversation, part ${index + 1} of ${dialogue.length}"><img class="ending-story-image" src="${images[line.speaker]}" alt="${escapeHtml(brush ? 'The seven strokes join in the restored Spirit Brush before the Great Dictionary Tree' : line.speaker)}"><div class="ending-story-shade"></div><article class="ending-story-card"><p class="ending-eyebrow">${brush ? 'The Spirit Brush is whole' : `The final conversation · ${index + 1} / ${dialogue.length}`}</p><h1>${escapeHtml(brush ? 'Final Stroke restored' : line.speaker)}</h1><p>${escapeHtml(line.say)}</p><button class="primary" type="button" data-final-reform-next>${index === dialogue.length - 1 ? 'See the Tree awaken' : 'Continue'}</button></article></section>`, { dismissible: false });
+    document.querySelector('[data-final-reform-next]').addEventListener('click', () => {
+      if (index === dialogue.length - 1) onComplete();
+      else { index += 1; render(); }
+    }, { once: true });
+  };
+  render();
 }
 
 export function showFinale(overlay, ledger, onReturn) {

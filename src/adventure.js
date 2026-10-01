@@ -1,7 +1,6 @@
 import { makeExamQuestion } from './learning/questions.js';
 import { recordAnswer, tierOf } from './learning/mastery.js?p10f';
 import { checkPassageAnswer } from './systems/reading.js?p10f';
-import { regionPathGuide } from './systems/regionGuide.js?p3';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p18';
 import { escapeHtml } from './ui/dom.js';
@@ -24,7 +23,7 @@ import { routeKey } from './systems/regions.js';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
 import { completeDictionaryHeart, finaleLedger } from './systems/ending.js';
-import { showFinalBlow, showFinale } from './ui/ending.js';
+import { showFinalBlow, showFinalReform, showFinale } from './ui/ending.js';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -197,32 +196,28 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const commands = game.levelPackage.regionStory.scenes[sceneId] || [];
     const dialogue = commands.filter(command => command.say);
     let index = 0;
-    const next = () => {
-      if (index >= dialogue.length) {
-        const result = applyStoryCommands(game.state.progress.story, commands);
-        game.state.progress.story = result.story;
-        for (const key of result.rewards) addUnique(game.state.progress.inventory.keyItems, key);
-        if (sceneId === 'reform') {
-          if (game.levelPackage.region.id === 'r1') game.state.progress.story.flags.hiddenGrove = true;
-          game.state.player.coins += 100;
-          addUnique(game.state.progress.room.trophies, game.levelPackage.regionStory.fragmentName || (game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke'));
-        }
-        commit();
-        overlay.close();
-        onDone?.();
-        return;
+    const finalReform = sceneId === 'reform' && game.levelPackage.region.id === 'r7';
+    const finish = () => {
+      const result = applyStoryCommands(game.state.progress.story, commands);
+      game.state.progress.story = result.story;
+      for (const key of result.rewards) addUnique(game.state.progress.inventory.keyItems, key);
+      if (sceneId === 'reform') {
+        if (game.levelPackage.region.id === 'r1') game.state.progress.story.flags.hiddenGrove = true;
+        game.state.player.coins += 100;
+        addUnique(game.state.progress.room.trophies, game.levelPackage.regionStory.fragmentName || (game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke'));
       }
+      commit();
+      if (!finalReform) overlay.close();
+      onDone?.();
+    };
+    if (finalReform) return showFinalReform(overlay, dialogue, finish);
+    const next = () => {
+      if (index >= dialogue.length) return finish();
       const command = dialogue[index++];
       overlay.open(`<div class="dialog-card"><p class="speaker">${escapeHtml(command.speaker)}</p><p>${escapeHtml(command.say)}</p><button class="primary" data-scene-next>${index === dialogue.length ? 'Continue' : 'Next'}</button></div>`, { dismissible: false });
       document.querySelector('[data-scene-next]').addEventListener('click', next, { once: true });
     };
     next();
-  }
-
-  function pathGuideMarkup(game) {
-    const paths = regionPathGuide(game.levelPackage, game.state.progress, game.state.player.level);
-    if (!paths.length) return '';
-    return `<section class="path-guide" aria-label="Explore this region"><div class="path-guide-heading"><div><p class="panel-kicker">Choose your route</p><h2>Where to explore next</h2></div><span>All paths are open</span></div><div class="path-guide-grid">${paths.map(path => `<article class="path-guide-card${path.suggested ? ' suggested' : ''}"><div class="path-guide-card-head"><h3>${escapeHtml(path.name)}</h3>${path.suggested ? '<strong>Suggested next</strong>' : ''}</div><p>Lesson ${path.lesson} · ${escapeHtml(path.direction)}</p><p>Creatures Lv ${path.minimum}–${path.maximum} · ${escapeHtml(path.challenge)} for your hero</p><small>${path.collected}/${path.total} spirits found</small></article>`).join('')}</div><p class="path-guide-note">This is a guide, not a required order. Explore whichever path you like.</p></section>`;
   }
 
   function tidewaterJournalMarkup(game, story) {
@@ -499,7 +494,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const routeNote = regionNumber < 7 ? `<p>Explore ${escapeHtml(game.levelPackage.campaigns[game.levelPackage.region.id].route.name)}${game.levelPackage.map.route ? '' : ' beyond the town gate'}. ${story.bossDefeated ? postBossTask : 'Find its pavilion and onward gate.'}</p>` : `<p>Explore Crown Veil Trail beyond the summit exit. Find the hidden Final Seal Pavilion after freeing enough spirits.</p>`;
       const rescueJournal = tidewaterJournalMarkup(game, story) + chapterJournalMarkup(game, story);
       const returnAction = game.levelPackage.map.route ? 'leave' : 'back';
-      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p>${rescueJournal}<p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} ${[3, 4, 6].includes(regionNumber) ? 'Optional neighbour requests' : 'Helped neighbours'}: ${requestsDone}/${requestTotal}</p>${routeNote}<p>${bossReady ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}${!chapterReady ? ' · complete the chapter investigation' : ''}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div>${pathGuideMarkup(game)}<div class="button-row"><button class="secondary" data-travel-previous>${returnAction === 'leave' ? 'Return to town' : 'Enter the return road'}</button></div></div>`);
+      overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region ${regionNumber}</p><h1>${escapeHtml(game.levelPackage.region.name)} Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in ${escapeHtml(game.levelPackage.region.name)}</p><p class="${story.storiesRead.length ? 'done' : ''}">${story.storiesRead.length ? '✓' : '○'} Heard a regional story</p>${rescueJournal}<p class="${requestsDone === requestTotal ? 'done' : ''}">${requestsDone === requestTotal ? '✓' : '○'} ${[3, 4, 6].includes(regionNumber) ? 'Optional neighbour requests' : 'Helped neighbours'}: ${requestsDone}/${requestTotal}</p>${routeNote}<p>${bossReady ? `✓ ${escapeHtml(game.levelPackage.regionStory.bossPlace)} gate ready` : `○ ${escapeHtml(game.levelPackage.regionStory.bossPlace)}: ${gate.bronze}/${gate.required} Bronze · ${escapeHtml(game.levelPackage.regionStory.gateKeyName)} ${gate.lantern ? 'ready' : 'missing'}${!chapterReady ? ' · complete the chapter investigation' : ''}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? `✓ ${escapeHtml(fragmentName)} restored` : `○ Face the ${escapeHtml(game.levelPackage.regionStory.bossName)}`}</p>${regionNumber < 7 ? `<p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p>` : ''}</div><div class="button-row"><button class="secondary" data-travel-previous>${returnAction === 'leave' ? 'Return to town' : 'Enter the return road'}</button></div></div>`);
       document.querySelector('[data-travel-previous]').addEventListener('click', () => onEnterRoute?.(returnAction));
       return;
     }
@@ -513,7 +508,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       overlay.open('<div class="panel result-panel"><h1>The adventure begins</h1><p>Visit the Storyteller to hear the first village story, then take the north gate to Mistwood Road when you are ready to meet wild creatures.</p><button class="primary" data-close-overlay>Explore</button></div>');
     });
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>Explore Mistwood Road through the north village gate; discover the Muddle Pavilion and the eastern town gate.</p><p>${gate.open ? '✓ Muddle Pavilion ready' : `○ Muddle Pavilion: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p><p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p></div>${pathGuideMarkup(game)}${story.bossDefeated ? '<div class="button-row"><button class="secondary" data-museum>Mistake Museum</button></div>' : ''}</div>`);
+    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Region 1</p><h1>Adventure Journal</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="story-timeline"><p class="done">✓ Arrived in Scholar Village</p><p class="${story.flags.tutorial ? 'done' : ''}">${story.flags.tutorial ? '✓' : '○'} Found the Spirit Brush handle</p><p class="${story.storiesRead.includes(1) ? 'done' : ''}">${story.storiesRead.includes(1) ? '✓' : '○'} Heard the Camping Forest story</p><p>○ Help Xiaoqiang, Mr Lin and Chef Mei</p><p>Explore Mistwood Road through the north village gate; discover the Muddle Pavilion and the eastern town gate.</p><p>${gate.open ? '✓ Muddle Pavilion ready' : `○ Muddle Pavilion: ${gate.bronze}/${gate.required} Bronze · Cave Lantern ${gate.lantern ? 'ready' : 'missing'}`}</p><p class="${story.bossDefeated ? 'done' : ''}">${story.bossDefeated ? '✓ Dawn Stroke restored' : '○ Reform the Muddle King'}</p><p class="${story.flags.gateDictationPassed ? 'done' : ''}">${gateTask}</p></div>${story.bossDefeated ? '<div class="button-row"><button class="secondary" data-museum>Mistake Museum</button></div>' : ''}</div>`);
     document.querySelector('[data-museum]')?.addEventListener('click', mistakeMuseum);
   }
 
@@ -633,24 +628,24 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       if (game.levelPackage.region.id === 'r7') return dictionaryHeart();
       return overlay.dialogue({ title: game.levelPackage.map.objects?.find(object => object.id === 'boss-pavilion-building')?.name || 'Boss Pavilion', lines: ['The boss has left this pavilion. Find the onward gate to continue your journey.'] });
     }
-    if (game.levelPackage.region.id === 'r3' && !story.flags.tideEvidenceCompared && !game.state.settings.testMode) {
+    if (game.levelPackage.region.id === 'r3' && !story.flags.tideEvidenceCompared) {
       const missing = tidewaterCluesComplete(story, game.levelPackage.regionStory)
         ? 'Bring the three clues and the Harbour Chronometer to Keeper Lan before challenging the Idle Clock.'
         : 'Collect Word Spirits and speak to Fisher Yu, Maker Chen and Watcher An for their rescue clues, then return to Keeper Lan.';
       return overlay.dialogue({ title: 'Tide Pavilion', lines: [missing] });
     }
-    if (game.levelPackage.region.id === 'r4' && !story.flags.lanternRehearsed && !game.state.settings.testMode) {
+    if (game.levelPackage.region.id === 'r4' && !story.flags.lanternRehearsed) {
       return overlay.dialogue({ title: 'Mirror Pavilion', lines: ['Prepare the three stage cues with Min, Qiao and Su. Travel back through Tidewater Bay, Harvest Crossing and Scholar Village for their memories, then bring the Lantern Stage Pass to Director Luo for rehearsal.'] });
     }
-    if (game.levelPackage.region.id === 'r6' && !story.flags.groveAccountCompared && !game.state.settings.testMode) {
+    if (game.levelPackage.region.id === 'r6' && !story.flags.groveAccountCompared) {
       return overlay.dialogue({ title: 'Memory Pavilion', lines: ['Collect Word Spirits and speak to Mo, Yu and He to recover their evidence. Bring all three parts and the Oracle Rubbing Kit to Curator Wen before challenging the Give-Up Ghost.'] });
     }
     const gate = gateStatus(game.levelPackage, game.state.progress, game.state.progress.inventory, game.levelPackage.regionStory.gateBronzePct);
-    const open = gate.open || game.state.settings.testMode;
+    const open = gate.open;
     const bossName = game.levelPackage.regionStory.bossName || 'Muddle King';
     const place = game.levelPackage.regionStory.bossPlace || 'Muddle Cave';
     const keyName = game.levelPackage.regionStory.gateKeyName || 'Cave Lantern';
-    overlay.open(`<div class="panel"><p class="panel-kicker">${escapeHtml(place)} gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>You need <b>${gate.required} Word Spirits</b> at Bronze or better. You have ${gate.bronze}.</p><p>${escapeHtml(keyName)}: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.${game.state.settings.testMode ? ' Parent test mode is active.' : ''}</p><div class="button-row">${open ? `<button class="primary" data-boss-start>Challenge ${escapeHtml(bossName)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
+    overlay.open(`<div class="panel"><p class="panel-kicker">${escapeHtml(place)} gate</p><h1>${open ? 'The gate is open' : 'Build your strength'}</h1><p>You need <b>${gate.required} Word Spirits</b> at Bronze or better. You have ${gate.bronze}.</p><p>${escapeHtml(keyName)}: <b>${gate.lantern ? 'ready' : 'not yet'}</b>.</p><div class="button-row">${open ? `<button class="primary" data-boss-start>Challenge ${escapeHtml(bossName)}</button>` : ''}<button class="secondary" data-close-overlay>Return</button></div></div>`);
     document.querySelector('[data-boss-start]')?.addEventListener('click', startBoss, { once: true });
   }
 
@@ -735,7 +730,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
           audio?.setScene('victory');
           const bossArt = creatureSvg(game.levelPackage.region.boss, '');
           if (game.levelPackage.region.id === 'r7') {
-            showFinalBlow(overlay, heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero'), bossArt, bossWin);
+            showFinalBlow(overlay, bossWin);
             return;
           }
           overlay.open(`<article class="battle-scene boss-victory-scene"><div class="boss-victory-stage"><div class="boss-victory-hero">${heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero')}</div><div class="boss-victory-boss boss-split-left" aria-hidden="true">${bossArt}</div><div class="boss-victory-boss boss-split-right" aria-hidden="true">${bossArt}</div><div class="boss-victory-slash" aria-hidden="true"></div></div><div class="battle-console"><p class="panel-kicker">Victory</p><h1>${escapeHtml(bossName)} defeated!</h1><p>Your final spell dealt ${damage} damage. The Spirit Brush is ready to be restored.</p><button class="primary" data-boss-victory>Continue the story</button></div></article>`, { dismissible: false });
@@ -783,7 +778,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   }
 
   function bossWin() {
-    audio?.setScene('village');
+    if (active().levelPackage.region.id !== 'r7') audio?.setScene('village');
     playScene('reform', () => {
       audio?.sfx('majorReward');
       const game = active();
@@ -808,13 +803,13 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
 
   function nextRegionGate() {
     const game = active();
-    if (game.levelPackage.region.id === 'r3' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.tideWhaleRescued && !game.state.settings.testMode) {
+    if (game.levelPackage.region.id === 'r3' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.tideWhaleRescued) {
       return overlay.dialogue({ title: 'Road to Lantern Theatre', lines: ['The Clock Tower is moving, but the whale is still in the shallows. Return to the Whale Rescue Dock and help the crew guide her to deep water first.'] });
     }
-    if (game.levelPackage.region.id === 'r4' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.lanternPerformed && !game.state.settings.testMode) {
+    if (game.levelPackage.region.id === 'r4' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.lanternPerformed) {
       return overlay.dialogue({ title: 'Road to Festival City', lines: ['The Mirror is gone, but the company has not performed its finished play. Return to Lantern Theatre first.'] });
     }
-    if (game.levelPackage.region.id === 'r6' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.groveDisplayed && !game.state.settings.testMode) {
+    if (game.levelPackage.region.id === 'r6' && game.state.progress.story.bossDefeated && !game.state.progress.story.flags.groveDisplayed) {
       return overlay.dialogue({ title: 'Road to Treehouse Summit', lines: ['The Give-Up Ghost is gone, but the ancient account is still unfinished. Return to the Excavation Lodge and complete the display first.'] });
     }
     const currentNumber = Number(game.levelPackage.region.id.slice(1));
@@ -827,7 +822,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const available = gateDictationPool(words, game.state.progress.words).length;
     const fragmentReady = Boolean(game.state.progress.story.bossDefeated);
     const passed = Boolean(game.state.progress.story.flags.gateDictationPassed);
-    const ready = (fragmentReady && passed) || game.state.settings.testMode;
+    const ready = fragmentReady && passed;
     const fragmentName = game.levelPackage.regionStory.fragmentName || (currentNumber === 1 ? 'Dawn Stroke' : 'Truth Stroke');
     const travel = async () => {
       game.state.settings.unlockedRegions = Math.max(nextNumber, game.state.settings.unlockedRegions);

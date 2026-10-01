@@ -1,4 +1,5 @@
 const PIN_KEY = 'wsq-next-parent-pin';
+const PIN_DEFAULT_MIGRATION_KEY = 'wsq-parent-pin-default-v2';
 const PIN_SALT = 'word-spirit-parent|modular|v1|';
 
 function hash(value) {
@@ -10,8 +11,10 @@ function hash(value) {
   return output.toString(16).padStart(8, '0');
 }
 
-export function ensureParentPin(storage, defaultPin = '1056') {
-  if (!storage.getItem(PIN_KEY)) storage.setItem(PIN_KEY, `PIN1.${hash(defaultPin)}`);
+export function ensureParentPin(storage, defaultPin = '0000') {
+  const saved = storage.getItem(PIN_KEY);
+  if (!saved || (!storage.getItem(PIN_DEFAULT_MIGRATION_KEY) && saved === `PIN1.${hash('1056')}`)) storage.setItem(PIN_KEY, `PIN1.${hash(defaultPin)}`);
+  storage.setItem(PIN_DEFAULT_MIGRATION_KEY, '1');
 }
 
 export function parentPinMatches(storage, pin) {

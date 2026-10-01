@@ -64,8 +64,8 @@ test('finishing the Dictionary Heart awards the finale once and persists portals
   assert.equal(saved.progress.flags.worldRestored, true);
 });
 
-test('the final blow splits the boss before the story scenes and automatic full-screen credits', async () => {
-  const { showFinalBlow, showFinale } = await import('../src/ui/ending.js');
+test('the final blow, character exchange and restored Brush stay full-screen before the existing ending', async () => {
+  const { showFinalBlow, showFinalReform, showFinale } = await import('../src/ui/ending.js');
   const dom = new JSDOM('<div id="overlay"></div>', { url: 'http://localhost/' });
   const previousDocument = global.document;
   const previousRaf = global.requestAnimationFrame;
@@ -74,12 +74,26 @@ test('the final blow splits the boss before the story scenes and automatic full-
   try {
     let returned = 0;
     let storyStarted = 0;
-    showFinalBlow({ open(html) { dom.window.document.querySelector('#overlay').innerHTML = html; } }, '<div class="hero-avatar"></div>', '<div class="creature-portrait"></div>', () => { storyStarted += 1; });
-    assert.ok(dom.window.document.querySelector('.finale-screen .final-blow-left'));
-    assert.ok(dom.window.document.querySelector('.finale-screen .final-blow-right'));
+    const overlay = { open(html) { dom.window.document.querySelector('#overlay').innerHTML = html; } };
+    showFinalBlow(overlay, () => { storyStarted += 1; });
+    assert.match(dom.window.document.querySelector('.final-blow-screen img').src, /final-hero-sword\.webp/);
+    dom.window.document.querySelector('[data-final-blow-continue]').click();
+    assert.match(dom.window.document.querySelector('.final-blow-screen img').src, /final-forgetter-split\.webp/);
+    assert.equal(storyStarted, 0);
     dom.window.document.querySelector('[data-final-blow-continue]').click();
     assert.equal(storyStarted, 1);
-    showFinale({ open(html) { dom.window.document.querySelector('#overlay').innerHTML = html; } }, {
+    const dialogue = JSON.parse(read('content/authored/campaign/r7-story.json')).scenes.reform.filter(command => command.say);
+    let reformComplete = 0;
+    showFinalReform(overlay, dialogue, () => { reformComplete += 1; });
+    for (const [index, speaker] of ['Great Forgetter', 'Keeper Ming', 'Hero', 'Great Forgetter', 'Spirit Brush'].entries()) {
+      const screen = dom.window.document.querySelector('.final-reform-screen');
+      assert.equal(screen.dataset.speaker, speaker);
+      assert.ok(screen.textContent.includes(dialogue[index].say));
+      if (speaker === 'Spirit Brush') assert.match(screen.querySelector('img').src, /final-brush-restored\.webp/);
+      dom.window.document.querySelector('[data-final-reform-next]').click();
+    }
+    assert.equal(reformComplete, 1);
+    showFinale(overlay, {
       chapters: [{ region: 'Scholar Village', boss: 'Muddle King', image: 'assets/images/creatures/muddle-king.webp', fragment: 'Dawn Stroke' }],
       completed: [{ region: 'Scholar Village', name: 'Hidden Grove scroll' }], missing: [], decorations: [], trophies: []
     }, () => { returned += 1; });
@@ -94,6 +108,10 @@ test('the final blow splits the boss before the story scenes and automatic full-
     assert.equal(returned, 1);
     assert.ok(fs.statSync(path.join(root, 'assets/images/ending/dictionary-tree-restored.webp')).size < 400_000);
     assert.match(read('sw.js'), /dictionary-tree-restored\.webp/);
+    for (const asset of ['final-hero-sword', 'final-forgetter-split', 'final-forgetter-reflects', 'final-keeper-ming', 'final-brush-restored']) {
+      assert.ok(fs.statSync(path.join(root, `assets/images/ending/${asset}.webp`)).size < 400_000);
+      assert.match(read('sw.js'), new RegExp(`${asset}\\.webp`));
+    }
   } finally {
     global.document = previousDocument;
     global.requestAnimationFrame = previousRaf;

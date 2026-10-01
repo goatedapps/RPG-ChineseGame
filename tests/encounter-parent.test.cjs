@@ -98,7 +98,7 @@ test('modular build exposes creature art, transition, audio and P8 parent tools'
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const css = fs.readFileSync('css/stage.css', 'utf8');
   const shell = fs.readFileSync('index.html', 'utf8');
-  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-lesson', 'data-gift-word', 'data-gift-spirit-save', 'data-speech-rate', 'data-region-unlock', 'data-parent-jump-region', 'data-parent-jump', 'data-parent-level', 'data-parent-level-save']) assert.match(gameplay, new RegExp(text));
+  for (const text of ['data-weekly', 'data-export-save', 'data-import-save', 'data-goal-save', 'data-gift-lesson', 'data-gift-word', 'data-gift-spirit-save', 'data-speech-rate', 'data-parent-jump-region', 'data-parent-jump', 'data-parent-level', 'data-parent-level-save', 'data-parent-coins-give']) assert.match(gameplay, new RegExp(text));
   assert.match(gameplay, /creatureSvg/);
   assert.match(css, /encounter-transition/);
   assert.match(shell, /Scholar Village/);

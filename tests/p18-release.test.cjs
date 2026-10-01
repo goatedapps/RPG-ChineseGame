@@ -97,13 +97,13 @@ test('Reading Hall has a packaged scroll backdrop and in-world dialogue avoids c
   }
 });
 
-test('parent testing shortcuts keep inputs separate from right-aligned action buttons', () => {
+test('parent shortcuts keep each action with its input', () => {
   const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
   const styles = fs.readFileSync('css/stage.css', 'utf8');
-  assert.match(gameplay, /parent-shortcut-row.*data-parent-jump-region.*data-parent-jump>Jump now/);
-  assert.match(gameplay, /parent-shortcut-row.*data-parent-level.*data-parent-level-save>Apply level/);
-  assert.match(styles, /\.parent-shortcut-row \{[^}]*grid-template-columns: minmax\(0,1fr\) auto/);
-  assert.match(styles, /\.parent-shortcut-button \{[^}]*justify-self: end/);
+  assert.match(gameplay, /parent-shortcut-card.*data-parent-jump-region.*data-parent-jump>Jump now/);
+  assert.match(gameplay, /parent-shortcut-card.*data-parent-level.*data-parent-level-save>Apply level/);
+  assert.match(styles, /\.parent-shortcuts \{[^}]*repeat\(3,minmax\(0,1fr\)\)/);
+  assert.match(styles, /\.parent-shortcut-card button \{[^}]*min-height: 44px/);
 });
 
 test('80-percent Bronze playthrough reaches every boss and enters tougher regions below their creatures', async () => {

@@ -117,7 +117,8 @@ Wrong or skipped villager passage answers show the passage, question and correct
 Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.
-Parent tools include the PIN, goals, lesson-filtered multi-card gifting from the current region, weekly summary, save transfer, curriculum switching, region/test controls, speech speed and sound.
+Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
+Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.
 
 ## Architecture
 

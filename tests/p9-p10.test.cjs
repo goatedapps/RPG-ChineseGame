@@ -153,7 +153,7 @@ test('tablet fixes hide unavailable help actions and memory-writing answers', ()
   assert.doesNotMatch(writing, /data-writing-skip/);
   assert.match(gameplay, /return skill === 'h' \? \{ \.\.\.question, prompt: word\.m \}/);
   assert.match(gameplay, /data-higher-chinese/);
-  assert.match(gameplay, /Give a Spirit card/);
+  assert.match(gameplay, /Give Spirit Card\(s\)/);
   assert.match(gameplay, /accuracyLabel\(skill\)/);
   assert.match(css, /-webkit-tap-highlight-color: transparent/);
   assert.match(css, /\.pin-settings/);

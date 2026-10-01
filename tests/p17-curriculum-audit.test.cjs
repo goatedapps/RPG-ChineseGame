@@ -85,12 +85,12 @@ test('Daily Quest Board only presents a chest button when it can be opened', () 
   assert.doesNotMatch(adventure, /data-daily-chest \$\{ready \? '' : 'disabled'\}/);
 });
 
-test('correct villager passage answers sound correct and testing shortcuts stay compact', () => {
+test('correct villager passage answers sound correct and parent shortcuts stay usable', () => {
   const gameplay = fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8');
   const css = fs.readFileSync(path.join(root, 'css/stage.css'), 'utf8');
   assert.match(gameplay, /audio\?\.sfx\('correct'\)/);
   assert.match(gameplay, /data-parent-jump>Jump now/);
   assert.match(gameplay, /data-parent-level-save>Apply level/);
-  assert.match(gameplay, /class="secondary parent-shortcut-button"/);
-  assert.match(css, /\.parent-shortcut-button \{[^}]*min-height: 44px/);
+  assert.match(gameplay, /class="parent-shortcut-card"/);
+  assert.match(css, /\.parent-shortcut-card button \{[^}]*min-height: 44px/);
 });

@@ -68,7 +68,6 @@ export function createFreshState(levelPackage) {
       gateDictationCount: 15,
       gateDictationPass: 13,
       unlockedRegions: 1,
-      testMode: false,
       sendWrittenAnswers: true
     },
     session: {

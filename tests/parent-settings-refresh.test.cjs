@@ -61,3 +61,58 @@ test('parent settings follow the new order and omit retired controls', () => {
   assert.doesNotMatch(freshState, /testMode/);
   assert.doesNotMatch(adventure, /Where to explore|pathGuideMarkup|path-guide/);
 });
+
+test('parent feedback submits only the entered fields and stays available after an error', async () => {
+  const { createFreshState } = await import('../src/core/state.js');
+  const { createGameplay } = await import('../src/gameplay.js');
+  const { createOverlay } = await import('../src/ui/overlay.js');
+  const dom = new JSDOM('<body><div id="overlay" hidden></div></body>', { url: 'https://goatedapps.github.io/RPG-ChineseGame/' });
+  const previousDocument = global.document;
+  const previousFetch = global.fetch;
+  global.document = dom.window.document;
+  try {
+    const levelPackage = {
+      id: 'p5', label: 'P5', map: { id: 'r1-hub', region: 'r1', spawn: { x: 1, y: 1 } },
+      region: { id: 'r1', name: 'Scholar Village' },
+      campaigns: { r1: { region: { id: 'r1', name: 'Scholar Village' } } },
+      config: { regionLessons: { r1: [1] } },
+      content: { contentVersion: 'test', words: [], questions: { groups: [] } }
+    };
+    const game = { state: createFreshState(levelPackage), levelPackage, playerName: 'Test player' };
+    const storage = dom.window.localStorage;
+    const overlay = createOverlay(dom.window.document.querySelector('#overlay'));
+    const gameplay = createGameplay({ overlay, storage, getActive: () => game, persist: () => {}, render: () => {}, toast: () => {} });
+    gameplay.parentPanel();
+    dom.window.document.querySelector('[data-parent-pin]').value = '0000';
+    dom.window.document.querySelector('[data-parent-unlock]').click();
+    const feedback = dom.window.document.querySelector('.parent-feedback');
+    assert.equal(feedback.previousElementSibling.matches('.pin-settings'), true);
+    assert.equal(feedback.open, false);
+    assert.match(feedback.textContent, /Dear parent, hope your child found the app useful!/);
+    assert.match(feedback.textContent, /I am a parent myself and I created this app primarily as a personal project/);
+    feedback.open = true;
+    const form = feedback.querySelector('form');
+    const message = form.querySelector('[name="message"]');
+    message.value = 'The map is hard to read.';
+    message.dispatchEvent(new dom.window.Event('input', { bubbles: true }));
+    let request;
+    global.fetch = async (url, options) => { request = { url, options }; return { ok: true }; };
+    form.dispatchEvent(new dom.window.Event('submit', { bubbles: true, cancelable: true }));
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(request.url, 'https://formspree.io/f/mjykzzjo');
+    assert.equal(request.options.body.get('message'), 'The map is hard to read.');
+    assert.equal(request.options.body.has('email'), false);
+    assert.match(feedback.querySelector('[data-parent-feedback-status]').textContent, /Thank you/);
+    assert.equal(message.value, '');
+    message.value = 'Another issue';
+    global.fetch = async () => { throw new Error('offline'); };
+    form.dispatchEvent(new dom.window.Event('submit', { bubbles: true, cancelable: true }));
+    await new Promise(resolve => setImmediate(resolve));
+    assert.match(feedback.querySelector('[data-parent-feedback-status]').textContent, /Could not send/);
+    assert.equal(message.value, 'Another issue');
+  } finally {
+    global.document = previousDocument;
+    global.fetch = previousFetch;
+    dom.window.close();
+  }
+});

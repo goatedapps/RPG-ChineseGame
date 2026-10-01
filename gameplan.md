@@ -119,6 +119,7 @@ Daily systems include the quest board, fixed chest rewards, Lantern Streak, week
 Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.
 Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
 Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.
+An optional collapsible parent feedback form follows the PIN controls and sends only the entered message and optional reply email to Formspree.
 
 ## Architecture
 

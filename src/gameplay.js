@@ -120,6 +120,7 @@ export function innReviewPool(levelPackage, progress) {
 export function createGameplay({ overlay, storage, getActive, persist, render, toast, audio, onSwitchLevel = () => {}, onSwitchPlayer = () => {}, onSwitchRegion = () => {}, onReturnToVillage = () => {}, onBattleQuotaExhausted = () => {}, onImportSave = () => { throw new Error('Save import is unavailable.'); }, onCollectionChanged = () => {}, onProgressEvent = () => {}, onTutorialAction = () => {}, onSkipTutorial = () => {}, tutorialStep = () => null }) {
   ensureParentPin(storage);
   let parentNoticeTimer = null;
+  const parentFeedbackDraft = { message: '', email: '', open: false };
   let battleActive = false;
   const active = () => getActive();
   const speech = createSpeechController();
@@ -924,7 +925,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         <label class="answer-field">Speech speed<select data-speech-rate>${[[.7,'Slow'],[.85,'Normal'],[1,'Fast']].map(([value,label]) => `<option value="${value}" ${Number(game.state.settings.speechRate) === value ? 'selected' : ''}>${label}</option>`).join('')}</select></label>
         <label class="check-setting"><input type="checkbox" data-higher-chinese ${game.state.settings.higherChinese ? 'checked' : ''}> Allow Higher Chinese in the Reading Hall</label>
       </div><div class="parent-gate-settings"><h3>Gate dictation</h3><div><label class="answer-field">Words to test<input data-gate-dictation-count type="number" inputmode="numeric" min="1" max="30" value="${gateDictation.count}"></label><label class="answer-field">Correct words to pass<input data-gate-dictation-pass type="number" inputmode="numeric" min="1" max="${gateDictation.count}" value="${gateDictation.pass}"></label><button class="secondary" type="button" data-gate-dictation-save>Save gate test</button></div></div></section>
-      <details class="pin-settings"><summary>Change Parent PIN</summary><div class="pin-editor"><label class="answer-field">New 4–8 digit PIN<input data-new-pin type="password" inputmode="numeric" maxlength="8"></label><button class="primary" data-change-pin>Change PIN</button></div></details>`;
+      <details class="pin-settings"><summary>Change Parent PIN</summary><div class="pin-editor"><label class="answer-field">New 4–8 digit PIN<input data-new-pin type="password" inputmode="numeric" maxlength="8"></label><button class="primary" data-change-pin>Change PIN</button></div></details>
+      <details class="parent-feedback" ${parentFeedbackDraft.open ? 'open' : ''}><summary>Share feedback</summary><div class="parent-feedback-body"><p>Dear parent, hope your child found the app useful!</p><p>I am a parent myself and I created this app primarily as a personal project. It's gone through rounds of testing but may still be buggy. If you found any bugs, or if you have any suggestions, please feel free to submit your feedback using the form below. Thank you!</p><form data-parent-feedback-form action="https://formspree.io/f/mjykzzjo" method="POST"><label class="answer-field">Your feedback<textarea name="message" data-parent-feedback-message rows="4" maxlength="4000" required>${escapeHtml(parentFeedbackDraft.message)}</textarea></label><label class="answer-field">Email for a reply (optional)<input name="email" data-parent-feedback-email type="email" autocomplete="email" value="${escapeHtml(parentFeedbackDraft.email)}"></label><div class="parent-feedback-actions"><button class="primary" type="submit">Send feedback</button><span data-parent-feedback-status role="status" aria-live="polite"></span></div></form></div></details>`;
     const summaryHtml = `<div class="summary-toolbar"><p class="parent-tab-intro">Review learning progress, patterns, and work that may need attention.</p><button class="secondary" data-weekly>View weekly summary</button></div>
       <div class="status-grid parent-status-grid"><div>Curriculum<b>${escapeHtml(game.levelPackage.label)}</b></div><div>Player level<b>${game.state.player.level}</b></div><div>Collected spirits<b>${progressWords.filter(value => value.collected || value.c).length}</b></div><div>Bronze / Silver / Gold<b>${bronze} / ${silver} / ${gold}</b></div><div>Battles today<b>${energy.day === localDay() ? energy.used : 0}/${game.state.settings.dailyBattles || '∞'}</b></div><div>Lantern streak<b>${game.state.progress.streak?.count || 0} days</b></div><div>Time played<b>${Math.round(game.state.session.playMs / 60000)} min</b></div><div>Unlocked regions<b>${game.state.settings.unlockedRegions}</b></div></div>
       ${goal ? `<section class="parent-goal"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div><i style="width:${goal.percent}%"></i></div></section>` : '<p class="summary-empty">No real-world goal has been set in Settings.</p>'}
@@ -1039,6 +1041,40 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       } catch (error) { showImportError(error instanceof SyntaxError ? 'This file is not valid JSON. Choose a Word Spirit Quest export.' : error.message); }
     });
     document.querySelector('[data-change-pin]').addEventListener('click', () => { if (!setParentPin(storage, document.querySelector('[data-new-pin]').value)) return showParentChange('Use 4–8 digits for the new PIN.', 'error'); document.querySelector('[data-new-pin]').value = ''; showParentChange('Parent PIN changed.'); });
+    const feedbackSection = document.querySelector('.parent-feedback');
+    const feedbackForm = document.querySelector('[data-parent-feedback-form]');
+    const feedbackMessage = feedbackForm.querySelector('[data-parent-feedback-message]');
+    const feedbackEmail = feedbackForm.querySelector('[data-parent-feedback-email]');
+    const feedbackStatus = feedbackForm.querySelector('[data-parent-feedback-status]');
+    const feedbackButton = feedbackForm.querySelector('button[type="submit"]');
+    feedbackSection.addEventListener('toggle', () => { parentFeedbackDraft.open = feedbackSection.open; });
+    feedbackMessage.addEventListener('input', () => { parentFeedbackDraft.message = feedbackMessage.value; });
+    feedbackEmail.addEventListener('input', () => { parentFeedbackDraft.email = feedbackEmail.value; });
+    feedbackForm.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!feedbackForm.reportValidity() || feedbackButton.disabled) return;
+      const payload = new feedbackForm.ownerDocument.defaultView.FormData(feedbackForm);
+      if (!feedbackEmail.value.trim()) payload.delete('email');
+      feedbackButton.disabled = true;
+      feedbackButton.textContent = 'Sending…';
+      feedbackStatus.textContent = 'Sending your feedback…';
+      feedbackStatus.dataset.kind = '';
+      try {
+        const response = await fetch(feedbackForm.action, { method: 'POST', body: payload, headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error(`Feedback request failed: ${response.status}`);
+        feedbackForm.reset();
+        parentFeedbackDraft.message = '';
+        parentFeedbackDraft.email = '';
+        feedbackStatus.textContent = 'Thank you. Your feedback was sent.';
+        feedbackStatus.dataset.kind = 'success';
+      } catch {
+        feedbackStatus.textContent = 'Could not send your feedback. Please check your connection and try again.';
+        feedbackStatus.dataset.kind = 'error';
+      } finally {
+        feedbackButton.disabled = false;
+        feedbackButton.textContent = 'Send feedback';
+      }
+    });
   }
 
   function showWeeklySummary() {

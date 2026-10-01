@@ -116,3 +116,9 @@ test('parent feedback submits only the entered fields and stays available after 
     dom.window.close();
   }
 });
+
+test('collapsed parent feedback keeps its summary in the Settings scroll layout', () => {
+  const css = fs.readFileSync('css/stage.css', 'utf8');
+  assert.match(css, /\.parent-feedback summary \{[^}]*min-height: 54px/);
+  assert.doesNotMatch(css, /\.parent-feedback \{[^}]*overflow: hidden/);
+});

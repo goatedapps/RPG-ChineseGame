@@ -31,7 +31,7 @@ export function gateDictationRules(settings = {}) {
 }
 
 export function gateDictationPool(words, progressByWord) {
-  return words.filter(word => progressByWord[word.w]?.collected || progressByWord[word.w]?.c);
+  return [...new Map(words.filter(word => progressByWord[word.w]?.collected || progressByWord[word.w]?.c).map(word => [word.w, word])).values()];
 }
 
 export function chooseGateDictationWords(words, progressByWord, count, random = Math.random) {

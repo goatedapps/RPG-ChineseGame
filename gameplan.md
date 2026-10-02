@@ -57,7 +57,7 @@ Higher Chinese is disabled by default and can only be made available by a parent
 
 To add a playable curriculum, create its `content/source/<id>/` pack and `content/authored/levels/<id>/level.json`, then register its id, label and optional picker badge in `content/authored/shared/levels.json` with `sourceReady` and `worldMappingReady` true.
 Run `npm run check:curricula` before enabling the level in a release; it builds the source pack and runs the regression suite.
-Validation checks complete lesson mapping and enough distinct regional words at the Bronze boss threshold for the default 15-word gate dictation; registry-driven tests check generated content, seven-region boss pools, save isolation, route pacing and offline assets.
+Validation checks complete lesson mapping, curriculum-specific Restoration Sets, distinct answer choices, and enough distinct regional words at the Bronze boss threshold for the default 15-word gate dictation; registry-driven tests check generated content, seven-region boss pools, save isolation, route pacing and offline assets.
 Keep curriculum-specific expected facts in separate tests; general playable-curriculum tests must iterate the registry.
 
 ## Learning and battle rules

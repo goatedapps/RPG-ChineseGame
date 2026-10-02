@@ -313,9 +313,9 @@
   question: 风一吹，树上的__枯叶__就纷纷落下。（选出画线词语的汉语拼音）
   options:
     - gū yè
-    - gū yè
+    - gǔ yè
     - kū yè
-    - kū yè
+    - kǔ yè
   correct: kū yè
 - questionID: MB24SA2-Q1
   lessonIds:

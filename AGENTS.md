@@ -8,6 +8,7 @@ P0–P17 engineering and the earlier physical child-and-parent tablet pilot are 
 P18 release polish is in progress; browser smoke checks and local Lighthouse accessibility passed, while older-iPad verification remains outstanding.
 Fresh saves have a two-part Apprentice Jun tutorial after Grandma Wang: five village steps summon his typed, closable guide dialogue, then six first-day actions and a level-3 return; existing saves are not retroactively enrolled.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
+Read `CURRICULUM_REQUIREMENTS.md` before adding or changing a playable curriculum or its lesson content.
 
 Production URLs:
 

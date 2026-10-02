@@ -39,3 +39,35 @@ test('the separate walkthrough has an introduction and one page for each region'
   assert.doesNotMatch(guide, /Useful now|default settings|What I learned/);
   assert.match(read('src/gameplay.js'), /parent-walkthrough-link[\s\S]*walkthrough\/index\.html/);
 });
+
+test('every curriculum walkthrough resolves lesson labels from its region mapping', async () => {
+  for (const level of ['p2', 'p5']) {
+    const config = JSON.parse(read(`content/authored/levels/${level}/level.json`));
+    for (let number = 1; number <= 7; number += 1) {
+      const region = `r${number}`;
+      const dom = new JSDOM(read(`walkthrough/walkthrough-region-${number}.html`), { url: `http://localhost/walkthrough/walkthrough-region-${number}.html?level=${level}` });
+      const previousDocument = global.document;
+      const previousLocation = global.location;
+      const previousFetch = global.fetch;
+      global.document = dom.window.document;
+      global.location = dom.window.location;
+      global.fetch = async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(path.resolve(root, 'walkthrough', url), 'utf8')) });
+      try {
+        await import(`../walkthrough/walkthrough.js?lesson-label-${level}-${region}`);
+        for (let attempt = 0; attempt < 20 && !dom.window.document.querySelector('#route'); attempt += 1) await new Promise(resolve => setTimeout(resolve, 5));
+        const main = dom.window.document.querySelector('main');
+        assert.ok(main, `${level} ${region} rendered`);
+        assert.doesNotMatch(main.textContent, /Lesson (?:undefined|null|NaN)/, `${level} ${region} has resolved lesson labels`);
+        for (const lesson of config.regionLessons[region]) assert.match(main.textContent, new RegExp(`Lesson ${lesson}\\b`), `${level} ${region} names Lesson ${lesson}`);
+        if (region === 'r3') {
+          for (const lesson of config.regionLessons.r3) assert.match(dom.window.document.querySelector('#rescue-story').textContent, new RegExp(`Lesson ${lesson}\\b`));
+        }
+      } finally {
+        global.document = previousDocument;
+        global.location = previousLocation;
+        global.fetch = previousFetch;
+        dom.window.close();
+      }
+    }
+  }
+});

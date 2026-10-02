@@ -44,3 +44,19 @@ test('every playable curriculum has complete seven-region teaching and progressi
     }
   }
 });
+
+test('repeated words in Primary 2 Region 2 count once toward the boss gate', async () => {
+  const { loadLevelPackage, activateRegion } = await import('../src/content/loader.js');
+  const { gateStatus, regionWords } = await import('../src/systems/story.js');
+  const { gateDictationPool } = await import('../src/systems/dictation.js');
+  const game = activateRegion(await loadLevelPackage('p2', fetcher, ''), 'r2');
+  const distinct = [...new Set(regionWords(game).map(word => word.w))];
+  const required = Math.ceil(distinct.length * game.regionStory.gateBronzePct);
+  const selected = ['从', '想', ...distinct.filter(word => word !== '从' && word !== '想')].slice(0, required - 1);
+  const progress = { words: Object.fromEntries(selected.map(word => [word, { collected: true }])) };
+  const status = gateStatus(game, progress, { keyItems: [game.regionStory.readingKeyItem] }, game.regionStory.gateBronzePct);
+  assert.equal(status.total, distinct.length);
+  assert.equal(status.bronze, required - 1);
+  assert.equal(status.open, false);
+  assert.equal(gateDictationPool(regionWords(game), progress.words).length, required - 1);
+});

@@ -91,12 +91,12 @@ function auditLevel(level) {
 
   const questionDir = path.join(root, 'questions');
   for (const file of fs.readdirSync(questionDir).filter(file => file.endsWith('.yaml') && file !== 'index.yaml')) {
-    availableKinds.add(path.basename(file, '.yaml'));
     const records = readYaml(path.join(questionDir, file)) || [];
     if (!Array.isArray(records)) {
       errors.push(`questions/${file} must contain an array.`);
       continue;
     }
+    if (records.length) availableKinds.add(path.basename(file, '.yaml'));
     if (groupFiles.has(file)) {
       summary.passageGroups += records.length;
       for (const group of records) {
@@ -109,6 +109,7 @@ function auditLevel(level) {
           if (!lessonIds.has(lesson)) errors.push(`${id || file} refers to missing lesson ${lesson}.`);
         }
         const questions = group.questions || [];
+        if (!questions.length) errors.push(`${id || file} has no passage questions.`);
         summary.passageQuestions += questions.length;
         for (const [index, question] of questions.entries()) {
           if (!question.text) errors.push(`${id || file} question ${index + 1} has no text.`);
@@ -130,6 +131,9 @@ function auditLevel(level) {
         if (!question.question) errors.push(`${id || file} has no question text.`);
         if (question.options && !question.options.includes(question.correct)) {
           errors.push(`${id || file} has a correct answer outside its options.`);
+        }
+        if (question.lessonIds?.length && question.subject !== 'Higher Chinese' && (!Array.isArray(question.options) || question.options.length !== 4 || new Set(question.options).size !== 4)) {
+          errors.push(`${id || file} needs four distinct answer options for lesson play.`);
         }
       }
     }
@@ -189,8 +193,35 @@ function validateSharedConfiguration(reports) {
       for (const regionId of regionIds) {
         const lessonsForRegion = config.regionLessons?.[regionId] || [];
         const uniqueWords = new Set(lessonsForRegion.flatMap(lesson => report.wordsByLesson.get(lesson) || []));
+        if (lessonsForRegion.length < 2 || (regionId === 'r1' && lessonsForRegion.length !== 3)) {
+          errors.push(`${level} ${regionId} needs ${regionId === 'r1' ? 'three' : 'at least two'} mapped lessons.`);
+        }
+        if (regionId === 'r1') {
+          const bindings = config.region1 || {};
+          if (!uniqueWords.has(bindings.tutorialWord)) errors.push(`${level} Region 1 tutorial word is absent from its mapped lessons.`);
+          for (const [requestId, request] of Object.entries(bindings.requests || {})) {
+            const words = [...(request.collect || []), ...(Array.isArray(request.bronze) ? request.bronze : [request.bronze]), request.write].filter(Boolean);
+            if (words.some(word => !uniqueWords.has(word))) errors.push(`${level} Region 1 request ${requestId} uses a word outside its mapped lessons.`);
+          }
+        }
         const storyFile = path.join(authoredRoot, 'campaign', `${regionId}-story.json`);
         const story = JSON.parse(fs.readFileSync(storyFile, 'utf8'));
+        const setsFile = path.join(authoredRoot, 'campaign', `${regionId}-sets.json`);
+        const sets = JSON.parse(fs.readFileSync(setsFile, 'utf8'))[level] || [];
+        if (!sets.length) errors.push(`${level} ${regionId} needs curriculum-specific Restoration Sets.`);
+        const setIds = new Set();
+        for (const set of sets) {
+          if (!set.id || setIds.has(set.id) || !set.name || !set.restoration) errors.push(`${level} ${regionId} has an incomplete or duplicate Restoration Set ${set.id}.`);
+          setIds.add(set.id);
+          if (!Array.isArray(set.words) || set.words.length < 3 || new Set(set.words).size !== set.words.length || set.words.some(word => !uniqueWords.has(word))) {
+            errors.push(`${level} ${regionId} set ${set.id} needs at least three distinct words from this region.`);
+          }
+        }
+        for (const [requestId, request] of Object.entries(story.requests || {})) {
+          if (request.lessonSlot !== undefined && (!Number.isInteger(request.lessonSlot) || request.lessonSlot < 0 || request.lessonSlot > 2 || !lessonsForRegion.length)) {
+            errors.push(`${level} ${regionId} request ${requestId} has an invalid lesson slot.`);
+          }
+        }
         if (!Number.isFinite(story.gateBronzePct) || story.gateBronzePct <= 0 || story.gateBronzePct > 1) {
           errors.push(`${regionId}-story.json needs a Bronze threshold between 0 and 1.`);
         } else if (Math.ceil(uniqueWords.size * story.gateBronzePct) < gateWordCount) {

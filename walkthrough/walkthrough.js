@@ -51,6 +51,9 @@ async function loadRegion() {
     json(number === 1 ? 'content/authored/campaign/maps/r1-r2-mistwood.json' : 'content/authored/campaign/routes.json')
   ]);
   const lessons = config.regionLessons[regionId];
+  for (const request of Object.values(story.requests || {})) {
+    if (Number.isInteger(request.lessonSlot)) request.lesson = lessons[request.lessonSlot] ?? lessons.at(-1);
+  }
   const rawMap = number === 1 ? mapSource : buildRouteMap(mapSource.find(route => route.region === regionId), lessons, config.tuning.routeEncounterRate);
   for (const zone of rawMap.zones) if (Number.isInteger(zone.lessonSlot)) zone.lesson = lessons[zone.lessonSlot] ?? lessons.at(-1);
   const scale = config.tuning.routeEncounterScales?.[regionId] ?? config.tuning.routeEncounterScale ?? 1.2;

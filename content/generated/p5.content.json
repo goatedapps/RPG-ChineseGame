@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "b377a02605d3",
+  "contentVersion": "e6dd5ebb1e7c",
   "level": "p5",
   "label": "Primary 5",
   "lessons": [
@@ -13071,9 +13071,9 @@
         "q": "风一吹，树上的__枯叶__就纷纷落下。（选出画线词语的汉语拼音）",
         "o": [
           "gū yè",
-          "gū yè",
+          "gǔ yè",
           "kū yè",
-          "kū yè"
+          "kǔ yè"
         ],
         "c": "kū yè",
         "word": "枯叶"

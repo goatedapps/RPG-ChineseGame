@@ -35,9 +35,9 @@ export function regionWords(levelPackage) {
 }
 
 export function gateStatus(levelPackage, progress, inventory, requiredPct = 0.8) {
-  const words = regionWords(levelPackage);
+  const words = [...new Map(regionWords(levelPackage).map(word => [word.w, word])).values()];
   const bronze = words.filter(word => ['bronze', 'silver', 'gold'].includes(tierOf(progress.words[word.w]))).length;
-  const required = Math.ceil(new Set(words.map(word => word.w)).size * requiredPct);
+  const required = Math.ceil(words.length * requiredPct);
   const keyItem = levelPackage.regionStory?.readingKeyItem || 'cave-lantern';
   const lantern = (inventory.keyItems || []).includes(keyItem);
   return { bronze, total: words.length, required, requiredPct, lantern, open: bronze >= required && lantern };

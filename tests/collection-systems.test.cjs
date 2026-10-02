@@ -80,7 +80,7 @@ test('restoration rewards use generated art in the room and a dedicated reveal e
 });
 
 test('the Campfire set requires Silver words and can only be offered when ready', async () => {
-  const [set] = readJson('content/authored/campaign/r1-sets.json');
+  const [set] = readJson('content/authored/campaign/r1-sets.json').p5;
   const { offerSet, setProgress } = await import('../src/systems/sets.js');
   const available = set.words.map(w => ({ w }));
   const progress = Object.fromEntries(set.words.map(w => [w, silver]));

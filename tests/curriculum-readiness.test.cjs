@@ -10,12 +10,17 @@ test('every playable curriculum has complete seven-region teaching and progressi
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { bossGateQueue, gateStatus } = await import('../src/systems/story.js');
   const { gateDictationPool, gateDictationRules } = await import('../src/systems/dictation.js');
+  const { setProgress } = await import('../src/systems/sets.js');
   const { saveKey } = await import('../src/core/save.js');
   assert.ok(playableLevels.length > 0);
   assert.equal(new Set(playableLevels.map(level => level.id)).size, playableLevels.length);
   assert.equal(new Set(playableLevels.map(level => saveKey(level.id))).size, playableLevels.length);
   for (const level of playableLevels) {
     const game = await loadLevelPackage(level.id, fetcher, '');
+    assert.ok(game.campaigns.r1.sets.length > 0, `${level.id}: tutorial region has Restoration Sets`);
+    for (const set of game.campaigns.r1.sets) {
+      assert.ok(setProgress(set, {}, game.content.words).words.length >= 3, `${level.id}: ${set.id} has at least three curriculum words`);
+    }
     const assignedLessons = Object.values(game.config.regionLessons).flat();
     assert.equal(assignedLessons.length, new Set(assignedLessons).size, `${level.id}: a lesson belongs to only one region`);
     assert.deepEqual([...assignedLessons].sort((a, b) => a - b), game.content.lessons.map(lesson => lesson.id).sort((a, b) => a - b), `${level.id}: every lesson has a region`);

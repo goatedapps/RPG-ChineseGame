@@ -68,7 +68,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '.') 
   const tunedBalance = mergeObjects(balance, config.tuning?.balance);
   const campaigns = {};
   for (const [regionId, mapSource, regionStory, authoredSets] of [
-    ['r1', r1Map, r1Story, r1Sets],
+    ['r1', r1Map, r1Story, r1Sets[levelId] || []],
     ['r2', r2Map, r2Story, r2Sets[levelId] || []],
     ['r3', r3Map, r3Story, r3Sets[levelId] || []],
     ['r4', r4Map, r4Story, r4Sets[levelId] || []],

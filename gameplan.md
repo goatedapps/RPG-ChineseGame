@@ -117,6 +117,7 @@ Wrong or skipped villager passage answers show the passage, question and correct
 Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.
+Region 1 Restoration Sets are curriculum-specific so Jun's level-3 board tour has available sets in both P2 and P5.
 Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
 Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.
 An optional collapsible parent feedback form follows the PIN controls and sends only the entered message and optional reply email to Formspree.

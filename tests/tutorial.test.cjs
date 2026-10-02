@@ -396,6 +396,42 @@ test('choosing a Silver Partner saves the party and advances Jun’s guide', asy
   }
 });
 
+test('Primary 2 can open Jun’s Restoration Board and continue the guide', async () => {
+  const [{ loadLevelPackage }, { createFreshState }, { createOverlay }, { createTutorial }, { createCollection }] = await Promise.all([
+    import('../src/content/loader.js'), import('../src/core/state.js'), import('../src/ui/overlay.js'), import('../src/tutorial.js'), import('../src/collection.js')
+  ]);
+  const fetcher = async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(path.join(__dirname, '..', url), 'utf8')) });
+  const levelPackage = await loadLevelPackage('p2', fetcher, '');
+  const game = { levelPackage, state: createFreshState(levelPackage) };
+  game.state.player.level = 3;
+  game.state.progress.story.flags.arrival = true;
+  game.state.progress.tutorial.step = 9;
+  const dom = new JSDOM('<body><div id="overlay" hidden></div></body>');
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  const element = dom.window.document.querySelector('#overlay');
+  const overlay = createOverlay(element);
+  let guide;
+  guide = createTutorial({ getActive: () => game, persist: () => {}, render: () => guide.show(), overlay });
+  element.addEventListener('overlay:changed', () => guide.show());
+  const collection = createCollection({ overlay, getActive: () => game, persist: () => {}, render: () => guide.show(), toast: () => {}, onTutorialAction: type => guide.action(type), tutorialStep: () => guide.current() });
+  try {
+    collection.room();
+    const button = element.querySelector('[data-board-open]');
+    assert.ok(button);
+    button.click();
+    assert.match(element.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /This first set is Working Together/);
+    for (let index = 0; index < 4; index += 1) element.querySelector('[data-dialogue-next]').click();
+    assert.match(element.textContent, /Restoration Board/);
+    element.querySelector('[data-tutorial-board-done]').click();
+    assert.equal(game.state.progress.tutorial.step, 10);
+  } finally {
+    guide.destroy();
+    overlay.close();
+    global.document = previousDocument;
+  }
+});
+
 test('guided dictation can finish one demonstrated character without awarding a skill tick', async () => {
   const { showWritingTask } = await import('../src/ui/writingView.js');
   const dom = new JSDOM('<body><div id="overlay"></div></body>');

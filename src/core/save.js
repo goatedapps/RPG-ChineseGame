@@ -148,9 +148,8 @@ export function saveLevelState(storage, state, playerId = LEGACY_PLAYER_ID) {
 
 export function startFreshLevelState(storage, levelPackage, playerId = LEGACY_PLAYER_ID) {
   const state = createFreshState(levelPackage);
-  storage.removeItem(saveKey(levelPackage.id, playerId));
-  storage.removeItem(backupKey(levelPackage.id, playerId));
   storage.setItem(saveKey(levelPackage.id, playerId), encodeSave(state));
+  storage.removeItem(backupKey(levelPackage.id, playerId));
   return state;
 }
 

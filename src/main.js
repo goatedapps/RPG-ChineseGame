@@ -1,5 +1,5 @@
 import { createEventBus } from './core/events.js';
-import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p11';
+import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p12';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p22';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
 import { createRenderer } from './world/renderer.js?p28';

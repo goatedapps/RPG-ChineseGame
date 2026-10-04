@@ -55,10 +55,24 @@ test('players keep independent saves, backups, and curriculum progress', async (
   assert.equal(storage.getItem(backupKey('p2', jun.id)), null);
   startFreshLevelState(storage, p2, mei.id);
   assert.equal(loadLevelState(storage, p2, mei.id).state.player.coins, createFreshState(p2).player.coins);
+  assert.equal(storage.getItem(backupKey('p2', mei.id)), null);
   assert.equal(loadLevelState(storage, p2, jun.id).state.player.coins, 82);
   assert.equal(loadLevelState(storage, p5, mei.id).state.player.coins, 123);
   saveProfile(storage, 'p2', jun.id);
   assert.equal(listPlayers(storage, ['p2', 'p5']).length, 2);
+});
+
+test('a failed fresh-start write preserves the selected player’s save and backup', async () => {
+  const { backupKey, saveKey, startFreshLevelState } = await import('../src/core/save.js');
+  const level = { id: 'p2', content: { contentVersion: 'test' }, map: { id: 'r1-hub', spawn: { x: 1, y: 1 } } };
+  const playerId = 'player-test';
+  const key = saveKey(level.id, playerId);
+  const backup = backupKey(level.id, playerId);
+  const storage = memoryStorage([[key, 'existing save'], [backup, 'existing backup']]);
+  storage.setItem = () => { throw new Error('Storage is full'); };
+  assert.throws(() => startFreshLevelState(storage, level, playerId), /Storage is full/);
+  assert.equal(storage.getItem(key), 'existing save');
+  assert.equal(storage.getItem(backup), 'existing backup');
 });
 
 test('new players do not inherit a legacy prototype save', async () => {

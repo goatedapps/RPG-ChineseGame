@@ -226,7 +226,6 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 
 ### P18 release polish
 
-Run performance and accessibility checks on an older target iPad.
 Proofread audio and content.
 TODO: Replace the runtime-generated battle Usage fallback with pre-authored, parent-vetted vocabulary or usage questions in the curriculum source banks.
 Matching vetted questions currently cover 253 of 460 P2 words and 197 of 327 P5 words; keep the fallback until the remaining questions have been reviewed.
@@ -239,7 +238,7 @@ P2 and P5 loaded without browser errors in a local in-app-browser smoke check; a
 Local Lighthouse accessibility scored 100 for both P2 and P5 after the objective contrast fix.
 The minimum-progress audit models 80% Bronze cards, one battle and two correct practice answers per card, confirms all seven bosses are beatable without optional purchases, and enters each next region 1–4 levels below its first creatures.
 The first-paint loading screen shows the illustrated walking hero and waits for the opening art to decode before revealing the prologue.
-Older-iPad verification and a human audio/content proofread remain open.
+Human audio/content proofread remains open.
 The hosted PWA is the release format; double-click `file://` support does not justify a second single-file build because the modular game and content loading require HTTP.
 
 ## Definition of done for every phase

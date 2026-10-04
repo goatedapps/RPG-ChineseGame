@@ -1,4 +1,5 @@
 import { isEncounterTerrain, zoneAt } from './encounters.js?p17';
+import { CREATURES } from '../battle/creatures.js';
 import { routeKey } from '../systems/regions.js';
 
 const TILE = 32;
@@ -519,6 +520,7 @@ export function createRenderer(canvas, map) {
   let disposed = false;
   let lastState = null;
   const art = {};
+  const companionArt = new Map();
   if (globalThis.Image) {
     for (const [kind, file] of [...(illustratedStructures ? [['buildings', 'buildings.webp']] : []), ['villagers', 'villagers-full-body.webp'], ['hero', 'hero-map.webp']]) {
       const image = new Image();
@@ -600,16 +602,18 @@ export function createRenderer(canvas, map) {
       context.beginPath(); context.arc(4 * TILE - offsetX, 8 * TILE - offsetY, 24, 0, Math.PI * 2); context.fill();
       context.fillStyle = '#f4efe2'; context.font = '700 11px system-ui'; context.fillText('Hidden Grove', 4 * TILE - offsetX, 8 * TILE - offsetY);
     }
-    const partners = (state.progress?.partners || []).slice(0, 3);
-    const partnerOffsets = [[-7, 7], [9, 13], [-16, 20]];
-    partners.forEach((partner, index) => {
-      const glyph = partner.split('-').slice(2).join('-').slice(0, 1);
-      const [partnerX, partnerY] = partnerOffsets[index];
-      context.fillStyle = '#f4efe2'; context.strokeStyle = '#d9a62e'; context.lineWidth = 2;
-      context.beginPath(); context.arc(playerPx - offsetX + partnerX, playerPy - offsetY + partnerY, 11, 0, Math.PI * 2); context.fill(); context.stroke();
-      context.fillStyle = '#1b2430'; context.font = '700 13px serif';
-      context.fillText(glyph, playerPx - offsetX + partnerX, playerPy - offsetY + partnerY);
-    });
+    const companion = state.progress?.creatures?.partner;
+    if (companion && CREATURES.some(creature => creature.id === companion)) {
+      if (!companionArt.has(companion) && typeof Image !== 'undefined') {
+        const image = new Image();
+        image.src = new URL(`../../assets/images/creatures/${companion}.webp`, import.meta.url).href;
+        companionArt.set(companion, image);
+      }
+      const image = companionArt.get(companion);
+      if (image?.complete && image.naturalWidth) {
+        context.drawImage(image, playerPx - offsetX - 35, playerPy - offsetY + 3, 36, 36);
+      }
+    }
     if (map.route) {
       const discovered = new Set(state.progress?.routes?.[routeKey(map.region)]?.discovered || []);
       for (let row = firstRow; row <= lastRow; row += 1) {

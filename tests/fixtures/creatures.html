@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <title>Creature companions · local test</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/stage.css">
+  <link rel="stylesheet" href="css/atlas.css">
+  <style>body { overflow: auto; } main { padding: 20px; } .stage { height: 85vh; position: relative; } #overlay { position: fixed; inset: 100px 0 0; overflow: auto; } .test-controls { display: flex; gap: 8px; flex-wrap: wrap; } #notice { margin: 4px; }</style>
+</head>
+<body>
+  <main><div class="test-controls"><button id="collection">Creatures</button><button id="upgrade">Meet level 8 Fogling</button><button id="battle">Wild battle</button><button id="boss">Boss battle</button><button id="reset">Reset test</button></div><p id="notice" role="status">Local test only. No player saves are read or written.</p><div class="stage"><div id="overlay" class="overlay" hidden></div></div></main>
+  <script type="module">
+    import { loadLevelPackage } from './src/content/loader.js';
+    import { createFreshState } from './src/core/state.js';
+    import { createOverlay } from './src/ui/overlay.js';
+    import { createCollection } from './src/collection.js';
+    import { createGameplay } from './src/gameplay.js';
+    import { createAdventure } from './src/adventure.js';
+    import { discoverCreature } from './src/systems/companions.js';
+    const levelPackage = await loadLevelPackage('p2');
+    const game = { levelPackage, state: createFreshState(levelPackage) };
+    game.state.player.level = 12;
+    game.state.player.hp = 30;
+    game.state.player.maxHp = 42;
+    game.state.progress.tutorial.step = 16;
+    for (const [id, name, level] of [['fogling', 'Fogling', 3], ['echo-bat', 'Echo Bat', 4], ['twin-shade', 'Twin Shade', 5]]) discoverCreature(game.state.progress, { id, name, level });
+    const overlay = createOverlay(document.querySelector('#overlay'));
+    const shared = { overlay, getActive: () => game, persist() {}, render() {}, toast(message) { document.querySelector('#notice').textContent = message; } };
+    const collection = createCollection(shared);
+    const gameplay = createGameplay({ ...shared, storage: { getItem() { return null; }, setItem() {} } });
+    const adventure = createAdventure({ ...shared, gameplay });
+    document.querySelector('#collection').onclick = () => { if (overlay.dismissible) collection.creatures(); };
+    document.querySelector('#upgrade').onclick = () => { if (overlay.dismissible) collection.creatures(discoverCreature(game.state.progress, { id: 'fogling', name: 'Fogling', level: 8 })); };
+    document.querySelector('#battle').onclick = () => { if (overlay.dismissible) gameplay.startBattle({ lesson: 1, encounter: { types: { fogling: 1 } } }); };
+    document.querySelector('#boss').onclick = () => { if (overlay.dismissible) adventure.startBoss(); };
+    document.querySelector('#reset').onclick = () => location.reload();
+    collection.creatures();
+  </script>
+</body>
+</html>

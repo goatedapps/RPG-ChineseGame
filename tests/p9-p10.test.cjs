@@ -166,7 +166,7 @@ test('Muddle King and creature encounters use illustrated battle presentation', 
   assert.match(adventure, /creatureSvg\('muddle-king', ''\)/);
   assert.match(adventure, /forceMemory: true, headerHtml: arena\(\)/);
   assert.match(adventure, /audio\?\.sfx\('hit'\)/);
-  assert.match(adventure, /enemyAttack\(\{ creature: battle \}/);
+  assert.match(adventure, /companionCounterattack\(battle, game\.state\.player/);
   assert.match(adventure, /data-boss-bag>Open bag/);
   assert.match(adventure, /data-use-boss-item/);
   assert.match(adventure, /useConsumable\(game\.state\.progress\.inventory, item\.id\)/);
@@ -194,7 +194,7 @@ test('Storyteller uses an open book, two-page text and page dictation', async ()
   assert.equal(fs.existsSync(path.join(root, 'assets/images/story/open-book.webp')), true);
 });
 
-test('Hero Status shows the main character and leaves partner selection in My Room', () => {
+test('Hero Status shows the main character and links creature selection from My Room', () => {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
   const dom = new JSDOM(html);
@@ -204,7 +204,7 @@ test('Hero Status shows the main character and leaves partner selection in My Ro
   assert.match(collection, /XP to Level/);
   assert.match(collection, /heroPortrait\(equipment\.equipped, 'paper-hero'\)/);
   assert.doesNotMatch(collection, /data-partners-open/);
-  assert.match(collection, /data-room-partners><b>Choose Partner Spirits/);
+  assert.match(collection, /data-room-creatures><b>Choose a creature companion/);
   assert.doesNotMatch(collection, /paper-hero[^>]*>勇/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/gameplay.js'), 'utf8'), /battle-hero[^>]*>勇/);
   assert.match(collection, /function bag\(\)/);

@@ -58,7 +58,7 @@ test('material awards stop at the needs of uncrafted recipes', async () => {
   assert.deepEqual(crafted.awarded, {});
 });
 
-test('Craft Table shows readiness, shortages, and a visible crafted result', async () => {
+test('Craft Table shows readiness and confirms a crafted item with its icon', async () => {
   const { createCollection } = await import('../src/collection.js');
   const dom = new JSDOM('<div id="overlay"></div>');
   const previousDocument = global.document;
@@ -81,31 +81,17 @@ test('Craft Table shows readiness, shortages, and a visible crafted result', asy
     assert.equal(root.querySelector('[data-craft="mirror-charm"]').textContent, 'Crafted');
     root.querySelector('[data-craft="jade-brush"]').click();
     assert.equal(saves, 1);
+    assert.match(root.querySelector('.craft-reward-panel h1').textContent, /Jade Brush crafted!/);
+    assert.match(root.querySelector('.craft-reward-art img').getAttribute('src'), /jade-brush\.webp$/);
+    assert.ok(root.querySelector('[data-craft-continue]'));
+    root.querySelector('[data-craft-continue]').click();
     assert.equal(root.querySelector('[data-craft="jade-brush"]').textContent, 'Crafted');
-    assert.match(root.querySelector('[data-craft-message]').textContent, /Jade Brush crafted!/);
-    assert.equal(root.querySelector('[data-craft-message]').hidden, false);
+    assert.equal(root.querySelector('[data-craft-message]').hidden, true);
     assert.ok(game.state.progress.equipment.owned.includes('jade-brush'));
   } finally {
     global.document = previousDocument;
     dom.window.close();
   }
-});
-
-test('partners require Silver, stop at three, and Gold unlocks authored or idiom moves', async () => {
-  const { eligiblePartners, partnerBonuses, partnerMove, setPartners } = await import('../src/systems/partners.js');
-  const words = [
-    { id: 'one', w: '露营' }, { id: 'two', w: '绑' }, { id: 'three', w: '黄瓜' }, { id: 'four', w: '狼吞虎咽' }
-  ];
-  const progress = { '露营': silver, '绑': gold, '黄瓜': silver, '狼吞虎咽': gold };
-  const eligible = eligiblePartners(words, progress);
-  const selected = setPartners([], eligible.map(word => word.id), eligible.map(word => word.id));
-  assert.deepEqual(selected, ['one', 'two', 'three']);
-  assert.equal(partnerBonuses(selected, Object.fromEntries(words.map(word => [word.id, word])), progress).maxHp, 4);
-  assert.equal(partnerMove(words[0], silver, { '露营': 'Outdoors' }), null);
-  assert.equal(partnerMove(words[1], gold, { '绑': 'Actions' }).id, 'damage-1');
-  assert.equal(partnerMove(words[3], gold, {}).id, 'full-heal');
-  const renderer = fs.readFileSync(path.join(root, 'src/world/renderer.js'), 'utf8');
-  assert.match(renderer, /partners = \(state\.progress\?\.partners \|\| \[\]\)\.slice\(0, 3\)/);
 });
 
 test('restoration rewards use generated art in the room and a dedicated reveal event', () => {
@@ -170,11 +156,12 @@ test('collecting each lesson once keeps player level near the next lesson band',
 test('fresh saves and the game shell expose the P4 and P5 collection surfaces', async () => {
   const { createFreshState } = await import('../src/core/state.js');
   const state = createFreshState({ id: 'p5', content: { contentVersion: 'test' }, map: { id: 'r1-hub', spawn: { x: 1, y: 1 } } });
-  assert.deepEqual(state.progress.partners, []);
+  assert.deepEqual(state.progress.creatures, { collection: {}, partner: null });
   assert.equal(state.progress.equipment.equipped.brush, 'bamboo-brush');
   assert.equal(state.settings.dailyBattles, 30);
   const dom = new JSDOM(fs.readFileSync(path.join(root, 'index.html'), 'utf8'));
   assert.ok(dom.window.document.querySelector('#character-button'));
   assert.equal(dom.window.document.querySelector('#bag-button span').textContent, 'Bag');
   assert.ok(dom.window.document.querySelector('#room-button'));
+  assert.equal(dom.window.document.querySelector('#creatures-button span').textContent, 'Creatures');
 });

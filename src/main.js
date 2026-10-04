@@ -1,8 +1,8 @@
 import { createEventBus } from './core/events.js';
-import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p12';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p22';
+import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p13';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p23';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p28';
+import { createRenderer } from './world/renderer.js?p29';
 import { isHarvestPondCenter } from './world/harvestPond.js';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
@@ -10,9 +10,9 @@ import { createOverlay } from './ui/overlay.js?p10l';
 import { updateHud } from './ui/hud.js?p3';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p53';
-import { createCollection } from './collection.js?p25';
-import { createAdventure } from './adventure.js?p38';
+import { createGameplay } from './gameplay.js?p54';
+import { createCollection } from './collection.js?p27';
+import { createAdventure } from './adventure.js?p40';
 import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p23';
@@ -26,7 +26,7 @@ import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './syst
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 import { activateVillagePortals } from './systems/ending.js';
-import { createTutorial } from './tutorial.js?p7';
+import { createTutorial } from './tutorial.js?p8';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -536,6 +536,7 @@ async function boot() {
     for (const element of document.querySelectorAll('.debug-only')) element.hidden = false;
   }
   $('#status-button').addEventListener('click', showBuildStatus);
+  $('#creatures-button').addEventListener('click', () => collection?.creatures());
   $('#book-button').addEventListener('click', () => { gameplay?.spiritBook(); tutorial?.action('open-book'); });
   $('#dictation-button').addEventListener('click', () => { gameplay?.dictationPractice(); tutorial?.action('open-dictation'); });
   $('#character-button').addEventListener('click', () => { collection?.character(); tutorial?.action('open-hero'); });

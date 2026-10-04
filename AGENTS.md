@@ -46,6 +46,7 @@ Production URLs:
 - Keep fog-route entry closed at zero remaining battles and return the player to the Inn after the final allowed battle.
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
+- Record the highest encountered creature level, allow one companion, and scale its clearly described once-per-battle ability with that level in normal and boss battles.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
 - Keep Tidewater Bay's three collected-word rescue dictations, Keeper Lan's clue comparison, and the post-boss whale rescue distinct from optional neighbour requests.
 - Keep Lantern Theatre's three cue dictations, earlier-region revision journey through Scholar Village, rehearsal and post-boss performance distinct from optional requests.

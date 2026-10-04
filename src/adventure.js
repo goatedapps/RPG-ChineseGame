@@ -9,7 +9,9 @@ import { showWritingTask } from './ui/writingView.js?p15';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { capBossDamage, heroStats } from './battle/damage.js?p1';
-import { enemyAttack, heroDamage } from './battle/battle.js';
+import { heroDamage } from './battle/battle.js';
+import { activeCompanion, activateCompanion, companionStrike, companionCounterattack } from './systems/companions.js';
+import { companionBattleCard } from './ui/companion.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
@@ -660,6 +662,14 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const boss = createBoss(active().levelPackage.balance, regionLessons);
     const startingPlayer = active().state.player;
     const battle = { queue, ...boss, hp: boss.maxHp, index: 0, displayedHealth: [startingPlayer.hp / startingPlayer.maxHp, 1] };
+    const companion = activeCompanion(active().state.progress, active().levelPackage.companions);
+    const companionControls = resume => {
+      document.querySelector('[data-companion-skill]')?.addEventListener('click', () => {
+        if (!activateCompanion(battle, active().state.player, companion)) return;
+        commit();
+        resume();
+      }, { once: true });
+    };
     const arena = () => {
       const game = active();
       const hero = heroStats(game.state.player.level);
@@ -709,12 +719,13 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         let damage = 0;
         if (correct) {
           damage = capBossDamage(heroDamage(game.state.player.level, battle, { writing: task.kind === 'writing', bonusDamage: (task.kind === 'writing' ? bonuses.skillDamage.w : 0) + (battle.attackBoost || 0), roll: Math.random() * 3 }), battle.maxHp);
+          damage = companionStrike(battle, game.state.player, damage);
           battle.hp = Math.max(0, battle.hp - damage);
           audio?.sfx('hit');
         } else battle.queue.push(task);
         let counter = { damage: 0, evaded: false };
         if (battle.hp > 0) {
-          counter = enemyAttack({ creature: battle }, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense, defenseBoost: battle.defenseBoost, damageMultiplier: correct ? 0.8 : 1 });
+          counter = companionCounterattack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion, damageReduction: bonuses.spellDefense, defenseBoost: battle.defenseBoost, damageMultiplier: correct ? 0.8 : 1 }, battle);
           game.state.player = counter.player;
           if (counter.damage > 0) audio?.sfx('playerHit');
         }
@@ -744,10 +755,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         }
         const counterText = counter.evaded ? ' You dodged the counterattack.' : ` ${bossName} struck back for ${counter.damage} damage.`;
         const showTurnResult = () => {
-          overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>${correct ? `You dealt ${damage} damage. ` : ''}${escapeHtml(bossName)} HP ${battle.hp}/${battle.maxHp}.${counterText}</p><div class="button-row"><button class="primary" data-boss-next>Next spell</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });
+          overlay.open(bossPanel(`<p class="panel-kicker">${escapeHtml(task.phase)}</p><h1>${correct ? 'Spell broken!' : 'The spell returns to the queue'}</h1><p>${correct ? `You dealt ${damage} damage. ` : ''}${escapeHtml(bossName)} HP ${battle.hp}/${battle.maxHp}.${counterText}</p><div class="button-row"><button class="primary" data-boss-next>Next spell</button><button class="secondary" data-boss-bag>Open bag</button></div>${companionBattleCard(companion, battle)}`), { dismissible: false });
           animateBattleHealth(battle, game.state.player, battle.hp);
           document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
           document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showTurnResult), { once: true });
+          companionControls(showTurnResult);
         };
         showTurnResult();
       };
@@ -775,9 +787,10 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       showQuestion(overlay, question, null, result => finish(result.ok), { title: `${task.phase} · ${active().levelPackage.regionStory.bossName} HP ${battle.hp}/${battle.maxHp}`, headerHtml: arena() + battleQuestionBadge('attack'), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong') });
     };
     const showBossReady = () => {
-      overlay.open(bossPanel(`<p class="panel-kicker">Boss challenge</p><h1>${escapeHtml(active().levelPackage.regionStory.bossName)} awaits</h1><p>Prepare before breaking the first spell.</p><div class="button-row"><button class="primary" data-boss-next>Begin battle</button><button class="secondary" data-boss-bag>Open bag</button></div>`), { dismissible: false });
+      overlay.open(bossPanel(`<p class="panel-kicker">Boss challenge</p><h1>${escapeHtml(active().levelPackage.regionStory.bossName)} awaits</h1><p>Prepare before breaking the first spell.</p><div class="button-row"><button class="primary" data-boss-next>Begin battle</button><button class="secondary" data-boss-bag>Open bag</button></div>${companionBattleCard(companion, battle)}`), { dismissible: false });
       document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
       document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showBossReady), { once: true });
+      companionControls(showBossReady);
     };
     showBossReady();
   }
@@ -985,7 +998,11 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
   function wordPortal() {
     const game = active();
     if (!game.state.progress.flags.worldRestored) return false;
-    overlay.open(`<div class="panel portal-panel"><p class="panel-kicker">The restored Tree connects the villages</p><h1>Word Portal</h1><p>Choose a village to visit. Your progress and discoveries will stay safe.</p><div class="portal-destinations">${Object.values(game.levelPackage.campaigns).map(campaign => `<button class="secondary" data-portal-region="${campaign.region.id}" ${campaign.region.id === game.levelPackage.region.id ? 'disabled' : ''}>${escapeHtml(campaign.region.name)}</button>`).join('')}</div><button class="secondary" data-close-overlay>Stay here</button></div>`);
+    const destinations = Object.values(game.levelPackage.campaigns).map(campaign => {
+      const current = campaign.region.id === game.levelPackage.region.id;
+      return `<button class="portal-destination${current ? ' is-current' : ''}" type="button" data-portal-region="${campaign.region.id}" ${current ? 'aria-current="location" disabled' : ''}><span class="portal-destination-number" aria-hidden="true">${campaign.region.id.slice(1)}</span><span class="portal-destination-name">${escapeHtml(campaign.region.name)}</span>${current ? '<span class="portal-destination-status">You are here</span>' : ''}</button>`;
+    }).join('');
+    overlay.open(`<div class="panel portal-panel"><header class="portal-header"><h1>Word Portal</h1><p>The restored Tree connects every village.</p></header><div class="portal-body"><p class="portal-intro">Choose where to go. Your progress and discoveries travel with you.</p><div class="portal-destinations" aria-label="Villages">${destinations}</div></div><div class="portal-footer"><button class="secondary" type="button" data-close-overlay>Stay here</button></div></div>`);
     for (const button of document.querySelectorAll('[data-portal-region]:not([disabled])')) button.addEventListener('click', () => onSwitchRegion?.(button.dataset.portalRegion), { once: true });
   }
 

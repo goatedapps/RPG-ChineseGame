@@ -1,8 +1,9 @@
 import { gateDictationRules } from '../systems/dictation.js';
 import { isWalkable } from '../world/map.js';
 import { ROUTE_MAP_VERSION, scaleRouteCell } from '../world/routeMaps.js';
+import { normalizeCreatures } from '../systems/companions.js';
 
-export const SAVE_SCHEMA_VERSION = 13;
+export const SAVE_SCHEMA_VERSION = 14;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -42,7 +43,7 @@ export function createFreshState(levelPackage) {
       npcs: {},
       activity: {},
       parent: { goal: null },
-      partners: [],
+      creatures: { collection: {}, partner: null },
       sets: {},
       milestones: [],
       room: { decorations: [], trophies: [] },
@@ -167,6 +168,8 @@ export function migrateState(candidate, levelPackage) {
     const legacyKnots = Math.max(0, Math.floor(Number(candidate.progress?.inventory?.['lucky-knot']) || 0));
     const inventory = { ...fresh.progress.inventory, ...(candidate.progress?.inventory || {}) };
     delete inventory['lucky-knot'];
+    const savedProgress = { ...(candidate.progress || {}) };
+    delete savedProgress.partners;
     return {
       ...fresh,
       ...candidate,
@@ -186,7 +189,7 @@ export function migrateState(candidate, levelPackage) {
       },
       progress: {
         ...fresh.progress,
-        ...(candidate.progress || {}),
+        ...savedProgress,
         energy: { ...fresh.progress.energy, ...(candidate.progress?.energy || {}) },
         school: { ...fresh.progress.school, ...(candidate.progress?.school || {}) },
         inventory,
@@ -197,7 +200,7 @@ export function migrateState(candidate, levelPackage) {
         npcs: { ...fresh.progress.npcs, ...(candidate.progress?.npcs || {}) },
         activity: { ...fresh.progress.activity, ...(candidate.progress?.activity || {}) },
         parent: { ...fresh.progress.parent, ...(candidate.progress?.parent || {}) },
-        partners: Array.isArray(candidate.progress?.partners) ? candidate.progress.partners : [],
+        creatures: normalizeCreatures(candidate.progress?.creatures),
         sets: { ...fresh.progress.sets, ...(candidate.progress?.sets || {}) },
         milestones: Array.isArray(candidate.progress?.milestones) ? candidate.progress.milestones : [],
         room: { ...fresh.progress.room, ...(candidate.progress?.room || {}) },

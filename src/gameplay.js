@@ -1,15 +1,16 @@
-import { battleRewardAmounts, createBattleState, enemyAttack, escapeSucceeded, gainBattleRewards, playerAttack } from './battle/battle.js?p10f';
+import { battleRewardAmounts, createBattleState, escapeSucceeded, gainBattleRewards, playerAttack } from './battle/battle.js?p11';
 import { createCreature, creatureSpellName } from './battle/creatures.js?p19';
 import { heroStats } from './battle/damage.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
-import { partnerBonuses, partnerMove } from './systems/partners.js?p10f';
+import { activeCompanion, activateCompanion, companionStrike, companionCounterattack, discoverCreature } from './systems/companions.js';
+import { companionBattleCard } from './ui/companion.js';
 import { battlesLeft, useBattle } from './systems/energy.js';
 import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, setTestingPlayerLevel, weeklySummary } from './systems/parent.js?p15';
 import { weightedCreature } from './world/encounters.js?p10e';
-import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p10h';
+import { exportSaveEnvelope, importSaveEnvelope } from './core/save.js?p13';
 import { xpToNextLevel } from './core/progression.js';
 import { checkPassageAnswer, completePassage, normalizeReading, repairActiveReading, selectPassage } from './systems/reading.js?p10g';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
@@ -131,9 +132,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function progressionBonuses(game) {
     const gear = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
-    const wordsById = Object.fromEntries(game.levelPackage.content.words.map(word => [word.id, word]));
-    const partners = partnerBonuses(game.state.progress.partners, wordsById, game.state.progress.words);
-    return { xpMultiplier: 1 + gear.xp, maxHpBonus: gear.maxHp + partners.maxHp };
+    return { xpMultiplier: 1 + gear.xp, maxHpBonus: gear.maxHp };
   }
 
   function recordWord(word, skill, ok, assisted = false, playFeedback = true) {
@@ -180,8 +179,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const recommended = recommendedSkill(game.state.progress.words[battle.word.w]);
     const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
     const hero = heroStats(game.state.player.level);
-    const lead = game.levelPackage.content.words.find(word => word.id === game.state.progress.partners[0]);
-    const move = partnerMove(lead, lead && game.state.progress.words[lead.w], game.levelPackage.wordTags);
+    const companion = activeCompanion(game.state.progress, game.levelPackage.companions);
     overlay.open(`<article class="battle-scene lesson-${battle.word.lesson}">
       <div class="battle-arena">
         <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion * 100)}%</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
@@ -189,17 +187,18 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       </div>
       <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2 tabindex="-1" data-battle-title>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
         <div class="attack-grid">${Object.entries(SKILLS).map(([key, skill]) => `<button type="button" data-attack="${key}" ${resolving || battle.tutorialNeedsBag ? 'disabled' : ''} class="${key === battle.creature.weak ? 'weak-to' : ''} ${key === recommended ? 'recommended' : ''} ${battle.guided && !battle.tutorialNeedsBag && key === recommended ? 'tutorial-arrow' : ''}"><b>${escapeHtml(skill.action)}</b><span>${escapeHtml(skill.name)}${key === battle.creature.weak ? ' · weak spot' : ''}${key === recommended ? ' · can fill an empty skill circle' : ''}</span></button>`).join('')}</div>
-        <div class="button-row"><button class="secondary ${battle.tutorialNeedsBag ? 'tutorial-bag-cue tutorial-arrow' : ''}" data-bag type="button" ${resolving ? 'disabled' : ''}>Open bag</button>${move && !battle.partnerUsed ? `<button class="secondary" data-partner-skill type="button" ${resolving || battle.tutorialNeedsBag ? 'disabled' : ''}>${escapeHtml(move.label)}</button>` : ''}<button class="secondary" data-run type="button" ${resolving || battle.guided ? 'disabled' : ''}>Try to run</button></div>
+        <div class="button-row"><button class="secondary ${battle.tutorialNeedsBag ? 'tutorial-bag-cue tutorial-arrow' : ''}" data-bag type="button" ${resolving ? 'disabled' : ''}>Open bag</button><button class="secondary" data-run type="button" ${resolving || battle.guided ? 'disabled' : ''}>Try to run</button></div>${companionBattleCard(companion, battle, resolving || battle.tutorialNeedsBag)}
       </div>
     </article>`, { dismissible: false, focusSelector: '[data-battle-title]' });
     animateBattleHealth({ ...battle, maxHp: battle.creature.maxHp, displayedHealth: battle.displayedHealth }, game.state.player, battle.enemyHp);
     battle.displayedHealth = [game.state.player.hp / game.state.player.maxHp, battle.enemyHp / battle.creature.maxHp];
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
-      const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.partnerBoost || 0) + (battle.attackBoost || 0), damageMultiplier: battle.doubleHit ? 2 : 1 });
+      const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.attackBoost || 0) });
+      playerResult.damage = companionStrike(playerResult.battle, game.state.player, playerResult.damage);
+      playerResult.battle.enemyHp = Math.max(0, battle.enemyHp - playerResult.damage);
+      playerResult.battle.finished = playerResult.battle.enemyHp === 0;
       if (playerResult.damage > 0) audio?.sfx('hit');
       if (!ok && battle.review) battle.reviewFailed = true;
-      battle.partnerBoost = 0;
-      battle.doubleHit = false;
       battle = playerResult.battle;
       if (battle.guided && !battle.tutorialSupplyUsed) {
         battle.enemyHp = Math.max(1, battle.enemyHp);
@@ -215,11 +214,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         return setTimeout(() => battleWin(battle, playerResult.damage), 650);
       }
       if (battle.creature.fleeAfter && battle.turn > battle.creature.fleeAfter) return creatureFled(battle);
-      const blocksMiss = !ok && battle.ignoreMiss;
-      if (blocksMiss) battle.ignoreMiss = false;
-      if (Math.random() < 0.4) return enemySpell(battle, ok, bonuses, blocksMiss);
-      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion + (ok ? battle.streak >= 3 ? 0.3 : 0.18 : 0), damageReduction: bonuses.spellDefense + (battle.partnerShield || blocksMiss ? 999 : 0), defenseBoost: battle.defenseBoost, damageMultiplier: ok ? 1 : 1.5 });
-      battle.partnerShield = false;
+      if (Math.random() < 0.4) return enemySpell(battle, ok, bonuses);
+      const enemyResult = companionCounterattack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion + (ok ? battle.streak >= 3 ? 0.3 : 0.18 : 0), damageReduction: bonuses.spellDefense, defenseBoost: battle.defenseBoost, damageMultiplier: ok ? 1 : 1.5 });
       game.state.player = enemyResult.player;
       if (battle.guided) game.state.player.hp = Math.max(1, game.state.player.hp);
       if (enemyResult.damage > 0) audio?.sfx('playerHit');
@@ -239,7 +235,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
         toast('You escaped the battle safely.');
         return;
       }
-      const enemyResult = enemyAttack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion, defenseBoost: battle.defenseBoost });
+      const enemyResult = companionCounterattack(battle, game.state.player, Math.random, { evasionBonus: bonuses.evasion, defenseBoost: battle.defenseBoost });
       game.state.player = enemyResult.player;
       if (battle.guided) game.state.player.hp = Math.max(1, game.state.player.hp);
       if (enemyResult.damage > 0) audio?.sfx('playerHit');
@@ -248,24 +244,14 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       showBattle(battle, `Escape failed. ${enemyResult.evaded ? 'You dodged the counterattack!' : `${battle.creature.name} dealt ${enemyResult.damage} damage.`}`);
     }, { once: true });
     document.querySelector('[data-bag]').addEventListener('click', () => battleBag(battle), { once: true });
-    document.querySelector('[data-partner-skill]')?.addEventListener('click', () => {
-      battle.partnerUsed = true;
-      if (move.id === 'heal-5') game.state.player.hp = Math.min(game.state.player.maxHp, game.state.player.hp + 5);
-      if (move.id === 'heal-3') game.state.player.hp = Math.min(game.state.player.maxHp, game.state.player.hp + 3);
-      if (move.id === 'full-heal') game.state.player.hp = game.state.player.maxHp;
-      if (move.id === 'shield') battle.partnerShield = true;
-      if (move.id === 'damage-1') battle.partnerBoost = 1;
-      if (move.id === 'double-hit') battle.doubleHit = true;
-      if (move.id === 'ignore-miss') battle.ignoreMiss = true;
-      if (move.id === 'direct-damage') battle.enemyHp = Math.max(0, battle.enemyHp - 1);
-      if (move.id === 'reveal') battle.revealed = true;
+    document.querySelector('[data-companion-skill]')?.addEventListener('click', () => {
+      if (resolving || battle.tutorialNeedsBag || !activateCompanion(battle, game.state.player, companion)) return;
       commit();
-      if (battle.enemyHp === 0) return battleWin(battle, 1);
-      showBattle(battle, `${lead.w} ${move.message}. ${battle.revealed ? `Weakness: ${SKILLS[battle.creature.weak].name}.` : ''}`);
+      showBattle(battle, `${companion.name} used ${companion.ability.name}! ${companion.ability.description}`);
     }, { once: true });
   }
 
-  function enemySpell(battle, lastCorrect, bonuses, blocksMiss) {
+  function enemySpell(battle, lastCorrect, bonuses) {
     const game = active();
     const pool = wordsForLesson(battle.word.lesson).filter(word => word.w !== battle.word.w);
     const collected = pool.filter(word => game.state.progress.words[word.w]?.collected);
@@ -276,15 +262,13 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     showQuestion(overlay, question, word, result => {
       recordWord(word, battle.creature.attackSkill, result.ok, false, false);
       if (result.ok) { commit(); showBattle(battle, `You blocked ${battle.creature.name}’s ${spell}!`); return; }
-      const shielded = battle.partnerShield || blocksMiss;
-      battle.partnerShield = false;
-      const hit = enemyAttack(battle, game.state.player, () => 1, { damageReduction: bonuses.spellDefense + (shielded ? 999 : 0), defenseBoost: battle.defenseBoost, damageMultiplier: lastCorrect ? 1 : 1.5 });
+      const hit = companionCounterattack(battle, game.state.player, () => 1, { damageReduction: bonuses.spellDefense, defenseBoost: battle.defenseBoost, damageMultiplier: lastCorrect ? 1 : 1.5 });
       game.state.player = hit.player;
       if (battle.guided) game.state.player.hp = Math.max(1, game.state.player.hp);
       if (hit.damage > 0) audio?.sfx('playerHit');
       if (game.state.player.hp <= 0) { showBattle({ ...battle, finished: true }, `${spell} dealt ${hit.damage} damage.`); return setTimeout(() => faint(battle), 650); }
       commit();
-      showBattle(battle, shielded ? `${spell} struck your shield. No damage!` : `${spell} dealt ${hit.damage} damage.`);
+      showBattle(battle, `${spell} dealt ${hit.damage} damage.${hit.absorbed ? ` Your companion shield absorbed ${hit.absorbed} damage.` : ''}`);
     }, { title: `${battle.creature.name} casts ${spell}! Block it`, headerHtml: battleQuestionBadge('defense'), onAnswer: result => audio?.sfx(result.ok ? 'correct' : 'wrong'), readFeedback: revealed => speech.speak(`${revealed.w}。${revealed.ex}`, { rate: game.state.settings.speechRate }), stopFeedback: speech.stop });
   }
 
@@ -400,6 +384,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
+    battle.discovery = discoverCreature(game.state.progress, creature);
     battle.guided = guided;
     battle.lastDailyBattle = !guided && cap !== 0 && energy.energy.used >= cap;
     battle.review = isReviewDue(game.state.progress.words[word.w], localDay());
@@ -414,7 +399,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       transition.classList.add('closing');
       setTimeout(() => {
         transition.remove();
-        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, '？')}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? 'Your bait worked. It carries the exact spirit you chose.' : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
+        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, '？')}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1>${battle.discovery ? `<p class="creature-discovery-notice">${escapeHtml(battle.discovery)}</p>` : ''}<p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? 'Your bait worked. It carries the exact spirit you chose.' : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
         document.querySelector('[data-fight]').addEventListener('click', () => {
           if (guided) guidedBattlePrompt(['This Fogling has a Word Spirit trapped inside. Choose an attack to help free it.', 'You can choose an attack even if its Spirit Book circle is empty. A correct answer will fill that skill.'], () => showBattle(battle));
           else showBattle(battle);
@@ -430,6 +415,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const tutorialWord = game.levelPackage.config.region1?.tutorialWord;
     const word = game.levelPackage.content.words.find(candidate => candidate.w === tutorialWord) || wordsForLesson(1)[0];
     const creature = createCreature(1, game.levelPackage.balance, () => 0);
+    discoverCreature(game.state.progress, creature);
+    commit();
     const ask = () => {
       overlay.open(`<article class="battle-scene lesson-1"><div class="battle-arena"><div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><div class="enemy-hp player-hp"><i style="width:100%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div><div class="battle-enemy"><div class="battle-nameplate"><b>${escapeHtml(creature.name)} · Lv ${creature.level}</b><div class="enemy-hp"><i style="width:100%"></i></div><strong>HP 1/1</strong></div><div class="creature-art">${creatureSvg(creature.id, '？')}</div></div></div><div class="battle-console"><p class="panel-kicker">First Spirit Brush battle</p><h2>Free the Word Spirit</h2><p>The Great Forgetter sealed Word Spirits inside wild creatures. Answer to weaken this Fogling; win the battle to free its Spirit into your Book. That is why you explore and fight.</p><button class="primary" data-tutorial-attack>Try Meaning Strike</button></div></article>`, { dismissible: false });
       document.querySelector('[data-tutorial-attack]').addEventListener('click', () => {

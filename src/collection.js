@@ -1,7 +1,9 @@
 import { canCraft, craft } from './systems/crafting.js';
 import { equipGear, gearBonuses, normalizeEquipment } from './systems/gear.js';
 import { claimMilestones } from './systems/milestones.js';
-import { eligiblePartners, partnerBonuses, setPartners } from './systems/partners.js?p10f';
+import { activeCompanion, chooseCompanion } from './systems/companions.js';
+import { creatureCollectionMarkup } from './ui/creatureCollection.js';
+import { creatureSvg } from './battle/creatureArt.js';
 import { offerSet, setProgress } from './systems/sets.js?p10f';
 import { tierOf } from './learning/mastery.js?p10f';
 import { escapeHtml } from './ui/dom.js';
@@ -107,9 +109,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
   function refreshMaxHp() {
     const game = active();
     const gear = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
-    const wordsById = Object.fromEntries(game.levelPackage.content.words.map(word => [word.id, word]));
-    const partners = partnerBonuses(game.state.progress.partners, wordsById, game.state.progress.words);
-    game.state.player.maxHp = 18 + game.state.player.level * 2 + gear.maxHp + partners.maxHp;
+    game.state.player.maxHp = 18 + game.state.player.level * 2 + gear.maxHp;
     game.state.player.hp = Math.min(game.state.player.hp, game.state.player.maxHp);
   }
 
@@ -132,17 +132,22 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     document.querySelector('[data-craft-open]').addEventListener('click', () => crafting());
   }
 
-  function crafting(craftedName = null) {
+  function showCraftSuccess(recipe) {
+    audio?.sfx('majorReward');
+    overlay.open(`<div class="panel craft-reward-panel"><p class="panel-kicker">Craft complete</p><div class="craft-reward-art"><img src="${gearImage(recipe.id)}" alt="" width="124" height="124"></div><h1>${escapeHtml(recipe.name)} crafted!</h1><p>Added to your equipment. You can equip it in Hero Status.</p><div class="craft-reward-actions"><button class="primary" type="button" data-craft-continue>Back to Craft Table</button><button class="secondary" type="button" data-close-overlay>Continue exploring</button></div></div>`);
+    document.querySelector('[data-craft-continue]').addEventListener('click', () => crafting(), { once: true });
+  }
+
+  function crafting() {
     const game = active();
     const owned = normalizeEquipment(game.state.progress.equipment).owned;
-    overlay.open(`<div class="panel craft-panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Coins: <b>${game.state.player.coins}</b>. Each piece of gear can be crafted once.</p><p class="craft-message ${craftedName ? 'craft-success' : ''}" data-craft-message role="status" tabindex="-1" ${craftedName ? '' : 'hidden'}>${craftedName ? `${escapeHtml(craftedName)} crafted! Find it in Hero Status or your Bag.` : ''}</p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => {
+    overlay.open(`<div class="panel craft-panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Coins: <b>${game.state.player.coins}</b>. Each piece of gear can be crafted once.</p><p class="craft-message" data-craft-message role="alert" tabindex="-1" hidden></p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => {
       const crafted = owned.includes(recipe.id);
       const ready = canCraft(recipe, game.state.player, game.state.progress.materials, game.state.progress.equipment);
       const label = crafted ? 'Crafted' : ready ? 'Craft' : game.state.player.coins < recipe.coins ? 'Need coins' : 'Need materials';
       return `<article class="craft-card ${crafted ? 'is-crafted' : ready ? 'is-ready' : 'is-missing'}"><b>${escapeHtml(recipe.name)}</b><div class="craft-requirements"><span class="${game.state.player.coins >= recipe.coins ? 'has-enough' : 'needs-more'}">Coins ${game.state.player.coins}/${recipe.coins}</span>${Object.entries(recipe.materials).map(([id, count]) => `<span class="${(game.state.progress.materials[id] || 0) >= count ? 'has-enough' : 'needs-more'}">${escapeHtml(itemName(id))} ${game.state.progress.materials[id] || 0}/${count}</span>`).join('')}</div><button class="${ready ? 'primary' : ''}" data-craft="${recipe.id}" ${ready ? '' : 'disabled'}>${label}</button></article>`;
     }).join('')}</div></div>`);
     onTutorialAction('open-craft');
-    if (craftedName) document.querySelector('[data-craft-message]')?.focus();
     for (const button of document.querySelectorAll('[data-craft]:not([disabled])')) button.addEventListener('click', () => {
       const recipe = game.levelPackage.recipes.find(item => item.id === button.dataset.craft);
       const result = craft(recipe, game.state.player, game.state.progress.materials, game.state.progress.equipment);
@@ -151,7 +156,6 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
         if (message) {
           message.hidden = false;
           message.textContent = 'You need more coins or materials for that recipe.';
-          message.setAttribute('role', 'alert');
           message.focus();
         }
         return;
@@ -160,7 +164,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       game.state.progress.materials = result.materials;
       game.state.progress.equipment = result.equipment;
       commit();
-      crafting(recipe.name);
+      showCraftSuccess(recipe);
     });
   }
 
@@ -195,31 +199,23 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     }, { once: true });
   }
 
-  function partners() {
+  function creatures(notice = '') {
     const game = active();
-    const eligible = eligiblePartners(game.levelPackage.content.words, game.state.progress.words);
-    const eligibleIds = eligible.map(word => word.id);
-    overlay.open(`<div class="panel partner-panel"><div class="panel-header"><div><p class="panel-kicker">Travelling party</p><h1>Choose Partner Spirits</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Choose up to three Silver or Gold Spirits. All selected partners follow you on the map; the first Gold partner leads your once-per-battle move.</p>${tutorialStep() === 8 ? '<p class="tutorial-overlay-reminder">Tap a Silver Spirit card, then tap “Travel with selected spirits.”</p>' : ''}${eligible.length ? `<p class="partner-count" data-partner-count>${game.state.progress.partners.length}/3 travelling</p><div class="spirit-grid">${eligible.map(word => `<label class="spirit-card partner-choice ${tierOf(game.state.progress.words[word.w])}"><input type="checkbox" data-partner="${word.id}" ${game.state.progress.partners.includes(word.id) ? 'checked' : ''}> <b>${escapeHtml(word.w)}</b><span>${escapeHtml(word.m)}</span></label>`).join('')}</div><div class="button-row"><button class="primary" data-save-partners>Travel with selected spirits</button></div>` : '<p>No spirits are Silver yet. Complete three skill stars to make one eligible.</p>'}</div>`);
-    for (const input of document.querySelectorAll('[data-partner]')) input.addEventListener('change', () => {
-      const selected = [...document.querySelectorAll('[data-partner]:checked')];
-      if (selected.length > 3) {
-        input.checked = false;
-        toast('Your travelling party can have up to three Partner Spirits.');
-      }
-      const count = document.querySelector('[data-partner-count]');
-      if (count) count.textContent = `${document.querySelectorAll('[data-partner]:checked').length}/3 travelling`;
-      onTutorialAction('partner-selection');
-    });
-    document.querySelector('[data-save-partners]')?.addEventListener('click', () => {
-      const guidedChoice = tutorialStep() === 8;
-      const selected = [...document.querySelectorAll('[data-partner]:checked')].map(input => input.dataset.partner);
-      game.state.progress.partners = setPartners(game.state.progress.partners, selected, eligibleIds);
-      refreshMaxHp();
+    overlay.open(creatureCollectionMarkup(game, notice));
+    for (const button of document.querySelectorAll('[data-choose-creature]')) button.addEventListener('click', () => {
+      if (!chooseCompanion(game.state.progress, button.dataset.chooseCreature)) return;
+      const companion = activeCompanion(game.state.progress, game.levelPackage.companions);
       commit();
-      toast(`${game.state.progress.partners.length || 'No'} Partner Spirit${game.state.progress.partners.length === 1 ? '' : 's'} travelling with you.`);
-      onTutorialAction('partners-saved');
-      if (guidedChoice && game.state.progress.partners.length) overlay.close();
-      else room();
+      audio?.sfx('earn');
+      if (tutorialStep() === 8) {
+        overlay.close();
+        onTutorialAction('companion-chosen');
+      } else creatures(`${companion.name} is now your partner. ${companion.ability.description}`);
+    });
+    document.querySelector('[data-release-creature]')?.addEventListener('click', () => {
+      chooseCompanion(game.state.progress, null);
+      commit();
+      creatures('You are travelling alone. Choose a partner whenever you like.');
     });
   }
 
@@ -260,7 +256,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
   function room() {
     const game = active();
     applyMilestones();
-    const travellingPartners = game.state.progress.partners.map(id => game.levelPackage.content.words.find(word => word.id === id)).filter(Boolean);
+    const companion = activeCompanion(game.state.progress, game.levelPackage.companions);
     const gold = Object.values(game.state.progress.words).filter(value => tierOf(value) === 'gold').length;
     const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
     if (goal?.complete && !game.state.progress.parent.goal.celebrated) { game.state.progress.parent.goal.celebrated = true; commit(); toast(`Goal reached: ${goal.label}!`); }
@@ -274,20 +270,20 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
         : '<span aria-hidden="true">✦</span>';
     };
     overlay.open(`<div class="panel room-panel">
-      <div class="panel-header room-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>My Room</h1><p>A place for your partners and the things you have restored.</p></div><button class="secondary" data-close-overlay>Leave room</button></div>
+      <div class="panel-header room-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>My Room</h1><p>A place for your companion and the things you have restored.</p></div><button class="secondary" data-close-overlay>Leave room</button></div>
       <div class="room-scene" role="img" aria-label="Warm bedroom with trophy shelf, village window, desk and bed">
         <div class="room-shelf-count"><b>${trophies.length}</b><span>keepsakes earned</span></div>
         <div class="room-restoration-display" aria-label="Restoration keepsakes displayed in the room">${decorations.slice(-4).map(id => restorationArt(id, `${itemName(id)} decoration`)).join('')}</div>
-        <div class="room-companion-nook"><b>Partner Spirits</b><div>${travellingPartners.length ? travellingPartners.map(word => `<span class="room-spirit" title="${escapeHtml(word.m)}">${escapeHtml(word.w)}</span>`).join('') : '<span class="room-companion-empty">Your chosen spirits will appear here.</span>'}</div></div>
+        <div class="room-companion-nook"><b>Your creature companion</b><div>${companion ? `${creatureSvg(companion.id, '')}<span>${escapeHtml(companion.name)} · Lv. ${companion.level}</span>` : '<span class="room-companion-empty">Choose a companion in Creatures.</span>'}</div></div>
       </div>
       <div class="room-progress"><section class="room-streak"><span>Lantern Streak</span><b>${game.state.progress.streak?.count || 0} days</b></section>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div role="progressbar" aria-label="Real-world goal progress" aria-valuemin="0" aria-valuemax="${goal.target}" aria-valuenow="${goal.value}"><i style="width:${goal.percent}%"></i></div></section>` : '<section class="room-goal room-goal-empty"><b>Real-world goal</b><span>A parent can add a goal in Parent Mode.</span></section>'}</div>
       <section class="room-keepsakes"><div class="room-section-heading"><h2>What you have earned</h2><span>${trophies.length} trophies · ${decorations.length} decorations</span></div>${trophies.length || decorations.length ? `<div class="room-keepsake-grid">${trophies.map(name => `<div class="room-keepsake">${trophyArt(name)}<b>${escapeHtml(name)}</b></div>`).join('')}${decorations.map(id => `<div class="room-keepsake room-decoration">${restorationArt(id, `${itemName(id)} decoration`)}<b>${escapeHtml(itemName(id))}</b></div>`).join('')}</div>` : '<p class="room-empty">Your shelf will fill as you restore regions and complete Spirit sets.</p>'}</section>
-      <div class="room-action-grid"><button type="button" class="room-action" data-room-partners><b>Choose Partner Spirits</b><span>Pick up to three Silver or Gold Spirits to travel with you.</span></button>${hasSets ? `<button type="button" class="room-action" data-board-open><b>View Restoration Board</b><span>Offer complete Spirit sets to repair ${escapeHtml(game.levelPackage.region.name)}.</span></button>` : ''}</div>
-      <div class="room-explainers"><details><summary>What are Partner Spirits?</summary><p>Silver partners increase your maximum HP. Gold partners increase it further and may unlock a battle move.</p></details>${hasSets ? `<details><summary>What is the Restoration Board?</summary><p>Raise every Spirit card in a themed set to Silver or Gold, then restore part of ${escapeHtml(game.levelPackage.region.name)}. Your cards are never used up.</p></details>` : ''}</div>
+      <div class="room-action-grid"><button type="button" class="room-action" data-room-creatures><b>Choose a creature companion</b><span>Meet creatures, grow their abilities and choose one to travel with you.</span></button>${hasSets ? `<button type="button" class="room-action" data-board-open><b>View Restoration Board</b><span>Offer complete Spirit sets to repair ${escapeHtml(game.levelPackage.region.name)}.</span></button>` : ''}</div>
+      <div class="room-explainers"><details><summary>How do creature companions grow?</summary><p>Meeting a creature adds it to Creatures in the left menu. Meeting a stronger one upgrades its recorded level and ability. Your chosen companion can use its ability once per battle, including boss battles.</p></details>${hasSets ? `<details><summary>What is the Restoration Board?</summary><p>Raise every Spirit card in a themed set to Silver or Gold, then restore part of ${escapeHtml(game.levelPackage.region.name)}. Your cards are never used up.</p></details>` : ''}</div>
     </div>`);
     document.querySelector('[data-board-open]')?.addEventListener('click', restorationBoard);
-    document.querySelector('[data-room-partners]').addEventListener('click', partners);
+    document.querySelector('[data-room-creatures]').addEventListener('click', () => creatures());
   }
 
-  return { bag, character, crafting, partners, restorationBoard, room, applyMilestones, refreshMaxHp };
+  return { bag, character, crafting, creatures, restorationBoard, room, applyMilestones, refreshMaxHp };
 }

@@ -23,7 +23,7 @@ function freshGame() {
         story: { flags: { arrival: true } },
         words: {},
         inventory: { 'rice-ball': 1 },
-        partners: []
+        creatures: { collection: { fogling: { level: 3 } }, partner: null }
       }
     },
     levelPackage: { map: { objects: [{ id: 'apprentice-jun', x: 6, y: 9 }, { id: 'shop-door', x: 10, y: 9 }] }, sets: [], content: { words: [] } }
@@ -355,7 +355,7 @@ test('finishing the guide clears every tutorial highlight even while Jun says go
   }
 });
 
-test('choosing a Silver Partner saves the party and advances Jun’s guide', async () => {
+test('choosing a creature companion saves the choice and advances Jun’s guide', async () => {
   const [{ createOverlay }, { createTutorial }, { createCollection }] = await Promise.all([
     import('../src/ui/overlay.js'), import('../src/tutorial.js'), import('../src/collection.js')
   ]);
@@ -373,6 +373,7 @@ test('choosing a Silver Partner saves the party and advances Jun’s guide', asy
   game.levelPackage.milestones = [];
   game.levelPackage.content.words = [{ id: 'word-1', w: '露营', m: 'Camping' }, { id: 'word-2', w: '散步', m: 'Walk' }];
   game.levelPackage.gear = [];
+  game.levelPackage.companions = JSON.parse(fs.readFileSync(path.join(__dirname, '../content/authored/shared/companions.json'), 'utf8'));
   const overlayElement = dom.window.document.querySelector('#overlay');
   const overlay = createOverlay(overlayElement);
   let guide;
@@ -382,13 +383,12 @@ test('choosing a Silver Partner saves the party and advances Jun’s guide', asy
   const collection = createCollection({ overlay, getActive: () => game, persist: () => {}, render, toast: () => {}, onTutorialAction: (type, detail) => guide.action(type, detail), tutorialStep: () => guide.current() });
   try {
     collection.room();
-    overlayElement.querySelector('[data-room-partners]').click();
-    assert.equal(overlayElement.querySelectorAll('[data-partner]').length, 1);
-    overlayElement.querySelector('[data-partner]').click();
-    overlayElement.querySelector('[data-save-partners]').click();
-    assert.deepEqual(game.state.progress.partners, ['word-1']);
+    overlayElement.querySelector('[data-room-creatures]').click();
+    assert.equal(overlayElement.querySelectorAll('[data-choose-creature]').length, 1);
+    overlayElement.querySelector('[data-choose-creature]').click();
+    assert.equal(game.state.progress.creatures.partner, 'fogling');
     assert.equal(game.state.progress.tutorial.step, 9);
-    assert.match(overlayElement.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /Your Partner can now travel beside you/);
+    assert.match(overlayElement.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /Your creature companion can now travel beside you/);
   } finally {
     guide.destroy();
     overlay.close();
@@ -494,8 +494,8 @@ test('the later guide requires the Restoration explanation, menu visits, and bot
   const overlay = fakeOverlay();
   const guide = createTutorial({ getActive: () => game, persist: () => {}, render: () => {}, overlay });
   try {
-    game.state.progress.partners.push('word-1');
-    guide.action('partners-saved');
+    game.state.progress.creatures.partner = 'fogling';
+    guide.action('companion-chosen');
     guide.action('open-board');
     assert.equal(game.state.progress.tutorial.step, 9);
     guide.action('board-acknowledged');

@@ -14,7 +14,7 @@ The prologue has a permanent, unobtrusive Skip intro link.
 After Grandma Wang hands over the Spirit Brush, five village steps summon Apprentice Jun's required, one-time guided start; only a parent can skip it through Parent Mode.
 Jun uses short, typed green conversations followed by blinking-arrow handoffs to the Next step box, map and activity controls.
 Six action-gated missions introduce the Shop, villagers, School, battle supplies and Spirit Book, with a brief completion comment at each transition, then Jun releases the child to explore until level 3.
-At level 3 Jun returns for mastery tiers, partners, restoration, the child-facing Atlas panels, dictation, crafting, and a Repellent-and-Bait Shop visit.
+At level 3 Jun returns for mastery tiers, creature companions, restoration, the child-facing Atlas panels, dictation, crafting, and a Repellent-and-Bait Shop visit.
 Tutorial progress resumes at the exact incomplete action; pre-existing saves retain their current progression without being enrolled.
 
 The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
@@ -116,7 +116,13 @@ School dictation now offers a regional lesson and 5, 10 or all words; menu dicta
 Wrong or skipped villager passage answers show the passage, question and correct answer for review, but only a correct attempt clears the villager's question mark.
 Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
-Collection systems include mastery tiers, partners, Restoration Sets, milestones, gear, crafting and the player room.
+Collection systems include mastery tiers, creature companions, Restoration Sets, milestones, gear, crafting and the player room.
+The left-menu Creatures collection records all 35 ordinary species on encounter, even if the player retreats, retaining only each species’ highest encountered level.
+Choose one creature to follow the hero and appear in My Room; each has an authored personality and a once-per-battle ability usable in normal and boss battles.
+Ability values grow with recorded creature level, and cards show exact current effects plus the next level’s effects.
+Shields absorb a finite damage pool, healing is capped by maximum HP, and enhanced attacks consume charges only on correct answers.
+Boss discoveries appear after defeat and cannot be selected as companions.
+Schema 14 replaces vocabulary partners with a separate creature collection; vocabulary progress remains intact, and older saves start recording creature levels at their next encounter because historical encounter levels were not saved.
 Region 1 Restoration Sets are curriculum-specific so Jun's level-3 board tour has available sets in both P2 and P5.
 Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
 Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.

@@ -2,7 +2,7 @@ import { calculateDamage, didEvade, heroStats } from './damage.js';
 import { xpToNextLevel } from '../core/progression.js';
 
 export function createBattleState(word, creature) {
-  return { word, creature, enemyHp: creature.maxHp, turn: 1, finished: false, streak: 0, partnerUsed: false };
+  return { word, creature, enemyHp: creature.maxHp, turn: 1, finished: false, streak: 0, companionUsed: false };
 }
 
 export function heroDamage(playerLevel, creature, { weak = false, writing = false, streak = 0, bonusDamage = 0, damageMultiplier = 1, roll = 0 } = {}) {

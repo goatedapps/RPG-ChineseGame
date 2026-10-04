@@ -8,7 +8,7 @@ const lessons = {
   5: ['Free a Word Spirit', 'Explore Mistwood Road and fight a creature. You can choose an attack even when its Spirit Book circle is empty; a correct answer fills that skill. When you lose HP, open your battle Bag and use the Rice Ball.', 'Win a battle and free a Word Spirit.'],
   6: ['Open the Spirit Book', 'Tap the arrow on the left to expand the Atlas menu. Open Spirit Book and tap the glowing card for the word you just freed. Its filled circle came from your battle attack.', 'Expand the menu and tap your new Spirit’s card.'],
   7: ['See how Spirits grow', 'You reached level 3! Welcome back. Open your Spirit Book and look at how many Bronze, Silver, and Gold Spirits you have. Then I’ll explain how they grow.', 'Open Spirit Book to see your Bronze, Silver, and Gold counts.'],
-  8: ['Choose a Partner', 'A Silver Spirit can travel beside you. Open My Room and choose one to be your Partner.', 'Choose a Silver Partner Spirit in My Room.'],
+  8: ['Choose a creature companion', 'Creatures you meet join your collection. Open Creatures in the left menu, read an ability and choose one partner. Meeting a stronger creature upgrades its ability.', 'Open Creatures and choose one travelling partner.'],
   9: ['See a Restoration Set', 'Open the Restoration Board in My Room. I’ll show you what the first set needs and the decoration it can earn.', 'Open the Restoration Board.'],
   10: ['Find your Adventure', 'Adventure remembers the story and the villagers’ requests. Open it to see who needs help.', 'Open Adventure from the left menu.'],
   11: ['Check today’s goals', 'The Daily Board shows three small goals. Finish all three to open a Daily Chest with rewards. There is no timer.', 'Open the Daily Board.'],
@@ -29,8 +29,8 @@ const transitions = {
   4: ['Well done on your quiz! You earned XP toward your next level.', 'Now take the north gate to Mistwood Road and free a Word Spirit. I’ll guide your first battle.'],
   5: ['Good work defeating your first battle! The Word Spirit is free.', 'You are back in the village. Tap the arrow on the left to open the Atlas menu.', 'Now open Spirit Book and tap the glowing card for the Spirit you just freed.'],
   6: ['There it is! The filled circle came from the attack you chose in battle.', 'You’re ready to explore. Follow Next step, talk to people, and collect more Word Spirits. I’ll tell you more when you reach level 3.'],
-  7: ['Now you know how Bronze, Silver, and Gold Spirits grow. Silver Spirits can join you as Partners.', 'Open My Room to choose one.'],
-  8: ['Your Partner can now travel beside you.', 'Look at the Restoration Board in your room. Sets of Silver Spirits earn room decorations.'],
+  7: ['Now you know how Bronze, Silver, and Gold Spirits grow. You also have a separate collection of the creatures you meet.', 'Open Creatures in the left menu to choose a companion and read its battle ability.'],
+  8: ['Your creature companion can now travel beside you. Use its ability once per battle, including boss battles.', 'Look at the Restoration Board in your room. Sets of Silver Spirits earn room decorations.'],
   9: ['You know what that set needs. You can finish collecting it later.', 'Open Adventure from the left menu to see the story and villagers’ requests.'],
   10: ['Adventure helps you remember who needs help.', 'Now open Daily Board. Finishing all three goals gives you a Daily Chest with rewards.'],
   11: ['Those daily goals are optional, with no timer.', 'Open Bag to see the supplies and items you carry.'],
@@ -91,6 +91,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (step === 5 && !map.route) return { text: 'Go around the sign on the north path and enter Mistwood Road for a battle.', target: itemTarget(map, 'route-entrance') };
     if (step === 6 && tutorial.bookSeen) return { text: 'Tap the glowing card for the Word Spirit you just freed.', target: null };
     if (step === 7 && tutorial.bookSeen) return { text: silverCount(game) ? 'Read Jun’s tier explanation in Spirit Book, then tap I understand tiers.' : 'In Spirit Book, tap Practice an empty skill circle until a Spirit turns Silver.', target: null };
+    if (step === 8 && !Object.keys(game.state.progress.creatures?.collection || {}).length) return { text: 'Meet a creature on the fog route, then open Creatures to choose a companion.', target: map.route ? null : itemTarget(map, 'route-entrance') };
     if (step === 9 && tutorial.boardSeen) return { text: 'Read Jun’s note on the first Restoration Set, then tap I see what this set needs.', target: null };
     if (step === 13 && tutorial.heroSeen) return { text: 'In Hero Status, tap Craft Table to see how materials become gear.', target: null };
     if (step === 15) {
@@ -156,8 +157,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     }
     if (step === 7 && type === 'tier-acknowledged' && tutorial.bookSeen && silverCount(getActive()) > 0) return advance();
     if (step === 7 && type === 'practice-complete' && silverCount(getActive()) > 0) return advance();
-    if (step === 8 && type === 'partners-saved' && getActive().state.progress.partners.length) return advance();
-    if (step === 8 && type === 'partner-selection') return saveAndShow();
+    if (step === 8 && type === 'companion-chosen' && getActive().state.progress.creatures?.partner) return advance();
     if (step === 9 && type === 'open-board') { tutorial.boardSeen = true; return saveAndShow(); }
     if (step === 9 && type === 'board-acknowledged' && tutorial.boardSeen) return advance();
     if (step === 10 && type === 'open-journal') { tutorial.awaitingPanelClose = step; return saveAndShow(); }
@@ -292,8 +292,8 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     let selector = '';
     if (step === 1) selector = tutorial.introStage === 'point-next' ? '.objective' : tutorial.introStage === 'point-map' ? '.guide-map' : '';
     else if (inOverlay && tutorial.awaitingPanelClose === step) selector = '[data-close-overlay]';
-    else if (inOverlay) selector = ({ 2: '[data-buy="rice-ball"]', 4: '[data-school-quiz]', 5: '[data-fight], [data-use-item="rice-ball"], [data-bag].tutorial-bag-cue, [data-attack].recommended:not([disabled])', 6: '[data-tutorial-word]', 7: '[data-tutorial-tier-done], [data-guided-spirit-practice]', 8: document.querySelector('[data-partner]:checked') ? '[data-save-partners]' : '[data-room-partners], .partner-choice', 9: '[data-board-open], [data-tutorial-board-done]', 13: '[data-craft-open]', 15: tutorial.repellentBought ? '[data-bait-word]:not(.collected), [data-bait-lesson]' : '[data-buy="forest-repellent"]' })[step] || '';
-    else selector = ({ 2: '.guide-map', 3: '.objective', 4: '.guide-map', 5: '.guide-map', 6: '#book-button', 7: '#book-button', 8: '#room-button', 9: '#room-button', 10: '#story-button', 11: '#daily-button', 12: '#bag-button', 13: '#character-button', 14: '#dictation-button', 15: '.guide-map' })[step] || '';
+    else if (inOverlay) selector = ({ 2: '[data-buy="rice-ball"]', 4: '[data-school-quiz]', 5: '[data-fight], [data-use-item="rice-ball"], [data-bag].tutorial-bag-cue, [data-attack].recommended:not([disabled])', 6: '[data-tutorial-word]', 7: '[data-tutorial-tier-done], [data-guided-spirit-practice]', 8: '[data-room-creatures], [data-choose-creature]', 9: '[data-board-open], [data-tutorial-board-done]', 13: '[data-craft-open]', 15: tutorial.repellentBought ? '[data-bait-word]:not(.collected), [data-bait-lesson]' : '[data-buy="forest-repellent"]' })[step] || '';
+    else selector = ({ 2: '.guide-map', 3: '.objective', 4: '.guide-map', 5: '.guide-map', 6: '#book-button', 7: '#book-button', 8: '#creatures-button', 9: '#room-button', 10: '#story-button', 11: '#daily-button', 12: '#bag-button', 13: '#character-button', 14: '#dictation-button', 15: '.guide-map' })[step] || '';
     if (!inOverlay && step >= 6 && step <= 14 && !document.querySelector('.game-shell')?.classList.contains('atlas-menu-expanded')) selector = '.atlas-menu-toggle';
     if (selector) {
       arrowTarget = document.querySelector(selector);

@@ -10,9 +10,17 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
   const stages = characters.map(character => forceMemory ? 2 : normalizeCharacterProgress(nextProgress[character]).stage);
   const allFromMemory = stages.every(stage => stage === 2);
   let writer = null;
+  let exited = false;
+  let completed = false;
+  let advanceTimer = null;
 
   const dictate = () => speech.speak(word.w, { rate: speechRate });
-  const finish = () => { speech.stop(); onDone({ ...writingResult({ gaveUp: false, usedDemonstration: anyHelp, allFromMemory }), gaveUp: false }, nextProgress); };
+  const finish = () => {
+    if (exited || completed) return;
+    completed = true;
+    speech.stop();
+    onDone({ ...writingResult({ gaveUp: false, usedDemonstration: anyHelp, allFromMemory }), gaveUp: false }, nextProgress);
+  };
   const draw = () => {
     const character = characters[index];
     const stage = WRITING_STAGES[stages[index]];
@@ -20,6 +28,17 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
     const blank = '＿'.repeat(characters.length);
     const example = String(word.ex || 'Example sentence unavailable.').split(word.w).join(blank);
     let helped = false;
+    let advancing = false;
+    const advance = () => {
+      if (exited || completed || advancing) return;
+      advancing = true;
+      advanceTimer = window.setTimeout(() => {
+        advanceTimer = null;
+        if (exited || completed) return;
+        index += 1;
+        index < characters.length ? draw() : finish();
+      }, 400);
+    };
     overlay.open(`<article class="panel writing-panel${headerHtml.includes('battle-question-badge') ? ' battle-question' : ''}${headerHtml.includes('boss-battle-arena') ? ' boss-question' : ''}">
       ${headerHtml}
       <p class="panel-kicker">Writing · ${escapeHtml(stage.name)}</p>
@@ -49,9 +68,10 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       highlightOnComplete: true,
       onCorrectStroke: data => { if (data.mistakesOnStroke >= AUTO_COMPLETE_AFTER_MISSES) helped = true; },
       onComplete: () => {
+        if (exited || completed || advancing) return;
         anyHelp ||= helped;
         nextProgress[character] = recordCharacter(nextProgress[character], { helped, runId });
-        window.setTimeout(() => { index += 1; index < characters.length ? draw() : finish(); }, 400);
+        advance();
       }
     });
     document.querySelector('[data-writing-show]').addEventListener('click', () => {
@@ -63,12 +83,16 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
         if (exit) exit.disabled = true;
       }
       writer.animateCharacter({ onComplete: completeOnHelp ? () => {
+        if (exited || completed || advancing) return;
         anyHelp = true;
         nextProgress[character] = recordCharacter(nextProgress[character], { helped: true, runId });
-        window.setTimeout(() => { index += 1; index < characters.length ? draw() : finish(); }, 400);
+        advance();
       } : quiz });
     });
     document.querySelector('[data-writing-exit]')?.addEventListener('click', () => {
+      if (exited || completed) return;
+      exited = true;
+      if (advanceTimer !== null) window.clearTimeout(advanceTimer);
       speech.stop();
       writer.cancelQuiz();
       onExit();

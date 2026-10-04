@@ -4,8 +4,8 @@ import { xpToNextLevel } from '../core/progression.js';
 export function updateHud(elements, levelPackage, state) {
   if (elements.region) {
     const shortNames = { r3: 'Tidewater Bay', r4: 'Lantern Theatre', r7: 'Treehouse Summit' };
-    elements.region.textContent = shortNames[levelPackage.region.id] || levelPackage.region.name;
-    elements.region.title = levelPackage.region.name;
+    elements.region.textContent = levelPackage.map.route ? levelPackage.map.name : shortNames[levelPackage.region.id] || levelPackage.region.name;
+    elements.region.title = levelPackage.map.route ? levelPackage.map.name : levelPackage.region.name;
   }
   elements.level.textContent = levelPackage.label;
   elements.location.textContent = levelPackage.map.name;

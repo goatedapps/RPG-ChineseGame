@@ -5,7 +5,7 @@ import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p18';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p18';
-import { showWritingTask } from './ui/writingView.js?p13';
+import { showWritingTask } from './ui/writingView.js?p15';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { capBossDamage, heroStats } from './battle/damage.js?p1';

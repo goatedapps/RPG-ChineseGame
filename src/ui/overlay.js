@@ -3,6 +3,7 @@ import { escapeHtml } from './dom.js';
 export function createOverlay(element) {
   const ownerDocument = element.ownerDocument;
   let closeHandler = null;
+  let replaceHandler = null;
   let returnFocus = null;
   let returnFocusWasPointer = false;
   let typingTimer = null;
@@ -36,13 +37,16 @@ export function createOverlay(element) {
     };
     typingTimer = setTimeout(tick, 80);
   }
-  function open(content, { dismissible = true, onClose = null, focusSelector = null } = {}) {
+  function open(content, { dismissible = true, onClose = null, onReplace = null, focusSelector = null } = {}) {
     clearTimeout(typingTimer);
     if (element.hidden) {
       returnFocus = document.activeElement;
       returnFocusWasPointer = lastInputWasPointer;
+    } else {
+      replaceHandler?.();
     }
     closeHandler = onClose;
+    replaceHandler = onReplace;
     api.dismissible = dismissible;
     element.innerHTML = content;
     element.classList.toggle('full-screen-overlay', Boolean(element.querySelector('.finale-screen, .homecoming-panel')));
@@ -71,6 +75,7 @@ export function createOverlay(element) {
     element.classList.remove('full-screen-overlay');
     const handler = closeHandler;
     closeHandler = null;
+    replaceHandler = null;
     if (returnFocus?.isConnected) {
       if (returnFocusWasPointer && returnFocus !== ownerDocument.body) {
         const target = returnFocus;

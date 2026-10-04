@@ -54,8 +54,9 @@ export function makeQuestion(word, skill, words, { random = Math.random } = {}) 
   };
 }
 
-export function makeExamQuestion(question) {
-  return adaptExamQuestion(question);
+export function makeExamQuestion(question, { random = Math.random } = {}) {
+  const adapted = adaptExamQuestion(question);
+  return { ...adapted, options: shuffle(adapted.options, random) };
 }
 
 export function checkAnswer(question, answer) {

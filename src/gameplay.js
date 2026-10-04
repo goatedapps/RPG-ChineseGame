@@ -21,7 +21,7 @@ import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/se
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p19';
-import { showWritingTask } from './ui/writingView.js?p14';
+import { showWritingTask } from './ui/writingView.js?p15';
 import { createSpeechController } from './learning/audio.js';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { battleQuestionBadge } from './ui/battleBadge.js';
@@ -580,7 +580,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     }
     const activePassage = reading.active === group.id;
     const answered = Object.keys(reading.results).length;
-    overlay.open(`<article class="panel reading-panel"><div class="panel-header"><div><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}${group.subject === 'Higher Chinese' ? ' · Optional Higher Chinese' : ''}</p><h1>${escapeHtml(group.passage.title)}</h1></div><button class="secondary" data-close-overlay>Read later</button></div>${passageScroll(group.passage.text)}<p>${activePassage ? `${answered}/${reading.questionCount} villagers have received an answer. Look for ? bubbles in the village.` : `${Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length)} villagers will each ask one short question.`}</p><div class="button-row"><button class="primary" data-reading-start>${activePassage ? 'Return to the village' : 'I’ve read it · Take Passage Scroll'}</button><button class="secondary" data-read-aloud>Read aloud</button>${!activePassage && group.subject !== 'Higher Chinese' && higherGroups.length ? '<button class="secondary" data-higher-chinese>Higher Chinese</button>' : ''}</div></article>`, { onClose: speech.stop });
+    overlay.open(`<article class="panel reading-panel"><div class="panel-header"><div><p class="panel-kicker">Reading Hall · ${escapeHtml(group.category)}${group.subject === 'Higher Chinese' ? ' · Optional Higher Chinese' : ''}</p><h1>${escapeHtml(group.passage.title)}</h1></div><button class="secondary" data-close-overlay>Read later</button></div>${passageScroll(group.passage.text)}<p>${activePassage ? `${answered}/${reading.questionCount} villagers have received an answer. Look for ? bubbles in the village.` : `${Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length)} villagers will each ask one short question.`}</p><div class="button-row"><button class="primary" data-reading-start>${activePassage ? 'Return to the village' : 'I’ve read it · Take Passage Scroll'}</button><button class="secondary" data-read-aloud>Read aloud</button>${!activePassage && group.subject !== 'Higher Chinese' && higherGroups.length ? '<button class="secondary" data-higher-chinese>Higher Chinese</button>' : ''}</div></article>`, { onClose: speech.stop, onReplace: speech.stop });
     document.querySelector('[data-reading-start]').addEventListener('click', () => {
       if (!activePassage) game.state.progress.reading = { ...reading, active: group.id, questionCount: Math.min(group.items.length, game.levelPackage.regionStory.passageVillagers.length), results: {} };
       speech.stop(); commit(); overlay.close(); toast(activePassage ? 'Find the remaining villagers with ? bubbles.' : 'Passage Scroll received. Find the villagers with ? bubbles.');

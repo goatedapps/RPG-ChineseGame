@@ -20,6 +20,17 @@ test('School Quiz and Exam Day pools include only current-region lessons', async
   }
 });
 
+test('authored exam answers are shuffled without changing the answer or source options', async () => {
+  const { makeExamQuestion, checkAnswer } = await import('../src/learning/questions.js');
+  const source = { id: 'sample', kind: 'vocab', q: 'Choose the word.', o: ['correct', 'second', 'third', 'fourth'], c: 'correct' };
+  const original = [...source.o];
+  const question = makeExamQuestion(source, { random: () => 0 });
+  assert.notEqual(question.options[0], question.correct);
+  assert.deepEqual(new Set(question.options), new Set(original));
+  assert.deepEqual(source.o, original);
+  assert.equal(checkAnswer(question, question.options[question.options.indexOf('correct')]).ok, true);
+});
+
 test('battle Usage prefers a vetted matching question, then falls back only when absent', async () => {
   const { makeBattleQuestion } = await import('../src/gameplay.js');
   const content = read('content/generated/p2.content.json');
@@ -31,7 +42,7 @@ test('battle Usage prefers a vetted matching question, then falls back only when
   assert.equal(authoredUsage.id, usage.id);
   assert.equal(authoredUsage.source, 'exam');
   assert.equal(authoredUsage.skill, 'u');
-  assert.deepEqual(authoredUsage.options, usage.o);
+  assert.deepEqual(new Set(authoredUsage.options), new Set(usage.o));
   assert.equal(authoredUsage.correct, usage.c);
   const authoredVocab = makeBattleQuestion(vocabWord, 'u', content.words, [vocab]);
   assert.equal(authoredVocab.id, vocab.id);

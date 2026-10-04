@@ -1,8 +1,8 @@
 export function createSpeechController({ synth = globalThis.speechSynthesis, Utterance = globalThis.SpeechSynthesisUtterance } = {}) {
   let active = null;
   const stop = () => {
-    try { synth?.cancel(); } catch {}
     active = null;
+    try { synth?.cancel(); } catch {}
   };
   const speak = (text, { rate = 0.85, onEnd = () => {} } = {}) => {
     stop();
@@ -10,8 +10,13 @@ export function createSpeechController({ synth = globalThis.speechSynthesis, Utt
     const utterance = new Utterance(text);
     utterance.lang = 'zh-CN';
     utterance.rate = rate;
-    utterance.onend = () => { active = null; onEnd(); };
-    utterance.onerror = () => { active = null; onEnd(); };
+    const finish = () => {
+      if (active !== utterance) return;
+      active = null;
+      onEnd();
+    };
+    utterance.onend = finish;
+    utterance.onerror = finish;
     active = utterance;
     synth.speak(utterance);
     return true;

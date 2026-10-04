@@ -49,29 +49,34 @@ test('Atlas menu expands accessibly while preserving the world controls', async 
   assert.match(shellHtml, /atlas\.css/);
 });
 
-test('sidebar panels cannot replace a live battle or other locked activity', async () => {
+test('sidebar panels explain why they cannot replace a live battle or locked activity', async () => {
   const { guardAtlasPanels } = await import('../src/ui/atlas.js');
-  const dom = new JSDOM('<nav id="game-menus"><button id="atlas-menu-toggle"></button><button id="book-button"></button><button id="sound-button"></button></nav>');
+  const dom = new JSDOM('<nav id="game-menus"><button id="atlas-menu-toggle"></button><button id="book-button"></button><button id="character-button"></button><button id="bag-button"></button><button id="room-button"></button><button id="daily-button"></button><button id="story-button"></button><button id="dictation-button"></button><button id="parent-button"></button><button id="sound-button"></button></nav>');
   const menu = dom.window.document.querySelector('#game-menus');
   let battleActive = false;
   let lockedOverlay = false;
   let opened = 0;
-  guardAtlasPanels(menu, () => !battleActive && !lockedOverlay);
-  dom.window.document.querySelector('#book-button').addEventListener('click', () => { opened += 1; });
+  let blocked = 0;
+  guardAtlasPanels(menu, () => !battleActive && !lockedOverlay, () => { blocked += 1; });
+  const panels = [...menu.querySelectorAll('button:not(#atlas-menu-toggle):not(#sound-button)')];
+  panels.forEach(button => button.addEventListener('click', () => { opened += 1; }));
   const book = dom.window.document.querySelector('#book-button');
   book.click();
   assert.equal(opened, 1);
   battleActive = true;
-  book.click();
+  panels.forEach(button => button.click());
   assert.equal(opened, 1);
+  assert.equal(blocked, panels.length);
   battleActive = false;
   lockedOverlay = true;
-  book.click();
+  panels.forEach(button => button.click());
   assert.equal(opened, 1);
+  assert.equal(blocked, panels.length * 2);
   dom.window.document.querySelector('#sound-button').click();
   lockedOverlay = false;
-  book.click();
-  assert.equal(opened, 2);
+  panels.forEach(button => button.click());
+  assert.equal(opened, panels.length + 1);
+  assert.equal(blocked, panels.length * 2);
 });
 
 test('wide layouts can start with the Atlas menu expanded', async () => {

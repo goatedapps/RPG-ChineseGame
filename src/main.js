@@ -524,7 +524,11 @@ function showBuildStatus() {
 
 async function boot() {
   bindAtlasMenu($('.game-shell'), $('#atlas-menu-toggle'), render, matchMedia('(min-width: 1000px)').matches);
-  guardAtlasPanels($('#game-menus'), () => !gameplay?.battleInProgress() && (!overlay.isOpen || overlay.dismissible));
+  guardAtlasPanels(
+    $('#game-menus'),
+    () => !gameplay?.battleInProgress() && (!overlay.isOpen || overlay.dismissible),
+    () => toast(gameplay?.battleInProgress() ? 'Finish the battle before opening a menu.' : 'Finish this activity before opening a menu.')
+  );
   const walkingHero = $('#boot-loading-hero');
   walkingHero?.decode().then(() => walkingHero.classList.add('ready')).catch(() => {});
   const openingImage = new Image();

@@ -17,6 +17,7 @@ import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { createSpeechController } from './learning/audio.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
+import { addNeededMaterials } from './systems/crafting.js';
 import { completeTidewaterClue, tidewaterClue, tidewaterCluesComplete, tidewaterDictationWords, tidewaterEvidenceReady } from './systems/tidewaterRescue.js?p1';
 import { chapterDictationWords, chapterGroupComplete, chapterTask, completeChapterTask } from './systems/chapterQuests.js';
 import { routeKey } from './systems/regions.js';
@@ -133,11 +134,12 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       game.state.progress.daily = claimed.daily;
       game.state.player.coins += 30;
       game.state.progress.inventory['rice-ball'] = (game.state.progress.inventory['rice-ball'] || 0) + 1;
-      game.state.progress.materials['mist-drop'] = (game.state.progress.materials['mist-drop'] || 0) + 1;
-      game.state.progress.materials['echo-feather'] = (game.state.progress.materials['echo-feather'] || 0) + 1;
+      const materials = addNeededMaterials(game.state.progress.materials, { 'mist-drop': 1, 'echo-feather': 1 }, game.levelPackage.recipes, game.state.progress.equipment);
+      game.state.progress.materials = materials.materials;
       commit();
       audio?.sfx('win');
-      overlay.open('<div class="panel result-panel"><h1>Daily Chest opened!</h1><p>You received 30 coins, one Rice Ball, one Mist Drop and one Echo Feather.</p><button class="primary" data-close-overlay>Continue</button></div>');
+      const extra = Object.entries(materials.awarded).map(([id, count]) => `${count} ${id === 'mist-drop' ? 'Mist Drop' : 'Echo Feather'}`).join(' and ');
+      overlay.open(`<div class="panel result-panel"><h1>Daily Chest opened!</h1><p>You received 30 coins and one Rice Ball${extra ? `, plus ${extra}` : ''}.</p><button class="primary" data-close-overlay>Continue</button></div>`);
     }, { once: true });
     document.querySelector('[data-scroll-library]').addEventListener('click', scrollLibrary);
     document.querySelector('[data-board-journal]')?.addEventListener('click', storyJournal);
@@ -587,8 +589,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
 
   function grantRequestReward(id, game) {
     if (id === 'xiaoqiang') {
-      game.state.progress.materials['mist-drop'] = (game.state.progress.materials['mist-drop'] || 0) + 3;
-      game.state.progress.materials['ink-bead'] = (game.state.progress.materials['ink-bead'] || 0) + 2;
+      game.state.progress.materials = addNeededMaterials(game.state.progress.materials, { 'mist-drop': 3, 'ink-bead': 2 }, game.levelPackage.recipes, game.state.progress.equipment).materials;
     }
     if (id === 'mr-lin') addUnique(game.state.progress.inventory.keyItems, 'grandmas-lantern');
     if (id === 'chef-mei') game.state.progress.inventory.mooncake = (game.state.progress.inventory.mooncake || 0) + 1;
@@ -612,13 +613,16 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     overlay.open(`<div class="panel"><h1>Ah Dong’s quiz duel</h1><p>Five questions from Region 1. Score at least three to win.</p><div class="button-row"><button class="primary" data-duel>Start duel</button><button class="secondary" data-close-overlay>Later</button></div></div>`);
     document.querySelector('[data-duel]').addEventListener('click', () => gameplay.rivalDuel((score, total) => {
       const won = score >= 3;
+      let feathers = 0;
       if (won) {
         game.state.progress.story.rivalDuels += 1;
         game.state.player.coins += 20;
-        game.state.progress.materials['echo-feather'] = (game.state.progress.materials['echo-feather'] || 0) + 2;
+        const materials = addNeededMaterials(game.state.progress.materials, { 'echo-feather': 2 }, game.levelPackage.recipes, game.state.progress.equipment);
+        game.state.progress.materials = materials.materials;
+        feathers = materials.awarded['echo-feather'] || 0;
         commit();
       }
-      overlay.open(`<div class="panel result-panel"><h1>${won ? 'You won the duel!' : 'Ah Dong wins this round'}</h1><p>${score}/${total} correct.${won ? ' You received 20 coins and two Echo Feathers.' : ' Practise and challenge him again.'}</p><button class="primary" data-close-overlay>Continue</button></div>`);
+      overlay.open(`<div class="panel result-panel"><h1>${won ? 'You won the duel!' : 'Ah Dong wins this round'}</h1><p>${score}/${total} correct.${won ? ` You received 20 coins${feathers ? ` and ${feathers} Echo Feather${feathers === 1 ? '' : 's'}` : ''}.` : ' Practise and challenge him again.'}</p><button class="primary" data-close-overlay>Continue</button></div>`);
     }), { once: true });
   }
 

@@ -1,4 +1,4 @@
-import { craft } from './systems/crafting.js';
+import { canCraft, craft } from './systems/crafting.js';
 import { equipGear, gearBonuses, normalizeEquipment } from './systems/gear.js';
 import { claimMilestones } from './systems/milestones.js';
 import { eligiblePartners, partnerBonuses, setPartners } from './systems/partners.js?p10f';
@@ -129,14 +129,21 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       commit();
       character();
     });
-    document.querySelector('[data-craft-open]').addEventListener('click', crafting);
+    document.querySelector('[data-craft-open]').addEventListener('click', () => crafting());
   }
 
-  function crafting() {
+  function crafting(craftedName = null) {
     const game = active();
-    overlay.open(`<div class="panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Materials: ${Object.entries(game.state.progress.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(' · ') || 'None yet'}</p><p class="craft-message" data-craft-message role="alert" tabindex="-1" hidden></p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => `<article><b>${escapeHtml(recipe.name)}</b><span>${recipe.coins} coins · ${Object.entries(recipe.materials).map(([id, count]) => `${escapeHtml(id)} × ${count}`).join(', ')}</span><button data-craft="${recipe.id}">Craft</button></article>`).join('')}</div></div>`);
+    const owned = normalizeEquipment(game.state.progress.equipment).owned;
+    overlay.open(`<div class="panel craft-panel"><div class="panel-header"><div><p class="panel-kicker">Workshop</p><h1>Craft Table</h1></div><button class="secondary" data-close-overlay>Close</button></div><p>Coins: <b>${game.state.player.coins}</b>. Each piece of gear can be crafted once.</p><p class="craft-message ${craftedName ? 'craft-success' : ''}" data-craft-message role="status" tabindex="-1" ${craftedName ? '' : 'hidden'}>${craftedName ? `${escapeHtml(craftedName)} crafted! Find it in Hero Status or your Bag.` : ''}</p><div class="gear-grid">${game.levelPackage.recipes.map(recipe => {
+      const crafted = owned.includes(recipe.id);
+      const ready = canCraft(recipe, game.state.player, game.state.progress.materials, game.state.progress.equipment);
+      const label = crafted ? 'Crafted' : ready ? 'Craft' : game.state.player.coins < recipe.coins ? 'Need coins' : 'Need materials';
+      return `<article class="craft-card ${crafted ? 'is-crafted' : ready ? 'is-ready' : 'is-missing'}"><b>${escapeHtml(recipe.name)}</b><div class="craft-requirements"><span class="${game.state.player.coins >= recipe.coins ? 'has-enough' : 'needs-more'}">Coins ${game.state.player.coins}/${recipe.coins}</span>${Object.entries(recipe.materials).map(([id, count]) => `<span class="${(game.state.progress.materials[id] || 0) >= count ? 'has-enough' : 'needs-more'}">${escapeHtml(itemName(id))} ${game.state.progress.materials[id] || 0}/${count}</span>`).join('')}</div><button class="${ready ? 'primary' : ''}" data-craft="${recipe.id}" ${ready ? '' : 'disabled'}>${label}</button></article>`;
+    }).join('')}</div></div>`);
     onTutorialAction('open-craft');
-    for (const button of document.querySelectorAll('[data-craft]')) button.addEventListener('click', () => {
+    if (craftedName) document.querySelector('[data-craft-message]')?.focus();
+    for (const button of document.querySelectorAll('[data-craft]:not([disabled])')) button.addEventListener('click', () => {
       const recipe = game.levelPackage.recipes.find(item => item.id === button.dataset.craft);
       const result = craft(recipe, game.state.player, game.state.progress.materials, game.state.progress.equipment);
       if (!result.ok) {
@@ -144,6 +151,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
         if (message) {
           message.hidden = false;
           message.textContent = 'You need more coins or materials for that recipe.';
+          message.setAttribute('role', 'alert');
           message.focus();
         }
         return;
@@ -152,7 +160,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       game.state.progress.materials = result.materials;
       game.state.progress.equipment = result.equipment;
       commit();
-      crafting();
+      crafting(recipe.name);
     });
   }
 

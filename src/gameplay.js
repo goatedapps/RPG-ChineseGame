@@ -14,6 +14,7 @@ import { xpToNextLevel } from './core/progression.js';
 import { checkPassageAnswer, completePassage, normalizeReading, repairActiveReading, selectPassage } from './systems/reading.js?p10g';
 import { normalizeSchool, schoolRun, weekKey } from './systems/school.js';
 import { chooseDictationWords, chooseGuidedDictationWord, dictationLessons, dictationResult, gateDictationRules } from './systems/dictation.js';
+import { addNeededMaterials } from './systems/crafting.js';
 import { filterSupportedQuestions, enabledQuestionKinds } from './learning/examAdapters.js';
 import { makeExamQuestion, makeQuestion } from './learning/questions.js?p1';
 import { completeReview, isReviewDue, normalizeWordProgress, recordAnswer, SKILLS, SKILL_TICKS_REQUIRED, starsOf, tierOf } from './learning/mastery.js?p10f';
@@ -348,7 +349,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf', 'ribbon-rat': 'ribbon-knot', 'drum-gremlin': 'drum-hide', 'spark-kite': 'spark-tassel', 'quarrel-macaque': 'jade-bead', 'boastful-lion': 'lion-bell', 'glyph-beetle': 'glyph-shard', 'bone-owl': 'bone-feather', 'ink-vine': 'ink-leaf', 'relic-tortoise': 'relic-scale', 'whisper-moss': 'memory-moss' };
     const material = materialByCreature[battle.creature.id];
     const pouch = game.state.progress.inventory['material-pouch'] ? 2 : 1;
-    if (material) game.state.progress.materials[material] = (game.state.progress.materials[material] || 0) + pouch;
+    if (material) game.state.progress.materials = addNeededMaterials(game.state.progress.materials, { [material]: pouch }, game.levelPackage.recipes, game.state.progress.equipment).materials;
     onProgressEvent('battle-win', { creature: battle.creature.id, word: battle.word.w });
     onCollectionChanged();
     commit();

@@ -336,7 +336,7 @@
     },
     {
       "id": "gardener-lan", "type": "npc", "name": "Gardener Lan", "x": 34, "y": 25, "solid": true, "wander": true, "color": "#5e7e3e",
-      "interaction": { "kind": "dialogue", "title": "Gardener Lan", "lines": ["Every creature type leaves a different crafting material.", "The hidden grove glows when the Dawn Stroke clears its fog."] }
+      "interaction": { "kind": "dialogue", "title": "Gardener Lan", "lines": ["Some creatures leave materials for the gear you still need to craft.", "The hidden grove glows when the Dawn Stroke clears its fog."] }
     },
     {
       "id": "apprentice-jun", "type": "npc", "name": "Apprentice Jun", "x": 6, "y": 9, "solid": true, "wander": true, "color": "#8663a2",

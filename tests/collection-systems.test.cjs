@@ -44,9 +44,51 @@ test('crafting consumes its exact recipe once and grants permanent gear', async 
   assert.equal(first.materials['mist-drop'], 0);
   assert.ok(first.equipment.owned.includes('jade-brush'));
   assert.equal(craft(recipe, first.player, first.materials, first.equipment).ok, false);
-  const collection = fs.readFileSync(path.join(root, 'src/collection.js'), 'utf8');
-  assert.match(collection, /data-craft-message/);
-  assert.match(collection, /role="alert"/);
+});
+
+test('material awards stop at the needs of uncrafted recipes', async () => {
+  const recipes = readJson('content/authored/shared/recipes.json');
+  const { addNeededMaterials } = await import('../src/systems/crafting.js');
+  const equipment = { owned: ['bamboo-brush'], equipped: {} };
+  const first = addNeededMaterials({ 'mist-drop': 2 }, { 'mist-drop': 2, 'echo-feather': 9, 'jumble-silk': 4 }, recipes, equipment);
+  assert.deepEqual(first.awarded, { 'mist-drop': 1, 'echo-feather': 4 });
+  assert.equal(first.materials['mist-drop'], 3);
+  assert.equal(first.materials['jumble-silk'], undefined);
+  const crafted = addNeededMaterials(first.materials, { 'mist-drop': 2, 'ink-bead': 2 }, recipes, { owned: ['bamboo-brush', 'jade-brush'], equipped: {} });
+  assert.deepEqual(crafted.awarded, {});
+});
+
+test('Craft Table shows readiness, shortages, and a visible crafted result', async () => {
+  const { createCollection } = await import('../src/collection.js');
+  const dom = new JSDOM('<div id="overlay"></div>');
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  try {
+    const root = dom.window.document.querySelector('#overlay');
+    const game = {
+      levelPackage: { recipes: readJson('content/authored/shared/recipes.json') },
+      state: {
+        player: { coins: 40 },
+        progress: { materials: { 'mist-drop': 3, 'ink-bead': 2, 'echo-feather': 1 }, equipment: { owned: ['bamboo-brush', 'mirror-charm'], equipped: {} } }
+      }
+    };
+    let saves = 0;
+    const collection = createCollection({ overlay: { open: html => { root.innerHTML = html; } }, getActive: () => game, persist: () => { saves += 1; }, render() {} });
+    collection.crafting();
+    assert.equal(root.querySelector('[data-craft="jade-brush"]').disabled, false);
+    assert.ok(root.querySelector('[data-craft="jade-brush"]').classList.contains('primary'));
+    assert.equal(root.querySelector('[data-craft="echo-bell"]').textContent, 'Need materials');
+    assert.equal(root.querySelector('[data-craft="mirror-charm"]').textContent, 'Crafted');
+    root.querySelector('[data-craft="jade-brush"]').click();
+    assert.equal(saves, 1);
+    assert.equal(root.querySelector('[data-craft="jade-brush"]').textContent, 'Crafted');
+    assert.match(root.querySelector('[data-craft-message]').textContent, /Jade Brush crafted!/);
+    assert.equal(root.querySelector('[data-craft-message]').hidden, false);
+    assert.ok(game.state.progress.equipment.owned.includes('jade-brush'));
+  } finally {
+    global.document = previousDocument;
+    dom.window.close();
+  }
 });
 
 test('partners require Silver, stop at three, and Gold unlocks authored or idiom moves', async () => {

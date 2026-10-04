@@ -328,6 +328,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .inn-welcome { border-top: 8px solid var(--jade); background: linear-gradient(145deg,#f4efe2,#fff8d8); }
 .save-warning { padding: 12px; border-left: 5px solid var(--seal); border-radius: 8px; background: #fae3de; font-weight: 800; }
 .craft-message { margin: 12px 0; padding: 12px 14px; border: 3px solid var(--seal); border-radius: 9px; color: #76271f; background: #ffe6df; font-weight: 900; box-shadow: 0 4px 0 rgba(118,39,31,.18); }
+.craft-message.craft-success { border-color: var(--jade); color: #245543; background: #e8f4e7; box-shadow: 0 4px 0 rgba(36,85,67,.18); }
 .writing-layout { display: grid; grid-template-columns: minmax(200px,300px) 1fr; gap: 24px; align-items: center; }
 .writing-box { width: 100%; aspect-ratio: 1; touch-action: none; border: 3px solid var(--ink); border-radius: 11px; background: white; }
 .writing-slots { display: flex; gap: 6px; margin: 13px 0; }
@@ -540,6 +541,16 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .gear-grid article, .set-card, .shop-grid article { display: grid; gap: 6px; padding: 12px; border-radius: 9px; background: white; }
 .gear-grid span, .set-card small, .shop-grid span { color: #647180; font: 12px system-ui; }
 .gear-grid button, .set-card button, .shop-grid button { min-height: 40px; border: 0; border-radius: 8px; font-weight: 800; }
+.craft-card { border: 2px solid #d6c5a3; }
+.craft-card.is-ready { border-color: var(--jade); background: #f0f8ee; }
+.craft-card.is-crafted { border-color: #8fa99b; background: #edf2ec; }
+.craft-card .craft-requirements { display: flex; flex-wrap: wrap; gap: 6px; }
+.craft-card .craft-requirements span { padding: 5px 7px; border-radius: 6px; font-size: 13px; }
+.craft-card .has-enough { color: #245543; background: #e1f1e6; }
+.craft-card .needs-more { color: #7d4734; background: #fae8dc; }
+.craft-card button { min-height: 44px; }
+.craft-card button:disabled { color: #57616a; background: #dfe3e0; box-shadow: none; cursor: not-allowed; }
+.craft-card.is-crafted button:disabled { color: #245543; background: #d7e8dc; }
 .set-card.complete { border: 2px solid var(--jade); }
 .character-preview { display: flex; align-items: center; gap: 18px; margin: 12px 0; padding: 14px; border-radius: 12px; background: white; }
 .paper-hero { width: 112px; height: 132px; }

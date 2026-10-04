@@ -62,6 +62,7 @@ Production URLs:
 - Keep every regional lesson area open, with difficulty and the Journal guiding a suggested route.
 - Keep exact-word lesson bait in the shop.
 - Keep battle boosts consumable in battle; Forest Repellent blocks encounters, while Scholar's Lantern filters Silver/Gold spirits for 40 encounter-grass steps.
+- Cap new material awards at the needs of uncrafted recipes, and keep Craft Table readiness and completion visible.
 - Require 80% Bronze-or-better regional spirits plus the reading key for each boss, then a parent-configurable from-memory dictation pass to reach the next region.
 - Preserve old saves through validated migrations, last-known-good recovery and explicit fresh-start confirmation.
 - Keep legacy curriculum saves under the selectable Player 1 profile; scope new saves and recovery copies to the selected player.

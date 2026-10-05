@@ -10,7 +10,7 @@ test('the guided battle uses Jun pop-ups, a Rice Ball cue, and returns to the vi
   assert.match(gameplay, /guidedBattlePrompt\(\['The creature grazed you/);
   assert.match(gameplay, /guidedBattlePrompt\(\['This is your battle Bag/);
   assert.match(gameplay, /guidedBattlePrompt\(\['Good! The Rice Ball restored your HP/);
-  assert.match(gameplay, /if \(battle\.guided\) return onReturnToVillage\('leave'\)/);
+  assert.match(gameplay, /if \(battle\.guided \|\| returnForJun\) return onReturnToVillage\('leave'\)/);
   assert.doesNotMatch(gameplay, /Answer an attack correctly to help this Spirit learn that skill/);
 });
 
@@ -267,6 +267,33 @@ test('the tutorial arrow is a separate viewport pointer and the highlighted targ
   const base = fs.readFileSync(path.join(__dirname, '../css/base.css'), 'utf8');
   assert.match(base, /\.restored-pointer-focus:not\(\.tutorial-arrow\):focus-visible \{ outline: none; \}/);
   assert.doesNotMatch(base, /focus-visible \{ outline: 3px solid var\(--gold\)/);
+});
+
+test('tablet menu arrow stays beside its target when the menu scrolls', async () => {
+  const { createTutorial } = await import('../src/tutorial.js');
+  const dom = new JSDOM('<body><main class="game-shell atlas-menu-expanded"><nav id="game-menus"><button id="creatures-button">Creatures</button></nav></main></body>');
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  const game = freshGame();
+  game.state.progress.tutorial.step = 8;
+  let top = 220;
+  const button = dom.window.document.querySelector('#creatures-button');
+  button.getBoundingClientRect = () => ({ left: 100, right: 250, top, bottom: top + 54, height: 54 });
+  const guide = createTutorial({ getActive: () => game, persist: () => {}, render: () => {}, overlay: fakeOverlay() });
+  try {
+    guide.show();
+    const pointer = dom.window.document.querySelector('.tutorial-pointer');
+    assert.equal(pointer.classList.contains('points-left'), true);
+    assert.equal(pointer.style.left, '260px');
+    assert.equal(pointer.style.top, '229px');
+    top = 120;
+    dom.window.document.dispatchEvent(new dom.window.Event('scroll'));
+    assert.equal(pointer.style.top, '129px');
+  } finally {
+    guide.destroy();
+    global.document = previousDocument;
+    dom.window.close();
+  }
 });
 
 test('the later shop lesson highlights only Forest Repellent, not the first Buy button', () => {

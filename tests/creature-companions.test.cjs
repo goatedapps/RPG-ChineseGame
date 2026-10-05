@@ -7,7 +7,7 @@ const definitions = JSON.parse(fs.readFileSync('content/authored/shared/companio
 const fetcher = async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(path.join(__dirname, '..', url), 'utf8')) });
 const api = () => import('../src/systems/companions.js');
 
-test('encounters discover creatures immediately, keep the highest level, and upgrade the selected partner', async () => {
+test('recording a victory keeps the highest creature level and upgrades the selected partner', async () => {
   const { discoverCreature, chooseCompanion, activeCompanion } = await api();
   const progress = {};
   assert.equal(chooseCompanion(progress, 'fogling'), false);
@@ -172,7 +172,7 @@ test('the Creatures sidebar action cannot replace a battle or another locked act
   dom.window.close();
 });
 
-test('a real encounter saves its discovery before fighting and retains it after escape', async () => {
+test('a real encounter does not collect a creature when the player escapes', async () => {
   const { createGameplay } = await import('../src/gameplay.js');
   const { createFreshState } = await import('../src/core/state.js');
   const { loadLevelPackage } = await import('../src/content/loader.js');
@@ -190,16 +190,16 @@ test('a real encounter saves its discovery before fighting and retains it after 
     const overlay = { open(html) { element.innerHTML = html; }, close() { element.innerHTML = ''; } };
     const gameplay = createGameplay({ getActive: () => game, overlay, storage: { getItem() { return null; }, setItem() {} }, persist() { saves.push(structuredClone(game.state)); }, render() {}, toast() {} });
     assert.equal(gameplay.startBattle({ lesson: 1, encounter: { types: { fogling: 1 } } }), true);
-    assert.ok(saves[0].progress.creatures.collection.fogling.level >= 1);
+    assert.deepEqual(saves[0].progress.creatures.collection, {});
     assert.equal(gameplay.battleInProgress(), true);
     pending.shift()();
     pending.shift()();
-    assert.match(element.textContent, /Fogling discovered/);
+    assert.doesNotMatch(element.textContent, /Fogling discovered/);
     element.querySelector('[data-fight]').click();
     element.querySelector('[data-run]').click();
     assert.equal(gameplay.battleInProgress(), false);
     assert.equal(game.state.progress.words && Object.keys(game.state.progress.words).length, 0);
-    assert.deepEqual(saves.at(-1).progress.creatures, saves[0].progress.creatures);
+    assert.deepEqual(saves.at(-1).progress.creatures.collection, {});
   } finally {
     global.document = previous.document;
     global.setTimeout = previous.timeout;

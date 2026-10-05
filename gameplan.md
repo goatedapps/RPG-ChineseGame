@@ -112,17 +112,18 @@ The Region 1 story begins automatically with Grandma Wang's welcome and includes
 Lantern Theatre now uses three cue dictations, a return journey through Tidewater Bay and Harvest Crossing to Scholar Village for regional revision dictations, a rehearsal with Director Luo, and a post-boss performance before the onward gate.
 Ancient Grove now uses three evidence dictations, an interactive evidence board with Curator Wen, and a post-boss display at the Excavation Lodge before the onward gate.
 The chapter dictations use three collected words with two correct required, reserve separate word groups when two tasks share a lesson, and stay separate from the neighbours' longer optional requests.
-School dictation now offers a regional lesson and 5, 10 or all words; menu dictation offers every curriculum lesson as score-only practice.
+School dictation offers a regional lesson and 5, 10, all, or individually selected words.
+Menu dictation offers every curriculum lesson as score-only practice, including individual word selection from its booklet.
 Wrong or skipped villager passage answers show the passage, question and correct answer for review, but only a correct attempt clears the villager's question mark.
 Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, creature companions, Restoration Sets, milestones, gear, crafting and the player room.
-The left-menu Creatures collection records all 35 ordinary species on encounter, even if the player retreats, retaining only each species’ highest encountered level.
+The left-menu Creatures collection records each ordinary species after a battle victory, retaining only its highest defeated level.
 Choose one creature to follow the hero and appear in My Room; each has an authored personality and a once-per-battle ability usable in normal and boss battles.
 Ability values grow with recorded creature level, and cards show exact current effects plus the next level’s effects.
 Shields absorb a finite damage pool, healing is capped by maximum HP, and enhanced attacks consume charges only on correct answers.
 Boss discoveries appear after defeat and cannot be selected as companions.
-Schema 14 replaces vocabulary partners with a separate creature collection; vocabulary progress remains intact, and older saves start recording creature levels at their next encounter because historical encounter levels were not saved.
+Schema 14 replaces vocabulary partners with a separate creature collection; vocabulary progress remains intact, and older saves start recording creature levels at their next victory because historical creature levels were not saved.
 Region 1 Restoration Sets are curriculum-specific so Jun's level-3 board tour has available sets in both P2 and P5.
 Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
 Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.

@@ -1,9 +1,11 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const path = require('node:path');
 const { playableIds } = require('./support/levels.cjs');
 
 const read = path => JSON.parse(fs.readFileSync(path, 'utf8'));
+const fetcher = async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(path.join(__dirname, '..', url), 'utf8')) });
 
 test('Mistwood Road is a separate reachable battlefield with a hidden pavilion and eastern gate', async () => {
   const { isWalkable, validateMap } = await import('../src/world/map.js');
@@ -106,6 +108,40 @@ test('dictation selection limits school to regional lessons and scores the chose
   assert.equal(Array.from(chooseGuidedDictationWord(content.words, lessons[0])[0].w).length, 1);
   assert.equal(dictationResult(4, 5).message, 'Good work!');
   assert.equal(dictationResult(3, 5).message, 'Practise more and try again.');
+});
+
+test('menu dictation opens a lesson booklet and requires selected words', async () => {
+  const { JSDOM } = require('jsdom');
+  const { createGameplay } = await import('../src/gameplay.js');
+  const { createFreshState } = await import('../src/core/state.js');
+  const { loadLevelPackage } = await import('../src/content/loader.js');
+  const pkg = await loadLevelPackage('p2', fetcher, '');
+  const game = { levelPackage: pkg, state: createFreshState(pkg) };
+  const dom = new JSDOM('<div id="overlay"></div>');
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  try {
+    const element = document.querySelector('#overlay');
+    const overlay = { open(html) { element.innerHTML = html; } };
+    const gameplay = createGameplay({ getActive: () => game, overlay, storage: { getItem() { return null; }, setItem() {} }, persist() {}, render() {}, toast() {} });
+    gameplay.dictationPractice();
+    assert.match(element.textContent, /Select any words/);
+    element.querySelector('[data-dictation-lesson]').value = '2';
+    element.querySelector('[name="dictation-count"][value="custom"]').checked = true;
+    element.querySelector('[data-dictation-start]').click();
+    assert.match(element.textContent, /Lesson 2 booklet/);
+    assert.equal(element.querySelectorAll('[data-dictation-word]').length, pkg.content.words.filter(word => word.lesson === 2).length);
+    const start = element.querySelector('[data-dictation-selected-start]');
+    assert.equal(start.disabled, true);
+    const first = element.querySelector('[data-dictation-word]');
+    first.checked = true;
+    first.dispatchEvent(new dom.window.Event('change', { bubbles: true }));
+    assert.equal(start.disabled, false);
+    assert.match(element.querySelector('.dictation-selection-status').textContent, /1 word selected/);
+  } finally {
+    global.document = previousDocument;
+    dom.window.close();
+  }
 });
 
 test('wrong villager feedback keeps the question, answer and passage available for review', async () => {

@@ -384,6 +384,8 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .shop-banner p { color: #f0ca62; font-weight: 900; }
 .shop-banner span { display: block; max-width: 50ch; margin-top: 5px; }
 .shop-banner strong { flex: 0 0 auto; padding: 9px 13px; border: 2px solid #f0ca62; border-radius: 8px; background: rgba(27,36,48,.84); }
+.shop-banner-actions { display: flex; flex: 0 0 auto; align-self: flex-start; align-items: flex-end; flex-direction: column; gap: 12px; }
+.shop-banner-actions button { white-space: nowrap; }
 .shop-shelf { margin: 12px 0; padding: 12px; border: 3px solid #65452c; border-radius: 10px; background: rgba(244,239,226,.94); box-shadow: 0 8px 0 rgba(75,45,26,.5); }
 .shop-shelf > h2 { margin: 0 0 10px; color: #65452c; }
 .shop-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; }
@@ -827,6 +829,14 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .dictation-count label { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; }
 .dictation-count input { width: 18px; height: 18px; }
 .dictation-picker select { width: 100%; min-height: 44px; }
+.dictation-word-picker { display: flex; flex-direction: column; width: min(760px,100%); max-height: min(100%,calc(100dvh - 24px)); }
+.dictation-word-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; min-height: 0; overflow-y: auto; padding: 4px; }
+.dictation-word { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 9px 12px; border: 1px solid #bda875; border-radius: 10px; background: #fff9ec; cursor: pointer; }
+.dictation-word input { width: 22px; height: 22px; flex: 0 0 auto; }
+.dictation-word span { display: grid; gap: 2px; min-width: 0; }
+.dictation-word b { font: 700 21px var(--font-chinese); }
+.dictation-word small { color: #526171; font-size: 13px; }
+.dictation-selection-status { margin: 10px 0 0; }
 .passage-review { margin: 12px 0; text-align: left; }
 .passage-review .passage-scroll { max-height: min(43vh, 320px); overflow: auto; }
 @media (max-width: 640px) {
@@ -836,7 +846,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   .chapter-journal-heading { padding: 15px 16px 12px; }
   .chapter-journal-list li { padding: 11px 14px; }
 }
-.creatures-panel { width: min(1060px, 96vw); }
+.creatures-panel { width: min(880px,100%); max-height: min(100%,calc(100dvh - 24px)); overflow-y: auto; }
 .creatures-panel .creature-portrait { animation: none; }
 .creatures-panel > p { max-width: 74ch; }
 .creature-partner-banner { display: flex; align-items: center; gap: 20px; padding: 18px; margin: 18px 0 28px; background: #dcebdc; border: 2px solid #588367; border-radius: 16px 32px 16px 16px; }
@@ -873,8 +883,21 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .companion-battle-card p { margin: 4px 0; font-size: .95rem; }
 .room-companion-nook .creature-portrait { width: 90px; height: 90px; }
 @media (max-width: 620px) {
+  .dictation-word-list { grid-template-columns: 1fr; }
   .creature-collection-grid, .creature-bosses > div { grid-template-columns: 1fr; }
   .creature-partner-banner, .companion-battle-card { flex-wrap: wrap; }
   .companion-battle-card > button, .creature-partner-banner > button { width: 100%; }
   .creature-partner-banner > .creature-portrait { width: 72px; height: 72px; flex-basis: 72px; }
+}
+@media (max-width: 900px) {
+  .creatures-panel { padding: 18px; }
+  .creature-collection-grid { gap: 12px; }
+  .creature-card-portrait { min-height: 120px; }
+  .creature-card-portrait > .creature-portrait { width: 125px; height: 115px; }
+  .creature-card-copy { padding: 13px; }
+  .creature-partner-banner { gap: 12px; margin: 12px 0 18px; padding: 12px; }
+}
+@media (max-width: 700px) {
+  .shop-banner { align-items: flex-start; }
+  .shop-banner-actions { gap: 8px; }
 }

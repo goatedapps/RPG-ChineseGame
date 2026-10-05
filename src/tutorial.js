@@ -8,7 +8,7 @@ const lessons = {
   5: ['Free a Word Spirit', 'Explore Mistwood Road and fight a creature. You can choose an attack even when its Spirit Book circle is empty; a correct answer fills that skill. When you lose HP, open your battle Bag and use the Rice Ball.', 'Win a battle and free a Word Spirit.'],
   6: ['Open the Spirit Book', 'Tap the arrow on the left to expand the Atlas menu. Open Spirit Book and tap the glowing card for the word you just freed. Its filled circle came from your battle attack.', 'Expand the menu and tap your new Spirit’s card.'],
   7: ['See how Spirits grow', 'You reached level 3! Welcome back. Open your Spirit Book and look at how many Bronze, Silver, and Gold Spirits you have. Then I’ll explain how they grow.', 'Open Spirit Book to see your Bronze, Silver, and Gold counts.'],
-  8: ['Choose a creature companion', 'Creatures you meet join your collection. Open Creatures in the left menu, read an ability and choose one partner. Meeting a stronger creature upgrades its ability.', 'Open Creatures and choose one travelling partner.'],
+  8: ['Choose a creature companion', 'Creatures you defeat join your collection. Open Creatures in the left menu, read an ability and choose one partner. Defeating a stronger one upgrades its ability.', 'Open Creatures and choose one travelling partner.'],
   9: ['See a Restoration Set', 'Open the Restoration Board in My Room. I’ll show you what the first set needs and the decoration it can earn.', 'Open the Restoration Board.'],
   10: ['Find your Adventure', 'Adventure remembers the story and the villagers’ requests. Open it to see who needs help.', 'Open Adventure from the left menu.'],
   11: ['Check today’s goals', 'The Daily Board shows three small goals. Finish all three to open a Daily Chest with rewards. There is no timer.', 'Open the Daily Board.'],
@@ -57,16 +57,16 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (!arrowTarget?.isConnected) { pointer.hidden = true; return; }
     const bounds = arrowTarget.getBoundingClientRect();
     const viewport = document.defaultView;
-    if (bounds.bottom < 0 || bounds.top > viewport.innerHeight) { pointer.hidden = true; return; }
-    const rightSide = bounds.left < 54;
+    if (bounds.bottom < 0 || bounds.top > viewport.innerHeight || bounds.right < 0 || bounds.left > viewport.innerWidth) { pointer.hidden = true; return; }
+    const rightSide = Boolean(arrowTarget.closest('#game-menus')) || bounds.left < 54;
     pointer.classList.toggle('points-left', rightSide);
-    pointer.style.left = `${Math.max(6, Math.min(viewport.innerWidth - 48, rightSide ? bounds.right + 6 : bounds.left - 48))}px`;
-    pointer.style.top = `${Math.max(6, Math.min(viewport.innerHeight - 40, bounds.top + bounds.height / 2 - 18))}px`;
+    pointer.style.left = `${Math.max(6, Math.min(viewport.innerWidth - 48, rightSide ? bounds.right + 10 : bounds.left - 52))}px`;
+    pointer.style.top = `${Math.max(6, Math.min(viewport.innerHeight - 42, (Math.max(0, bounds.top) + Math.min(viewport.innerHeight, bounds.bottom)) / 2 - 18))}px`;
     pointer.hidden = false;
   }
 
   document.defaultView.addEventListener('resize', positionPointer);
-  document.querySelector('#overlay')?.addEventListener('scroll', positionPointer, true);
+  document.addEventListener('scroll', positionPointer, true);
 
   const state = () => getActive()?.state.progress.tutorial;
   const current = () => {
@@ -91,7 +91,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (step === 5 && !map.route) return { text: 'Go around the sign on the north path and enter Mistwood Road for a battle.', target: itemTarget(map, 'route-entrance') };
     if (step === 6 && tutorial.bookSeen) return { text: 'Tap the glowing card for the Word Spirit you just freed.', target: null };
     if (step === 7 && tutorial.bookSeen) return { text: silverCount(game) ? 'Read Jun’s tier explanation in Spirit Book, then tap I understand tiers.' : 'In Spirit Book, tap Practice an empty skill circle until a Spirit turns Silver.', target: null };
-    if (step === 8 && !Object.keys(game.state.progress.creatures?.collection || {}).length) return { text: 'Meet a creature on the fog route, then open Creatures to choose a companion.', target: map.route ? null : itemTarget(map, 'route-entrance') };
+    if (step === 8 && !Object.keys(game.state.progress.creatures?.collection || {}).length) return { text: 'Defeat a creature on the fog route, then open Creatures to choose a companion.', target: map.route ? null : itemTarget(map, 'route-entrance') };
     if (step === 9 && tutorial.boardSeen) return { text: 'Read Jun’s note on the first Restoration Set, then tap I see what this set needs.', target: null };
     if (step === 13 && tutorial.heroSeen) return { text: 'In Hero Status, tap Craft Table to see how materials become gear.', target: null };
     if (step === 15) {
@@ -299,6 +299,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
       arrowTarget = document.querySelector(selector);
       arrowTarget?.classList.add('tutorial-arrow');
       positionPointer();
+      document.defaultView.requestAnimationFrame?.(positionPointer);
     }
   }
 
@@ -308,5 +309,5 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     show();
   }, 5000);
 
-  return { action, objective, show, skipByParent, allowsStoryInteraction, current, destroy: () => { destroyed = true; clearInterval(reminderTimer); clearTimeout(introTimer); document.defaultView.removeEventListener('resize', positionPointer); document.querySelector('#overlay')?.removeEventListener('scroll', positionPointer, true); document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow')); document.body.removeAttribute('data-tutorial-step'); pointer.remove(); } };
+  return { action, objective, show, skipByParent, allowsStoryInteraction, current, destroy: () => { destroyed = true; clearInterval(reminderTimer); clearTimeout(introTimer); document.defaultView.removeEventListener('resize', positionPointer); document.removeEventListener('scroll', positionPointer, true); document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow')); document.body.removeAttribute('data-tutorial-step'); pointer.remove(); } };
 }

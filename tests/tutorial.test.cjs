@@ -404,6 +404,8 @@ test('finishing the guide clears every tutorial highlight even while Jun says go
     assert.equal(dom.window.document.body.hasAttribute('data-tutorial-step'), false);
     assert.equal(dom.window.document.querySelector('#dictation-button').classList.contains('tutorial-arrow'), false);
     assert.match(overlay.dialogues.at(-1).lines.join(' '), /You’re prepared for the road/);
+    assert.match(overlay.dialogues.at(-1).lines.join(' '), /You should know most of the features now/);
+    assert.match(overlay.dialogues.at(-1).lines.at(-1), /Goodbye, and I wish you all the best/);
     overlay.dialogues.at(-1).done();
     assert.equal(game.state.progress.tutorial.pending, null);
     assert.equal(dom.window.document.querySelectorAll('.tutorial-arrow').length, 0);

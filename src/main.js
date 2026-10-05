@@ -26,7 +26,7 @@ import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './syst
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 import { activateVillagePortals } from './systems/ending.js';
-import { createTutorial } from './tutorial.js?p10';
+import { createTutorial } from './tutorial.js?p11';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));

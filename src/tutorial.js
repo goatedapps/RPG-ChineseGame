@@ -37,7 +37,7 @@ const transitions = {
   12: ['Your supplies are safe in Bag. You can use some of them on the road.', 'Open Hero Status to see your level and HP, then look at the Craft Table.'],
   13: ['The Craft Table turns materials and coins into gear. You do not need to make anything yet.', 'Open Dictation Practice and try one word from memory.'],
   14: ['Good practice! Dictation will help you open the road to the next region later.', 'Return to the Shop. Buy Forest Repellent and one exact-word Spirit Bait.'],
-  15: ['You’re prepared for the road! On a foggy route, open Bag and tap Use on Forest Repellent.', 'Spirit Bait works automatically at the next encounter in its lesson area. Keep exploring!']
+  15: ['You’re prepared for the road! On a foggy route, open Bag and tap Use on Forest Repellent.', 'Spirit Bait works automatically at the next encounter in its lesson area.', 'You should know most of the features now. Follow Next step whenever you need a reminder.', 'I’m glad we explored together. Goodbye, and I wish you all the best on your adventure!']
 };
 
 export function createTutorial({ getActive, persist, render, overlay }) {

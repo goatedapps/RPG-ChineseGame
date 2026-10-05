@@ -14,7 +14,7 @@ test('P5 practical content excludes passages whose source poster is missing', ()
 });
 
 test('battle variants and answer streaks change combat behavior', async () => {
-  const { createCreature } = await import('../src/battle/creatures.js');
+  const { CREATURE_VARIANTS, createCreature, creatureVariantNote } = await import('../src/battle/creatures.js');
   const { createBattleState, playerAttack } = await import('../src/battle/battle.js');
   const balance = readJson('content/authored/shared/balance.json');
   const rolls = values => {
@@ -28,6 +28,12 @@ test('battle variants and answer streaks change combat behavior', async () => {
   assert.equal(golden.fleeAfter, 4);
   assert.equal(elite.variant, 'elite');
   assert.ok(elite.attack > normal.attack && elite.defense > normal.defense);
+  assert.equal(CREATURE_VARIANTS.golden.chance, 0.05);
+  assert.equal(CREATURE_VARIANTS.elite.chance, 0.08);
+  assert.equal(createCreature(1, balance, rolls([0, 0, 0.05])).variant, 'elite');
+  assert.equal(createCreature(1, balance, rolls([0, 0, 0.13])).variant, 'normal');
+  assert.match(creatureVariantNote('elite'), /8 extra HP.*2 extra ATK.*1 extra DEF.*6 bonus coins/);
+  assert.match(creatureVariantNote('golden'), /fourth attack.*12 bonus coins/);
 
   const word = { w: '露营' };
   const player = { level: 3 };
@@ -37,6 +43,17 @@ test('battle variants and answer streaks change combat behavior', async () => {
   const three = playerAttack(two.battle, player, 'm', { correct: true, random: () => 0 });
   assert.equal(three.damage, two.damage + 1);
   assert.equal(playerAttack(three.battle, player, 'm', { correct: false }).battle.streak, 0);
+});
+
+test('rare creature rules are explained at the encounter and in the collection', async () => {
+  const { creatureCollectionMarkup } = await import('../src/ui/creatureCollection.js');
+  const markup = creatureCollectionMarkup({ state: { progress: { creatures: {} } }, levelPackage: { companions: {}, campaigns: {}, region: { id: 'r1' } } });
+  assert.match(markup, /Elite and Golden creatures/);
+  assert.match(markup, /about 8% of encounters/);
+  assert.match(markup, /about 5%/);
+  assert.match(markup, /Win the battle to add that creature to your collection/);
+  const gameplay = read('src/gameplay.js');
+  assert.match(gameplay, /class="battle-variant-note">\$\{creatureVariantNote\(creature\.variant\)\}/);
 });
 
 test('passages are selected randomly, repair stale counts, and reset their villager chain', async () => {

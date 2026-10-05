@@ -2,7 +2,7 @@ import { canCraft, craft } from './systems/crafting.js';
 import { equipGear, gearBonuses, normalizeEquipment } from './systems/gear.js';
 import { claimMilestones } from './systems/milestones.js';
 import { activeCompanion, chooseCompanion } from './systems/companions.js';
-import { creatureCollectionMarkup } from './ui/creatureCollection.js?p1';
+import { creatureCollectionMarkup } from './ui/creatureCollection.js?p2';
 import { creatureSvg } from './battle/creatureArt.js';
 import { offerSet, setProgress } from './systems/sets.js?p10f';
 import { tierOf } from './learning/mastery.js?p10f';

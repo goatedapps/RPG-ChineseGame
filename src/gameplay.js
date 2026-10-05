@@ -1,5 +1,5 @@
 import { battleRewardAmounts, createBattleState, escapeSucceeded, gainBattleRewards, playerAttack } from './battle/battle.js?p11';
-import { createCreature, creatureSpellName } from './battle/creatures.js?p19';
+import { CREATURE_VARIANTS, createCreature, creatureSpellName, creatureVariantNote } from './battle/creatures.js?p20';
 import { heroStats } from './battle/damage.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
 import { buyItem } from './systems/economy.js';
@@ -329,7 +329,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const baseRewards = battleRewardAmounts(game.state.player.level, battle.creature.level, game.levelPackage.balance, bonuses);
     const xpAwarded = baseRewards.xp;
     game.state.player = gainBattleRewards(game.state.player, game.levelPackage.balance, rewards);
-    const variantCoins = battle.creature.variant === 'elite' ? 6 : battle.creature.variant === 'golden' ? 12 : 0;
+    const variantCoins = CREATURE_VARIANTS[battle.creature.variant]?.bonusCoins || 0;
     game.state.player.coins += variantCoins;
     const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf', 'ribbon-rat': 'ribbon-knot', 'drum-gremlin': 'drum-hide', 'spark-kite': 'spark-tassel', 'quarrel-macaque': 'jade-bead', 'boastful-lion': 'lion-bell', 'glyph-beetle': 'glyph-shard', 'bone-owl': 'bone-feather', 'ink-vine': 'ink-leaf', 'relic-tortoise': 'relic-scale', 'whisper-moss': 'memory-moss' };
     const material = materialByCreature[battle.creature.id];
@@ -400,7 +400,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       transition.classList.add('closing');
       setTimeout(() => {
         transition.remove();
-        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, '？')}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? 'Your bait worked. It carries the exact spirit you chose.' : 'It has a Word Spirit sealed inside.'}</p><button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
+        overlay.open(`<div class="panel battle-intro"><div class="creature-art">${creatureSvg(creature.id, '？')}</div><p class="panel-kicker">${creature.variant === 'elite' ? 'Elite encounter' : creature.variant === 'golden' ? 'Rare golden encounter' : 'Wild encounter'}</p><h1>${escapeHtml(creature.name)} appeared!</h1><p>${battle.review ? 'It woke one of your Gold spirits for a review.' : bait ? 'Your bait worked. It carries the exact spirit you chose.' : 'It has a Word Spirit sealed inside.'}</p>${creature.variant !== 'normal' ? `<p class="battle-variant-note">${creatureVariantNote(creature.variant)}</p>` : ''}<button class="primary" data-fight>Fight!</button></div>`, { dismissible: false });
         document.querySelector('[data-fight]').addEventListener('click', () => {
           if (guided) guidedBattlePrompt(['This Fogling has a Word Spirit trapped inside. Choose an attack to help free it.', 'You can choose an attack even if its Spirit Book circle is empty. A correct answer will fill that skill.'], () => showBattle(battle));
           else showBattle(battle);

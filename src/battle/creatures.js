@@ -36,6 +36,19 @@ export const CREATURES = Object.freeze([
   { id: 'hollow-book-golem', name: 'Hollow-Book Golem', color: '#796b57', weak: 'w', attackSkill: 'p' }
 ]);
 
+export const CREATURE_VARIANTS = Object.freeze({
+  normal: Object.freeze({ chance: 0.87, hpBonus: 0, attackBonus: 0, defenseBonus: 0, fleeAfter: null, bonusCoins: 0 }),
+  elite: Object.freeze({ chance: 0.08, hpBonus: 8, attackBonus: 2, defenseBonus: 1, fleeAfter: null, bonusCoins: 6 }),
+  golden: Object.freeze({ chance: 0.05, hpBonus: 4, attackBonus: 0, defenseBonus: 0, fleeAfter: 4, bonusCoins: 12 })
+});
+
+export function creatureVariantNote(variant) {
+  const rules = CREATURE_VARIANTS[variant];
+  if (variant === 'elite') return `Elite creatures have ${rules.hpBonus} extra HP, ${rules.attackBonus} extra ATK and ${rules.defenseBonus} extra DEF. Win for ${rules.bonusCoins} bonus coins.`;
+  if (variant === 'golden') return `Golden creatures have ${rules.hpBonus} extra HP and escape if still standing after your fourth attack. Win for ${rules.bonusCoins} bonus coins.`;
+  return '';
+}
+
 export function creatureSpellName(creature) {
   const signature = { fogling: 'Fog Cloud', 'echo-bat': 'Screech', 'twin-shade': 'Mirror Trick', 'jumble-bug': 'Word Scramble', 'ink-imp': 'Ink Splash' };
   const bySkill = { m: 'Meaning Mist', p: 'Pinyin Pulse', h: 'Hanzi Hex', u: 'Usage Twist', w: 'Brush Burst' };
@@ -47,16 +60,16 @@ export function createCreature(lesson, balance, random = Math.random, typeId = n
   const level = minimum + Math.floor(random() * (maximum - minimum + 1));
   const type = CREATURES.find(candidate => candidate.id === typeId) || CREATURES[Math.floor(random() * CREATURES.length)];
   const variantRoll = random();
-  const variant = variantRoll < 0.05 ? 'golden' : variantRoll < 0.13 ? 'elite' : 'normal';
-  const hpBonus = variant === 'elite' ? 8 : variant === 'golden' ? 4 : 0;
+  const variant = variantRoll < CREATURE_VARIANTS.golden.chance ? 'golden' : variantRoll < CREATURE_VARIANTS.golden.chance + CREATURE_VARIANTS.elite.chance ? 'elite' : 'normal';
+  const rules = CREATURE_VARIANTS[variant];
   return {
     ...type,
     level,
     variant,
-    maxHp: balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel + hpBonus,
-    attack: Math.round(balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + (variant === 'elite' ? 2 : 0)),
-    defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel + (variant === 'elite' ? 1 : 0),
-    fleeAfter: variant === 'golden' ? 4 : null
+    maxHp: balance.combat.baseEnemyHp + level * balance.combat.hpPerLevel + rules.hpBonus,
+    attack: Math.round(balance.combat.baseEnemyAttack + level * balance.combat.attackPerLevel + rules.attackBonus),
+    defense: balance.combat.baseEnemyDefense + level * balance.combat.defensePerLevel + rules.defenseBonus,
+    fleeAfter: rules.fleeAfter
   };
 }
 

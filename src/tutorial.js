@@ -46,6 +46,8 @@ export function createTutorial({ getActive, persist, render, overlay }) {
   let dialogueBusy = false;
   let introTimer = null;
   let arrowTarget = null;
+  let positionedTarget = null;
+  let originalPosition = '';
   let destroyed = false;
   const pointer = document.createElement('span');
   pointer.className = 'tutorial-pointer';
@@ -53,15 +55,33 @@ export function createTutorial({ getActive, persist, render, overlay }) {
   pointer.hidden = true;
   document.body.appendChild(pointer);
 
+  function clearPointer() {
+    arrowTarget?.classList.remove('tutorial-pointer-host');
+    if (positionedTarget) positionedTarget.style.position = originalPosition;
+    positionedTarget = null;
+    arrowTarget = null;
+    pointer.remove();
+    pointer.hidden = true;
+    pointer.classList.remove('attached', 'points-left');
+    pointer.style.left = '';
+    pointer.style.top = '';
+  }
+
   function positionPointer() {
+    if (pointer.classList.contains('attached')) return;
     if (!arrowTarget?.isConnected) { pointer.hidden = true; return; }
     const bounds = arrowTarget.getBoundingClientRect();
     const viewport = document.defaultView;
     if (bounds.bottom < 0 || bounds.top > viewport.innerHeight || bounds.right < 0 || bounds.left > viewport.innerWidth) { pointer.hidden = true; return; }
-    const rightSide = Boolean(arrowTarget.closest('#game-menus')) || bounds.left < 54;
+    const menu = arrowTarget.closest('#game-menus');
+    if (menu) {
+      const menuBounds = menu.getBoundingClientRect();
+      if (bounds.bottom < menuBounds.top || bounds.top > menuBounds.bottom) { pointer.hidden = true; return; }
+    }
+    const rightSide = Boolean(menu) || bounds.left < 54;
     pointer.classList.toggle('points-left', rightSide);
-    pointer.style.left = `${Math.max(6, Math.min(viewport.innerWidth - 48, rightSide ? bounds.right + 10 : bounds.left - 52))}px`;
-    pointer.style.top = `${Math.max(6, Math.min(viewport.innerHeight - 42, (Math.max(0, bounds.top) + Math.min(viewport.innerHeight, bounds.bottom)) / 2 - 18))}px`;
+    pointer.style.left = `${viewport.scrollX + Math.max(6, Math.min(viewport.innerWidth - 48, rightSide ? bounds.right + 10 : bounds.left - 52))}px`;
+    pointer.style.top = `${viewport.scrollY + Math.max(6, Math.min(viewport.innerHeight - 42, bounds.top + bounds.height / 2 - 18))}px`;
     pointer.hidden = false;
   }
 
@@ -200,8 +220,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (destroyed) return;
     const game = getActive();
     document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow'));
-    arrowTarget = null;
-    pointer.hidden = true;
+    clearPointer();
     document.body.removeAttribute('data-tutorial-step');
     const tutorial = state();
     if (!game || !tutorial || !game.state.progress.story.flags.arrival || (tutorial.step >= 16 && !tutorial.pending)) {
@@ -298,8 +317,23 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     if (selector) {
       arrowTarget = document.querySelector(selector);
       arrowTarget?.classList.add('tutorial-arrow');
-      positionPointer();
-      document.defaultView.requestAnimationFrame?.(positionPointer);
+      if (arrowTarget?.closest('#overlay')) {
+        arrowTarget.classList.add('tutorial-pointer-host');
+        const targetPosition = document.defaultView.getComputedStyle(arrowTarget).position;
+        if (!targetPosition || targetPosition === 'static') {
+          positionedTarget = arrowTarget;
+          originalPosition = arrowTarget.style.position;
+          arrowTarget.style.position = 'relative';
+        }
+        pointer.classList.add('attached');
+        pointer.classList.toggle('points-left', arrowTarget.getBoundingClientRect().left < 54);
+        arrowTarget.appendChild(pointer);
+        pointer.hidden = false;
+      } else if (arrowTarget) {
+        document.body.appendChild(pointer);
+        positionPointer();
+        document.defaultView.requestAnimationFrame?.(positionPointer);
+      }
     }
   }
 
@@ -309,5 +343,5 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     show();
   }, 5000);
 
-  return { action, objective, show, skipByParent, allowsStoryInteraction, current, destroy: () => { destroyed = true; clearInterval(reminderTimer); clearTimeout(introTimer); document.defaultView.removeEventListener('resize', positionPointer); document.removeEventListener('scroll', positionPointer, true); document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow')); document.body.removeAttribute('data-tutorial-step'); pointer.remove(); } };
+  return { action, objective, show, skipByParent, allowsStoryInteraction, current, destroy: () => { destroyed = true; clearInterval(reminderTimer); clearTimeout(introTimer); document.defaultView.removeEventListener('resize', positionPointer); document.removeEventListener('scroll', positionPointer, true); document.querySelectorAll('.tutorial-arrow').forEach(element => element.classList.remove('tutorial-arrow')); document.body.removeAttribute('data-tutorial-step'); clearPointer(); } };
 }

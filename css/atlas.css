@@ -246,9 +246,12 @@ body[data-tutorial-step="6"] .book-panel .tutorial-spirit-card { outline: 5px so
 .tutorial-arrow { outline: 5px solid #ffdf68 !important; outline-offset: 4px; animation: tutorial-target-pulse .85s ease-in-out infinite alternate; }
 body:not([data-tutorial-step]) .tutorial-arrow { outline: none !important; animation: none; }
 body:not([data-tutorial-step]) .tutorial-pointer { display: none; }
-.tutorial-pointer { position: fixed; z-index: 1000; width: 42px; height: 36px; background: #173744; clip-path: polygon(0 25%, 55% 25%, 55% 0, 100% 50%, 55% 100%, 55% 75%, 0 75%); pointer-events: none; animation: tutorial-pointer-pulse .7s ease-in-out infinite alternate; }
+.tutorial-pointer { position: absolute; z-index: 1000; width: 42px; height: 36px; background: #173744; clip-path: polygon(0 25%, 55% 25%, 55% 0, 100% 50%, 55% 100%, 55% 75%, 0 75%); pointer-events: none; animation: tutorial-pointer-pulse .7s ease-in-out infinite alternate; }
 .tutorial-pointer::after { position: absolute; inset: 3px; background: #ffcf50; clip-path: polygon(0 25%, 55% 25%, 55% 0, 100% 50%, 55% 100%, 55% 75%, 0 75%); content: ''; }
 .tutorial-pointer.points-left { transform: scaleX(-1); }
+.tutorial-pointer.attached { top: 50%; left: -52px; transform: translateY(-50%); }
+.tutorial-pointer.attached.points-left { right: -52px; left: auto; transform: translateY(-50%) scaleX(-1); }
+#overlay .tutorial-pointer-host { overflow: visible; }
 .tutorial-pointer[hidden] { display: none; }
 @keyframes tutorial-target-pulse { from { outline-color: #ffdf68; box-shadow: 0 0 0 0 #ffdf6800; } to { outline-color: #ff9a31; box-shadow: 0 0 0 9px #ffdf6866; } }
 @keyframes tutorial-pointer-pulse { from { opacity: .85; } to { opacity: 1; } }

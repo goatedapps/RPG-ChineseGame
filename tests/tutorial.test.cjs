@@ -253,10 +253,11 @@ test('Jun recovers if another window replaces an unfinished conversation', async
   }
 });
 
-test('the tutorial arrow is a separate viewport pointer and the highlighted target blinks', () => {
+test('the tutorial arrow can attach to a target and the highlighted target blinks', () => {
   const css = fs.readFileSync(path.join(__dirname, '../css/atlas.css'), 'utf8');
   const tutorial = fs.readFileSync(path.join(__dirname, '../src/tutorial.js'), 'utf8');
-  assert.match(css, /\.tutorial-pointer \{ position: fixed/);
+  assert.match(css, /\.tutorial-pointer \{ position: absolute/);
+  assert.match(css, /\.tutorial-pointer\.attached \{ top: 50%; left: -52px; transform: translateY\(-50%\)/);
   assert.match(css, /\.tutorial-arrow \{[^}]*animation: tutorial-target-pulse/);
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(tutorial, /arrowTarget = document\.querySelector\(selector\)/);
@@ -278,6 +279,7 @@ test('tablet menu arrow stays beside its target when the menu scrolls', async ()
   game.state.progress.tutorial.step = 8;
   let top = 220;
   const button = dom.window.document.querySelector('#creatures-button');
+  dom.window.document.querySelector('#game-menus').getBoundingClientRect = () => ({ top: 100, bottom: 500 });
   button.getBoundingClientRect = () => ({ left: 100, right: 250, top, bottom: top + 54, height: 54 });
   const guide = createTutorial({ getActive: () => game, persist: () => {}, render: () => {}, overlay: fakeOverlay() });
   try {
@@ -289,6 +291,35 @@ test('tablet menu arrow stays beside its target when the menu scrolls', async ()
     top = 120;
     dom.window.document.dispatchEvent(new dom.window.Event('scroll'));
     assert.equal(pointer.style.top, '129px');
+  } finally {
+    guide.destroy();
+    global.document = previousDocument;
+    dom.window.close();
+  }
+});
+
+test('overlay tutorial arrow is anchored to the highlighted button midpoint', async () => {
+  const { createTutorial } = await import('../src/tutorial.js');
+  const dom = new JSDOM('<body><div id="overlay"><button data-buy="rice-ball">Buy</button></div></body>');
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  const game = freshGame();
+  game.state.progress.tutorial.step = 2;
+  const overlay = { ...fakeOverlay(), isOpen: true };
+  const guide = createTutorial({ getActive: () => game, persist: () => {}, render: () => {}, overlay });
+  try {
+    guide.show();
+    const button = dom.window.document.querySelector('[data-buy="rice-ball"]');
+    const pointer = dom.window.document.querySelector('.tutorial-pointer');
+    assert.equal(pointer.parentElement, button);
+    assert.equal(pointer.classList.contains('attached'), true);
+    assert.equal(button.classList.contains('tutorial-pointer-host'), true);
+    assert.equal(button.style.position, 'relative');
+    game.state.progress.tutorial.step = 16;
+    guide.show();
+    assert.equal(button.style.position, '');
+    assert.equal(button.classList.contains('tutorial-pointer-host'), false);
+    assert.equal(pointer.isConnected, false);
   } finally {
     guide.destroy();
     global.document = previousDocument;

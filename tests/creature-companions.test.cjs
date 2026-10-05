@@ -207,3 +207,14 @@ test('a real encounter does not collect a creature when the player escapes', asy
     dom.window.close();
   }
 });
+
+test('a victory discovery shows the collected creature artwork without a word seal', async () => {
+  const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
+  const { creatureSvg } = await import('../src/battle/creatureArt.js');
+  assert.match(gameplay, /class="creature-discovery-notice">\$\{creatureSvg\(battle\.creature\.id, ''\)\}/);
+  const dom = new JSDOM(creatureSvg('fogling', ''));
+  assert.match(dom.window.document.querySelector('img').getAttribute('src'), /fogling\.webp$/);
+  assert.equal(dom.window.document.querySelector('img').alt, 'Fogling');
+  assert.equal(dom.window.document.querySelector('.word-seal'), null);
+  dom.window.close();
+});

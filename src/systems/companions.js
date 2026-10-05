@@ -1,12 +1,15 @@
-import { CREATURES } from '../battle/creatures.js';
+import { CREATURES, CREATURE_VARIANTS } from '../battle/creatures.js';
 import { enemyAttack } from '../battle/battle.js';
 
 const species = new Map(CREATURES.map(creature => [creature.id, creature]));
+const variantRank = { normal: 0, elite: 1, golden: 2 };
+
+const validVariant = variant => Object.hasOwn(variantRank, variant) ? variant : 'normal';
 
 export function normalizeCreatures(value = {}) {
   const collection = {};
   for (const [id, record] of Object.entries(value?.collection || {})) {
-    if (species.has(id) && Number.isSafeInteger(record?.level) && record.level > 0) collection[id] = { level: record.level };
+    if (species.has(id) && Number.isSafeInteger(record?.level) && record.level > 0) collection[id] = { level: record.level, variant: validVariant(record.variant) };
   }
   return { collection, partner: collection[value?.partner] ? value.partner : null };
 }
@@ -15,12 +18,17 @@ export function discoverCreature(progress, creature) {
   const creatures = normalizeCreatures(progress.creatures);
   progress.creatures = creatures;
   if (!species.has(creature.id) || !Number.isSafeInteger(creature.level) || creature.level < 1) return '';
-  const previous = creatures.collection[creature.id]?.level || 0;
-  if (creature.level <= previous) return '';
-  creatures.collection[creature.id] = { level: creature.level };
-  return previous
-    ? `${creature.name} upgraded: Lv. ${previous} → Lv. ${creature.level}. Its ability is stronger!`
-    : `${creature.name} discovered at Lv. ${creature.level}! Choose it in Creatures to travel with you.`;
+  const previous = creatures.collection[creature.id];
+  const level = Math.max(previous?.level || 0, creature.level);
+  const defeatedVariant = validVariant(creature.variant);
+  const variant = variantRank[defeatedVariant] > variantRank[previous?.variant || 'normal'] ? defeatedVariant : previous?.variant || 'normal';
+  if (previous && level === previous.level && variant === previous.variant) return '';
+  creatures.collection[creature.id] = { level, variant };
+  const form = variant === 'normal' ? '' : `${variant === 'golden' ? 'Golden' : 'Elite'} `;
+  if (!previous) return `${form}${creature.name} discovered at Lv. ${level}! Choose it in Creatures to travel with you.`;
+  const levelNews = level > previous.level ? `Lv. ${previous.level} → Lv. ${level}. Its ability is stronger!` : '';
+  const formNews = variant !== previous.variant ? `${form.trim()} form unlocked! As your partner, it earns ${CREATURE_VARIANTS[variant].bonusCoins} bonus coins per battle win.` : '';
+  return `${creature.name} upgraded: ${[levelNews, formNews].filter(Boolean).join(' ')}`;
 }
 
 export function chooseCompanion(progress, id) {
@@ -52,9 +60,15 @@ export function activeCompanion(progress, definitions = {}) {
   const creatures = normalizeCreatures(progress.creatures);
   const id = creatures.partner;
   if (!id) return null;
-  const level = creatures.collection[id].level;
+  const { level, variant } = creatures.collection[id];
   const ability = creatureAbility(definitions[id], level);
-  return ability ? { ...species.get(id), level, ability } : null;
+  return ability ? { ...species.get(id), level, variant, bonusCoins: CREATURE_VARIANTS[variant].bonusCoins, ability } : null;
+}
+
+export function partnerVictoryBonus(progress) {
+  const creatures = normalizeCreatures(progress.creatures);
+  const variant = creatures.collection[creatures.partner]?.variant || 'normal';
+  return CREATURE_VARIANTS[variant].bonusCoins;
 }
 
 export function activateCompanion(battle, player, companion) {

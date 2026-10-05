@@ -10,7 +10,7 @@ import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { capBossDamage, heroStats } from './battle/damage.js?p1';
 import { heroDamage } from './battle/battle.js';
-import { activeCompanion, activateCompanion, companionStrike, companionCounterattack } from './systems/companions.js';
+import { activeCompanion, activateCompanion, companionStrike, companionCounterattack, partnerVictoryBonus } from './systems/companions.js';
 import { companionBattleCard } from './ui/companion.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
@@ -800,6 +800,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     playScene('reform', () => {
       audio?.sfx('majorReward');
       const game = active();
+      const partnerCoins = partnerVictoryBonus(game.state.progress);
+      game.state.player.coins += partnerCoins;
       const fragment = game.levelPackage.regionStory.fragmentKey || (game.levelPackage.region.id === 'r2' ? 'truth-stroke' : 'dawn-stroke');
       const fragmentName = game.levelPackage.regionStory.fragmentName || (game.levelPackage.region.id === 'r2' ? 'Truth Stroke' : 'Dawn Stroke');
       const fragmentArt = FRAGMENT_ART[fragment] || FRAGMENT_ART['dawn-stroke'];
@@ -815,7 +817,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         : game.levelPackage.region.id === 'r1'
         ? 'The hidden grove is open, and the Muddle King now runs the Mistake Museum.'
         : `${game.levelPackage.regionStory.secretName || 'The hidden place'} can now be opened.`;
-      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p><button class="primary" data-close-overlay>${game.levelPackage.map.route ? 'Continue exploring' : `Return to ${escapeHtml(game.levelPackage.region.name)}`}</button></div>`);
+      overlay.open(`<div class="panel result-panel boss-victory major-reward-panel"><p class="panel-kicker">${escapeHtml(game.levelPackage.region.name)} restored</p><div class="major-reward"><img src="${fragmentArt}" alt="${fragmentName}"><div><p class="panel-kicker">Major reward</p><h1>${fragmentName} obtained!</h1></div></div><p>${escapeHtml(secretText)}</p>${partnerCoins ? `<p>Your ${partnerCoins === 12 ? 'Golden' : 'Elite'} partner earned ${partnerCoins} bonus coins for this victory.</p>` : ''}<button class="primary" data-close-overlay>${game.levelPackage.map.route ? 'Continue exploring' : `Return to ${escapeHtml(game.levelPackage.region.name)}`}</button></div>`);
     });
   }
 

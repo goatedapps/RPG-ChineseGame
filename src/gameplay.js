@@ -5,7 +5,7 @@ import { creatureSvg } from './battle/creatureArt.js?p10n';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
-import { activeCompanion, activateCompanion, companionStrike, companionCounterattack, discoverCreature } from './systems/companions.js';
+import { activeCompanion, activateCompanion, companionStrike, companionCounterattack, discoverCreature, partnerVictoryBonus } from './systems/companions.js';
 import { companionBattleCard } from './ui/companion.js';
 import { battlesLeft, useBattle } from './systems/energy.js';
 import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, setTestingPlayerLevel, weeklySummary } from './systems/parent.js?p15';
@@ -316,6 +316,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function battleWin(battle, damage) {
     const game = active();
+    const partnerCoins = partnerVictoryBonus(game.state.progress);
     const discovery = discoverCreature(game.state.progress, battle.creature);
     const beforeLevel = { ...game.state.player };
     const progress = normalizeWordProgress(game.state.progress.words[battle.word.w]);
@@ -330,7 +331,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const xpAwarded = baseRewards.xp;
     game.state.player = gainBattleRewards(game.state.player, game.levelPackage.balance, rewards);
     const variantCoins = CREATURE_VARIANTS[battle.creature.variant]?.bonusCoins || 0;
-    game.state.player.coins += variantCoins;
+    game.state.player.coins += variantCoins + partnerCoins;
     const materialByCreature = { fogling: 'mist-drop', 'echo-bat': 'echo-feather', 'twin-shade': 'mirror-shard', 'jumble-bug': 'jumble-silk', 'ink-imp': 'ink-bead', 'chaff-sprite': 'grain-husk', 'rumour-crow': 'rumour-feather', 'price-mimic': 'market-token', 'doubt-moth': 'moth-dust', 'forked-gecko': 'sign-splinter', 'tangle-crab': 'tangle-shell', 'drift-jelly': 'drift-gel', 'rust-gull': 'rust-feather', 'minute-mite': 'clock-spring', 'tide-hare': 'tide-fur', 'mask-moth': 'mask-dust', 'heckle-magpie': 'heckle-feather', 'straw-soldier': 'golden-straw', 'spotlight-fox': 'stage-ribbon', 'wilt-wisp': 'dew-leaf', 'ribbon-rat': 'ribbon-knot', 'drum-gremlin': 'drum-hide', 'spark-kite': 'spark-tassel', 'quarrel-macaque': 'jade-bead', 'boastful-lion': 'lion-bell', 'glyph-beetle': 'glyph-shard', 'bone-owl': 'bone-feather', 'ink-vine': 'ink-leaf', 'relic-tortoise': 'relic-scale', 'whisper-moss': 'memory-moss' };
     const material = materialByCreature[battle.creature.id];
     const pouch = game.state.progress.inventory['material-pouch'] ? 2 : 1;
@@ -341,10 +342,10 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     onTutorialAction('battle-win', { collected: !progress.collected, word: battle.word.w });
     audio?.sfx(game.state.player.level > beforeLevel.level ? 'level' : 'win');
     audio?.setScene('village');
-    const coinsAwarded = baseRewards.coins + variantCoins;
+    const coinsAwarded = baseRewards.coins + variantCoins + partnerCoins;
     const victoryTitle = battle.review ? `${escapeHtml(battle.word.w)} completed its review!` : progress.collected ? `${escapeHtml(battle.word.w)} grew stronger!` : `${escapeHtml(battle.word.w)} joined your Spirit Book!`;
     const returnForJun = tutorialStep() === 7 && game.levelPackage.map.route;
-    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${victoryTitle}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${discovery ? `<div class="creature-discovery-notice">${creatureSvg(battle.creature.id, '')}<p>${escapeHtml(discovery)}</p></div>` : ''}${showBaitTip ? `<aside class="battle-bait-tip"><b>Looking for a missing Spirit?</b><p>Visit the town Shop and choose a 10-coin Lesson ${battle.word.lesson} Spirit Bait. It lets you pick the exact missing word for your next battle in this lesson area.</p></aside>` : ''}${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-battle-win-next type="button">${battle.guided || returnForJun ? 'Return to the village' : battle.lastDailyBattle ? 'Continue' : 'Continue exploring'}</button></div>`, { dismissible: false });
+    overlay.open(`<div class="panel result-panel"><p class="panel-kicker">Victory</p><h1>${victoryTitle}</h1><p>You dealt ${damage} damage and earned ${xpAwarded} XP and ${coinsAwarded} coins.${partnerCoins ? ` Your ${partnerCoins === 12 ? 'Golden' : 'Elite'} partner earned ${partnerCoins} bonus coins.` : ''}${battle.review && !battle.reviewFailed ? ' Its next rest interval is longer.' : ''}</p>${discovery ? `<div class="creature-discovery-notice">${creatureSvg(battle.creature.id, '')}<p>${escapeHtml(discovery)}</p></div>` : ''}${showBaitTip ? `<aside class="battle-bait-tip"><b>Looking for a missing Spirit?</b><p>Visit the town Shop and choose a 10-coin Lesson ${battle.word.lesson} Spirit Bait. It lets you pick the exact missing word for your next battle in this lesson area.</p></aside>` : ''}${levelUpMarkup(beforeLevel, game.state.player)}<button class="primary" data-battle-win-next type="button">${battle.guided || returnForJun ? 'Return to the village' : battle.lastDailyBattle ? 'Continue' : 'Continue exploring'}</button></div>`, { dismissible: false });
     document.querySelector('[data-battle-win-next]').addEventListener('click', () => {
       battleActive = false;
       if (battle.guided || returnForJun) return onReturnToVillage('leave');
@@ -415,7 +416,8 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     audio?.setScene('battle');
     const tutorialWord = game.levelPackage.config.region1?.tutorialWord;
     const word = game.levelPackage.content.words.find(candidate => candidate.w === tutorialWord) || wordsForLesson(1)[0];
-    const creature = createCreature(1, game.levelPackage.balance, () => 0);
+    let tutorialRoll = 0;
+    const creature = createCreature(1, game.levelPackage.balance, () => tutorialRoll++ === 0 ? 0 : 0.5, 'fogling');
     const ask = () => {
       overlay.open(`<article class="battle-scene lesson-1"><div class="battle-arena"><div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><div class="enemy-hp player-hp"><i style="width:100%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div><div class="battle-enemy"><div class="battle-nameplate"><b>${escapeHtml(creature.name)} · Lv ${creature.level}</b><div class="enemy-hp"><i style="width:100%"></i></div><strong>HP 1/1</strong></div><div class="creature-art">${creatureSvg(creature.id, '？')}</div></div></div><div class="battle-console"><p class="panel-kicker">First Spirit Brush battle</p><h2>Free the Word Spirit</h2><p>The Great Forgetter sealed Word Spirits inside wild creatures. Answer to weaken this Fogling; win the battle to free its Spirit into your Book. That is why you explore and fight.</p><button class="primary" data-tutorial-attack>Try Meaning Strike</button></div></article>`, { dismissible: false });
       document.querySelector('[data-tutorial-attack]').addEventListener('click', () => {

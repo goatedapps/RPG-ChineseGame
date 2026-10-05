@@ -2,7 +2,7 @@ import { canCraft, craft } from './systems/crafting.js';
 import { equipGear, gearBonuses, normalizeEquipment } from './systems/gear.js';
 import { claimMilestones } from './systems/milestones.js';
 import { activeCompanion, chooseCompanion } from './systems/companions.js';
-import { creatureCollectionMarkup } from './ui/creatureCollection.js?p2';
+import { creatureCollectionMarkup } from './ui/creatureCollection.js?p3';
 import { creatureSvg } from './battle/creatureArt.js';
 import { offerSet, setProgress } from './systems/sets.js?p10f';
 import { tierOf } from './learning/mastery.js?p10f';
@@ -210,7 +210,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       if (tutorialStep() === 8) {
         overlay.close();
         onTutorialAction('companion-chosen');
-      } else creatures(`${companion.name} is now your partner. ${companion.ability.description}`);
+      } else creatures(`${companion.variant === 'normal' ? '' : `${companion.variant === 'golden' ? 'Golden' : 'Elite'} `}${companion.name} is now your partner. ${companion.ability.description}${companion.bonusCoins ? ` Win battles for ${companion.bonusCoins} bonus coins.` : ''}`);
     });
     document.querySelector('[data-release-creature]')?.addEventListener('click', () => {
       chooseCompanion(game.state.progress, null);
@@ -274,12 +274,12 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       <div class="room-scene" role="img" aria-label="Warm bedroom with trophy shelf, village window, desk and bed">
         <div class="room-shelf-count"><b>${trophies.length}</b><span>keepsakes earned</span></div>
         <div class="room-restoration-display" aria-label="Restoration keepsakes displayed in the room">${decorations.slice(-4).map(id => restorationArt(id, `${itemName(id)} decoration`)).join('')}</div>
-        <div class="room-companion-nook"><b>Your creature companion</b><div>${companion ? `${creatureSvg(companion.id, '')}<span>${escapeHtml(companion.name)} · Lv. ${companion.level}</span>` : '<span class="room-companion-empty">Choose a companion in Creatures.</span>'}</div></div>
+        <div class="room-companion-nook"><b>Your creature companion</b><div>${companion ? `${creatureSvg(companion.id, '')}<span>${companion.variant === 'normal' ? '' : `${companion.variant === 'golden' ? 'Golden' : 'Elite'} `}${escapeHtml(companion.name)} · Lv. ${companion.level}${companion.bonusCoins ? ` · +${companion.bonusCoins} coins per win` : ''}</span>` : '<span class="room-companion-empty">Choose a companion in Creatures.</span>'}</div></div>
       </div>
       <div class="room-progress"><section class="room-streak"><span>Lantern Streak</span><b>${game.state.progress.streak?.count || 0} days</b></section>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div role="progressbar" aria-label="Real-world goal progress" aria-valuemin="0" aria-valuemax="${goal.target}" aria-valuenow="${goal.value}"><i style="width:${goal.percent}%"></i></div></section>` : '<section class="room-goal room-goal-empty"><b>Real-world goal</b><span>A parent can add a goal in Parent Mode.</span></section>'}</div>
       <section class="room-keepsakes"><div class="room-section-heading"><h2>What you have earned</h2><span>${trophies.length} trophies · ${decorations.length} decorations</span></div>${trophies.length || decorations.length ? `<div class="room-keepsake-grid">${trophies.map(name => `<div class="room-keepsake">${trophyArt(name)}<b>${escapeHtml(name)}</b></div>`).join('')}${decorations.map(id => `<div class="room-keepsake room-decoration">${restorationArt(id, `${itemName(id)} decoration`)}<b>${escapeHtml(itemName(id))}</b></div>`).join('')}</div>` : '<p class="room-empty">Your shelf will fill as you restore regions and complete Spirit sets.</p>'}</section>
       <div class="room-action-grid"><button type="button" class="room-action" data-room-creatures><b>Choose a creature companion</b><span>Defeat creatures, grow their abilities and choose one to travel with you.</span></button>${hasSets ? `<button type="button" class="room-action" data-board-open><b>View Restoration Board</b><span>Offer complete Spirit sets to repair ${escapeHtml(game.levelPackage.region.name)}.</span></button>` : ''}</div>
-      <div class="room-explainers"><details><summary>How do creature companions grow?</summary><p>Defeating a creature adds it to Creatures in the left menu. Defeating a stronger one upgrades its recorded level and ability. Your chosen companion can use its ability once per battle, including boss battles.</p></details>${hasSets ? `<details><summary>What is the Restoration Board?</summary><p>Raise every Spirit card in a themed set to Silver or Gold, then restore part of ${escapeHtml(game.levelPackage.region.name)}. Your cards are never used up.</p></details>` : ''}</div>
+      <div class="room-explainers"><details><summary>How do creature companions grow?</summary><p>Defeating a creature adds it to Creatures in the left menu. Defeating a stronger one raises its recorded level and ability. Winning against an Elite or Golden one upgrades its form, even if its level is lower. That form stays in your collection; as your partner, it earns 6 or 12 extra coins per battle victory. Your chosen companion can use its ability once per battle, including boss battles.</p></details>${hasSets ? `<details><summary>What is the Restoration Board?</summary><p>Raise every Spirit card in a themed set to Silver or Gold, then restore part of ${escapeHtml(game.levelPackage.region.name)}. Your cards are never used up.</p></details>` : ''}</div>
     </div>`);
     document.querySelector('[data-board-open]')?.addEventListener('click', restorationBoard);
     document.querySelector('[data-room-creatures]').addEventListener('click', () => creatures());

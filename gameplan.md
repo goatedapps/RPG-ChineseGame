@@ -118,12 +118,14 @@ Wrong or skipped villager passage answers show the passage, question and correct
 Storyteller chapters use a two-page illustrated book with page dictation controls.
 Daily systems include the quest board, fixed chest rewards, Lantern Streak, weekly freeze and Mystery Scroll.
 Collection systems include mastery tiers, creature companions, Restoration Sets, milestones, gear, crafting and the player room.
-The left-menu Creatures collection records each ordinary species after a battle victory, retaining only its highest defeated level.
+The left-menu Creatures collection records each ordinary species after a battle victory, retaining its highest defeated level and rarest defeated form independently.
+Elite and Golden forms persist through later Normal victories, sparkle differently on collection cards, and grant 6 or 12 bonus coins after each normal or boss battle victory while selected as partner.
 Choose one creature to follow the hero and appear in My Room; each has an authored personality and a once-per-battle ability usable in normal and boss battles.
 Ability values grow with recorded creature level, and cards show exact current effects plus the next level’s effects.
 Shields absorb a finite damage pool, healing is capped by maximum HP, and enhanced attacks consume charges only on correct answers.
 Boss discoveries appear after defeat and cannot be selected as companions.
-Schema 14 replaces vocabulary partners with a separate creature collection; vocabulary progress remains intact, and older saves start recording creature levels at their next victory because historical creature levels were not saved.
+Schema 15 adds creature forms to collection records, migrating earlier records to Normal while preserving their levels and selected partner.
+Older saves without creature records start collecting species at their next victory because historical creature levels were not saved.
 Region 1 Restoration Sets are curriculum-specific so Jun's level-3 board tour has available sets in both P2 and P5.
 Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
 Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.

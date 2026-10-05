@@ -51,7 +51,7 @@ test('rare creature rules are explained at the encounter and in the collection',
   assert.match(markup, /Elite and Golden creatures/);
   assert.match(markup, /about 8% of encounters/);
   assert.match(markup, /about 5%/);
-  assert.match(markup, /Win the battle to add that creature to your collection/);
+  assert.match(markup, /Defeat one to keep its form in your collection/);
   const gameplay = read('src/gameplay.js');
   assert.match(gameplay, /class="battle-variant-note">\$\{creatureVariantNote\(creature\.variant\)\}/);
 });

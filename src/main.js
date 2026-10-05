@@ -10,9 +10,9 @@ import { createOverlay } from './ui/overlay.js?p10l';
 import { updateHud } from './ui/hud.js?p3';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p57';
-import { createCollection } from './collection.js?p29';
-import { createAdventure } from './adventure.js?p40';
+import { createGameplay } from './gameplay.js?p58';
+import { createCollection } from './collection.js?p30';
+import { createAdventure } from './adventure.js?p41';
 import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js';
 import { createPrologue } from './ui/prologue.js?p23';
@@ -26,7 +26,7 @@ import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './syst
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 import { activateVillagePortals } from './systems/ending.js';
-import { createTutorial } from './tutorial.js?p11';
+import { createTutorial } from './tutorial.js?p12';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));

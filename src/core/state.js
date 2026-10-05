@@ -3,7 +3,7 @@ import { isWalkable } from '../world/map.js';
 import { ROUTE_MAP_VERSION, scaleRouteCell } from '../world/routeMaps.js';
 import { normalizeCreatures } from '../systems/companions.js';
 
-export const SAVE_SCHEMA_VERSION = 14;
+export const SAVE_SCHEMA_VERSION = 15;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;

@@ -88,7 +88,7 @@ test('shield absorbs a finite pool across hits, prevents lethal damage, and surv
   assert.equal(battle.companionShield, 0);
 });
 
-test('schema 14 preserves vocabulary, tutorial and creature state through save transfer and region changes', async () => {
+test('schema 15 migrates creature forms and preserves them through save transfer and region changes', async () => {
   const { createFreshState, migrateState } = await import('../src/core/state.js');
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { exportSaveEnvelope, importSaveEnvelope } = await import('../src/core/save.js');
@@ -103,20 +103,54 @@ test('schema 14 preserves vocabulary, tutorial and creature state through save t
     old.progress.words.example = { collected: true, ticks: { m: 1 } };
     old.progress.tutorial.step = 8;
     const state = migrateState(old, pkg);
-    assert.equal(state.schemaVersion, 14);
+    assert.equal(state.schemaVersion, 15);
     assert.equal(state.progress.tutorial.step, 8);
     assert.deepEqual(state.progress.words, old.progress.words);
     assert.equal(state.progress.partners, undefined);
     assert.deepEqual(state.progress.creatures, { collection: {}, partner: null });
     discoverCreature(state.progress, { id: 'fogling', name: 'Fogling', level: 7 });
+    discoverCreature(state.progress, { id: 'fogling', name: 'Fogling', level: 4, variant: 'golden' });
     chooseCompanion(state.progress, 'fogling');
     const transferred = importSaveEnvelope(exportSaveEnvelope(state), pkg);
     enterRegion(transferred, pkg.campaigns.r2);
     assert.deepEqual(transferred.progress.creatures, state.progress.creatures);
+    assert.deepEqual(transferred.progress.creatures.collection.fogling, { level: 7, variant: 'golden' });
     assert.equal(createFreshState(pkg).progress.creatures.partner, null);
+    const legacy = createFreshState(pkg);
+    legacy.schemaVersion = 14;
+    legacy.progress.creatures = { collection: { fogling: { level: 9 } }, partner: 'fogling' };
+    assert.deepEqual(migrateState(legacy, pkg).progress.creatures, { collection: { fogling: { level: 9, variant: 'normal' } }, partner: 'fogling' });
   }
   assert.deepEqual(normalizeCreatures({ collection: { fogling: { level: -2 }, 'echo-bat': { level: '7' }, unknown: { level: 20 } }, partner: 'unknown' }), { collection: {}, partner: null });
   assert.deepEqual(normalizeCreatures(null), { collection: {}, partner: null });
+});
+
+test('creature forms upgrade independently of level and award coins only while selected', async () => {
+  const { discoverCreature, chooseCompanion, activeCompanion, partnerVictoryBonus, normalizeCreatures } = await api();
+  const progress = {};
+  discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 8 });
+  chooseCompanion(progress, 'fogling');
+  assert.equal(partnerVictoryBonus(progress), 0);
+  assert.match(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 3, variant: 'elite' }), /Elite form unlocked/);
+  assert.deepEqual(progress.creatures.collection.fogling, { level: 8, variant: 'elite' });
+  assert.equal(activeCompanion(progress, definitions).bonusCoins, 6);
+  assert.equal(partnerVictoryBonus(progress), 6);
+  assert.equal(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 9 }), 'Fogling upgraded: Lv. 8 → Lv. 9. Its ability is stronger!');
+  assert.equal(progress.creatures.collection.fogling.variant, 'elite');
+  assert.match(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 4, variant: 'golden' }), /Golden form unlocked/);
+  assert.deepEqual(progress.creatures.collection.fogling, { level: 9, variant: 'golden' });
+  assert.equal(partnerVictoryBonus(progress), 12);
+  assert.equal(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 4, variant: 'elite' }), '');
+  chooseCompanion(progress, null);
+  assert.equal(partnerVictoryBonus(progress), 0);
+  assert.deepEqual(normalizeCreatures({ collection: { fogling: { level: 5, variant: 'unknown' } }, partner: 'fogling' }).collection.fogling, { level: 5, variant: 'normal' });
+  const gameplay = fs.readFileSync('src/gameplay.js', 'utf8');
+  const adventure = fs.readFileSync('src/adventure.js', 'utf8');
+  assert.match(gameplay, /coins \+= variantCoins \+ partnerCoins/);
+  assert.match(adventure, /coins \+= partnerCoins/);
+  const tutorial = fs.readFileSync('src/tutorial.js', 'utf8');
+  assert.match(tutorial, /Some wild creatures are Elite or Golden/);
+  assert.match(tutorial, /Elite partners earn 6 extra coins per battle win; Golden partners earn 12/);
 });
 
 test('collection cards show exact abilities, select one partner and keep defeated bosses separate', async () => {
@@ -127,8 +161,8 @@ test('collection cards show exact abilities, select one partner and keep defeate
   const pkg = await loadLevelPackage('p2', fetcher, '');
   const game = { levelPackage: pkg, state: createFreshState(pkg) };
   game.state.progress.story.bossDefeated = true;
-  discoverCreature(game.state.progress, { id: 'fogling', name: 'Fogling', level: 3 });
-  discoverCreature(game.state.progress, { id: 'echo-bat', name: 'Echo Bat', level: 4 });
+  discoverCreature(game.state.progress, { id: 'fogling', name: 'Fogling', level: 3, variant: 'elite' });
+  discoverCreature(game.state.progress, { id: 'echo-bat', name: 'Echo Bat', level: 4, variant: 'golden' });
   const dom = new JSDOM('<div id="overlay"></div>');
   const before = global.document;
   global.document = dom.window.document;
@@ -140,11 +174,17 @@ test('collection cards show exact abilities, select one partner and keep defeate
     assert.match(element.textContent, /Absorb the next 10 damage/);
     assert.match(element.textContent, /Absorb the next 12 damage/);
     assert.match(element.textContent, /cannot be a partner/);
+    assert.match(element.textContent, /Elite partner: \+6 coins/);
+    assert.match(element.textContent, /Golden partner: \+12 coins/);
+    assert.equal(element.querySelectorAll('.creature-card.elite .creature-form-badge').length, 1);
+    assert.equal(element.querySelectorAll('.creature-card.golden .creature-form-badge').length, 1);
     assert.equal(element.querySelectorAll('[data-choose-creature]').length, 2);
     element.querySelector('[data-choose-creature="fogling"]').click();
     assert.equal(game.state.progress.creatures.partner, 'fogling');
+    assert.match(element.querySelector('.creature-partner-banner').textContent, /\+6 coins/);
     element.querySelector('[data-choose-creature="echo-bat"]').click();
     assert.equal(game.state.progress.creatures.partner, 'echo-bat');
+    assert.match(element.querySelector('.creature-partner-banner').textContent, /\+12 coins/);
     assert.equal(element.querySelectorAll('[aria-pressed="true"]').length, 1);
     element.querySelector('[data-release-creature]').click();
     assert.equal(game.state.progress.creatures.partner, null);

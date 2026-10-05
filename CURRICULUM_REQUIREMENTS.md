@@ -2,6 +2,7 @@
 
 Use this checklist before adding a curriculum to the playable level registry.
 The shared engine and seven-region campaign stay the same; each curriculum supplies its own source pack, lesson mapping, question pools, and Restoration Sets.
+Alert the user if content / questions provided do not meet requirements needed for the game (e.g. insufficient lessons, questions in a particular category is not supplied)
 
 ## Source pack
 

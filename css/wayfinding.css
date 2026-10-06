@@ -7,7 +7,8 @@ details:not([open]) > .wayfinding-toggle .wayfinding-chevron { transform: rotate
 .wayfinding-toggle:hover .wayfinding-chevron { background: #dec78b44; }
 .wayfinding-toggle:focus-visible { outline: 3px solid #216c87; outline-offset: 2px; border-radius: 5px; }
 .guide-map-toggle b { font: 800 14px var(--font-ui); }
-.atlas-enabled details.objective { display: block; pointer-events: auto; }
+.atlas-enabled:not(.atlas-pregame) details.objective { display: block; pointer-events: auto; }
+.atlas-enabled.atlas-pregame details.objective { display: none; }
 .guide-map > .wayfinding-toggle { pointer-events: auto; }
 @media (max-width: 700px) { .guide-map-toggle b { font-size: 11px; } }
 .objective-details { display: grid; gap: 6px; padding: 5px 2px 2px; }

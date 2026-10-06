@@ -43,3 +43,14 @@ test('wayfinding disclosures have touchable headers and compact closed styles', 
   assert.match(atlas, /\.atlas-enabled \.objective:not\(\[open\]\) \{[^}]*width: max-content/);
   assert.match(stage, /\.objective:not\(\[open\]\) > :not\(summary\).*display: none/);
 });
+
+test('Next step remains hidden until the pregame shell enters the world', () => {
+  const html = fs.readFileSync('index.html', 'utf8');
+  const styles = fs.readFileSync('css/wayfinding.css', 'utf8');
+  const dom = new JSDOM(html);
+  const shell = dom.window.document.querySelector('.game-shell');
+  assert.ok(shell.classList.contains('atlas-pregame'));
+  assert.match(styles, /\.atlas-enabled:not\(\.atlas-pregame\) details\.objective \{[^}]*display: block/);
+  assert.match(styles, /\.atlas-enabled\.atlas-pregame details\.objective \{[^}]*display: none/);
+  dom.window.close();
+});

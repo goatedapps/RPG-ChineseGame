@@ -1,0 +1,19 @@
+.wayfinding-toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 44px; padding: 0 2px; color: inherit; list-style: none; cursor: pointer; touch-action: manipulation; pointer-events: auto; }
+.wayfinding-toggle::-webkit-details-marker { display: none; }
+.wayfinding-toggle::marker { content: ''; }
+.wayfinding-chevron { flex: 0 0 28px; width: 28px; height: 28px; padding: 4px; border-radius: 50%; color: inherit; background: #dec78b22; }
+.wayfinding-chevron path { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+details:not([open]) > .wayfinding-toggle .wayfinding-chevron { transform: rotate(-90deg); }
+.wayfinding-toggle:hover .wayfinding-chevron { background: #dec78b44; }
+.wayfinding-toggle:focus-visible { outline: 3px solid #216c87; outline-offset: 2px; border-radius: 5px; }
+.guide-map-toggle b { font: 800 14px var(--font-ui); }
+.atlas-enabled details.objective { display: block; pointer-events: auto; }
+.guide-map > .wayfinding-toggle { pointer-events: auto; }
+@media (max-width: 700px) { .guide-map-toggle b { font-size: 11px; } }
+.objective-details { display: grid; gap: 6px; padding: 5px 2px 2px; }
+.objective:not([open]) > :not(summary), .guide-map:not([open]) > :not(summary) { display: none; }
+.guide-map:not([open]) { width: max-content; max-width: calc(100% - 24px); }
+#guide-map-details { padding-top: 4px; border-top: 1px solid #dec78b55; }
+.atlas-enabled .objective:not([open]) { width: max-content; max-width: calc(100% - 26px); }
+.atlas-enabled .objective[open] .objective-toggle { border-bottom: 1px solid #bc975055; }
+.atlas-enabled .objective .wayfinding-chevron { color: #a63129; background: #bc97501a; }

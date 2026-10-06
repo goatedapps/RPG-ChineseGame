@@ -774,7 +774,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   .daily-board-panel .quest-card .quest-count { grid-column: 2; justify-self: start; }
   .dpad { right: 9px; bottom: 9px; grid-template-columns: repeat(3,47px); grid-template-rows: repeat(3,47px); }
   .guide-map { top: auto; right: auto; left: 7px; bottom: 7px; width: 139px; padding: 5px; }
-  .guide-map-heading b { font-size: 11px; }
+  .guide-map-heading b, .guide-map-toggle b { font-size: 11px; }
   .guide-map-heading span, .guide-map small { font-size: 9px; }
   .level-grid, .status-grid, .parent-settings, .accuracy-grid, .parent-tables, .hero-stat-grid, .bag-grid { grid-template-columns: 1fr; }
   .goal-editor, .weekly-table div { grid-template-columns: 1fr; }

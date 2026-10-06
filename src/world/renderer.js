@@ -1,8 +1,70 @@
 import { isEncounterTerrain, zoneAt } from './encounters.js?p17';
 import { CREATURES } from '../battle/creatures.js';
 import { routeKey } from '../systems/regions.js';
+import { objectOccupies } from './map.js';
 
 const TILE = 32;
+
+export function buildingEntrancePaths(map) {
+  const paths = new Set();
+  if (!map.safeTown && !map.atlasVillage && !map.route) return paths;
+  const pathTile = map.legend.p ? 'p' : 'b';
+  const key = (x, y) => y * map.width + x;
+  const obstacles = map.objects.filter(object => object.solid && object.type !== 'npc');
+  const walkable = new Set();
+  const existing = new Set();
+  for (let y = 0; y < map.height; y += 1) {
+    for (let x = 0; x < map.width; x += 1) {
+      if (!map.legend[map.tiles[y][x]]?.walkable || obstacles.some(object => objectOccupies(object, x, y))) continue;
+      walkable.add(key(x, y));
+      if (map.tiles[y][x] === pathTile) existing.add(key(x, y));
+    }
+  }
+  const neighbours = cell => {
+    const x = cell % map.width;
+    const y = Math.floor(cell / map.width);
+    return [[x, y + 1], [x - 1, y], [x + 1, y], [x, y - 1]]
+      .filter(([nx, ny]) => nx >= 0 && nx < map.width && ny >= 0 && ny < map.height)
+      .map(([nx, ny]) => key(nx, ny)).filter(next => walkable.has(next));
+  };
+  // Join the main trail, rather than an isolated path tile beneath a pavilion's steps.
+  let connected = new Set();
+  const remaining = new Set(existing);
+  for (const start of remaining) {
+    const component = [start];
+    remaining.delete(start);
+    for (let index = 0; index < component.length; index += 1) {
+      for (const next of neighbours(component[index])) {
+        if (!remaining.delete(next)) continue;
+        component.push(next);
+      }
+    }
+    if (component.length > connected.size) connected = new Set(component);
+  }
+  if (!connected.size) return paths;
+  for (const building of map.objects.filter(object => object.type === 'building' && object.door)) {
+    const start = key(building.door.x, building.door.y);
+    if (!walkable.has(start)) continue;
+    const queue = [start];
+    const previous = new Map([[start, null]]);
+    for (let index = 0; index < queue.length; index += 1) {
+      const cell = queue[index];
+      if (connected.has(cell)) {
+        for (let step = cell; step !== null; step = previous.get(step)) {
+          connected.add(step);
+          if (!existing.has(step)) paths.add(step);
+        }
+        break;
+      }
+      for (const next of neighbours(cell)) {
+        if (previous.has(next)) continue;
+        previous.set(next, cell);
+        queue.push(next);
+      }
+    }
+  }
+  return paths;
+}
 const BUILDING_ICON = {
   school: 0, inn: 2, 'reading-hall': 1, shop: 3,
   'hawker-centre-building': 3, 'granary-building': 6, 'hill-house-building': 4,
@@ -517,6 +579,8 @@ export function createRenderer(canvas, map) {
   const context = canvas.getContext('2d');
   const atlasRegion = map.atlasVillage || map.safeTown ? map.region : null;
   const illustratedStructures = Boolean(map.atlasVillage || map.safeTown || map.route);
+  const entrancePaths = buildingEntrancePaths(map);
+  const pathTile = map.legend.p ? 'p' : 'b';
   let disposed = false;
   let lastState = null;
   const art = {};
@@ -563,7 +627,8 @@ export function createRenderer(canvas, map) {
     context.clearRect(0, 0, viewWidth, viewHeight);
     for (let row = firstRow; row <= lastRow; row += 1) {
       for (let column = firstColumn; column <= lastColumn; column += 1) {
-        drawTile(context, map, map.tiles[row][column], column * TILE - offsetX, row * TILE - offsetY, column, row, tick, atlasRegion);
+        const tile = entrancePaths.has(row * map.width + column) ? pathTile : map.tiles[row][column];
+        drawTile(context, map, tile, column * TILE - offsetX, row * TILE - offsetY, column, row, tick, atlasRegion);
       }
     }
 

@@ -2,7 +2,7 @@ import { createEventBus } from './core/events.js';
 import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p13';
 import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p23';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p29';
+import { createRenderer } from './world/renderer.js?p30';
 import { isHarvestPondCenter } from './world/harvestPond.js';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';

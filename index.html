@@ -11,8 +11,9 @@
   <title>Word Spirit Quest</title>
   <link rel="stylesheet" href="./css/tokens.css">
   <link rel="stylesheet" href="./css/base.css?p23">
-  <link rel="stylesheet" href="./css/stage.css?p48">
-  <link rel="stylesheet" href="./css/atlas.css?p16">
+  <link rel="stylesheet" href="./css/stage.css?p50">
+  <link rel="stylesheet" href="./css/atlas.css?p18">
+  <link rel="stylesheet" href="./css/wayfinding.css?p1">
 </head>
 <body>
   <div class="boot-loading" id="boot-loading" role="status" aria-live="polite" aria-label="Loading Word Spirit Quest">
@@ -64,11 +65,17 @@
       </nav>
     </header>
 
-    <div class="objective" aria-live="polite"><b><span class="objective-pin" aria-hidden="true"></span>Next step · pinned on map</b><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status" role="status">Save verified</small></div>
+    <details class="objective" open>
+      <summary class="wayfinding-toggle objective-toggle" id="objective-toggle"><b><span class="objective-pin" aria-hidden="true"></span>Next step</b><svg class="wayfinding-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="objective-details" id="objective-details" aria-live="polite"><span id="objective-text">Explore Scholar Village and read its signs.</span><small id="save-status" role="status">Save verified</small></div>
+    </details>
 
     <section class="stage" id="game-stage" tabindex="-1" aria-label="Scholar Village map">
       <canvas id="world" width="640" height="448" aria-label="Game world"></canvas>
-      <aside class="guide-map" id="guide-map" hidden aria-label="Area map"><div class="guide-map-heading"><b id="guide-map-heading">Area map</b><span id="route-zone-label" hidden></span></div><canvas id="guide-map-canvas" role="img" aria-label="Area map showing your position and next step"></canvas><small><i aria-hidden="true"></i> You <em aria-hidden="true"></em> Next step</small></aside>
+      <details class="guide-map" id="guide-map" open hidden aria-label="Area map">
+        <summary class="wayfinding-toggle guide-map-toggle" id="guide-map-toggle"><b id="guide-map-heading">Area map</b><svg class="wayfinding-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div id="guide-map-details"><div class="guide-map-heading"><span id="route-zone-label" hidden></span></div><canvas id="guide-map-canvas" role="img" aria-label="Area map showing your position and next step"></canvas><small><i aria-hidden="true"></i> You <em aria-hidden="true"></em> Next step</small></div>
+      </details>
       <div class="route-effects" id="route-effects" hidden aria-live="polite"></div>
       <div class="toast" id="toast" hidden aria-live="polite"></div>
       <div class="dpad" id="dpad" aria-label="Movement controls">
@@ -82,6 +89,6 @@
   </main>
   <noscript>Word Spirit Quest needs JavaScript enabled to run.</noscript>
   <script src="./vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="./src/main.js?p85"></script>
+  <script type="module" src="./src/main.js?p89"></script>
 </body>
 </html>

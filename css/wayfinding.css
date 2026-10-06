@@ -10,7 +10,10 @@ details:not([open]) > .wayfinding-toggle .wayfinding-chevron { transform: rotate
 .atlas-enabled:not(.atlas-pregame) details.objective { display: block; pointer-events: auto; }
 .atlas-enabled.atlas-pregame details.objective { display: none; }
 .guide-map > .wayfinding-toggle { pointer-events: auto; }
-@media (max-width: 700px) { .guide-map-toggle b { font-size: 11px; } }
+@media (max-width: 700px) {
+  .atlas-enabled .objective-toggle b,
+  .atlas-enabled .guide-map-toggle b { font: 800 14px/1.2 var(--font-ui); }
+}
 .objective-details { display: grid; gap: 6px; padding: 5px 2px 2px; }
 .objective:not([open]) > :not(summary), .guide-map:not([open]) > :not(summary) { display: none; }
 .guide-map:not([open]) { width: max-content; max-width: calc(100% - 24px); }

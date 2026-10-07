@@ -190,10 +190,14 @@ function validateSharedConfiguration(reports) {
       errors.push(`${level}/level.json must assign every lesson exactly once.`);
     }
     if (registryById.get(level).worldMappingReady) {
+      const singleLessonRegions = config.singleLessonRegions || [];
+      if (!Array.isArray(singleLessonRegions) || new Set(singleLessonRegions).size !== singleLessonRegions.length || singleLessonRegions.some(id => id === 'r1' || !regionIds.includes(id) || config.regionLessons?.[id]?.length !== 1)) {
+        errors.push(`${level}/level.json singleLessonRegions must name unique later regions with exactly one mapped lesson.`);
+      }
       for (const regionId of regionIds) {
         const lessonsForRegion = config.regionLessons?.[regionId] || [];
         const uniqueWords = new Set(lessonsForRegion.flatMap(lesson => report.wordsByLesson.get(lesson) || []));
-        if (lessonsForRegion.length < 2 || (regionId === 'r1' && lessonsForRegion.length !== 3)) {
+        if (lessonsForRegion.length < (Array.isArray(singleLessonRegions) && singleLessonRegions.includes(regionId) ? 1 : 2) || (regionId === 'r1' && lessonsForRegion.length !== 3)) {
           errors.push(`${level} ${regionId} needs ${regionId === 'r1' ? 'three' : 'at least two'} mapped lessons.`);
         }
         if (regionId === 'r1') {

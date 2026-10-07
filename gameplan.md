@@ -4,8 +4,8 @@
 
 Word Spirit Quest is a tablet-friendly exploration RPG for Singapore primary-school Chinese.
 Every creature contains a collectible vocabulary word, and combat actions are powered by learning tasks.
-Primary 2 and Primary 5 use the same engine, world, cast and campaign with separate curriculum packs and per-player saves.
-After the prologue, the player chooses an existing local name or creates one, then chooses a curriculum unless the P2 or P5 link already selected it.
+Primary 2, Primary 5 and Primary 6 use the same engine, world, cast and campaign with separate curriculum packs and per-player saves.
+After the prologue, the player chooses an existing local name or creates one, then chooses a curriculum unless a level link already selected it.
 Player 1 retains all saves made before named profiles were introduced and can be renamed.
 Parent Mode can reopen the player picker so several children can share one device without sharing progress.
 The intended session is 30–60 minutes, but the game has no mandatory timer.
@@ -17,7 +17,7 @@ Six action-gated missions introduce the Shop, villagers, School, battle supplies
 At level 3 Jun returns for mastery tiers, creature companions, restoration, the child-facing Atlas panels, dictation, crafting, and a Repellent-and-Bait Shop visit.
 Tutorial progress resumes at the exact incomplete action; pre-existing saves retain their current progression without being enrolled.
 
-The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with curriculum-specific Lessons 1–19.
+The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with 19 P2 lessons, 17 P5 lessons and 12 P6 lessons.
 P0–P17 engineering and the earlier physical tablet pilot are complete.
 P18 release polish is in progress.
 
@@ -25,6 +25,7 @@ Production URLs:
 
 - P2: `https://goatedapps.github.io/RPG-ChineseGame/?level=p2`
 - P5: `https://goatedapps.github.io/RPG-ChineseGame/?level=p5`
+- P6: `https://goatedapps.github.io/RPG-ChineseGame/?level=p6`
 
 ## Design rules
 
@@ -59,6 +60,8 @@ To add a playable curriculum, create its `content/source/<id>/` pack and `conten
 Run `npm run check:curricula` before enabling the level in a release; it builds the source pack and runs the regression suite.
 Validation checks complete lesson mapping, curriculum-specific Restoration Sets, distinct answer choices, and enough distinct regional words at the Bronze boss threshold for the default 15-word gate dictation; registry-driven tests check generated content, seven-region boss pools, save isolation, route pacing and offline assets.
 Keep curriculum-specific expected facts in separate tests; general playable-curriculum tests must iterate the registry.
+P6 maps Lessons 1–3, 4–5, 6–7, 8–9, 10, 11 and 12 to Regions 1–7 respectively.
+Its final three regions explicitly allow one lesson while retaining the standard boss questions, two distinct writing prompts and the default 15-word gate dictation.
 
 ## Learning and battle rules
 
@@ -99,7 +102,7 @@ The Scholar Atlas art treatment covers all seven villages, the fog-route pavilio
 Reusable full-body villager and distinct hero sprites appear on all village maps.
 Six separate battlefields connect the seven towns, and a seventh fog-covered trail leads out of Treehouse Summit to the final boss pavilion.
 Each route has three lesson bands and persistent fog; only the six inter-town routes have onward gates.
-The routes have roughly twice their former area, with winding thicket barriers; normal full exploration is tuned to sample roughly two thirds of regional Word Spirits across P2 and P5.
+The routes have roughly twice their former area, with winding thicket barriers; normal full exploration is tuned to sample roughly two thirds of regional Word Spirits for every playable curriculum.
 The five later routes use distinct authored terrain layouts and the shared route renderer and progression rules.
 The map includes School, Reading Hall, Inn, Shop, Storyteller, quest villagers, lore villagers and wandering flavor villagers.
 Tablet movement uses the D-pad over the play area.
@@ -126,7 +129,7 @@ Shields absorb a finite damage pool, healing is capped by maximum HP, and enhanc
 Boss discoveries appear after defeat and cannot be selected as companions.
 Schema 15 adds creature forms to collection records, migrating earlier records to Normal while preserving their levels and selected partner.
 Older saves without creature records start collecting species at their next victory because historical creature levels were not saved.
-Region 1 Restoration Sets are curriculum-specific so Jun's level-3 board tour has available sets in both P2 and P5.
+Region 1 Restoration Sets are curriculum-specific so Jun's level-3 board tour has available sets for every playable curriculum.
 Parent Mode defaults to PIN 0000, migrates the former default, and preserves custom PINs.
 Its Settings place region, level, coin and lesson-filtered Spirit card shortcuts first, followed by family goals and save tools, play and learning controls, and PIN changes.
 An optional collapsible parent feedback form follows the PIN controls and sends only the entered message and optional reply email to Formspree.
@@ -168,7 +171,8 @@ Playable level configuration must enable only supported question types and rewar
 
 P5 has 17 lessons and 327 generated words.
 P2 has 19 lessons and 460 generated words.
-The existing P5 story 9 source has four pages while the campaign convention expects six; this is a known non-blocking build warning.
+P6 has 12 lessons and 300 generated words, with 515 locally packaged Hanzi characters for writing.
+P5 story 9 and all twelve P6 stories have four pages while the campaign convention expects six; these are non-blocking build warnings because the Storyteller supports variable chapter lengths.
 
 ## Save, offline and accessibility requirements
 
@@ -181,7 +185,7 @@ Suspend autosave when recovery is blocked.
 Starting fresh requires a second deliberate action.
 Imports must validate their envelope and level before replacing progress.
 
-The service worker caches both curricula, the shared Region 1 runtime, local Hanzi data and packaged audio after the first online load.
+The service worker caches every playable curriculum, the shared Region 1 runtime, local Hanzi data and packaged audio after the first online load.
 Cache version changes must reach updated module URLs and must not ignore URL search parameters.
 Verify both online upgrade behavior and offline restart after service-worker changes.
 
@@ -241,9 +245,10 @@ Matching vetted questions currently cover 253 of 460 P2 words and 197 of 327 P5 
 Verify offline restart, update behavior, save migration, export/import and curriculum switching.
 Reach at least 90 Lighthouse accessibility on menu screens.
 Produce the final distributable only after deciding whether double-click `file://` support still justifies a single-file bundle.
-Automated checks cover packaged offline assets, save recovery, migration, export/import and separate P2/P5 curriculum loading.
+Automated checks cover packaged offline assets, save recovery, migration, export/import and separate P2/P5/P6 curriculum loading.
 Regional music now loads only when played, reducing unnecessary startup requests.
 P2 and P5 loaded without browser errors in a local in-app-browser smoke check; a portrait-tablet viewport had no horizontal overflow and visible controls met the 44-pixel target size.
+P6 startup, all twelve lesson choices, final-lesson word selection and from-memory dictation passed a local browser smoke check without console errors.
 Local Lighthouse accessibility scored 100 for both P2 and P5 after the objective contrast fix.
 The minimum-progress audit models 80% Bronze cards, one battle and two correct practice answers per card, confirms all seven bosses are beatable without optional purchases, and enters each next region 1–4 levels below its first creatures.
 The first-paint loading screen shows the illustrated walking hero and waits for the opening art to decode before revealing the prologue.
@@ -253,7 +258,7 @@ The hosted PWA is the release format; double-click `file://` support does not ju
 ## Definition of done for every phase
 
 - The phase has a reviewable playable build.
-- Both curricula remain functional unless the phase is explicitly curriculum-specific.
+- All playable curricula remain functional unless the phase is explicitly curriculum-specific.
 - Content validation and all tests pass.
 - Existing saves migrate without loss.
 - Tablet controls, focus, sound and offline behavior are checked when affected.

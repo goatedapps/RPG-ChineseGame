@@ -2,7 +2,7 @@ import { makeExamQuestion } from './learning/questions.js';
 import { recordAnswer, tierOf } from './learning/mastery.js?p10f';
 import { checkPassageAnswer } from './systems/reading.js?p10f';
 import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot, normalizeDaily, recordDailyEvent, unlockDailyScroll } from './systems/daily.js';
-import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p18';
+import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p19';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p18';
 import { showWritingTask } from './ui/writingView.js?p15';

@@ -1,0 +1,364 @@
+title: 第一课 (Lesson 1)
+vocab:
+  - word: 克服
+    pinyin: kè fú
+    meaning: Overcome
+    example: 在老师的帮助下，我克服了上台讲话的恐惧。
+    sentenceBank:
+      - zh: 这道题虽然很难，但我们一起想办法，终于克服了困难。
+        en: Although this problem was difficult, we worked together to find a solution and finally overcame the difficulty.
+      - zh: 她努力克服怕水的心理，开始学习游泳。
+        en: She worked hard to overcome her fear of water and began learning to swim.
+      - zh: 为了准时完成任务，队员们克服了重重困难。
+        en: The team members overcame many difficulties to finish the task on time.
+      - zh: 弟弟克服了紧张的情绪，勇敢地走上舞台。
+        en: My younger brother overcame his nervousness and bravely stepped onto the stage.
+      - zh: 遇到困难时，我们应该想办法克服，而不是轻易放弃。
+        en: When we face difficulties, we should find ways to overcome them instead of giving up easily.
+  - word: 锻炼
+    pinyin: duàn liàn
+    meaning: Exercise / Train the body
+    example: 爷爷每天早上到公园锻炼身体。
+    sentenceBank:
+      - zh: 为了增强体力，我每天放学后都跑步锻炼。
+        en: To build up my stamina, I run for exercise every day after school.
+      - zh: 游泳能锻炼身体，也是一项有趣的运动。
+        en: Swimming provides physical exercise and is also an enjoyable sport.
+      - zh: 爸爸经常骑脚踏车锻炼身体。
+        en: Dad often rides a bicycle for exercise.
+      - zh: 坚持锻炼后，她的身体比以前强壮了。
+        en: After exercising regularly, she became physically stronger than before.
+      - zh: 周末，我们全家一起到公园锻炼身体。
+        en: At the weekend, our whole family goes to the park to exercise together.
+  - word: 梦
+    pinyin: mèng
+    meaning: Dream during sleep
+    example: 昨晚，我做了一个在天空中飞翔的梦。
+    sentenceBank:
+      - zh: 她在梦里见到了远方的奶奶。
+        en: She saw her grandmother, who lives far away, in her dream.
+      - zh: 弟弟醒来后，兴奋地告诉我们他做的梦。
+        en: After waking up, my younger brother excitedly told us about his dream.
+      - zh: 昨晚的梦很奇怪，我竟然和一只会说话的猫聊天。
+        en: Last night's dream was very strange; I actually chatted with a talking cat.
+      - zh: 我做了一个可怕的梦，醒来时才发现自己还躺在床上。
+        en: I had a frightening dream and only realised when I woke up that I was still lying in bed.
+      - zh: 早上醒来时，我已经记不清梦里的情景了。
+        en: When I woke up in the morning, I could no longer clearly remember the scenes in my dream.
+  - word: 测验
+    pinyin: cè yàn
+    meaning: Test / Quiz
+    example: 明天有华文测验，我今晚要复习生字。
+    sentenceBank:
+      - zh: 老师用一次小测验来了解大家是否掌握了这一课的内容。
+        en: The teacher used a short quiz to find out whether everyone had understood this lesson.
+      - zh: 数学测验开始前，同学们把课本收进书包。
+        en: Before the mathematics test began, the students put their textbooks into their schoolbags.
+      - zh: 她认真复习，在这次测验中取得了好成绩。
+        en: She revised carefully and achieved a good result in this test.
+      - zh: 测验结束后，老师带我们订正答错的题目。
+        en: After the test, the teacher guided us through correcting the questions we had answered wrongly.
+      - zh: 我在测验中漏答了一道题，下次一定要仔细检查。
+        en: I missed a question in the test, so I must check my answers carefully next time.
+  - word: 严格
+    pinyin: yán gé
+    meaning: Strict
+    example: 教练对队员的要求很严格，每个动作都必须做到位。
+    sentenceBank:
+      - zh: 老师对我们的书写要求很严格，不允许我们随便涂写。
+        en: The teacher has strict standards for our handwriting and does not allow us to scribble carelessly.
+      - zh: 虽然爸爸对我很严格，但他也会耐心地帮助我。
+        en: Although Dad is strict with me, he also helps me patiently.
+      - zh: 工厂对产品质量进行严格检查，确保每件产品都合格。
+        en: The factory carries out strict quality checks to ensure that every product meets the required standards.
+      - zh: 学校有严格的规定，学生上课时必须准时到达。
+        en: The school has strict rules requiring students to arrive on time for class.
+      - zh: 她严格要求自己，每次交作业前都会仔细检查。
+        en: She sets strict standards for herself and checks her work carefully before handing it in.
+  - word: 懒惰
+    pinyin: lǎn duò
+    meaning: Lazy
+    example: 他十分懒惰，连自己的房间也不愿意收拾。
+    sentenceBank:
+      - zh: 小明因为懒惰，总是把作业拖到最后才做。
+        en: Because Xiao Ming is lazy, he always leaves his homework until the last minute.
+      - zh: 弟弟不想洗自己的碗，还找借口推给别人，真是懒惰。
+        en: My younger brother refuses to wash his own bowl and makes excuses to leave it to others; he is really lazy.
+      - zh: 故事里的懒惰农夫不肯耕种，最后没有粮食吃。
+        en: The lazy farmer in the story refused to farm and eventually had no grain to eat.
+      - zh: 他改掉了懒惰的习惯，开始主动帮忙做家务。
+        en: He broke his habit of being lazy and began helping with the housework on his own initiative.
+      - zh: 我们不能因为懒惰就不做自己应该做的事。
+        en: We should not neglect our responsibilities just because we are lazy.
+  - word: 临时抱佛脚
+    pinyin: lín shí bào fó jiǎo
+    meaning: Cram / Prepare hastily at the last minute
+    example: 他平时不复习，到了考试前一晚才临时抱佛脚。
+    sentenceBank:
+      - zh: 平时认真学习，考试前就不必临时抱佛脚。
+        en: If you study diligently on a regular basis, you will not need to cram at the last minute before an exam.
+      - zh: 明天就要演讲了，他却今晚才临时抱佛脚，匆忙准备讲稿。
+        en: His speech is tomorrow, but he only started preparing at the last minute tonight, hurriedly writing his script.
+      - zh: 她平时没有练习，比赛前才临时抱佛脚，结果表现不理想。
+        en: She did not practise regularly and only made a hurried effort just before the competition, so she did not perform well.
+      - zh: 老师提醒我们提前准备，不要等到测验前才临时抱佛脚。
+        en: The teacher reminded us to prepare in advance instead of cramming just before the test.
+      - zh: 这份报告需要提前搜集资料，临时抱佛脚很难做好。
+        en: This report requires gathering information in advance, so it is difficult to do well if you only prepare at the last minute.
+  - word: 缝
+    pinyin: fèng
+    meaning: Crack / Gap
+    example: 这扇门关不紧，门边留着一道缝。
+    sentenceBank:
+      - zh: 阳光从窗帘的缝里照进房间。
+        en: Sunlight shone into the room through the gap in the curtains.
+      - zh: 墙上裂开了一道缝，需要请人修补。
+        en: A crack appeared in the wall, and someone needs to be called in to repair it.
+      - zh: 一株小草从石头之间的缝里长了出来。
+        en: A small plant grew out of the gap between the stones.
+      - zh: 冷风从门缝里吹进来，我赶紧把门关紧。
+        en: A cold wind blew in through the gap around the door, so I quickly shut it tightly.
+      - zh: 硬币掉进了地板的缝里，怎么也拿不出来。
+        en: The coin fell into a gap in the floor and could not be retrieved.
+  - word: 每逢
+    pinyin: měi féng
+    meaning: Whenever / Every time
+    example: 每逢学校假期，我们都会去探望爷爷奶奶。
+    sentenceBank:
+      - zh: 每逢春节，亲戚们都会聚在一起吃团圆饭。
+        en: Every Chinese New Year, our relatives gather for a reunion meal.
+      - zh: 每逢下雨，这条小路上就会积水。
+        en: Whenever it rains, water collects on this path.
+      - zh: 每逢遇到不懂的字，我都会查字典。
+        en: Whenever I come across a character I do not know, I look it up in a dictionary.
+      - zh: 每逢运动会，同学们都会为参赛的队员加油。
+        en: Every sports day, the students cheer for the team members taking part.
+      - zh: 每逢妹妹生日，妈妈都会亲手做一个蛋糕。
+        en: Every time it is my younger sister's birthday, Mum makes a cake herself.
+  - word: 鲜艳
+    pinyin: xiān yàn
+    meaning: Brightly coloured / Vivid
+    example: 花园里开满了颜色鲜艳的花朵。
+    sentenceBank:
+      - zh: 妹妹穿着一件鲜艳的红裙子，开心地走进会场。
+        en: My younger sister happily entered the venue wearing a vivid red dress.
+      - zh: 这只蝴蝶的翅膀颜色鲜艳，十分美丽。
+        en: This butterfly's wings are brightly coloured and very beautiful.
+      - zh: 她用鲜艳的颜料画出了一片花海。
+        en: She used brightly coloured paints to create a picture of a sea of flowers.
+      - zh: 雨后的花朵显得更加鲜艳。
+        en: The flowers looked even more vivid after the rain.
+      - zh: 舞台上挂着鲜艳的彩旗，充满了节日气氛。
+        en: Brightly coloured flags hung on the stage, creating a festive atmosphere.
+  - word: 耀眼
+    pinyin: yào yǎn
+    meaning: Dazzling / Bright enough to hurt the eyes
+    example: 正午的阳光十分耀眼，我眯起了眼睛。
+    sentenceBank:
+      - zh: 汽车的灯光太耀眼，我一时看不清前面的路。
+        en: The car's lights were so dazzling that I could not see the road ahead clearly for a moment.
+      - zh: 阳光照在水面上，反射出耀眼的光芒。
+        en: Sunlight shone on the water and reflected a dazzling glare.
+      - zh: 舞台上的灯光十分耀眼，演员刚上台时忍不住眯起了眼睛。
+        en: The stage lights were so dazzling that the actor could not help squinting when he first stepped onto the stage.
+      - zh: 雪地反射的光很耀眼，他戴上了太阳眼镜。
+        en: The light reflected by the snow was dazzling, so he put on sunglasses.
+      - zh: 那面镜子反射出耀眼的光，我赶紧转过头去。
+        en: The mirror reflected a dazzling light, so I quickly turned my head away.
+  - word: 托
+    pinyin: tuō
+    meaning: Hold up / Support with the palm
+    example: 她用手掌托着小碗，慢慢地走向餐桌。
+    sentenceBank:
+      - zh: 他伸出手掌，轻轻地托住落下的羽毛。
+        en: He held out his palm and gently caught and supported the falling feather.
+      - zh: 妹妹用双手托着生日蛋糕，小心地走进房间。
+        en: My younger sister carefully entered the room, supporting the birthday cake from underneath with both hands.
+      - zh: 爸爸用一只手托住花盆的底部，另一只手扶着盆边。
+        en: Dad supported the bottom of the flowerpot with one hand and steadied its rim with the other.
+      - zh: 他用手托着下巴，认真思考老师的问题。
+        en: He rested his chin on his hand and thought carefully about the teacher's question.
+      - zh: 她把受伤的小鸟托在手心里，带去请大人帮忙。
+        en: She cradled the injured bird in her palm and took it to an adult for help.
+  - word: 优雅
+    pinyin: yōu yǎ
+    meaning: Elegant / Graceful
+    example: 舞者的动作十分优雅，吸引了所有观众的目光。
+    sentenceBank:
+      - zh: 她穿着长裙，迈着优雅的步伐走上舞台。
+        en: Wearing a long dress, she walked onto the stage with graceful steps.
+      - zh: 天鹅伸展着长长的脖子，在湖面上优雅地游动。
+        en: The swan stretched its long neck and swam gracefully across the lake.
+      - zh: 这位钢琴家的举止优雅，说话也很有礼貌。
+        en: This pianist has elegant manners and speaks politely too.
+      - zh: 她插的花造型优雅，摆在客厅里十分好看。
+        en: Her flower arrangement had an elegant shape and looked lovely in the living room.
+      - zh: 那位舞蹈演员优雅地转了一个圈，赢得了观众的掌声。
+        en: The dancer made a graceful turn and earned applause from the audience.
+  - word: 扎根
+    pinyin: zhā gēn
+    meaning: Take root
+    example: 小树在泥土里扎根后，渐渐长出了新的叶子。
+    sentenceBank:
+      - zh: 这株幼苗已经在花盆里扎根，开始茁壮成长。
+        en: This seedling has taken root in the flowerpot and is beginning to grow well.
+      - zh: 植物需要先扎根，才能从土壤中吸收水分。
+        en: Plants need to take root before they can absorb water from the soil.
+      - zh: 小草在石缝里的泥土中扎根，顽强地生长着。
+        en: The little plant took root in the soil within a crack in the rocks and grew tenaciously.
+      - zh: 新种的树还没有扎根，园丁用木桩把它固定住。
+        en: The newly planted tree had not yet taken root, so the gardener secured it with a wooden stake.
+      - zh: 这棵树在这里扎根多年，根已经深深地伸进土里。
+        en: This tree took root here many years ago, and its roots now reach deep into the soil.
+  - word: 柔弱
+    pinyin: róu ruò
+    meaning: Delicate / Frail
+    example: 这株幼苗十分柔弱，轻轻一碰就弯了下来。
+    sentenceBank:
+      - zh: 小花的茎很柔弱，需要用细竹竿支撑。
+        en: The flower's stem is very delicate and needs support from a thin bamboo stick.
+      - zh: 她看起来柔弱，却能独自搬起这箱书。
+        en: She looks physically frail, yet she can lift this box of books on her own.
+      - zh: 刚出生的小猫身体柔弱，需要母猫的照顾。
+        en: The newborn kitten is physically frail and needs its mother's care.
+      - zh: 一阵风吹来，柔弱的花苗轻轻摇晃。
+        en: A gust of wind blew, and the delicate flower seedlings swayed gently.
+      - zh: 这株植物的枝条柔弱，承受不了太重的果实。
+        en: This plant's branches are delicate and cannot support fruit that is too heavy.
+  - word: 产生
+    pinyin: chǎn shēng
+    meaning: Arise / Develop / Produce
+    example: 参观科学馆后，我对宇宙产生了浓厚的兴趣。
+    sentenceBank:
+      - zh: 读完这本书，我产生了去了解海洋生物的想法。
+        en: After reading this book, I developed the idea of learning about marine life.
+      - zh: 木头燃烧时会产生烟和热。
+        en: Burning wood produces smoke and heat.
+      - zh: 看到实验的结果，同学们产生了许多新的疑问。
+        en: Seeing the results of the experiment raised many new questions among the students.
+      - zh: 这句话表达得不清楚，容易产生误会。
+        en: This sentence is unclear and can easily lead to a misunderstanding.
+      - zh: 听到朋友的鼓励后，他产生了继续尝试的勇气。
+        en: After hearing his friend's encouragement, he found the courage to keep trying.
+  - word: 埋
+    pinyin: mái
+    meaning: Bury / Cover with soil
+    example: 小狗把骨头埋在树下的泥土里。
+    sentenceBank:
+      - zh: 我们挖了一个小坑，把种子埋进土里。
+        en: We dug a small hole and buried the seeds in the soil.
+      - zh: 工人把水管埋在地下，再把路面铺好。
+        en: The workers buried the water pipe underground and then paved the road.
+      - zh: 松鼠把坚果埋在土里，留着以后吃。
+        en: The squirrel buried nuts in the soil to eat later.
+      - zh: 妹妹把一颗小石子埋在花园里，还做了一个记号。
+        en: My younger sister buried a small pebble in the garden and marked the spot.
+      - zh: 园丁把树苗的根埋好，再轻轻压实周围的泥土。
+        en: The gardener covered the seedling's roots with soil and then gently pressed down the soil around them.
+  - word: 暴雨
+    pinyin: bào yǔ
+    meaning: Torrential rain / Rainstorm
+    example: 一场暴雨突然袭来，路面很快就积满了水。
+    sentenceBank:
+      - zh: 暴雨下了一个小时，沟渠里的水涨得很高。
+        en: Torrential rain fell for an hour, and the water in the drain rose very high.
+      - zh: 因为暴雨来袭，学校取消了户外活动。
+        en: The school cancelled its outdoor activities because a rainstorm struck.
+      - zh: 暴雨中，雨点猛烈地敲打着窗户。
+        en: During the rainstorm, raindrops pounded fiercely against the windows.
+      - zh: 我们刚走进商场，外面就下起了暴雨。
+        en: Just after we entered the shopping centre, torrential rain began falling outside.
+      - zh: 暴雨过后，低洼的地方出现了大片积水。
+        en: After the rainstorm, large pools of water formed in low-lying areas.
+  - word: 不屈不挠
+    pinyin: bù qū bù náo
+    meaning: Persevere without giving in / Unyielding
+    example: 尽管多次失败，他仍然不屈不挠地继续尝试。
+    sentenceBank:
+      - zh: 运动员受伤后努力复健，以不屈不挠的精神重返赛场。
+        en: After being injured, the athlete worked hard on rehabilitation and returned to competition with an unyielding spirit.
+      - zh: 面对一次又一次的失败，她不屈不挠，终于完成了实验。
+        en: Despite repeated failures, she persevered without giving up and finally completed the experiment.
+      - zh: 救援人员不屈不挠地搜寻，终于找到了失踪的登山者。
+        en: The rescuers persisted in their search without giving up and finally found the missing hiker.
+      - zh: 即使比赛中落后很多，队员们仍不屈不挠地奋力追赶。
+        en: Even though they were far behind in the match, the team members kept striving to catch up without giving in.
+      - zh: 他经历了许多挫折，却始终不屈不挠地追求自己的目标。
+        en: He experienced many setbacks but continued pursuing his goal without giving up.
+  - word: 坚强
+    pinyin: jiān qiáng
+    meaning: Strong / Resilient
+    example: 虽然比赛输了，她仍然坚强地面对结果，继续努力训练。
+    sentenceBank:
+      - zh: 受伤后，他坚强地配合治疗，没有放弃康复的希望。
+        en: After being injured, he remained resilient and cooperated with his treatment without giving up hope of recovery.
+      - zh: 妈妈鼓励我做一个坚强的人，勇敢面对生活中的困难。
+        en: Mum encouraged me to be a resilient person and face life's difficulties bravely.
+      - zh: 她虽然流下了眼泪，却仍然坚强地完成了任务。
+        en: Although she shed tears, she stayed strong and completed the task.
+      - zh: 这位坚强的运动员在受伤康复后，再次参加了比赛。
+        en: This resilient athlete competed again after recovering from an injury.
+      - zh: 面对挫折，他表现得很坚强，冷静地寻找解决办法。
+        en: He showed great resilience in the face of setbacks and calmly looked for a solution.
+  - word: 恶劣
+    pinyin: è liè
+    meaning: Extremely bad / Harsh
+    example: 山上的天气十分恶劣，狂风和大雨让人寸步难行。
+    sentenceBank:
+      - zh: 由于天气恶劣，登山队决定推迟出发。
+        en: Because of the harsh weather, the hiking team decided to postpone its departure.
+      - zh: 沙漠里的环境恶劣，许多植物难以生存。
+        en: Conditions in the desert are harsh, making it difficult for many plants to survive.
+      - zh: 他故意推倒同学，还嘲笑对方，这种行为十分恶劣。
+        en: He deliberately pushed a classmate over and then mocked them; this behaviour was extremely bad.
+      - zh: 那名顾客大声辱骂店员，态度十分恶劣。
+        en: That customer shouted insults at the shop assistant and behaved very badly towards them.
+      - zh: 救援人员在恶劣的条件下工作，忍受着寒冷和强风。
+        en: The rescuers worked in harsh conditions, enduring the cold and strong winds.
+  - word: 凭
+    pinyin: píng
+    meaning: Rely on / By means of
+    example: 她凭自己的努力，在比赛中取得了好成绩。
+    sentenceBank:
+      - zh: 他凭丰富的经验，很快找出了机器故障的原因。
+        en: Drawing on his extensive experience, he quickly identified the cause of the machine's fault.
+      - zh: 我们凭地图上的指示，顺利找到了目的地。
+        en: We relied on the directions on the map and successfully found our destination.
+      - zh: 她凭出色的演技，赢得了观众的掌声。
+        en: Through her excellent acting, she earned applause from the audience.
+      - zh: 爷爷凭记忆，画出了小时候住过的村子。
+        en: Relying on his memory, Grandpa drew the village where he had lived as a child.
+      - zh: 队员们凭默契的配合，赢得了这场比赛。
+        en: The team members won the match through their well-coordinated teamwork.
+  - word: 意志
+    pinyin: yì zhì
+    meaning: Willpower / Determination
+    example: 他凭着坚强的意志，坚持完成了艰苦的训练。
+    sentenceBank:
+      - zh: 尽管训练十分辛苦，她仍以坚定的意志坚持了下来。
+        en: Although the training was very demanding, she persevered with firm determination.
+      - zh: 长跑不但考验体力，也考验运动员的意志。
+        en: Long-distance running tests not only physical stamina but also an athlete's willpower.
+      - zh: 一次失败并没有动摇他继续努力的意志。
+        en: One failure did not weaken his determination to keep working hard.
+      - zh: 他锻炼自己的意志，努力改掉遇到困难就放弃的习惯。
+        en: He strengthened his willpower and worked to break his habit of giving up when faced with difficulties.
+      - zh: 靠着顽强的意志，她一步一步地走完了艰难的山路。
+        en: With unyielding determination, she completed the difficult mountain trail step by step.
+  - word: 榜样
+    pinyin: bǎng yàng
+    meaning: Role model / Example to follow
+    example: 姐姐诚实又有责任心，是我学习的榜样。
+    sentenceBank:
+      - zh: 班长总是主动帮助同学，为大家树立了好榜样。
+        en: The class monitor always takes the initiative to help classmates and sets a good example for everyone.
+      - zh: 爸爸遵守承诺，是我做人的榜样。
+        en: Dad keeps his promises and is my role model for how to conduct myself.
+      - zh: 她认真学习、尊敬师长，是全班同学的榜样。
+        en: She studies diligently and respects her teachers and elders, making her a role model for the whole class.
+      - zh: 那位运动员从不轻易放弃，是我们学习的榜样。
+        en: That athlete never gives up easily and is an example for us to follow.
+      - zh: 哥哥每天主动整理房间，给弟弟做了好榜样。
+        en: My older brother tidies his room every day without being asked and sets a good example for my younger brother.
+
+sentences: []

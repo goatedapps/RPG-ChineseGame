@@ -1,0 +1,424 @@
+title: 第八课 (Lesson 8)
+vocab:
+  - word: 幅
+    pinyin: fú
+    meaning: Measure word for paintings and pictures
+    example: 墙上挂着一幅山水画。
+    sentenceBank:
+      - zh: 她画了一幅美丽的风景画。
+        en: She painted a beautiful landscape.
+      - zh: 展览里有十幅学生的作品。
+        en: The exhibition contained ten works by students.
+      - zh: 这幅画描绘了过去的街景。
+        en: This painting depicts a street scene from the past.
+      - zh: 爷爷送我一幅书法作品。
+        en: Grandpa gave me a piece of calligraphy.
+      - zh: 我们把几幅照片放大，挂在走廊上。
+        en: We enlarged several photographs and hung them in the corridor.
+  - word: 抄
+    pinyin: chāo
+    meaning: Copy in writing
+    example: 我把黑板上的句子抄进笔记本。
+    sentenceBank:
+      - zh: 她认真地抄下老师写的生字。
+        en: She carefully copied the characters the teacher had written.
+      - zh: 请把这首诗抄一遍。
+        en: Please copy this poem once.
+      - zh: 他把地址抄在纸条上。
+        en: He copied the address onto a slip of paper.
+      - zh: 抄笔记时，要注意不要漏字。
+        en: Be careful not to miss words when copying notes.
+      - zh: 妈妈把食谱抄下来，留着以后使用。
+        en: Mum copied down the recipe to use later.
+  - word: 赚钱
+    pinyin: zhuàn qián
+    meaning: Earn money
+    example: 爸爸通过工作赚钱，负担家里的开销。
+    sentenceBank:
+      - zh: 她利用假期打工赚钱。
+        en: She earned money by working during the holidays.
+      - zh: 这位小贩每天卖面赚钱。
+        en: This hawker earns money by selling noodles every day.
+      - zh: 赚钱不容易，我们应该珍惜金钱。
+        en: Earning money is not easy, so we should value it.
+      - zh: 他靠修理脚踏车赚钱。
+        en: He earns money by repairing bicycles.
+      - zh: 姐姐赚钱后，买了一份礼物给妈妈。
+        en: After earning some money, my older sister bought Mum a present.
+  - word: 印象
+    pinyin: yìn xiàng
+    meaning: Impression
+    example: 这次旅行给我留下了深刻的印象。
+    sentenceBank:
+      - zh: 那位老师亲切的笑容给我留下了好印象。
+        en: That teacher's friendly smile left a good impression on me.
+      - zh: 我对这条老街还有一点印象。
+        en: I still have a faint memory of this old street.
+      - zh: 第一次见面时，他给人的印象很有礼貌。
+        en: At our first meeting, he gave the impression of being very polite.
+      - zh: 这场精彩的表演让我印象深刻。
+        en: This wonderful performance made a deep impression on me.
+      - zh: 在我的印象中，奶奶总是笑眯眯的。
+        en: As I remember her, Grandma was always smiling warmly.
+  - word: 市区重建局
+    pinyin: shì qū chóng jiàn jú
+    meaning: Urban Redevelopment Authority
+    example: 老师向我们介绍了市区重建局这个机构。
+    sentenceBank:
+      - zh: 我们在报告中写下了市区重建局的名称。
+        en: We wrote the name Urban Redevelopment Authority in our report.
+      - zh: 她查阅了市区重建局提供的资料。
+        en: She consulted information provided by the Urban Redevelopment Authority.
+      - zh: 这份介绍市区重建局的小册子放在桌上。
+        en: This booklet introducing the Urban Redevelopment Authority was on the table.
+      - zh: 同学们准备向市区重建局询问相关资料。
+        en: The students planned to ask the Urban Redevelopment Authority for relevant information.
+      - zh: 导览结束后，我们对市区重建局有了更多了解。
+        en: After the guided tour, we knew more about the Urban Redevelopment Authority.
+  - word: 大厦
+    pinyin: dà shà
+    meaning: Large building
+    example: 这座大厦有许多层，里面设有办公室。
+    sentenceBank:
+      - zh: 我们乘电梯到大厦的十楼。
+        en: We took the lift to the tenth floor of the building.
+      - zh: 这座大厦的入口十分宽敞。
+        en: The entrance to this large building was spacious.
+      - zh: 爸爸在市中心的一座大厦里工作。
+        en: Dad works in a large building in the city centre.
+      - zh: 大厦的玻璃外墙反射着阳光。
+        en: The building's glass exterior reflected the sunlight.
+      - zh: 工人正在清洗大厦的外墙。
+        en: The workers were cleaning the building's exterior walls.
+  - word: 贡献
+    pinyin: gòng xiàn
+    meaning: Contribute / Contribution
+    example: 这位医生为社区做出了很大的贡献。
+    sentenceBank:
+      - zh: 大家贡献自己的力量，一起完成任务。
+        en: Everyone contributed their effort to complete the task together.
+      - zh: 老师肯定了她对班级的贡献。
+        en: The teacher recognised her contribution to the class.
+      - zh: 他贡献了许多好点子，帮助活动顺利进行。
+        en: He contributed many good ideas that helped the activity run smoothly.
+      - zh: 志愿者为社会做出了宝贵的贡献。
+        en: The volunteers made a valuable contribution to society.
+      - zh: 我们都可以为保护环境贡献一份力量。
+        en: We can all contribute to protecting the environment.
+  - word: 若有所思
+    pinyin: ruò yǒu suǒ sī
+    meaning: Looking thoughtful / As if pondering
+    example: 听完爷爷的话，她若有所思地望着窗外。
+    sentenceBank:
+      - zh: 他若有所思地坐在椅子上，没有马上回答。
+        en: He sat looking thoughtful and did not answer immediately.
+      - zh: 看到这幅画，老师露出若有所思的表情。
+        en: The teacher looked thoughtful upon seeing this painting.
+      - zh: 她若有所思地翻着笔记，似乎想到了什么。
+        en: She leafed through her notes thoughtfully, as if something had occurred to her.
+      - zh: 爷爷听完问题，若有所思地点了点头。
+        en: After hearing the question, Grandpa nodded thoughtfully.
+      - zh: 小明若有所思地看着地图，似乎在考虑路线。
+        en: Xiao Ming looked thoughtfully at the map, apparently considering the route.
+  - word: 位置
+    pinyin: wèi zhì
+    meaning: Position / Location
+    example: 请在地图上标出学校的位置。
+    sentenceBank:
+      - zh: 她把花盆移到阳光充足的位置。
+        en: She moved the flowerpot to a sunny position.
+      - zh: 这个座位的位置很好，可以看清舞台。
+        en: This seat is well located, with a clear view of the stage.
+      - zh: 他忘了钥匙放在哪个位置。
+        en: He forgot where he had put his keys.
+      - zh: 老师调整了桌椅的位置。
+        en: The teacher changed the positions of the desks and chairs.
+      - zh: 这家店的位置靠近巴士站。
+        en: This shop is located near a bus stop.
+  - word: 政府
+    pinyin: zhèng fǔ
+    meaning: Government
+    example: 课本介绍了政府如何为居民提供公共服务。
+    sentenceBank:
+      - zh: 居民向政府部门提出了建议。
+        en: The residents submitted suggestions to a government department.
+      - zh: 新闻报道了政府公布的一项计划。
+        en: The news reported a plan announced by the government.
+      - zh: 政府需要了解居民的需求。
+        en: The government needs to understand residents' needs.
+      - zh: 这本书介绍了当地政府的工作。
+        en: This book describes the work of the local government.
+      - zh: 老师解释了政府和学校在社区中各自的角色。
+        en: The teacher explained the respective roles of the government and schools in the community.
+  - word: 无忧无虑
+    pinyin: wú yōu wú lǜ
+    meaning: Carefree / Without worries
+    example: 孩子们在草地上无忧无虑地玩耍。
+    sentenceBank:
+      - zh: 那只小狗每天无忧无虑地追着蝴蝶跑。
+        en: That puppy runs after butterflies every day without a care.
+      - zh: 她怀念童年无忧无虑的日子。
+        en: She misses the carefree days of her childhood.
+      - zh: 弟弟无忧无虑地唱着歌，完全没注意时间。
+        en: My younger brother sang without a care, completely unaware of the time.
+      - zh: 故事里的孩子过着无忧无虑的生活。
+        en: The child in the story lived a carefree life.
+      - zh: 放下烦恼后，他无忧无虑地享受假期。
+        en: After putting his worries aside, he enjoyed the holiday without a care.
+  - word: 走廊
+    pinyin: zǒu láng
+    meaning: Corridor
+    example: 同学们安静地走过教室外的走廊。
+    sentenceBank:
+      - zh: 走廊两旁挂着学生的画。
+        en: Students' paintings hung on both sides of the corridor.
+      - zh: 不要在走廊里追逐打闹。
+        en: Do not chase one another or play roughly in the corridor.
+      - zh: 她站在走廊尽头等朋友。
+        en: She waited for her friend at the end of the corridor.
+      - zh: 清洁工把走廊拖得很干净。
+        en: The cleaner mopped the corridor thoroughly.
+      - zh: 这条走廊连接着两个教室。
+        en: This corridor connects two classrooms.
+  - word: 竹篮
+    pinyin: zhú lán
+    meaning: Bamboo basket
+    example: 奶奶提着竹篮到市场买菜。
+    sentenceBank:
+      - zh: 竹篮里放着刚摘下的水果。
+        en: The bamboo basket held freshly picked fruit.
+      - zh: 这个竹篮是用竹片编成的。
+        en: This basket was woven from strips of bamboo.
+      - zh: 他把鸡蛋小心地放进竹篮。
+        en: He carefully put the eggs into the bamboo basket.
+      - zh: 爷爷修好了竹篮松开的提手。
+        en: Grandpa repaired the bamboo basket's loose handle.
+      - zh: 她提着空竹篮，走进果园。
+        en: She carried an empty bamboo basket into the orchard.
+  - word: 吊
+    pinyin: diào
+    meaning: Raise or lower using a rope
+    example: 工人用绳子把木板吊到楼上。
+    sentenceBank:
+      - zh: 他把竹篮从窗口吊下去。
+        en: He lowered the bamboo basket from the window with a rope.
+      - zh: 起重机把沉重的钢梁吊了起来。
+        en: The crane lifted the heavy steel beam.
+      - zh: 爷爷用绳子吊起水桶，慢慢提上来。
+        en: Grandpa lifted the bucket with a rope and slowly pulled it up.
+      - zh: 这个花盆被绳子吊在屋檐下。
+        en: This flowerpot was suspended by a rope under the eaves.
+      - zh: 工人把材料吊到屋顶，再放稳。
+        en: The workers hoisted the materials onto the roof and set them down securely.
+  - word: 租
+    pinyin: zū
+    meaning: Rent
+    example: 我们租了一辆脚踏车，在公园里骑。
+    sentenceBank:
+      - zh: 这家人租了一间靠近学校的房子。
+        en: This family rented a house near the school.
+      - zh: 爸爸租了一辆车，方便旅行。
+        en: Dad rented a car for the trip.
+      - zh: 她打算租一个摊位卖手工艺品。
+        en: She plans to rent a stall to sell handicrafts.
+      - zh: 游客可以在这里租船游湖。
+        en: Tourists can rent boats here to tour the lake.
+      - zh: 他每个月都要付房租。
+        en: He has to pay rent every month.
+  - word: 吩咐
+    pinyin: fēn fù
+    meaning: Instruct / Tell someone to do something
+    example: 奶奶吩咐我把竹篮拿到厨房。
+    sentenceBank:
+      - zh: 妈妈吩咐哥哥去市场买鸡蛋。
+        en: Mum told my older brother to buy eggs at the market.
+      - zh: 老师吩咐我们先读课文。
+        en: The teacher instructed us to read the passage first.
+      - zh: 他按照爸爸的吩咐，把门锁好。
+        en: He locked the door as Dad had instructed.
+      - zh: 店主吩咐员工把货物摆整齐。
+        en: The shop owner told the staff to arrange the goods neatly.
+      - zh: 爷爷吩咐我出门时带上雨伞。
+        en: Grandpa told me to take an umbrella when going out.
+  - word: 摊子
+    pinyin: tān zi
+    meaning: Stall
+    example: 市场里有一个卖水果的摊子。
+    sentenceBank:
+      - zh: 奶奶在摊子前挑选蔬菜。
+        en: Grandma chose vegetables in front of the stall.
+      - zh: 这个摊子每天早上卖热粥。
+        en: This stall sells hot congee every morning.
+      - zh: 小贩把摊子收拾干净，准备开门。
+        en: The hawker cleaned the stall and prepared to open.
+      - zh: 我们在卖玩具的摊子前停了下来。
+        en: We stopped in front of the toy stall.
+      - zh: 下雨时，摊子上的货物被布盖住了。
+        en: During the rain, the goods on the stall were covered with a cloth.
+  - word: 津津有味
+    pinyin: jīn jīn yǒu wèi
+    meaning: With great enjoyment or interest
+    example: 他津津有味地吃着奶奶煮的面。
+    sentenceBank:
+      - zh: 妹妹津津有味地读着故事书。
+        en: My younger sister read the storybook with great interest.
+      - zh: 大家津津有味地听爷爷讲古。
+        en: Everyone listened with great interest to Grandpa's old stories.
+      - zh: 这碗粥很香，他吃得津津有味。
+        en: The congee was delicious, and he ate it with great enjoyment.
+      - zh: 她津津有味地看完了整场表演。
+        en: She watched the entire performance with great enjoyment.
+      - zh: 孩子们津津有味地谈论刚才的比赛。
+        en: The children eagerly discussed the match they had just watched.
+  - word: 左邻右舍
+    pinyin: zuǒ lín yòu shè
+    meaning: Neighbours
+    example: 搬家时，左邻右舍都来帮忙。
+    sentenceBank:
+      - zh: 奶奶把做好的糕点分给左邻右舍。
+        en: Grandma shared her homemade cakes with the neighbours.
+      - zh: 这里的左邻右舍相处得很融洽。
+        en: The neighbours here get along very well.
+      - zh: 我们邀请左邻右舍参加聚会。
+        en: We invited the neighbours to the gathering.
+      - zh: 左邻右舍听到呼救声，赶紧出来查看。
+        en: Hearing cries for help, the neighbours quickly came out to investigate.
+      - zh: 爷爷经常和左邻右舍聊天。
+        en: Grandpa often chats with the neighbours.
+  - word: 捏
+    pinyin: niē
+    meaning: Pinch / Shape with the fingers
+    example: 妹妹用手指捏出一个小面人。
+    sentenceBank:
+      - zh: 她捏住纸的一角，把它提起来。
+        en: She pinched one corner of the paper and lifted it.
+      - zh: 妈妈把饺子的边缘捏紧。
+        en: Mum pinched the edges of the dumpling tightly shut.
+      - zh: 他用拇指和食指捏起一粒米。
+        en: He picked up a grain of rice between his thumb and forefinger.
+      - zh: 弟弟把黏土捏成一只小鸟。
+        en: My younger brother shaped the clay into a little bird.
+      - zh: 她轻轻捏了一下海绵，水就流了出来。
+        en: She gently squeezed the sponge, and water flowed out.
+  - word: 扁担
+    pinyin: biǎn dan
+    meaning: Shoulder carrying pole
+    example: 小贩用扁担挑着两个竹篮。
+    sentenceBank:
+      - zh: 爷爷把扁担放在肩上，挑起水桶。
+        en: Grandpa rested the carrying pole on his shoulder and lifted the water buckets.
+      - zh: 这根扁担两头各挂着一个篮子。
+        en: A basket hung from each end of this carrying pole.
+      - zh: 他放下扁担，坐在路边休息。
+        en: He put down the carrying pole and rested by the road.
+      - zh: 博物馆里展示了过去使用的扁担。
+        en: The museum displayed a carrying pole used in the past.
+      - zh: 那根扁担很结实，可以挑较重的东西。
+        en: That carrying pole was sturdy enough for heavy loads.
+  - word: 厕所
+    pinyin: cè suǒ
+    meaning: Toilet / Restroom
+    example: 请问，厕所在哪里？
+    sentenceBank:
+      - zh: 他洗完手后走出了厕所。
+        en: He left the restroom after washing his hands.
+      - zh: 学校的厕所每天都会打扫。
+        en: The school toilets are cleaned every day.
+      - zh: 使用厕所后，要保持清洁。
+        en: Keep the toilet clean after using it.
+      - zh: 商场里的厕所设在电梯旁边。
+        en: The restroom in the shopping centre is beside the lift.
+      - zh: 厕所的水龙头漏水，工人正在修理。
+        en: The tap in the restroom was leaking, and a worker was repairing it.
+  - word: 掏
+    pinyin: tāo
+    meaning: Take out from inside
+    example: 他从口袋里掏出一枚硬币。
+    sentenceBank:
+      - zh: 妈妈从包里掏出钥匙。
+        en: Mum took the keys out of her bag.
+      - zh: 她把手伸进书包，掏出一本笔记本。
+        en: She reached into her schoolbag and took out a notebook.
+      - zh: 爷爷从衣袋里掏出一张旧照片。
+        en: Grandpa took an old photograph out of his pocket.
+      - zh: 他掏出纸巾，擦了擦汗。
+        en: He took out a tissue and wiped his sweat.
+      - zh: 妹妹从盒子里掏出一只玩具熊。
+        en: My younger sister took a teddy bear out of the box.
+  - word: 栏杆
+    pinyin: lán gān
+    meaning: Railing
+    example: 爷爷扶着栏杆，慢慢走下楼梯。
+    sentenceBank:
+      - zh: 桥的两旁装有栏杆。
+        en: Railings were installed on both sides of the bridge.
+      - zh: 请不要攀爬阳台的栏杆。
+        en: Please do not climb the balcony railing.
+      - zh: 工人把松动的栏杆修好了。
+        en: The workers repaired the loose railing.
+      - zh: 她站在栏杆后面，望着湖面。
+        en: She stood behind the railing and looked across the lake.
+      - zh: 这段栏杆把步道和河岸隔开。
+        en: This section of railing separates the path from the riverbank.
+  - word: 讲古
+    pinyin: jiǎng gǔ
+    meaning: Tell traditional or old stories
+    example: 爷爷喜欢讲古，给我们讲从前的传说。
+    sentenceBank:
+      - zh: 孩子们围着奶奶，听她讲古。
+        en: The children gathered around Grandma to hear her old stories.
+      - zh: 这位讲古艺人说话生动，吸引了许多听众。
+        en: This traditional storyteller spoke vividly and attracted many listeners.
+      - zh: 他讲古时，会模仿故事人物的声音。
+        en: When telling old stories, he imitates the characters' voices.
+      - zh: 我们在活动中欣赏了一场讲古表演。
+        en: We enjoyed a traditional storytelling performance at the event.
+      - zh: 奶奶一开始讲古，大家就安静下来听。
+        en: As soon as Grandma began telling old stories, everyone fell silent to listen.
+  - word: 妖怪
+    pinyin: yāo guài
+    meaning: Monster in a story
+    example: 故事里的妖怪躲在深山中。
+    sentenceBank:
+      - zh: 勇敢的少年在童话里打败了妖怪。
+        en: The brave boy defeated the monster in the fairy tale.
+      - zh: 这只妖怪长着三只眼睛，是作者想象出来的。
+        en: This three-eyed monster was invented by the author.
+      - zh: 妹妹画了一只可爱的妖怪。
+        en: My younger sister drew a cute monster.
+      - zh: 动画片里的妖怪会变成不同的样子。
+        en: The monster in the cartoon could change its appearance.
+      - zh: 故事中的村民害怕夜里出现的妖怪。
+        en: The villagers in the story feared the monster that appeared at night.
+  - word: 冤枉
+    pinyin: yuān wang
+    meaning: Wrongly accuse / Be wronged
+    example: 他没有弄坏花瓶，却被冤枉了。
+    sentenceBank:
+      - zh: 没有证据，不要冤枉别人。
+        en: Do not accuse others unfairly without evidence.
+      - zh: 她觉得很冤枉，因为不是她拿走了那本书。
+        en: She felt wronged because she was not the one who had taken the book.
+      - zh: 真相查明后，老师向被冤枉的同学道歉。
+        en: After the truth was established, the teacher apologised to the wrongly accused student.
+      - zh: 我误会了弟弟，冤枉他偷吃饼干。
+        en: I misunderstood my younger brother and wrongly accused him of taking the biscuits.
+      - zh: 他拿出证据，证明自己是被冤枉的。
+        en: He produced evidence to prove that he had been wrongly accused.
+  - word: 娱乐
+    pinyin: yú lè
+    meaning: Entertainment / Recreation
+    example: 唱歌和看电影都是常见的娱乐活动。
+    sentenceBank:
+      - zh: 周末，我们安排了一些轻松的娱乐活动。
+        en: We arranged some relaxing recreational activities for the weekend.
+      - zh: 这个节目为观众带来了娱乐。
+        en: This programme entertained the audience.
+      - zh: 学习之余，也可以适当地娱乐。
+        en: Alongside studying, we can enjoy some recreation in moderation.
+      - zh: 这里设有供居民娱乐的活动室。
+        en: There is an activity room here for residents' recreation.
+      - zh: 爷爷小时候的娱乐方式与现在很不同。
+        en: Entertainment in Grandpa's childhood was very different from today.
+
+sentences: []

@@ -44,7 +44,7 @@ test('the separate walkthrough has an introduction and one page for each region'
 });
 
 test('every curriculum walkthrough resolves lesson labels from its region mapping', async () => {
-  for (const level of ['p2', 'p5']) {
+  for (const level of require('./support/levels.cjs').playableIds) {
     const config = JSON.parse(read(`content/authored/levels/${level}/level.json`));
     for (let number = 1; number <= 7; number += 1) {
       const region = `r${number}`;

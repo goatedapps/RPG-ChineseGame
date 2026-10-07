@@ -14,6 +14,7 @@ Production URLs:
 
 - P2: `https://goatedapps.github.io/RPG-ChineseGame/?level=p2`
 - P5: `https://goatedapps.github.io/RPG-ChineseGame/?level=p5`
+- P6: `https://goatedapps.github.io/RPG-ChineseGame/?level=p6`
 
 ## Repository map
 
@@ -89,7 +90,7 @@ Production URLs:
 - Use compact, full-body character sprites across villages and keep villagers dispersed near reachable buildings and paths.
 - Six roughly double-area inter-town routes and one final summit trail carry encounters, persistent fog and a boss pavilion; only inter-town routes have onward gates.
 - Keep a compatibility gate coordinate on the terminal route for older cached clients, but never render an onward gate there.
-- Tune normal full-route exploration to sample about two thirds of regional spirits, and verify P2 and P5 pacing in route tests.
+- Tune normal full-route exploration to sample about two thirds of regional spirits for every playable curriculum.
 - Keep route discovery, gate-opening flags and saved on-route positions persistent; entering from a village starts at that route's entrance.
 - After the Dictionary Heart, return to Scholar Village and keep Word Portals in all villages available for optional discoveries.
 - Keep touch targets at least 44 pixels and support reduced motion.

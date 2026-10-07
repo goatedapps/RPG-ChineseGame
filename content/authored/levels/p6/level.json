@@ -1,0 +1,33 @@
+{
+  "id": "p6",
+  "label": "Primary 6",
+  "ready": true,
+  "regionLessons": {
+    "r1": [1, 2, 3],
+    "r2": [4, 5],
+    "r3": [6, 7],
+    "r4": [8, 9],
+    "r5": [10],
+    "r6": [11],
+    "r7": [12]
+  },
+  "singleLessonRegions": ["r5", "r6", "r7"],
+  "coreQuestionKinds": ["vocab", "pinyin", "usage", "phrase", "conjunction", "sentence", "cloze", "comprehension"],
+  "optionalQuestionKinds": ["dialogue", "errorcorrect", "practical"],
+  "features": { "writing": true, "higherChinese": true, "idioms": true },
+  "tuning": {
+    "profile": "upper-primary",
+    "routeEncounterScale": 1.2,
+    "routeEncounterScales": { "r1": 2.0, "r4": 1.5, "r5": 0.75, "r6": 0.6, "r7": 0.75 },
+    "dialogueDensity": "standard",
+    "readingChunk": "standard"
+  },
+  "region1": {
+    "tutorialWord": "克服",
+    "requests": {
+      "xiaoqiang": { "collect": ["克服", "锻炼"], "bronze": "不屈不挠" },
+      "mr-lin": { "bronze": ["疑惑", "惊讶"], "write": "智慧" },
+      "chef-mei": { "bronze": ["清蒸", "瘦肉"] }
+    }
+  }
+}

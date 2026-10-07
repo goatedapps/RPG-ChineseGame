@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 
-function worker({ offline = false, exactCached = null } = {}) {
+function worker({ offline = false, exactCached = null, cache, url = 'http://localhost/css/wayfinding.css?p1' } = {}) {
   const handlers = {};
   const lookups = [];
   const writes = [];
@@ -20,7 +20,7 @@ function worker({ offline = false, exactCached = null } = {}) {
     },
     fetch: async () => { requests += 1; if (offline) throw new Error('Offline'); return fresh; }
   });
-  const request = { method: 'GET', url: 'http://localhost/css/wayfinding.css?p1' };
+  const request = { method: 'GET', url, cache };
   let response;
   handlers.fetch({ request, respondWith: value => { response = value; } });
   return { response, fresh, old, lookups, writes, requests: () => requests };
@@ -42,4 +42,21 @@ test('versioned assets retain unversioned offline fallback and exact cached copi
   const cached = worker({ exactCached });
   assert.equal(await cached.response, exactCached);
   assert.equal(cached.requests(), 0);
+});
+
+test('curriculum picker refreshes an older registry online and keeps it available offline', async () => {
+  const { listLevels } = await import('../src/content/loader.js');
+  const saved = [{ id: 'p2' }, { id: 'p5' }];
+  const current = [...saved, { id: 'p6' }];
+  const exactCached = { ok: true, json: async () => saved };
+  for (const offline of [false, true]) {
+    let run;
+    const levels = await listLevels(async (url, options) => {
+      run = worker({ offline, exactCached, cache: options.cache, url: `http://localhost${url}` });
+      run.fresh.json = async () => current;
+      return run.response;
+    }, '');
+    assert.deepEqual(levels, offline ? saved : current);
+    assert.equal(run.requests(), 1);
+  }
 });

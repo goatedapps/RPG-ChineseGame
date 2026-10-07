@@ -1,0 +1,916 @@
+- groupId: P6-HC-2026-ACSJ-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 校园安全
+    source: ACSJ Primary 6 Higher Chinese Prelim 2026; PDF pages 3; P6_HChinese_Prelim_2026_ACSJ_Exam_Papers.pdf
+    text: |-
+      近日，一段有关校园安全的录像引发了人们[Q6]__热情__的讨论。录像中，几名中学生在学校的洗手间里把卫生纸堆在地上，再用打火机点燃。
+
+      火一开始很小，他们便往上面加了更多纸。火越来越大，快失去控制时，他们才着急地去灭火。慌忙中，几人[Q7]（饼）命用脚踩，结果被火烫伤。洗手间明明有水，他们却没有使用。
+
+      录像传出后，大家纷纷[Q8]__批改__这几个学生。有人觉得这样做不但自己遭受痛苦，甚至有可能伤害无辜。也有人指责说这些学生浪费了公共资源，把卫生纸当成了玩具，不懂得[Q9]__珍贵__。
+
+      校方表示会在了解情况后对这几个人作出相应的处罚。学校也希望通过这件事提醒学生，有些事不能拿来开玩笑。在学校玩火不仅[Q10]违（犯）了校规，还可能引发大火，危害到大家的生命安全。
+  questions:
+    - sourceQuestion: Q6
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“热情”改正。
+      accepted:
+        - 热烈
+      displayAnswer: 热烈
+    - sourceQuestion: Q7
+      marks: 2
+      format: Fill-in
+      text: 把“（饼）命”中写错的字改正，只写正确的字。
+      accepted:
+        - 拼
+      displayAnswer: 拼
+    - sourceQuestion: Q8
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“批改”改正。
+      accepted:
+        - 批评
+      displayAnswer: 批评
+    - sourceQuestion: Q9
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“珍贵”改正。
+      accepted:
+        - 珍惜
+      displayAnswer: 珍惜
+    - sourceQuestion: Q10
+      marks: 2
+      format: Fill-in
+      text: 把“违（犯）”中写错的字改正，只写正确的字。
+      accepted:
+        - 反
+      displayAnswer: 反
+- groupId: P6-HC-2026-CHIJOLGC-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 学修脚踏车
+    source: CHIJOLGC Primary 6 Higher Chinese Prelim 2026; PDF pages 3; P6_HChinese_Prelim_2026_CHIJOLGC_Exam_Papers.pdf
+    text: |-
+      上个周末，爸爸带我去公园骑脚踏车。我一向以自己骑脚踏车的技术为傲。出发前，我一直[Q6]（换）想自己能够像电视里的选手一样骑得飞快，还能做出各种[Q7]（利）害的动作。
+
+      到了公园后，我兴奋地骑来骑去。可是过了没多久，脚踏车突然发出奇怪的声音，车链也掉了下来。我只好停下来，不停地[Q8]__怨气__运气不好。爸爸听了，笑着说：“你还是先想办法解决问题吧！”
+
+      于是，爸爸教我怎样[Q9]__整理__脚踏车。虽然过程有些困难，但我还是认真地跟着做。我费了九牛二虎之力，车链终于装好了。我们便继续骑车，直到傍晚才回家。
+
+      回到家时，我已经[Q10]（竞）疲力尽，双腿酸得快抬不起来了。不过，我的心里却十分高兴，因为这次经历让我明白遇到问题时要勇敢面对，努力解决。
+  questions:
+    - sourceQuestion: Q6
+      marks: 2
+      format: Fill-in
+      text: 把“（换）想”中写错的字改正。
+      accepted:
+        - 幻
+      displayAnswer: 幻
+    - sourceQuestion: Q7
+      marks: 2
+      format: Fill-in
+      text: 把“（利）害”中写错的字改正。
+      accepted:
+        - 厉
+      displayAnswer: 厉
+    - sourceQuestion: Q8
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“怨气”改正。
+      accepted:
+        - 抱怨
+      displayAnswer: 抱怨
+    - sourceQuestion: Q9
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“整理”改正。
+      accepted:
+        - 修理
+      displayAnswer: 修理
+    - sourceQuestion: Q10
+      marks: 2
+      format: Fill-in
+      text: 把“（竞）疲力尽”中写错的字改正。
+      accepted:
+        - 筋
+      displayAnswer: 筋
+- groupId: P6-HC-2026-NanHua-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 锻炼与休养
+    source: NanHua Primary 6 Higher Chinese Prelim 2026; PDF pages 4; P6_HChinese_Prelim_2026_NanHua_Exam_Papers.pdf
+    text: |-
+      小华自幼体弱多病，为了让自己强壮起来，他打算每天下午到公园锻[Q6]（练）。爸爸告诉他，多跑步对身体有好处。于是，他便决定从跑步这项运动开始。
+
+      起初，他很不习惯，[Q7]（什）至跑不到两百米就累得上气不接下气，但他没有放弃。几个星期后，他已能轻松跑完几圈。有一天，下了一场大雨，路面很[Q8]（温）滑。小华跑步时滑倒，腿部受了重伤。幸好，附近脚车店的店主发现了他，连忙叫来救护车，将他送往医院。医生建议他[Q9]__临时__停止运动，小华只好听从医生的吩咐。由于他之前常常运动，身体底子好，加上听医生的话好好休养，他的腿伤很快就康复了。
+
+      后来，他特意回到脚车店，向当时帮他的店主[Q10]__诚实__地道谢。
+  questions:
+    - sourceQuestion: Q6
+      marks: 2
+      format: Fill-in
+      text: 把“锻（练）”中写错的字改正。
+      accepted:
+        - 炼
+      displayAnswer: 炼
+    - sourceQuestion: Q7
+      marks: 2
+      format: Fill-in
+      text: 把“（什）至”中写错的字改正。
+      accepted:
+        - 甚
+      displayAnswer: 甚
+    - sourceQuestion: Q8
+      marks: 2
+      format: Fill-in
+      text: 把“（温）滑”中写错的字改正。
+      accepted:
+        - 湿
+      displayAnswer: 湿
+    - sourceQuestion: Q9
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“临时”改正。
+      accepted:
+        - 暂时
+      displayAnswer: 暂时
+    - sourceQuestion: Q10
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“诚实”改正。
+      accepted:
+        - 诚恳
+      displayAnswer: 诚恳
+- groupId: P6-HC-2026-Nanyang-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 中学开放日
+    source: Nanyang Primary 6 Higher Chinese Prelim 2026; PDF pages 7; P6_HChinese_Prelim_2026_Nanyang_Exam_Papers.pdf
+    text: |-
+      上个星期六，我和同学们一起参加了一所中学的开放日体验活动。我们一走进校园，就看到校园里摆放着很多摊位和展板，很多中学学长在热心地向大家[Q6]（借）绍不同的课程和课外活动。
+
+      接着，学长们带我们参观了科学实验室、图书馆，还去不同的地方体验他们的课外活动。学长们详细的[Q7]__了解__让我们听得津津有味。
+
+      来到体育馆后，我们看到篮球队正在进行示范，他们的动作十分流畅，我们看到后非常激动。参观到一半时，我们突然听到“砰砰”的声音，只见体育馆的大门在不停地摇晃着。有些同学以为发生了什么[Q8]（遭）糕的事。后来学长们说只是风太大，大家这才放心。
+
+      活动结束前，学长们还[Q9]__奖励__我们要努力学习，并祝福我们以后在中学里继续成长。经过这次体验，我对[Q10]（卫）来的中学生活充满期待。
+  questions:
+    - sourceQuestion: Q6
+      marks: 2
+      format: Fill-in
+      text: 把“（借）绍”中写错的字改正。
+      accepted:
+        - 介
+      displayAnswer: 介
+    - sourceQuestion: Q7
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“了解”改正。
+      accepted:
+        - 讲解
+      displayAnswer: 讲解
+    - sourceQuestion: Q8
+      marks: 2
+      format: Fill-in
+      text: 把“（遭）糕”中写错的字改正。
+      accepted:
+        - 糟
+      displayAnswer: 糟
+    - sourceQuestion: Q9
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“奖励”改正。
+      accepted:
+        - 鼓励
+      displayAnswer: 鼓励
+    - sourceQuestion: Q10
+      marks: 2
+      format: Fill-in
+      text: 把“（卫）来”中写错的字改正。
+      accepted:
+        - 未
+      displayAnswer: 未
+- groupId: P6-HC-2026-Raffles-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 新加坡式早餐
+    source: Raffles Primary 6 Higher Chinese Prelim 2026; PDF pages 5; P6_HChinese_Prelim_2026_Raffles_Exam_Papers.pdf
+    text: |-
+      提起新加坡式早餐，你会想到什么？我想应该是咖啡配[Q6]（考）面包吧！
+
+      在咖啡店里，一口咖啡一口面包是好几[Q7]（带）新加坡人最常见的早餐情景。这香味诱人的新加坡式咖啡是怎样制作出来的呢？
+
+      新加坡式咖啡，重点在于咖啡豆。人们经过不断的尝试，才[Q8]__确保__这个炒咖啡豆的方法：在咖啡豆快要被炒熟时，才开始加入糖和牛油。这样，咖啡豆外面就会包着一[Q9]（曾）厚厚的糖，闻起来香味更浓。这才有了新加坡式咖啡的独特口味。
+
+      许多新加坡人心中难忘的记忆与滋味，正是这[Q10]__熟练__的味道。
+  questions:
+    - sourceQuestion: Q6
+      marks: 2
+      format: Fill-in
+      text: 把“（考）面包”中写错的字改正。
+      accepted:
+        - 烤
+      displayAnswer: 烤
+    - sourceQuestion: Q7
+      marks: 2
+      format: Fill-in
+      text: 把“好几（带）”中写错的字改正。
+      accepted:
+        - 代
+      displayAnswer: 代
+    - sourceQuestion: Q8
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“确保”改正（词语中的一个字不恰当）。
+      accepted:
+        - 确定
+      displayAnswer: 确定
+    - sourceQuestion: Q9
+      marks: 2
+      format: Fill-in
+      text: 把“一（曾）厚厚的糖”中写错的字改正。
+      accepted:
+        - 层
+      displayAnswer: 层
+    - sourceQuestion: Q10
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“熟练”改正。
+      accepted:
+        - 熟悉
+      displayAnswer: 熟悉
+- groupId: P6-HC-2026-TaoNan-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 母语学习
+    source: TaoNan Primary 6 Higher Chinese Prelim 2026; PDF pages 3; P6_HChinese_Prelim_2026_TaoNan_Exam_Papers.pdf
+    text: |-
+      母语学习十分重要，我国政府希望家长积极创造多说母语和学习母语的环境，让孩子在进入小学之前就能打好母语[Q6]（甚）础。
+
+      本地许多年轻家长觉得自己的母语说得不太好，也担心自己教得不正确，因此不太敢用母语和孩子[Q7]__轮流__。对于这些家长，政府还是想鼓励他们[Q8]（治）造机会让孩子多说多用。政府也认为，学母语不一定要追求完美，更重要的是能用母语将华族文化传给孩子们，让孩子[Q9]__测验__到学习母语的快乐和意义。
+
+      教育部也一直在加强华文教育，比如在本地几所幼儿园增加母语课，让孩子有更多时间[Q10]（晨）浸在使用母语的环境中。大家都期待孩子们能更熟练地用母语来表达自己的情感与思想。
+  questions:
+    - sourceQuestion: Q6
+      marks: 2
+      format: Fill-in
+      text: 把“（甚）础”中写错的字改正。
+      accepted:
+        - 基
+      displayAnswer: 基
+    - sourceQuestion: Q7
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“轮流”改正。
+      accepted:
+        - 交流
+      displayAnswer: 交流
+    - sourceQuestion: Q8
+      marks: 2
+      format: Fill-in
+      text: 把“（治）造”中写错的字改正。
+      accepted:
+        - 制
+      displayAnswer: 制
+    - sourceQuestion: Q9
+      marks: 2
+      format: Fill-in
+      text: 把运用不当的词语“测验”改正。
+      accepted:
+        - 体验
+      displayAnswer: 体验
+    - sourceQuestion: Q10
+      marks: 2
+      format: Fill-in
+      text: 把“（晨）浸”中写错的字改正。
+      accepted:
+        - 沉
+      displayAnswer: 沉
+- groupId: P6-HC-2025-AiTong-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 端午节
+    source: AiTong Primary 6 Higher Chinese 2025, Paper 2; PDF pages 13; P6_HChinese_2025_SA2_aitong.pdf
+    text: |-
+      端午节是华人重要的传统节日，这个节日是为了纪念战国时期伟大的诗人屈原。他关心国家，爱护百姓，后来他的祖国被敌国攻破，屈原非常[Q6]【痛哭】，便在五月初五这天跳进江里，以死表达自己爱国的决心。百姓得知后，非常难过，都[Q7]（戏）船到江上寻找，还把米包在竹叶里投入江中，让鱼儿来吃，这样就不会[Q8]【伤亡】他的身体。
+
+      屈原的爱国精神值得我们发扬光大，一些习俗也流传下来。端午节期间，各地会举行热闹的龙舟比赛。新加坡于1978年首次引入这项比赛，截至目前，本地共有25支龙舟队伍。观看龙舟比赛也会让人们感受到浓浓的节日气[Q9]（分）。
+
+      端午节包含的爱国精神和丰富的文化意义，值得我们[Q10]【珍重】。让我们更加了解端午节的文化，过一个有意义的端午节吧！
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 改正“痛哭”。
+      accepted:
+        - 痛苦
+      displayAnswer: 痛苦
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: （戏）船：改正错字。
+      accepted:
+        - 划
+      displayAnswer: 划
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“伤亡”。
+      accepted:
+        - 伤害
+      displayAnswer: 伤害
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 气（分）：改正错字。
+      accepted:
+        - 氛
+      displayAnswer: 氛
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“珍重”。
+      accepted:
+        - 重视
+      displayAnswer: 重视
+- groupId: P6-HC-2025-Catholic-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 减轻学业压力
+    source: Catholic Primary 6 Higher Chinese 2025, Paper 2; PDF pages 5; P6_HChinese_2025_SA2_catholic.pdf
+    text: |-
+      现在的学生课业忙碌，除了每天花数小时学习外，还要完成各种学习任务，为的就是在考试时能有好的表现。
+
+      根据最新的统计，每五个学生中，就有一个在考试前，会产生[Q6]（惧）大的压力。如果在考试中没有取得[Q7]【优美】的成绩，一些学生就会怀疑自己的学习能力，认为自己不够聪明。另外一部分学生则是认为自己没有得到足够的支持，脾气变得越来越[Q8]（曹），影响了跟他人之间的关系。
+
+      想要减轻学业压力，坚持锻[Q9]（链）是一个很好的方法。通过户外体育活动，能让学生[Q10]【按时】放松身心，沉浸在运动的乐趣当中。运动后，他们也更能全神贯注地投入到学习中。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: （惧）大：改正错字。
+      accepted:
+        - 巨
+      displayAnswer: 巨
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 改正“优美”。
+      accepted:
+        - 优秀
+      displayAnswer: 优秀
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 脾气越来越（曹）：改正错字。
+      accepted:
+        - 糟
+      displayAnswer: 糟
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 锻（链）：改正错字。
+      accepted:
+        - 炼
+      displayAnswer: 炼
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“按时”。
+      accepted:
+        - 暂时
+      displayAnswer: 暂时
+- groupId: P6-HC-2025-HenryPark-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 贝朗发明干洗剂
+    source: HenryPark Primary 6 Higher Chinese 2025, Paper 2; PDF pages 9; P6_HChinese_2025_SA2_henrypark.pdf
+    text: |-
+      贝朗出生于一户贫苦的家庭。他13岁时便[Q6]【独立】外出打工，在一个有钱人家里打杂。他每天都工作到很晚，赚的钱却很有[Q7]（线），但他还是省吃俭用，将钱都存起来。
+
+      一天半夜，贝朗被一阵急促的敲门声惊醒。女主人要他[Q8]【即使】起床给自己烫一件白色大衣。因为实在太困了，贝朗不小心将煤油灯打翻，灯里的油滴在了大衣上。女主人见了，十分生气，坚决要求贝朗免费做一年工，以此要他[Q9]（培）钱。贝朗不得不答应，但他也得到了那件衣服。贝朗将那件衣服挂在窗前，提醒自己以后别再犯错了。
+
+      一天，他偶然发现那件衣服被煤油浸过的地方不但没脏，[Q10]【而是】比别的地方更加洁白。这个发现令贝朗兴奋极了，经过反复实验，他又尝试在煤油里加了一些其他的化学药品，终于发明了干洗剂。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 改正“独立”，写出正确词语。
+      accepted:
+        - 独自
+      displayAnswer: 独自
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 有（线）：改正错字。
+      accepted:
+        - 限
+      displayAnswer: 限
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“即使”，写出正确词语。
+      accepted:
+        - 立即
+      displayAnswer: 立即
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: （培）钱：改正错字。
+      accepted:
+        - 赔
+      displayAnswer: 赔
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“而是”，写出正确词语。
+      accepted:
+        - 反而
+      displayAnswer: 反而
+- groupId: P6-HC-2025-MGS-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 课本分享计划
+    source: MGS Primary 6 Higher Chinese 2025, Paper 2; PDF pages 5; P6_HChinese_2025_SA2_methodist.pdf
+    text: |-
+      去年11月，本地平价超市举办的“课本分享计划”吸引了大批公众参与。这个活动的目的是帮助那些来自[Q6]（贪）穷家庭的学生获得所需教材，减轻家庭负担。
+
+      据主办方介绍，活动已收集超过25万本书籍。尽管部分书本封面有点[Q7]【弄坏】，但志愿者们通过清洁和整理，使书籍面貌一新。志愿者们还对书籍进行了分类，让[Q8]【争取】过程十分简单。
+
+      在物价上涨的情况下，这项活动帮助许多家庭[Q9]【舒服】了经济上的压力。一些家长表示，这样的帮助[Q10]（深）至让他们省下数百元用于孩子的补习或其他生活需求。
+
+      主办方希望公众积极参加今年的活动，让这个有意义的活动继续传递温暖与希望。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: （贪）穷：改正错字。
+      accepted:
+        - 贫
+      displayAnswer: 贫
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 改正“弄坏”。
+      accepted:
+        - 损坏
+      displayAnswer: 损坏
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“争取”。
+      accepted:
+        - 领取
+      displayAnswer: 领取
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 改正“舒服”（题面误印Q8）。
+      accepted:
+        - 克服
+      displayAnswer: 克服
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: （深）至：改正错字（题面误印Q9）。
+      accepted:
+        - 甚
+      displayAnswer: 甚
+- groupId: P6-HC-2025-NanHua-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 图画书小组任务
+    source: NanHua Primary 6 Higher Chinese 2025, Paper 2; PDF pages 6; P6_HChinese_2025_SA2_nanhua.pdf
+    text: |-
+      上个星期五，老师给我们留了一个制作图画书的小组任务。我认为自己画得好，期待着能负责画图，可组长却安排我写文字，让张明负责图画。我觉得组长很不公平，也十分妒[Q6]（既）张明。
+
+      于是，写字时，我故意把字写得又[Q7]（外）又乱，一边写，还一边不停地抱怨。张明一句话也不说，只是专心地画画，为小组做出了自己的[Q8]【呈献】，让图画书变得越来越漂亮。看着他认真的样子，我渐渐回过神来，明白自己应该以张明为[Q9]（旁）样，不应该这么没有团队精神。
+
+      于是，我决定[Q10]【到底】改变。我静下心，重新写故事。最终，我们完成图画书后，获得了老师的表扬。这件事让我明白，做小组任务时，要有团队精神，才能让小组更出色。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 妒（既）：改正错字。
+      accepted:
+        - 忌
+      displayAnswer: 忌
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 又（外）又乱：改正错字。
+      accepted:
+        - 歪
+      displayAnswer: 歪
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“呈献”，写出正确词语。
+      accepted:
+        - 贡献
+      displayAnswer: 贡献
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: （旁）样：改正错字。
+      accepted:
+        - 榜
+      displayAnswer: 榜
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“到底”，写出正确词语。
+      accepted:
+        - 彻底
+      displayAnswer: 彻底
+- groupId: P6-HC-2025-Nanyang-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 暴雨后的救助
+    source: Nanyang Primary 6 Higher Chinese 2025, Paper 2; PDF pages 7; P6_HChinese_2025_SA2_nanyang.pdf
+    text: |-
+      昨日，一场突如其来的暴雨横扫了市区，造成多条道路积水的情况[Q6]【贵重】，给市民出行带来了极大的不便。许多司机被困在路上，焦急地等待救助，有几个车主尝试抢救受困的车辆，结果累得[Q7]（金）疲力尽。
+
+      面对这一情况，市政部门迅速展开治理工作，派出排水车和工作人员清理堵[Q8]（色）的排水系统。尽管当局已经尽力处理当前的水灾，但部分受影响的市民还是不断[Q9]【抱歉】，认为市政部门应对危机的能力很差。
+
+      与此同时，一些犯罪分子[Q10]（珍）机在混乱中盗窃财物。警方迅速行动，成功抓获多名犯人，确保了市民的财产安全。
+
+      经过连夜奋战，市区大部分道路积水已被清除，交通逐渐恢复正常。市政部门表示，将进一步优化城市排水系统，以更好地应对极端天气。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 改正“贵重”。
+      accepted:
+        - 严重
+      displayAnswer: 严重
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: （金）疲力尽：改正错字。
+      accepted:
+        - 筋
+        - 精
+      displayAnswer: 筋／精
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 堵（色）：改正错字。
+      accepted:
+        - 塞
+      displayAnswer: 塞
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 改正“抱歉”。
+      accepted:
+        - 抱怨
+      displayAnswer: 抱怨
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: （珍）机：改正错字。
+      accepted:
+        - 趁
+      displayAnswer: 趁
+- groupId: P6-HC-2025-PLMGS-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 无声挑战日
+    source: PLMGS Primary 6 Higher Chinese 2025, Paper 2; PDF pages 3; P6_HChinese_2025_SA2_mgspayalebar.pdf
+    text: |-
+      有一天，老师一走进课室，神情[Q6]【严厉】地说：“今天是‘无声挑战日’，上课时大家只能用动作、表情或写字来沟通，不可以讲话。”
+
+      听了老师的话，教室里出奇地安静。老师又[Q7]（分）咐大家：“请用四支长短不一的铅笔，同时拼出一个正方形和一个三角形。”一看题目，同学们就立刻拼好三角形，再尝试拼出正方形。但怎么试也不成功。有人便开始[Q8]【迟疑】题目是不是出错了，不禁偷偷地议论纷纷。
+
+      志华认真地思考。最后，他用三支铅笔拼成一个三角形，并在纸上写下：“资源有[Q9]（线）时，只能正确地完成一个，这比两个都做错好。”老师看了他的答案，说道：“志华冷静思考的行为是你们的[Q10]【模样】。在生活中，一个真正有智慧的人，会时时刻刻冷静思考，不会违反规则。”
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 改正“严厉”。
+      accepted:
+        - 严肃
+      displayAnswer: 严肃
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: （分）咐：改正错字。
+      accepted:
+        - 吩
+      displayAnswer: 吩
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“迟疑”。
+      accepted:
+        - 怀疑
+      displayAnswer: 怀疑
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 有（线）：改正错字。
+      accepted:
+        - 限
+      displayAnswer: 限
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“模样”。
+      accepted:
+        - 榜样
+      displayAnswer: 榜样
+- groupId: P6-HC-2025-Raffles-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 努力争取成功
+    source: Raffles Primary 6 Higher Chinese 2025, Paper 2; PDF pages 5; P6_HChinese_2025_SA2_raffles.pdf
+    text: |-
+      六年级那一年，学习压力把我们压得快喘不过气来。老师知道了，便[Q6]（珍）休息的时候，给我们讲故事，说道理。
+
+      老师说：“有些同学总以为自己样样比不上别人，还没有开始学习，就认为自己学不好，不想去[Q7]（常）试。这种想法是不对的。”
+
+      接着，老师以龟兔赛跑的故事[Q8]【奖励】我们。老师说故事中的乌龟在比赛中靠自己的决心，顺利[Q9]【获得】比赛。老师要我们学习乌龟不向困难低头的精神。
+
+      老师还说：“不管是学习，还是做事，成功要靠自己努力去争取。也许我们不比别人聪明，但是只要我们肯学、肯做，总有[Q10]（答）到目标的一天。”
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: （珍）休息的时候：改正错字。
+      accepted:
+        - 趁
+      displayAnswer: 趁
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: （常）试：改正错字。
+      accepted:
+        - 尝
+      displayAnswer: 尝
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“奖励”。
+      accepted:
+        - 鼓励
+      displayAnswer: 鼓励
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 改正“获得”。
+      accepted:
+        - 赢得
+      displayAnswer: 赢得
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: （答）到：改正错字。
+      accepted:
+        - 达
+      displayAnswer: 达
+- groupId: P6-HC-2025-RedSwastika-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 新柔地铁
+    source: RedSwastika Primary 6 Higher Chinese 2025, Paper 2; PDF pages 11; P6_HChinese_2025_SA2_redswastika.pdf
+    text: |-
+      你知道吗？新加坡兀（wù）兰和马来西亚新山之间正在建一条新的地铁，叫做“新柔地铁”（RTS）。
+
+      以前，连接兀兰和新山的道路非常繁忙，经常[Q6]（赛）车，假期时，这种情况更加[Q7]【重大】。新柔地铁建成后，只需要大约20分钟，人们就能到达对岸，随时都可以到对方国家去[Q8]（汪）街购物、工作探亲，十分方便。
+
+      这条地铁正在建设中，预计会在2026年底通车。到时候，新山附近会有更多的设施，带动当地经济发展。同时，新加坡的一些店家可能需要想办法适应变化，继续[Q9]【吸收】顾客。
+
+      总之，新柔地铁让新加坡和马来西亚的联系更加[Q10]【紧张】，很快，我们就能体验这条新地铁带来的便利了！
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: （赛）车：改正错字。
+      accepted:
+        - 塞
+      displayAnswer: 塞
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 改正“重大”，写出正确词语。
+      accepted:
+        - 严重
+      displayAnswer: 严重
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: （汪）街：改正错字。
+      accepted:
+        - 逛
+      displayAnswer: 逛
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 改正“吸收”，写出正确词语。
+      accepted:
+        - 吸引
+      displayAnswer: 吸引
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“紧张”，写出正确词语。
+      accepted:
+        - 紧密
+      displayAnswer: 紧密
+- groupId: P6-HC-2025-Rosyth-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 三代人一起画画
+    source: Rosyth Primary 6 Higher Chinese 2025, Paper 2; PDF pages 4; P6_HChinese_2025_SA2_rosyth.pdf
+    text: |-
+      小文、妈妈和外婆一起参加了一次民众俱乐部的活动。她们根据工作人员[Q6]（层）示的一张照片来画画。每个人先画其中一部分，然后再拼在一起。
+
+      她们一边画画，一边聊天。小文这才知道外婆小时很喜欢画画，可惜因为家境贫穷，她[Q7]【完整】没有机会上美术课。
+
+      妈妈也说她小时很喜欢红色，不管画什么，她都涂上红色。她的老师对她说过：“这个世界[Q8]实（计）上是五彩缤纷的。”
+
+      不久，她们完成了自己负责的部分。因为不同的人的理解不同，她们画出来的图画不太一样。可是当三个部分拼在一起时，却多了一些[Q9]奇（秒）的感觉。
+
+      小文说：“这个活动让我们三代人的[Q10]【交通】多了，感情更深了。”大家一致点头赞同。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: （层）示：改正错字。
+      accepted:
+        - 展
+      displayAnswer: 展
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 改正“完整”，写出正确词语。
+      accepted:
+        - 完全
+      displayAnswer: 完全
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 实（计）上：改正错字。
+      accepted:
+        - 际
+      displayAnswer: 际
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 奇（秒）：改正错字。
+      accepted:
+        - 妙
+      displayAnswer: 妙
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 改正“交通”，写出正确词语。
+      accepted:
+        - 交流
+      displayAnswer: 交流
+- groupId: P6-HC-2025-SCGS-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 不完美也是美
+    source: SCGS Primary 6 Higher Chinese 2025, Paper 2; PDF pages 6; P6_HChinese_2025_SA2_scgs.pdf
+    text: |-
+      恩丽是个追求完美的孩子，她想在这次的考试中取得优异的成绩。她每天回家后，就没有离开过书桌，一直埋头苦读，直到深夜时分。爷爷看了非常担心。爷爷想到他最近买了一个花瓶，他觉得这个花瓶的设[Q6]（记）精美，便拿出来想和恩丽分享。不过，恩丽正忙着准备考试，随意挥了挥手，示意爷爷别[Q7]【打断】她。没想到，她的手不小心碰倒了花瓶。
+
+      花瓶掉在地上，碎成了好几片。恩丽很后悔，连声向爷爷[Q8]【道别】，说她会买一个新的赔给爷爷。
+
+      爷爷却摆摆手，小心地[Q9]（脸）起碎片，然后用胶水将碎片粘起来。恩丽不明白爷爷为什么不要买一个新的。爷爷微笑着解释道：“[Q10]（既）使花瓶有裂痕，它依然是美丽的。人也一样，不完美也是一种美。你不必事事追求完美，有进步就可以了。”
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 设（记）：改正错字。
+      accepted:
+        - 计
+      displayAnswer: 计
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 改正“打断”。
+      accepted:
+        - 打扰
+      displayAnswer: 打扰
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“道别”。
+      accepted:
+        - 道歉
+      displayAnswer: 道歉
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: （脸）起：改正错字。
+      accepted:
+        - 捡
+      displayAnswer: 捡
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: （既）使：改正错字。
+      accepted:
+        - 即
+      displayAnswer: 即
+- groupId: P6-HC-2025-StNicholas-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 熊猫花花
+    source: StNicholas Primary 6 Higher Chinese 2025, Paper 2; PDF pages 5; P6_HChinese_2025_SA2_chij.pdf
+    text: |-
+      在中国的一间动物园里，有一只非常有名的熊猫，它的名字叫花花。花花长得比其他的熊猫小，坐着的时候像一个三角形的饭团。许多游客见了，拍下它可爱的模样，并在网上[Q6]【分发】，令花花迅速在网上红起来，吸引了很多人上网追看花花的生活。
+
+      经过电视新闻的[Q7]介（少），越来越多的游客涌到动物园看花花。每天一大早，动物园的门口就排起长龙。大门一开，游客都[Q8]【比拼】地奔向熊猫园区，想快点看到花花。到了熊猫园区，游客还要排上一到两个小时的队，才有机会见到花花。因此，动物园规定每位游客只能在熊猫园区参观三分钟。由于花花喜欢安静，游客也不能大声说话，免得[Q9]【打断】花花。
+
+      如果天气[Q10]（严）热，花花就不会到户外活动，因此有时游客是看不到花花的。尽管如此，每天还是有很多人到熊猫园区来碰运气，只为了瞧一瞧人见人爱的花花。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 改正“分发”。
+      accepted:
+        - 分享
+      displayAnswer: 分享
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 介（少）：改正错字。
+      accepted:
+        - 绍
+      displayAnswer: 绍
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 改正“比拼”。
+      accepted:
+        - 拼命
+      displayAnswer: 拼命
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 改正“打断”。
+      accepted:
+        - 打扰
+      displayAnswer: 打扰
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: （严）热：改正错字。
+      accepted:
+        - 炎
+      displayAnswer: 炎
+- groupId: P6-HC-2025-TaoNan-Q6-10
+  subject: Higher Chinese
+  passage:
+    title: 兄弟俩学飞行
+    source: TaoNan Primary 6 Higher Chinese 2025, Paper 2; PDF pages 3; P6_HChinese_2025_SA2_taonan.pdf
+    text: |-
+      有一天，一名父亲带着两个儿子到田里去。这时，一群鸟儿从他们头[Q6]（项）飞过。大儿子羡慕地说：“要是我也能像鸟儿那样飞起来，那该多好！”小儿子听了，也点点头。
+
+      父亲沉[Q7]（末）了一会儿，然后对两个儿子说：“这个想法不错，你们可以试一试。”两个儿子立刻开始模仿鸟儿的样子，上下摆动着手臂，却没能飞起来。哥哥不服气，更用力地挥动双手；弟弟也没[Q8]【放松】，继续尝试。但不管他们怎么做，最后都失败了。
+
+      看到兄弟俩垂头丧气的样子，父亲鼓[Q9]（粒）他们道：“别灰心！也许你们可以考虑利用工具来飞行。”他们听了父亲的话，就开始研究如何[Q10]【创造】能够飞行的工具。
+
+      多年后，兄弟俩终于发明了飞机，飞上了天空。
+  questions:
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 头（项）：改正括号里的错字。
+      accepted:
+        - 顶
+      displayAnswer: 顶
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 沉（末）：改正括号里的错字。
+      accepted:
+        - 默
+      displayAnswer: 默
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 把“放松”中不恰当的字改正，写出正确词语。
+      accepted:
+        - 放弃
+      displayAnswer: 放弃
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 鼓（粒）：改正括号里的错字。
+      accepted:
+        - 励
+      displayAnswer: 励
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 把“创造”中不恰当的字改正，写出正确词语。
+      accepted:
+        - 制造
+      displayAnswer: 制造

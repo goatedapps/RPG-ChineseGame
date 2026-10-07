@@ -8,5 +8,10 @@
     { "id": "mulan-stage", "name": "Mulan's Stage", "words": ["花木兰", "装扮", "战场", "孝心"], "restoration": "The Lantern Theatre raises the curtain on its Mulan performance." },
     { "id": "important-things", "name": "Important Things", "words": ["珍惜", "惭愧", "拥有", "农夫"], "restoration": "The farm's Hall of Important Things opens with honest stories." },
     { "id": "kind-applause", "name": "Kind Applause", "words": ["嘲笑", "遮住", "一段", "丰盛"], "restoration": "The audience learns to replace mockery with kind applause." }
+  ],
+  "p6": [
+    { "id": "neighbour-stories", "name": "Neighbour Stories", "words": ["讲古", "津津有味", "左邻右舍", "娱乐"], "restoration": "Neighbours gather for stories at the theatre." },
+    { "id": "city-memories", "name": "City Memories", "words": ["市区重建局", "大厦", "政府", "贡献"], "restoration": "The theatre displays memories of the changing city." },
+    { "id": "dragon-stage", "name": "Dragon Stage", "words": ["龙舟", "九龙壁", "翻腾", "龙宫"], "restoration": "The players bring a dragon story to the lantern stage." }
   ]
 }

@@ -1,0 +1,2881 @@
+- groupId: P6-CH-2026-ACSJ-Q16-20
+  subject: Chinese
+  passage:
+    title: 伟强参加模型制作比赛
+    source: ACS(J) Primary 6 Chinese Prelim 2026, Paper 2; PDF pages 6; P6_Chinese_Prelim_2026_ACSJ_Exam_Papers.pdf
+    text: |-
+      伟强很喜欢制作模型。可每次美术课上的手工他都做得不好。最近学校举办了一次模型制作比赛，伟强也报名了。
+
+      刚开始的时候，伟强一直失败，但他没有放弃，而是想尽办法[Q16]___困难。他每天回到家后，都会认真查找资料，最后制订出了一份非常[Q17]___的计划。
+
+      到了比赛那天，伟强不慌不忙地完成了作品，获得冠军。当他上台领奖时，全班同学都发自内心地为他感到[Q18]___。伟强想起自己之前的辛勤付出，觉得这一路走来并不容易，但都是值得的。
+
+      回到班上，以前那些总是[Q19]___伟强的同学，都主动向他道歉。老师看着这一切，[Q20]___了伟强的成长，并送上了对伟强的祝福。伟强开心地接受老师的祝福。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      text: "[Q16] 想尽办法___困难。"
+      options:
+        - 克服
+        - 解释
+        - 表现
+        - 控制
+      correct: 克服
+    - sourceQuestion: Q17
+      format: MCQ
+      text: "[Q17] 最后制订出了一份非常___的计划。"
+      options:
+        - 清楚
+        - 详细
+        - 简单
+        - 仔细
+      correct: 详细
+    - sourceQuestion: Q18
+      format: MCQ
+      text: "[Q18] 全班同学都发自内心地为他感到___。"
+      options:
+        - 意外
+        - 幸福
+        - 骄傲
+        - 成功
+      correct: 骄傲
+    - sourceQuestion: Q19
+      format: MCQ
+      text: "[Q19] 以前那些总是___伟强的同学，都主动向他道歉。"
+      options:
+        - 嘲笑
+        - 称赞
+        - 讨论
+        - 鼓励
+      correct: 嘲笑
+    - sourceQuestion: Q20
+      format: MCQ
+      text: "[Q20] 老师看着这一切，___了伟强的成长。"
+      options:
+        - 安排
+        - 见证
+        - 产生
+        - 检查
+      correct: 见证
+- groupId: P6-CH-2026-AiTong-Q16-20
+  subject: Chinese
+  passage:
+    title: 文华学书法
+    source: AiTong Primary 6 Chinese Prelim 2026; PDF pages 6; P6_Chinese_Prelim_2026_AiTong_Exam_Papers.pdf
+    text: |-
+      文华七岁开始学写毛笔字。刚开始时，文华学得很辛苦，因为写毛笔字需要坚持练习，不能着急，也不能[Q16]___，有时候一个字就要练习好几天，而且还不一定写得好。幸好，妈妈不断地鼓励他。在妈妈的[Q17]___下，他的毛笔字写得越来越好。
+
+      十岁那年，文华参加学校举办的书法比赛，得了一等奖。文华非常开心，他[Q18]___练习了三年，总算有了收获。文华把得奖的消息告诉了妈妈，还说想把得奖作品挂在客厅里，这样他一看到作品，就能[Q19]___起得奖时的喜悦。但妈妈却说：“我不希望你把它当成最好的作品挂起来，你还要好好练习，争取更大的进步。”文华明白了妈妈的意思。
+
+      从这以后，文华更加用心地练习书法，也更[Q20]___地要求自己。现在，他的字写得比获奖作品更好了。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 不能着急，也不能___。"
+      options:
+        - 紧张
+        - 懒惰
+        - 担心
+        - 烦恼
+      correct: 懒惰
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 在妈妈的___下。"
+      options:
+        - 陪伴
+        - 控制
+        - 管理
+        - 计划
+      correct: 陪伴
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] 他___练习了三年。"
+      options:
+        - 顽强
+        - 充实
+        - 继续
+        - 勤奋
+      correct: 勤奋
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] 就能___起得奖时的喜悦。"
+      options:
+        - 记得
+        - 回忆
+        - 想象
+        - 浮现
+      correct: 回忆
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 也更___地要求自己。"
+      options:
+        - 严格
+        - 努力
+        - 肯定
+        - 正确
+      correct: 严格
+- groupId: P6-CH-2026-HenryPark-Q16-20
+  subject: Chinese
+  passage:
+    title: 健康的生活方式
+    source: HenryPark Primary 6 Chinese Prelim 2026; PDF pages 6; P6_Chinese_Prelim_2026_HenryPark_Exam_Papers.pdf
+    text: |-
+      我从小就挑食，只爱吃零食和快餐。结果上学期体能测试的时候，我的体能比同学差了很多。妈妈看在眼里，悄悄改变了家里的饮食安排。现在，我家[Q16]___了所有含糖饮料，改成用新鲜果汁代替。每天早上，她还会为我准备营养丰富的早餐。我也渐渐养成了晨跑的习惯。我发现早上运动之后，上课时更有[Q17]___，做事情也更专心了。
+
+      [Q18]___，我还参加了学校的羽毛球队。每周三放学后训练两小时，这让我的体力得到了很大的锻炼。体育老师告诉我，[Q19]___坚持运动，睡眠也同样重要。现在我不再整晚玩手机，每天一定会在十点前睡觉。
+
+      经过半年的努力，我的体重[Q20]___了五公斤！健康的生活方式，真的能让生活变得更美好！
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 我家___了所有含糖饮料。"
+      options:
+        - 禁止
+        - 阻拦
+        - 拒绝
+        - 收拾
+      correct: 禁止
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 上课时更有___。"
+      options:
+        - 力量
+        - 精神
+        - 意义
+        - 耐心
+      correct: 精神
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] ___，我还参加了学校的羽毛球队。"
+      options:
+        - 所以
+        - 此外
+        - 而且
+        - 然后
+      correct: 此外
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] ___坚持运动，睡眠也同样重要。"
+      options:
+        - 要是
+        - 只有
+        - 除了
+        - 或者
+      correct: 除了
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 我的体重___了五公斤。"
+      options:
+        - 调节
+        - 消失
+        - 控制
+        - 减少
+      correct: 减少
+- groupId: P6-CH-2026-NanHua-Q16-20
+  subject: Chinese
+  passage:
+    title: 小兔学画画
+    source: NanHua Primary 6 Chinese Prelim 2026; PDF pages 8; P6_Chinese_Prelim_2026_NanHua_Exam_Papers.pdf
+    text: |-
+      小兔想学画画，可它总是画不好。兔妈妈对小兔说：“你要先相信自己一定能学会，然后[Q16]___练习，就会成功。”小兔点点头，拿起画笔开始练习。
+
+      第一天，小兔画了一根萝卜，可是画得很不好看。它有些灰心，想要放弃。兔妈妈没有[Q17]___它，而是笑着说：“刚开始都是这样的，[Q18]___是大画家，也是一点一点练出来的。”
+
+      接下来的日子，小兔每天放学后都练习画画。有时候画得不好，它就擦了重画。一个星期过去了，小兔发现自己画得越来越好了。它心里[Q19]___了希望。
+
+      周末，学校举行画画比赛，小兔也报名参加了。它认认真真地画了一幅《春天的森林》。比赛结果出来，小兔获得了冠军！它[Q20]___，抱着妈妈说：“我居然成功了！”
+
+      小兔终于明白了一个道理：做任何事情，只要相信自己，就一定能做好。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 然后___练习。"
+      options:
+        - 热心
+        - 严格
+        - 勤奋
+        - 迅速
+      correct: 勤奋
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 兔妈妈没有___它。"
+      options:
+        - 批评
+        - 担心
+        - 提醒
+        - 鼓励
+      correct: 批评
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] ___是大画家，也是一点一点练出来的。"
+      options:
+        - 虽然
+        - 就算
+        - 而且
+        - 除了
+      correct: 就算
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] 它心里___了希望。"
+      options:
+        - 留下
+        - 增加
+        - 充满
+        - 取得
+      correct: 充满
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 它___，抱着妈妈说。"
+      options:
+        - 激动人心
+        - 恍然大悟
+        - 心满意足
+        - 喜出望外
+      correct: 喜出望外
+- groupId: P6-CH-2026-Nanyang-Q16-20
+  subject: Chinese
+  passage:
+    title: 保持乐观的心境
+    source: Nanyang Primary 6 Chinese Prelim 2026; PDF pages 9; P6_Chinese_Prelim_2026_Nanyang_Exam_Papers.pdf
+    text: |-
+      每当经过那间旧书店，我都会想起一件往事。
+
+      那年假期，弟弟让我帮他去买一本书。我不怕跑腿，只是不喜欢那间书店的老板。他态度[Q16]___，对人爱理不理，讲话总是冷冰冰的，让人觉得很不舒服。
+
+      来到店里，我跟老板说要买一本书。他说了几个字，但我没听清，想请他重复一次。他头也不抬地指着柜台旁的书架，说：“那边！”我虽然心中[Q17]___愤怒，但还是咬牙忍住，赶紧来到书架旁，避免和他争吵。
+
+      这时，一位中学生拿着一本书走来柜台，面带笑容地问：“叔叔，这本科学书多少钱？”中学生亲切的笑容却换来老板的冷漠对待：“三块钱！”让我意想不到的是，那位中学生[Q18]___保持笑容，付了钱后还说：“谢谢您，祝您周末愉快！”老板冷着脸，没有任何反应。
+
+      看到这里，我忍不住好奇地追上那位中学生，问他：“这个老板对你这么没礼貌，你不生气吗？”那位中学生停下脚步说：“他怎么对待我，我没必要去[Q19]___他。我的人生应该由我自己做主。如果我轻易让他人的态度[Q20]___自己的心情，那么快乐也将不再属于我自己。”
+
+      那位中学生的话令我获益良多。自此，我以他为榜样，不论什么事，我都要求自己保持乐观的心境。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 他态度___。"
+      options:
+        - 凶狠
+        - 恶劣
+        - 强硬
+        - 粗心
+      correct: 恶劣
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 我虽然心中___愤怒。"
+      options:
+        - 充满
+        - 充足
+        - 充实
+        - 充分
+      correct: 充满
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] 那位中学生___保持笑容。"
+      options:
+        - 果然
+        - 突然
+        - 既然
+        - 仍然
+      correct: 仍然
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] 我没必要去___他。"
+      options:
+        - 苦恼
+        - 悲伤
+        - 抱怨
+        - 担忧
+      correct: 抱怨
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 他人的态度___自己的心情。"
+      options:
+        - 选择
+        - 影响
+        - 麻烦
+        - 打败
+      correct: 影响
+- groupId: P6-CH-2026-PLMGS-Q16-20
+  subject: Chinese
+  passage:
+    title: 志明改掉粗心的习惯
+    source: PLMGS Primary 6 Chinese Prelim 2026; PDF pages 7; P6_Chinese_Prelim_2026_PLMGS_Exam_Papers.pdf
+    text: |-
+      志明是个做事不认真的孩子，他常常忘东忘西，马马虎虎。妈妈多次提醒他，希望他能改掉这个坏习惯，可是志明总是不把妈妈的话放在心上，让妈妈为此事[Q16]___，不知该怎么办才好。
+
+      一天早上，妈妈因为要赶去上班，便让志明帮忙到附近的书店领取弟弟订的练习本。志明很快就答应了，可是[Q17]___坐在沙发上玩手机，一点儿也不着急。后来，妈妈连续打了几通电话催他，他才慢吞吞地出门。
+
+      到了书店后，志明因为没有认真听清楚妈妈的话，竟然把妈妈[Q18]___的事情弄错了。他不但拿错了练习本，还忘了付钱，结果店员只好联络妈妈问个清楚，[Q19]___了大家不少时间。回到家后，妈妈非常生气，把他骂了一顿。
+
+      经过这次的事情，志明终于明白，粗心大意会带来许多不必要的[Q20]___。从那以后，他做事开始变得比以前认真了。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 让妈妈为此事___。"
+      options:
+        - 苦恼
+        - 唠叨
+        - 批评
+        - 关心
+      correct: 苦恼
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 可是___坐在沙发上玩手机。"
+      options:
+        - 依然
+        - 忽然
+        - 虽然
+        - 果然
+      correct: 依然
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] 把妈妈___的事情弄错了。"
+      options:
+        - 指令
+        - 吩咐
+        - 联系
+        - 介绍
+      correct: 吩咐
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] ___了大家不少时间。"
+      options:
+        - 浪费
+        - 减少
+        - 增添
+        - 节省
+      correct: 浪费
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 许多不必要的___。"
+      options:
+        - 麻烦
+        - 伤害
+        - 责任
+        - 表扬
+      correct: 麻烦
+- groupId: P6-CH-2026-Raffles-Q16-20
+  subject: Chinese
+  passage:
+    title: 安静十分钟
+    source: Raffles Primary 6 Chinese Prelim 2026; PDF pages 10; P6_Chinese_Prelim_2026_Raffles_Exam_Papers.pdf
+    text: |-
+      美阳小学最近开始进行“安静十分钟”活动，让同学每天上课前静下心来，为一天的学习做好准备。
+
+      一开始，有些同学不了解这项活动的[Q16]___，觉得浪费时间。可是在老师的带领下，大家尝试在上课前整理书包、复习学习内容。不久，很多同学发现，这种准备能有效地[Q17]___他们在课堂上的学习表现。
+
+      养成习惯后，同学们变得更专心，各项任务也能更[Q18]___地完成。此外，安静的环境也让大家有时间想一想可以如何做得更好，使学习态度变得更[Q19]___。
+
+      渐渐地，同学们明白了，小小的改变也能带来[Q20]___的进步。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 这项活动的___。"
+      options:
+        - 道理
+        - 结果
+        - 流程
+        - 意义
+      correct: 意义
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 有效地___他们在课堂上的学习表现。"
+      options:
+        - 提高
+        - 影响
+        - 代替
+        - 控制
+      correct: 提高
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] 任务也能更___地完成。"
+      options:
+        - 勇敢
+        - 顺利
+        - 丰富
+        - 能干
+      correct: 顺利
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] 学习态度变得更___。"
+      options:
+        - 优秀
+        - 美好
+        - 积极
+        - 珍贵
+      correct: 积极
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 带来___的进步。"
+      options:
+        - 清楚
+        - 巨大
+        - 暂时
+        - 宽阔
+      correct: 巨大
+- groupId: P6-CH-2026-RedSwastika-Q16-20
+  subject: Chinese
+  passage:
+    title: 真诚地帮助别人
+    source: RedSwastika Primary 6 Chinese Prelim 2026; PDF pages 9; P6_Chinese_Prelim_2026_RedSwastika_Exam_Papers.pdf
+    text: |-
+      很久以前，一个乡村发生了严重的水灾。农田被水淹了，很多村民都饿死了，生活十分辛苦。
+
+      一位有钱人知道情况后，便[Q16]___了很多食物，到村子里分给村民。他心想：他们吃了我给的食物，一定会称赞我是个好人！
+
+      这一天，有钱人带了食物到村子。这时，一个村民慢慢走来。他已经饿了好几天，走路有气无力。有钱人看见他，立刻举起食物，大声说：“快来吃吧！让我这个[Q17]___的好心人来帮助你！”
+
+      村民说：“帮助别人[Q18]___要真心诚意，才有意义。如果只是为了得到称赞，就失去帮助他人的意义。在帮助别人之前，你应该先[Q19]___自己为什么要做这件事情。”有钱人回答道：“我没有那个意思！”
+
+      村民接着说：“虽然你很有钱，但是我是不会[Q20]___你生活过得那么好的！”有钱人听后，满脸通红，十分惭愧。从那天起，他学会了用真诚的心去帮助别人。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16] 便___了很多食物。"
+      options:
+        - 准备
+        - 选择
+        - 参加
+        - 走向
+      correct: 准备
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17] 让我这个___的好心人来帮助你。"
+      options:
+        - 勤劳
+        - 慈祥
+        - 慷慨
+        - 勇敢
+      correct: 慷慨
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18] 帮助别人___要真心诚意。"
+      options:
+        - 已经
+        - 必须
+        - 可能
+        - 需要
+      correct: 必须
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19] 应该先___自己为什么要做这件事情。"
+      options:
+        - 询问
+        - 改变
+        - 检查
+        - 考虑
+      correct: 考虑
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20] 我是不会___你生活过得那么好的。"
+      options:
+        - 担忧
+        - 后悔
+        - 妒忌
+        - 喜欢
+      correct: 妒忌
+- groupId: P6-CH-2026-StNicholas-Q16-20
+  subject: Chinese
+  passage:
+    title: 小云种花
+    source: StNicholas Primary 6 Chinese Prelim 2026; PDF pages 8; P6_Chinese_Prelim_2026_StNicholas_Exam_Papers.pdf
+    text: |-
+      小云的奶奶很会种花。小云常常蹲在花盆旁，看奶奶松土、浇水，觉得十分[Q16]___。
+
+      这天，奶奶买了一包种子，准备种在花盆里。小云也想种花，就向奶奶要了一颗种子，把它埋进泥土里。一个星期过去了，花盆里一点[Q17]___都没有。小云翻开泥土一看，原来种子已经腐烂了。奶奶对她说：“种子种得太深，埋在土里不透气就很难发芽，甚至会烂掉。”
+
+      小云听了奶奶的话，决定再[Q18]___一次。几天后，她发现花盆里的泥土冒出了绿苗。她忍不住轻轻拨开泥土，想帮它更快长出来。可是幼苗被太阳一晒，很快就干枯了。奶奶摇摇头说：“你太心急了，种子生根发芽，钻出泥土，都要靠自己的力量，这样才能长得更好。”
+
+      听到这里，小云[Q19]___地种下第三颗种子。这一次，她按时浇水，并慢慢等待。一周后，一根小苗从土里钻了出来。小苗虽然细细的，却挺直地站着，在阳光下显得特别精神。
+
+      小云终于明白做任何事就像种花，既要用对方法，也要努力付出，并[Q20]___等待，才能迎来美丽的花开。
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16]___"
+      options:
+        - 乐趣
+        - 有趣
+        - 兴趣
+        - 风趣
+      correct: 有趣
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17]___"
+      options:
+        - 反应
+        - 声音
+        - 影响
+        - 动静
+      correct: 动静
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18]___"
+      options:
+        - 制作
+        - 尝试
+        - 练习
+        - 坚持
+      correct: 尝试
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19]___"
+      options:
+        - 努力
+        - 详细
+        - 小心
+        - 勇敢
+      correct: 小心
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20]___"
+      options:
+        - 耐心
+        - 专心
+        - 细心
+        - 热心
+      correct: 耐心
+- groupId: P6-CH-2026-TaoNan-Q16-20
+  subject: Chinese
+  passage:
+    title: 再试一次
+    source: TaoNan Primary 6 Chinese Prelim 2026; PDF pages 5; P6_Chinese_Prelim_2026_TaoNan_Exam_Papers.pdf
+    text: |-
+      有一天，老师教全班同学折纸飞机。康康怎么折都不成功。他试了两次就不耐烦地把纸弄成一团，[Q16]___地坐在一旁。
+
+      老师看见了，对他说：“你再试一次吧？”康康摇了摇头，表示[Q17]___。老师微笑着说：“再优秀的人，做事情也不是一次就成功，你应该多试几次。”
+
+      康康想了想，决定再试一次。他[Q18]___老师的方法，一步一步地折。这一次他的飞机终于飞起来了，但飞得不远。他有点开心，开始[Q19]___尝试，一次、两次，……渐渐地，他的纸飞机飞得越来越远。
+
+      从那以后，康康不再轻易[Q20]___。每当遇到困难，他都会对自己说：“再试一次。”
+  questions:
+    - sourceQuestion: Q16
+      marks: 2
+      format: MCQ
+      text: "[Q16]___"
+      options:
+        - 闷闷不乐
+        - 津津有味
+        - 左思右想
+        - 胸有成竹
+      correct: 闷闷不乐
+    - sourceQuestion: Q17
+      marks: 2
+      format: MCQ
+      text: "[Q17]___"
+      options:
+        - 失望
+        - 拒绝
+        - 怀疑
+        - 担心
+      correct: 拒绝
+    - sourceQuestion: Q18
+      marks: 2
+      format: MCQ
+      text: "[Q18]___"
+      options:
+        - 请求
+        - 计划
+        - 按照
+        - 遵守
+      correct: 按照
+    - sourceQuestion: Q19
+      marks: 2
+      format: MCQ
+      text: "[Q19]___"
+      options:
+        - 继续
+        - 接着
+        - 连忙
+        - 不断
+      correct: 不断
+    - sourceQuestion: Q20
+      marks: 2
+      format: MCQ
+      text: "[Q20]___"
+      options:
+        - 放弃
+        - 对抗
+        - 解决
+        - 改变
+      correct: 放弃
+- groupId: P6-HC-2026-ACSJ-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 老婆饼的故事
+    source: ACSJ Primary 6 Higher Chinese Prelim 2026; PDF pages 2; P6_HChinese_Prelim_2026_ACSJ_Exam_Papers.pdf
+    text: |-
+      在广东，有一道很有名的点心叫“老婆饼”。这个名字很有趣，第一次听说的人常常会问：“老婆饼里面真的有老婆吗？”答案当然是没有的。这背后有一个温暖的故事。
+
+      以前，有一位点心师父每天在茶楼忙忙碌碌地工作，很少有时间[Q1]___妻子。妻子心里很委屈。她忍不住[Q2]___：“你天天做精美的点心给别人吃，什么时候也为我做一道？”师父每次都一口答应，还说明天一定做。可是第二天他一忙起来，就把和老婆的[Q3]___忘得一干二净。
+
+      有一天，妻子自己用冬瓜、糖和面粉做了一道全新的点心。那点心外皮金黄，散发着[Q4]___的香气。师父尝了一口，眼睛都亮了：“太好吃了！它叫什么？”妻子说：“它是我做的，所以叫‘老婆饼’。”原来，妻子[Q5]___创造出这道点心，就是要提醒丈夫别忘了自己答应老婆的事。
+
+      师父听了，又惭愧又感动。后来，老婆饼传到各地，成了一道远近闻名的点心。
+
+      词语库：1 诱人；2 吩咐；3 陪伴；4 费尽心思；5 动人；6 约定；7 抱怨；8 足智多谋
+  questions:
+    - sourceQuestion: Q1
+      marks: 2
+      format: Fill-in
+      text: "[Q1]___"
+      accepted:
+        - "3"
+        - 陪伴
+        - 3陪伴
+        - 3 陪伴
+      displayAnswer: 3 陪伴
+    - sourceQuestion: Q2
+      marks: 2
+      format: Fill-in
+      text: "[Q2]___"
+      accepted:
+        - "7"
+        - 抱怨
+        - 7抱怨
+        - 7 抱怨
+      displayAnswer: 7 抱怨
+    - sourceQuestion: Q3
+      marks: 2
+      format: Fill-in
+      text: "[Q3]___"
+      accepted:
+        - "6"
+        - 约定
+        - 6约定
+        - 6 约定
+      displayAnswer: 6 约定
+    - sourceQuestion: Q4
+      marks: 2
+      format: Fill-in
+      text: "[Q4]___"
+      accepted:
+        - "1"
+        - 诱人
+        - 1诱人
+        - 1 诱人
+      displayAnswer: 1 诱人
+    - sourceQuestion: Q5
+      marks: 2
+      format: Fill-in
+      text: "[Q5]___"
+      accepted:
+        - "4"
+        - 费尽心思
+        - 4费尽心思
+        - 4 费尽心思
+      displayAnswer: 4 费尽心思
+- groupId: P6-HC-2026-CHIJOLGC-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 坚持到底
+    source: CHIJOLGC Primary 6 Higher Chinese Prelim 2026; PDF pages 2; P6_HChinese_Prelim_2026_CHIJOLGC_Exam_Papers.pdf
+    text: |-
+      上个星期六，学校举办了一年一度的运动会。运动会当天，天气十分[Q1]___，天空乌云密布，还下起了大雨。
+
+      随着枪声响起，参赛者们纷纷冲出起跑线。小杰原本跑在队伍前面，却在途中不小心滑倒了。他的手掌和膝盖都擦伤了，眼看其他同学一个个超过自己，他不禁感到十分失望，看起来[Q2]___的。
+
+      这时，一位老师看到了这一幕，便[Q3]___跑过来查看小杰的伤势，并鼓励他说：“不要轻易放弃，坚持到底就是胜利！”
+
+      听了老师的话，小杰重新站了起来，继续向前奔跑。由于他反应[Q4]___，能够及时避开路上的积水，因此渐渐追上了前面的参赛者。
+
+      经过一番努力，小杰[Q5]___终于冲过终点线，完成了比赛。虽然他没有获得名次，但他学会了坚持不懈的精神，也明白了遇到困难的时候不应该轻易放弃。
+
+      词语库：1 尽早；2 恶劣；3 总算；4 全神贯注；5 立即；6 过敏；7 敏捷；8 垂头丧气
+  questions:
+    - sourceQuestion: Q1
+      marks: 2
+      format: Fill-in
+      text: "[Q1]___"
+      accepted:
+        - "2"
+        - 恶劣
+        - 2恶劣
+        - 2 恶劣
+      displayAnswer: 2 恶劣
+    - sourceQuestion: Q2
+      marks: 2
+      format: Fill-in
+      text: "[Q2]___"
+      accepted:
+        - "8"
+        - 垂头丧气
+        - 8垂头丧气
+        - 8 垂头丧气
+      displayAnswer: 8 垂头丧气
+    - sourceQuestion: Q3
+      marks: 2
+      format: Fill-in
+      text: "[Q3]___"
+      accepted:
+        - "5"
+        - 立即
+        - 5立即
+        - 5 立即
+      displayAnswer: 5 立即
+    - sourceQuestion: Q4
+      marks: 2
+      format: Fill-in
+      text: "[Q4]___"
+      accepted:
+        - "7"
+        - 敏捷
+        - 7敏捷
+        - 7 敏捷
+      displayAnswer: 7 敏捷
+    - sourceQuestion: Q5
+      marks: 2
+      format: Fill-in
+      text: "[Q5]___"
+      accepted:
+        - "3"
+        - 总算
+        - 3总算
+        - 3 总算
+      displayAnswer: 3 总算
+- groupId: P6-HC-2026-NanHua-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 外公的求学故事
+    source: NanHua Primary 6 Higher Chinese Prelim 2026; PDF pages 3; P6_HChinese_Prelim_2026_NanHua_Exam_Papers.pdf
+    text: |-
+      小时候，外公的家境贫穷，一家人挤在一间窄小的屋子里。外公的父母早出晚归，但赚的钱也只够全家填饱肚子，[Q1]___没钱给他买文具和课本。
+
+      同学们常因外公穿着破旧、连像样的笔和本子都没有，而对他指指点点，有的还当面笑话他。可外公没有难过，更没有因此而[Q2]___学业。
+
+      每天放学后，外公都会坐在家门口的小桌前，[Q3]___地温习功课。门前人来人往，弟弟妹妹也在那里玩耍。可外公却从未被那些声音[Q4]___。他总是目不转睛地盯着书本，仿佛身边一个人也没有。
+
+      外公坚持认真学习，每次考试成绩都很出色，最终考上了大学。不仅身边的人都以他为[Q5]___，他的父母也感到非常欣慰。
+
+      词语库：1 全神贯注；2 榜样；3 烦恼；4 荒废；5 筋疲力尽；6 根本；7 告别；8 打扰
+  questions:
+    - sourceQuestion: Q1
+      marks: 2
+      format: Fill-in
+      text: "[Q1]___"
+      accepted:
+        - "6"
+        - 根本
+        - 6根本
+        - 6 根本
+      displayAnswer: 6 根本
+    - sourceQuestion: Q2
+      marks: 2
+      format: Fill-in
+      text: "[Q2]___"
+      accepted:
+        - "4"
+        - 荒废
+        - 4荒废
+        - 4 荒废
+      displayAnswer: 4 荒废
+    - sourceQuestion: Q3
+      marks: 2
+      format: Fill-in
+      text: "[Q3]___"
+      accepted:
+        - "1"
+        - 全神贯注
+        - 1全神贯注
+        - 1 全神贯注
+      displayAnswer: 1 全神贯注
+    - sourceQuestion: Q4
+      marks: 2
+      format: Fill-in
+      text: "[Q4]___"
+      accepted:
+        - "8"
+        - 打扰
+        - 8打扰
+        - 8 打扰
+      displayAnswer: 8 打扰
+    - sourceQuestion: Q5
+      marks: 2
+      format: Fill-in
+      text: "[Q5]___"
+      accepted:
+        - "2"
+        - 榜样
+        - 2榜样
+        - 2 榜样
+      displayAnswer: 2 榜样
+- groupId: P6-HC-2026-Nanyang-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 整理阅读角落
+    source: Nanyang Primary 6 Higher Chinese Prelim 2026; PDF pages 6; P6_HChinese_Prelim_2026_Nanyang_Exam_Papers.pdf
+    text: |-
+      开学后，华文老师在课室里设置了一个阅读角落。他在上课时[Q1]___了新的安排：每个星期由一个小组负责整理阅读角落。这一周，刚好轮到我们小组。
+
+      起初，我觉得这不过是件小事，把书摆放整齐就行了。放学后，我走到书柜前，发现书本东倒西歪的，有些书被随意放在架子上，还有几本里边夹着纸张，显得十分杂乱。组员明华却毫不在意，他看了一眼，不耐烦地说：“别收了，[Q2]___明天还会乱的。”说完，他便[Q3]___离开了。
+
+      我站在原地，心里有些动摇。既然老师没说过要检查，那是不是我就可以随便应付呢？可[Q4]___起老师说过要爱护书本，我又感到一阵不安。于是我还是弯下腰，把书一本本摆整齐，又把书柜擦干净。忙完后，望着焕然一新的阅读角落，我的心里涌起一股暖流。
+
+      第二天，同学们纷纷[Q5]___阅读角落干净又整齐，我十分开心。
+
+      词语库：1 迅速；2 称赞；3 逐渐；4 反正；5 回忆；6 佩服；7 宣布；8 反而
+  questions:
+    - sourceQuestion: Q1
+      marks: 2
+      format: Fill-in
+      text: "[Q1]___"
+      accepted:
+        - "7"
+        - 宣布
+        - 7宣布
+        - 7 宣布
+      displayAnswer: 7 宣布
+    - sourceQuestion: Q2
+      marks: 2
+      format: Fill-in
+      text: "[Q2]___"
+      accepted:
+        - "4"
+        - 反正
+        - 4反正
+        - 4 反正
+      displayAnswer: 4 反正
+    - sourceQuestion: Q3
+      marks: 2
+      format: Fill-in
+      text: "[Q3]___"
+      accepted:
+        - "1"
+        - 迅速
+        - 1迅速
+        - 1 迅速
+      displayAnswer: 1 迅速
+    - sourceQuestion: Q4
+      marks: 2
+      format: Fill-in
+      text: "[Q4]___"
+      accepted:
+        - "5"
+        - 回忆
+        - 5回忆
+        - 5 回忆
+      displayAnswer: 5 回忆
+    - sourceQuestion: Q5
+      marks: 2
+      format: Fill-in
+      text: "[Q5]___"
+      accepted:
+        - "2"
+        - 称赞
+        - 2称赞
+        - 2 称赞
+      displayAnswer: 2 称赞
+- groupId: P6-HC-2026-Raffles-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 日本之旅
+    source: Raffles Primary 6 Higher Chinese Prelim 2026; PDF pages 4; P6_HChinese_Prelim_2026_Raffles_Exam_Papers.pdf
+    text: |-
+      去年，爸爸建议我们年底去日本旅游。听了这个消息，我[Q1]___不了心中的兴奋，拍手欢呼，迫不及待地要出发去看富士山。
+
+      到达日本后，我发现那里街道整洁，行人过马路时都遵守交通规则，非常有[Q2]___。商店员工都彬彬有礼地向顾客行礼，乘客在公共交通上轻声说话，大家等待电梯时也懂得排队，在生活中时时表现出[Q3]___的行为，这都让我对日本留下好印象。
+
+      当我们终于来到富士山山脚下时，壮观的景色让我们都睁大了眼睛。我们一边拍照[Q4]___，一边欣赏眼前的风景，久久不愿离开。虽然登山十分辛苦，但我觉得这一切都是值得的。富士山真是令人[Q5]___的好地方。
+
+      词语库：1 秩序；2 留念；3 优雅；4 手舞足蹈；5 品德；6 杰出；7 控制；8 流连忘返
+  questions:
+    - sourceQuestion: Q1
+      marks: 2
+      format: Fill-in
+      text: "[Q1]___"
+      accepted:
+        - "7"
+        - 控制
+        - 7控制
+        - 7 控制
+      displayAnswer: 7 控制
+    - sourceQuestion: Q2
+      marks: 2
+      format: Fill-in
+      text: "[Q2]___"
+      accepted:
+        - "1"
+        - 秩序
+        - 1秩序
+        - 1 秩序
+      displayAnswer: 1 秩序
+    - sourceQuestion: Q3
+      marks: 2
+      format: Fill-in
+      text: "[Q3]___"
+      accepted:
+        - "3"
+        - 优雅
+        - 3优雅
+        - 3 优雅
+      displayAnswer: 3 优雅
+    - sourceQuestion: Q4
+      marks: 2
+      format: Fill-in
+      text: "[Q4]___"
+      accepted:
+        - "2"
+        - 留念
+        - 2留念
+        - 2 留念
+      displayAnswer: 2 留念
+    - sourceQuestion: Q5
+      marks: 2
+      format: Fill-in
+      text: "[Q5]___"
+      accepted:
+        - "8"
+        - 流连忘返
+        - 8流连忘返
+        - 8 流连忘返
+      displayAnswer: 8 流连忘返
+- groupId: P6-HC-2026-TaoNan-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 不轻言放弃
+    source: TaoNan Primary 6 Higher Chinese Prelim 2026; PDF pages 2; P6_HChinese_Prelim_2026_TaoNan_Exam_Papers.pdf
+    text: |-
+      1995年，一位年轻人第一次接触互联网，这项新科技让他十分感[Q1]___。四年后，他决定利用互联网做生意，尝试这个新的方向。
+
+      这个尝试一开始并不顺利，年轻人[Q2]___的产品不受人们的欢迎。他花了很多时间修改，却始终没有明显的进步，还[Q3]___了不少失败。
+
+      不过，这些困难并没有使他放弃，反而[Q4]___了他对学习新事物的热情。经过不断努力，最后他终于取得了成功。他这种不轻言放弃的[Q5]___，值得大家学习。
+
+      词语库：1 增添；2 兴趣；3 精神；4 表扬；5 设计；6 榜样；7 遭受；8 激发
+  questions:
+    - sourceQuestion: Q1
+      marks: 2
+      format: Fill-in
+      text: "[Q1]___"
+      accepted:
+        - "2"
+        - 兴趣
+        - 2兴趣
+        - 2 兴趣
+      displayAnswer: 2 兴趣
+    - sourceQuestion: Q2
+      marks: 2
+      format: Fill-in
+      text: "[Q2]___"
+      accepted:
+        - "5"
+        - 设计
+        - 5设计
+        - 5 设计
+      displayAnswer: 5 设计
+    - sourceQuestion: Q3
+      marks: 2
+      format: Fill-in
+      text: "[Q3]___"
+      accepted:
+        - "7"
+        - 遭受
+        - 7遭受
+        - 7 遭受
+      displayAnswer: 7 遭受
+    - sourceQuestion: Q4
+      marks: 2
+      format: Fill-in
+      text: "[Q4]___"
+      accepted:
+        - "8"
+        - 激发
+        - 8激发
+        - 8 激发
+      displayAnswer: 8 激发
+    - sourceQuestion: Q5
+      marks: 2
+      format: Fill-in
+      text: "[Q5]___"
+      accepted:
+        - "3"
+        - 精神
+        - 3精神
+        - 3 精神
+      displayAnswer: 3 精神
+- groupId: P6-CH-2025-ACSJ-Q16-20
+  subject: Chinese
+  passage:
+    title: 课外活动
+    source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_acsjunior.pdf
+    text: |-
+      课外活动是学生生活的一部分。每当下课声响起，校园里便热闹起来：足球场上传来阵阵欢呼声，音乐室飘出美妙的音乐，教室里还有学生在下棋、画画等。[Q16]___是体育、艺术，还是团队活动，课外活动的种类非常丰富。它们让学生课后的生活变得更加[Q17]___和有趣。
+
+      参加课外活动的好处很多。学习乐器能帮助学生培养耐心和提升技能，而参加体育活动不仅能提高球技，还能[Q18]___身体。其次，课外活动也能培养学生的团队精神。例如在足球比赛中，队员们需要互相[Q19]___，互相信任，才能赢得比赛。
+
+      参加课外活动必须把时间安排好，才不会影响学业。为了[Q20]___这种情况，学生应该学会制定时间表，有效利用课后时间做功课、参加课外活动和休息。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] ___是体育、艺术，还是团队活动。"
+      options:
+        - 总算
+        - 就算
+        - 不管
+        - 尽管
+      correct: 不管
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 生活变得更加___和有趣。"
+      options:
+        - 坚强
+        - 充实
+        - 充足
+        - 顽强
+      correct: 充实
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 还能___身体。"
+      options:
+        - 保护
+        - 保持
+        - 锻炼
+        - 注意
+      correct: 锻炼
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 队员们需要互相___。"
+      options:
+        - 战胜
+        - 控制
+        - 调节
+        - 配合
+      correct: 配合
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 为了___这种情况。"
+      options:
+        - 防止
+        - 预防
+        - 避开
+        - 避免
+      correct: 避免
+- groupId: P6-CH-2025-ACSPrimary-Q16-20
+  subject: Chinese
+  passage:
+    title: 友情带来的力量
+    source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_acsprimary.pdf
+    text: |-
+      伟杰每天都会和明亮一起上学。他们是邻居，从小就一起玩耍，彼此非常[Q16]___。
+
+      最近，伟杰的哥哥出国留学了，他十分难过。老师在课堂上[Q17]___了一篇关于“友谊”的文章，明亮立刻想到伟杰。他决定要帮伟杰度过这段难过的日子。
+
+      明亮[Q18]___伟杰一起在图书馆复习功课，还鼓励他参加学校的朗读比赛。伟杰的生活变得忙了起来，他不再整天想起在国外留学的哥哥。有了明亮的陪伴，他也不会孤单！
+
+      朗读比赛那天，伟杰站上台，大声地朗读那篇文章。全班同学都[Q19]___热烈鼓掌。
+
+      比赛结束后，伟杰对明亮说：“谢谢你，你让我明白了友情能带来[Q20]___！”
+
+      明亮微笑着说：“朋友之间应该互相帮助，只要你需要，我一直都在。”
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 彼此非常___。"
+      options:
+        - 热闹
+        - 熟悉
+        - 深刻
+        - 认真
+      correct: 熟悉
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 老师在课堂上___了一篇文章。"
+      options:
+        - 采访
+        - 提问
+        - 议论
+        - 分享
+      correct: 分享
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 明亮___伟杰一起复习功课。"
+      options:
+        - 带领
+        - 邀请
+        - 介绍
+        - 命令
+      correct: 邀请
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 全班同学都___热烈鼓掌。"
+      options:
+        - 禁不住
+        - 离不开
+        - 来不及
+        - 忘不了
+      correct: 禁不住
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 友情能带来___！"
+      options:
+        - 贡献
+        - 力量
+        - 智慧
+        - 奖励
+      correct: 力量
+- groupId: P6-CH-2025-AiTong-Q16-20
+  subject: Chinese
+  passage:
+    title: 说话要三思
+    source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_aitong.pdf
+    text: |-
+      从小，母亲总是这样提醒我：在做任何事情之前都要[Q16]___后果，一定要三思而后行。然而，那个时候的我，因为年纪还很小，不太懂事，总是把她的[Q17]___当作耳边风。
+
+      后来，我长大了，有了自己的工作。有一次，我因为一时冲动，说错了话，伤害了别人。我以为只要我诚恳地道歉，对方就会原谅我。不过，他却不肯接收我的道歉。直到这时，我才发现有时道歉并不够，就算我想要[Q18]___，对方也不一定会给我机会。
+
+      我很[Q19]___自己当初不听母亲的话，才会遇到这些麻烦。经过这次教训，我学到了在跟别人说话时，要更加小心地[Q20]___使用的词语和表达的方式，才不会再犯同样的错误，伤害更多的人。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 想象
+        - 考虑
+        - 回忆
+        - 珍惜
+      correct: 考虑
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 建议
+        - 催促
+        - 劝告
+        - 抱怨
+      correct: 劝告
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 不慌不忙
+        - 改过自新
+        - 自言自语
+        - 左思右想
+      correct: 改过自新
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 妒忌
+        - 怀疑
+        - 糊涂
+        - 后悔
+      correct: 后悔
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 选择
+        - 选项
+        - 选出
+        - 选中
+      correct: 选择
+- groupId: P6-CH-2025-Catholic-Q16-20
+  subject: Chinese
+  passage:
+    title: 照顾爷爷
+    source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 17; P6_Chinese_2025_SA2_catholic.pdf
+    text: |-
+      我的父母工作很忙，经常忙到半夜才回家。因此，爷爷每天都会在我放学后到我家照顾我。当我在功课上[Q16]___难题时，爷爷也会耐心地解释给我听。
+
+      最近，爷爷病了，需要躺在床上多休息。爸爸十分担心爷爷，要我每天放学后去爷爷家[Q17]___他。
+
+      每次去爷爷的家，我都得乘地铁、搭巴士，再走一段路才能到达。去了几次后，我就觉得很麻烦，忍不住向爷爷抱怨。爷爷听了，说：“爷爷知道你很忙。我可以照顾好自己，你不需要天天来看我。”见我露出[Q18]___的表情，爷爷接着说：“你别担心，我不会告诉爸爸。”就这样，接下来的几天，我都没再去看爷爷。
+
+      一天，我刚踏出电梯，就看见爸爸已经站在门口等我了。“我不是[Q19]___了你每天都要去看爷爷吗？你为什么没做到？爷爷病了，又一个人在家，如果发生什么意外，那该怎么办？”
+
+      听了爸爸的话，我红着脸，低下头，感到十分[Q20]___。从此，我每天放学后都会到爷爷家去。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 呈现
+        - 克服
+        - 解决
+        - 遇到
+      correct: 遇到
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 支持
+        - 陪伴
+        - 负责
+        - 爱护
+      correct: 陪伴
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 难过
+        - 不安
+        - 悲伤
+        - 痛苦
+      correct: 不安
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 约定
+        - 唠叨
+        - 吩咐
+        - 劝告
+      correct: 吩咐
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 惭愧
+        - 担忧
+        - 慌张
+        - 激动
+      correct: 惭愧
+- groupId: P6-CH-2025-HenryPark-Q16-20
+  subject: Chinese
+  passage:
+    title: 哥哥的健康生活
+    source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 17; P6_Chinese_2025_SA2_henrypark.pdf
+    text: |-
+      哥哥最近生了一场大病，终于明白运动和良好的饮食习惯的重要性。
+
+      哥哥病好后，决定培养好的生活习惯。由于学校[Q16]___他家有五个车站远，所以放学后，他会选择走路回家，不搭巴士。渐渐地，他发现走路不但能健身，还可以让精神得到[Q17]___。
+
+      周末的时候，哥哥也会和朋友一起打篮球。[Q18]___，他还会到附近的公园跑步。
+
+      妈妈看到了，提醒哥哥[Q19]___运动，健康的饮食习惯也很重要。哥哥听了之后，开始在早餐时，吃面包和水果，也喝牛奶。晚餐时，他会多吃蔬菜，[Q20]___吃油炸食物。由于哥哥有良好的生活习惯，身体变得越来越强健。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 远离
+        - 离开
+        - 距离
+        - 分离
+      correct: 距离
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 集中
+        - 力量
+        - 鼓励
+        - 放松
+      correct: 放松
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 除外
+        - 此外
+        - 之外
+        - 例外
+      correct: 此外
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 另外
+        - 除了
+        - 还有
+        - 唯一
+      correct: 除了
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 避免
+        - 躲开
+        - 防止
+        - 减掉
+      correct: 避免
+- groupId: P6-CH-2025-MGS-Q16-20
+  subject: Chinese
+  passage:
+    title: 消除朋友间的误会
+    source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_mgs.pdf
+    text: |-
+      小丽和小美从一年级开始就是同班同学，她们的感情非常好。最近，小丽总是[Q16]___的，让妈妈觉得很奇怪。原来，小美因为一次误会，开始对小丽不理不睬。小丽有几次想要试着解释，但小美都避开了。小丽曾一度想结束和小美之间的友谊。
+
+      妈妈了解事情经过后，语重心长地说：“朋友之间出现误会时，我们不能因为对方的反应就退缩，反而更应该好好地沟通，消除误会。只要是发自内心的关怀和耐心，就能[Q17]___人。”
+
+      听了妈妈的话，小丽决定不再退缩，而是[Q18]___想办法。第二天，小丽特意准备了一张小卡片，[Q19]___地写下了她想和小美和好的心愿，然后把卡片放在了小美的桌上。
+
+      休息时，小丽一看到小美，就走上前对她说道：“小美，希望我们能谈一谈，如果我哪里做得不对，让你不开心，我一定会改正。”小美听了很感动，最后，她决定和小丽[Q20]___往日的友好关系。
+
+      小丽从这件事中明白，面对冲突和误会时，要带着理解去沟通，才能让友谊长久。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 火冒三丈
+        - 神色慌张
+        - 闷闷不乐
+        - 恍然大悟
+      correct: 闷闷不乐
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 行动
+        - 打动
+        - 发动
+        - 带动
+      correct: 打动
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 负责
+        - 仔细
+        - 勤奋
+        - 积极
+      correct: 积极
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 诚恳
+        - 尽力
+        - 紧张
+        - 盼望
+      correct: 诚恳
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 保持
+        - 重复
+        - 恢复
+        - 改变
+      correct: 恢复
+- groupId: P6-CH-2025-NanHua-Q16-20
+  subject: Chinese
+  passage:
+    title: 登山队寻找水源
+    source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_nanhua.pdf
+    text: |-
+      一支登山队想用三天时间爬上一座危险的山。出发前，队长告诉队员们：“山路难走，但只要[Q16]___计划，我们一定能成功！”
+
+      刚出发时，太阳刚刚升起，天还没那么热，队员们爬得很轻松。走到半路时，突然岩石松动，碎石哗哗滚落。队长大喊：“快点躲开！”大家听了，连忙侧着行走，[Q17]___被碎石砸中。
+
+      中午时分，烈日当空，山路越来越难走，大家都累得满头大汗。很快，水也喝完了，一路上也没看到水源。队长擦着汗，喊道：“必须坚持下去！只有[Q18]___前进，才能找到水源！”队员们咬牙抓紧绳子，一步步地向前[Q19]___。
+
+      就在大家快要支撑不下去的时候，一名队员在石缝中看到了几片绿叶，连忙告诉队长：“石缝中有植物，附近一定有水！”队长听了，便让大家原地休息，他和几个队员去附近寻找。果然，他们在不远处发现了泉水！大家最终喝上了水，[Q20]___很快就消失了。不久，他们就登上了山顶。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 发扬
+        - 考虑
+        - 约定
+        - 按照
+      correct: 按照
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 禁止
+        - 避免
+        - 阻拦
+        - 拒绝
+      correct: 避免
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 加倍
+        - 使劲
+        - 继续
+        - 再三
+      correct: 继续
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 移动
+        - 靠近
+        - 摇晃
+        - 探险
+      correct: 移动
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 疲倦
+        - 怒气
+        - 灾害
+        - 悲伤
+      correct: 疲倦
+- groupId: P6-CH-2025-Nanyang-Q16-20
+  subject: Chinese
+  passage:
+    title: 学习正确的健康方法
+    source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_nanyang.pdf
+    text: |-
+      最近，我身边的人都病倒了，这让两年都没生病的我不禁担心起来。为了[Q16]___生病，我会勤洗手、也会少去人多的地方，甚至每天量体温。
+
+      我的体温只要[Q17]___变高一些，我就会开始拼命喝水、吃清淡的食物、不断地运动等等，生怕少做一点就会生病了。父母见我这么[Q18]___，决定要好好跟我谈一谈。
+
+      爸爸说：“注意个人健康没有错，但是如果把自己弄得这么辛苦，反而更容易病倒呢！”妈妈接着说：“是啊！除了坚持运动，保持生活[Q19]___的卫生也很重要。”我仔细地想了想父母说的话，觉得很有道理，于是和家人分工合作，一起打扫家里。
+
+      后来，父母常常带我去图书馆[Q20]___与保持身体健康有关的书籍，从中学习正确的方法。我真感谢他们让我不再“生病”了！
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 降低
+        - 避免
+        - 躲藏
+        - 缩小
+      correct: 避免
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 稍微
+        - 一般
+        - 比较
+        - 慢慢
+      correct: 稍微
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 急忙
+        - 紧张
+        - 使劲
+        - 用功
+      correct: 紧张
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 气氛
+        - 周围
+        - 环境
+        - 附近
+      correct: 环境
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 了解
+        - 检查
+        - 见证
+        - 阅读
+      correct: 阅读
+- groupId: P6-CH-2025-PLMGS-Q16-20
+  subject: Chinese
+  passage:
+    title: 坚持努力
+    source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_mgspayalebar.pdf
+    text: |-
+      在人生的道路上，我们会遇到各种挑战。有时候，事情没有我们想象中那么顺利，我们就容易[Q16]___放弃的念头。但获得成功的人，往往是在遇到问题时不会放弃，[Q17]___会想办法解决的人。
+
+      小俊说话不清楚，常被同学笑话，他很伤心。但在老师的鼓励下，他开始每天对着镜子练习说话。虽然[Q18]___很辛苦，但他没有半途而废。一年后，小俊不但发音变得标准了，他还在班上的讲故事比赛中获胜。这让他[Q19]___，只要愿意付出努力，成功最终会到来。
+
+      有时，我们看不到眼前的成果，就容易失去[Q20]___。其实，我们的努力从不会白费。就像种下一棵小树苗，虽然看不见它马上长大，但只要耐心地照顾它，总有一天会长成大树。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 幻想
+        - 产生
+        - 制造
+        - 遇到
+      correct: 产生
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 仍然
+        - 曾经
+        - 连续
+        - 稍微
+      correct: 仍然
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 课程
+        - 旅程
+        - 流程
+        - 过程
+      correct: 过程
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 明白
+        - 解释
+        - 提醒
+        - 答应
+      correct: 明白
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 骄傲
+        - 烦恼
+        - 信心
+        - 勇敢
+      correct: 信心
+- groupId: P6-CH-2025-PeiChun-Q16-20
+  subject: Chinese
+  passage:
+    title: 面对批评的态度
+    source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_peichun.pdf
+    text: |-
+      有三个学习画画的人，想要将自己最满意的作品用一千元卖出，他们的第一位顾客都说了一句相同的话：“这一幅画[Q16]___值不了那么多钱吧。”
+
+      其中一个人听了以后，用心地观察自己的画，发现他的画有许多可以[Q17]___的地方。后来他经过一番努力，终于成为著名的大画家。
+
+      第二个人听后，看了看自己的画，摇了摇头，从此以后不再画画，而是去[Q18]___其他的兴趣爱好。后来，他发现自己很喜欢写字，就努力地写字，成为了一名书法家。
+
+      第三个人认为自己的画不值一千元，便用五百元卖出。但是，找他买画的人很少，他只能过着[Q19]___的生活。
+
+      这个故事告诉我们：批评可能是动力，能让你越来越好；批评可能是机会，帮助你找到更加适合自己的路；批评也可能让你失去[Q20]___，让你从此不再追求进步。因此，你要学会用正确的态度面对批评。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 或者
+        - 大概
+        - 果然
+        - 必须
+      correct: 大概
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 修理
+        - 整理
+        - 前进
+        - 改进
+      correct: 改进
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 寻找
+        - 等待
+        - 参观
+        - 管理
+      correct: 寻找
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 孤单
+        - 害怕
+        - 贫穷
+        - 压力
+      correct: 贫穷
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 信心
+        - 意见
+        - 幻想
+        - 勇敢
+      correct: 信心
+- groupId: P6-CH-2025-Raffles-Q16-20
+  subject: Chinese
+  passage:
+    title: 学生的时间管理
+    source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_raffles.pdf
+    text: |-
+      时间管理对每个人来说都是很重要的。学生学会[Q16]___好自己的时间，能帮助他们学习和成长。
+
+      首先，订好一个合适的计划是[Q17]___的第一步。他们可以写下每一天需要完成的事情，并[Q18]___自己有足够的时间去完成所有的事情。他们也应该有好的学习习惯，如常常复习，这样才能在考试时更有自信。家长在家里也要[Q19]___孩子，帮助他们提高管理时间的能力。
+
+      渐渐地，孩子就能[Q20]___出责任感，学业也会进步。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 转换
+        - 安排
+        - 珍惜
+        - 分享
+      correct: 安排
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 普通
+        - 关键
+        - 特别
+        - 贵重
+      correct: 关键
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 准备
+        - 注意
+        - 答应
+        - 确保
+      correct: 确保
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 锻炼
+        - 劝告
+        - 支持
+        - 赞许
+      correct: 支持
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 培养
+        - 认领
+        - 获取
+        - 表现
+      correct: 培养
+- groupId: P6-CH-2025-RedSwastika-Q16-20
+  subject: Chinese
+  passage:
+    title: 笑容的面具
+    source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_redswastika.pdf
+    text: |-
+      从前有个国王，他很喜欢和官员们讲一些人生道理，但官员们都显得[Q16]___，似乎不爱听国王说道理。为了改变这个情况，国王决定去请教他的老师。
+
+      老师听完后，对国王说：“我为您准备了一副[Q17]___的面具，您明天戴上它，也许有意想不到的反应。”
+
+      第二天，国王就照着老师的话去做。果然，官员们认真地听他讲话，有些人还不时点头表示赞同。
+
+      三个月过去了，官员们都对国王很尊敬。国王又问老师：“难道要我一辈子都戴着面具吗？”老师回答：“您现在可以把面具拿下来了。”可是，国王却感到[Q18]___，他担心官员们会像以前一样。在老师不断[Q19]___下，他才愿意摘下面具去见官员们。出乎意料的是，官员们照样认真地听国王说话。
+
+      原来，国王戴的是一副带着笑容的面具，他每天戴好面具后都会照一下镜子，每次都看到一张[Q20]___的脸。不知不觉中，自己也受到了影响，笑容在脸上多了起来。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 眉开眼笑
+        - 怒气冲冲
+        - 兴高采烈
+        - 无精打采
+      correct: 无精打采
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 忠诚
+        - 神奇
+        - 普通
+        - 吓人
+      correct: 神奇
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 惭愧
+        - 孤单
+        - 苦恼
+        - 激动
+      correct: 苦恼
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 鼓励
+        - 催促
+        - 责备
+        - 吩咐
+      correct: 鼓励
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 温暖
+        - 悲伤
+        - 慈祥
+        - 苍白
+      correct: 慈祥
+- groupId: P6-CH-2025-Rosyth-Q16-20
+  subject: Chinese
+  passage:
+    title: 珍珠与外表
+    source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_rosyth.pdf
+    text: |-
+      古时候，有一位财主花很高的价钱买到了三颗又大又圆的珍珠。财主想知道它们是否真的值钱，便请来一位有[Q16]___的老人帮他看一看。
+
+      老人仔细查看后，拿来一碗清水，将三颗珍珠放入水中。只见前两颗珍珠[Q17]___地沉入水底，而第三颗却浮在水面上。财主吃惊地问道：“这是什么意思？”
+
+      老人解释道：“真正的珍珠有一定的重量，会沉入水底，所以浮在水面上的这颗是假的，你被骗了。”
+
+      接着，老人又[Q18]___起剩下的两颗珍珠，分别在耳边轻轻敲了敲，结果第一颗珍珠声音低低的，第二颗珍珠则声音响亮。
+
+      老人解释道：“真正的珍珠里面很密，敲它的时候声音响亮。这颗声音低低的，说明质量不好。[Q19]___物品不能只看外表。”
+
+      财主这才恍然大悟，他十分感动，连声向老人道谢，并牢牢地记住这次的教训。从此以后，他购买珍珠时，[Q20]___变得更加小心，再也不被事物的外表所骗。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 耐心
+        - 智慧
+        - 勇气
+        - 想法
+      correct: 智慧
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 渐渐
+        - 静静
+        - 默默
+        - 悄悄
+      correct: 渐渐
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 捂
+        - 撑
+        - 捞
+        - 搅
+      correct: 捞
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 挑选
+        - 呈现
+        - 考虑
+        - 统计
+      correct: 挑选
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 竟然
+        - 依然
+        - 忽然
+        - 果然
+      correct: 果然
+- groupId: P6-CH-2025-SCGS-Q16-20
+  subject: Chinese
+  passage:
+    title: 勇敢作口头报告
+    source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_scgs.pdf
+    text: |-
+      星期五早上，老师告诉同学们，她布置了一项特别的作业：下个星期一，每位同学要上台做一次三分钟的口头报告。小云一听，脸都白了。她从小就怕在大家面前讲话，只要她一[Q16]___，就说不出话来。
+
+      为了这项作业，小云整个周末都[Q17]___的，一句话也不想说。她自言自语：“要是星期一我[Q18]___生病，是不是就不用上台了？”妈妈知道了这件事之后，轻声地对小云说：“害怕是正常的，但有些事你越不去做，就会越害怕。只要试一次，结果可能没你想的那么糟。”
+
+      小云考虑了很久，最终决定试一试。她对着镜子不断地练习，还用手机录音，尽量[Q19]___音量，找出自己的错误。
+
+      到了星期一，小云站上了讲台。刚开始的时候，她心跳加速，声音在发抖，但慢慢地她越讲就越有信心。最后，小云还加上了一个小小的笑话，台下传来[Q20]___的掌声。讲完后，小云松了一口气。她明白了，真正的勇气并不是不害怕，而是在害怕时还是坚持去做。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 吃惊
+        - 紧张
+        - 悲伤
+        - 烦恼
+      correct: 紧张
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 手忙脚乱
+        - 闷闷不乐
+        - 怒气冲冲
+        - 左思右想
+      correct: 闷闷不乐
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 表示
+        - 感觉
+        - 似乎
+        - 假装
+      correct: 假装
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 提高
+        - 提问
+        - 提醒
+        - 提供
+      correct: 提高
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 强烈
+        - 强大
+        - 热烈
+        - 热闹
+      correct: 热烈
+- groupId: P6-CH-2025-StNicholas-Q16-20
+  subject: Chinese
+  passage:
+    title: 老太太与作家
+    source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_chij.pdf
+    text: 有一位老太太很喜欢写作，时不时会把文章寄给报馆。她的心愿就是把文章发表在报纸上。不过，她一直等不到这个机会。一天，老太太隔壁搬来了一个新邻居，他是一个[Q16]___的作家。老太太听说新邻居是个作家后，便经常向他请教。作家不但不觉得[Q17]___，还帮老太太指出文章需要改进的地方。有一次，城里举行了一个写作比赛。作家[Q18]___老太太去参加。结果，老太太得了一等奖，文章被登在报纸上。她非常高兴，把一条手链送给作家，向他表达谢意。那条手链很漂亮，看起来不便宜。作家一开始没打算收下手链，可是老太太一再坚持，作家想了想，便不再[Q19]___。一年后，老太太生病了，作家买了水果去看她。离开前，作家拿出那条手链，笑着说：“您当时的[Q20]___我收下了。现在，您也应该收下我的问候。”听了作家的话，老太太笑着收下了手链。
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 精彩
+        - 著名
+        - 巧妙
+        - 熟练
+      correct: 著名
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 打扰
+        - 麻烦
+        - 欺负
+        - 影响
+      correct: 麻烦
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 选择
+        - 请求
+        - 鼓励
+        - 考虑
+      correct: 鼓励
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 阻拦
+        - 对抗
+        - 拖延
+        - 拒绝
+      correct: 拒绝
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 心意
+        - 想法
+        - 感受
+        - 表情
+      correct: 心意
+- groupId: P6-CH-2025-TaoNan-Q16-20
+  subject: Chinese
+  passage:
+    title: 差不多先生
+    source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_taonan.pdf
+    text: |-
+      从前有一个叫“差不多”的人，他做事很马虎。他常说：“凡事只要差不多就好了，不必太[Q16]___。”
+
+      小时候，他帮妈妈买红糖，结果却买了白糖。妈妈[Q17]___了他几句，他却说：“不要骂我了。红糖白糖不是差不多吗？”
+
+      他工作时，会写也会算，只是经常写错。他不是把“十”写成“千”，就是把“千”写成“十”。老板要他仔细检查，他却只是笑着说：“千与十只差一笔，不是差不多嘛！”后来，有一次他把价值千元的[Q18]___物品写成十元，结果老板因为他的马虎赔了一大笔钱。
+
+      一天，他病倒了。他[Q19]___叫家人去请林医生来看病。谁知他把“林”写成“木”，请来的木医生原来是一名兽医。他全身难受，但心里想：木医生跟林医生差不多，别再[Q20]___家人了，就让他试试吧！木医生走上前，用医牛的方法来替他治病。结果，“差不多”先生病得更严重。就这样，“差不多”先生因为他的马虎而害了自己！
+  questions:
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: "[Q16] 选择正确词语。"
+      options:
+        - 认真
+        - 精彩
+        - 严格
+        - 积极
+      correct: 认真
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 2
+      text: "[Q17] 选择正确词语。"
+      options:
+        - 命令
+        - 嘲笑
+        - 抱怨
+        - 批评
+      correct: 批评
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 2
+      text: "[Q18] 选择正确词语。"
+      options:
+        - 著名
+        - 丰盛
+        - 贵重
+        - 优美
+      correct: 贵重
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 2
+      text: "[Q19] 选择正确词语。"
+      options:
+        - 着急
+        - 慌张
+        - 不时
+        - 赶紧
+      correct: 赶紧
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 2
+      text: "[Q20] 选择正确词语。"
+      options:
+        - 对付
+        - 控制
+        - 要求
+        - 麻烦
+      correct: 麻烦
+- groupId: P6-HC-2025-AiTong-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 妙笔生花
+    source: AiTong Primary 6 Higher Chinese 2025, Paper 2; PDF pages 12; P6_HChinese_2025_SA2_aitong.pdf
+    text: |-
+      李白是中国古代著名的诗人，写了很多优美的好诗。
+
+      相传，当李白还是少年的时候，他做过一个奇怪的梦。在梦里，他看见自己用的笔在桌上动了一下，笔头上神奇地开出了一朵色彩[Q1]___的花朵，而且还有一张张的白纸[Q2]___落在他面前。这时，一首绝妙的好诗出现在李白的头脑里。他立刻抓起笔，[Q3]___地在纸上写了起来。可是，纸上出现的，却不是字，而是一朵朵已经[Q4]___的花。
+
+      成语“妙笔生花”就是从这个故事而来的。“生花”指的是开出美丽的花；“妙笔”说的是非常好的笔。后来，人们便用这个成语来形容一个人很会写文章，具有[Q5]___的写作才能。比如：老师对小文的作文赞不绝口，称赞他才思敏捷，妙笔生花。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 鲜艳
+        - "3"
+      displayAnswer: 鲜艳
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 纷纷
+        - "1"
+      displayAnswer: 纷纷
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 胸有成竹
+        - "8"
+      displayAnswer: 胸有成竹
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 盛开
+        - "2"
+      displayAnswer: 盛开
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 杰出
+        - "6"
+      displayAnswer: 杰出
+  optionBank:
+    - 纷纷
+    - 盛开
+    - 鲜艳
+    - 井井有条
+    - 继续
+    - 杰出
+    - 厉害
+    - 胸有成竹
+- groupId: P6-HC-2025-Catholic-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 诚实的男孩
+    source: Catholic Primary 6 Higher Chinese 2025, Paper 2; PDF pages 4; P6_HChinese_2025_SA2_catholic.pdf
+    text: |-
+      从前，一个男孩放学回家，发现路边的大石头上似乎有什么东西。走近一看，竟然是一盒铜钱。他十分[Q1]___：是谁把铜钱放在了这里？想到铜钱的主人一定会非常着急，他便打算去[Q2]___失主。可是他又想到铜钱的主人可能会回来，于是守着那盒铜钱，一步都没有离开。
+
+      直到傍晚，铜钱的主人还是没有出现。男孩开始[Q3]___起来，自言自语道：“铜钱的主人是不是发生了意外？”
+
+      正当男孩[Q4]___，还是不知该怎么办时，铜钱的主人匆匆赶了过来。他知道男孩不仅没有把钱拿走，还等了他很久后，感动不已。于是，他送了一些食物给这个[Q5]___的男孩。
+
+      铜钱的主人对男孩说：“你是一个不贪财的人，真是难得！”男孩听了，开心地笑了。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 疑惑
+        - "3"
+      displayAnswer: 疑惑
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 寻找
+        - "1"
+      displayAnswer: 寻找
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 担忧
+        - "7"
+      displayAnswer: 担忧
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 左思右想
+        - "8"
+      displayAnswer: 左思右想
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 诚实
+        - "5"
+      displayAnswer: 诚实
+  optionBank:
+    - 寻找
+    - 可贵
+    - 疑惑
+    - 费尽心思
+    - 诚实
+    - 矛盾
+    - 担忧
+    - 左思右想
+- groupId: P6-HC-2025-HenryPark-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 探索世界与自我
+    source: HenryPark Primary 6 Higher Chinese 2025, Paper 2; PDF pages 8; P6_HChinese_2025_SA2_henrypark.pdf
+    text: |-
+      我们的世界是那么美丽。它有高高的山，有宽广的海，还有[Q1]___的草原。然而，要探索这些[Q2]___的自然景观，并不一定是轻而易举的，每一次的前行，都可能需要面对挑战。
+
+      有一次，我和爸爸一起去爬一座山。爬到半山时，山路难行，我爬得很辛苦，[Q3]___想要放弃。可是，爸爸鼓励我坚持下去，他对我说：“[Q4]___眼前的困难，你会有更大的收获。”于是，我咬紧牙关，一步一步往上爬，终于登上了山顶。站在山顶上，呼吸着新鲜的空气，我心里充满了喜悦和成就感。
+
+      这次的经历让我明白，探索的过程不仅让我对世界有了更深的了解，更是对自我的挑战；它不仅让我学会了做事要坚持到底，还[Q5]___了我的成长。只要心怀勇气和梦想，就一定能发现更广阔的天地！
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 一望无际
+        - "8"
+      displayAnswer: 一望无际
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 优美
+        - "6"
+      displayAnswer: 优美
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 甚至
+        - "5"
+      displayAnswer: 甚至
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 克服
+        - "3"
+      displayAnswer: 克服
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 促进
+        - "2"
+      displayAnswer: 促进
+  optionBank:
+    - 遭受
+    - 促进
+    - 克服
+    - 流连忘返
+    - 甚至
+    - 优美
+    - 总算
+    - 一望无际
+- groupId: P6-HC-2025-MGS-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 布莱叶与盲文
+    source: MGS Primary 6 Higher Chinese 2025, Paper 2; PDF pages 4; P6_HChinese_2025_SA2_methodist.pdf
+    text: |-
+      路易·布莱叶，是发明“盲文”的法国人。他小时候因为一场意外失去了光明的世界，不料却因此点亮了无数盲人的人生。
+
+      布莱叶年幼时还没有适合盲人阅读的文字，他只能靠老师口头讲解来学习。其他孩子能[Q1]___掌握的文字，他却学得非常吃力。
+
+      于是，布莱叶开始不断[Q2]___可以帮助盲人阅读的方法。后来，他听说法国军队有一种特别的“夜间文字”，靠点字表达意思。他就想办法改良了这种点字方式，让盲人可以用手指摸出每个字母。虽然只有六个点，却能表示所有字母和标点符号，成为后来盲文的[Q3]___。他还自己制作盲文书，帮助许多看不见的人重新“阅读”。他的人生经历，[Q4]___着无数盲人努力前进。
+
+      布莱叶的发明，是改变世界的[Q5]___一步。他虽然失去了视力，但用智慧和坚持，为世界带来了看不见的光。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 轻松
+        - "4"
+      displayAnswer: 轻松
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 摸索
+        - "2"
+      displayAnswer: 摸索
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 基础
+        - "5"
+      displayAnswer: 基础
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 指引
+        - "6"
+      displayAnswer: 指引
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 关键
+        - "1"
+      displayAnswer: 关键
+  optionBank:
+    - 关键
+    - 摸索
+    - 打动
+    - 轻松
+    - 基础
+    - 指引
+    - 厉害
+    - 方便
+- groupId: P6-HC-2025-NanHua-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 免费的早餐
+    source: NanHua Primary 6 Higher Chinese 2025, Paper 2; PDF pages 5; P6_HChinese_2025_SA2_nanhua.pdf
+    text: |-
+      清晨，林小丽走在上学的路上，突然下起了一阵急雨。雨点打在林小丽的校服上，她快步跑进“阳光咖啡店”避雨。店里很安静，只有几位顾客在[Q1]___地用餐。她在一旁看着，不自觉地摸摸自己的肚子。
+
+      “来份早餐吗？”店主张叔叔笑眯眯地问，“我们为同学们[Q2]___免费的早餐。”他转身打开烤箱，取出面包，“这些都是今早烤的，食材都是最新鲜的。”他[Q3]___地把面包和一瓶牛奶装进袋子，递给她。
+
+      林小丽[Q4]___地看着张叔叔，问道：“真的免费吗？”
+
+      “当然！”张叔叔解释道，“去年我听说很多学生饿着肚子上学，就想尽一份力。”林小丽接过早餐，觉得这份早餐[Q5]___了温暖和爱心。
+
+      “谢谢您！”临走时，小丽微笑着对张叔叔说。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 津津有味
+        - "5"
+      displayAnswer: 津津有味
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 提供
+        - "6"
+      displayAnswer: 提供
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 迅速
+        - "3"
+      displayAnswer: 迅速
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 怀疑
+        - "2"
+      displayAnswer: 怀疑
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 充满
+        - "8"
+      displayAnswer: 充满
+  optionBank:
+    - 狼吞虎咽
+    - 怀疑
+    - 迅速
+    - 羡慕
+    - 津津有味
+    - 提供
+    - 猛然
+    - 充满
+- groupId: P6-HC-2025-Nanyang-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 坚持绘画
+    source: Nanyang Primary 6 Higher Chinese 2025, Paper 2; PDF pages 6; P6_HChinese_2025_SA2_nanyang.pdf
+    text: |-
+      小明是个热爱绘画的学生。他报名参加了学校的绘画比赛，但在准备过程中，他总觉得自己的作品不如其他参赛者，心中充满了[Q1]___，担心自己在这次比赛中的表现，脑海中总是浮现出自己失败的画面。他不时想要[Q2]___，放弃这场比赛。
+
+      小明的爷爷看出了他的挣扎，[Q3]___地对他说：“每个人都会在不断地怀疑自己及肯定自己的过程中成长，这样才能让我们变得更有[Q4]___。坚持下去，你会看到自己的进步。”
+
+      听了爷爷的话，小明决定不再烦恼，继续努力创作。他坚持每天练习，不断尝试新的绘画技巧，逐渐发现自己的绘画水平有了显著的提升。最后，他的作品获得了大家的[Q5]___。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 忧虑
+        - "6"
+      displayAnswer: 忧虑
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 半途而废
+        - "8"
+      displayAnswer: 半途而废
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 语重心长
+        - "4"
+      displayAnswer: 语重心长
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 智慧
+        - "5"
+      displayAnswer: 智慧
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 赞赏
+        - "7"
+      displayAnswer: 赞赏
+  optionBank:
+    - 态度
+    - 糟糕
+    - 榜样
+    - 语重心长
+    - 智慧
+    - 忧虑
+    - 赞赏
+    - 半途而废
+- groupId: P6-HC-2025-PLMGS-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 远方爸爸的爱
+    source: PLMGS Primary 6 Higher Chinese 2025, Paper 2; PDF pages 2; P6_HChinese_2025_SA2_mgspayalebar.pdf
+    text: |-
+      那年，爸爸在外地工作，家里只有我和妈妈。有一天，放学后，外头下着大雪，我[Q1]___地走在雪地上，不让自己滑倒。过了很久才回到家。
+
+      我发现厨房里飘来阵阵饭香，跑过去一看，妈妈正在煮我最爱的萝卜排骨汤。“快换衣服，洗手，吃饭！”妈妈边说边给我盛了一大碗汤。我喝了一口，整个人[Q2]___起来。我好奇地问：“妈今天怎么会煮这个？”
+
+      妈妈脸上露出[Q3]___的笑容，说：“今天是你的生日呀，爸爸一早打电话来，叫我一定要煮你最爱的菜。”
+
+      我听了，鼻子一酸，心里有一股说不出的感动。我马上拿起电话，等待爸爸接听时，我[Q4]___地看着窗外的雪，想起爸爸说过的话：“不管距离多远，心都会在你身边。”
+
+      这句话，我以前听不太懂，但现在我[Q5]___明白了，爸爸的爱并没有因为距离而减少。此时，我感到特别幸福。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 小心翼翼
+        - "4"
+      displayAnswer: 小心翼翼
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 暖和
+        - "2"
+      displayAnswer: 暖和
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 慈祥
+        - "5"
+      displayAnswer: 慈祥
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 若有所思
+        - "8"
+      displayAnswer: 若有所思
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 终于
+        - "1"
+      displayAnswer: 终于
+  optionBank:
+    - 终于
+    - 暖和
+    - 满意
+    - 小心翼翼
+    - 慈祥
+    - 永远
+    - 温和
+    - 若有所思
+- groupId: P6-HC-2025-Raffles-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 诚实的孩子
+    source: Raffles Primary 6 Higher Chinese 2025, Paper 2; PDF pages 4; P6_HChinese_2025_SA2_raffles.pdf
+    text: |-
+      一天下午，公园里充满了孩子们的欢笑声。子平和朋友们在[Q1]___的阳光下玩得津津有味时，突然在草丛里发现了一个钱包。
+
+      子平好奇地捡起钱包，打开一看，吃惊地大叫：“好多钱啊！”朋友们[Q2]___地围了过来，开始议论纷纷。有人兴奋地说：“这么多钱，我们拿这些钱去买东西吃吧！”听到这个建议，子平心里有些[Q3]___，他想了想，说：“这些钱不是我们的，应该送去警察局！”朋友们听了，[Q4]___有些失望，但还是点头同意。
+
+      他们把钱包送到附近的警察局。警察称赞他们说：“你们真是诚实的好孩子！”
+
+      这件事让子平明白人不应该贪财，因为[Q5]___诚实的品德，比什么都可贵。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 耀眼
+        - "5"
+      displayAnswer: 耀眼
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 迫不及待
+        - "4"
+      displayAnswer: 迫不及待
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 疑惑
+        - "2"
+      displayAnswer: 疑惑
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 不免
+        - "6"
+      displayAnswer: 不免
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 拥有
+        - "3"
+      displayAnswer: 拥有
+  optionBank:
+    - 照耀
+    - 疑惑
+    - 拥有
+    - 迫不及待
+    - 耀眼
+    - 不免
+    - 怀疑
+    - 不谋而合
+- groupId: P6-HC-2025-RedSwastika-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 重要的朋友
+    source: RedSwastika Primary 6 Higher Chinese 2025, Paper 2; PDF pages 10; P6_HChinese_2025_SA2_redswastika.pdf
+    text: |-
+      有一天，老师问同学们：“除了父母，你心中最重要的人是谁？”小杰抢着回答：“是我的朋友立明！”听了他的[Q1]___，全班都哈哈大笑，连立明也[Q2]___地低下头。
+
+      老师又问：“为什么这个朋友那么重要呢？”小杰说：“无论我是开心还是难过，立明总是陪着我。有一次，我跌倒了，脚上全是血，同学们都怕得不敢靠近，只有立明[Q3]___跑来扶起我，还送我去办公室。”
+
+      听到这里，教室里有人小声说：“我也想有这样的朋友。”有人点头[Q4]___赞同。
+
+      老师笑着说：“那你觉得，朋友之间最重要的是什么呢？”
+
+      小杰认真地想了想，然后说：“就是在对方最[Q5]___帮忙的时候，你愿意站出来帮助他、陪伴他。”老师听了，点点头。
+
+      教室里顿时鸦雀无声，大家都在思考，自己是不是也能成为这样的朋友。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 答案
+        - "5"
+      displayAnswer: 答案
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 不好意思
+        - "8"
+      displayAnswer: 不好意思
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 迅速
+        - "2"
+      displayAnswer: 迅速
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 表示
+        - "3"
+      displayAnswer: 表示
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 需要
+        - "6"
+      displayAnswer: 需要
+  optionBank:
+    - 提问
+    - 迅速
+    - 表示
+    - 羞愧
+    - 答案
+    - 需要
+    - 表现
+    - 不好意思
+- groupId: P6-HC-2025-Rosyth-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 厨师杰克
+    source: Rosyth Primary 6 Higher Chinese 2025, Paper 2; PDF pages 3; P6_HChinese_2025_SA2_rosyth.pdf
+    text: |-
+      厨师杰克总是会细心地完成顾客所点的每道菜。有时，他看到顾客吃完饭，也会上前询问顾客的感受，并表示感谢，让顾客[Q1]___。
+
+      杰克的母亲是华人，因此华语是他日常生活中主要使用的语言。他从小就[Q2]___在这样的环境中，也对中餐传统美食产生兴趣。他记得自己[Q3]___在家做红烧排骨给父母吃，他们非常喜欢。这段温馨的[Q4]___一直留在他的回忆中。他的愿望很简单，就是多学习世界各地的美食知识。
+
+      现在，杰克在乌节路的一家餐馆工作。他经过多次[Q5]___，做出了很多新的美食。这些美食让顾客们赞不绝口。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 喜出望外
+        - "8"
+      displayAnswer: 喜出望外
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 沉浸
+        - "5"
+      displayAnswer: 沉浸
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 曾经
+        - "3"
+      displayAnswer: 曾经
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 时刻
+        - "2"
+      displayAnswer: 时刻
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 实验
+        - "1"
+      displayAnswer: 实验
+  optionBank:
+    - 实验
+    - 时刻
+    - 曾经
+    - 欢天喜地
+    - 沉浸
+    - 连接
+    - 触碰
+    - 喜出望外
+- groupId: P6-HC-2025-SCGS-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 小袋鼠的口袋
+    source: SCGS Primary 6 Higher Chinese 2025, Paper 2; PDF pages 5; P6_HChinese_2025_SA2_scgs.pdf
+    text: |-
+      春天到了，小袋鼠看到树林里开满了五颜六色的花朵，于是，它采了一大束色彩[Q1]___的野花。采完后，它将花朵插在肚子上的袋子里，[Q2]___地跳回家。
+
+      小袋鼠迫不及待地让妈妈看看它今天的收获。妈妈说这些花很漂亮。小袋鼠问：“妈妈，我这个小口袋是用来插花的，对吗？”妈妈解释道：“这个小口袋不仅能插花，将来你长大了，还要用它来照顾你的宝宝。”
+
+      小袋鼠歪着头，满脸[Q3]___地问：“这个小口袋怎么照顾宝宝？”妈妈说：“刚出生的宝宝不会走路，要把它放进妈妈的小口袋里[Q4]___地照顾。”
+
+      小袋鼠又问：“那我的小口袋会随着我长大而变大吗？”
+
+      “当然会。”妈妈肯定地回答。
+
+      “太好了！等你和爸爸[Q5]___大走不动时，我就可以把你们放在我的大口袋里，带着你们到处走！”小袋鼠开心地说。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 鲜艳
+        - "7"
+      displayAnswer: 鲜艳
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 急急忙忙
+        - "1"
+      displayAnswer: 急急忙忙
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 疑惑
+        - "4"
+      displayAnswer: 疑惑
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 细心
+        - "2"
+      displayAnswer: 细心
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 年纪
+        - "3"
+      displayAnswer: 年纪
+  optionBank:
+    - 急急忙忙
+    - 细心
+    - 年纪
+    - 疑惑
+    - 慌慌张张
+    - 专心
+    - 鲜艳
+    - 怀疑
+- groupId: P6-HC-2025-StNicholas-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 特别的面店
+    source: StNicholas Primary 6 Higher Chinese 2025, Paper 2; PDF pages 4; P6_HChinese_2025_SA2_chij.pdf
+    text: |-
+      在大街上有一家很特别的面店。这家面店没有招牌，也没有美丽的[Q1]___，只摆放了一些简单的桌椅。一到午餐时间，店里挤满了客人，非常热闹。
+
+      很多在附近工作的工人都喜欢到这家店吃面，因为面的配料很丰富，味道好，价钱[Q2]___。面店的老板以前也是工人，工作多年后，打算开一家面店。但是，他存的钱不够多。后来，他凭着顽强的[Q3]___，克服了许多困难才成功地开了这家店。
+
+      老板知道工人收入不多，生活辛苦，他通过[Q4]___店里的员工，把面的价钱降下来，让他们少花一点钱就能填饱肚子。
+
+      许多来吃面的工人知道老板的苦心后，深受感动，经常主动帮忙收拾碗筷、擦桌子，因此这家面店虽然没有招牌，也不[Q5]___它的生意。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 装饰
+        - "4"
+      displayAnswer: 装饰
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 便宜
+        - "1"
+      displayAnswer: 便宜
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 意志
+        - "7"
+      displayAnswer: 意志
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 减少
+        - "6"
+      displayAnswer: 减少
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 影响
+        - "3"
+      displayAnswer: 影响
+  optionBank:
+    - 便宜
+    - 意思
+    - 影响
+    - 装饰
+    - 缺少
+    - 减少
+    - 意志
+    - 包装
+- groupId: P6-HC-2025-TaoNan-Q1-5
+  subject: Higher Chinese
+  passage:
+    title: 合理使用电脑
+    source: TaoNan Primary 6 Higher Chinese 2025, Paper 2; PDF pages 2; P6_HChinese_2025_SA2_taonan.pdf
+    text: |-
+      电脑是青少年生活中不可缺少的一部分。它就像一位充满[Q1]___的老师，可以帮助我们迅速获取知识、解答疑问；它又像一个神奇的游乐场，既能训练我们的大脑，又能让我们的心情愉快，减轻学习[Q2]___。
+
+      然而长时间使用电脑也会带来一些不良后果，比如视力[Q3]___、影响学习、沉迷网络游戏等。而且，青少年沉迷网络世界，[Q4]___也容易结交不好的朋友，影响和家人之间的关系。
+
+      因此，我们应该好好利用电脑，让它帮助我们成长，而不是[Q5]___我们前进。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: "[Q1] 选择正确词语。"
+      accepted:
+        - 智慧
+        - "5"
+      displayAnswer: 智慧
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: "[Q2] 选择正确词语。"
+      accepted:
+        - 压力
+        - "4"
+      displayAnswer: 压力
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: "[Q3] 选择正确词语。"
+      accepted:
+        - 下降
+        - "8"
+      displayAnswer: 下降
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: "[Q4] 选择正确词语。"
+      accepted:
+        - 甚至
+        - "1"
+      displayAnswer: 甚至
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: "[Q5] 选择正确词语。"
+      accepted:
+        - 阻拦
+        - "3"
+      displayAnswer: 阻拦
+  optionBank:
+    - 甚至
+    - 聪明
+    - 阻拦
+    - 压力
+    - 智慧
+    - 退缩
+    - 大概
+    - 下降

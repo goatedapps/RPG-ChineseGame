@@ -8,5 +8,10 @@
     { "id": "open-pantry", "name": "Open Pantry", "words": ["捐出", "新鲜", "邀请", "存放"], "restoration": "The hawker centre's community pantry reopens." },
     { "id": "clear-evidence", "name": "Clear Evidence", "words": ["根据", "怀疑", "测试", "碎片"], "restoration": "The market noticeboard displays verified facts again." },
     { "id": "honest-breakfast", "name": "Honest Breakfast", "words": ["联系", "号码", "诚实", "善良"], "restoration": "The hill village shares breakfast together again." }
+  ],
+  "p6": [
+    { "id": "honest-market", "name": "Honest Market", "words": ["原价", "便宜", "质量", "销售"], "restoration": "Clear prices and reliable goods return to the market." },
+    { "id": "careful-repairs", "name": "Careful Repairs", "words": ["损坏", "修理", "均匀", "态度"], "restoration": "The crossing repairs its tools with patience and care." },
+    { "id": "truthful-signs", "name": "Truthful Signs", "words": ["说谎", "哑口无言", "掩耳盗铃", "毫不在意"], "restoration": "The market signs remind neighbours to speak honestly." }
   ]
 }

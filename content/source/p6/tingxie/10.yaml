@@ -1,0 +1,439 @@
+title: 第十课 (Lesson 10)
+vocab:
+  - word: 书籍
+    pinyin: shū jí
+    meaning: Books
+    example: 图书馆收藏了许多不同种类的书籍。
+    sentenceBank:
+      - zh: 她把书籍按主题分类。
+        en: She sorted the books by topic.
+      - zh: 这些书籍需要放回原来的书架。
+        en: These books need to be returned to their original shelves.
+      - zh: 阅读书籍能帮助我们增长知识。
+        en: Reading books helps us gain knowledge.
+      - zh: 爸爸捐了一些书籍给学校。
+        en: Dad donated some books to the school.
+      - zh: 请爱护借来的书籍，不要折坏书页。
+        en: Please take care of borrowed books and do not damage their pages by folding them.
+  - word: 介绍
+    pinyin: jiè shào
+    meaning: Introduce / Describe
+    example: 老师向我们介绍了一本有趣的小说。
+    sentenceBank:
+      - zh: 她先介绍自己的姓名和兴趣。
+        en: She first introduced herself by giving her name and interests.
+      - zh: 导游介绍了这座古桥的历史。
+        en: The guide described the history of this old bridge.
+      - zh: 哥哥把新朋友介绍给我们认识。
+        en: My older brother introduced his new friend to us.
+      - zh: 这本书介绍了各种海洋生物。
+        en: This book describes different kinds of marine life.
+      - zh: 请你向大家介绍一下这幅画。
+        en: Please tell everyone about this painting.
+  - word: 出版社
+    pinyin: chū bǎn shè
+    meaning: Publishing house / Publisher
+    example: 这家出版社出版了许多儿童读物。
+    sentenceBank:
+      - zh: 作者把书稿寄给出版社。
+        en: The author sent the manuscript to the publishing house.
+      - zh: 这本书的封面上印着出版社的名称。
+        en: The publisher's name was printed on this book's cover.
+      - zh: 出版社的编辑正在修改书稿。
+        en: An editor at the publishing house was revising the manuscript.
+      - zh: 我们参观了一家出版社，了解书籍的制作过程。
+        en: We visited a publishing house to learn how books are produced.
+      - zh: 这家出版社准备推出一套新的故事书。
+        en: This publisher is preparing to release a new series of storybooks.
+  - word: 目录
+    pinyin: mù lù
+    meaning: Table of contents
+    example: 我查看目录，找到想读的章节。
+    sentenceBank:
+      - zh: 这本书的目录列出了每一章的标题。
+        en: This book's contents page lists the title of each chapter.
+      - zh: 目录中的页码告诉我们各章节从哪里开始。
+        en: The page numbers in the table of contents show where the chapters begin.
+      - zh: 她根据目录翻到介绍植物的部分。
+        en: She used the table of contents to find the section about plants.
+      - zh: 老师提醒我们先看目录，了解全书的内容。
+        en: The teacher reminded us to read the table of contents first to understand the book's coverage.
+      - zh: 这本书的目录放在正文前面。
+        en: This book's table of contents appears before the main text.
+  - word: 页码
+    pinyin: yè mǎ
+    meaning: Page number
+    example: 这本书的页码印在每页的右下角。
+    sentenceBank:
+      - zh: 请根据页码，把散开的书页排好。
+        en: Please arrange the loose pages according to their page numbers.
+      - zh: 他记下页码，方便下次继续阅读。
+        en: He noted the page number so he could continue reading next time.
+      - zh: 这张纸的页码是二十五。
+        en: The page number on this sheet is twenty-five.
+      - zh: 目录里标明了各章的页码。
+        en: The table of contents shows the page numbers for each chapter.
+      - zh: 老师让我们核对引用内容的页码。
+        en: The teacher asked us to check the page numbers of the passages we quoted.
+  - word: 篇
+    pinyin: piān
+    meaning: Measure word for pieces of writing
+    example: 我今天读了一篇介绍动物的文章。
+    sentenceBank:
+      - zh: 她写了一篇关于校园生活的作文。
+        en: She wrote an essay about school life.
+      - zh: 这本书收录了十篇童话。
+        en: This book contains ten fairy tales.
+      - zh: 请从课本里选一篇文章朗读。
+        en: Please choose an article from the textbook to read aloud.
+      - zh: 老师表扬了这篇写得很好的作文。
+        en: The teacher praised this well-written essay.
+      - zh: 他每天读两篇短文，练习理解内容。
+        en: He reads two short passages every day to practise comprehension.
+  - word: 文章
+    pinyin: wén zhāng
+    meaning: Article / Piece of writing
+    example: 这篇文章介绍了保护环境的方法。
+    sentenceBank:
+      - zh: 她仔细阅读文章，找出重点。
+        en: She read the article carefully to identify its main points.
+      - zh: 老师让我们给文章拟一个标题。
+        en: The teacher asked us to suggest a title for the passage.
+      - zh: 这篇文章的开头很吸引人。
+        en: The opening of this article is very engaging.
+      - zh: 他在校刊上发表了一篇文章。
+        en: He published an article in the school magazine.
+      - zh: 读完文章后，我们讨论了作者的观点。
+        en: After reading the article, we discussed the author's viewpoint.
+  - word: 朗读
+    pinyin: lǎng dú
+    meaning: Read aloud
+    example: 她用清楚响亮的声音朗读课文。
+    sentenceBank:
+      - zh: 老师请小明朗读第一段。
+        en: The teacher asked Xiao Ming to read the first paragraph aloud.
+      - zh: 朗读时，要注意标点和停顿。
+        en: Pay attention to punctuation and pauses when reading aloud.
+      - zh: 妹妹每天练习朗读故事。
+        en: My younger sister practises reading stories aloud every day.
+      - zh: 他朗读得很流利，大家都听懂了。
+        en: He read aloud fluently, and everyone understood.
+      - zh: 我们轮流朗读这篇短文。
+        en: We took turns reading this short passage aloud.
+  - word: 翻译
+    pinyin: fān yì
+    meaning: Translate / Translation
+    example: 她把这篇英文故事翻译成华文。
+    sentenceBank:
+      - zh: 请把这句话翻译成英语。
+        en: Please translate this sentence into English.
+      - zh: 这本小说已经被翻译成多种语言。
+        en: This novel has been translated into several languages.
+      - zh: 他检查翻译是否准确表达了原文的意思。
+        en: He checked whether the translation accurately expressed the original meaning.
+      - zh: 爷爷请姐姐帮忙翻译信中的内容。
+        en: Grandpa asked my older sister to translate the contents of the letter.
+      - zh: 翻译时，不能只逐字替换，还要理解整句话的意思。
+        en: When translating, you need to understand the whole sentence rather than simply replace each word.
+  - word: 师徒
+    pinyin: shī tú
+    meaning: Master and apprentice / Teacher and disciple
+    example: 师徒二人一起制作了一张木桌。
+    sentenceBank:
+      - zh: 这对师徒每天都在工坊里练习。
+        en: This master and apprentice practise in the workshop every day.
+      - zh: 故事中的师徒一路互相帮助。
+        en: The teacher and disciple in the story helped each other throughout their journey.
+      - zh: 师徒合作完成了这件精美的作品。
+        en: The master and apprentice worked together to finish this beautiful piece.
+      - zh: 师徒之间既有教导，也有信任。
+        en: The relationship between master and apprentice involves both instruction and trust.
+      - zh: 这幅画描绘了师徒一起练剑的情景。
+        en: This painting depicts a master and disciple practising swordsmanship together.
+  - word: 打败
+    pinyin: dǎ bài
+    meaning: Defeat
+    example: 我们队打败了对手，进入决赛。
+    sentenceBank:
+      - zh: 故事中的英雄打败了怪兽。
+        en: The hero in the story defeated the monster.
+      - zh: 她在棋赛中打败了实力很强的选手。
+        en: She defeated a strong player in the chess competition.
+      - zh: 要打败对手，光靠运气是不够的。
+        en: Luck alone is not enough to defeat an opponent.
+      - zh: 这次虽然被打败了，我们仍会继续努力。
+        en: Although we were defeated this time, we will keep working hard.
+      - zh: 经过训练，他们终于打败了上次获胜的队伍。
+        en: After training, they finally defeated the team that had won last time.
+  - word: 妖魔鬼怪
+    pinyin: yāo mó guǐ guài
+    meaning: Demons and monsters
+    example: 这本神话书里出现了各种妖魔鬼怪。
+    sentenceBank:
+      - zh: 故事中的英雄不怕妖魔鬼怪。
+        en: The hero in the story was not afraid of demons and monsters.
+      - zh: 作者想象出许多奇特的妖魔鬼怪。
+        en: The author imagined many unusual demons and monsters.
+      - zh: 动画片里的妖魔鬼怪最后都被打败了。
+        en: The demons and monsters in the cartoon were all defeated in the end.
+      - zh: 奶奶讲的故事里，妖魔鬼怪常常躲在山洞中。
+        en: In Grandma's stories, demons and monsters often hid in caves.
+      - zh: 这些妖魔鬼怪是故事人物，并不是真实的动物。
+        en: These demons and monsters are fictional characters rather than real animals.
+  - word: 申请
+    pinyin: shēn qǐng
+    meaning: Apply / Application
+    example: 她向学校申请加入合唱团。
+    sentenceBank:
+      - zh: 他填写了申请表，准备报名参加活动。
+        en: He filled in an application form to sign up for the activity.
+      - zh: 借用礼堂前，我们需要先提出申请。
+        en: We need to apply before borrowing the hall.
+      - zh: 姐姐申请了一份假期工作。
+        en: My older sister applied for a holiday job.
+      - zh: 他的申请获得批准，可以使用这间教室。
+        en: His application was approved, allowing him to use this classroom.
+      - zh: 她写信申请参加这次比赛。
+        en: She wrote to apply to take part in this competition.
+  - word: 获得
+    pinyin: huò dé
+    meaning: Obtain / Receive / Gain
+    example: 她在比赛中获得了一等奖。
+    sentenceBank:
+      - zh: 认真学习后，他获得了更多知识。
+        en: Through diligent study, he gained more knowledge.
+      - zh: 这次活动获得了家长的支持。
+        en: This activity received the parents' support.
+      - zh: 她获得老师的允许，借用了这本书。
+        en: She obtained the teacher's permission to borrow this book.
+      - zh: 队员们努力训练，终于获得好成绩。
+        en: The team members trained hard and finally achieved good results.
+      - zh: 他从朋友那里获得了有用的建议。
+        en: He received useful advice from his friend.
+  - word: 贫穷
+    pinyin: pín qióng
+    meaning: Poor / Poverty-stricken
+    example: 这个家庭很贫穷，常常买不起生活用品。
+    sentenceBank:
+      - zh: 故事中的孩子虽然贫穷，却很爱学习。
+        en: Although the child in the story was poor, he loved learning.
+      - zh: 他们帮助贫穷的家庭购买必需品。
+        en: They helped poor families buy necessities.
+      - zh: 这本书描写了贫穷农民的生活。
+        en: This book describes the lives of poor farmers.
+      - zh: 她没有因为朋友贫穷就轻视他。
+        en: She did not look down on her friend because he was poor.
+      - zh: 这个村庄过去很贫穷，如今生活条件改善了。
+        en: This village used to be very poor, but living conditions have now improved.
+  - word: 多余
+    pinyin: duō yú
+    meaning: Extra / Surplus / Unnecessary
+    example: 这些椅子已经够了，多余的可以收起来。
+    sentenceBank:
+      - zh: 妈妈把多余的食物分给邻居。
+        en: Mum shared the extra food with the neighbours.
+      - zh: 这段话已经很清楚，不需要多余的解释。
+        en: This passage is clear enough and needs no unnecessary explanation.
+      - zh: 他把多余的纸张留着下次使用。
+        en: He saved the extra paper for next time.
+      - zh: 盒子里有一颗多余的纽扣。
+        en: There was one extra button in the box.
+      - zh: 我们删去了文章中多余的句子。
+        en: We removed unnecessary sentences from the article.
+  - word: 书柜
+    pinyin: shū guì
+    meaning: Bookcase
+    example: 我的书柜里摆满了故事书。
+    sentenceBank:
+      - zh: 她把字典放在书柜的第二层。
+        en: She put the dictionary on the bookcase's second shelf.
+      - zh: 爸爸做了一个木书柜。
+        en: Dad made a wooden bookcase.
+      - zh: 这个书柜太满，已经放不下新书。
+        en: This bookcase is too full to hold new books.
+      - zh: 我们擦干净书柜，再把书放回去。
+        en: We cleaned the bookcase before putting the books back.
+      - zh: 书柜旁边摆着一张阅读椅。
+        en: A reading chair stood beside the bookcase.
+  - word: 饥饿
+    pinyin: jī è
+    meaning: Hungry / Hunger
+    example: 他一整天没有吃东西，感到十分饥饿。
+    sentenceBank:
+      - zh: 饥饿的小猫围着食物不停地叫。
+        en: The hungry kitten kept meowing around the food.
+      - zh: 走了很久，我们开始感到饥饿。
+        en: After walking for a long time, we began to feel hungry.
+      - zh: 她把面包分给饥饿的孩子。
+        en: She shared the bread with the hungry children.
+      - zh: 故事中的旅人饥饿难忍，停下来寻找食物。
+        en: The traveller in the story could hardly bear his hunger and stopped to look for food.
+      - zh: 吃完午饭后，他不再感到饥饿。
+        en: After lunch, he no longer felt hungry.
+  - word: 总算
+    pinyin: zǒng suàn
+    meaning: Finally / At last
+    example: 找了半天，我总算找到了钥匙。
+    sentenceBank:
+      - zh: 经过多次练习，她总算学会了游泳。
+        en: After much practice, she finally learned to swim.
+      - zh: 雨下了一整天，傍晚总算停了。
+        en: It rained all day and finally stopped in the evening.
+      - zh: 我们等了很久，巴士总算来了。
+        en: We waited a long time, and the bus finally arrived.
+      - zh: 他努力了几个月，总算完成了模型。
+        en: After working for several months, he finally completed the model.
+      - zh: 这道难题总算解决了，大家松了一口气。
+        en: The difficult problem was finally solved, and everyone sighed with relief.
+  - word: 踮
+    pinyin: diǎn
+    meaning: Raise the heels / Stand on tiptoe
+    example: 妹妹踮起脚尖，想看清柜子上的玩具。
+    sentenceBank:
+      - zh: 他踮着脚，轻轻走进房间。
+        en: He tiptoed quietly into the room.
+      - zh: 她踮起脚尖，伸手拿书架上的书。
+        en: She stood on tiptoe and reached for the book on the shelf.
+      - zh: 孩子们踮着脚尖，望向人群后面的舞台。
+        en: The children stood on tiptoe to see the stage beyond the crowd.
+      - zh: 舞者踮起脚尖，慢慢转了一个圈。
+        en: The dancer rose onto her toes and slowly turned around.
+      - zh: 我踮起脚尖，才够到门铃。
+        en: I had to stand on tiptoe to reach the doorbell.
+  - word: 全神贯注
+    pinyin: quán shén guàn zhù
+    meaning: Concentrate fully / Be engrossed
+    example: 他全神贯注地读书，没有听见门铃。
+    sentenceBank:
+      - zh: 她全神贯注地听老师讲解。
+        en: She listened to the teacher's explanation with full attention.
+      - zh: 画家全神贯注地描绘花瓣。
+        en: The painter concentrated fully on painting the petals.
+      - zh: 比赛时，队员们全神贯注地观察球的方向。
+        en: During the match, the players focused completely on the ball's direction.
+      - zh: 弟弟全神贯注地拼模型，连时间都忘了。
+        en: My younger brother was so engrossed in building the model that he forgot the time.
+      - zh: 我们全神贯注地观看实验，不想错过任何变化。
+        en: We watched the experiment intently, not wanting to miss any changes.
+  - word: 惧怕
+    pinyin: jù pà
+    meaning: Fear / Be afraid of
+    example: 她惧怕黑暗，不敢独自进房间。
+    sentenceBank:
+      - zh: 他不惧怕困难，勇敢地接受挑战。
+        en: He was not afraid of difficulties and bravely accepted the challenge.
+      - zh: 妹妹惧怕雷声，紧紧拉着妈妈的手。
+        en: My younger sister feared thunder and held Mum's hand tightly.
+      - zh: 故事中的骑士毫不惧怕巨龙。
+        en: The knight in the story was not at all afraid of the dragon.
+      - zh: 他惧怕失败，所以迟迟不敢尝试。
+        en: He feared failure and hesitated to try.
+      - zh: 有了朋友的鼓励，她不再惧怕上台讲话。
+        en: With her friend's encouragement, she no longer feared speaking on stage.
+  - word: 滋味
+    pinyin: zī wèi
+    meaning: Feeling / Experience
+    example: 他终于体会到成功的滋味。
+    sentenceBank:
+      - zh: 被误会的滋味很不好受。
+        en: Being misunderstood feels unpleasant.
+      - zh: 她第一次离开家，尝到了想家的滋味。
+        en: She experienced homesickness for the first time after leaving home.
+      - zh: 努力后获得认可，他心里有一种甜蜜的滋味。
+        en: Being recognised after working hard gave him a sweet feeling inside.
+      - zh: 失败的滋味让他难过，也促使他继续努力。
+        en: The feeling of failure upset him but also encouraged him to keep trying.
+      - zh: 等待消息时，我体会到了焦急的滋味。
+        en: While waiting for news, I experienced the feeling of anxiety.
+  - word: 糟糕
+    pinyin: zāo gāo
+    meaning: Terrible / Bad
+    example: 他的计划没有安排好，结果十分糟糕。
+    sentenceBank:
+      - zh: 糟糕，我忘了带车票！
+        en: Oh no, I forgot to bring my ticket!
+      - zh: 这条路的路况很糟糕，车子不停地颠簸。
+        en: The road was in terrible condition, and the vehicle kept jolting.
+      - zh: 今天的心情很糟糕，她想安静地休息。
+        en: She was in a bad mood today and wanted to rest quietly.
+      - zh: 事情已经很糟糕，不能再拖延了。
+        en: The situation was already bad, and we could not delay any longer.
+      - zh: 这次演出虽然开头很糟糕，后来却越来越顺利。
+        en: Although the performance started badly, it went more smoothly as it continued.
+  - word: 暂时
+    pinyin: zàn shí
+    meaning: Temporarily / For the time being
+    example: 图书馆正在装修，暂时不开放。
+    sentenceBank:
+      - zh: 他暂时把书放在桌上。
+        en: He put the book on the table for the time being.
+      - zh: 比赛因大雨暂时停止。
+        en: The match was temporarily stopped because of heavy rain.
+      - zh: 妈妈暂时离开一会儿，很快就回来。
+        en: Mum is stepping out briefly and will return soon.
+      - zh: 这个问题暂时没有答案，我们需要继续研究。
+        en: There is no answer to this question yet, so we need to continue investigating.
+      - zh: 她暂时借住在奶奶家。
+        en: She is staying at Grandma's house temporarily.
+  - word: 诱人
+    pinyin: yòu rén
+    meaning: Tempting / Attractive
+    example: 刚出炉的面包散发出诱人的香味。
+    sentenceBank:
+      - zh: 桌上的蛋糕看起来十分诱人。
+        en: The cake on the table looked very tempting.
+      - zh: 这份旅行计划很诱人，大家都想参加。
+        en: This travel plan was very appealing, and everyone wanted to join.
+      - zh: 橱窗里摆着色彩诱人的糖果。
+        en: Temptingly colourful sweets were displayed in the window.
+      - zh: 烤鸡的香味太诱人了，他忍不住走进厨房。
+        en: The roast chicken smelled so tempting that he could not resist entering the kitchen.
+      - zh: 这家店的优惠很诱人，但她还是只买需要的东西。
+        en: The shop's offer was tempting, but she still bought only what she needed.
+  - word: 捣蛋
+    pinyin: dǎo dàn
+    meaning: Cause mischief / Make trouble
+    example: 弟弟故意藏起我的笔，真爱捣蛋。
+    sentenceBank:
+      - zh: 他在课堂上捣蛋，影响了同学学习。
+        en: He made trouble in class and disrupted his classmates' learning.
+      - zh: 这只小狗又捣蛋，把拖鞋叼走了。
+        en: This puppy was being mischievous again and carried away a slipper.
+      - zh: 妹妹捣蛋地在哥哥的画上添了一对胡子。
+        en: My younger sister mischievously added a moustache to her older brother's drawing.
+      - zh: 老师提醒他不要捣蛋，要认真听课。
+        en: The teacher reminded him not to cause mischief and to listen attentively.
+      - zh: 他知道捣蛋会给别人添麻烦，便改正了。
+        en: He realised that his mischief troubled others and corrected his behaviour.
+  - word: 端
+    pinyin: duān
+    meaning: Carry level in the hands
+    example: 妈妈端着一碗汤走向餐桌。
+    sentenceBank:
+      - zh: 他双手端着盘子，小心地走。
+        en: He walked carefully, carrying the plate level with both hands.
+      - zh: 姐姐把茶端到爷爷面前。
+        en: My older sister brought tea to Grandpa.
+      - zh: 请把这碗粥端进厨房。
+        en: Please carry this bowl of congee into the kitchen.
+      - zh: 服务员端来一盘水果。
+        en: The waiter brought a plate of fruit.
+      - zh: 她端着装满水的杯子，不敢走太快。
+        en: She carried a full cup of water and dared not walk too quickly.
+  - word: 浑身
+    pinyin: hún shēn
+    meaning: Whole body / All over
+    example: 跑完步后，他浑身都是汗。
+    sentenceBank:
+      - zh: 小狗从泥坑里出来，浑身沾满泥巴。
+        en: The puppy came out of the muddy hole covered in mud.
+      - zh: 她冷得浑身发抖。
+        en: Her whole body trembled with cold.
+      - zh: 洗完澡后，我觉得浑身清爽。
+        en: After my bath, I felt refreshed all over.
+      - zh: 搬了一天的东西，他浑身酸痛。
+        en: After carrying things all day, he ached all over.
+      - zh: 听到好消息，她觉得浑身充满了力量。
+        en: After hearing the good news, she felt full of energy throughout her body.
+
+sentences: []

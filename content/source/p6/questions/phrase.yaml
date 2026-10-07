@@ -1,0 +1,839 @@
+- questionID: P6-CH-2026-ACSJ-Q7
+  lessonIds: []
+  question: 妈妈听到这个好消息，__激动__得流下眼泪。（选出画线词语的意思）
+  options:
+    - 感到兴奋
+    - 感到奇怪
+    - 觉得着急
+    - 觉得难过
+  correct: 感到兴奋
+- questionID: P6-CH-2026-ACSJ-Q8
+  lessonIds: []
+  question: 林伯伯__灵机一动__，解决了这个问题。（选出画线词语的意思）
+  options:
+    - 很喜欢自作聪明
+    - 心里早有了主意
+    - 突然想出好方法
+    - 冷静面对新挑战
+  correct: 突然想出好方法
+- questionID: P6-CH-2026-AiTong-Q7
+  lessonIds: []
+  question: 我听到门外有__动静__，于是起身去查看。（选出画线词语的意思）
+  options:
+    - 声音、响动
+    - 消息、情况
+    - 调整、变化
+    - 影响、作用
+  correct: 声音、响动
+- questionID: P6-CH-2026-AiTong-Q8
+  lessonIds: []
+  question: 这里的风景__宜人__，大家都舍不得离开。（选出画线词语的意思）
+  options:
+    - 感觉合适
+    - 让人开心
+    - 合人心意
+    - 令人向往
+  correct: 合人心意
+- questionID: P6-CH-2026-HenryPark-Q7
+  lessonIds: []
+  question: 一到过年，购物中心就会举办各种__促销__活动。（选出画线词语的意思）
+  options:
+    - 售卖多种商品
+    - 推动商品销售
+    - 延长售卖时间
+    - 增加销售人员
+  correct: 推动商品销售
+- questionID: P6-CH-2026-HenryPark-Q8
+  lessonIds:
+    - 10
+  question: 如果你想成为读书会的会员，要先填写__申请__表格。（选出画线词语的意思）
+  options:
+    - 上网报名
+    - 提出请求
+    - 找人查问
+    - 报告老师
+  correct: 提出请求
+- questionID: P6-CH-2026-NanHua-Q7
+  lessonIds: []
+  question: 这件事很重要，我们必须__考虑__清楚。（选出画线词语的意思）
+  options:
+    - 了解详细情况
+    - 仔细地想一想
+    - 做出最后决定
+    - 顺利完成任务
+  correct: 仔细地想一想
+- questionID: P6-CH-2026-NanHua-Q8
+  lessonIds:
+    - 12
+  question: 老师给的作业太多了，同学们纷纷__抱怨__。（选出画线词语的意思）
+  options:
+    - 一直吵个不停
+    - 不客气地说出
+    - 说出心中不满
+    - 围在一起讨论
+  correct: 说出心中不满
+- questionID: P6-CH-2026-Nanyang-Q7
+  lessonIds:
+    - 4
+  question: 医生说如果吃太多糖会__损坏__牙齿。（选出画线词语的意思）
+  options:
+    - 使物品的外表变得十分难看
+    - 使物品的总共数量突然变少
+    - 使物品受到各种巨大的压力
+    - 使物品残破失去原来的功效
+  correct: 使物品残破失去原来的功效
+- questionID: P6-CH-2026-Nanyang-Q8
+  lessonIds:
+    - 6
+    - 8
+  question: 出门前，妈妈再三__吩咐__我要带雨伞。（选出画线词语的意思）
+  options:
+    - 用言语指派或命令
+    - 把解释或道理讲出来
+    - 劝别人对某事表示同意
+    - 提出自己的意见或者想法
+  correct: 用言语指派或命令
+- questionID: P6-CH-2026-PLMGS-Q7
+  lessonIds: []
+  question: 由于缺少人手，这次的活动只好__临时__取消了。（选出画线词语的意思）
+  options:
+    - 事情已经过了很久
+    - 事情已经被人忘记
+    - 事情刚刚结束的时候
+    - 事情在短时间内发生
+  correct: 事情在短时间内发生
+- questionID: P6-CH-2026-PLMGS-Q8
+  lessonIds:
+    - 6
+  question: 小明没有因为同学表现优秀而__妒忌__他，反而向对方学习。（选出画线词语的意思）
+  options:
+    - 讨厌比自己强的人
+    - 嘲笑比自己差的人
+    - 佩服比自己棒的人
+    - 熟悉比自己弱的人
+  correct: 讨厌比自己强的人
+- questionID: P6-CH-2026-Raffles-Q7
+  lessonIds:
+    - 11
+  question: 警察在森林里__搜索__了几个小时，终于救出了迷路的人。（选出画线词语的意思）
+  options:
+    - 认真观看
+    - 仔细寻找
+    - 详细检查
+    - 小心安排
+  correct: 仔细寻找
+- questionID: P6-CH-2026-Raffles-Q8
+  lessonIds:
+    - 4
+  question: 这件衣服看起来__普通__，可是穿起来很舒服。（选出画线词语的意思）
+  options:
+    - 不值钱
+    - 不杰出
+    - 不美丽
+    - 不特别
+  correct: 不特别
+- questionID: P6-CH-2026-RedSwastika-Q7
+  lessonIds:
+    - 8
+  question: 这些建筑工人为国家的早期建设做出了巨大的__贡献__。（选出画线词语的意思）
+  options:
+    - 让人民明白建筑的重要
+    - 使国家和人民得到关怀
+    - 为国家和人民尽一份力
+    - 让人民有建设国家的机会
+  correct: 为国家和人民尽一份力
+- questionID: P6-CH-2026-RedSwastika-Q8
+  lessonIds:
+    - 10
+  question: 打雷了，妈妈__暂时__不让我们出去外面玩。（选出画线词语的意思）
+  options:
+    - 永远
+    - 立刻
+    - 一眨眼
+    - 短时间
+  correct: 短时间
+- questionID: P6-CH-2026-StNicholas-Q7
+  lessonIds:
+    - 10
+  question: 我__打败__了所有的对手，取得了冠军。
+  options:
+    - 赢了对手
+    - 赶走对手
+    - 推倒对手
+    - 攻打对手
+  correct: 赢了对手
+- questionID: P6-CH-2026-StNicholas-Q8
+  lessonIds: []
+  question: 听了哥哥的解释后，我__恍然大悟__，发现我错怪了他。
+  options:
+    - 突然醒来
+    - 突然明白
+    - 突然猜中
+    - 突然想起
+  correct: 突然明白
+- questionID: P6-CH-2026-TaoNan-Q7
+  lessonIds:
+    - 6
+  question: 看到家伟获得第一名，我心里有些__妒忌__。
+  options:
+    - 因自己不如别人而难过
+    - 因别人表现差而讨厌他
+    - 因他人犯错而感到不满
+    - 因对方比自己好而恨他
+  correct: 因对方比自己好而恨他
+- questionID: P6-CH-2026-TaoNan-Q8
+  lessonIds: []
+  question: 奶奶总是__唠叨__，要我尽快完成作业。
+  options:
+    - 不慌不忙地说
+    - 认认真真地说
+    - 没完没了地说
+    - 吞吞吐吐地说
+  correct: 没完没了地说
+- questionID: P6-CH-2025-ACSJ-Q7
+  lessonIds: []
+  question: 他离开教室前，【随手】关掉了电灯。请选择画线词语的意思。
+  options:
+    - 能轻易地做
+    - 照自己想的做
+    - 在哪里都可以做
+    - 任何时间都可以做
+  correct: 能轻易地做
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSJ-Q8
+  lessonIds: []
+  question: 我从小在这里长大，对每条街道都非常【熟悉】。请选择画线词语的意思。
+  options:
+    - 再三地讲解
+    - 热心地分享
+    - 清楚地知道
+    - 详细地说明
+  correct: 清楚地知道
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q7
+  lessonIds: []
+  question: 我们【期盼】着姐姐早日从美国毕业回来。请选择词语的意思。
+  options:
+    - 希望能快点儿实现
+    - 担心不能准时做完
+    - 想要马上看到成绩
+    - 高兴按时完成任务
+  correct: 希望能快点儿实现
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q8
+  lessonIds: []
+  question: 我们和爷爷奶奶告别时，总是【依依不舍】地拥抱他们。请选择词语的意思。
+  options:
+    - 不愿离开
+    - 行动缓慢
+    - 无法控制
+    - 伤心难受
+  correct: 不愿离开
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-AiTong-Q7
+  lessonIds:
+    - 5
+    - 10
+  question: 真【糟糕】！我竟然忘了今天有数学测验。请选择画线词语的意思。
+  options:
+    - 事情、情况没变化
+    - 事情、情况好极了
+    - 事情、情况有变化
+    - 事情、情况很不好
+  correct: 事情、情况很不好
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-AiTong-Q8
+  lessonIds:
+    - 5
+  question: 他【依依不舍】地向准备出国读书的哥哥道别。请选择画线词语的意思。
+  options:
+    - 形容玩得不高兴
+    - 形容舍不得离开
+    - 形容觉得很惭愧
+    - 形容离开了很久
+  correct: 形容舍不得离开
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-Catholic-Q7
+  lessonIds:
+    - 3
+  question: 上舞蹈课时，同学们都认真地【模仿】教练的动作。请选择画线词语的意思。
+  options:
+    - 回想别人教的方法
+    - 配合大家一起行动
+    - 根据他人的要求完成
+    - 按照同一个样子去做
+  correct: 按照同一个样子去做
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-Catholic-Q8
+  lessonIds:
+    - 4
+  question: 奶奶露出【慈祥】的笑容，让我感到十分温暖。请选择画线词语的意思。
+  options:
+    - 充满关爱的表情
+    - 感到快乐又幸福
+    - 对别人特别热情
+    - 表现得十分诚恳
+  correct: 充满关爱的表情
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-HenryPark-Q7
+  lessonIds:
+    - 5
+  question: 只要老人有需要，哥哥都会【慷慨】地帮助他们。请选择画线词语的意思。
+  options:
+    - 愿意保护大家
+    - 愿意提供建议
+    - 愿意献出财物
+    - 愿意见义勇为
+  correct: 愿意献出财物
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-HenryPark-Q8
+  lessonIds:
+    - 5
+    - 8
+  question: 这本书的故事太精彩了，给我留下【深刻】的印象。请选择画线词语的意思。
+  options:
+    - 让人难以忘记
+    - 使人容易理解
+    - 常常要人提醒
+    - 令人十分满意
+  correct: 让人难以忘记
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-MGS-Q7
+  lessonIds:
+    - 5
+  question: 我们一家人经常来这间咖啡店吃早餐，对这里的环境很【熟悉】。请选择画线词语的意思。
+  options:
+    - 了解事情的起因经过
+    - 介绍的内容非常清楚
+    - 有深入的了解和认识
+    - 对新事物有极大兴趣
+  correct: 有深入的了解和认识
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-MGS-Q8
+  lessonIds:
+    - 5
+    - 11
+  question: 王老师刚才还在课室门口，【一眨眼】就不知道去了哪里。请选择画线词语的意思。
+  options:
+    - 时间非常短
+    - 时间还很早
+    - 动作非常快
+    - 动作很灵活
+  correct: 时间非常短
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-NanHua-Q7
+  lessonIds:
+    - 1
+    - 5
+  question: 我们【克服】了很多困难，才完成学校给的任务。请选择画线词语的意思。
+  options:
+    - 经过多次尝试
+    - 通过努力战胜
+    - 完全消失不见
+    - 数量不断下降
+  correct: 通过努力战胜
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-NanHua-Q8
+  lessonIds:
+    - 5
+  question: 看到小乐赢了比赛，大家【不约而同】地欢呼起来。请选择画线词语的意思。
+  options:
+    - 每一个人都在说同样一句话
+    - 没有办法控制好自己的心情
+    - 把心里所想的东西都做出来
+    - 没事先说好而做一样的事情
+  correct: 没事先说好而做一样的事情
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-Nanyang-Q7
+  lessonIds:
+    - 4
+    - 5
+  question: 别看这块石头看起来【普通】，其实非常值钱。请选择画线词语的意思。
+  options:
+    - 跟其它不像
+    - 简单容易懂
+    - 经常出现的
+    - 没什么特别
+  correct: 没什么特别
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-Nanyang-Q8
+  lessonIds:
+    - 5
+    - 6
+  question: 哥哥工作时总是【拖延】，结果事情老是做不完。请选择画线词语的意思。
+  options:
+    - 做事速度不够快
+    - 不按时完成事情
+    - 做事情时不专心
+    - 没把事情处理好
+  correct: 不按时完成事情
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-PLMGS-Q7
+  lessonIds:
+    - 5
+    - 12
+  question: 志强知道错了，【诚恳】地请求同学的原谅。请选择画线词语的意思。
+  options:
+    - 认真负责
+    - 真心实意
+    - 态度友善
+    - 待人诚实
+  correct: 真心实意
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PLMGS-Q8
+  lessonIds:
+    - 4
+    - 5
+  question: 他学习态度很【积极】，专心听课、认真做功课。请选择画线词语的意思。
+  options:
+    - 思想保守，不肯改变
+    - 稳定坚强，不会动摇
+    - 集中精神，一心一意
+    - 用心做事，努力向前
+  correct: 用心做事，努力向前
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PeiChun-Q7
+  lessonIds:
+    - 5
+  question: 听了爷爷的解释，我【恍然大悟】，原来这道题这么简单！请选择画线词语的意思。
+  options:
+    - 感到十分惊喜
+    - 忽然完全明白
+    - 认真思考问题
+    - 有点不太清楚
+  correct: 忽然完全明白
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-PeiChun-Q8
+  lessonIds:
+    - 5
+  question: 老师让班长【统计】一下参加“华文大比拼”的人数。请选择画线词语的意思。
+  options:
+    - 记录重要的数字
+    - 算出总体的数字
+    - 用数字来分小组
+    - 按照数字来排列
+  correct: 算出总体的数字
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-Raffles-Q7
+  lessonIds:
+    - 5
+    - 10
+  question: 小文没认真复习，结果考试成绩很【糟糕】。请选择画线词语的意思。
+  options:
+    - 指事物能更好
+    - 指表现很一般
+    - 指目标没达到
+    - 指情况很不好
+  correct: 指情况很不好
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-Raffles-Q8
+  lessonIds:
+    - 5
+  question: 我们在这个组屋区长大，非常【熟悉】这里的环境。请选择画线词语的意思。
+  options:
+    - 详细地解释
+    - 清楚地知道
+    - 耐心地重复
+    - 热心地联系
+  correct: 清楚地知道
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-RedSwastika-Q7
+  lessonIds:
+    - 1
+    - 5
+  question: 姐姐对自己的要求很【严格】，所以妈妈从来不担心她的学业。请选择画线词语的意思。
+  options:
+    - 埋头学习，不偷懒
+    - 坚持到底，不放弃
+    - 保持冷静，不紧张
+    - 认真对待，不马虎
+  correct: 认真对待，不马虎
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-RedSwastika-Q8
+  lessonIds:
+    - 5
+    - 6
+  question: 小美的听写常常考满分，但我一点也不【妒忌】她。请选择画线词语的意思。
+  options:
+    - 讨厌比自己能力强的人
+    - 佩服和自己一样强的人
+    - 嘲笑比自己有才华的人
+    - 欣赏和自己一样强的人
+  correct: 讨厌比自己能力强的人
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-Rosyth-Q7
+  lessonIds:
+    - 5
+    - 6
+    - 12
+  question: 小文因为要补习，只好【拒绝】了阿乐的生日会邀请。请选择画线词语的意思。
+  options:
+    - 表示不能够答应
+    - 表示无法不同意
+    - 表示还没想清楚
+    - 表示不肯做决定
+  correct: 表示不能够答应
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-Rosyth-Q8
+  lessonIds:
+    - 5
+  question: 奶奶经常【唠叨】阿光要早点睡觉，他却总是不听。请选择画线词语的意思。
+  options:
+    - 整天提起生活中的小事
+    - 连续说了很多过去的事
+    - 不停地重复说同样的话
+    - 提高音量把话再说一遍
+  correct: 不停地重复说同样的话
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-SCGS-Q7
+  lessonIds:
+    - 5
+  question: 巴士一到站，乘客们都【争先恐后】地挤上去。请选择画线词语的意思。
+  options:
+    - 急着出门，避免迟到
+    - 赶紧完成，不想出事
+    - 抢着向前，害怕落后
+    - 马上进行，不要等待
+  correct: 抢着向前，害怕落后
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-SCGS-Q8
+  lessonIds:
+    - 5
+  question: 叔叔对中国的环境很【熟悉】，因为他在那里工作了三十年。请选择画线词语的意思。
+  options:
+    - 有甜蜜的回忆
+    - 一定不会走失
+    - 知道得很清楚
+    - 十分喜欢那里
+  correct: 知道得很清楚
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-StNicholas-Q7
+  lessonIds:
+    - 5
+  question: 小美昨晚没睡好，今天上课时【无精打采】的。请选择画线词语的意思。
+  options:
+    - 有气无力
+    - 非常劳累
+    - 闷闷不乐
+    - 感到不安
+  correct: 有气无力
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-StNicholas-Q8
+  lessonIds: []
+  question: 我最【讨厌】下雨天，什么地方都不能去。请选择画线词语的意思。
+  options:
+    - 对事情产生不好的感觉
+    - 感到事情带来很多麻烦
+    - 认为事情的影响非常大
+    - 事情让人感到十分生气
+  correct: 对事情产生不好的感觉
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-TaoNan-Q7
+  lessonIds:
+    - 5
+  question: 参观博物馆后，同学们更【了解】新加坡的历史。请选择画线词语的意思。
+  options:
+    - 讲述得详细
+    - 知道得清楚
+    - 回忆以前的事情
+    - 说明个人的想法
+  correct: 知道得清楚
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-2025-TaoNan-Q8
+  lessonIds:
+    - 5
+    - 10
+  question: 王老师请了病假，【暂时】由林老师代她上课。请选择画线词语的意思。
+  options:
+    - 已经结束了
+    - 还没有发生
+    - 就快要到了
+    - 短时间之内
+  correct: 短时间之内
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-AUTHORED-L1-Q07
+  lessonIds:
+    - 1
+  question: 他平时不读书，明天考试，今晚才【临时抱佛脚】。请选择画线词语的意思。
+  options:
+    - 为了帮助朋友，暂时放下自己的事
+    - 遇到困难时，完全不想办法解决
+    - 平时不准备，到紧要关头才急忙应付
+    - 每天认真复习，提早做好准备
+  correct: 平时不准备，到紧要关头才急忙应付
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 临时抱佛脚."
+- questionID: P6-CH-AUTHORED-L1-Q08
+  lessonIds:
+    - 1
+  question: 模型坏了好几次，他仍【不屈不挠】，终于把它做好。请选择画线词语的意思。
+  options:
+    - 遇到困难就马上请别人代劳
+    - 遇到挫折仍坚持，不轻易放弃
+    - 做事随意，完全不在乎结果
+    - 没有想清楚就急着行动
+  correct: 遇到挫折仍坚持，不轻易放弃
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 不屈不挠."
+- questionID: P6-CH-AUTHORED-L1-Q09
+  lessonIds:
+    - 1
+  question: 这株【柔弱】的幼苗经不起大风吹打。请选择画线词语的意思。
+  options:
+    - 弱小，承受不住较大的力量
+    - 粗壮，能够抵挡猛烈的风
+    - 坚硬，难以折断或弯曲
+    - 高大，挡住了所有阳光
+  correct: 弱小，承受不住较大的力量
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 柔弱."
+- questionID: P6-CH-AUTHORED-L2-Q06
+  lessonIds:
+    - 2
+  question: 公园里，这对【祖孙】坐在长椅上，爷爷给孙子讲故事。请选择画线词语的意思。
+  options:
+    - 父母和子女
+    - 哥哥和妹妹
+    - 叔叔和侄子
+    - 祖父母和孙子女
+  correct: 祖父母和孙子女
+  source: "Original authored P6 practice; Lesson 2; taught vocabulary: 祖孙."
+- questionID: P6-CH-AUTHORED-L2-Q07
+  lessonIds:
+    - 2
+  question: 这道题的要求不清楚，小文【疑惑】地看着老师。请选择画线词语的意思。
+  options:
+    - 感到生气，想要争吵
+    - 完全相信，毫不怀疑
+    - 不明白，心中有疑问
+    - 十分满意，没有问题
+  correct: 不明白，心中有疑问
+  source: "Original authored P6 practice; Lesson 2; taught vocabulary: 疑惑."
+- questionID: P6-CH-AUTHORED-L3-Q04
+  lessonIds:
+    - 3
+  question: 小猫动作【敏捷】，一跳就避开了滚来的皮球。请选择画线词语的意思。
+  options:
+    - 动作迅速而灵活
+    - 动作缓慢而笨重
+    - 声音轻柔而动听
+    - 态度认真而负责
+  correct: 动作迅速而灵活
+  source: "Original authored P6 practice; Lesson 3; taught vocabulary: 敏捷."
+- questionID: P6-CH-AUTHORED-L3-Q05
+  lessonIds:
+    - 3
+  question: 箱子卡住了，哥哥【使劲】一拉，才把它拉出来。请选择画线词语的意思。
+  options:
+    - 小心
+    - 慢慢
+    - 悄悄
+    - 用力
+  correct: 用力
+  source: "Original authored P6 practice; Lesson 3; taught vocabulary: 使劲."
+- questionID: P6-CH-AUTHORED-L4-Q01
+  lessonIds:
+    - 4
+  question: 为了存钱买电脑，姐姐【省吃俭用】，很少买零食。请选择画线词语的意思。
+  options:
+    - 想买什么就买什么，不作打算
+    - 节约日常开支，不乱花钱
+    - 只买昂贵的东西，讲究享受
+    - 把钱借给别人，不要求归还
+  correct: 节约日常开支，不乱花钱
+  source: "Original authored P6 practice; Lesson 4; taught vocabulary: 省吃俭用."
+- questionID: P6-CH-AUTHORED-L6-Q02
+  lessonIds:
+    - 6
+  question: 遇到敌人围攻，【足智多谋】的将军很快想出了脱困的计策。请选择画线词语的意思。
+  options:
+    - 力气很大，跑得很快
+    - 害怕困难，不敢行动
+    - 固执己见，不听建议
+    - 有丰富的智慧和许多办法
+  correct: 有丰富的智慧和许多办法
+  source: "Original authored P6 practice; Lesson 6; taught vocabulary: 足智多谋."
+- questionID: P6-CH-AUTHORED-L7-Q11
+  lessonIds:
+    - 7
+  question: 这座风景优美的小岛是著名的旅游【胜地】。请选择画线词语的意思。
+  options:
+    - 景色优美或著名，值得游览的地方
+    - 专门举行体育比赛的场地
+    - 人们躲避危险的秘密地点
+    - 只能在地图上找到的地方
+  correct: 景色优美或著名，值得游览的地方
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 胜地."
+- questionID: P6-CH-AUTHORED-L7-Q12
+  lessonIds:
+    - 7
+  question: 机器启动时发出【震耳欲聋】的响声，大家纷纷捂住耳朵。请选择画线词语的意思。
+  options:
+    - 声音很轻，必须靠近才听得到
+    - 声音动听，使人心情愉快
+    - 声音很远，完全听不清楚
+    - 声音非常响，耳朵几乎受不了
+  correct: 声音非常响，耳朵几乎受不了
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 震耳欲聋."
+- questionID: P6-CH-AUTHORED-L7-Q13
+  lessonIds:
+    - 7
+  question: 展览的内容太精彩，让我们【流连忘返】，舍不得离开。请选择画线词语的意思。
+  options:
+    - 走得太快，没有看清楚景物
+    - 因为疲倦，只想赶快回家
+    - 十分留恋，舍不得离去
+    - 忘记路线，找不到回家的路
+  correct: 十分留恋，舍不得离去
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 流连忘返."
+- questionID: P6-CH-AUTHORED-L7-Q14
+  lessonIds:
+    - 7
+  question: 每天适量运动，对身体有许多【益处】。请选择画线词语的意思。
+  options:
+    - 损失
+    - 好处
+    - 困难
+    - 限制
+  correct: 好处
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 益处."
+- questionID: P6-CH-AUTHORED-L7-Q15
+  lessonIds:
+    - 7
+  question: 水闸打开后，大量河水【倾泻】而下。请选择画线词语的意思。
+  options:
+    - 大量的水迅速流出或流下
+    - 少量的水缓慢渗入地下
+    - 河水结冰后停止流动
+    - 水被阳光晒干而消失
+  correct: 大量的水迅速流出或流下
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 倾泻."
+- questionID: P6-CH-AUTHORED-L9-Q12
+  lessonIds:
+    - 9
+  question: 奶奶送我一个象征【吉祥】的挂饰，祝我平安顺利。请选择画线词语的意思。
+  options:
+    - 说明东西已经损坏
+    - 表示幸运、美好的征兆
+    - 表示危险即将来临
+    - 说明物品价格很高
+  correct: 表示幸运、美好的征兆
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 吉祥."
+- questionID: P6-CH-AUTHORED-L9-Q13
+  lessonIds:
+    - 9
+  question: 暴风雨中，海浪不断【翻腾】，船身剧烈摇晃。请选择画线词语的意思。
+  options:
+    - 上下滚动，剧烈涌动
+    - 静静停留，完全不动
+    - 慢慢干涸，露出海底
+    - 结成厚冰，十分平整
+  correct: 上下滚动，剧烈涌动
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 翻腾."
+- questionID: P6-CH-AUTHORED-L9-Q14
+  lessonIds:
+    - 9
+  question: 故事中的坏人【残忍】地伤害弱小的动物。请选择画线词语的意思。
+  options:
+    - 善良，愿意帮助弱小者
+    - 胆小，害怕面对困难
+    - 诚实，从来不说谎话
+    - 凶狠，不顾别人的痛苦
+  correct: 凶狠，不顾别人的痛苦
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 残忍."
+- questionID: P6-CH-AUTHORED-L9-Q15
+  lessonIds:
+    - 9
+  question: 爷爷腿脚不方便，只能扶着栏杆【缓缓】下楼。请选择画线词语的意思。
+  options:
+    - 突然地
+    - 偷偷地
+    - 慢慢地
+    - 急忙地
+  correct: 慢慢地
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 缓缓."
+- questionID: P6-CH-AUTHORED-L9-Q16
+  lessonIds:
+    - 9
+  question: 洪水淹没了田地，四周变成一片【汪洋】。请选择画线词语的意思。
+  options:
+    - 一座陡峭的山峰
+    - 一大片浩瀚的水面
+    - 一片干燥的草地
+    - 一条细小的溪流
+  correct: 一大片浩瀚的水面
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 汪洋."
+- questionID: P6-CH-AUTHORED-L10-Q04
+  lessonIds:
+    - 10
+  question: 小华【全神贯注】地搭模型，连妈妈叫他也没听见。请选择画线词语的意思。
+  options:
+    - 做事马虎，急着结束
+    - 完全不在意手上的事情
+    - 集中全部精神和注意力
+    - 一边做事，一边想着别的事
+  correct: 集中全部精神和注意力
+  source: "Original authored P6 practice; Lesson 10; taught vocabulary: 全神贯注."
+- questionID: P6-CH-AUTHORED-L10-Q05
+  lessonIds:
+    - 10
+  question: 大家都有了椅子，【多余】的椅子可以收起来。请选择画线词语的意思。
+  options:
+    - 特别昂贵的
+    - 超过需要数量的
+    - 数量不足的
+    - 已经损坏的
+  correct: 超过需要数量的
+  source: "Original authored P6 practice; Lesson 10; taught vocabulary: 多余."
+- questionID: P6-CH-AUTHORED-L11-Q07
+  lessonIds:
+    - 11
+  question: 【一眨眼】，刚才还在眼前的小鸟就飞远了。请选择画线词语的意思。
+  options:
+    - 很短的时间
+    - 很长的一段日子
+    - 眼睛受伤的时候
+    - 从早上到晚上
+  correct: 很短的时间
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 一眨眼."
+- questionID: P6-CH-AUTHORED-L11-Q08
+  lessonIds:
+    - 11
+  question: 比赛落选后，妹妹【垂头丧气】，连话也不想说。请选择画线词语的意思。
+  options:
+    - 兴奋、很有精神的样子
+    - 生气、想与人争吵的样子
+    - 害怕、不敢面对危险的样子
+    - 失望、情绪低落的样子
+  correct: 失望、情绪低落的样子
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 垂头丧气."
+- questionID: P6-CH-AUTHORED-L11-Q09
+  lessonIds:
+    - 11
+  question: 她【幻想】自己有一双翅膀，能够飞到云朵上。请选择画线词语的意思。
+  options:
+    - 认真观察眼前真实的情景
+    - 详细记录一次实验的结果
+    - 想象还没有实现或不可能发生的事情
+    - 回忆已经发生过的事情
+  correct: 想象还没有实现或不可能发生的事情
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 幻想."
+- questionID: P6-CH-AUTHORED-L12-Q06
+  lessonIds:
+    - 12
+  question: 小明【诚恳】地道歉，并认真承诺以后不再说谎。请选择画线词语的意思。
+  options:
+    - 十分着急，没有耐心
+    - 心中害怕，不敢说话
+    - 真心实意，没有虚假
+    - 表面客气，心里不在乎
+  correct: 真心实意，没有虚假
+  source: "Original authored P6 practice; Lesson 12; taught vocabulary: 诚恳."
+- questionID: P6-CH-AUTHORED-L12-Q07
+  lessonIds:
+    - 12
+  question: 他学琴学到一半就不肯练习，妈妈劝他不要【半途而废】。请选择画线词语的意思。
+  options:
+    - 做好充分准备才开始行动
+    - 事情还没完成就停止，不再坚持
+    - 事情完成后再开始新任务
+    - 遇到困难时继续努力
+  correct: 事情还没完成就停止，不再坚持
+  source: "Original authored P6 practice; Lesson 12; taught vocabulary: 半途而废."

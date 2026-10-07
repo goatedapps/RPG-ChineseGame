@@ -1,0 +1,489 @@
+- questionID: P6-CH-2026-ACSJ-Q9
+  lessonIds: []
+  question: ___这次你取得了好成绩，也要继续努力。
+  options:
+    - 只要
+    - 虽然
+    - 不仅
+    - 就算
+  correct: 就算
+- questionID: P6-CH-2026-ACSJ-Q10
+  lessonIds: []
+  question: ___周末的天气不好，我们___不去海边野餐了。
+  options:
+    - 只有……才
+    - 除了……还
+    - 要是……就
+    - 不管……都
+  correct: 要是……就
+- questionID: P6-CH-2026-AiTong-Q9
+  lessonIds: []
+  question: ___你这次更努力一些，也许就会成功。
+  options:
+    - 由于
+    - 虽然
+    - 要是
+    - 即使
+  correct: 要是
+- questionID: P6-CH-2026-AiTong-Q10
+  lessonIds: []
+  question: ___她的手已经受伤，她___坚持打完比赛。
+  options:
+    - 不但……反而
+    - 不是……而是
+    - 因为……所以
+    - 尽管……还是
+  correct: 尽管……还是
+- questionID: P6-CH-2026-HenryPark-Q10
+  lessonIds: []
+  question: 他上课不专心，___在睡觉，___在讲话。
+  options:
+    - 首先……然后
+    - 即使……也要
+    - 一边……一边
+    - 不是……就是
+  correct: 不是……就是
+- questionID: P6-CH-2026-NanHua-Q9
+  lessonIds: []
+  question: ___老板吩咐的工作，哥哥就会马上去做。
+  options:
+    - 只要
+    - 凡是
+    - 由于
+    - 如果
+  correct: 凡是
+- questionID: P6-CH-2026-NanHua-Q10
+  lessonIds: []
+  question: ___想了很多办法，大家___无法帮他改掉坏习惯。
+  options:
+    - 不但……而且
+    - 不管……仍然
+    - 因为……所以
+    - 尽管……还是
+  correct: 尽管……还是
+- questionID: P6-CH-2026-Nanyang-Q9
+  lessonIds: []
+  question: ___前面的路很难走，你___要勇往直前。
+  options:
+    - 凡是……都
+    - 即使……也
+    - 只有……才
+    - 无论……都
+  correct: 即使……也
+- questionID: P6-CH-2026-Nanyang-Q10
+  lessonIds: []
+  question: ___明天是公共假日，___今晚我们多聊一会吧。
+  options:
+    - 尽管……还是
+    - 不仅……而且
+    - 反正……不如
+    - 除非……不然
+  correct: 反正……不如
+- questionID: P6-CH-2026-PLMGS-Q9
+  lessonIds: []
+  question: ___外头下着大雨，他___还要出门跑步。
+  options:
+    - 除了……还
+    - 如果……就
+    - 虽然……却
+    - 只有……才
+  correct: 虽然……却
+- questionID: P6-CH-2026-PLMGS-Q10
+  lessonIds: []
+  question: ___你心情不好，___不应该对别人乱发脾气。
+  options:
+    - 只要……就
+    - 就算……也
+    - 不管……都
+    - 凡是……都
+  correct: 就算……也
+- questionID: P6-CH-2026-Raffles-Q9
+  lessonIds: []
+  question: ___你是组长，___也应该问一问组员的想法。
+  options:
+    - 只要……就能
+    - 反正……不如
+    - 虽然……但是
+    - 不但……反而
+  correct: 虽然……但是
+- questionID: P6-CH-2026-Raffles-Q10
+  lessonIds: []
+  question: ___心情不好，姐姐___不会乱发脾气。
+  options:
+    - 除了……还
+    - 就算……也
+    - 如果……就
+    - 尽管……还
+  correct: 就算……也
+- questionID: P6-CH-2026-RedSwastika-Q9
+  lessonIds: []
+  question: ___天气很热，小明还是坚持每天跑步锻炼身体。
+  options:
+    - 尽管
+    - 由于
+    - 如果
+    - 只有
+  correct: 尽管
+- questionID: P6-CH-2026-RedSwastika-Q10
+  lessonIds: []
+  question: 大明___勤奋好学，___喜欢帮助别人。
+  options:
+    - 一边……一边
+    - 因为……所以
+    - 虽然……但是
+    - 不仅……而且
+  correct: 不仅……而且
+- questionID: P6-CH-2026-StNicholas-Q9
+  lessonIds: []
+  question: ___明天是否下雨，我们___会去探望外婆。
+  options:
+    - 如果……就
+    - 不管……都
+    - 除了……还
+    - 就算……也
+  correct: 不管……都
+- questionID: P6-CH-2026-StNicholas-Q10
+  lessonIds: []
+  question: ___我们有时间，___去老人院做义工。
+  options:
+    - 与其……不如
+    - 除非……不然
+    - 尽管……还是
+    - 反正……不如
+  correct: 反正……不如
+- questionID: P6-CH-2026-TaoNan-Q9
+  lessonIds: []
+  question: 运动___能锻炼身体，___能放松心情。
+  options:
+    - 除了……也
+    - 只有……才
+    - 不管……都
+    - 要是……就
+  correct: 除了……也
+- questionID: P6-CH-2026-TaoNan-Q10
+  lessonIds: []
+  question: ___大家互相合作，___活动进行得很顺利。
+  options:
+    - 不仅……而且
+    - 一边……一边
+    - 因为……所以
+    - 尽管……还是
+  correct: 因为……所以
+- questionID: P6-CH-2025-ACSJ-Q9
+  lessonIds:
+    - 1
+  question: ___他勤奋学习，一直是班上同学们的榜样。
+  options:
+    - 即使
+    - 只要
+    - 凡是
+    - 由于
+  correct: 由于
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSJ-Q10
+  lessonIds: []
+  question: ___还有时间，___我们现在就去运动吧。
+  options:
+    - 不但……反而
+    - 虽然……但是
+    - 反正……不如
+    - 不仅……而且
+  correct: 反正……不如
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q9
+  lessonIds:
+    - 3
+  question: ___吃美食，我们___欣赏了美丽的风景。
+  options:
+    - 除了……还
+    - 如果……就
+    - 只有……才
+    - 虽然……却
+  correct: 除了……还
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q10
+  lessonIds:
+    - 12
+  question: 这个小女孩___会弹钢琴，___还会拉小提琴。
+  options:
+    - 因为……所以
+    - 反正……不如
+    - 总算……不然
+    - 不仅……而且
+  correct: 不仅……而且
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-AiTong-Q9
+  lessonIds:
+    - 3
+  question: ___游泳，弟弟还喜欢打篮球和跑步。
+  options:
+    - 为了
+    - 不但
+    - 除了
+    - 因为
+  correct: 除了
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-AiTong-Q10
+  lessonIds: []
+  question: 妈妈每天都很辛苦，___在上班，___在做家务。
+  options:
+    - 不是……就是
+    - 即使……也
+    - 因为……所以
+    - 如果……就
+  correct: 不是……就是
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-Catholic-Q9
+  lessonIds: []
+  question: ___这件事过了很久，___丽文记得很清楚。
+  options:
+    - 凡是……就
+    - 不但……还
+    - 虽然……但是
+    - 除了……也
+  correct: 虽然……但是
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-Catholic-Q10
+  lessonIds: []
+  question: ___我们做完了功课，___去看电影吧。
+  options:
+    - 不是……而是
+    - 反正……不如
+    - 尽管……还是
+    - 不仅……而且
+  correct: 反正……不如
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-HenryPark-Q10
+  lessonIds: []
+  question: 第一次参加比赛，我___紧张___兴奋。
+  options:
+    - 既……又
+    - 连……也
+    - 既……还
+    - 一……就
+  correct: 既……又
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-MGS-Q9
+  lessonIds: []
+  question: 站在购物中心门口的那位女士，___我的妈妈，___我的阿姨。
+  options:
+    - 不但……而且
+    - 虽然……但是
+    - 不管……还是
+    - 不是……而是
+  correct: 不是……而是
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-MGS-Q10
+  lessonIds: []
+  question: 爸爸喜欢运动，___工作再忙，___会每天坚持跑步。
+  options:
+    - 除了……还
+    - 就算……也
+    - 只有……才
+    - 不仅……还
+  correct: 就算……也
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-NanHua-Q9
+  lessonIds: []
+  question: ___妹妹年纪小，___她很懂事。
+  options:
+    - 只要……就
+    - 凡是……都
+    - 虽然……但是
+    - 因为……所以
+  correct: 虽然……但是
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-NanHua-Q10
+  lessonIds: []
+  question: 小安做错了事情，___不认错，___把责任推给别人。
+  options:
+    - 即使……也
+    - 不论……都
+    - 不但……还
+    - 只有……才
+  correct: 不但……还
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-Nanyang-Q9
+  lessonIds: []
+  question: 老师安排的作业，___你想不想做，你___应该把它完成。
+  options:
+    - 除了……还
+    - 就算……也
+    - 不管……都
+    - 如果……就
+  correct: 不管……都
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-Nanyang-Q10
+  lessonIds: []
+  question: ___你不想去动物园，___跟我去游乐场玩。
+  options:
+    - 尽管……还是
+    - 反正……不如
+    - 不仅……而且
+    - 虽然……但是
+  correct: 反正……不如
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-PLMGS-Q9
+  lessonIds: []
+  question: 这本书___有趣，___让我学到很多知识。
+  options:
+    - 不仅……还
+    - 如果……就
+    - 只有……才
+    - 虽然……却
+  correct: 不仅……还
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PLMGS-Q10
+  lessonIds: []
+  question: ___大家意见不同，我们还是以温和的语气进行讨论。
+  options:
+    - 由于
+    - 尽管
+    - 除了
+    - 只要
+  correct: 尽管
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PeiChun-Q9
+  lessonIds: []
+  question: ___我三点前做完功课，就能和哥哥一起去踢足球。
+  options:
+    - 无论
+    - 除了
+    - 要是
+    - 不仅
+  correct: 要是
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-PeiChun-Q10
+  lessonIds:
+    - 1
+    - 9
+  question: 今天的天气很不好，___下暴雨，___刮狂风。
+  options:
+    - 就算……还
+    - 尽管……都
+    - 虽然……但
+    - 不但……还
+  correct: 不但……还
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-Raffles-Q9
+  lessonIds:
+    - 4
+  question: 这只手表___好看，价格___不便宜。
+  options:
+    - 尽管……还
+    - 只要……就
+    - 虽然……却
+    - 就算……也
+  correct: 虽然……却
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-Raffles-Q10
+  lessonIds:
+    - 1
+  question: 小明___成绩很好，___乐于助人，是大家的好榜样。
+  options:
+    - 不但……还
+    - 如果……就
+    - 因为……所以
+    - 反正……不如
+  correct: 不但……还
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-RedSwastika-Q9
+  lessonIds: []
+  question: ___他再三请求，爸爸也没让他玩电脑游戏。
+  options:
+    - 如果
+    - 尽管
+    - 只有
+    - 只要
+  correct: 尽管
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-RedSwastika-Q10
+  lessonIds: []
+  question: ___你考到全班第一名，___不可以骄傲。
+  options:
+    - 既然……就
+    - 就算……还
+    - 即使……也
+    - 由于……才
+  correct: 即使……也
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-Rosyth-Q9
+  lessonIds: []
+  question: ___老板安排的工作，小吴___会准时完成。
+  options:
+    - 自从……就
+    - 凡是……都
+    - 就算……也
+    - 如果……就
+  correct: 凡是……都
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-Rosyth-Q10
+  lessonIds: []
+  question: ___我不肯陪你玩，___有很多功课等着我去做。
+  options:
+    - 尽管……还是
+    - 由于……因此
+    - 不但……而且
+    - 不是……而是
+  correct: 不是……而是
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-SCGS-Q9
+  lessonIds: []
+  question: ___今天没上学，___我们去看电影吧！
+  options:
+    - 不管……还是
+    - 除非……不然
+    - 反正……不如
+    - 不仅……而且
+  correct: 反正……不如
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-SCGS-Q10
+  lessonIds: []
+  question: ___我不想帮你，___我自己也不会做这道题目。
+  options:
+    - 不是……而是
+    - 由于……因此
+    - 因为……所以
+    - 虽然……但是
+  correct: 不是……而是
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-StNicholas-Q9
+  lessonIds: []
+  question: 下午___不下雨，我们___到公园骑脚踏车。
+  options:
+    - 如果……就
+    - 不管……都
+    - 除了……还
+    - 就算……也
+  correct: 如果……就
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-StNicholas-Q10
+  lessonIds: []
+  question: ___爸爸不同意哥哥的决定，哥哥___坚持到国外工作。
+  options:
+    - 由于……因此
+    - 除非……不然
+    - 尽管……还是
+    - 虽然……但是
+  correct: 尽管……还是
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-TaoNan-Q9
+  lessonIds: []
+  question: 妈妈准备的午餐___营养丰富，___美味可口。
+  options:
+    - 由于……因此
+    - 既然……那么
+    - 不仅……而且
+    - 反正……不如
+  correct: 不仅……而且
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-2025-TaoNan-Q10
+  lessonIds: []
+  question: ___国华迷上了电脑游戏后，视力___下降了。
+  options:
+    - 自从……就
+    - 无论……还
+    - 不管……都
+    - 除了……也
+  correct: 自从……就
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_taonan.pdf

@@ -10,19 +10,20 @@ const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8
 
 test('every playable curriculum has a complete seven-region story and lesson mapping', async () => {
   const { bossGateQueue } = await import('../src/systems/story.js');
+  const { loadLevelPackage } = await import('../src/content/loader.js');
   const regions = readJson('content/authored/campaign/regions.json');
   for (const level of playableIds) {
     const config = readJson(`content/authored/levels/${level}/level.json`);
     const content = readJson(`content/generated/${level}.content.json`);
+    const game = await loadLevelPackage(level, async url => ({ ok: true, json: async () => readJson(url.replace(/^\//, '')) }), '');
     const assigned = Object.values(config.regionLessons).flat();
     assert.deepEqual([...assigned].sort((a, b) => a - b), Array.from({ length: content.lessons.length }, (_, index) => index + 1));
     assert.deepEqual(Object.keys(config.regionLessons), regions.map(region => region.id));
     for (const region of regions) {
       const lessons = config.regionLessons[region.id];
       const story = readJson(`content/authored/campaign/${region.id}-story.json`);
-      const mapName = region.id === 'r1' ? 'r1-hub' : region.id === 'r2' ? 'r2-harvest-crossing' : region.id === 'r3' ? 'r3-tidewater-bay' : region.id === 'r4' ? 'r4-lantern-theatre' : region.id === 'r5' ? 'r5-festival-city' : region.id === 'r6' ? 'r6-ancient-grove' : 'r7-treehouse-summit';
-      const map = readJson(`content/authored/campaign/maps/${mapName}.json`);
-      assert.ok(lessons.length >= 2, `${level} ${region.id} mapped lessons`);
+      const map = game.campaigns[region.id].map;
+      assert.ok(lessons.length >= (config.singleLessonRegions?.includes(region.id) ? 1 : 2), `${level} ${region.id} mapped lessons`);
       assert.deepEqual(content.stories.filter(item => lessons.includes(item.lesson)).map(item => item.lesson), lessons);
       assert.ok(map.zones.every(zone => lessons.includes(Number.isInteger(zone.lessonSlot) ? lessons[zone.lessonSlot] ?? lessons.at(-1) : zone.lesson)), `${region.id} encounter lessons`);
       assert.ok(story.scenes?.reform && (region.id === 'r1' || (story.readingKeyItem && story.fragmentKey)), `${region.id} completion route`);

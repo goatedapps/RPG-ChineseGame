@@ -1,7 +1,7 @@
 import { buildRouteMap, expandRouteMap } from '../world/routeMaps.js';
 
-async function fetchJson(fetcher, url) {
-  const response = await fetcher(url);
+async function fetchJson(fetcher, url, options) {
+  const response = await fetcher(url, options);
   if (!response.ok) throw new Error(`Could not load ${url} (${response.status}).`);
   return response.json();
 }
@@ -21,7 +21,7 @@ function mergeObjects(base, overrides = {}) {
 }
 
 export async function listLevels(fetcher = fetch, baseUrl = '.') {
-  return fetchJson(fetcher, join(baseUrl, 'content/authored/shared/levels.json'));
+  return fetchJson(fetcher, join(baseUrl, 'content/authored/shared/levels.json?v=2'), { cache: 'no-cache' });
 }
 
 export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '.') {
@@ -83,8 +83,8 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '.') 
     const story = JSON.parse(JSON.stringify(regionStory));
     const regionLessons = new Set(config.regionLessons[regionId] || []);
     const lessonList = [...regionLessons];
-    for (const zone of map.zones || []) {
-      if (Number.isInteger(zone.lessonSlot)) zone.lesson = lessonList[zone.lessonSlot] ?? lessonList.at(-1);
+    for (const [slot, zone] of (map.zones || []).entries()) {
+      zone.lesson = lessonList[Number.isInteger(zone.lessonSlot) ? zone.lessonSlot : slot] ?? lessonList.at(-1);
     }
     for (const request of Object.values(story.requests || {})) {
       if (Number.isInteger(request.lessonSlot)) request.lesson = lessonList[request.lessonSlot] ?? lessonList.at(-1);

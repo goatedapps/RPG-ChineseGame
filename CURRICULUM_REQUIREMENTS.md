@@ -26,7 +26,8 @@ Alert the user if content / questions provided do not meet requirements needed f
 ## Seven-region mapping
 
 - Map every lesson exactly once in `regionLessons`, across `r1` through `r7`, in story order.
-- Give Region 1 exactly three lessons and each later region at least two, with enough distinct regional words to meet its Bronze boss threshold and the default 15-word gate dictation.
+- Give Region 1 exactly three lessons and each later region at least two, unless a shorter curriculum explicitly lists single-lesson later regions in `singleLessonRegions`.
+  Single-lesson regions must still meet every word, boss-question, chapter-task and default 15-word gate requirement.
 - Check each route zone, neighbour request, and chapter task against the region's lesson slots; a slot beyond the mapped lesson count intentionally uses that region's last lesson.
 - Keep chapter dictation groups large enough for separate three-word tests when tasks share a lesson.
 - Add curriculum-specific Restoration Sets in every region; each set needs an ID, name, restoration reward, and at least three distinct words from that region's mapped lessons.

@@ -1,4 +1,4 @@
-const CACHE = 'word-spirit-quest-p18-v133';
+const CACHE = 'word-spirit-quest-p18-v135';
 const CORE = [
   './', './index.html', './lab.html', './game/', './game/index.html', './game/lab.html', './manifest.webmanifest',
   './walkthrough/index.html', './walkthrough/walkthrough.css', './walkthrough/walkthrough.js',
@@ -52,12 +52,13 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const url = new URL(event.request.url);
     const cached = await caches.match(event.request);
-    if (cached) return cached;
+    if (cached && event.request.cache !== 'no-cache') return cached;
     try {
       const response = await fetch(event.request);
       if (response.ok) caches.open(CACHE).then(cache => cache.put(event.request, response.clone()));
       return response;
     } catch {
+      if (cached) return cached;
       const offlineAsset = url.search ? await caches.match(`${url.origin}${url.pathname}`) : null;
       if (offlineAsset) return offlineAsset;
       return event.request.mode === 'navigate' ? caches.match('./index.html') : Response.error();

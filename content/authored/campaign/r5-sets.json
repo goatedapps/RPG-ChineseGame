@@ -8,5 +8,10 @@
     { "id": "martial-foundations", "name": "Martial Foundations", "words": ["初级", "基本", "躲闪", "胸口"], "restoration": "The Harmony Dojo returns to careful, respectful practice." },
     { "id": "settle-the-misunderstanding", "name": "Settle the Misunderstanding", "words": ["详细", "彼此", "恨", "尽早"], "restoration": "Old disagreements are discussed before they become grudges." },
     { "id": "national-night", "name": "National Night", "words": ["气氛", "表演", "荧光棒", "五彩缤纷"], "restoration": "The night parade glows across the reunited city." }
+  ],
+  "p6": [
+    { "id": "festival-reading", "name": "Festival Reading", "words": ["书籍", "介绍", "目录", "页码"], "restoration": "The festival book stall helps every reader find a story." },
+    { "id": "story-parade", "name": "Story Parade", "words": ["师徒", "打败", "妖魔鬼怪", "朗读"], "restoration": "The parade brings heroic stories to life." },
+    { "id": "shared-meal", "name": "Shared Meal", "words": ["饥饿", "滋味", "诱人", "端"], "restoration": "Neighbours share a delicious festival meal." }
   ]
 }

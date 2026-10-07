@@ -1,0 +1,721 @@
+- questionID: P6-CH-2026-ACSJ-Q1
+  lessonIds: []
+  question: 外婆__临时__决定今晚不出去吃饭了。（选出画线词语的汉语拼音）
+  options:
+    - lín shí
+    - lín shǐ
+    - líng shí
+    - líng shǐ
+  correct: lín shí
+- questionID: P6-CH-2026-ACSJ-Q2
+  lessonIds: []
+  question: 爷爷会给我们讲故事，也会跟我们分享生活__经验__。（选出画线词语的汉语拼音）
+  options:
+    - qīng yán
+    - qīng yàn
+    - jīng yán
+    - jīng yàn
+  correct: jīng yàn
+- questionID: P6-CH-2026-AiTong-Q1
+  lessonIds: []
+  question: 为了实现自己的梦想，他从不因为困难而__退缩__。（选出画线词语的汉语拼音）
+  options:
+    - tuǐ suō
+    - tuǐ suò
+    - tuì suō
+    - tuì suò
+  correct: tuì suō
+- questionID: P6-CH-2026-AiTong-Q2
+  lessonIds: []
+  question: 小明非常__珍惜__时间，一有空就阅读各种课外书，充实自己。（选出画线词语的汉语拼音）
+  options:
+    - zhēn xī
+    - zhèn xí
+    - zhēng xī
+    - zhèng xí
+  correct: zhēn xī
+- questionID: P6-CH-2026-HenryPark-Q1
+  lessonIds: []
+  question: 大家对他助人为乐的行为连声__称赞__。（选出画线词语的汉语拼音）
+  options:
+    - chēn zān
+    - chēn zàn
+    - chēng zàn
+    - chēng zān
+  correct: chēng zàn
+- questionID: P6-CH-2026-HenryPark-Q2
+  lessonIds:
+    - 6
+  question: 我们不应该__妒忌__别人的才能。（选出画线词语的汉语拼音）
+  options:
+    - dù jì
+    - dù jí
+    - tù jí
+    - tù jì
+  correct: dù jì
+- questionID: P6-CH-2026-NanHua-Q1
+  lessonIds: []
+  question: 我家楼下有一家店是__出租__漫画书的。（选出画线词语的汉语拼音）
+  options:
+    - cū zǔ
+    - cū zhū
+    - chū zū
+    - chū zhǔ
+  correct: chū zū
+- questionID: P6-CH-2026-NanHua-Q2
+  lessonIds:
+    - 3
+    - 11
+  question: 爸爸下班时遇到交通__堵塞__，很晚才回到家。（选出画线词语的汉语拼音）
+  options:
+    - dǔ sè
+    - dǔ sāi
+    - zǔ sè
+    - zǔ sāi
+  correct: dǔ sè
+- questionID: P6-CH-2026-Nanyang-Q1
+  lessonIds: []
+  question: 在这个团队中，我们__彼此__学习，共同进步。（选出画线词语的汉语拼音）
+  options:
+    - bǐ cǐ
+    - pí cǐ
+    - bǐ chǐ
+    - pí chǐ
+  correct: bǐ cǐ
+- questionID: P6-CH-2026-Nanyang-Q2
+  lessonIds:
+    - 12
+  question: 小明知道他错了后，立刻__诚恳__地道歉。（选出画线词语的汉语拼音）
+  options:
+    - chén kěn
+    - chén gěn
+    - chéng kěn
+    - chéng gěn
+  correct: chéng kěn
+- questionID: P6-CH-2026-PLMGS-Q1
+  lessonIds: []
+  question: 这件上衣穿起来真好看，很__适合__你。（选出画线词语的汉语拼音）
+  options:
+    - sì hè
+    - sī hè
+    - shī hé
+    - shì hé
+  correct: shì hé
+- questionID: P6-CH-2026-PLMGS-Q2
+  lessonIds: []
+  question: 我会__加倍__珍惜妈妈亲手给我做的被子。（选出画线词语的汉语拼音）
+  options:
+    - jiá bèi
+    - jiā bèi
+    - jiá péi
+    - jiā péi
+  correct: jiā bèi
+- questionID: P6-CH-2026-Raffles-Q1
+  lessonIds:
+    - 10
+  question: 表哥在大学时，上了很多__翻译__课程。（选出画线词语的汉语拼音）
+  options:
+    - fān yì
+    - fán yí
+    - fǎng yì
+    - fàng yí
+  correct: fān yì
+- questionID: P6-CH-2026-Raffles-Q2
+  lessonIds:
+    - 8
+  question: 上中学的丽丽下课后去做服务员，帮忙__赚钱__养家。（选出画线词语的汉语拼音）
+  options:
+    - zuān qiǎn
+    - zuàn qiǎn
+    - zhuān qián
+    - zhuàn qián
+  correct: zhuàn qián
+- questionID: P6-CH-2026-RedSwastika-Q1
+  lessonIds: []
+  question: 虽然时间已经很晚，同学们__仍然__留下来讨论问题。（选出画线词语的汉语拼音）
+  options:
+    - rēng nán
+    - rēng rán
+    - réng rán
+    - réng lán
+  correct: réng rán
+- questionID: P6-CH-2026-RedSwastika-Q2
+  lessonIds: []
+  question: 我慢慢地__恢复__了自信，回答老师的次数也越来越多了。（选出画线词语的汉语拼音）
+  options:
+    - huī fù
+    - huí fú
+    - huì fèi
+    - huǐ fēi
+  correct: huī fù
+- questionID: P6-CH-2026-StNicholas-Q1
+  lessonIds: []
+  question: 尤金是新加坡__著名__的作家。
+  options:
+    - zù mín
+    - zù míng
+    - zhù mín
+    - zhù míng
+  correct: zhù míng
+- questionID: P6-CH-2026-StNicholas-Q2
+  lessonIds: []
+  question: 每逢过年，牛车水都充满了浓浓的春节__气氛__。
+  options:
+    - cì fēn
+    - cì fèn
+    - qì fēn
+    - qì fèn
+  correct: qì fēn
+- questionID: P6-CH-2026-TaoNan-Q1
+  lessonIds:
+    - 2
+  question: 兔子看见老虎，__迅速__地跑进树林里。
+  options:
+    - xùn sù
+    - xùn shù
+    - shùn sù
+    - shùn shù
+  correct: xùn sù
+- questionID: P6-CH-2026-TaoNan-Q2
+  lessonIds: []
+  question: 小云的舞蹈表演非常__精彩__，同学们看了都拍手叫好。
+  options:
+    - jīn cǎi
+    - jīn chǎi
+    - jīng cǎi
+    - jīng chǎi
+  correct: jīng cǎi
+- questionID: P6-CH-2025-ACSJ-Q1
+  lessonIds: []
+  question: 他长时间盯着电脑【屏幕】玩游戏，视力下降了。请选择画线词语的汉语拼音。
+  options:
+    - pín mù
+    - pín mò
+    - píng mù
+    - píng mò
+  correct: píng mù
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSJ-Q2
+  lessonIds: []
+  question: 弟弟不小心把果汁洒在自己的【衬衫】上，哭着喊妈妈帮他换。请选择画线词语的汉语拼音。
+  options:
+    - cēn sān
+    - cèn sān
+    - chēn shān
+    - chèn shān
+  correct: chèn shān
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q1
+  lessonIds:
+    - 12
+  question: 我头有点痛，想【稍微】休息一下。请选择汉语拼音。
+  options:
+    - sāo wēi
+    - shǎo wēi
+    - sāo wèi
+    - shǎo wèi
+  correct: shǎo wēi
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q2
+  lessonIds: []
+  question: 文章结尾的部分写得很【精彩】，并与开头相照应。请选择汉语拼音。
+  options:
+    - jīn cǎi
+    - jīn zhǎi
+    - jīng cǎi
+    - jīng zhǎi
+  correct: jīng cǎi
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-AiTong-Q1
+  lessonIds:
+    - 8
+  question: 【政府】大厦建立于1970年，有50多年的历史。请选择画线词语的汉语拼音。
+  options:
+    - zěng fǔ
+    - zèng fǔ
+    - zhěng fǔ
+    - zhèng fǔ
+  correct: zhèng fǔ
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-AiTong-Q2
+  lessonIds: []
+  question: 下个星期，我们班将参加三天两夜的【露营】活动。请选择画线词语的汉语拼音。
+  options:
+    - lú yín
+    - lù yín
+    - lù yíng
+    - lú yíng
+  correct: lù yíng
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-Catholic-Q1
+  lessonIds:
+    - 5
+  question: 叔叔使劲一敲，杯子被【砸碎】了。请选择画线词语的汉语拼音。
+  options:
+    - zá suī
+    - zá suì
+    - zhá suī
+    - zhá suì
+  correct: zá suì
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-Catholic-Q2
+  lessonIds: []
+  question: 听了爸爸的话，弟弟决定要【勤奋】学习。请选择画线词语的汉语拼音。
+  options:
+    - qín fēn
+    - qín fèn
+    - qíng fēn
+    - qíng fèn
+  correct: qín fèn
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-HenryPark-Q1
+  lessonIds:
+    - 3
+    - 5
+  question: 这块石头很【坚硬】，是很难敲碎的。请选择画线词语的汉语拼音。
+  options:
+    - jiàn yìn
+    - jiān yìn
+    - jiàn yìng
+    - jiān yìng
+  correct: jiān yìng
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-HenryPark-Q2
+  lessonIds:
+    - 5
+  question: 民众俱乐部开办蛋糕制作班，正【招收】新学员。请选择画线词语的汉语拼音。
+  options:
+    - zāo shōu
+    - zāo shòu
+    - zhāo shōu
+    - zhāo shòu
+  correct: zhāo shōu
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-MGS-Q1
+  lessonIds:
+    - 2
+    - 5
+  question: 摊主没发现手里的碗【倾斜】了，面汤都流了出来。请选择画线词语的汉语拼音。
+  options:
+    - qīn xié
+    - qīn xué
+    - qīng xié
+    - qīng xué
+  correct: qīng xié
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-MGS-Q2
+  lessonIds:
+    - 3
+    - 5
+  question: 每当弟弟【模仿】大人的动作时，总是让人忍不住大笑。请选择画线词语的汉语拼音。
+  options:
+    - mú fāng
+    - mó fāng
+    - mú fǎng
+    - mó fǎng
+  correct: mó fǎng
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-NanHua-Q1
+  lessonIds:
+    - 5
+  question: 李叔叔很【贪财】，捡到别人的东西从来不还。请选择画线词语的汉语拼音。
+  options:
+    - tān cái
+    - tān chái
+    - tāng cái
+    - tāng chái
+  correct: tān cái
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-NanHua-Q2
+  lessonIds:
+    - 5
+  question: 树上的【枯叶】被风一吹，落了一地。请选择画线词语的汉语拼音。
+  options:
+    - qū yè
+    - cū yè
+    - gū yè
+    - kū yè
+  correct: kū yè
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 4; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-Nanyang-Q1
+  lessonIds:
+    - 5
+  question: 大家都【怀疑】他，没有人相信他。请选择画线词语的汉语拼音。
+  options:
+    - huái yí
+    - huài yǐ
+    - huái yín
+    - huài yǐn
+  correct: huái yí
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-Nanyang-Q2
+  lessonIds:
+    - 4
+    - 5
+  question: 那位【慈祥】的爷爷对我笑了笑，让我感到很温暖。请选择画线词语的汉语拼音。
+  options:
+    - cí xián
+    - chí xián
+    - cí xiáng
+    - chí xiáng
+  correct: cí xiáng
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-PLMGS-Q1
+  lessonIds:
+    - 5
+    - 11
+  question: 我用电脑【搜索】有关动物的资料来写作业。请选择画线词语的汉语拼音。
+  options:
+    - sōu suō
+    - sōu suǒ
+    - shōu suō
+    - shōu suǒ
+  correct: sōu suǒ
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PLMGS-Q2
+  lessonIds:
+    - 5
+  question: 【黄昏】时分，夕阳洒落海面，闪着点点金光。请选择画线词语的汉语拼音。
+  options:
+    - huán hūn
+    - huán hún
+    - huáng hūn
+    - huáng hún
+  correct: huáng hūn
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PeiChun-Q1
+  lessonIds:
+    - 1
+    - 5
+  question: 学校的花园里【栽种】了许多鲜艳的花朵。请选择画线词语的汉语拼音。
+  options:
+    - zāi zòng
+    - zhāi zòng
+    - zāi zhòng
+    - zhāi zhòng
+  correct: zāi zhòng
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-PeiChun-Q2
+  lessonIds:
+    - 5
+  question: 他十分【慷慨】，经常捐钱帮助有需要的人。请选择画线词语的汉语拼音。
+  options:
+    - kān kǎi
+    - kǎn gǎi
+    - kāng kǎi
+    - kàng gǎi
+  correct: kāng kǎi
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-Raffles-Q1
+  lessonIds:
+    - 4
+    - 5
+  question: 我家附近的书店【销售】各种书本和文具。请选择画线词语的汉语拼音。
+  options:
+    - xiāo sòu
+    - xiāo shòu
+    - qiāo sòu
+    - qiāo shòu
+  correct: xiāo shòu
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-Raffles-Q2
+  lessonIds:
+    - 3
+    - 5
+  question: 我们最爱吃外婆煮的【清蒸】鱼。请选择画线词语的汉语拼音。
+  options:
+    - qīn zēng
+    - qīng zhēng
+    - qīng zēng
+    - qīn zhēng
+  correct: qīng zhēng
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-RedSwastika-Q1
+  lessonIds:
+    - 5
+  question: 【建筑】工人每天在工地上工作。请选择画线词语的汉语拼音。
+  options:
+    - jiàn zú
+    - jiàn zù
+    - jiàn zhú
+    - jiàn zhù
+  correct: jiàn zhù
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-RedSwastika-Q2
+  lessonIds:
+    - 5
+  question: 我决定要做的事，没有人可以【阻拦】。请选择画线词语的汉语拼音。
+  options:
+    - zú lǎn
+    - zǔ lán
+    - zhú lǎn
+    - zhǔ lán
+  correct: zǔ lán
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-Rosyth-Q1
+  lessonIds:
+    - 5
+  question: 爸爸带着一叠钞票去【银行】存钱。请选择画线词语的汉语拼音。
+  options:
+    - yín háng
+    - yíng háng
+    - yín xíng
+    - yíng xíng
+  correct: yín háng
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 3; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-Rosyth-Q2
+  lessonIds:
+    - 5
+  question: 校长在教师节庆祝会时上台【致词】。请选择画线词语的汉语拼音。
+  options:
+    - zī cí
+    - zī chí
+    - zhì cí
+    - zhì chí
+  correct: zhì cí
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 3; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-SCGS-Q1
+  lessonIds:
+    - 1
+    - 5
+  question: 哥哥每天都会到公园跑步，【锻炼】身体。请选择画线词语的汉语拼音。
+  options:
+    - duǎn liàn
+    - duàn liàn
+    - duān niàn
+    - duàn niàn
+  correct: duàn liàn
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-SCGS-Q2
+  lessonIds:
+    - 5
+    - 12
+  question: 姐姐拿着毕业【证书】，开心地和同学们拍照。请选择画线词语的汉语拼音。
+  options:
+    - zhēn sū
+    - zhèn shū
+    - zhēng sū
+    - zhèng shū
+  correct: zhèng shū
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-StNicholas-Q1
+  lessonIds:
+    - 2
+  question: 那棵小树被大风吹得向一边【倾斜】。请选择画线词语的汉语拼音。
+  options:
+    - qīn xié
+    - qīn xiè
+    - qīng xié
+    - qīng xiè
+  correct: qīng xié
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-StNicholas-Q2
+  lessonIds: []
+  question: 我们要在光线【充足】的地方看书。请选择画线词语的汉语拼音。
+  options:
+    - cōng zú
+    - cōng zhú
+    - chōng zú
+    - chōng zhú
+  correct: chōng zú
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-TaoNan-Q1
+  lessonIds:
+    - 4
+    - 5
+  question: 这条裙子看起来很【普通】，但是价格不便宜。请选择画线词语的汉语拼音。
+  options:
+    - bǔ dōng
+    - bǔ tōng
+    - pǔ dōng
+    - pǔ tōng
+  correct: pǔ tōng
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 2; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-2025-TaoNan-Q2
+  lessonIds:
+    - 5
+    - 11
+  question: 同学们先上网【搜索】资料，然后一起完成小组作业。请选择画线词语的汉语拼音。
+  options:
+    - sōu suǒ
+    - suō sǒu
+    - shōu suǒ
+    - shuō sǒu
+  correct: sōu suǒ
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 2; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-AUTHORED-L1-Q01
+  lessonIds:
+    - 1
+  question: 这次【测验】结束后，老师会讲解大家答错的题目。请选择画线词语的汉语拼音。
+  options:
+    - cè yàn
+    - chè yàn
+    - cè yán
+    - chè yán
+  correct: cè yàn
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 测验."
+- questionID: P6-CH-AUTHORED-L1-Q02
+  lessonIds:
+    - 1
+  question: 【每逢】星期五，爸爸都会陪我到图书馆借书。请选择画线词语的汉语拼音。
+  options:
+    - měi fèng
+    - mèi féng
+    - mèi fèng
+    - měi féng
+  correct: měi féng
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 每逢."
+- questionID: P6-CH-AUTHORED-L2-Q01
+  lessonIds:
+    - 2
+  question: 书架的一边高、一边低，明显有些【倾斜】。请选择画线词语的汉语拼音。
+  options:
+    - qīng xié
+    - qǐng xié
+    - qīng xéi
+    - qǐng xéi
+  correct: qīng xié
+  source: "Original authored P6 practice; Lesson 2; taught vocabulary: 倾斜."
+- questionID: P6-CH-AUTHORED-L2-Q02
+  lessonIds:
+    - 2
+  question: 生病的小华脸色【苍白】，妈妈带他去看医生。请选择画线词语的汉语拼音。
+  options:
+    - chāng bái
+    - cāng bǎi
+    - chāng bǎi
+    - cāng bái
+  correct: cāng bái
+  source: "Original authored P6 practice; Lesson 2; taught vocabulary: 苍白."
+- questionID: P6-CH-AUTHORED-L3-Q01
+  lessonIds:
+    - 3
+  question: 妈妈在平底锅里【煎】了一块鱼，鱼皮变得金黄。请选择画线词语的汉语拼音。
+  options:
+    - jiàn
+    - qiān
+    - qiàn
+    - jiān
+  correct: jiān
+  source: "Original authored P6 practice; Lesson 3; taught vocabulary: 煎."
+- questionID: P6-CH-AUTHORED-L7-Q01
+  lessonIds:
+    - 7
+  question: 我们沿着小路走，远远便听见【瀑布】的水声。请选择画线词语的汉语拼音。
+  options:
+    - bào bù
+    - pù pú
+    - pù bù
+    - pǔ bù
+  correct: pù bù
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 瀑布."
+- questionID: P6-CH-AUTHORED-L7-Q02
+  lessonIds:
+    - 7
+  question: 地图上标出了横跨几个地区的【山脉】。请选择画线词语的汉语拼音。
+  options:
+    - sān mài
+    - shān mài
+    - shān mǎi
+    - shān mò
+  correct: shān mài
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 山脉."
+- questionID: P6-CH-AUTHORED-L7-Q03
+  lessonIds:
+    - 7
+  question: 医生先清洗伤口，再为受伤的孩子【治疗】。请选择画线词语的汉语拼音。
+  options:
+    - zhì liáo
+    - zhì liào
+    - zì liáo
+    - zì liào
+  correct: zhì liáo
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 治疗."
+- questionID: P6-CH-AUTHORED-L9-Q01
+  lessonIds:
+    - 9
+  question: 同学们用彩带【装饰】礼堂，准备迎接毕业典礼。请选择画线词语的汉语拼音。
+  options:
+    - zhuāng shì
+    - zhuāng sì
+    - zuāng shì
+    - zhuàng shì
+  correct: zhuāng shì
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 装饰."
+- questionID: P6-CH-AUTHORED-L9-Q02
+  lessonIds:
+    - 9
+  question: 他太【固执】了，明知道走错路也不肯回头。请选择画线词语的汉语拼音。
+  options:
+    - gù zhì
+    - gǔ zhí
+    - gǔ zhì
+    - gù zhí
+  correct: gù zhí
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 固执."
+- questionID: P6-CH-AUTHORED-L9-Q03
+  lessonIds:
+    - 9
+  question: 小猫的脚被绳子缠住，不停地【挣扎】，想把脚抽出来。请选择画线词语的汉语拼音。
+  options:
+    - zhèng zhà
+    - zhēng zhà
+    - zhēng zhá
+    - zhěng zhá
+  correct: zhēng zhá
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 挣扎."
+- questionID: P6-CH-AUTHORED-L10-Q01
+  lessonIds:
+    - 10
+  question: 查阅【目录】后，我很快找到了介绍海豚的章节。请选择画线词语的汉语拼音。
+  options:
+    - mú lǔ
+    - mù lù
+    - mù lǔ
+    - mú lù
+  correct: mù lù
+  source: "Original authored P6 practice; Lesson 10; taught vocabulary: 目录."
+- questionID: P6-CH-AUTHORED-L11-Q01
+  lessonIds:
+    - 11
+  question: 奶奶把晒干的豆子【储存】在密封的罐子里。请选择画线词语的汉语拼音。
+  options:
+    - chǔ chún
+    - chù chún
+    - chǔ cún
+    - chù cún
+  correct: chǔ cún
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 储存."
+- questionID: P6-CH-AUTHORED-L11-Q02
+  lessonIds:
+    - 11
+  question: 表演还没结束，请不要在座位上【窃窃私语】。请选择画线词语的汉语拼音。
+  options:
+    - qiè qiè sī yù
+    - qiè qiè sī yǔ
+    - qiè qiè shī yǔ
+    - qiē qiē sī yǔ
+  correct: qiè qiè sī yǔ
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 窃窃私语."
+- questionID: P6-CH-AUTHORED-L12-Q01
+  lessonIds:
+    - 12
+  question: 校长【邀请】家长来观看学生的毕业表演。请选择画线词语的汉语拼音。
+  options:
+    - yāo qīn
+    - yào qǐng
+    - yāo qìng
+    - yāo qǐng
+  correct: yāo qǐng
+  source: "Original authored P6 practice; Lesson 12; taught vocabulary: 邀请."
+- questionID: P6-CH-AUTHORED-L12-Q02
+  lessonIds:
+    - 12
+  question: 雨停后，泥地上留下了小狗走过的【痕迹】。请选择画线词语的汉语拼音。
+  options:
+    - hén jí
+    - hèng jì
+    - hén jì
+    - héng jì
+  correct: hén jì
+  source: "Original authored P6 practice; Lesson 12; taught vocabulary: 痕迹."

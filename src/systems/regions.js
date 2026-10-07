@@ -1,4 +1,4 @@
-import { createStoryState, normalizeStory } from './story.js?p18';
+import { createStoryState, normalizeStory } from './story.js?p19';
 
 function freshReading() {
   return { completed: [], active: null, index: 0, questionCount: 0, results: {}, written: [] };

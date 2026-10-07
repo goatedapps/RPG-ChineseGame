@@ -8,5 +8,10 @@
     { "id": "summit-living-museum", "name": "Living Museum", "words": ["博物院", "资源", "和谐", "污染"], "restoration": "The Reading Hall preserves how people cared for the world." },
     { "id": "summit-treehouse", "name": "Strong Treehouse", "words": ["建筑", "搭建", "坚固", "环境"], "restoration": "The branch bridges and homes stand strong again." },
     { "id": "summit-kindness", "name": "Kindness Remembered", "words": ["盲人", "冷漠", "惋惜", "悲伤"], "restoration": "The Tree remembers how to notice and help one another." }
+  ],
+  "p6": [
+    { "id": "graduation", "name": "Graduation Gathering", "words": ["毕业", "邀请", "仪式", "温馨"], "restoration": "The summit celebrates every learner who has travelled this far." },
+    { "id": "lasting-effort", "name": "Lasting Effort", "words": ["恒心", "半途而废", "放弃", "前途"], "restoration": "The Tree remembers the value of continuing through difficulties." },
+    { "id": "summit-music", "name": "Summit Music", "words": ["钢琴", "独奏", "朗诵", "守望"], "restoration": "Music and poetry welcome Word Spirits home to the summit." }
   ]
 }

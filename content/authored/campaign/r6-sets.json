@@ -8,5 +8,10 @@
     { "id": "oracle-record", "name": "Oracle Record", "words": ["记录", "骨", "艺术", "墨"], "restoration": "The Oracle Reading Room displays the recovered history of writing." },
     { "id": "patient-team", "name": "Patient Team", "words": ["辛勤", "积极", "培育", "恢复"], "restoration": "The research team learns to improve together after mistakes." },
     { "id": "ancient-tree", "name": "Ancient Tree", "words": ["栽种", "炮弹树", "阴凉", "茂密"], "restoration": "The Memory Canopy grows broad and green once more." }
+  ],
+  "p6": [
+    { "id": "research-tools", "name": "Research Tools", "words": ["技术", "搜索", "确定", "储存"], "restoration": "The researchers recover their carefully stored discoveries." },
+    { "id": "hidden-wonders", "name": "Hidden Wonders", "words": ["隐形", "幻想", "魔术", "瞧见"], "restoration": "The grove displays its hidden wonders again." },
+    { "id": "patient-discovery", "name": "Patient Discovery", "words": ["逐渐", "恰好", "触碰", "晃荡"], "restoration": "The dig team resumes its patient exploration beneath the canopy." }
   ]
 }

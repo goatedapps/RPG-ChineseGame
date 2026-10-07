@@ -110,7 +110,12 @@ export function bossGateQueue(content, config = {}, lessons = [1, 2, 3]) {
   };
   const conjunctions = takeQuestions(firstKind, 3, 'Chain Spell');
   const sentences = takeQuestions(secondKind, 2, 'Scramble Spell');
-  const lessonWords = lessons.flatMap(lesson => content.words.filter(word => word.lesson === lesson).slice(0, 1)).slice(0, 2).map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
+  const writingWords = [...new Map(lessons.flatMap(lesson => content.words.filter(word => word.lesson === lesson).slice(0, 1)).map(word => [word.w, word])).values()].slice(0, 2);
+  for (const word of content.words.filter(word => lessons.includes(word.lesson))) {
+    if (writingWords.length === 2) break;
+    if (!writingWords.some(selected => selected.w === word.w)) writingWords.push(word);
+  }
+  const lessonWords = writingWords.map(word => ({ phase: 'Ink Spell', kind: 'writing', word }));
   const muddleScrolls = takeQuestions(null, 5, 'Muddle Scroll');
   return [...conjunctions, ...sentences, ...lessonWords, ...muddleScrolls];
 }

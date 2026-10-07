@@ -8,5 +8,10 @@
     { "id": "whale-rescue", "name": "Whale Rescue", "words": ["浮出", "水柱", "深海", "巨大"], "restoration": "The deep-water route for the young whale is restored." },
     { "id": "future-clock", "name": "Future Clock", "words": ["机器人", "未来", "光阴似箭", "一眨眼"], "restoration": "Maker Chen's clockwork guide begins moving again." },
     { "id": "shore-and-sea", "name": "Shore and Sea", "words": ["浅海", "陆地", "足迹", "随着"], "restoration": "The harbour's tide markers become readable again." }
+  ],
+  "p6": [
+    { "id": "rescue-team", "name": "Rescue Team", "words": ["对抗", "忠诚", "杰出", "足智多谋"], "restoration": "The harbour rescue team works together with courage." },
+    { "id": "river-plan", "name": "River Plan", "words": ["长江", "雾", "绳子", "埋伏"], "restoration": "A careful river plan restores the harbour workshop." },
+    { "id": "coastal-journey", "name": "Coastal Journey", "words": ["瀑布", "跨越", "倾泻", "山脉"], "restoration": "The coastal travel board celebrates the restored waterways." }
   ]
 }

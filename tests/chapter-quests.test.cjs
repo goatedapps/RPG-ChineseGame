@@ -11,17 +11,17 @@ test('chapter dictations use mapped lessons and reserve separate P5 Lesson 10 wo
   const { loadLevelPackage } = await import('../src/content/loader.js');
   const { createFreshState } = await import('../src/core/state.js');
   const { chapterDictationWords, chapterGroupComplete, chapterTask, completeChapterTask } = await import('../src/systems/chapterQuests.js');
-  for (const level of ['p2', 'p5']) {
+  for (const level of require('./support/levels.cjs').playableIds) {
     const game = await loadLevelPackage(level, fetcher, '');
     const state = createFreshState(game);
     const gardener = chapterTask(game, 'r4', 'gardener-su');
     const expected = game.config.regionLessons.r4.at(-1);
     assert.equal(gardener.lesson, expected);
     const farmer = chapterTask(game, 'r4', 'farmer-qiao');
-    if (level === 'p5') {
-      assert.equal(gardener.lesson, 10);
+    if (gardener.lesson === farmer.lesson) {
+      if (level === 'p5') assert.equal(gardener.lesson, 10);
       assert.equal(gardener.requiredCollected, 6);
-      for (const word of game.content.words.filter(word => word.lesson === 10).slice(0, 6)) state.progress.words[word.w] = { collected: true };
+      for (const word of game.content.words.filter(word => word.lesson === gardener.lesson).slice(0, 6)) state.progress.words[word.w] = { collected: true };
       const farmerWords = chapterDictationWords(game, state.progress, 'r4', 'farmer-qiao', () => 0);
       const gardenerWords = chapterDictationWords(game, state.progress, 'r4', 'gardener-su', () => 0);
       assert.equal(farmerWords.length, 3);

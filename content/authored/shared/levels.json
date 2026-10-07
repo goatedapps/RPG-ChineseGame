@@ -16,5 +16,14 @@
     "worldMappingReady": true,
     "playableBuild": "modular",
     "modularPreviewReady": true
+  },
+  {
+    "id": "p6",
+    "label": "Primary 6",
+    "badge": "六",
+    "sourceReady": true,
+    "worldMappingReady": true,
+    "playableBuild": "modular",
+    "modularPreviewReady": true
   }
 ]

@@ -1,0 +1,409 @@
+title: 第九课 (Lesson 9)
+vocab:
+  - word: 风筝
+    pinyin: fēng zheng
+    meaning: Kite
+    example: 我们在草地上放风筝。
+    sentenceBank:
+      - zh: 这只风筝画着一条龙。
+        en: This kite has a dragon painted on it.
+      - zh: 风筝随着风越飞越高。
+        en: The kite flew higher and higher in the wind.
+      - zh: 爸爸帮我把风筝线收好。
+        en: Dad helped me put away the kite string.
+      - zh: 妹妹的风筝落在了草地上。
+        en: My younger sister's kite landed on the grass.
+      - zh: 她用纸和竹条做了一只风筝。
+        en: She made a kite from paper and bamboo strips.
+  - word: 华族
+    pinyin: Huá zú
+    meaning: Ethnic Chinese community / Ethnic Chinese
+    example: 展览介绍了华族的传统节日。
+    sentenceBank:
+      - zh: 这本书介绍了华族的饮食文化。
+        en: This book introduces the food culture of the ethnic Chinese community.
+      - zh: 许多华族家庭在春节时吃团圆饭。
+        en: Many ethnic Chinese families have a reunion dinner during Chinese New Year.
+      - zh: 老师让我们了解华族和其他族群的文化。
+        en: The teacher encouraged us to learn about the cultures of the ethnic Chinese and other communities.
+      - zh: 华族学生在活动中介绍了自己的传统习俗。
+        en: The ethnic Chinese students introduced their traditional customs at the event.
+      - zh: 这场表演展示了华族文化的特色。
+        en: This performance showcased features of ethnic Chinese culture.
+  - word: 吉祥
+    pinyin: jí xiáng
+    meaning: Auspicious / Symbolising good fortune
+    example: 这幅图案象征吉祥，表达美好的祝愿。
+    sentenceBank:
+      - zh: 奶奶喜欢带有吉祥寓意的装饰。
+        en: Grandma likes decorations with auspicious meanings.
+      - zh: 大家互相说吉祥话，祝愿新年顺利。
+        en: Everyone exchanged auspicious greetings, wishing for a smooth new year.
+      - zh: 这件礼物寄托了吉祥的祝福。
+        en: This gift carried wishes for good fortune.
+      - zh: 灯笼上的图案有吉祥的含义。
+        en: The pattern on the lantern had an auspicious meaning.
+      - zh: 她选了一张写着吉祥祝语的贺卡。
+        en: She chose a card bearing wishes for good fortune.
+  - word: 皇帝
+    pinyin: huáng dì
+    meaning: Emperor
+    example: 故事里的皇帝住在宏伟的宫殿里。
+    sentenceBank:
+      - zh: 大臣向皇帝报告边境的情况。
+        en: The minister reported the situation at the border to the emperor.
+      - zh: 这幅画描绘了一位古代皇帝。
+        en: This painting depicts an ancient emperor.
+      - zh: 皇帝下令修建一座新的宫殿。
+        en: The emperor ordered the construction of a new palace.
+      - zh: 演员穿上龙袍，扮演皇帝。
+        en: The actor wore a dragon robe to play the emperor.
+      - zh: 这本历史书介绍了那位皇帝的一生。
+        en: This history book describes that emperor's life.
+  - word: 装饰
+    pinyin: zhuāng shì
+    meaning: Decorate / Decoration
+    example: 我们用彩纸装饰教室。
+    sentenceBank:
+      - zh: 妈妈把鲜花放在桌上作为装饰。
+        en: Mum placed flowers on the table as a decoration.
+      - zh: 这面墙装饰着漂亮的图案。
+        en: This wall was decorated with beautiful patterns.
+      - zh: 妹妹用贴纸装饰自己的笔记本。
+        en: My younger sister decorated her notebook with stickers.
+      - zh: 他们用灯笼装饰会场。
+        en: They decorated the venue with lanterns.
+      - zh: 这件衣服上的装饰很简单。
+        en: The decorations on this outfit were simple.
+  - word: 龙舟
+    pinyin: lóng zhōu
+    meaning: Dragon boat
+    example: 队员们一起划动船桨，让龙舟向前行。
+    sentenceBank:
+      - zh: 这艘龙舟的船头雕着龙头。
+        en: The bow of this dragon boat was carved into a dragon's head.
+      - zh: 观众在岸边观看龙舟比赛。
+        en: Spectators watched the dragon boat race from the bank.
+      - zh: 鼓手在龙舟上敲鼓，帮助队员掌握节奏。
+        en: The drummer beat a drum on the dragon boat to help the paddlers keep time.
+      - zh: 几艘龙舟并排停在河边。
+        en: Several dragon boats were moored side by side by the river.
+      - zh: 大家齐心协力，把龙舟划向终点。
+        en: Everyone worked together to paddle the dragon boat towards the finish.
+  - word: 九龙壁
+    pinyin: jiǔ lóng bì
+    meaning: Nine-Dragon Wall
+    example: 游客停在九龙壁前，欣赏壁上的九条龙。
+    sentenceBank:
+      - zh: 这幅照片拍下了九龙壁上的精美图案。
+        en: This photograph captured the beautiful patterns on the Nine-Dragon Wall.
+      - zh: 导游介绍了九龙壁上龙的不同姿态。
+        en: The guide described the different poses of the dragons on the Nine-Dragon Wall.
+      - zh: 我们在书中看到了九龙壁的图片。
+        en: We saw a picture of a Nine-Dragon Wall in the book.
+      - zh: 她仔细观察九龙壁，数了数上面的龙。
+        en: She studied the Nine-Dragon Wall carefully and counted the dragons on it.
+      - zh: 这座九龙壁的琉璃装饰色彩鲜艳。
+        en: The glazed-tile decorations on this Nine-Dragon Wall were brightly coloured.
+  - word: 翻腾
+    pinyin: fān téng
+    meaning: Tumble / Surge and roll
+    example: 大风中，海浪不停地翻腾。
+    sentenceBank:
+      - zh: 锅里的水烧开了，气泡上下翻腾。
+        en: The water in the pot boiled, and bubbles churned up and down.
+      - zh: 乌云在天空中翻腾。
+        en: Dark clouds rolled across the sky.
+      - zh: 河水在岩石间翻腾，溅起水花。
+        en: The river churned among the rocks, sending up spray.
+      - zh: 故事中的龙在云里翻腾。
+        en: The dragon in the story twisted and rolled among the clouds.
+      - zh: 汹涌的波浪翻腾着，拍打岸边。
+        en: The surging waves rolled and crashed against the shore.
+  - word: 龙宫
+    pinyin: lóng gōng
+    meaning: Dragon King's palace in mythology
+    example: 神话中的龙王住在海底的龙宫里。
+    sentenceBank:
+      - zh: 故事里的少年进入龙宫寻找宝物。
+        en: The boy in the story entered the Dragon King's palace to find treasure.
+      - zh: 她画了一座华丽的龙宫。
+        en: She drew a magnificent Dragon King's palace.
+      - zh: 童话里的龙宫藏在深海之中。
+        en: The Dragon King's palace in the fairy tale was hidden in the deep sea.
+      - zh: 这段动画描绘了龙宫里的宴会。
+        en: This animated scene depicted a banquet in the Dragon King's palace.
+      - zh: 爷爷讲的神话中，龙宫的门由水晶做成。
+        en: In Grandpa's myth, the Dragon King's palace had crystal doors.
+  - word: 干裂
+    pinyin: gān liè
+    meaning: Crack from dryness
+    example: 久不下雨，田里的泥土都干裂了。
+    sentenceBank:
+      - zh: 天气干燥，她的嘴唇有些干裂。
+        en: The weather was dry, and her lips were slightly cracked.
+      - zh: 干裂的土地上出现了一道道裂缝。
+        en: Cracks appeared across the dried-out land.
+      - zh: 这块泥巴晒得太久，已经干裂。
+        en: This lump of mud had dried in the sun too long and cracked.
+      - zh: 他手上的皮肤因干燥而干裂。
+        en: The skin on his hands cracked from dryness.
+      - zh: 照片中的湖床干裂，已经没有水了。
+        en: The lake bed in the photograph was dry and cracked, with no water remaining.
+  - word: 荒废
+    pinyin: huāng fèi
+    meaning: Leave unused / Neglect
+    example: 这块田荒废多年，长满了杂草。
+    sentenceBank:
+      - zh: 那座旧屋已经荒废，窗户都坏了。
+        en: That old house had been abandoned, and its windows were broken.
+      - zh: 村民重新耕种荒废的土地。
+        en: The villagers began farming the neglected land again.
+      - zh: 这座花园长期无人照顾，渐渐荒废了。
+        en: This garden gradually fell into neglect because nobody cared for it.
+      - zh: 他们把荒废的仓库改成了活动室。
+        en: They converted the disused warehouse into an activity room.
+      - zh: 我们不应该让这片好土地继续荒废。
+        en: We should not leave this good land unused any longer.
+  - word: 无辜
+    pinyin: wú gū
+    meaning: Innocent / Blameless
+    example: 他没有做错事，是无辜的。
+    sentenceBank:
+      - zh: 老师查明真相，证明妹妹是无辜的。
+        en: The teacher established the truth and proved that my younger sister was innocent.
+      - zh: 不要让无辜的人替别人承担责任。
+        en: Do not make innocent people take responsibility for others' actions.
+      - zh: 故事里的无辜村民受到了伤害。
+        en: The innocent villagers in the story were harmed.
+      - zh: 她解释了经过，希望大家相信她是无辜的。
+        en: She explained what had happened and hoped everyone would believe she was innocent.
+      - zh: 这只小猫是无辜的，花瓶并不是它打破的。
+        en: This kitten was blameless; it was not the one that broke the vase.
+  - word: 遭受
+    pinyin: zāo shòu
+    meaning: Suffer / Be subjected to harm
+    example: 这座村庄遭受洪水袭击，许多房屋受损。
+    sentenceBank:
+      - zh: 农田遭受旱灾，收成减少了。
+        en: The farmland suffered a drought, reducing the harvest.
+      - zh: 他遭受误解，心里十分难过。
+        en: He was misunderstood and felt very upset.
+      - zh: 这片森林遭受大火破坏。
+        en: This forest was devastated by a fire.
+      - zh: 球队遭受重大的挫折，但没有放弃。
+        en: The team suffered a major setback but did not give up.
+      - zh: 我们帮助遭受灾害的家庭重建家园。
+        en: We helped families affected by the disaster rebuild their homes.
+  - word: 残忍
+    pinyin: cán rěn
+    meaning: Cruel / Ruthless
+    example: 故事里的坏人十分残忍，连无辜的动物也不放过。
+    sentenceBank:
+      - zh: 伤害小动物是一种残忍的行为。
+        en: Harming small animals is a cruel act.
+      - zh: 那个残忍的国王让百姓受尽痛苦。
+        en: That cruel king caused his people great suffering.
+      - zh: 大家反对他残忍地对待俘虏。
+        en: Everyone opposed his cruel treatment of the prisoners.
+      - zh: 这则故事批评了坏人的残忍。
+        en: This story criticised the villain's cruelty.
+      - zh: 我们应该善待生命，不做残忍的事。
+        en: We should treat living things kindly and avoid cruel acts.
+  - word: 副
+    pinyin: fù
+    meaning: Measure word for expressions or appearances
+    example: 他摆出一副很不耐烦的表情。
+    sentenceBank:
+      - zh: 妹妹露出一副惊讶的神情。
+        en: My younger sister had a surprised expression.
+      - zh: 他一副若无其事的样子，好像什么也没发生。
+        en: He looked unconcerned, as if nothing had happened.
+      - zh: 老师看见他那副认真的神情，欣慰地笑了。
+        en: The teacher smiled with satisfaction on seeing his serious expression.
+      - zh: 她摆出一副生气的面孔，却忍不住笑了。
+        en: She put on an angry expression but could not help laughing.
+      - zh: 小明一副垂头丧气的样子，慢慢走回座位。
+        en: Looking dejected, Xiao Ming walked slowly back to his seat.
+  - word: 固执
+    pinyin: gù zhí
+    meaning: Stubborn
+    example: 他很固执，明知方法不对也不肯改变。
+    sentenceBank:
+      - zh: 她固执地坚持自己的想法，不愿听取建议。
+        en: She stubbornly clung to her idea and refused to listen to advice.
+      - zh: 不要太固执，试试看别人的办法。
+        en: Do not be too stubborn; try someone else's method.
+      - zh: 爷爷虽然有时固执，最后还是接受了建议。
+        en: Although Grandpa was sometimes stubborn, he eventually accepted the advice.
+      - zh: 他固执地走原来的路，结果绕了远路。
+        en: He stubbornly followed his original route and ended up taking a long detour.
+      - zh: 固执地拒绝改正错误，会让问题越来越严重。
+        en: Stubbornly refusing to correct mistakes will make the problem worse.
+  - word: 爆竹
+    pinyin: bào zhú
+    meaning: Firecracker
+    example: 故事中的村民燃放爆竹庆祝新年。
+    sentenceBank:
+      - zh: 电影里响起了爆竹的噼啪声。
+        en: The crackling sound of firecrackers was heard in the film.
+      - zh: 这张旧照片拍到了门口的爆竹。
+        en: This old photograph showed firecrackers by the doorway.
+      - zh: 他在画里画了一串红色爆竹。
+        en: He drew a string of red firecrackers in his picture.
+      - zh: 故事里，爆竹声把怪兽吓跑了。
+        en: In the story, the sound of firecrackers scared the monster away.
+      - zh: 爷爷提起小时候听爆竹声的经历。
+        en: Grandpa recalled hearing firecrackers when he was a child.
+  - word: 权力
+    pinyin: quán lì
+    meaning: Power / Authority
+    example: 故事里的国王拥有很大的权力。
+    sentenceBank:
+      - zh: 他利用手中的权力欺压百姓。
+        en: He used his power to oppress the people.
+      - zh: 拥有权力的人也应该承担责任。
+        en: People with power should also accept responsibility.
+      - zh: 这项决定超出了他的权力范围。
+        en: This decision was beyond the scope of his authority.
+      - zh: 大臣劝皇帝不要滥用权力。
+        en: The minister advised the emperor not to abuse his power.
+      - zh: 她认为权力应该用来帮助有需要的人。
+        en: She believed power should be used to help people in need.
+  - word: 允许
+    pinyin: yǔn xǔ
+    meaning: Allow / Permit
+    example: 老师允许我们在完成作业后看书。
+    sentenceBank:
+      - zh: 妈妈允许妹妹邀请朋友来家里。
+        en: Mum allowed my younger sister to invite friends home.
+      - zh: 这里不允许随地扔垃圾。
+        en: Littering is not allowed here.
+      - zh: 得到老师允许后，他才离开教室。
+        en: He left the classroom only after receiving the teacher's permission.
+      - zh: 图书馆允许读者借阅这些书。
+        en: The library allows readers to borrow these books.
+      - zh: 爸爸允许我周末参加同学聚会。
+        en: Dad allowed me to attend a class gathering at the weekend.
+  - word: 暴雨
+    pinyin: bào yǔ
+    meaning: Torrential rain / Rainstorm
+    example: 暴雨突然降临，路上的行人纷纷避雨。
+    sentenceBank:
+      - zh: 暴雨下了一夜，河水涨了起来。
+        en: Torrential rain fell all night, and the river rose.
+      - zh: 因为暴雨，比赛暂时停止了。
+        en: The match was temporarily stopped because of the rainstorm.
+      - zh: 暴雨猛烈地打在屋顶上。
+        en: The torrential rain pounded against the roof.
+      - zh: 一场暴雨过后，街道上积了不少水。
+        en: After a rainstorm, much water collected on the streets.
+      - zh: 我们在屋里等暴雨停下来。
+        en: We waited indoors for the rainstorm to stop.
+  - word: 冲毁
+    pinyin: chōng huǐ
+    meaning: Wash away / Destroy by rushing water
+    example: 洪水冲毁了河上的木桥。
+    sentenceBank:
+      - zh: 大水冲毁了几间沿河的房屋。
+        en: The floodwater destroyed several houses along the river.
+      - zh: 暴雨后的急流冲毁了这段道路。
+        en: The torrent after the rainstorm washed away this section of road.
+      - zh: 农田的围栏被洪水冲毁了。
+        en: The farmland's fence was destroyed by floodwater.
+      - zh: 工人正在重建被冲毁的桥。
+        en: The workers were rebuilding the bridge that had been washed away.
+      - zh: 河水冲毁了岸边的小棚子。
+        en: The river washed away the little shed on its bank.
+  - word: 汪洋
+    pinyin: wāng yáng
+    meaning: Vast expanse of water
+    example: 洪水过后，田野变成了一片汪洋。
+    sentenceBank:
+      - zh: 飞机下面是一片无边的汪洋。
+        en: Below the aircraft lay a boundless expanse of ocean.
+      - zh: 小船在汪洋中显得十分渺小。
+        en: The little boat looked tiny in the vast ocean.
+      - zh: 海水涨上来，低地成了一片汪洋。
+        en: The sea rose, turning the lowlands into a vast expanse of water.
+      - zh: 他望着眼前的汪洋，看不见对岸。
+        en: He looked across the vast water and could not see the opposite shore.
+      - zh: 照片中的村庄被洪水淹没，四周一片汪洋。
+        en: The village in the photograph was flooded, surrounded by a vast expanse of water.
+  - word: 缓缓
+    pinyin: huǎn huǎn
+    meaning: Slowly / Gently
+    example: 船缓缓驶离码头。
+    sentenceBank:
+      - zh: 太阳从山后缓缓升起。
+        en: The sun slowly rose from behind the mountain.
+      - zh: 爷爷缓缓走下楼梯。
+        en: Grandpa slowly walked down the stairs.
+      - zh: 她缓缓打开盒子，取出一封信。
+        en: She slowly opened the box and took out a letter.
+      - zh: 窗帘在微风中缓缓摆动。
+        en: The curtains swayed gently in the breeze.
+      - zh: 队伍缓缓向前移动。
+        en: The queue moved forward slowly.
+  - word: 筋疲力尽
+    pinyin: jīn pí lì jìn
+    meaning: Completely exhausted
+    example: 搬了一整天的东西，我们都筋疲力尽了。
+    sentenceBank:
+      - zh: 跑完长跑后，他筋疲力尽地坐在地上。
+        en: After the long run, he sat on the ground completely exhausted.
+      - zh: 救援人员连续工作，累得筋疲力尽。
+        en: The rescuers worked continuously until they were completely exhausted.
+      - zh: 她爬到山顶时，已经筋疲力尽。
+        en: She was completely exhausted when she reached the summit.
+      - zh: 打扫完整间屋子，妈妈累得筋疲力尽。
+        en: Mum was completely exhausted after cleaning the entire house.
+      - zh: 队员们虽然筋疲力尽，仍坚持走到终点。
+        en: Although the team members were completely exhausted, they kept going to the finish.
+  - word: 挣扎
+    pinyin: zhēng zhá
+    meaning: Struggle / Strive to break free
+    example: 小鸟被网缠住，不停地挣扎。
+    sentenceBank:
+      - zh: 他挣扎着从泥坑里爬出来。
+        en: He struggled to climb out of the muddy hole.
+      - zh: 故事里的俘虏挣扎着想挣脱绳子。
+        en: The prisoner in the story struggled to break free of the ropes.
+      - zh: 受伤的小狗挣扎着站起来。
+        en: The injured puppy struggled to stand up.
+      - zh: 她被困在狭窄的地方，挣扎着想挪动身体。
+        en: Trapped in a narrow space, she struggled to move her body.
+      - zh: 鱼在网里挣扎，尾巴不停地摆动。
+        en: The fish struggled in the net, flicking its tail repeatedly.
+  - word: 大吼
+    pinyin: dà hǒu
+    meaning: Shout loudly / Roar
+    example: 他愤怒地大吼，声音响遍了整个房间。
+    sentenceBank:
+      - zh: 发现有人靠近危险的地方，爸爸急得大吼起来。
+        en: Seeing someone approach a dangerous spot, Dad shouted loudly in alarm.
+      - zh: 故事中的巨人大吼一声，把村民吓了一跳。
+        en: The giant in the story gave a loud roar, startling the villagers.
+      - zh: 他激动地大吼，为自己的队伍加油。
+        en: He shouted excitedly to cheer on his team.
+      - zh: 妈妈提醒他不要对弟弟大吼。
+        en: Mum reminded him not to shout at his younger brother.
+      - zh: 那个人一边大吼，一边挥动手臂。
+        en: That person shouted loudly while waving his arms.
+  - word: 晕
+    pinyin: yūn
+    meaning: Dizzy / Light-headed
+    example: 坐车时，我有点晕，便闭上眼睛休息。
+    sentenceBank:
+      - zh: 转了几个圈后，妹妹觉得头很晕。
+        en: After spinning several times, my younger sister felt dizzy.
+      - zh: 他低声说自己头晕，请老师让他坐下。
+        en: He quietly told the teacher he felt dizzy and asked to sit down.
+      - zh: 船摇晃得厉害，我觉得有些晕。
+        en: The boat rocked heavily, making me feel a little dizzy.
+      - zh: 她突然觉得头晕，便扶住了椅背。
+        en: She suddenly felt light-headed and held the back of the chair.
+      - zh: 爷爷站起来时有点晕，爸爸赶紧扶住他。
+        en: Grandpa felt a little dizzy when he stood up, so Dad quickly supported him.
+
+sentences: []

@@ -10,6 +10,10 @@
     { "id": "healthy-eyes", "name": "Healthy Eyes", "words": ["电脑", "眼圈", "模糊", "距离", "保持"], "restoration": "The optician's sign is repaired." },
     { "id": "kind-words", "name": "Kind Words", "words": ["祝福", "安慰", "贺卡", "异口同声"], "restoration": "The square is decorated for Grandma's birthday." },
     { "id": "team-spirit", "name": "Team Spirit", "words": ["齐心协力", "配合", "冠军", "轮"], "restoration": "The village race track is repaired." }
+  ],
+  "p6": [
+    { "id": "team-spirit", "name": "Strength Together", "words": ["克服", "锻炼", "坚强", "意志"], "restoration": "The village training yard welcomes determined learners again." },
+    { "id": "kind-words", "name": "Family Care", "words": ["祖孙", "美德", "家庭", "促进"], "restoration": "Family stories and kind wishes return to the village square." },
+    { "id": "kitchen", "name": "Welcome Kitchen", "words": ["清蒸", "豆苗", "酸辣汤", "瘦肉"], "restoration": "The noodle stall prepares a warm welcome meal." }
   ]
 }
-

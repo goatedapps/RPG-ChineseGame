@@ -1,0 +1,978 @@
+- questionID: P6-CH-2026-ACSJ-Q13
+  lessonIds:
+    - 6
+    - 8
+  question: 以下哪一个句子是正确的？（词语：吩咐）
+  options:
+    - 由于小杰吩咐得很好，所以老师奖励了他。
+    - 听了老师的吩咐，我终于明白了这个词语。
+    - 出门之前，爸爸吩咐我要记得把大门关好。
+    - 我吩咐妈妈，明天一定要带我去游乐场玩。
+  correct: 出门之前，爸爸吩咐我要记得把大门关好。
+- questionID: P6-CH-2026-ACSJ-Q14
+  lessonIds:
+    - 8
+  question: 以下哪一个句子是正确的？（词语：贡献）
+  options:
+    - 那本书内容非常精彩，里面有许多好的贡献。
+    - 志明经常帮助邻居，为社区作出了许多贡献。
+    - 老师改作业一直到半夜，贡献了休息的时间。
+    - 组屋区有很多熟食中心，为居民贡献了便利。
+  correct: 志明经常帮助邻居，为社区作出了许多贡献。
+- questionID: P6-CH-2026-ACSJ-Q15
+  lessonIds:
+    - 5
+  question: 以下哪一个句子是正确的？（词语：坚固）
+  options:
+    - 那座城墙非常坚固，敌人都无法攻打进来。
+    - 志明是个坚固的孩子，从来不听别人的话。
+    - 我们遇到困难不能退缩，一定要坚固到底。
+    - 石缝里的小花不怕风吹雨打，坚固地活着。
+  correct: 那座城墙非常坚固，敌人都无法攻打进来。
+- questionID: P6-CH-2026-AiTong-Q13
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：巧妙）
+  options:
+    - 我们一家人去环球影城玩，这真是一段巧妙的旅程。
+    - 小安迟到了，他正想溜进课室，巧妙遇到训导主任。
+    - 小丽的双手非常巧妙，能够编织各种可爱的布娃娃。
+    - 他巧妙地把讲故事和说唱结合起来，得了比赛冠军。
+  correct: 他巧妙地把讲故事和说唱结合起来，得了比赛冠军。
+- questionID: P6-CH-2026-AiTong-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：发扬）
+  options:
+    - 这段录像让他明白了发扬互助友爱精神的重要。
+    - 研究人员在海边发扬了一种从没见过的小贝壳。
+    - 这次演讲比赛中，他发扬了实力，赢得了胜利。
+    - 康康发扬弟弟做了坏事，便马上跑去告诉妈妈。
+  correct: 这段录像让他明白了发扬互助友爱精神的重要。
+- questionID: P6-CH-2026-AiTong-Q15
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：齐心协力）
+  options:
+    - 我们齐心协力，在体育馆里打羽毛球。
+    - 小丽齐心协力地帮妈妈把碗碟洗干净。
+    - 他齐心协力地完成了老师布置的作业。
+    - 他们齐心协力，终于把舞台布置好了。
+  correct: 他们齐心协力，终于把舞台布置好了。
+- questionID: P6-CH-2026-HenryPark-Q13
+  lessonIds:
+    - 2
+  question: 以下哪一个句子是正确的？（词语：促进）
+  options:
+    - 良好的生活习惯可以促进身体健康。
+    - 妈妈每天早上都要促进我快点上学。
+    - 这间商店正举办一年一度的大促进。
+    - 小林这学期的成绩有了明显的促进。
+  correct: 良好的生活习惯可以促进身体健康。
+- questionID: P6-CH-2026-HenryPark-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：独特）
+  options:
+    - 明文总是喜欢独特地完成作业。
+    - 汉字书法是一门很独特的艺术。
+    - 今天早上，她独特准备了早餐。
+    - 弟弟非常独特，可以自己煮饭。
+  correct: 汉字书法是一门很独特的艺术。
+- questionID: P6-CH-2026-HenryPark-Q15
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：热心）
+  options:
+    - 周末，奶奶非常热心地招呼客人吃饭。
+    - 运动会上，同学热心地为运动员加油。
+    - 一有空，妈妈就会热心地教弟弟写字。
+    - 有需要帮助的事，他都会热心地帮忙。
+  correct: 有需要帮助的事，他都会热心地帮忙。
+- questionID: P6-CH-2026-NanHua-Q13
+  lessonIds:
+    - 2
+  question: 以下哪一个句子是正确的？（词语：促进）
+  options:
+    - 家人一起吃晚餐，可以促进家庭和谐。
+    - 老师常常提醒我们多读书，促进知识。
+    - 读了作文后，老师指出了需要促进的地方。
+    - 小明借故事书给同学看，促进他们的友情。
+  correct: 家人一起吃晚餐，可以促进家庭和谐。
+- questionID: P6-CH-2026-NanHua-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：五彩缤纷）
+  options:
+    - 姐姐的歌声五彩缤纷，大家都听得十分入迷。
+    - 妈妈做的红烧肉五彩缤纷，让人看了就想吃。
+    - 毕业典礼那天，礼堂挂满了五彩缤纷的气球。
+    - 听到这个消息后，小文的心情变得五彩缤纷。
+  correct: 毕业典礼那天，礼堂挂满了五彩缤纷的气球。
+- questionID: P6-CH-2026-NanHua-Q15
+  lessonIds:
+    - 12
+  question: 以下哪一个句子是正确的？（词语：半途而废）
+  options:
+    - 电影真没意思，我看了一会儿半途而废。
+    - 妈妈常常教育我，做事不可以半途而废。
+    - 小明吃饭半途而废，就和朋友下楼踢球。
+    - 这支笔真是半途而废，写到一半就断了。
+  correct: 妈妈常常教育我，做事不可以半途而废。
+- questionID: P6-CH-2026-Nanyang-Q13
+  lessonIds:
+    - 3
+  question: 以下哪一个句子是正确的？（词语：争夺）
+  options:
+    - 由于对这件事的意见不同，小恩和小明发生了争夺。
+    - 通过刻苦的训练，明华终于在国际舞台上为国争夺。
+    - 为了争夺更多的准备时间，他把游戏活动都取消了。
+    - 为了争夺冠军，两支球队在球场上展开激烈的对抗。
+  correct: 为了争夺冠军，两支球队在球场上展开激烈的对抗。
+- questionID: P6-CH-2026-Nanyang-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：困难）
+  options:
+    - 那个假期的美好时光，至今让明美十分困难。
+    - 听到这个不幸的消息，小乐心里感到很困难。
+    - 她努力克服种种困难，终于完成了大学学业。
+    - 这事让安安很困难，她不知该如何处理才好。
+  correct: 她努力克服种种困难，终于完成了大学学业。
+- questionID: P6-CH-2026-Nanyang-Q15
+  lessonIds:
+    - 6
+  question: 以下哪一个句子是正确的？（词语：妒忌）
+  options:
+    - 看到小明登上领奖台，大家妒忌得鼓起了掌。
+    - 哥哥主动承认了错误，因此妈妈不再妒忌他。
+    - 我妒忌她的成功，希望自己能像她一样优秀。
+    - 伟明妒忌佳佳比他更受欢迎，心里十分不满。
+  correct: 伟明妒忌佳佳比他更受欢迎，心里十分不满。
+- questionID: P6-CH-2026-PLMGS-Q13
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：九牛二虎之力）
+  options:
+    - 这次的考试很简单，他费了九牛二虎之力才完成。
+    - 他在比赛中费了九牛二虎之力，轻松地获得冠军。
+    - 他费了九牛二虎之力，才把那块沉重的石头搬走。
+    - 他很聪明，费了九牛二虎之力就能把谜题解开了。
+  correct: 他费了九牛二虎之力，才把那块沉重的石头搬走。
+- questionID: P6-CH-2026-PLMGS-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：争先恐后）
+  options:
+    - 巴士一到站，大家就争先恐后地挤上巴士。
+    - 放学了，同学们争先恐后地排队走出校园。
+    - 比赛一开始，小明争先恐后地跑到最前面。
+    - 放假了，我们应该争先恐后地到处去游玩。
+  correct: 巴士一到站，大家就争先恐后地挤上巴士。
+- questionID: P6-CH-2026-PLMGS-Q15
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：气氛）
+  options:
+    - 在农历新年期间，到处充满了节日的气氛。
+    - 我常到公园运动，因为那里有清新的气氛。
+    - 校园里的气氛很优美，能让同学们好好读书。
+    - 生日会的气氛五彩缤纷，大家都玩得很开心。
+  correct: 在农历新年期间，到处充满了节日的气氛。
+- questionID: P6-CH-2026-Raffles-Q13
+  lessonIds:
+    - 5
+  question: 以下哪一个句子是正确的？（词语：坚固）
+  options:
+    - 每天早上和傍晚，爸爸都坚固去公园跑步。
+    - 妹妹的个子矮小，但力气却比任何人坚固。
+    - 弟弟从小到大都很坚固，不听别人的劝告。
+    - 这座桥建造得十分坚固，可以使用很多年。
+  correct: 这座桥建造得十分坚固，可以使用很多年。
+- questionID: P6-CH-2026-Raffles-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：防止）
+  options:
+    - 为了防止意外的发生，我们不能在食堂奔跑。
+    - 地铁上防止大声说话，乘客们都小声地谈天。
+    - 看到他用石头丢小猫，我们立刻上前防止他。
+    - 突然下起了倾盆大雨，这场比赛只好先防止。
+  correct: 为了防止意外的发生，我们不能在食堂奔跑。
+- questionID: P6-CH-2026-Raffles-Q15
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：巧妙）
+  options:
+    - 今天爷爷下楼散步时，巧妙地遇到了邻居王伯伯。
+    - 姐姐参加了合唱团之后，十分巧妙地把歌曲唱好。
+    - 昨晚我做了一个巧妙的梦，梦见自己去月球旅行。
+    - 小月巧妙地结合动作和乐曲，跳出了优美的舞蹈。
+  correct: 小月巧妙地结合动作和乐曲，跳出了优美的舞蹈。
+- questionID: P6-CH-2026-RedSwastika-Q13
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：胸有成竹）
+  options:
+    - 老师提出一个难题，小明胸有成竹地举手回答。
+    - 弟弟肚子饿，妈妈胸有成竹地煮了一碗面给他。
+    - 爸爸工作累了，胸有成竹地躺在沙发上看电视。
+    - 小华不会做这道题，就胸有成竹地坐在那里发呆。
+  correct: 老师提出一个难题，小明胸有成竹地举手回答。
+- questionID: P6-CH-2026-RedSwastika-Q14
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：充足）
+  options:
+    - 弟弟跑得太快了，结果充足地摔在地上。
+    - 这道数学题很难，红要充足地想一想。
+    - 没有充足的阳光，植物无法好好地生长。
+    - 表哥每天都很充足，因为他喜欢学新东西。
+  correct: 没有充足的阳光，植物无法好好地生长。
+- questionID: P6-CH-2026-RedSwastika-Q15
+  lessonIds: []
+  question: 以下哪一个句子是正确的？（词语：避免）
+  options:
+    - 那个明星不想回答问题，便避免地低下了头。
+    - 天空突然下起大雨，小华避免在走廊里等待。
+    - 前方的路发生了交通意外，司机避免了这条路。
+    - 妈妈提醒我要小心过马路，避免发生交通意外。
+  correct: 妈妈提醒我要小心过马路，避免发生交通意外。
+- questionID: P6-CH-2026-StNicholas-Q13
+  lessonIds: []
+  question: 以下哪个句子正确地使用了“表达”？
+  options:
+    - 爸爸点点头表达同意大家的看法。
+    - 老师表达他是个乐于助人的孩子。
+    - 我们在比赛中有非常出色的表达。
+    - 我写了一首歌表达对祖国的热爱。
+  correct: 我写了一首歌表达对祖国的热爱。
+- questionID: P6-CH-2026-StNicholas-Q14
+  lessonIds:
+    - 8
+  question: 以下哪个句子正确地使用了“津津有味”？
+  options:
+    - 放工回家之后，妈妈津津有味地准备晚餐。
+    - 一大早，校工阿姨就津津有味地打扫课室。
+    - 华文课上，我们津津有味地听老师讲故事。
+    - 考试时，同学们津津有味地回答每道问题。
+  correct: 华文课上，我们津津有味地听老师讲故事。
+- questionID: P6-CH-2026-StNicholas-Q15
+  lessonIds: []
+  question: 以下哪个句子正确地使用了“贴心”？
+  options:
+    - 我们有问题时，老师都会贴心地为我们解答。
+    - 我需要更加贴心，才不会犯这种粗心的错误。
+    - 看到爷爷冷得发抖，我贴心地为他披上外套。
+    - 妹妹会贴心爸爸妈妈，体谅他们工作的辛苦。
+  correct: 看到爷爷冷得发抖，我贴心地为他披上外套。
+- questionID: P6-CH-2026-TaoNan-Q13
+  lessonIds:
+    - 2
+  question: 以下哪个句子正确地使用了“促进”？
+  options:
+    - 妈妈促进我的健康，要我每天早睡早起。
+    - 超市在促进期间，所有的物品都打八折。
+    - 图书馆促进的儿童故事书，小朋友们都很喜欢。
+    - 为了促进同学之间的感情，老师鼓励大家多交流。
+  correct: 为了促进同学之间的感情，老师鼓励大家多交流。
+- questionID: P6-CH-2026-TaoNan-Q14
+  lessonIds: []
+  question: 以下哪个句子正确地使用了“丰富”？
+  options:
+    - 这道汤营养丰富，我们全家人都爱喝。
+    - 孩子们要有丰富的睡眠，才有精神上课。
+    - 爸爸劝告哥哥，一定要在光线丰富的地方看书。
+    - 陈伯伯每个周末都会去做义工，日子过得很丰富。
+  correct: 这道汤营养丰富，我们全家人都爱喝。
+- questionID: P6-CH-2026-TaoNan-Q15
+  lessonIds: []
+  question: 以下哪个句子正确地使用了“恍然大悟”？
+  options:
+    - 小组活动时，同学们恍然大悟地提出自己的意见。
+    - 听了林阿姨的解释后，明华和欢欢顿时恍然大悟。
+    - 事情都已经发生了，你现在才后悔已经恍然大悟了。
+    - 姐姐提议去海边野餐，我和妹妹恍然大悟地表示赞同。
+  correct: 听了林阿姨的解释后，明华和欢欢顿时恍然大悟。
+- questionID: P6-CH-2025-ACSJ-Q13
+  lessonIds: []
+  question: 以下哪一个使用“姿态”的句子是正确的？
+  options:
+    - 台上的舞蹈员个个舞步轻快，姿态十分优美。
+    - 他一向学习姿态认真，因此赢得老师的表扬。
+    - 光华写作业时姿态不正确，妈妈常常批评他。
+    - 这次的学习之旅，让我更了解自然姿态环境。
+  correct: 台上的舞蹈员个个舞步轻快，姿态十分优美。
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSJ-Q14
+  lessonIds: []
+  question: 以下哪一个使用“取代”的句子是正确的？
+  options:
+    - 文文的笔坏了，只好向小乐借用他的铅笔取代一下。
+    - 小文获选取代学校参加全国游泳比赛，感觉很自豪。
+    - 环保袋正在取代塑料袋成为人们购物时更好的选择。
+    - 住在这偏远地区的村民主要靠打猎和捕鱼取代食物。
+  correct: 环保袋正在取代塑料袋成为人们购物时更好的选择。
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSJ-Q15
+  lessonIds:
+    - 11
+  question: 以下哪一个使用“幻想”的句子是正确的？
+  options:
+    - 面对难题时，我们必须冷静幻想办法处理。
+    - 丽美从小想当画家，现在终于实现了幻想。
+    - 今天风和日丽，我真幻想爸爸带我去海边野餐。
+    - 他常常幻想自己能飞上天空，像小鸟一样自由。
+  correct: 他常常幻想自己能飞上天空，像小鸟一样自由。
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 14; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q13
+  lessonIds:
+    - 6
+  question: 以下哪一个使用“妒忌”的句子是正确的？
+  options:
+    - 小明妒忌同学有新的手机。
+    - 司机妒忌雨天塞车的感觉。
+    - 食客妒忌他的服务态度差。
+    - 人们妒忌战争带来的灾难。
+  correct: 小明妒忌同学有新的手机。
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q14
+  lessonIds: []
+  question: 以下哪一个使用“彬彬有礼”的句子是正确的？
+  options:
+    - 那家人准备了很多食物，让客人们感到彬彬有礼。
+    - 无论我们遇到什么困难，他都会彬彬有礼地解决。
+    - 妈妈总是彬彬有礼地唠叨，叫我和弟弟收拾房间。
+    - 哥哥对长辈总是彬彬有礼，深受叔叔伯伯的喜爱。
+  correct: 哥哥对长辈总是彬彬有礼，深受叔叔伯伯的喜爱。
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q15
+  lessonIds: []
+  question: 以下哪一个使用“嘲笑”的句子是正确的？
+  options:
+    - 妈妈出门前嘲笑我，要先把作业做完才能出去玩。
+    - 同学们都在嘲笑他考试不及格，但是我却安慰他。
+    - 朋友们常常嘲笑小明，因为他有早睡早起的习惯。
+    - 工人整天嘲笑工作太辛苦，却不愿意想办法改变。
+  correct: 同学们都在嘲笑他考试不及格，但是我却安慰他。
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-AiTong-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“截止”？
+  options:
+    - 我们要在截止日期前，交上申请表格。
+    - 看到有人乱丢垃圾，我一定会截止他。
+    - 公司去年，就已经截止生产这种帽子。
+    - 在地铁车厢里，截止吃喝和大声说话。
+  correct: 我们要在截止日期前，交上申请表格。
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-AiTong-Q14
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“伟大”？
+  options:
+    - 这一座伟大的建筑，其实是一座图书馆。
+    - 你要有伟大的心理，才能完成这项任务。
+    - 突然发生这起伟大事件，让大家都大吃一惊。
+    - 他是一名伟大的科学家，为社会做出了贡献。
+  correct: 他是一名伟大的科学家，为社会做出了贡献。
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-AiTong-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“灵机一动”？
+  options:
+    - 小女孩灵机一动，想到解决问题的办法。
+    - 巴士来了，人们都灵机一动地冲上巴士。
+    - 小华灵机一动地看着妈妈送给他的故事书。
+    - 小明提出看法后，大家都灵机一动地说好。
+  correct: 小女孩灵机一动，想到解决问题的办法。
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-Catholic-Q13
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“多余”？
+  options:
+    - 你别买多余的东西，家里已经放不下了。
+    - 妈妈准备的食物很多余，我们都吃不完。
+    - 有了多余的阳光，这朵花就能健康生长。
+    - 由于没有多余的营养，文华身体很瘦弱。
+  correct: 你别买多余的东西，家里已经放不下了。
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 16; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-Catholic-Q14
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“幻想”？
+  options:
+    - 每当我幻想起当时做的选择，我就会十分后悔。
+    - 弟弟幻想自己有神奇的力量，能打败妖魔鬼怪。
+    - 课室里一个人都没有，我幻想自己记错了时间。
+    - 小明长大后想成为一名科学家，这是他的幻想。
+  correct: 弟弟幻想自己有神奇的力量，能打败妖魔鬼怪。
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 16; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-Catholic-Q15
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“津津有味”？
+  options:
+    - 老师在台上分享童年趣事，大家都听得津津有味。
+    - 放学后，我和几个朋友到公园津津有味地踢足球。
+    - 考试快到了，同学们津津有味地复习学过的内容。
+    - 超市进行大促销，妈妈津津有味地挑选打折物品。
+  correct: 老师在台上分享童年趣事，大家都听得津津有味。
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 16; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-HenryPark-Q13
+  lessonIds:
+    - 3
+    - 10
+  question: 以下哪一个句子正确使用了“赠送”？
+  options:
+    - 只要购买一种电器，就将获得商家赠送的礼物。
+    - 因为哥哥的比赛得奖了，所以得到赠送的奖励。
+    - 叔叔是个很有爱心的人，常常赠送钱给老人院。
+    - 我们在与邻居相处时，应该懂得如何赠送关怀。
+  correct: 只要购买一种电器，就将获得商家赠送的礼物。
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 16; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-HenryPark-Q14
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“支持”？
+  options:
+    - 大树经不起风吹雨打，支持不住倒了。
+    - 哥哥说的话很有道理，大家都支持他。
+    - 这是刚发明的新药，能够支持身体早日康复。
+    - 大家都支持自己的看法，讨论没有得到结果。
+  correct: 哥哥说的话很有道理，大家都支持他。
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 16; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-HenryPark-Q15
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“使劲”？
+  options:
+    - 因为要迟到了，妹妹使劲吃完饭。
+    - 我们使劲一看，才发现屋里有人。
+    - 为了考上大学，姐姐使劲地读书。
+    - 弟弟使劲一踢，足球就飞得很远。
+  correct: 弟弟使劲一踢，足球就飞得很远。
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 16; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-MGS-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“彼此”？
+  options:
+    - 妈妈生病了，彼此没有出席今天的晚会活动。
+    - 经过这件事后，我们彼此成为了最好的朋友。
+    - 彼此以后，每次吃东西前我都要把手洗干净。
+    - 哥哥没有想到，我彼此等了他整整两个小时。
+  correct: 经过这件事后，我们彼此成为了最好的朋友。
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-MGS-Q14
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“讲述”？
+  options:
+    - 奶奶和朋友坐在公园的长椅上讲述，谈得很开心。
+    - 每当妈妈周末去市场买菜时，她都会跟摊主讲述。
+    - 小乐把经过讲述一遍后，大家才知道事情的真相。
+    - 她真是一个喜欢讲述的人，常常让我们哈哈大笑。
+  correct: 小乐把经过讲述一遍后，大家才知道事情的真相。
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-MGS-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“齐心协力”？
+  options:
+    - 小明齐心协力，把课室的桌椅排得整整齐齐。
+    - 只要我们齐心协力，就没有克服不了的困难。
+    - 上课铃声响了，同学们齐心协力地开始考试。
+    - 春天已经来临，公园的花齐心协力地开放了。
+  correct: 只要我们齐心协力，就没有克服不了的困难。
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-NanHua-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“临时”？
+  options:
+    - 大雨停了，天空临时出现了一道美丽的彩虹。
+    - 听到这个好消息，弟弟临时兴奋得手舞足蹈。
+    - 小华总是早早做完功课，临时交给老师检查。
+    - 今天爷爷突然不舒服，我们临时决定不出门。
+  correct: 今天爷爷突然不舒服，我们临时决定不出门。
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-NanHua-Q14
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“慈祥”？
+  options:
+    - 导游正用慈祥的笑容欢迎每一位游客。
+    - 那只小狗慈祥地望着我手中的肉骨头。
+    - 老师用慈祥的微笑鼓励我们回答问题。
+    - 学长丽丽常常慈祥地帮助低年级同学。
+  correct: 老师用慈祥的微笑鼓励我们回答问题。
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-NanHua-Q15
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“迅速”？
+  options:
+    - 他开车的迅速太快，结果发生了车祸。
+    - 时间过得很迅速，一转眼假期又到了。
+    - 情况紧急，我们必须迅速处理这件事。
+    - 他觉得很累，走起路来脚步十分迅速。
+  correct: 情况紧急，我们必须迅速处理这件事。
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-Nanyang-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“无精打采”？
+  options:
+    - 铃声响起，同学们无精打采地往食堂冲去。
+    - 由于昨晚没睡好，他今天显得无精打采的。
+    - 只要每天坚持锻炼，就会变得更无精打采。
+    - 下课了，孩子们在操场上无精打采地玩耍。
+  correct: 由于昨晚没睡好，他今天显得无精打采的。
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-Nanyang-Q14
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“暂时”？
+  options:
+    - 为了尽快恢复健康，医生劝病人暂时不要多走动。
+    - 教练提醒我们在舞台上表演时，要暂时保持笑容。
+    - 她暂时冲动做出了错误的决定，结果影响了生活。
+    - 经过很暂时的休息之后，同学们继续走向目的地。
+  correct: 为了尽快恢复健康，医生劝病人暂时不要多走动。
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-Nanyang-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“拒绝”？
+  options:
+    - 小华拒绝了校规，结果被老师处罚。
+    - 为了保卫家园，人民拒绝敌人的进攻。
+    - 小明想抄我的答案，我拒绝了他的要求。
+    - 当同学欺负我们时，我们应该勇敢地拒绝。
+  correct: 小明想抄我的答案，我拒绝了他的要求。
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-PLMGS-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“慷慨”？
+  options:
+    - 我校球队的表现很慷慨，在比赛中打败了对手。
+    - 那位叔叔很慷慨，经常资助贫困的孩子们读书。
+    - 邻居阿姨养了许多宠物，是一个充满慷慨的人。
+    - 姐姐把穿不下的衣服给妹妹，真是慷慨的行为！
+  correct: 那位叔叔很慷慨，经常资助贫困的孩子们读书。
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PLMGS-Q14
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“担忧”？
+  options:
+    - 我担忧爷爷的健康，希望他尽快恢复健康。
+    - 看到一切都计划好了，他禁不住感到担忧。
+    - 她对家人非常担忧，每天都会打电话问候。
+    - 当老师指出我的特长时，我觉得有点担忧。
+  correct: 我担忧爷爷的健康，希望他尽快恢复健康。
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PLMGS-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“禁止”？
+  options:
+    - 同学之间要互相尊重，禁止争吵发生。
+    - 老师走进来时，同学们马上禁止说话。
+    - 为了禁止意外发生，我们要注意安全。
+    - 这里禁止乱丢垃圾，请保持环境清洁。
+  correct: 这里禁止乱丢垃圾，请保持环境清洁。
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PeiChun-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“温柔”？
+  options:
+    - 这台洗衣机有很多功能，居然还能够调节温柔。
+    - 妈妈的爱就像温柔的太阳，总是给我很多力量。
+    - 陈老师说话时的语气很温柔，让人觉得很舒服。
+    - 灯光太亮了，要调到温柔一些才不会影响视力。
+  correct: 陈老师说话时的语气很温柔，让人觉得很舒服。
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-PeiChun-Q14
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“争先恐后”？
+  options:
+    - 这次比赛大家都争先恐后，最终获得了冠军。
+    - 看到巴士来了，同学们争先恐后地挤上巴士。
+    - 小文做作业时争先恐后地看题目，不让自己分心。
+    - 听到这个好笑的笑话，大家争先恐后地笑了起来。
+  correct: 看到巴士来了，同学们争先恐后地挤上巴士。
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-PeiChun-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“考虑”？
+  options:
+    - 姐姐在买衣服前会仔细考虑价格和颜色。
+    - 妹妹刚才玩电脑游戏时考虑得十分开心。
+    - 这次考虑成绩不太理想，我心里很难过。
+    - 老师出题来考虑大家是否理解课文内容。
+  correct: 姐姐在买衣服前会仔细考虑价格和颜色。
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-Raffles-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“糊涂”？
+  options:
+    - 他总是忘记带课本，真是糊涂。
+    - 爸爸的工作很忙，让他非常糊涂。
+    - 奶奶最近非常糊涂，常常觉得头痛。
+    - 小文很糊涂，不知道怎么回答这道题。
+  correct: 他总是忘记带课本，真是糊涂。
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-Raffles-Q14
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“保管”？
+  options:
+    - 我们要吃有营养的食物，才能保管身体健康。
+    - 人人都要把垃圾丢进垃圾桶，保管环境清洁。
+    - 这些旧照片都很珍贵，妈妈要姐姐好好保管。
+    - 马路如虎口，小明过马路时一定会保管安全。
+  correct: 这些旧照片都很珍贵，妈妈要姐姐好好保管。
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-Raffles-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“阻拦”？
+  options:
+    - 姐姐决定到外国去工作，谁都无法阻拦她。
+    - 妈妈叫我安静地玩耍，不要阻拦爸爸休息。
+    - 这里发生一起交通意外，造成了交通阻拦。
+    - 同学之间要互相照顾，阻拦同学是不对的。
+  correct: 姐姐决定到外国去工作，谁都无法阻拦她。
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-RedSwastika-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“考虑”？
+  options:
+    - 欢欢约了明明，要一起考虑华文的功课。
+    - 过马路要考虑清楚，不然可能被车撞伤。
+    - 这道问题很难，我想了很久才考虑答案。
+    - 这件事很重要，你要再三考虑才做决定。
+  correct: 这件事很重要，你要再三考虑才做决定。
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-RedSwastika-Q14
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“遭受”？
+  options:
+    - 小安帮助同学找到了钱包，遭受老师的表扬。
+    - 爷爷回到家乡探望，遭受村民们的热情欢迎。
+    - 他所经历的童年遭受，让他对生活失去信心。
+    - 他生了一场大病，长期遭受着身体上的痛苦。
+  correct: 他生了一场大病，长期遭受着身体上的痛苦。
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-RedSwastika-Q15
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“销售”？
+  options:
+    - 这本刚出版的新书非常销售，很快就卖完了。
+    - 这家泡泡茶店销售的饮料大多数含糖量过高。
+    - 为了销售更多顾客，购物中心进行热卖活动。
+    - 王叔叔的收入不多，所以从来都不随便销售。
+  correct: 这家泡泡茶店销售的饮料大多数含糖量过高。
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-Rosyth-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“随时”？
+  options:
+    - 在演出时，魔术师随时找了一位观众上台。
+    - 望着眼前的美景，姐姐随时拍了几张照片。
+    - 看到座位都坐满了，他随时找个位子坐下。
+    - 不管你遇到什么问题，都可以随时来找我。
+  correct: 不管你遇到什么问题，都可以随时来找我。
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-Rosyth-Q14
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“必备”？
+  options:
+    - 小俊在比赛时表现不好，因为他没必备好。
+    - 开车在外旅行时，地图和水都是必备的物品。
+    - 我们讨论了很多事，包括一些不太必备的内容。
+    - 大家刚才吃得很开心，因为现场必备了很多小吃。
+  correct: 开车在外旅行时，地图和水都是必备的物品。
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-Rosyth-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“动力”？
+  options:
+    - 他吃得太快了，没动力去尝出食物的好味道。
+    - 妹妹比较胆小，往往都缺少动力去表达自己。
+    - 她还没有吃早餐，不够动力走去补习班上课。
+    - 老师对阿立的鼓励，给了他不少前进的动力。
+  correct: 老师对阿立的鼓励，给了他不少前进的动力。
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-SCGS-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“恢复”？
+  options:
+    - 你应该尝试新事物，不要恢复做同样的事。
+    - 小丽说话太小声了，老师要她恢复多一次。
+    - 在老师不断地鼓励下，我才慢慢恢复自信。
+    - 我写了好多封信给美云，但是她都没恢复。
+  correct: 在老师不断地鼓励下，我才慢慢恢复自信。
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-SCGS-Q14
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“吸引”？
+  options:
+    - 我国风景优美，每年都吸引很多人到这里游玩。
+    - 为了使身体强壮，我会到公园吸引新鲜的空气。
+    - 小花对老师无礼，吸引了全班同学对她的不满。
+    - 植物要健康地生长，就一定要吸引足够的水分。
+  correct: 我国风景优美，每年都吸引很多人到这里游玩。
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-SCGS-Q15
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“遮风挡雨”？
+  options:
+    - 最近的天气恶劣，很多人都躲在家里遮风挡雨。
+    - 爸爸妈妈最疼爱孩子，一定会为他们遮风挡雨。
+    - 姐姐赶紧把衣服收进屋里，关上窗门遮风挡雨。
+    - 王叔叔家的花园里种了很多树，为他遮风挡雨。
+  correct: 爸爸妈妈最疼爱孩子，一定会为他们遮风挡雨。
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-StNicholas-Q13
+  lessonIds:
+    - 10
+  question: 以下哪个句子正确使用了“申请”？
+  options:
+    - 今年，我想申请几个同学参加我的生日会。
+    - 奶奶生病了，姑姑申请她到医院去看医生。
+    - 叔叔想出国，便申请了一份在国外的工作。
+    - 弟弟要向妈妈申请，才可以和朋友去看戏。
+  correct: 叔叔想出国，便申请了一份在国外的工作。
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-StNicholas-Q14
+  lessonIds: []
+  question: 以下哪个句子正确使用了“发抖”？
+  options:
+    - 刮风了，大树上的叶子被吹得沙沙地发抖。
+    - 那只狗扑了过来，吓得我的心不停地发抖。
+    - 小光被大雨淋湿了，他冷得全身一直发抖。
+    - 姐姐很喜欢一边唱歌，一边随着音乐发抖。
+  correct: 小光被大雨淋湿了，他冷得全身一直发抖。
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-StNicholas-Q15
+  lessonIds: []
+  question: 以下哪个句子正确使用了“宽阔”？
+  options:
+    - 天气炎热时，穿宽阔的衣服会感觉比较舒服。
+    - 这条马路很宽阔，可以让五辆车同时开过去。
+    - 我们要有一颗宽阔的心，原谅别人的错误。
+    - 为了让家人过上宽阔的生活，爸爸努力工作。
+  correct: 这条马路很宽阔，可以让五辆车同时开过去。
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-TaoNan-Q13
+  lessonIds: []
+  question: 以下哪一个句子正确使用了“增添”？
+  options:
+    - 爸爸的收入增添了，家里的生活越来越好。
+    - 只要哥哥多锻炼身体，一定能够增添体力。
+    - 为了增添感情，父亲常常讲故事给儿子听。
+    - 乌节路今晚亮灯，为圣诞节增添节日气氛。
+  correct: 乌节路今晚亮灯，为圣诞节增添节日气氛。
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-2025-TaoNan-Q14
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“争夺”？
+  options:
+    - 两兄弟为了争夺父亲的财产，闹得很不愉快。
+    - 弟弟在游泳比赛中争夺了一面金牌，为校争光。
+    - 小美和小文不停地争夺，不肯接受对方的看法。
+    - 姐姐争夺到出国读书的机会，她是绝对不会放弃的。
+  correct: 两兄弟为了争夺父亲的财产，闹得很不愉快。
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-2025-TaoNan-Q15
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“拖延”？
+  options:
+    - 羽毛球比赛即将到来，教练决定拖延训练时间。
+    - 我们明天必须把报告交给老师，不能再拖延了。
+    - 飞机拖延了三个小时，影响了家人的旅游计划。
+    - 李老板常常拖延员工的工钱，引起大家的不满。
+  correct: 我们明天必须把报告交给老师，不能再拖延了。
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-AUTHORED-L1-Q10
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“严格”？
+  options:
+    - 老师板着脸，露出十分严格的表情。
+    - 考试开始前，我的心情越来越严格。
+    - 暴风雨造成了严格的损失，许多房屋倒塌了。
+    - 教练对动作要求严格，做错了就要重新练习。
+  correct: 教练对动作要求严格，做错了就要重新练习。
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 严格."
+- questionID: P6-CH-AUTHORED-L1-Q11
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“托”？
+  options:
+    - 妹妹把箱子托着在地上走，留下一道长长的痕迹。
+    - 做完功课这件事不能再托到明天了。
+    - 姐姐用手掌托住花盆底部，免得它掉下来。
+    - 他把鞋子托下来，换上了拖鞋。
+  correct: 姐姐用手掌托住花盆底部，免得它掉下来。
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 托."
+- questionID: P6-CH-AUTHORED-L1-Q12
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“榜样”？
+  options:
+    - 妹妹睡醒时的榜样，和照片上的很不一样。
+    - 班长总是认真负责，是大家学习的榜样。
+    - 设计师在裙子上画了许多漂亮的榜样。
+    - 工人照着机器的榜样，把零件装了回去。
+  correct: 班长总是认真负责，是大家学习的榜样。
+  source: "Original authored P6 practice; Lesson 1; taught vocabulary: 榜样."
+- questionID: P6-CH-AUTHORED-L2-Q08
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“促进”？
+  options:
+    - 我们沿着小路向山顶促进，很快就到达了亭子。
+    - 班级合作活动能促进同学之间的了解。
+    - 老师把交作业的日期促进了两天，大家有更多时间完成。
+    - 这一题很简单，稍微促进一下就能想出答案。
+  correct: 班级合作活动能促进同学之间的了解。
+  source: "Original authored P6 practice; Lesson 2; taught vocabulary: 促进."
+- questionID: P6-CH-AUTHORED-L2-Q09
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“撑”？
+  options:
+    - 爸爸用一根木棍撑住树枝，防止它压到小树。
+    - 弟弟撑着脚，把足球踢向球门。
+    - 为了省钱，姐姐撑下了每天买零食的费用。
+    - 我拿出铅笔，撑了一幅风景画。
+  correct: 爸爸用一根木棍撑住树枝，防止它压到小树。
+  source: "Original authored P6 practice; Lesson 2; taught vocabulary: 撑."
+- questionID: P6-CH-AUTHORED-L3-Q06
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“智慧”？
+  options:
+    - 我不明白这个词的意思，便向老师智慧。
+    - 我把想到的办法智慧在本子上，免得忘记。
+    - 爷爷运用智慧，想出了不用花钱也能修好玩具的办法。
+    - 姐姐智慧了很久，才决定选哪一本书。
+  correct: 爷爷运用智慧，想出了不用花钱也能修好玩具的办法。
+  source: "Original authored P6 practice; Lesson 3; taught vocabulary: 智慧."
+- questionID: P6-CH-AUTHORED-L7-Q16
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“跨越”？
+  options:
+    - 公交车跨越在路口，等红灯转绿才开动。
+    - 哥哥走进书店，跨越了一本喜欢的故事书。
+    - 听完老师的解释，我跨越了这道题的做法。
+    - 运动员奋力一跃，跨越了前方的障碍。
+  correct: 运动员奋力一跃，跨越了前方的障碍。
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 跨越."
+- questionID: P6-CH-AUTHORED-L7-Q17
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“兴致”？
+  options:
+    - 小华的字写得很兴致，老师一看就看清楚了。
+    - 姐姐生病了，妈妈对她十分兴致。
+    - 妹妹对做模型很有兴致，一有空就动手制作。
+    - 旅行结束后，我们把相机里的兴致洗成照片。
+  correct: 妹妹对做模型很有兴致，一有空就动手制作。
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 兴致."
+- questionID: P6-CH-AUTHORED-L7-Q18
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“疾病”？
+  options:
+    - 这道数学题很疾病，我想了很久还不会。
+    - 医生提醒大家注意卫生，预防疾病。
+    - 奶奶把刚摘下的疾病放进花瓶。
+    - 哥哥因为被同学误会而感到疾病。
+  correct: 医生提醒大家注意卫生，预防疾病。
+  source: "Original authored P6 practice; Lesson 7; taught vocabulary: 疾病."
+- questionID: P6-CH-AUTHORED-L9-Q17
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“遭受”？
+  options:
+    - 台风过后，这座村庄遭受了严重损失。
+    - 小文遭受了一等奖，开心地举起奖杯。
+    - 客人们遭受了主人的热情款待，都觉得十分愉快。
+    - 弟弟遭受地做完功课，马上去玩了。
+  correct: 台风过后，这座村庄遭受了严重损失。
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 遭受."
+- questionID: P6-CH-AUTHORED-L9-Q18
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“冲毁”？
+  options:
+    - 经过维修，工人冲毁了已经损坏的水管。
+    - 哥哥冲毁了比赛纪录，比原来的纪录快了一秒。
+    - 妈妈把积木冲毁成一座高塔。
+    - 洪水冲毁了木桥，村民暂时无法过河。
+  correct: 洪水冲毁了木桥，村民暂时无法过河。
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 冲毁."
+- questionID: P6-CH-AUTHORED-L9-Q19
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“权力”？
+  options:
+    - 每个儿童都有接受教育的权力。
+    - 拔河时，大家用尽权力，把绳子往后拉。
+    - 这位国王滥用权力，随意命令人们替他工作。
+    - 这位运动员从小就有跑步的权力，速度比别人快。
+  correct: 这位国王滥用权力，随意命令人们替他工作。
+  source: "Original authored P6 practice; Lesson 9; taught vocabulary: 权力."
+- questionID: P6-CH-AUTHORED-L10-Q06
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“翻译”？
+  options:
+    - 姐姐把这封英文信翻译成华文，读给奶奶听。
+    - 同学们轮流翻译这篇课文，声音响亮而清楚。
+    - 哥哥翻译了一下身子，继续睡觉。
+    - 我把书翻译到第三页，开始阅读。
+  correct: 姐姐把这封英文信翻译成华文，读给奶奶听。
+  source: "Original authored P6 practice; Lesson 10; taught vocabulary: 翻译."
+- questionID: P6-CH-AUTHORED-L10-Q07
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“申请”？
+  options:
+    - 老师请我申请一下参加比赛的经过。
+    - 小华从书包里申请出一本课本。
+    - 姐姐申请了妈妈的建议，终于解决了问题。
+    - 小文向学校申请借用礼堂，举办班级表演。
+  correct: 小文向学校申请借用礼堂，举办班级表演。
+  source: "Original authored P6 practice; Lesson 10; taught vocabulary: 申请."
+- questionID: P6-CH-AUTHORED-L11-Q10
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“确定”？
+  options:
+    - 小文确定着气球，怕它被风吹走。
+    - 爸爸已经确定出发日期，我们下星期一去旅行。
+    - 老师让我们把尺子确定在铅笔盒里。
+    - 妹妹把眼睛确定起来，开始数数。
+  correct: 爸爸已经确定出发日期，我们下星期一去旅行。
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 确定."
+- questionID: P6-CH-AUTHORED-L11-Q11
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“触碰”？
+  options:
+    - 展品十分脆弱，请不要用手触碰。
+    - 老师触碰我们明天要记得带水壶。
+    - 为了避免拥挤，我们触碰在早上出发。
+    - 弟弟触碰了很多功课，没有及时交给老师。
+  correct: 展品十分脆弱，请不要用手触碰。
+  source: "Original authored P6 practice; Lesson 11; taught vocabulary: 触碰."
+- questionID: P6-CH-AUTHORED-L12-Q08
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“嘱咐”？
+  options:
+    - 出发前，老师嘱咐我们带好水壶，不要离开队伍。
+    - 小明觉得不公平，向老师嘱咐同学欺负他。
+    - 妈妈嘱咐着窗户外面的花，觉得它们很美。
+    - 妹妹把桌上的糖果嘱咐进了口袋。
+  correct: 出发前，老师嘱咐我们带好水壶，不要离开队伍。
+  source: "Original authored P6 practice; Lesson 12; taught vocabulary: 嘱咐."
+- questionID: P6-CH-AUTHORED-L12-Q09
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“温馨”？
+  options:
+    - 刚煮好的汤十分温馨，烫得我连忙吹气。
+    - 姐姐对弟弟非常温馨，从不提高声量。
+    - 考试成绩不理想，我心里十分温馨。
+    - 一家人围坐在桌旁聊天，屋里充满温馨的气氛。
+  correct: 一家人围坐在桌旁聊天，屋里充满温馨的气氛。
+  source: "Original authored P6 practice; Lesson 12; taught vocabulary: 温馨."

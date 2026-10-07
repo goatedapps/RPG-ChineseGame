@@ -1,0 +1,512 @@
+- questionID: P6-CH-2026-ACSJ-Q11
+  lessonIds: []
+  question: ___，靠的是大家的齐心协力。
+  options:
+    - 对方选手表现不佳
+    - 钢琴独奏十分精彩
+    - 游戏规则需要更换
+    - 我们班能赢得比赛
+  correct: 我们班能赢得比赛
+- questionID: P6-CH-2026-ACSJ-Q12
+  lessonIds: []
+  question: 老师宣布明天去参观动物园，___。
+  options:
+    - 同学们都观看了动物表演
+    - 同学们便依依不舍地离开
+    - 同学们都开心地欢呼起来
+    - 同学们兴高采烈地出发了
+  correct: 同学们都开心地欢呼起来
+- questionID: P6-CH-2026-AiTong-Q11
+  lessonIds: []
+  question: ___，大家都喜出望外。
+  options:
+    - 老师叫大家安静下来
+    - 老师宣布明天有测验
+    - 校长宣布全校放假一天
+    - 同学们在操场上踢足球
+  correct: 校长宣布全校放假一天
+- questionID: P6-CH-2026-AiTong-Q12
+  lessonIds: []
+  question: 他从小爱打抱不平，___。
+  options:
+    - 因此一直被人欺负
+    - 常常帮助弱小同学
+    - 总是动不动就打人
+    - 所以时常乱发脾气
+  correct: 常常帮助弱小同学
+- questionID: P6-CH-2026-HenryPark-Q11
+  lessonIds: []
+  question: 我们原本要去野餐，___。
+  options:
+    - 幸好公园景色宜人
+    - 可是下雨不能去了
+    - 全家人都开心极了
+    - 因为星期天不上学
+  correct: 可是下雨不能去了
+- questionID: P6-CH-2026-HenryPark-Q12
+  lessonIds: []
+  question: ___，看是否能想出办法。
+  options:
+    - 只要大家一起努力
+    - 我们可以一起开会
+    - 如果每个人都思考
+    - 他们终于做出决定
+  correct: 我们可以一起开会
+- questionID: P6-CH-2026-NanHua-Q11
+  lessonIds: []
+  question: ___，我们一家人都为他感到骄傲。
+  options:
+    - 如果弟弟真的做错了
+    - 如果弟弟明天去公园
+    - 弟弟捡到了一个钱包
+    - 弟弟在比赛中得了奖
+  correct: 弟弟在比赛中得了奖
+- questionID: P6-CH-2026-NanHua-Q12
+  lessonIds: []
+  question: 自从参加了学校的环保活动后，___。
+  options:
+    - 姐姐每天都会买新衣服
+    - 哥哥每天都会读华文书
+    - 弟弟每次都会随手关灯
+    - 妹妹每次都会多做运动
+  correct: 弟弟每次都会随手关灯
+- questionID: P6-CH-2026-Nanyang-Q11
+  lessonIds: []
+  question: 弟弟津津有味地看着故事书，___。
+  options:
+    - 大家都很想教训他一顿
+    - 妈妈喊他吃饭都没听见
+    - 常常使家人感到难为情
+    - 不一会儿就做完作业了
+  correct: 妈妈喊他吃饭都没听见
+- questionID: P6-CH-2026-Nanyang-Q12
+  lessonIds: []
+  question: ___，我们总算解决了这个难题。
+  options:
+    - 由于大家都想明天再试
+    - 如果大家都能齐心协力
+    - 自从所有人都在想办法
+    - 在所有人的努力付出下
+  correct: 在所有人的努力付出下
+- questionID: P6-CH-2026-PLMGS-Q11
+  lessonIds: []
+  question: 请大家齐心协力，___。
+  options:
+    - 常聚在一起唱唱歌
+    - 吃饱后就赶快回家
+    - 看完这场舞蹈比赛
+    - 准时完成这项工作
+  correct: 准时完成这项工作
+- questionID: P6-CH-2026-PLMGS-Q12
+  lessonIds: []
+  question: ___，老师为他们取得的成绩感到自豪。
+  options:
+    - 同学们七嘴八舌地讨论
+    - 同学们没按时完成作业
+    - 同学们上课时非常专心
+    - 同学们比赛时得了冠军
+  correct: 同学们比赛时得了冠军
+- questionID: P6-CH-2026-Raffles-Q11
+  lessonIds: []
+  question: ___，妈妈催我赶快去机场。
+  options:
+    - 飞机还有两个小时就起飞了
+    - 现在离出发的时间还早着呢
+    - 我向叔叔学如何上网订机票
+    - 我昨天早上已经抵达了终点
+  correct: 飞机还有两个小时就起飞了
+- questionID: P6-CH-2026-Raffles-Q12
+  lessonIds: []
+  question: 学校外面今早交通堵塞，___。
+  options:
+    - 救护人员能把受伤的司机送去医院
+    - 大家不管三七二十一拼命地喊救命
+    - 路上的车子只能慢慢地往前方行驶
+    - 巴士司机经常提醒大家要遵守规则
+  correct: 路上的车子只能慢慢地往前方行驶
+- questionID: P6-CH-2026-RedSwastika-Q11
+  lessonIds: []
+  question: 也许你用小华的方法，___。
+  options:
+    - 一定会成功完成任务的
+    - 不可以准备更多的工具
+    - 就可以查出大象的重量了
+    - 应该去问问老师的意见吧
+  correct: 就可以查出大象的重量了
+- questionID: P6-CH-2026-RedSwastika-Q12
+  lessonIds: []
+  question: ___，小明用了有趣的方法来呈现。
+  options:
+    - 为了节省时间
+    - 为了准备运动会
+    - 为了完成科学作业
+    - 为了赢得讲故事比赛
+  correct: 为了赢得讲故事比赛
+- questionID: P6-CH-2026-StNicholas-Q11
+  lessonIds: []
+  question: 一开始我对新学校感到陌生，___。
+  options:
+    - 总是忘记完成作业
+    - 后来就慢慢熟悉了
+    - 认识了很多新朋友
+    - 时不时被老师批评
+  correct: 后来就慢慢熟悉了
+- questionID: P6-CH-2026-StNicholas-Q12
+  lessonIds: []
+  question: ___，才把钢琴搬上楼。
+  options:
+    - 搬家工人不费吹灰之力
+    - 同学们浪费了很多体力
+    - 我和妹妹花费不少日子
+    - 爸爸费了九牛二虎之力
+  correct: 爸爸费了九牛二虎之力
+- questionID: P6-CH-2026-TaoNan-Q11
+  lessonIds: []
+  question: 小文听到这个坏消息，___。
+  options:
+    - 立刻冲去食堂
+    - 脸上的笑容消失了
+    - 想起了自己难忘的童年
+    - 希望那些同学会被老师批评
+  correct: 脸上的笑容消失了
+- questionID: P6-CH-2026-TaoNan-Q12
+  lessonIds: []
+  question: ___，今天感到十分疲倦。
+  options:
+    - 乐乐打算以后早睡早起
+    - 乐乐睡醒后去公园跑步
+    - 乐乐连续几晚没有睡好
+    - 乐乐睡前喝了一杯牛奶
+  correct: 乐乐连续几晚没有睡好
+- questionID: P6-CH-2025-ACSJ-Q11
+  lessonIds:
+    - 10
+  question: ___，我暂时还想不出答案来。
+  options:
+    - 表演正在进行中
+    - 这个问题太难了
+    - 从早一直忙到晚
+    - 组员们围着讨论
+  correct: 这个问题太难了
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSJ-Q12
+  lessonIds: []
+  question: 地震时，___。
+  options:
+    - 屋里的桌子和椅子不停地摇晃
+    - 村民们提着行李悄悄离开乡村
+    - 两个男生不顾一切地打成一团
+    - 路人都向声音传来的方向跑去
+  correct: 屋里的桌子和椅子不停地摇晃
+  source: ACSJ Primary 6 Chinese 2025, Paper 2; PDF pages 13; P6_Chinese_2025_SA2_acsjunior.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q11
+  lessonIds: []
+  question: 他们制定了一个巧妙的计划，___。
+  options:
+    - 让大家变得更加聪明
+    - 得到了朋友们的安慰
+    - 顺利地解决了这个问题
+    - 仔细地讲述事情的经过
+  correct: 顺利地解决了这个问题
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-ACSPrimary-Q12
+  lessonIds: []
+  question: ___，吸引很多顾客前去购物。
+  options:
+    - 这家商场在举行大热卖
+    - 公园里的路灯非常明亮
+    - 民众俱乐部有很多课程
+    - 农田里的西瓜又大又甜
+  correct: 这家商场在举行大热卖
+  source: ACSPrimary Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_acsprimary.pdf
+- questionID: P6-CH-2025-AiTong-Q11
+  lessonIds:
+    - 12
+  question: ___，不能半途而废。
+  options:
+    - 你要把书包收拾好
+    - 你做事要坚持到底
+    - 你要把米饭都吃完
+    - 你把工作都给他做
+  correct: 你做事要坚持到底
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-AiTong-Q12
+  lessonIds: []
+  question: 他从小在这里长大，___。
+  options:
+    - 因此决定到国外生活
+    - 总是一不小心就迷路
+    - 不知道哪里有咖啡店
+    - 非常熟悉这里的环境
+  correct: 非常熟悉这里的环境
+  source: AiTong Primary 6 Chinese 2025, Paper 2; PDF pages 11; P6_Chinese_2025_SA2_aitong.pdf
+- questionID: P6-CH-2025-Catholic-Q11
+  lessonIds:
+    - 6
+  question: ___，再拖延下去就来不及了。
+  options:
+    - 爸爸计划假期去旅游
+    - 他一接到任务就去做
+    - 你要赶紧把作业做完
+    - 大家很快就要毕业了
+  correct: 你要赶紧把作业做完
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-Catholic-Q12
+  lessonIds:
+    - 4
+  question: 小明损坏了学校的物品，___。
+  options:
+    - 他应该去承认错误
+    - 他害羞地低下了头
+    - 他舍不得把它扔掉
+    - 他总算松了一口气
+  correct: 他应该去承认错误
+  source: Catholic Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_catholic.pdf
+- questionID: P6-CH-2025-HenryPark-Q11
+  lessonIds: []
+  question: 天上飘浮着乌云，___。
+  options:
+    - 黄昏的景色宜人
+    - 太阳很快下山了
+    - 眼看就要下雨了
+    - 凉风习习好天气
+  correct: 眼看就要下雨了
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-HenryPark-Q12
+  lessonIds: []
+  question: ___，我不如呆在家里看电视。
+  options:
+    - 因为有急事赶着出门去
+    - 如果他没通知我这件事
+    - 反正今天下雨不能出门
+    - 由于没有空去完成作业
+  correct: 反正今天下雨不能出门
+  source: HenryPark Primary 6 Chinese 2025, Paper 2; PDF pages 15; P6_Chinese_2025_SA2_henrypark.pdf
+- questionID: P6-CH-2025-MGS-Q11
+  lessonIds:
+    - 3
+  question: 他使劲关紧水龙头，___。
+  options:
+    - 水就不断地流出来
+    - 大家终于可以解渴
+    - 不让它再继续滴水
+    - 好让弟弟可以洗澡
+  correct: 不让它再继续滴水
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 7; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-MGS-Q12
+  lessonIds:
+    - 6
+  question: ___，因此他甘愿受罚。
+  options:
+    - 大家证明他没做错
+    - 他并没有犯下错误
+    - 他不是故意这样做
+    - 他没按时完成任务
+  correct: 他没按时完成任务
+  source: MGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_mgs.pdf
+- questionID: P6-CH-2025-NanHua-Q11
+  lessonIds: []
+  question: ___，就要去向他道歉。
+  options:
+    - 如果你真的做错了
+    - 假如刚才跑得太快
+    - 只要遇到难做的题
+    - 反正你们已经和好
+  correct: 如果你真的做错了
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-NanHua-Q12
+  lessonIds:
+    - 3
+  question: 在这场争夺冠军的比赛中，___。
+  options:
+    - 他差点摔倒在地上
+    - 每个人会认真准备
+    - 你每年都得第一名
+    - 她再次输给了对手
+  correct: 她再次输给了对手
+  source: NanHua Primary 6 Chinese 2025, Paper 2; PDF pages 6; P6_Chinese_2025_SA2_nanhua.pdf
+- questionID: P6-CH-2025-Nanyang-Q11
+  lessonIds: []
+  question: 妈妈总是在我伤心难过时，___。
+  options:
+    - 和我有说有笑
+    - 劝我继续努力
+    - 陪伴和安慰我
+    - 跟我热烈讨论
+  correct: 陪伴和安慰我
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-Nanyang-Q12
+  lessonIds: []
+  question: ___，所以才会迟到。
+  options:
+    - 他可能找不到路
+    - 食堂里的人很多
+    - 要是小美睡着了
+    - 明华不喜欢这里
+  correct: 他可能找不到路
+  source: Nanyang Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_nanyang.pdf
+- questionID: P6-CH-2025-PLMGS-Q11
+  lessonIds: []
+  question: 我期盼学校假期的到来，___。
+  options:
+    - 也想要和同学一起出游。
+    - 才可以完成大量的功课。
+    - 就能每一天都早睡早起。
+    - 好让我有时间陪伴家人。
+  correct: 好让我有时间陪伴家人。
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PLMGS-Q12
+  lessonIds:
+    - 6
+  question: ___，露出了妒忌的眼神。
+  options:
+    - 林老师翻阅着学生的作文
+    - 奶奶知道孙子获得了胜利
+    - 妹妹看到我收到很多礼物
+    - 小狗发现了主人手里的肉
+  correct: 妹妹看到我收到很多礼物
+  source: PLMGS Primary 6 Chinese 2025, Paper 2; PDF pages 10; P6_Chinese_2025_SA2_mgspayalebar.pdf
+- questionID: P6-CH-2025-PeiChun-Q11
+  lessonIds:
+    - 12
+  question: ___，我们依依不舍地挥手道别。
+  options:
+    - 毕业典礼结束了
+    - 美美想去日本玩
+    - 只有十分钟休息
+    - 坐在小贩中心里
+  correct: 毕业典礼结束了
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-PeiChun-Q12
+  lessonIds: []
+  question: 天色突然变暗了，___。
+  options:
+    - 我赶紧开灯做作业
+    - 我们决定去吃午餐
+    - 游泳池里有很多人
+    - 百货商店已经关门
+  correct: 我赶紧开灯做作业
+  source: PeiChun Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_peichun.pdf
+- questionID: P6-CH-2025-Raffles-Q11
+  lessonIds: []
+  question: ___，令大家非常佩服。
+  options:
+    - 他每年都会去外国旅行
+    - 我为小明准备生日礼物
+    - 同学们借了很多故事书
+    - 她想到好办法解决困难
+  correct: 她想到好办法解决困难
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-Raffles-Q12
+  lessonIds: []
+  question: 这个社区是我成长的地方，___。
+  options:
+    - 增添了节日的气氛
+    - 邻居都搬去城市了
+    - 充满了美好的回忆
+    - 可以为我遮风挡雨
+  correct: 充满了美好的回忆
+  source: Raffles Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_raffles.pdf
+- questionID: P6-CH-2025-RedSwastika-Q11
+  lessonIds: []
+  question: 这件事明明是妹妹做的，___。
+  options:
+    - 她竟然说她还没开始
+    - 她赶快溜出去躲起来
+    - 她跟我们解释清楚了
+    - 她却怎么都不肯承认
+  correct: 她却怎么都不肯承认
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-RedSwastika-Q12
+  lessonIds: []
+  question: ___，却会说很多成语。
+  options:
+    - 虽然他对西方文化不太了解
+    - 虽然他平时不读华文故事书
+    - 虽然他从小就喜欢学习华文
+    - 虽然他的爸爸妈妈都是华人
+  correct: 虽然他平时不读华文故事书
+  source: RedSwastika Primary 6 Chinese 2025, Paper 2; PDF pages 12; P6_Chinese_2025_SA2_redswastika.pdf
+- questionID: P6-CH-2025-Rosyth-Q11
+  lessonIds: []
+  question: 美云有一双灵巧的手，___。
+  options:
+    - 她能剪出各种各样的动物
+    - 她时常当老师们的小帮手
+    - 她会用心把房子收拾干净
+    - 她代表学校参加篮球比赛
+  correct: 她能剪出各种各样的动物
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-Rosyth-Q12
+  lessonIds: []
+  question: ___，你就别再为难他了。
+  options:
+    - 表哥在童年时非常贴心
+    - 哥哥做事经常半途而废
+    - 那名导游已经尽力帮我们
+    - 阿明总爱把责任推给别人
+  correct: 那名导游已经尽力帮我们
+  source: Rosyth Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_rosyth.pdf
+- questionID: P6-CH-2025-SCGS-Q11
+  lessonIds: []
+  question: ___，累得喘不过气来。
+  options:
+    - 他一大口把蛋糕吃完
+    - 我写完了一页的习字
+    - 爸爸从一楼爬到十楼
+    - 姐姐折了一架纸飞机
+  correct: 爸爸从一楼爬到十楼
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-SCGS-Q12
+  lessonIds:
+    - 6
+  question: 你今天一定要把事情做完，___。
+  options:
+    - 才能煮好你的午餐
+    - 肯定能够得到表扬
+    - 就会立刻解决问题
+    - 千万不要一直拖延
+  correct: 千万不要一直拖延
+  source: SCGS Primary 6 Chinese 2025, Paper 2; PDF pages 8; P6_Chinese_2025_SA2_scgs.pdf
+- questionID: P6-CH-2025-StNicholas-Q11
+  lessonIds:
+    - 1
+  question: 妹妹对自己的要求太严格了，___。
+  options:
+    - 不管做什么都不能犯错
+    - 同学们都为她感到骄傲
+    - 从来都不跟别人打招呼
+    - 晚上都会先刷牙才睡觉
+  correct: 不管做什么都不能犯错
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-StNicholas-Q12
+  lessonIds: []
+  question: ___，大家都赞不绝口。
+  options:
+    - 六月的学校假期就快到了
+    - 奶奶今年已经九十多岁了
+    - 我冲过马路把球捡回来了
+    - 妈妈做的咖喱鸡太美味了
+  correct: 妈妈做的咖喱鸡太美味了
+  source: StNicholas Primary 6 Chinese 2025, Paper 2; PDF pages 9; P6_Chinese_2025_SA2_chij.pdf
+- questionID: P6-CH-2025-TaoNan-Q11
+  lessonIds:
+    - 4
+  question: 为了不打扰奶奶休息，___。
+  options:
+    - 妈妈把家里打扫了一遍
+    - 我把收音机的声量调低了
+    - 我和哥哥为她准备了一个惊喜
+    - 姐姐一直提醒她起床后要吃药
+  correct: 我把收音机的声量调低了
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_taonan.pdf
+- questionID: P6-CH-2025-TaoNan-Q12
+  lessonIds: []
+  question: ___，一个人就把二十公斤的米背上车。
+  options:
+    - 阿姨的脚步轻快
+    - 叔叔的身体很健康
+    - 搬运工人的力气很大
+    - 年轻人的双手十分灵巧
+  correct: 搬运工人的力气很大
+  source: TaoNan Primary 6 Chinese 2025, Paper 2; PDF pages 5; P6_Chinese_2025_SA2_taonan.pdf

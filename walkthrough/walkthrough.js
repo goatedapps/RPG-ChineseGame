@@ -12,7 +12,9 @@ const regions = [
 
 const root = document.querySelector('#guide-root');
 const regionId = document.body.dataset.region;
-const level = new URLSearchParams(location.search).get('level') === 'p2' ? 'p2' : 'p5';
+const curricula = (await json('content/authored/shared/levels.json')).filter(entry => entry.worldMappingReady);
+const requestedLevel = new URLSearchParams(location.search).get('level');
+const level = curricula.find(entry => entry.id === requestedLevel)?.id || 'p5';
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const titleCase = id => id.split('-').map(part => part[0].toUpperCase() + part.slice(1)).join(' ');
 const regionNumber = id => Number(id.slice(1));
@@ -21,7 +23,7 @@ const introHref = `./index.html?level=${level}`;
 
 function shell(title, description, content) {
   const nav = [`<a href="${introHref}" ${regionId === 'intro' ? 'aria-current="page"' : ''}>Introduction</a>`, ...regions.map(region => `<a href="${regionHref(region.id)}" ${regionId === region.id ? 'aria-current="page"' : ''}>${regionNumber(region.id)} · ${escapeHtml(region.town)}</a>`)].join('');
-  const selector = ['p5', 'p2'].map(id => `<a href="${location.pathname}?level=${id}" aria-current="${level === id}">${id === 'p5' ? 'Primary 5' : 'Primary 2'}</a>`).join('');
+  const selector = curricula.map(entry => `<a href="${location.pathname}?level=${entry.id}" aria-current="${level === entry.id}">${escapeHtml(entry.label)}</a>`).join('');
   root.innerHTML = `<div class="sheet"><header class="masthead"><div class="trail"><svg viewBox="0 0 28 28" aria-hidden="true"><path fill="none" stroke="#dfc481" stroke-width="2" d="M4 25 13 3l3 3-9 20m10-15 8 3-7 8-7-3"/></svg> Word Spirit Quest · a player’s field journal</div><h1>${escapeHtml(title)}</h1><p>${escapeHtml(description)}</p><div class="level-choice"><span>Curriculum</span>${selector}</div></header><nav class="region-nav" aria-label="Walkthrough pages">${nav}</nav><main>${content}</main><footer>A separate player’s guide. Its maps and numbers come from the local game content.</footer></div>`;
 }
 
@@ -29,7 +31,7 @@ function renderIntroduction() {
   shell('The words are waiting', 'The story, the goal, and the route through all seven regions.', `
     <section class="intro-scene"><div><span class="chapter-kicker">Before the first step</span><h2>A brush shattered. Seven regions fell quiet.</h2><p class="lead">Long ago, every word lived as a Word Spirit in the Great Dictionary Tree. The spirits helped people speak, read and write clearly.</p><p>The Great Forgetter shattered the Spirit Brush and sealed those spirits inside wild creatures. Towns began mixing up names, recipes and promises. Grandma Wang gives me the Brush handle, and I set out to bring the spirits home.</p><a class="start-link" href="${regionHref('r1')}">Begin in Scholar Village</a></div><img src="../assets/images/intro/dictionary-tree.jpg" alt="The Great Dictionary Tree before its Word Spirits were scattered" loading="eager"></section>
     <section><h2>What I am trying to do</h2><div class="intro-steps"><article><strong>Free spirits</strong><p>Battle creatures in each lesson area to collect different Word Spirit cards. Correct answers also fill their skill circles.</p></article><article><strong>Restore the Brush</strong><p>Read a passage, help the villagers answer it, collect enough Bronze cards, then defeat the region’s boss.</p></article><article><strong>Reach the next town</strong><p>Pass the gate’s dictation test and continue. At the final summit, face the Great Forgetter and wake the Dictionary Heart.</p></article></div><p>School, the Inn, the Shop and optional neighbour requests help along the way. The Journal suggests a route, but the lesson areas stay open.</p></section>
-    <section><h2>How to use this guide</h2><p>Each region has its own page with the town tasks, a route map, creature levels, a shop list, the boss and gate requirements, and optional goals. Choose Primary 2 or Primary 5 above to see the matching lessons and counts.</p><p>The <b>Spirit Book</b> tracks each word and its five skills, while the <b>Bag</b> gathers items, materials and scrolls. The <b>Creatures</b> menu records creatures I defeat and lets me choose one companion. Elite and Golden victories can upgrade a collected creature into a sparkling form that earns extra coins as my partner. <b>My Room</b> holds the Restoration Board. <b>Hero Status</b> lets me equip gear and open the Craft Table. The Daily Board offers extra goals.</p></section>`);
+    <section><h2>How to use this guide</h2><p>Each region has its own page with the town tasks, a route map, creature levels, a shop list, the boss and gate requirements, and optional goals. Choose your curriculum above to see the matching lessons and counts.</p><p>The <b>Spirit Book</b> tracks each word and its five skills, while the <b>Bag</b> gathers items, materials and scrolls. The <b>Creatures</b> menu records creatures I defeat and lets me choose one companion. Elite and Golden victories can upgrade a collected creature into a sparkling form that earns extra coins as my partner. <b>My Room</b> holds the Restoration Board. <b>Hero Status</b> lets me equip gear and open the Craft Table. The Daily Board offers extra goals.</p></section>`);
 }
 
 async function json(path) {

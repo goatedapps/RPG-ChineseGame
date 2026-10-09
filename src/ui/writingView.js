@@ -1,6 +1,6 @@
 import { escapeHtml } from './dom.js';
 import { AUTO_COMPLETE_AFTER_MISSES, normalizeCharacterProgress, recordCharacter, WRITING_STAGES, writingResult } from '../learning/writing.js';
-import { createSpeechController } from '../learning/audio.js';
+import { createSpeechController } from '../learning/audio.js?p1';
 
 export function showWritingTask(overlay, word, characterData, characterProgress, onDone, { runId = String(Date.now()), lenient = true, forceMemory = false, completeOnHelp = false, headerHtml = '', onExit = null, speechRate = 0.85, speech = createSpeechController() } = {}) {
   const characters = [...word.w].filter(character => /\p{Script=Han}/u.test(character));
@@ -14,7 +14,16 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
   let completed = false;
   let advanceTimer = null;
 
-  const dictate = () => speech.speak(word.w, { rate: speechRate });
+  const dictate = () => {
+    const status = document.querySelector('[data-dictation-status]');
+    status.textContent = '';
+    speech.speak(word.w, { rate: speechRate, onError: error => {
+      if (exited || completed || !status.isConnected) return;
+      status.textContent = error === 'not-allowed'
+        ? 'Tap Hear word to allow speech playback.'
+        : 'Could not play the word. Tap Hear word to retry. If it stays silent, ask an adult to check the device’s Chinese (Mandarin) text-to-speech voice and media volume.';
+    } });
+  };
   const finish = () => {
     if (exited || completed) return;
     completed = true;
@@ -44,13 +53,14 @@ export function showWritingTask(overlay, word, characterData, characterProgress,
       <p class="panel-kicker">Writing · ${escapeHtml(stage.name)}</p>
       ${memoryTask ? '' : `<div class="question-word"><b>${escapeHtml(word.w)}</b></div>`}
       <div class="dictation-clue"><p><small>Meaning</small><b>${escapeHtml(word.m)}</b></p><p><small>Hanyu Pinyin</small><span>${escapeHtml(word.p)}</span></p><p><small>Example sentence</small><span>${escapeHtml(memoryTask ? example : word.ex || 'Example sentence unavailable.')}</span></p><button class="dictation-speak" type="button" data-dictate-word aria-label="Hear the word again" title="Hear the word again">🔊 <span>Hear word</span></button></div>
+      <p data-dictation-status role="status" aria-live="polite"></p>
       <div class="writing-layout"><div class="writing-box" data-writing-box></div><div>
         <h2>Character ${index + 1} of ${characters.length}</h2>
         <p>${stage.id === 0 ? 'Trace the outline one stroke at a time.' : stage.id === 1 ? 'Write it yourself. A hint appears if you get stuck.' : 'Write it from memory.'}</p>
         <div class="writing-slots">${characters.map((item, itemIndex) => `<span class="${itemIndex === index ? 'current' : ''}">${itemIndex < index ? escapeHtml(item) : itemIndex === index ? '✎' : ''}</span>`).join('')}</div>
         <div class="button-row"><button class="secondary" data-writing-show type="button">Show me how</button>${onExit ? '<button class="secondary" data-writing-exit type="button">Leave dictation</button>' : ''}</div>
       </div></div>
-    </article>`, { dismissible: false });
+    </article>`, { dismissible: false, onClose: speech.stop, onReplace: speech.stop });
     const box = document.querySelector('[data-writing-box]');
     const size = Math.max(190, Math.round(box.getBoundingClientRect().width) || 260);
     writer = window.HanziWriter.create(box, character, {

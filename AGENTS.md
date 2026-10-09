@@ -94,7 +94,7 @@ Production URLs:
 - Keep route discovery, gate-opening flags and saved on-route positions persistent; entering from a village starts at that route's entrance.
 - After the Dictionary Heart, return to Scholar Village and keep Word Portals in all villages available for optional discoveries.
 - Keep touch targets at least 44 pixels and support reduced motion.
-- Stop speech and scene audio when leaving their activity, and pause music while the page is hidden.
+- Stop speech and scene audio when leaving their activity, pause music while the page is hidden, and surface dictation speech failures with retry guidance.
 - Keep character dialogue typewriter-paced, with the first Next press revealing the line and reduced-motion users seeing it immediately.
 - Play question feedback audio when the result appears and the earn cue when gameplay awards XP or coins.
 - Do not reveal an answer elsewhere on an active question screen.

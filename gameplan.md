@@ -70,6 +70,7 @@ Writing has Trace, Guided and From memory stages using local Hanzi Writer data.
 Keep the four-miss help threshold.
 Open written answers are completed by comparing with a model and self-rating; they are never required to be auto-marked correct.
 Memory writing and dictation provide “Show me how” without a redundant “I don’t know” action.
+Dictation selects an available Mandarin device voice, resumes paused speech and shows retry guidance if speech fails or does not start within eight seconds.
 
 Battle questions show only the information needed by the selected attack.
 Dictation hides the target Hanzi and shows only its meaning and pinyin.

@@ -5,7 +5,7 @@ import { advanceLanternStreak, claimDailyChest, dailyChestReady, dailyScrollSpot
 import { applyStoryCommands, bossGateQueue, gateStatus, normalizeStory, recordStoryEvent, regionWords, requestReady } from './systems/story.js?p19';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p18';
-import { showWritingTask } from './ui/writingView.js?p15';
+import { showWritingTask } from './ui/writingView.js?p16';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
 import { capBossDamage, heroStats } from './battle/damage.js?p1';
@@ -16,7 +16,7 @@ import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
-import { createSpeechController } from './learning/audio.js';
+import { createSpeechController } from './learning/audio.js?p1';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
 import { addNeededMaterials } from './systems/crafting.js';

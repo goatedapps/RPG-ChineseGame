@@ -23,8 +23,8 @@ import { eligibleBattleWords, recommendedSkill, selectWord } from './learning/se
 import { localDay } from './core/time.js';
 import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p19';
-import { showWritingTask } from './ui/writingView.js?p15';
-import { createSpeechController } from './learning/audio.js';
+import { showWritingTask } from './ui/writingView.js?p16';
+import { createSpeechController } from './learning/audio.js?p1';
 import { heroPortrait } from './ui/heroPortrait.js?p10o';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';

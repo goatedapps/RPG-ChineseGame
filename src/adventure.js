@@ -8,9 +8,9 @@ import { showQuestion } from './ui/questionView.js?p18';
 import { showWritingTask } from './ui/writingView.js?p16';
 import { localDay } from './core/time.js';
 import { recordActivity } from './systems/parent.js?p10f';
-import { capBossDamage, heroStats } from './battle/damage.js?p1';
+import { heroStats } from './battle/damage.js?p1';
 import { heroDamage } from './battle/battle.js';
-import { activeCompanion, activateCompanion, companionStrike, companionCounterattack, partnerVictoryBonus } from './systems/companions.js';
+import { activeCompanion, companionStrike, companionCounterattack, partnerVictoryBonus } from './systems/companions.js';
 import { companionBattleCard } from './ui/companion.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
@@ -662,14 +662,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
     const boss = createBoss(active().levelPackage.balance, regionLessons);
     const startingPlayer = active().state.player;
     const battle = { queue, ...boss, hp: boss.maxHp, index: 0, displayedHealth: [startingPlayer.hp / startingPlayer.maxHp, 1] };
-    const companion = activeCompanion(active().state.progress, active().levelPackage.companions);
-    const companionControls = resume => {
-      document.querySelector('[data-companion-skill]')?.addEventListener('click', () => {
-        if (!activateCompanion(battle, active().state.player, companion)) return;
-        commit();
-        resume();
-      }, { once: true });
-    };
+    const companion = activeCompanion(active().state.progress, active().levelPackage.companions, startingPlayer.level);
+    battle.companion = companion;
     const arena = () => {
       const game = active();
       const hero = heroStats(game.state.player.level);
@@ -718,8 +712,8 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
         const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
         let damage = 0;
         if (correct) {
-          damage = capBossDamage(heroDamage(game.state.player.level, battle, { writing: task.kind === 'writing', bonusDamage: (task.kind === 'writing' ? bonuses.skillDamage.w : 0) + (battle.attackBoost || 0), roll: Math.random() * 3 }), battle.maxHp);
-          damage = companionStrike(battle, game.state.player, damage);
+          damage = heroDamage(game.state.player.level, battle, { writing: task.kind === 'writing', bonusDamage: (task.kind === 'writing' ? bonuses.skillDamage.w : 0) + (battle.attackBoost || 0), roll: Math.random() * 3 });
+          damage = companionStrike(battle, game.state.player, damage, { boss: true, skill: task.kind === 'writing' ? 'w' : ({ pinyin: 'p', vocab: 'h', errorcorrect: 'h', phrase: 'm', comprehension: 'm' }[task.item.kind] || 'u') });
           battle.hp = Math.max(0, battle.hp - damage);
           audio?.sfx('hit');
         } else battle.queue.push(task);
@@ -759,7 +753,6 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
           animateBattleHealth(battle, game.state.player, battle.hp);
           document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
           document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showTurnResult), { once: true });
-          companionControls(showTurnResult);
         };
         showTurnResult();
       };
@@ -790,7 +783,6 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       overlay.open(bossPanel(`<p class="panel-kicker">Boss challenge</p><h1>${escapeHtml(active().levelPackage.regionStory.bossName)} awaits</h1><p>Prepare before breaking the first spell.</p><div class="button-row"><button class="primary" data-boss-next>Begin battle</button><button class="secondary" data-boss-bag>Open bag</button></div>${companionBattleCard(companion, battle)}`), { dismissible: false });
       document.querySelector('[data-boss-next]').addEventListener('click', next, { once: true });
       document.querySelector('[data-boss-bag]').addEventListener('click', () => bossBag(showBossReady), { once: true });
-      companionControls(showBossReady);
     };
     showBossReady();
   }

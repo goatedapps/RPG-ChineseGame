@@ -15,7 +15,7 @@ After Grandma Wang hands over the Spirit Brush, five village steps summon Appren
 Jun uses short, typed green conversations followed by blinking-arrow handoffs to the Next step box, map and activity controls.
 Six action-gated missions introduce the Shop, villagers, School, battle supplies and Spirit Book, with a brief completion comment at each transition, then Jun releases the child to explore until level 3.
 At level 3 Jun returns for mastery tiers, creature companions, restoration, the child-facing Atlas panels, dictation, crafting, and a Repellent-and-Bait Shop visit.
-His short handoffs connect each action to its benefit; after completing the tour, contextual notes appear beside an available companion ability, ready restoration or recipe, unequipped gear, ready Daily Chest, gate dictation, or usable route Repellent.
+His short handoffs connect each action to its benefit; after completing the tour, contextual notes appear beside a companion waiting for its automatic trigger, ready restoration or recipe, unequipped gear, ready Daily Chest, gate dictation, or usable route Repellent.
 Each note retires for that player and curriculum when dismissed or its action is used; skipped tutorials and older saves that never enrolled receive no notes.
 Tutorial progress resumes at the exact incomplete action; pre-existing saves retain their current progression without being enrolled.
 
@@ -126,9 +126,12 @@ Daily systems include the quest board, fixed chest rewards, Lantern Streak, week
 Collection systems include mastery tiers, creature companions, Restoration Sets, milestones, gear, crafting and the player room.
 The left-menu Creatures collection records each ordinary species after a battle victory, retaining its highest defeated level and rarest defeated form independently.
 Elite and Golden forms persist through later Normal victories, sparkle differently on collection cards, and grant 6 or 12 bonus coins after each normal or boss battle victory while selected as partner.
-Choose one creature to follow the hero and appear in My Room; each has an authored personality and a once-per-battle ability usable in normal and boss battles.
-Ability values grow with recorded creature level, and cards show exact current effects plus the next level’s effects.
-Shields absorb a finite damage pool, healing is capped by maximum HP, and enhanced attacks consume charges only on correct answers.
+Choose one creature to follow the hero and appear in My Room; each has an authored personality and automatic support that triggers once per normal or boss battle.
+Triggers are a correct attack in a named skill, a count of correct attacks, successful attacks in different skills, or a damaging hit that would take the hero to half HP or below.
+Support scales with recorded creature level up to the hero’s current level; provisional authored budgets cap combined healing and shielding at 20% of hero maximum HP and total extra damage at 15% of enemy maximum HP.
+The battle card shows the trigger, remaining support and actual effects; pure healing waits until HP is missing, shields survive dodges, and damage charges are spent only when they add damage to a correct attack.
+Apply the boss damage cap to the final combined attack, preserving at least ten successful answers; guided first battles suppress automatic support to preserve the Rice Ball lesson.
+Collection records and selected partners remain compatible with schema 15; support counters exist only in the current battle.
 Boss discoveries appear after defeat and cannot be selected as companions.
 Schema 15 adds creature forms to collection records, migrating earlier records to Normal while preserving their levels and selected partner.
 Older saves without creature records start collecting species at their next victory because historical creature levels were not saved.

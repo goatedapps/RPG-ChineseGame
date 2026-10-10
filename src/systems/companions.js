@@ -1,4 +1,5 @@
 import { CREATURES, CREATURE_VARIANTS } from '../battle/creatures.js';
+import { capBossDamage } from '../battle/damage.js';
 import { enemyAttack } from '../battle/battle.js';
 
 const species = new Map(CREATURES.map(creature => [creature.id, creature]));
@@ -38,31 +39,36 @@ export function chooseCompanion(progress, id) {
   return true;
 }
 
-export function creatureAbility(definition, level) {
+const skillNames = { m: 'Meaning', p: 'Pinyin', h: 'Hanzi', u: 'Usage', w: 'Writing' };
+
+export function creatureAbility(definition, level, heroLevel = level) {
   if (!definition || !Number.isSafeInteger(level) || level < 1) return null;
-  const ability = { name: definition.ability, hits: definition.hits || 0 };
-  for (const key of ['heal', 'shield', 'strike', 'echo', 'leech']) {
-    const [base, growth] = definition[key] || [0, 0];
-    ability[key] = base + growth * level;
-  }
+  const strength = Math.min(1, (level + 4) / (Math.max(1, heroLevel) + 4));
+  const ability = { name: definition.ability, trigger: definition.trigger, hits: definition.hits || 0,
+    heal: Math.min(.20, definition.heal || 0) * strength,
+    shield: Math.max(0, Math.min(.20 - Math.min(.20, definition.heal || 0), definition.shield || 0)) * strength,
+    damage: Math.min(.15, definition.damage || 0) * strength };
+  const trigger = ability.trigger;
+  const when = trigger.kind === 'skill' ? 'After a correct ' + skillNames[trigger.skill] + ' attack'
+    : trigger.kind === 'variety' ? 'After correct attacks in ' + trigger.count + ' different skills'
+    : trigger.kind === 'answers' ? 'After ' + trigger.count + ' correct attacks'
+    : 'When a hit would take you to half HP or below';
+  const percent = fraction => Math.round(fraction * 1000) / 10;
   const effects = [];
-  if (ability.heal) effects.push(`Restore up to ${ability.heal} HP now.`);
-  if (ability.shield) effects.push(`Absorb the next ${ability.shield} damage this battle.`);
-  const attacks = `Your next ${ability.hits === 1 ? 'successful attack' : `${ability.hits} successful attacks`}`;
-  if (ability.strike) effects.push(`${attacks} ${ability.hits === 1 ? 'deals' : 'each deal'} ${ability.strike} extra damage.`);
-  if (ability.echo) effects.push(`${attacks} ${ability.hits === 1 ? 'deals' : 'each deal'} ${ability.echo}% extra damage.`);
-  if (ability.leech) effects.push(`${attacks} ${ability.hits === 1 ? 'restores' : 'each restore'} up to ${ability.leech} HP.`);
-  ability.description = effects.join(' ');
+  if (ability.heal) effects.push('restore up to ' + percent(ability.heal) + '% of your maximum HP');
+  if (ability.shield) effects.push('shield up to ' + percent(ability.shield) + '% of your maximum HP');
+  if (ability.damage) effects.push('add up to ' + percent(ability.damage) + '% of enemy maximum HP in total damage across ' + ability.hits + ' successful attack' + (ability.hits === 1 ? '' : 's'));
+  ability.description = when + ', ' + effects.join(' and ') + '. Automatic, once per battle.' + (ability.damage ? ' Extra damage stays within the boss damage limit.' : '');
   return ability;
 }
 
-export function activeCompanion(progress, definitions = {}) {
+export function activeCompanion(progress, definitions = {}, heroLevel) {
   const creatures = normalizeCreatures(progress.creatures);
   const id = creatures.partner;
   if (!id) return null;
   const { level, variant } = creatures.collection[id];
-  const ability = creatureAbility(definitions[id], level);
-  return ability ? { ...species.get(id), level, variant, bonusCoins: CREATURE_VARIANTS[variant].bonusCoins, ability } : null;
+  const ability = creatureAbility(definitions[id], level, heroLevel);
+  return ability ? { ...species.get(id), definition: definitions[id], level, variant, bonusCoins: CREATURE_VARIANTS[variant].bonusCoins, ability } : null;
 }
 
 export function partnerVictoryBonus(progress) {
@@ -71,33 +77,70 @@ export function partnerVictoryBonus(progress) {
   return CREATURE_VARIANTS[variant].bonusCoins;
 }
 
-export function activateCompanion(battle, player, companion) {
-  if (!companion || battle.companionUsed) return false;
+function triggerSupport(battle, player, companion) {
+  if (!companion || battle.companionUsed || player.hp <= 0) return false;
+  const ability = creatureAbility(companion.definition, companion.level, player.level);
+  if (!ability) return false;
+  const maximum = battle.creature?.maxHp ?? battle.maxHp;
+  const heal = Math.min(player.maxHp - player.hp, Math.floor(player.maxHp * ability.heal));
+  const shield = Math.floor(player.maxHp * ability.shield);
+  const damage = Math.floor(maximum * ability.damage);
+  if (!heal && !shield && !damage) return false;
   battle.companionUsed = true;
-  battle.companionEffect = { ...companion.ability };
-  battle.companionShield = companion.ability.shield;
-  player.hp = Math.min(player.maxHp, player.hp + companion.ability.heal);
+  battle.companionEffect = { hits: ability.hits, damage };
+  battle.companionShield = shield;
+  player.hp += heal;
+  const effects = [];
+  if (heal) effects.push(`restored ${heal} HP`);
+  if (shield) effects.push(`prepared ${shield} shield`);
+  if (damage) effects.push(`prepared up to ${damage} extra damage`);
+  battle.companionNotice = `${companion.name} used ${ability.name}: ${effects.join(' and ')}.`;
   return true;
 }
 
-export function companionStrike(battle, player, damage) {
+export function companionStrike(battle, player, damage, { skill = null, boss = false } = {}) {
+  if (damage <= 0) return 0;
+  const companion = battle.companion;
+  if (companion && !battle.guided) {
+    battle.companionCorrect = (battle.companionCorrect || 0) + 1;
+    battle.companionSkills = [...new Set([...(battle.companionSkills || []), ...(skill ? [skill] : [])])];
+    const trigger = companion.definition.trigger;
+    const ready = trigger.kind === 'skill' ? skill === trigger.skill
+      : trigger.kind === 'variety' ? battle.companionSkills.length >= trigger.count
+      : trigger.kind === 'answers' && battle.companionCorrect >= trigger.count;
+    if (ready) triggerSupport(battle, player, companion);
+  }
   const effect = battle.companionEffect;
-  if (damage <= 0 || !effect || effect.hits <= 0) return damage;
-  effect.hits -= 1;
-  player.hp = Math.min(player.maxHp, player.hp + effect.leech);
-  return damage + effect.strike + Math.ceil(damage * effect.echo / 100);
+  const base = boss ? capBossDamage(damage, battle.maxHp) : damage;
+  if (!effect?.hits || !effect.damage) return base;
+  const room = boss ? Math.max(0, capBossDamage(Number.MAX_SAFE_INTEGER, battle.maxHp) - base) : effect.damage;
+  const bonus = Math.min(room, Math.ceil(effect.damage / effect.hits));
+  if (bonus > 0) {
+    effect.hits -= 1;
+    effect.damage = effect.hits ? effect.damage - bonus : 0;
+    battle.companionNotice = `${companion.name} added ${bonus} damage with ${companion.ability.name}.`;
+  }
+  return boss ? capBossDamage(base + bonus, battle.maxHp) : base + bonus;
 }
 
 export function companionCounterattack(battle, player, random, options, creature = battle.creature) {
-  const result = enemyAttack({ creature }, player, random, options);
+  let result = enemyAttack({ creature }, player, random, options);
+  const companion = battle.companion;
+  const trigger = companion?.definition.trigger;
+  if (!battle.guided && result.damage > 0 && trigger?.kind === 'danger' && player.hp - result.damage <= player.maxHp * trigger.threshold) {
+    const before = player.hp;
+    triggerSupport(battle, player, companion);
+    if (player.hp !== before) result = { ...result, player: { ...result.player, hp: Math.max(0, player.hp - result.damage) } };
+  }
   const absorbed = Math.min(result.damage, battle.companionShield || 0);
   battle.companionShield = Math.max(0, (battle.companionShield || 0) - absorbed);
+  if (absorbed) battle.companionNotice = `${companion?.name || 'Your companion'} shield absorbed ${absorbed} damage.`;
   return { ...result, damage: result.damage - absorbed, absorbed, player: { ...result.player, hp: Math.max(0, player.hp - result.damage + absorbed) } };
 }
 
 export function companionStatus(battle) {
   const parts = [];
   if (battle.companionShield) parts.push(`${battle.companionShield} shield remaining`);
-  if (battle.companionEffect?.hits) parts.push(`${battle.companionEffect.hits} enhanced attack${battle.companionEffect.hits === 1 ? '' : 's'} remaining`);
-  return parts.join(' · ') || (battle.companionUsed ? 'Ability used for this battle' : 'Ready once this battle');
+  if (battle.companionEffect?.damage) parts.push(`${battle.companionEffect.damage} bonus damage remaining`);
+  return parts.join(' · ') || (battle.companionUsed ? 'Support used for this battle' : 'Waiting for its trigger · automatic');
 }

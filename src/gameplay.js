@@ -5,7 +5,7 @@ import { creatureSvg } from './battle/creatureArt.js?p10n';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
-import { activeCompanion, activateCompanion, companionStrike, companionCounterattack, discoverCreature, partnerVictoryBonus } from './systems/companions.js';
+import { activeCompanion, companionStrike, companionCounterattack, discoverCreature, partnerVictoryBonus } from './systems/companions.js';
 import { companionBattleCard } from './ui/companion.js';
 import { battlesLeft, useBattle } from './systems/energy.js';
 import { ensureParentPin, giftSpiritCards, goalProgress, parentPinMatches, setParentPin, setTestingPlayerLevel, weeklySummary } from './systems/parent.js?p15';
@@ -179,7 +179,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const recommended = recommendedSkill(game.state.progress.words[battle.word.w]);
     const bonuses = gearBonuses(game.state.progress.equipment, game.levelPackage.gear);
     const hero = heroStats(game.state.player.level);
-    const companion = activeCompanion(game.state.progress, game.levelPackage.companions);
+    const companion = battle.companion;
     overlay.open(`<article class="battle-scene lesson-${battle.word.lesson}">
       <div class="battle-arena">
         <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion * 100)}%</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
@@ -194,7 +194,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     battle.displayedHealth = [game.state.player.hp / game.state.player.maxHp, battle.enemyHp / battle.creature.maxHp];
     for (const button of document.querySelectorAll('[data-attack]')) button.addEventListener('click', () => questionForBattle(battle, button.dataset.attack, (ok, skill) => {
       const playerResult = playerAttack(battle, game.state.player, skill, { correct: ok, bonusDamage: (bonuses.skillDamage[skill] || 0) + (battle.attackBoost || 0) });
-      playerResult.damage = companionStrike(playerResult.battle, game.state.player, playerResult.damage);
+      playerResult.damage = companionStrike(playerResult.battle, game.state.player, playerResult.damage, { skill });
       playerResult.battle.enemyHp = Math.max(0, battle.enemyHp - playerResult.damage);
       playerResult.battle.finished = playerResult.battle.enemyHp === 0;
       if (playerResult.damage > 0) audio?.sfx('hit');
@@ -244,11 +244,6 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       showBattle(battle, `Escape failed. ${enemyResult.evaded ? 'You dodged the counterattack!' : `${battle.creature.name} dealt ${enemyResult.damage} damage.`}`);
     }, { once: true });
     document.querySelector('[data-bag]').addEventListener('click', () => battleBag(battle), { once: true });
-    document.querySelector('[data-companion-skill]')?.addEventListener('click', () => {
-      if (resolving || battle.tutorialNeedsBag || !activateCompanion(battle, game.state.player, companion)) return;
-      commit();
-      showBattle(battle, `${companion.name} used ${companion.ability.name}! ${companion.ability.description}`);
-    }, { once: true });
   }
 
   function enemySpell(battle, lastCorrect, bonuses) {
@@ -387,6 +382,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     game.state.progress.energy = energy.energy;
     game.state.progress.battles += 1;
     const battle = createBattleState(word, creature);
+    battle.companion = activeCompanion(game.state.progress, game.levelPackage.companions, game.state.player.level);
     battle.guided = guided;
     battle.lastDailyBattle = !guided && cap !== 0 && energy.energy.used >= cap;
     battle.review = isReviewDue(game.state.progress.words[word.w], localDay());

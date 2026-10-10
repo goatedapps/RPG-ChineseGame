@@ -10,7 +10,7 @@ function setup(markup) {
   return { dom, root, game };
 }
 const targets = [
-  ['companion', '<aside class="companion-battle-card"><button data-companion-skill>Help</button></aside>'],
+  ['companion', '<aside class="companion-battle-card" data-companion-ready>Automatic support</aside><button data-attack="m">Attack</button>'],
   ['restoration', '<article class="set-card"><button data-offer="set">Restore</button></article>'],
   ['crafting', '<div class="craft-panel"><article class="craft-card"><button data-craft="gear">Craft</button></article></div>'],
   ['equipment', '<div class="hero-status-panel"><article class="gear-card"><button data-equip="gear">Equip</button></article></div>'],
@@ -33,9 +33,13 @@ test('Jun notes appear at available actions and retire persistently on feature u
       let actions = 0;
       action.addEventListener('click', () => actions++);
       const button = dismiss ? root.querySelector('.jun-reminder button') : action;
-      button.focus(); button.click();
+      button.focus();
+      if (key === 'companion' && !dismiss) {
+        root.innerHTML = '<aside class="companion-battle-card" data-companion-used>Support triggered</aside>';
+        attachJunReminder(game, root, () => saves++);
+      } else button.click();
       assert.equal(saves, 1);
-      assert.equal(actions, dismiss ? 0 : 1);
+      assert.equal(actions, dismiss || key === 'companion' ? 0 : 1);
       assert.equal(game.state.progress.flags[`jun-reminder-${key}`], true);
       assert.equal(root.querySelector('.jun-reminder'), null);
       if (dismiss) assert.equal(dom.window.document.activeElement, action);
@@ -54,11 +58,14 @@ test('Jun never interrupts incomplete, skipped, unenrolled, hidden, disabled or 
     attachJunReminder(game, root, () => assert.fail('Unexpected save'));
     assert.equal(root.querySelector('.jun-reminder'), null); dom.window.close();
   }
-  for (const [, markup] of targets) {
+  for (const [key, markup] of targets) {
     for (const exclusion of ['hidden', 'disabled', 'question-panel', 'writing-panel']) {
       const { dom, root, game } = setup(markup);
       if (exclusion === 'hidden') root.hidden = true;
-      else if (exclusion === 'disabled') root.querySelector('button').disabled = true;
+      else if (exclusion === 'disabled') {
+        root.querySelector('button').disabled = true;
+        if (key === 'companion') root.querySelector('[data-companion-ready]').removeAttribute('data-companion-ready');
+      }
       else root.firstElementChild.classList.add(exclusion);
       attachJunReminder(game, root, () => assert.fail('Unexpected save'));
       assert.equal(root.querySelector('.jun-reminder'), null); dom.window.close();

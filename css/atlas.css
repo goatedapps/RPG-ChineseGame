@@ -391,3 +391,5 @@ body:not([data-tutorial-step]) .tutorial-pointer { display: none; }
 .overlay .jun-reminder p { margin: 5px 0 0; color: #fff8e4; font: 600 15px/1.5 var(--font-ui); }
 .jun-reminder button { flex-shrink: 0; min-width: 64px; min-height: 44px; border: 2px solid #ffe9a0; color: #213b3a; background: #f3d98b; }
 @media (max-width: 480px) { .jun-reminder { align-items: flex-start; flex-wrap: wrap; } .jun-reminder button { margin-left: auto; } }
+.companion-battle-card.has-supported { border-color: #2c7661; }
+.companion-battle-card .companion-notice { padding: 8px; border-radius: 6px; background: #e0f2e8; color: #154b36; font-weight: 700; }

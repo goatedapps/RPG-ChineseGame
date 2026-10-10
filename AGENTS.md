@@ -49,6 +49,7 @@ Production URLs:
 - Keep fog-route entry closed at zero remaining battles and return the player to the Inn after the final allowed battle.
 - Keep fresh saves at the 30-battle daily default while preserving a parent's saved custom cap.
 - Keep stat-based combat with visible HP, attack, defense and evasion.
+- Keep companions automatic and conditional once per battle; bound support by hero/enemy HP and apply boss caps after every damage bonus.
 - Collect creatures only after battle victory; retain each species' highest defeated level and rarest defeated form independently, and award an Elite or Golden partner's coin bonus on normal and boss victories.
 - Keep the Muddle King challenge visually framed as a boss battle, including its question and writing phases.
 - Keep Tidewater Bay's three collected-word rescue dictations, Keeper Lan's clue comparison, and the post-boss whale rescue distinct from optional neighbour requests.

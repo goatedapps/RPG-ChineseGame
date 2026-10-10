@@ -1,7 +1,7 @@
 import { escapeHtml } from './dom.js';
 
 const contexts = [
-  ['companion', '.companion-battle-card [data-companion-skill]:not([disabled])', '.companion-battle-card'],
+  ['companion', '.companion-battle-card[data-companion-ready]', '.companion-battle-card'],
   ['restoration', '[data-offer]:not([disabled])', '.set-card'],
   ['crafting', '.craft-panel [data-craft]:not([disabled])', '.craft-card'],
   ['equipment', '.hero-status-panel [data-equip]:not([disabled])', '.gear-card'],
@@ -16,6 +16,10 @@ export function attachJunReminder(game, root, persist) {
   const flags = game.state.progress.flags;
   const copy = game.levelPackage.strings?.junGuidance?.reminders;
   if (!flags || !copy) return;
+  if (root.querySelector('[data-companion-used]') && !flags['jun-reminder-companion']) {
+    flags['jun-reminder-companion'] = true;
+    persist();
+  }
   for (const [key, selector, container] of contexts) {
     const flag = `jun-reminder-${key}`;
     if (flags[flag] || !copy[key]) continue;
@@ -31,11 +35,11 @@ export function attachJunReminder(game, root, persist) {
       flags[flag] = true;
       persist();
       const dismiss = note.querySelector('button');
-      if (root.ownerDocument.activeElement === dismiss) control.focus({ preventScroll: true });
+      if (root.ownerDocument.activeElement === dismiss) (key === 'companion' ? root.querySelector('[data-attack]:not([disabled]), [data-boss-next]') : control)?.focus({ preventScroll: true });
       note.remove();
     };
     note.querySelector('button').addEventListener('click', remember, { once: true });
-    control.addEventListener('click', remember, { once: true });
+    if (key !== 'companion') control.addEventListener('click', remember, { once: true });
     return;
   }
 }

@@ -14,10 +14,10 @@
     "transitions": {
       "7": [
         "You have seen how Spirits grow. Three filled skill circles make Silver; five make Gold.",
-        "Now choose a creature companion in Creatures. Its ability can help you in your next battle."
+        "Now choose a creature companion in Creatures. Read its trigger and choose support that suits your attacks."
       ],
       "8": [
-        "Your partner is ready! Use its ability once each battle when you need a hand.",
+        "Your partner is ready! Its support happens automatically when you meet its trigger, once each battle.",
         "Silver Spirits can earn room decorations. Open the Restoration Board in My Room to see a set you could finish."
       ],
       "9": [
@@ -50,7 +50,7 @@
       ]
     },
     "reminders": {
-      "companion": "Your partner can help right now. Tap its ability when you need it; you can use it once each battle, including boss battles.",
+      "companion": "Your partner helps automatically when its trigger is met. Read its card, then choose your attacks. You can choose a different partner in Creatures between battles.",
       "restoration": "This set is ready! Silver means three filled skill circles; Gold means five. Restore the region to earn its decoration. You keep every Spirit.",
       "crafting": "You have enough materials and coins for this recipe. Craft the gear if you want its benefit, then equip it in Hero Status.",
       "equipment": "This gear is yours, but is not equipped. Tap Equip to use the benefit shown on its card.",

@@ -204,7 +204,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     overlay.open(creatureCollectionMarkup(game, notice));
     for (const button of document.querySelectorAll('[data-choose-creature]')) button.addEventListener('click', () => {
       if (!chooseCompanion(game.state.progress, button.dataset.chooseCreature)) return;
-      const companion = activeCompanion(game.state.progress, game.levelPackage.companions);
+      const companion = activeCompanion(game.state.progress, game.levelPackage.companions, game.state.player.level);
       commit();
       audio?.sfx('earn');
       if (tutorialStep() === 8) {
@@ -256,7 +256,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
   function room() {
     const game = active();
     applyMilestones();
-    const companion = activeCompanion(game.state.progress, game.levelPackage.companions);
+    const companion = activeCompanion(game.state.progress, game.levelPackage.companions, game.state.player.level);
     const gold = Object.values(game.state.progress.words).filter(value => tierOf(value) === 'gold').length;
     const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
     if (goal?.complete && !game.state.progress.parent.goal.celebrated) { game.state.progress.parent.goal.celebrated = true; commit(); toast(`Goal reached: ${goal.label}!`); }

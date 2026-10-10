@@ -13,11 +13,11 @@ test('recording a victory keeps the highest creature level and upgrades the sele
   assert.equal(chooseCompanion(progress, 'fogling'), false);
   assert.match(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 3 }), /discovered/);
   assert.equal(chooseCompanion(progress, 'fogling'), true);
-  const before = activeCompanion(progress, definitions);
+  const before = activeCompanion(progress, definitions, 8);
   assert.equal(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 2 }), '');
   assert.equal(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 3 }), '');
   assert.match(discoverCreature(progress, { id: 'fogling', name: 'Fogling', level: 8 }), /Lv. 3 → Lv. 8/);
-  assert.equal(activeCompanion(progress, definitions).ability.shield, before.ability.shield + 10);
+  assert.ok(activeCompanion(progress, definitions, 8).ability.shield > before.ability.shield);
   discoverCreature(progress, { id: 'echo-bat', name: 'Echo Bat', level: 5 });
   chooseCompanion(progress, 'echo-bat');
   assert.equal(progress.creatures.partner, 'echo-bat');
@@ -27,7 +27,7 @@ test('recording a victory keeps the highest creature level and upgrades the sele
   assert.equal(activeCompanion(progress, definitions), null);
 });
 
-test('all 35 species have distinct named abilities that grow at every level and use packaged art', async () => {
+test('all 35 species have authored triggers, bounded support that grows to the hero level, and packaged art', async () => {
   const { CREATURES } = await import('../src/battle/creatures.js');
   const { creatureAbility } = await api();
   assert.deepEqual(Object.keys(definitions).sort(), CREATURES.map(item => item.id).sort());
@@ -36,38 +36,18 @@ test('all 35 species have distinct named abilities that grow at every level and 
   for (const creature of CREATURES) {
     assert.ok(definitions[creature.id].personality);
     for (let level = 1; level < 70; level++) {
-      const current = creatureAbility(definitions[creature.id], level);
-      const next = creatureAbility(definitions[creature.id], level + 1);
-      assert.notEqual(current.description, next.description, `${creature.id} level ${level}`);
-      for (const stat of ['heal', 'shield', 'strike', 'echo', 'leech']) assert.ok(next[stat] >= current[stat]);
+      const current = creatureAbility(definitions[creature.id], level, 70);
+      const next = creatureAbility(definitions[creature.id], level + 1, 70);
+      for (const stat of ['heal', 'shield', 'damage']) assert.ok(next[stat] >= current[stat]);
+      assert.ok(next.heal + next.shield <= .20000001);
+      assert.ok(next.damage <= .15);
+      assert.ok(['skill', 'answers', 'variety', 'danger'].includes(current.trigger.kind));
+      assert.match(current.description, /Automatic, once per battle/);
     }
     assert.ok(fs.existsSync(`assets/images/creatures/${creature.id}.webp`));
     assert.ok(offline.includes(`assets/images/creatures/${creature.id}.webp`));
   }
   for (const file of ['src/systems/companions.js', 'src/ui/companion.js', 'src/ui/creatureCollection.js', 'content/authored/shared/companions.json']) assert.ok(offline.includes(file));
-});
-
-test('abilities activate once, successful attacks consume charges, and healing never exceeds maximum HP', async () => {
-  const { activateCompanion, companionStrike, creatureAbility } = await api();
-  const battle = {};
-  const player = { hp: 10, maxHp: 20 };
-  const companion = { ability: creatureAbility(definitions['quarrel-macaque'], 4) };
-  assert.equal(activateCompanion(battle, player, companion), true);
-  assert.equal(activateCompanion(battle, player, companion), false);
-  assert.equal(companionStrike(battle, player, 0), 0);
-  assert.equal(battle.companionEffect.hits, 2);
-  assert.equal(player.hp, 10);
-  assert.equal(companionStrike(battle, player, 7), 12);
-  assert.equal(player.hp, 15);
-  assert.equal(companionStrike(battle, player, 7), 12);
-  assert.equal(player.hp, 20);
-  assert.equal(companionStrike(battle, player, 7), 7);
-  const healing = { ability: creatureAbility(definitions['chaff-sprite'], 20) };
-  activateCompanion({}, player, healing);
-  assert.equal(player.hp, 20);
-  const echo = {};
-  activateCompanion(echo, player, { ability: creatureAbility(definitions['echo-bat'], 5) });
-  assert.equal(companionStrike(echo, player, 20), 27);
 });
 
 test('shield absorbs a finite pool across hits, prevents lethal damage, and survives dodges', async () => {
@@ -172,8 +152,8 @@ test('collection cards show exact abilities, select one partner and keep defeate
     let saves = 0;
     const collection = createCollection({ getActive: () => game, overlay: { open(html) { element.innerHTML = html; } }, persist: () => saves++, render() {}, toast() {} });
     collection.creatures();
-    assert.match(element.textContent, /Absorb the next 10 damage/);
-    assert.match(element.textContent, /Absorb the next 12 damage/);
+    assert.match(element.textContent, /shield up to 20%/);
+    assert.match(element.textContent, /Support strength grows up to your hero’s level/);
     assert.match(element.textContent, /cannot be a partner/);
     assert.match(element.textContent, /Elite partner: \+6 coins/);
     assert.match(element.textContent, /Golden partner: \+12 coins/);

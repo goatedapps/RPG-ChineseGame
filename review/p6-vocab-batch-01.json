@@ -1,0 +1,1159 @@
+{
+  "curriculum": "p6",
+  "reviewStatus": "approved-and-integrated",
+  "batch": 1,
+  "questions": [
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q01",
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "测验",
+      "question": "为了了解同学们是否掌握了这三个单元，老师明天会进行一次小___。",
+      "options": [
+        "演出",
+        "测验",
+        "访问",
+        "聚会"
+      ],
+      "correct": "测验",
+      "answerLetter": "B",
+      "rationale": "测验用来检查学习成果；演出、访问和聚会不是知识检查。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q01"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q02",
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "临时抱佛脚",
+      "question": "小杰平时不复习，直到考试前一晚才熬夜读完整本课本，真是___。",
+      "options": [
+        "精益求精",
+        "未雨绸缪",
+        "循序渐进",
+        "临时抱佛脚"
+      ],
+      "correct": "临时抱佛脚",
+      "answerLetter": "D",
+      "rationale": "关键是平时没有准备，事到临头才匆忙应付；未雨绸缪指提前准备。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q02"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q03",
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "耀眼",
+      "question": "正午的阳光十分___，小文只好眯起眼睛，戴上太阳眼镜。",
+      "options": [
+        "耀眼",
+        "暗淡",
+        "柔和",
+        "微弱"
+      ],
+      "correct": "耀眼",
+      "answerLetter": "A",
+      "rationale": "光线强得让人难以直视，才会眯眼或戴太阳眼镜。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q03"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q04",
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "不屈不挠",
+      "question": "实验失败了十多次，研究小组仍然___，不断改进方法，再次尝试。",
+      "options": [
+        "半途而废",
+        "得过且过",
+        "不屈不挠",
+        "知难而退"
+      ],
+      "correct": "不屈不挠",
+      "answerLetter": "C",
+      "rationale": "面对多次失败仍坚持尝试，体现不向困难低头。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q04"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q05",
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "榜样",
+      "question": "姐姐拾到钱包后主动交给老师，她诚实的行为值得我们学习，是我们的好___。",
+      "options": [
+        "对手",
+        "榜样",
+        "观众",
+        "顾客"
+      ],
+      "correct": "榜样",
+      "answerLetter": "B",
+      "rationale": "榜样是值得学习和效法的人；这里强调姐姐的诚实行为。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q05"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q06",
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "基础",
+      "question": "盖房子要先打好地基；学习华文也要先掌握常用字词，打好___。",
+      "options": [
+        "纪录",
+        "主意",
+        "招呼",
+        "基础"
+      ],
+      "correct": "基础",
+      "answerLetter": "D",
+      "rationale": "基础指支持进一步发展或学习的根本条件。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q06"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q07",
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "倾斜",
+      "question": "桌子的一条腿折断了一截，桌面向左___，杯子差点滑下来。",
+      "options": [
+        "倾斜",
+        "旋转",
+        "升高",
+        "下沉"
+      ],
+      "correct": "倾斜",
+      "answerLetter": "A",
+      "rationale": "一侧桌腿变短会使桌面不平，向一边倾斜。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q07"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q08",
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "迅速",
+      "question": "老师要求大家马上到操场集合，同学们放下手中的东西，___排好了队。",
+      "options": [
+        "缓慢",
+        "陆续",
+        "迅速",
+        "迟迟"
+      ],
+      "correct": "迅速",
+      "answerLetter": "C",
+      "rationale": "马上集合和立即放下东西突出动作很快；陆续强调先后，并不表示快。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q08"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q09",
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "疑惑",
+      "question": "说明书写着先关电源，图中却画着插头仍插着，小明感到___，不知道该听哪一个。",
+      "options": [
+        "满足",
+        "疑惑",
+        "自豪",
+        "轻松"
+      ],
+      "correct": "疑惑",
+      "answerLetter": "B",
+      "rationale": "互相矛盾的信息让人不明白，因此感到疑惑。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q09"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q10",
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "苍白",
+      "question": "小丽身体不舒服，脸色___，连嘴唇也失去了平时的红润。",
+      "options": [
+        "黝黑",
+        "红润",
+        "通红",
+        "苍白"
+      ],
+      "correct": "苍白",
+      "answerLetter": "D",
+      "rationale": "苍白指脸色缺少血色；题目已说明失去红润。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q10"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q11",
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "敏捷",
+      "question": "小猫身手___，眨眼间就越过矮墙，跳到了树枝上。",
+      "options": [
+        "敏捷",
+        "笨拙",
+        "僵硬",
+        "迟钝"
+      ],
+      "correct": "敏捷",
+      "answerLetter": "A",
+      "rationale": "身手敏捷强调动作灵活而迅速，符合越墙和跳上树枝的表现。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q11"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q12",
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "堵塞",
+      "question": "许多落叶卡在排水口，把通道___了，雨水积在路上流不出去。",
+      "options": [
+        "疏通",
+        "扩大",
+        "堵塞",
+        "清理"
+      ],
+      "correct": "堵塞",
+      "answerLetter": "C",
+      "rationale": "堵塞指通道被挡住，使水不能顺利流过。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q12",
+        "P6-CH-AUTHORED-B01-Q12-L11"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q13",
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "模仿",
+      "question": "弟弟学着爷爷说话的语气，还照着他的样子走路，正在___爷爷。",
+      "options": [
+        "提醒",
+        "模仿",
+        "安慰",
+        "责备"
+      ],
+      "correct": "模仿",
+      "answerLetter": "B",
+      "rationale": "照着别人的声音、动作去做，就是模仿。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q13"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q14",
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "智慧",
+      "question": "村民没有足够的工具，便运用___，想出用竹筒把泉水引到田里的办法。",
+      "options": [
+        "体力",
+        "运气",
+        "财富",
+        "智慧"
+      ],
+      "correct": "智慧",
+      "answerLetter": "D",
+      "rationale": "智慧体现在思考并想出解决问题的办法，不是靠力气、偶然机会或金钱。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q14",
+        "P6-CH-AUTHORED-B01-Q14-L06"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q15",
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "原价",
+      "question": "这双鞋打折后卖三十元，标签上仍写着打折前的___：五十元。",
+      "options": [
+        "原价",
+        "数量",
+        "尺寸",
+        "重量"
+      ],
+      "correct": "原价",
+      "answerLetter": "A",
+      "rationale": "原价指商品降价或打折以前的价格。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q15"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q16",
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "均匀",
+      "question": "调色前，小美把颜料搅拌___，让整杯颜料的颜色深浅一致。",
+      "options": [
+        "整齐",
+        "牢固",
+        "均匀",
+        "顺利"
+      ],
+      "correct": "均匀",
+      "answerLetter": "C",
+      "rationale": "均匀强调各部分的分布或程度一致；这里指颜色深浅一致。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q16"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q17",
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "省吃俭用",
+      "question": "为了存钱买电脑，小杰减少零食开销，旧文具还能用就不换，一直___。",
+      "options": [
+        "挥金如土",
+        "省吃俭用",
+        "铺张浪费",
+        "大手大脚"
+      ],
+      "correct": "省吃俭用",
+      "answerLetter": "B",
+      "rationale": "减少不必要的花费、节约生活开支，就是省吃俭用。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q17"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q18",
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "反而",
+      "question": "我本想帮妹妹解开绳结，没想到___把绳子越拉越紧了。",
+      "options": [
+        "因此",
+        "果然",
+        "同时",
+        "反而"
+      ],
+      "correct": "反而",
+      "answerLetter": "D",
+      "rationale": "反而表示结果与原来的打算或预期相反；这里本想解开，却拉得更紧。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q18"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q19",
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "创意",
+      "question": "美术课上，小玲提出用废瓶盖拼成一幅海底图，老师称赞这个___很新颖。",
+      "options": [
+        "创意",
+        "规定",
+        "借口",
+        "命令"
+      ],
+      "correct": "创意",
+      "answerLetter": "A",
+      "rationale": "创意指新颖、有创造性的想法，这里是废瓶盖的新用途。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q19"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q20",
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "抵挡",
+      "question": "厚厚的外套能___寒风，让身体保持温暖。",
+      "options": [
+        "招来",
+        "放出",
+        "抵挡",
+        "传递"
+      ],
+      "correct": "抵挡",
+      "answerLetter": "C",
+      "rationale": "抵挡指挡住外来的影响，这里是阻挡寒风。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q20"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q21",
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "哑口无言",
+      "question": "小杰坚持说自己没有踢球，老师播放了他踢碎窗户的录像，他顿时___，再也说不出辩解的话。",
+      "options": [
+        "滔滔不绝",
+        "哑口无言",
+        "振振有词",
+        "口若悬河"
+      ],
+      "correct": "哑口无言",
+      "answerLetter": "B",
+      "rationale": "在证据面前无法继续辩解，符合哑口无言。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q21"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q22",
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "掩耳盗铃",
+      "question": "小明把不及格的成绩单藏起来，就以为自己没有考差，这种自欺欺人的做法真是___。",
+      "options": [
+        "亡羊补牢",
+        "举一反三",
+        "未雨绸缪",
+        "掩耳盗铃"
+      ],
+      "correct": "掩耳盗铃",
+      "answerLetter": "D",
+      "rationale": "隐藏成绩单不能改变结果；掩耳盗铃指用欺骗自己的办法回避事实。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q22"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q23",
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "忠诚",
+      "question": "故事里的士兵拒绝了敌人给的钱，始终守护自己的国家，表现得十分___。",
+      "options": [
+        "忠诚",
+        "贪婪",
+        "虚伪",
+        "懦弱"
+      ],
+      "correct": "忠诚",
+      "answerLetter": "A",
+      "rationale": "面对利益诱惑仍忠于自己的国家，体现忠诚。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q23"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q24",
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "足智多谋",
+      "question": "无论敌人从哪条路进攻，这位将军总能想出不同的计策应对，真是___。",
+      "options": [
+        "束手无策",
+        "一筹莫展",
+        "足智多谋",
+        "黔驴技穷"
+      ],
+      "correct": "足智多谋",
+      "answerLetter": "C",
+      "rationale": "足智多谋指富有智慧、善于想办法；题目强调总能想出不同计策。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q24"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q25",
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "甘愿",
+      "question": "为了让年幼的妹妹坐下休息，姐姐___自己站着，并没有半句怨言。",
+      "options": [
+        "拒绝",
+        "甘愿",
+        "责怪",
+        "怀疑"
+      ],
+      "correct": "甘愿",
+      "answerLetter": "B",
+      "rationale": "甘愿表示心甘情愿地接受或承担某件事。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q25"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q26",
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "埋伏",
+      "question": "故事里的士兵悄悄___在树林里，等敌军进入山谷后才突然现身。",
+      "options": [
+        "撤退",
+        "巡逻",
+        "集合",
+        "埋伏"
+      ],
+      "correct": "埋伏",
+      "answerLetter": "D",
+      "rationale": "隐蔽起来等待对方到来，再突然行动，就是埋伏。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q26"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q27",
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "倾泻",
+      "question": "暴雨过后，山上的洪水从狭窄的出口___而下，水势十分凶猛。",
+      "options": [
+        "倾泻",
+        "渗透",
+        "凝固",
+        "蒸发"
+      ],
+      "correct": "倾泻",
+      "answerLetter": "A",
+      "rationale": "倾泻指大量水迅速向下流；渗透强调慢慢穿过细小空隙。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q27"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q28",
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "震耳欲聋",
+      "question": "近处突然响起___的巨响，我们赶紧捂住耳朵，连彼此说话都听不清。",
+      "options": [
+        "轻柔悦耳",
+        "若有若无",
+        "震耳欲聋",
+        "细声细气"
+      ],
+      "correct": "震耳欲聋",
+      "answerLetter": "C",
+      "rationale": "声音大得让耳朵难以承受，符合震耳欲聋。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q28"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q29",
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "流连忘返",
+      "question": "花园里处处都有美丽的景色，我们逛了很久仍舍不得离开，真是___。",
+      "options": [
+        "归心似箭",
+        "流连忘返",
+        "兴味索然",
+        "大失所望"
+      ],
+      "correct": "流连忘返",
+      "answerLetter": "B",
+      "rationale": "流连忘返表示被景物或活动吸引，留恋得不愿离开。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q29"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q30",
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "益处",
+      "question": "阅读能增长知识、开阔眼界，对我们有许多___。",
+      "options": [
+        "损失",
+        "麻烦",
+        "限制",
+        "益处"
+      ],
+      "correct": "益处",
+      "answerLetter": "D",
+      "rationale": "益处指好处，增长知识和开阔眼界都是阅读带来的好处。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q30"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q31",
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "若有所思",
+      "question": "听完爷爷提出的问题，小文没有马上回答，而是___地望着窗外，像在琢磨什么。",
+      "options": [
+        "若有所思",
+        "手舞足蹈",
+        "怒气冲冲",
+        "惊慌失措"
+      ],
+      "correct": "若有所思",
+      "answerLetter": "A",
+      "rationale": "若有所思形容好像在思考某件事的样子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q31"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q32",
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "无忧无虑",
+      "question": "故事里的小动物不用担心食物，也没有危险，每天___地在草地上玩耍。",
+      "options": [
+        "提心吊胆",
+        "忧心忡忡",
+        "无忧无虑",
+        "愁眉苦脸"
+      ],
+      "correct": "无忧无虑",
+      "answerLetter": "C",
+      "rationale": "没有忧愁和担心，符合无忧无虑；其他选项都带有担忧。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q32"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q33",
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "津津有味",
+      "question": "弟弟捧着故事书读得___，连最喜欢的电视节目开始了也不愿放下书。",
+      "options": [
+        "心不在焉",
+        "津津有味",
+        "索然无味",
+        "不耐烦"
+      ],
+      "correct": "津津有味",
+      "answerLetter": "B",
+      "rationale": "津津有味表示读得很有兴趣、很投入，符合不愿放下书的表现。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q33"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q34",
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "冤枉",
+      "question": "花瓶其实是小猫碰倒的，爸爸却责怪妹妹，妹妹委屈地说：“您___我了！”",
+      "options": [
+        "表扬",
+        "提醒",
+        "安慰",
+        "冤枉"
+      ],
+      "correct": "冤枉",
+      "answerLetter": "D",
+      "rationale": "把别人没有做过的坏事算在她身上，就是冤枉她。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q34"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q35",
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "遭受",
+      "question": "台风过后，村庄___了严重的损失，许多房屋都被毁坏了。",
+      "options": [
+        "遭受",
+        "获得",
+        "提供",
+        "创造"
+      ],
+      "correct": "遭受",
+      "answerLetter": "A",
+      "rationale": "遭受通常用于受到损失、伤害等不利情况。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q35"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q36",
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "固执",
+      "question": "大家指出这个办法行不通，他仍然___地坚持己见，怎么劝也不肯改变。",
+      "options": [
+        "谦虚",
+        "灵活",
+        "固执",
+        "随和"
+      ],
+      "correct": "固执",
+      "answerLetter": "C",
+      "rationale": "明知办法有问题，仍不肯听劝和改变，体现固执。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q36"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q37",
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "冲毁",
+      "question": "连日大雨使河水暴涨，汹涌的洪水___了河上的木桥。",
+      "options": [
+        "修建",
+        "冲毁",
+        "加固",
+        "架起"
+      ],
+      "correct": "冲毁",
+      "answerLetter": "B",
+      "rationale": "冲毁强调建筑物被强大的水流破坏。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q37"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q38",
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "挣扎",
+      "question": "小鸟被细网缠住了，不停地拍打翅膀___，想挣脱出来。",
+      "options": [
+        "歇息",
+        "盘旋",
+        "滑翔",
+        "挣扎"
+      ],
+      "correct": "挣扎",
+      "answerLetter": "D",
+      "rationale": "被困时努力摆脱束缚，就是挣扎；盘旋和滑翔要求能够飞行。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q38"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q39",
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "目录",
+      "question": "小华想知道哪一页介绍海豚，便翻到书前面的___，查找章节和页码。",
+      "options": [
+        "目录",
+        "封面",
+        "书签",
+        "插图"
+      ],
+      "correct": "目录",
+      "answerLetter": "A",
+      "rationale": "目录列出书中的章节及相应页码，能帮助定位内容。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q39"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q40",
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "翻译",
+      "question": "为了让只懂华文的弟弟看懂这篇英文故事，姐姐把它___成华文。",
+      "options": [
+        "朗读",
+        "抄写",
+        "翻译",
+        "背诵"
+      ],
+      "correct": "翻译",
+      "answerLetter": "C",
+      "rationale": "把内容从一种语言转换成另一种语言，就是翻译。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q40"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q41",
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "全神贯注",
+      "question": "小美___地观察显微镜里的标本，连有人叫她也没有察觉。",
+      "options": [
+        "三心二意",
+        "全神贯注",
+        "东张西望",
+        "心不在焉"
+      ],
+      "correct": "全神贯注",
+      "answerLetter": "B",
+      "rationale": "全神贯注指把注意力完全集中在一件事上。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q41"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q42",
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "暂时",
+      "question": "图书馆正在维修，___停止开放，下星期修好后就会重新开放。",
+      "options": [
+        "永久",
+        "始终",
+        "一直",
+        "暂时"
+      ],
+      "correct": "暂时",
+      "answerLetter": "D",
+      "rationale": "已经说明维修后会重开，因此只是暂时停止开放。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q42"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q43",
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "搜索",
+      "question": "救援人员为了找到失踪的孩子，在树林里仔细___，连草丛也没有放过。",
+      "options": [
+        "搜索",
+        "参观",
+        "欣赏",
+        "种植"
+      ],
+      "correct": "搜索",
+      "answerLetter": "A",
+      "rationale": "搜索指为了找到目标而仔细寻找，符合救援行动。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q43"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q44",
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "窃窃私语",
+      "question": "图书馆里，两名同学靠近彼此的耳边___，只有他们自己听得见。",
+      "options": [
+        "高声朗读",
+        "大声争吵",
+        "窃窃私语",
+        "放声歌唱"
+      ],
+      "correct": "窃窃私语",
+      "answerLetter": "C",
+      "rationale": "窃窃私语指私下低声说话，符合只有两人能听见。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q44"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q45",
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "垂头丧气",
+      "question": "比赛输了，小杰___地走回座位，低着头，一句话也不想说。",
+      "options": [
+        "兴高采烈",
+        "垂头丧气",
+        "神采飞扬",
+        "欢天喜地"
+      ],
+      "correct": "垂头丧气",
+      "answerLetter": "B",
+      "rationale": "垂头丧气形容失望、情绪低落的样子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q45"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q46",
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "储存",
+      "question": "为了留到雨季食用，村民把晒干的粮食___在干燥的仓库里。",
+      "options": [
+        "分发",
+        "丢弃",
+        "消耗",
+        "储存"
+      ],
+      "correct": "储存",
+      "answerLetter": "D",
+      "rationale": "把物品保存起来，留待以后使用，就是储存。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q46"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q47",
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "嘱咐",
+      "question": "出门前，妈妈再三___我过马路要小心，还细心地提醒我带好水壶。",
+      "options": [
+        "嘱咐",
+        "责骂",
+        "讥笑",
+        "埋怨"
+      ],
+      "correct": "嘱咐",
+      "answerLetter": "A",
+      "rationale": "嘱咐指带着关心叮嘱别人做某事；这里是出门前的安全提醒。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q47"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q48",
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "羡慕",
+      "question": "看见姐姐能弹出那么动听的曲子，小文十分___，希望自己有一天也能做到。",
+      "options": [
+        "厌恶",
+        "轻视",
+        "羡慕",
+        "怀疑"
+      ],
+      "correct": "羡慕",
+      "answerLetter": "C",
+      "rationale": "羡慕包含欣赏别人拥有的能力，并希望自己也拥有。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q48"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q49",
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "彻底",
+      "question": "我们把柜子的每个角落都清理了一遍，连缝里的灰尘也擦掉了，清洁得很___。",
+      "options": [
+        "随便",
+        "彻底",
+        "勉强",
+        "马虎"
+      ],
+      "correct": "彻底",
+      "answerLetter": "B",
+      "rationale": "彻底表示完整、充分而没有遗漏；题目强调每个角落和缝隙都清理了。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q49"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B01-Q50",
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "抱怨",
+      "question": "小杰一边做作业，一边___：“为什么每天都有这么多作业？真烦！”",
+      "options": [
+        "称赞",
+        "鼓励",
+        "感谢",
+        "抱怨"
+      ],
+      "correct": "抱怨",
+      "answerLetter": "D",
+      "rationale": "抱怨指因为不满而诉说或责怪，符合这句话的语气。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B01-Q50"
+      ]
+    }
+  ]
+}

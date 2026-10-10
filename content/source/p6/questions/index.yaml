@@ -3744,3 +3744,1233 @@
   lessonIds:
     - 12
   questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q01
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q02
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q08
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q09
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q12-L11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q13
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q14-L06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q19
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q20
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q21
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q22
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q23
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q24
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q25
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q26
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q27
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q28
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q29
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q30
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q31
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q32
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q33
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q34
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q35
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q36
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q37
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q38
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q39
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q40
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q41
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q42
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q43
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q44
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q45
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q46
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q47
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q48
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q49
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B01-Q50
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q001
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q002
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q003
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q004
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q004-L07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q005
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q006
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q007
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q008
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q008-L09
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q009
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q010
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q011
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q012
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q013
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q014
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q015
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q016
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q017
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q018
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q019
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q020
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q021
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q022
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q023
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q024
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q025
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q026
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q027
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q028
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q029
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q030
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q031
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q032
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q033
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q034
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q035
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q036
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q037
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q038
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q039
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q040
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q041
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q042
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q043
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q044
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q045
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q046
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q047
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q048
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q049
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q050
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q051
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q052
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q053
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q054
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q055
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q056
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q057
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q058
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q059
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q060
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q061
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q061-L10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q062
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q063
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q064
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q065
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q066
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q067
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q068
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q069
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q070
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q071
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q072
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q073
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q074
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q075
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q076
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q077
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q078
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q079
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q080
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q081
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q082
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q083
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q084
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q085
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q086
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q087
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q088
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q089
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q090
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q091
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q092
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q093
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q094
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q095
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q096
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q097
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q098
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q099
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q100
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q101
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q102
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q103
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q104
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q105
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q106
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q107
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q108
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q109
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q110
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q111
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q112
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q113
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q114
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q115
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q116
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q117
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q118
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q119
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q120
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q121
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q122
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q123
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q124
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q125
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q126
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q127
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q128
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q129
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q130
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q131
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q132
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q133
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q134
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q135
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q136
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q137
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q138
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q139
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q140
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q141
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q142
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q143
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q144
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q145
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q146
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q147
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q148
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q149
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P6-CH-AUTHORED-B02-Q150
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1

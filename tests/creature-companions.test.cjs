@@ -148,9 +148,10 @@ test('creature forms upgrade independently of level and award coins only while s
   const adventure = fs.readFileSync('src/adventure.js', 'utf8');
   assert.match(gameplay, /coins \+= variantCoins \+ partnerCoins/);
   assert.match(adventure, /coins \+= partnerCoins/);
-  const tutorial = fs.readFileSync('src/tutorial.js', 'utf8');
-  assert.match(tutorial, /Some wild creatures are Elite or Golden/);
-  assert.match(tutorial, /Elite partners earn 6 extra coins per battle win; Golden partners earn 12/);
+  const collection = fs.readFileSync('src/ui/creatureCollection.js', 'utf8');
+  assert.match(collection, /Elite and Golden creatures/);
+  assert.ok(collection.includes('CREATURE_VARIANTS[variant].bonusCoins'));
+  assert.match(collection, /Golden outranks Elite/);
 });
 
 test('collection cards show exact abilities, select one partner and keep defeated bosses separate', async () => {

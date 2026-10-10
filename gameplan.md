@@ -15,6 +15,8 @@ After Grandma Wang hands over the Spirit Brush, five village steps summon Appren
 Jun uses short, typed green conversations followed by blinking-arrow handoffs to the Next step box, map and activity controls.
 Six action-gated missions introduce the Shop, villagers, School, battle supplies and Spirit Book, with a brief completion comment at each transition, then Jun releases the child to explore until level 3.
 At level 3 Jun returns for mastery tiers, creature companions, restoration, the child-facing Atlas panels, dictation, crafting, and a Repellent-and-Bait Shop visit.
+His short handoffs connect each action to its benefit; after completing the tour, contextual notes appear beside an available companion ability, ready restoration or recipe, unequipped gear, ready Daily Chest, gate dictation, or usable route Repellent.
+Each note retires for that player and curriculum when dismissed or its action is used; skipped tutorials and older saves that never enrolled receive no notes.
 Tutorial progress resumes at the exact incomplete action; pre-existing saves retain their current progression without being enrolled.
 
 The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with 19 P2 lessons, 17 P5 lessons and 12 P6 lessons.
@@ -242,7 +244,8 @@ Speech and scene audio stop when their activity ends or the document becomes hid
 
 Proofread audio and content.
 TODO: Replace the runtime-generated battle Usage fallback with pre-authored, parent-vetted vocabulary or usage questions in the curriculum source banks.
-Matching vetted questions currently cover 253 of 460 P2 words and 197 of 327 P5 words; keep the fallback until the remaining questions have been reviewed.
+Matching vetted questions currently cover 253 of 460 P2 words, 197 of 327 P5 words and 263 of 300 P6 lesson vocabulary entries; keep the fallback until the remaining questions have been reviewed.
+P6 includes 200 parent-reviewed vocabulary questions, registered as 205 lesson-specific records so repeated words remain available in each relevant region.
 Verify offline restart, update behavior, save migration, export/import and curriculum switching.
 Reach at least 90 Lighthouse accessibility on menu screens.
 Produce the final distributable only after deciding whether double-click `file://` support still justifies a single-file bundle.

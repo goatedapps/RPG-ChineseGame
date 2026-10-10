@@ -7,8 +7,10 @@ Each playable curriculum in the level registry shares Regions 1–7 and keeps a 
 P0–P17 engineering and the earlier physical child-and-parent tablet pilot are complete.
 P18 release polish is in progress; browser smoke checks and local Lighthouse accessibility passed.
 Fresh saves have a two-part Apprentice Jun tutorial after Grandma Wang: five village steps summon his typed, closable guide dialogue, then six first-day actions and a level-3 return; existing saves are not retroactively enrolled.
+Jun’s benefit-focused level-3 handoffs lead to contextual notes that retire on dismissal or feature use; keep notes out of question screens and skipped or unenrolled saves.
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
 Read `CURRICULUM_REQUIREMENTS.md` before adding or changing a playable curriculum or its lesson content.
+P6 includes 200 parent-reviewed vocabulary questions with separate records for repeated-word lessons; matching authored battle questions cover 263 of its 300 lesson vocabulary entries.
 
 Production URLs:
 

@@ -1,0 +1,3763 @@
+{
+  "curriculum": "p6",
+  "reviewStatus": "approved-and-integrated",
+  "batch": 2,
+  "questions": [
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q001",
+      "reviewNumber": 51,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "梦",
+      "question": "昨晚睡着后，我做了一个会飞的___；早上醒来，才知道那不是真的。",
+      "options": [
+        "计划",
+        "愿望",
+        "梦",
+        "决定"
+      ],
+      "correct": "梦",
+      "answerLetter": "C",
+      "rationale": "梦是睡眠中出现的情景；这里以睡着和醒来区分梦与清醒时的想法。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q001"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q002",
+      "reviewNumber": 52,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "缝",
+      "question": "门虽然关上了，门板与门框之间仍留着一道___，冷风从那里吹了进来。",
+      "options": [
+        "缝",
+        "线",
+        "印",
+        "影"
+      ],
+      "correct": "缝",
+      "answerLetter": "A",
+      "rationale": "缝是物体之间狭窄的空隙，能让风通过。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q002"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q003",
+      "reviewNumber": 53,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "每逢",
+      "question": "___学校假期，爷爷都会带我去公园；这已经成了我们多年的习惯。",
+      "options": [
+        "直到",
+        "自从",
+        "尽管",
+        "每逢"
+      ],
+      "correct": "每逢",
+      "answerLetter": "D",
+      "rationale": "每逢表示每到某个时候都如此，符合反复发生的习惯。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q003"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q004",
+      "reviewNumber": 54,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1,
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "托",
+      "question": "妹妹怕小碗掉下来，张开手掌，从碗底把它___住。",
+      "options": [
+        "拧",
+        "托",
+        "夹",
+        "拽"
+      ],
+      "correct": "托",
+      "answerLetter": "B",
+      "rationale": "托强调用手掌从下面承接、支撑物体。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q004",
+        "P6-CH-AUTHORED-B02-Q004-L07"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q005",
+      "reviewNumber": 55,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "优雅",
+      "question": "舞者举手投足都轻柔舒展，动作十分___，像一只缓缓展翅的天鹅。",
+      "options": [
+        "僵硬",
+        "优雅",
+        "粗鲁",
+        "笨拙"
+      ],
+      "correct": "优雅",
+      "answerLetter": "B",
+      "rationale": "优雅形容姿态美好、自然大方，符合轻柔舒展的舞姿。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q005"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q006",
+      "reviewNumber": 56,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "扎根",
+      "question": "种下的小树长出了许多根，牢牢伸进泥土，已经在这里___了。",
+      "options": [
+        "发芽",
+        "开花",
+        "结果",
+        "扎根"
+      ],
+      "correct": "扎根",
+      "answerLetter": "D",
+      "rationale": "扎根指根深入土壤并稳固下来，不等于发芽、开花或结果。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q006"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q007",
+      "reviewNumber": 57,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "柔弱",
+      "question": "刚长出的幼苗茎又细又软，十分___，一阵小风就把它吹弯了。",
+      "options": [
+        "柔弱",
+        "粗壮",
+        "坚硬",
+        "结实"
+      ],
+      "correct": "柔弱",
+      "answerLetter": "A",
+      "rationale": "柔弱表示柔软、缺少力量，符合容易被风吹弯的幼苗。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q007"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q008",
+      "reviewNumber": 58,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1,
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "暴雨",
+      "question": "天空突然下起___，雨点又大又密，短短几分钟，路面就积满了水。",
+      "options": [
+        "细雨",
+        "小雨",
+        "暴雨",
+        "毛毛雨"
+      ],
+      "correct": "暴雨",
+      "answerLetter": "C",
+      "rationale": "暴雨指短时间内降下的大量雨水；又大又密和迅速积水是线索。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q008",
+        "P6-CH-AUTHORED-B02-Q008-L09"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q009",
+      "reviewNumber": 59,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "坚强",
+      "question": "受伤后，小勇没有被困难打倒，仍然___地面对康复训练，一次次努力站起来。",
+      "options": [
+        "胆怯",
+        "脆弱",
+        "消极",
+        "坚强"
+      ],
+      "correct": "坚强",
+      "answerLetter": "D",
+      "rationale": "坚强强调面对挫折仍能承担和坚持，不轻易被打倒。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q009"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q010",
+      "reviewNumber": 60,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "恶劣",
+      "question": "山上狂风不断，大雨不停，天气十分___，登山活动只好取消。",
+      "options": [
+        "宜人",
+        "温和",
+        "恶劣",
+        "晴朗"
+      ],
+      "correct": "恶劣",
+      "answerLetter": "C",
+      "rationale": "恶劣表示条件很差；狂风、大雨造成不适合登山的天气。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q010"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q011",
+      "reviewNumber": 61,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "凭",
+      "question": "姐姐没有请别人代画，而是___自己的本领完成了这幅作品。",
+      "options": [
+        "替",
+        "凭",
+        "向",
+        "跟"
+      ],
+      "correct": "凭",
+      "answerLetter": "B",
+      "rationale": "凭表示依靠某种条件或能力；这里依靠的是自己的本领。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q011"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q012",
+      "reviewNumber": 62,
+      "primaryLesson": 1,
+      "lessonIds": [
+        1
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "意志",
+      "question": "训练再辛苦，他也坚持到底；这种不轻易动摇的___让教练十分佩服。",
+      "options": [
+        "意志",
+        "消息",
+        "习惯",
+        "兴趣"
+      ],
+      "correct": "意志",
+      "answerLetter": "A",
+      "rationale": "意志是决定坚持某个目标的内在力量；题目强调再辛苦也不动摇。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q012"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q013",
+      "reviewNumber": 63,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "祖孙",
+      "question": "爷爷牵着孙女到公园散步，这对___一路有说有笑。",
+      "options": [
+        "祖孙",
+        "父女",
+        "兄妹",
+        "夫妻"
+      ],
+      "correct": "祖孙",
+      "answerLetter": "A",
+      "rationale": "祖孙指祖父母与孙辈；爷爷和孙女属于这种关系。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q013"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q014",
+      "reviewNumber": 64,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "美德",
+      "question": "小玲从不占别人的便宜，还主动帮助有需要的人，这些都是值得学习的___。",
+      "options": [
+        "缺点",
+        "美德",
+        "借口",
+        "本领"
+      ],
+      "correct": "美德",
+      "answerLetter": "B",
+      "rationale": "美德指良好的道德品质；不占便宜和帮助别人属于品德表现。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q014"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q015",
+      "reviewNumber": 65,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "家庭",
+      "question": "爸爸、妈妈和孩子们组成了一个___，大家一起分担家务，互相关心。",
+      "options": [
+        "班级",
+        "社团",
+        "家庭",
+        "队伍"
+      ],
+      "correct": "家庭",
+      "answerLetter": "C",
+      "rationale": "家庭由有亲属关系的人组成；这里列出的成员是父母和孩子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q015"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q016",
+      "reviewNumber": 66,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "智能手机",
+      "question": "爸爸拿出___，在屏幕上打开地图软件，查找前往图书馆的路线。",
+      "options": [
+        "计算器",
+        "手电筒",
+        "收音机",
+        "智能手机"
+      ],
+      "correct": "智能手机",
+      "answerLetter": "D",
+      "rationale": "智能手机可以运行地图软件；其余列出的工具不能这样查路线。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q016"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q017",
+      "reviewNumber": 67,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "蹦",
+      "question": "小兔子后腿一用力，向前一___，就跳过了小水沟。",
+      "options": [
+        "爬",
+        "滚",
+        "蹦",
+        "滑"
+      ],
+      "correct": "蹦",
+      "answerLetter": "C",
+      "rationale": "蹦指用脚或腿发力跳起；后腿发力和跳过水沟说明这一动作。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q017"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q018",
+      "reviewNumber": 68,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "挽",
+      "question": "奶奶走得慢，姐姐把自己的手臂穿过奶奶的臂弯，亲热地___着她一起走。",
+      "options": [
+        "挽",
+        "背",
+        "推",
+        "抱"
+      ],
+      "correct": "挽",
+      "answerLetter": "A",
+      "rationale": "挽着胳膊是手臂相挽的姿势；这里不是背负、推动或抱住奶奶。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q018"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q019",
+      "reviewNumber": 69,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "踩",
+      "question": "地上有个水洼，我没看见，一脚___了进去，鞋袜全湿了。",
+      "options": [
+        "抓",
+        "踢",
+        "扔",
+        "踩"
+      ],
+      "correct": "踩",
+      "answerLetter": "D",
+      "rationale": "踩指脚踏上或踏进某处；鞋袜湿了说明脚踏进了水洼。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q019"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q020",
+      "reviewNumber": 70,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "灰蒙蒙",
+      "question": "乌云挡住了阳光，远处的楼房也看不清，天空显得___的。",
+      "options": [
+        "红彤彤",
+        "灰蒙蒙",
+        "金灿灿",
+        "蓝湛湛"
+      ],
+      "correct": "灰蒙蒙",
+      "answerLetter": "B",
+      "rationale": "灰蒙蒙形容灰暗、模糊的样子，符合乌云遮光的天空。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q020"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q021",
+      "reviewNumber": 71,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "歪",
+      "question": "相框左边高、右边低，明显挂___了，我赶紧把它扶正。",
+      "options": [
+        "满",
+        "歪",
+        "空",
+        "紧"
+      ],
+      "correct": "歪",
+      "answerLetter": "B",
+      "rationale": "歪指偏斜、不正；左右高度不同和扶正是直接线索。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q021"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q022",
+      "reviewNumber": 72,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "笑眯眯",
+      "question": "看见孙子捧着生日卡片，奶奶___地接过来，嘴角上扬，眼睛弯成了两条细线。",
+      "options": [
+        "气冲冲",
+        "泪汪汪",
+        "冷冰冰",
+        "笑眯眯"
+      ],
+      "correct": "笑眯眯",
+      "answerLetter": "D",
+      "rationale": "笑眯眯形容微笑时眼睛眯起的样子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q022"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q023",
+      "reviewNumber": 73,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "惊讶",
+      "question": "一直不会游泳的弟弟竟然游完了全程，我十分___，几乎不敢相信自己的眼睛。",
+      "options": [
+        "惊讶",
+        "厌烦",
+        "失望",
+        "平静"
+      ],
+      "correct": "惊讶",
+      "answerLetter": "A",
+      "rationale": "惊讶是面对出乎意料的事情时的感受；竟然和不敢相信说明意外。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q023"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q024",
+      "reviewNumber": 74,
+      "primaryLesson": 2,
+      "lessonIds": [
+        2
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "换",
+      "question": "这件上衣被雨淋湿了，妈妈让我___一件干的再出门。",
+      "options": [
+        "补",
+        "洗",
+        "换",
+        "叠"
+      ],
+      "correct": "换",
+      "answerLetter": "C",
+      "rationale": "换指用另一件替代原来的一件；这里要换上干衣服。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q024"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q025",
+      "reviewNumber": 75,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "脆",
+      "question": "饼干一咬就碎，还发出清楚的咔嚓声，口感十分___。",
+      "options": [
+        "软",
+        "韧",
+        "黏",
+        "脆"
+      ],
+      "correct": "脆",
+      "answerLetter": "D",
+      "rationale": "脆形容容易碎裂的口感；一咬就碎和咔嚓声都是线索。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q025"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q026",
+      "reviewNumber": 76,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "烤",
+      "question": "爸爸把面糊送进专用的电热炉，让干热的空气把蛋糕___熟。",
+      "options": [
+        "蒸",
+        "煮",
+        "烤",
+        "煎"
+      ],
+      "correct": "烤",
+      "answerLetter": "C",
+      "rationale": "烤是利用烤箱等设备的热来把食物弄熟；没有用蒸汽、沸水或平底锅。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q026"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q027",
+      "reviewNumber": 77,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "豆苗",
+      "question": "妈妈把豌豆长出的嫩茎和嫩叶炒成一盘菜，这盘菜用的是___。",
+      "options": [
+        "豆腐",
+        "豆苗",
+        "豆浆",
+        "豆干"
+      ],
+      "correct": "豆苗",
+      "answerLetter": "B",
+      "rationale": "豆苗是豌豆等植物的嫩苗；其他选项都是加工过的豆制品。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q027"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q028",
+      "reviewNumber": 78,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "煎",
+      "question": "妈妈在平底锅里放少量油，把鸡蛋摊开，___到两面金黄。",
+      "options": [
+        "煎",
+        "炖",
+        "蒸",
+        "煮"
+      ],
+      "correct": "煎",
+      "answerLetter": "A",
+      "rationale": "煎指在平底锅中用少量油加热食物，常翻面使两面熟透。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q028"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q029",
+      "reviewNumber": 79,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "赠送",
+      "question": "活动结束后，书店免费___每位参加者一本小册子，不需要付钱。",
+      "options": [
+        "赠送",
+        "出售",
+        "租借",
+        "回收"
+      ],
+      "correct": "赠送",
+      "answerLetter": "A",
+      "rationale": "赠送指免费给别人；出售和租借有不同的交易方式，回收则是收回来。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q029"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q030",
+      "reviewNumber": 80,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "酸辣汤",
+      "question": "这碗汤加了醋和胡椒，喝起来又酸又辣，原来是一碗___。",
+      "options": [
+        "绿豆汤",
+        "酸辣汤",
+        "玉米汤",
+        "红豆汤"
+      ],
+      "correct": "酸辣汤",
+      "answerLetter": "B",
+      "rationale": "酸辣汤以酸和辣的味道为特点，与题目描述一致。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q030"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q031",
+      "reviewNumber": 81,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "咸菜",
+      "question": "奶奶用盐把芥菜腌好，放进罐子里保存，做成了___。",
+      "options": [
+        "生菜",
+        "甜菜",
+        "咸菜",
+        "白菜"
+      ],
+      "correct": "咸菜",
+      "answerLetter": "C",
+      "rationale": "咸菜是用盐腌制的蔬菜，题目强调了这种制作方法。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q031"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q032",
+      "reviewNumber": 82,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "粥",
+      "question": "妈妈把米和较多的水慢慢熬煮，煮成一锅稠稠的___。",
+      "options": [
+        "米饭",
+        "面条",
+        "馒头",
+        "粥"
+      ],
+      "correct": "粥",
+      "answerLetter": "D",
+      "rationale": "粥是米等粮食加较多水煮成的半流质食物。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q032"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q033",
+      "reviewNumber": 83,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "科学家",
+      "question": "他长期在实验室研究植物的生长规律，通过实验寻找答案，是一位___。",
+      "options": [
+        "售货员",
+        "驾驶员",
+        "科学家",
+        "运动员"
+      ],
+      "correct": "科学家",
+      "answerLetter": "C",
+      "rationale": "科学家通过研究和实验探索自然规律；这里描述的正是科学研究。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q033"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q034",
+      "reviewNumber": 84,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "除了",
+      "question": "全班三十人中，只有小文缺席；___小文，其余二十九人都到齐了。",
+      "options": [
+        "除了",
+        "由于",
+        "随着",
+        "为了"
+      ],
+      "correct": "除了",
+      "answerLetter": "A",
+      "rationale": "除了在这里表示排除一个例外，与其余人都到齐相配。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q034"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q035",
+      "reviewNumber": 85,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "例如",
+      "question": "我喜欢许多球类运动，___篮球、足球和乒乓球。",
+      "options": [
+        "因此",
+        "然而",
+        "否则",
+        "例如"
+      ],
+      "correct": "例如",
+      "answerLetter": "D",
+      "rationale": "例如用来引出具体例子；后面列出了球类运动的例子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q035"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q036",
+      "reviewNumber": 86,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "使劲",
+      "question": "箱子很重，小杰双手抓牢，把全身的力气都用上，___往上提。",
+      "options": [
+        "随意",
+        "使劲",
+        "轻轻",
+        "悄悄"
+      ],
+      "correct": "使劲",
+      "answerLetter": "B",
+      "rationale": "使劲表示用力；把全身的力气都用上明确了动作的力度。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q036"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q037",
+      "reviewNumber": 87,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "硬",
+      "question": "这块石头非常___，用手怎么压也压不出凹痕。",
+      "options": [
+        "软",
+        "硬",
+        "松",
+        "黏"
+      ],
+      "correct": "硬",
+      "answerLetter": "B",
+      "rationale": "硬表示坚实、不容易变形；压不出凹痕是判断依据。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q037"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q038",
+      "reviewNumber": 88,
+      "primaryLesson": 3,
+      "lessonIds": [
+        3
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "伟大",
+      "question": "这位医生一生救助无数病人，为人类作出了___的贡献，受到大家敬仰。",
+      "options": [
+        "微小",
+        "平凡",
+        "有限",
+        "伟大"
+      ],
+      "correct": "伟大",
+      "answerLetter": "D",
+      "rationale": "伟大形容贡献卓越、令人敬佩；救助无数病人和受到敬仰说明贡献重大。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q038"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q039",
+      "reviewNumber": 89,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "送货",
+      "question": "家具太大，我们搬不回家，便请商店安排工人明天下午___上门。",
+      "options": [
+        "送货",
+        "收款",
+        "退货",
+        "订货"
+      ],
+      "correct": "送货",
+      "answerLetter": "A",
+      "rationale": "送货指把购买的货物运到顾客指定地点；这里需要把家具运回家。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q039"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q040",
+      "reviewNumber": 90,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "便宜",
+      "question": "同款笔在别处卖五元，这里只卖一元，价格真___。",
+      "options": [
+        "昂贵",
+        "高昂",
+        "便宜",
+        "不菲"
+      ],
+      "correct": "便宜",
+      "answerLetter": "C",
+      "rationale": "便宜强调价格低；一元明显低于同款商品的五元，其他选项都表示价格高。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q040"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q041",
+      "reviewNumber": 91,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "销售",
+      "question": "这家商店主要___书包和文具，顾客可以在这里购买这些用品。",
+      "options": [
+        "修理",
+        "租用",
+        "回收",
+        "销售"
+      ],
+      "correct": "销售",
+      "answerLetter": "D",
+      "rationale": "销售指把商品卖给顾客；后半句明确顾客在这里购买。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q041"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q042",
+      "reviewNumber": 92,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "损坏",
+      "question": "弟弟把玩具车摔在地上，轮子断了，车子已经___，不能再正常行驶。",
+      "options": [
+        "修复",
+        "保养",
+        "损坏",
+        "更新"
+      ],
+      "correct": "损坏",
+      "answerLetter": "C",
+      "rationale": "损坏表示物品因破坏而失去原有功能，符合轮子断了的情况。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q042"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q043",
+      "reviewNumber": 93,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "修理",
+      "question": "脚踏车的链条掉了，爸爸拿来工具___，直到它能正常转动。",
+      "options": [
+        "拆除",
+        "修理",
+        "收藏",
+        "丢弃"
+      ],
+      "correct": "修理",
+      "answerLetter": "B",
+      "rationale": "修理是排除故障，使坏掉的东西恢复正常使用。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q043"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q044",
+      "reviewNumber": 94,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "逛",
+      "question": "周末我们不急着买东西，只想在商场里___，看看各家店铺。",
+      "options": [
+        "逛",
+        "挤",
+        "跑",
+        "搬"
+      ],
+      "correct": "逛",
+      "answerLetter": "A",
+      "rationale": "逛表示闲步游览或浏览商店；不急着买东西和看看店铺说明这种活动。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q044"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q045",
+      "reviewNumber": 95,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "趟",
+      "question": "我刚去了一___图书馆，来回花了半小时。",
+      "options": [
+        "趟",
+        "幅",
+        "篇",
+        "粒"
+      ],
+      "correct": "趟",
+      "answerLetter": "A",
+      "rationale": "趟是计算来回行程或去某地次数的量词。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q045"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q046",
+      "reviewNumber": 96,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "猛然",
+      "question": "身后突然传来一声巨响，小杰___回头，动作快得把旁边的人吓了一跳。",
+      "options": [
+        "缓缓",
+        "猛然",
+        "渐渐",
+        "始终"
+      ],
+      "correct": "猛然",
+      "answerLetter": "B",
+      "rationale": "猛然表示突然且迅速；与渐渐、缓缓的慢变化不同。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q046"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q047",
+      "reviewNumber": 97,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "态度",
+      "question": "面对顾客的询问，店员始终耐心解答，服务___十分友善。",
+      "options": [
+        "数量",
+        "价格",
+        "态度",
+        "距离"
+      ],
+      "correct": "态度",
+      "answerLetter": "C",
+      "rationale": "态度指对人或事所表现出的方式和看法；耐心、友善都是态度表现。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q047"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q048",
+      "reviewNumber": 98,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "普通",
+      "question": "这只杯子既没有特别的图案，也没有特殊功能，只是一只很___的杯子。",
+      "options": [
+        "独特",
+        "罕见",
+        "奇异",
+        "普通"
+      ],
+      "correct": "普通",
+      "answerLetter": "D",
+      "rationale": "普通指一般、没有特别之处，符合前半句的说明。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q048"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q049",
+      "reviewNumber": 99,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "趁",
+      "question": "外面终于停雨了，我们___天还没黑，赶紧步行回家。",
+      "options": [
+        "被",
+        "向",
+        "趁",
+        "把"
+      ],
+      "correct": "趁",
+      "answerLetter": "C",
+      "rationale": "趁表示利用有利的时机或条件；这里利用天还亮且雨已停的时机。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q049"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q050",
+      "reviewNumber": 100,
+      "primaryLesson": 4,
+      "lessonIds": [
+        4
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "慈祥",
+      "question": "老奶奶亲切地摸着孩子的头，脸上带着___的笑容。",
+      "options": [
+        "慈祥",
+        "严厉",
+        "冷漠",
+        "凶狠"
+      ],
+      "correct": "慈祥",
+      "answerLetter": "A",
+      "rationale": "慈祥形容长辈温和、亲切的神态。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q050"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q051",
+      "reviewNumber": 101,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "选择",
+      "question": "这两本书都很有趣，但我只能借一本，所以必须从中___一本带回家。",
+      "options": [
+        "归还",
+        "出版",
+        "交换",
+        "选择"
+      ],
+      "correct": "选择",
+      "answerLetter": "D",
+      "rationale": "选择指从多个可能对象中挑出所需要的一个。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q051"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q052",
+      "reviewNumber": 102,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "方式",
+      "question": "遇到分歧时，我们没有争吵，而是用讨论的___解决问题。",
+      "options": [
+        "地点",
+        "方式",
+        "日期",
+        "数量"
+      ],
+      "correct": "方式",
+      "answerLetter": "B",
+      "rationale": "方式指处理事情的方法；讨论是解决分歧的一种方式。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q052"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q053",
+      "reviewNumber": 103,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "肥",
+      "question": "这块肉的脂肪很厚，白色的部分比瘦肉还多，实在太___了。",
+      "options": [
+        "瘦",
+        "肥",
+        "硬",
+        "柴"
+      ],
+      "correct": "肥",
+      "answerLetter": "B",
+      "rationale": "肥在这里指肉的脂肪多，而不是硬度或干柴的口感。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q053"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q054",
+      "reviewNumber": 104,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "说谎",
+      "question": "明明是小杰打破了杯子，他却说自己没有碰过，显然是在___。",
+      "options": [
+        "道歉",
+        "认错",
+        "作证",
+        "说谎"
+      ],
+      "correct": "说谎",
+      "answerLetter": "D",
+      "rationale": "明知事实却说不真实的话，就是说谎。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q054"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q055",
+      "reviewNumber": 105,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "披",
+      "question": "天气有些凉，奶奶没有把手伸进袖子，只把外套___在肩上。",
+      "options": [
+        "披",
+        "挂",
+        "塞",
+        "绑"
+      ],
+      "correct": "披",
+      "answerLetter": "A",
+      "rationale": "披指把衣物搭在肩背上，题目特意说明没有把手伸进袖子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q055"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q056",
+      "reviewNumber": 106,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "书橱",
+      "question": "妈妈打开___的柜门，把小说和字典按类别放到里面的各层架子上。",
+      "options": [
+        "冰箱",
+        "鞋柜",
+        "书橱",
+        "衣橱"
+      ],
+      "correct": "书橱",
+      "answerLetter": "C",
+      "rationale": "书橱是存放书籍的柜子，里面放的是小说和字典。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q056"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q057",
+      "reviewNumber": 107,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "彩虹",
+      "question": "雨后阳光穿过水滴，天空出现了一道弯弯的___，有红、橙、黄等颜色。",
+      "options": [
+        "闪电",
+        "乌云",
+        "白雾",
+        "彩虹"
+      ],
+      "correct": "彩虹",
+      "answerLetter": "D",
+      "rationale": "彩虹呈弧形并有多种颜色，常在雨后阳光照射下出现。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q057"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q058",
+      "reviewNumber": 108,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "锐利",
+      "question": "这把刀的刀刃十分___，轻轻一切就把纸切开了。",
+      "options": [
+        "圆滑",
+        "迟钝",
+        "锐利",
+        "柔软"
+      ],
+      "correct": "锐利",
+      "answerLetter": "C",
+      "rationale": "锐利在这里指刀刃锋利，切割能力强。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q058"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q059",
+      "reviewNumber": 109,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "贪财",
+      "question": "故事里的商人一心想把别人的钱据为己有，连孤儿的钱也不放过，十分___。",
+      "options": [
+        "慷慨",
+        "贪财",
+        "节俭",
+        "诚实"
+      ],
+      "correct": "贪财",
+      "answerLetter": "B",
+      "rationale": "贪财指贪图钱财，甚至想占有别人的钱；节俭只是节省自己的开支。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q059"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q060",
+      "reviewNumber": 110,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "砸碎",
+      "question": "工人举起铁锤，用力把旧砖___，地上只剩下一块块碎片。",
+      "options": [
+        "砸碎",
+        "磨平",
+        "拼好",
+        "擦净"
+      ],
+      "correct": "砸碎",
+      "answerLetter": "A",
+      "rationale": "砸碎是用力击打使物体破成碎块，符合铁锤和碎片的描述。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q060"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q061",
+      "reviewNumber": 111,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5,
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "糟糕",
+      "question": "活动当天才发现忘了订场地，食物也没准备好，情况真___。",
+      "options": [
+        "糟糕",
+        "理想",
+        "顺利",
+        "圆满"
+      ],
+      "correct": "糟糕",
+      "answerLetter": "A",
+      "rationale": "糟糕表示事情或情况很不好；缺少场地和食物使活动无法顺利进行。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q061",
+        "P6-CH-AUTHORED-B02-Q061-L10"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q062",
+      "reviewNumber": 112,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "捂住",
+      "question": "突如其来的巨响让妹妹很不舒服，她立刻用双手___耳朵。",
+      "options": [
+        "竖起",
+        "捂住",
+        "拉长",
+        "贴近"
+      ],
+      "correct": "捂住",
+      "answerLetter": "B",
+      "rationale": "捂住指用手盖住某个部位；这里是盖住耳朵减少噪声刺激。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q062"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q063",
+      "reviewNumber": 113,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "捞",
+      "question": "面条煮熟后，妈妈用漏勺把它们从水里___出来，再放进碗中。",
+      "options": [
+        "撒",
+        "倒",
+        "捞",
+        "挤"
+      ],
+      "correct": "捞",
+      "answerLetter": "C",
+      "rationale": "捞指用工具从液体中取出物体；漏勺取出面条符合这一动作。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q063"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q064",
+      "reviewNumber": 114,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "毫不在意",
+      "question": "虽然有人笑他的衣服旧，小文却___，仍然开开心心地和大家玩。",
+      "options": [
+        "耿耿于怀",
+        "闷闷不乐",
+        "忧心忡忡",
+        "毫不在意"
+      ],
+      "correct": "毫不在意",
+      "answerLetter": "D",
+      "rationale": "毫不在意表示完全不放在心上，符合仍然开心的表现。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q064"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q065",
+      "reviewNumber": 115,
+      "primaryLesson": 5,
+      "lessonIds": [
+        5
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "立即",
+      "question": "听到老师喊“马上停下”，小杰___停止了动作，没有再等一秒。",
+      "options": [
+        "逐渐",
+        "偶尔",
+        "立即",
+        "迟迟"
+      ],
+      "correct": "立即",
+      "answerLetter": "C",
+      "rationale": "立即表示马上、不拖延，与没有再等一秒一致。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q065"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q066",
+      "reviewNumber": 116,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "杰出",
+      "question": "这位工程师的成就远远超过同行，屡次获得重要奖项，是一位___的人才。",
+      "options": [
+        "杰出",
+        "平庸",
+        "普通",
+        "无能"
+      ],
+      "correct": "杰出",
+      "answerLetter": "A",
+      "rationale": "杰出表示才能或成就特别突出；超过同行和屡次获奖是依据。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q066"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q067",
+      "reviewNumber": 117,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "够",
+      "question": "班上有三十名同学，这里有三十五个面包，数量___大家每人吃一个。",
+      "options": [
+        "欠",
+        "少",
+        "缺",
+        "够"
+      ],
+      "correct": "够",
+      "answerLetter": "D",
+      "rationale": "够表示数量足以满足需要；三十五个超过三十人的需求。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q067"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q068",
+      "reviewNumber": 118,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "受罚",
+      "question": "小杰故意破坏学校的桌椅，老师按校规处理，他因此___，要负责清理和赔偿。",
+      "options": [
+        "获奖",
+        "受罚",
+        "受邀",
+        "晋级"
+      ],
+      "correct": "受罚",
+      "answerLetter": "B",
+      "rationale": "受罚表示因过错受到惩罚，题目说明了违规行为和处理结果。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q068"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q069",
+      "reviewNumber": 119,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "逼",
+      "question": "弟弟已经明确说不愿交出玩具，哥哥却堵住门，不让他走，硬___他交出来。",
+      "options": [
+        "请",
+        "逼",
+        "劝",
+        "陪"
+      ],
+      "correct": "逼",
+      "answerLetter": "B",
+      "rationale": "逼表示用强硬手段迫使别人做不愿做的事；堵门和不让走是强迫行为。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q069"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q070",
+      "reviewNumber": 120,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "罪",
+      "question": "故事里的盗贼多次偷取财物，被认定犯了偷窃___。",
+      "options": [
+        "功",
+        "奖",
+        "福",
+        "罪"
+      ],
+      "correct": "罪",
+      "answerLetter": "D",
+      "rationale": "罪指违反法律的行为；偷窃罪是与题中盗窃行为相应的表达。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q070"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q071",
+      "reviewNumber": 121,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "雾",
+      "question": "清晨，地面附近的小水滴聚在空气中，形成白茫茫的___，近处的树也变得模模糊糊。",
+      "options": [
+        "雾",
+        "雪",
+        "沙",
+        "烟"
+      ],
+      "correct": "雾",
+      "answerLetter": "A",
+      "rationale": "雾是悬浮在地面附近空气中的小水滴形成的现象；题目明确说明了小水滴和模糊的景物。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q071"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q072",
+      "reviewNumber": 122,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "绳子",
+      "question": "箱子怕在运输途中散开，爸爸用一根___把它牢牢绑住。",
+      "options": [
+        "尺子",
+        "钉子",
+        "绳子",
+        "筷子"
+      ],
+      "correct": "绳子",
+      "answerLetter": "C",
+      "rationale": "绳子柔韧而长，可以绕住物体并打结，适合绑牢箱子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q072"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q073",
+      "reviewNumber": 123,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "遵命",
+      "question": "将军下令立刻出发，士兵回答：“___！”随后按命令行动。",
+      "options": [
+        "再见",
+        "恭喜",
+        "抱歉",
+        "遵命"
+      ],
+      "correct": "遵命",
+      "answerLetter": "D",
+      "rationale": "遵命是表示接受并执行命令的回答。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q073"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q074",
+      "reviewNumber": 124,
+      "primaryLesson": 6,
+      "lessonIds": [
+        6
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "射",
+      "question": "运动员拉满弓，把箭朝靶子的中心___了出去。",
+      "options": [
+        "踢",
+        "扛",
+        "射",
+        "拧"
+      ],
+      "correct": "射",
+      "answerLetter": "C",
+      "rationale": "射指发射箭等物体；用弓把箭送向靶子属于射箭。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q074"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q075",
+      "reviewNumber": 125,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "瀑布",
+      "question": "河水流到悬崖边，向下落成一道高高的水帘，形成了壮观的___。",
+      "options": [
+        "湖泊",
+        "瀑布",
+        "池塘",
+        "溪流"
+      ],
+      "correct": "瀑布",
+      "answerLetter": "B",
+      "rationale": "瀑布是水从高处陡直或近乎陡直地跌落形成的景观。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q075"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q076",
+      "reviewNumber": 126,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "跨越",
+      "question": "栏架挡在前方，运动员抬高腿，___了栏架，脚没有碰到它。",
+      "options": [
+        "跨越",
+        "绕行",
+        "穿透",
+        "退让"
+      ],
+      "correct": "跨越",
+      "answerLetter": "A",
+      "rationale": "跨越指越过障碍；抬腿从栏架上方过去说明不是绕开或穿过它。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q076"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q077",
+      "reviewNumber": 127,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "山脉",
+      "question": "远处一座座山峰连成很长的一列，组成了一条___。",
+      "options": [
+        "山脉",
+        "平原",
+        "盆地",
+        "河流"
+      ],
+      "correct": "山脉",
+      "answerLetter": "A",
+      "rationale": "山脉是沿一定方向延伸、连在一起的许多山。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q077"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q078",
+      "reviewNumber": 128,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "甚至",
+      "question": "爷爷喜欢阅读，不但白天读书，___连等巴士时也拿着一本书。",
+      "options": [
+        "但是",
+        "甚至",
+        "否则",
+        "由于"
+      ],
+      "correct": "甚至",
+      "answerLetter": "B",
+      "rationale": "甚至引出更进一步或更出人意料的情况；连等巴士时也读是递进。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q078"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q079",
+      "reviewNumber": 129,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "兴致",
+      "question": "妹妹很想参观画展，___很高，一进展厅就开心地看起每幅画。",
+      "options": [
+        "费用",
+        "距离",
+        "兴致",
+        "音量"
+      ],
+      "correct": "兴致",
+      "answerLetter": "C",
+      "rationale": "兴致指参加或欣赏某项活动的兴趣；想去画展和开心欣赏说明兴趣高。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q079"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q080",
+      "reviewNumber": 130,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "治疗",
+      "question": "弟弟摔伤了腿，医生检查后为他___伤口，消毒并包扎。",
+      "options": [
+        "研究",
+        "记录",
+        "欣赏",
+        "治疗"
+      ],
+      "correct": "治疗",
+      "answerLetter": "D",
+      "rationale": "治疗指针对伤病采取措施，使其恢复；消毒包扎属于处理伤口。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q080"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q081",
+      "reviewNumber": 131,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "疾病",
+      "question": "医生检查了病人的症状，想确定他究竟患了哪一种___。",
+      "options": [
+        "药物",
+        "习惯",
+        "疾病",
+        "职业"
+      ],
+      "correct": "疾病",
+      "answerLetter": "C",
+      "rationale": "疾病是生病的种类；症状和患了搭配说明医生在判断病情。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q081"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q082",
+      "reviewNumber": 132,
+      "primaryLesson": 7,
+      "lessonIds": [
+        7
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "股",
+      "question": "还没走进厨房，我就闻到一___浓浓的饭菜香味。",
+      "options": [
+        "股",
+        "幅",
+        "枚",
+        "条"
+      ],
+      "correct": "股",
+      "answerLetter": "A",
+      "rationale": "股可以用于计算气味；一股香味是恰当的量词搭配。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q082"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q083",
+      "reviewNumber": 133,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "幅",
+      "question": "展厅的墙上挂着一___山水画，画中的瀑布十分生动。",
+      "options": [
+        "首",
+        "篇",
+        "座",
+        "幅"
+      ],
+      "correct": "幅",
+      "answerLetter": "D",
+      "rationale": "幅用于计算图画，不能用计算诗歌、文章或建筑的量词。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q083"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q084",
+      "reviewNumber": 134,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "赚钱",
+      "question": "姐姐利用假期打工，靠自己的劳动___，支付买书的费用。",
+      "options": [
+        "借钱",
+        "赚钱",
+        "赔钱",
+        "花钱"
+      ],
+      "correct": "赚钱",
+      "answerLetter": "B",
+      "rationale": "赚钱指通过劳动或经营取得收入；这里收入来自打工。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q084"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q085",
+      "reviewNumber": 135,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "印象",
+      "question": "虽然旅行已经过去半年，那里美丽的景色仍让我记忆深刻，给我留下了难忘的___。",
+      "options": [
+        "任务",
+        "印象",
+        "消息",
+        "建议"
+      ],
+      "correct": "印象",
+      "answerLetter": "B",
+      "rationale": "印象指事物在脑海里留下的感受或形象；半年后仍记得景色符合此义。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q085"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q086",
+      "reviewNumber": 136,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "大厦",
+      "question": "这座二十层的___设有许多办公室，员工每天乘电梯上下楼。",
+      "options": [
+        "亭子",
+        "帐篷",
+        "茅屋",
+        "大厦"
+      ],
+      "correct": "大厦",
+      "answerLetter": "D",
+      "rationale": "大厦指高大或规模较大的建筑，符合二十层办公楼的描述。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q086"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q087",
+      "reviewNumber": 137,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "走廊",
+      "question": "教室之间有一条长长的___，同学们沿着它走到楼梯口。",
+      "options": [
+        "走廊",
+        "阳台",
+        "操场",
+        "屋顶"
+      ],
+      "correct": "走廊",
+      "answerLetter": "A",
+      "rationale": "走廊是建筑内连接房间或楼梯的通道。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q087"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q088",
+      "reviewNumber": 138,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "竹篮",
+      "question": "奶奶提着一个用竹条编成的___，把买好的水果放进去。",
+      "options": [
+        "纸箱",
+        "铁桶",
+        "竹篮",
+        "布袋"
+      ],
+      "correct": "竹篮",
+      "answerLetter": "C",
+      "rationale": "竹篮是用竹条编织成的容器，题目明确说明了材料和用途。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q088"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q089",
+      "reviewNumber": 139,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "吊",
+      "question": "工人把木板绑在绳子上，从楼上拉绳，把木板___到二楼。",
+      "options": [
+        "扛",
+        "滚",
+        "踢",
+        "吊"
+      ],
+      "correct": "吊",
+      "answerLetter": "D",
+      "rationale": "吊指借助绳索把物体悬起并升降；从楼上拉绳是关键动作。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q089"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q090",
+      "reviewNumber": 140,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "摊子",
+      "question": "市场里没有店面的小贩，在路边摆了一个卖水果的___。",
+      "options": [
+        "仓库",
+        "工厂",
+        "摊子",
+        "车间"
+      ],
+      "correct": "摊子",
+      "answerLetter": "C",
+      "rationale": "摊子指摆设在路边或市场中售卖物品的地方。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q090"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q091",
+      "reviewNumber": 141,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "左邻右舍",
+      "question": "我们搬家时，住在隔壁和附近的___都来帮忙，大家相处得很融洽。",
+      "options": [
+        "远方亲戚",
+        "左邻右舍",
+        "外地游客",
+        "陌生顾客"
+      ],
+      "correct": "左邻右舍",
+      "answerLetter": "B",
+      "rationale": "左邻右舍指住在附近的邻居，符合隔壁和附近的居民。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q091"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q092",
+      "reviewNumber": 142,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "捏",
+      "question": "妹妹用拇指和食指轻轻___住一小块橡皮泥，把它搓成小圆球。",
+      "options": [
+        "捏",
+        "劈",
+        "踢",
+        "锯"
+      ],
+      "correct": "捏",
+      "answerLetter": "A",
+      "rationale": "捏指用手指夹住或挤压物体；拇指和食指的动作符合这个词。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q092"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q093",
+      "reviewNumber": 143,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "扁担",
+      "question": "小贩把两个篮子挂在长木杆的两端，再把这根___放在肩上挑起来。",
+      "options": [
+        "扁担",
+        "拐杖",
+        "扫帚",
+        "门闩"
+      ],
+      "correct": "扁担",
+      "answerLetter": "A",
+      "rationale": "扁担是两端挂物、放在肩上挑东西的长杆。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q093"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q094",
+      "reviewNumber": 144,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "掏",
+      "question": "付钱时，小文伸手进裤袋，从里面___出一枚硬币。",
+      "options": [
+        "塞",
+        "掏",
+        "抛",
+        "吞"
+      ],
+      "correct": "掏",
+      "answerLetter": "B",
+      "rationale": "掏指把手伸进容器、口袋等内部取出物品。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q094"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q095",
+      "reviewNumber": 145,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "栏杆",
+      "question": "阳台边缘装有金属___，可以防止人不小心掉下去。",
+      "options": [
+        "窗帘",
+        "地毯",
+        "栏杆",
+        "招牌"
+      ],
+      "correct": "栏杆",
+      "answerLetter": "C",
+      "rationale": "栏杆设在边缘或两侧，起隔挡、防护作用。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q095"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q096",
+      "reviewNumber": 146,
+      "primaryLesson": 8,
+      "lessonIds": [
+        8
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "娱乐",
+      "question": "唱歌、看电影和玩桌面游戏都是让人放松的___活动。",
+      "options": [
+        "救援",
+        "医疗",
+        "生产",
+        "娱乐"
+      ],
+      "correct": "娱乐",
+      "answerLetter": "D",
+      "rationale": "娱乐活动供人消遣、放松，题目列出的活动符合这一用途。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q096"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q097",
+      "reviewNumber": 147,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "华族",
+      "question": "这场展览介绍新加坡___的传统文化，展品包括春联、剪纸和舞狮用具。",
+      "options": [
+        "马来族",
+        "印度族",
+        "华族",
+        "欧亚族"
+      ],
+      "correct": "华族",
+      "answerLetter": "C",
+      "rationale": "春联、剪纸和舞狮都是华族传统文化的例子。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q097"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q098",
+      "reviewNumber": 148,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "吉祥",
+      "question": "奶奶说，这个图案象征平安和好运，有___的含义。",
+      "options": [
+        "吉祥",
+        "凶险",
+        "悲惨",
+        "不幸"
+      ],
+      "correct": "吉祥",
+      "answerLetter": "A",
+      "rationale": "吉祥表示吉利、美好的征兆，符合平安和好运。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q098"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q099",
+      "reviewNumber": 149,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "装饰",
+      "question": "为了让教室更有节日气氛，我们用彩带和纸花___教室。",
+      "options": [
+        "修理",
+        "测量",
+        "拆除",
+        "装饰"
+      ],
+      "correct": "装饰",
+      "answerLetter": "D",
+      "rationale": "装饰指用物品使环境更美观；彩带和纸花用于增添节日气氛。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q099"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q100",
+      "reviewNumber": 150,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "翻腾",
+      "question": "狂风中，海浪上下___，一层接着一层涌向岸边，海面无法平静下来。",
+      "options": [
+        "凝固",
+        "翻腾",
+        "沉淀",
+        "静止"
+      ],
+      "correct": "翻腾",
+      "answerLetter": "B",
+      "rationale": "翻腾形容上下翻滚或剧烈涌动，符合风浪中的海水。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q100"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q101",
+      "reviewNumber": 151,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "残忍",
+      "question": "故事里的坏人明知小动物受伤了，还故意继续伤害它，真是___。",
+      "options": [
+        "仁慈",
+        "残忍",
+        "善良",
+        "温厚"
+      ],
+      "correct": "残忍",
+      "answerLetter": "B",
+      "rationale": "残忍指狠心、伤害他人或动物而不怜悯，题中的故意伤害符合此义。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q101"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q102",
+      "reviewNumber": 152,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "爆竹",
+      "question": "故事里的村民把一串串___挂在门外，点燃后发出噼里啪啦的响声。",
+      "options": [
+        "灯笼",
+        "彩带",
+        "风铃",
+        "爆竹"
+      ],
+      "correct": "爆竹",
+      "answerLetter": "D",
+      "rationale": "爆竹点燃后会连续爆响，题目同时给出成串和点燃的线索。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q102"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q103",
+      "reviewNumber": 153,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "权力",
+      "question": "故事中的国王拥有决定由谁管理城镇的___，臣民必须服从他的命令。",
+      "options": [
+        "权力",
+        "愿望",
+        "消息",
+        "疑问"
+      ],
+      "correct": "权力",
+      "answerLetter": "A",
+      "rationale": "权力指有资格作决定或支配事务的力量，国王可以任命管理者。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q103"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q104",
+      "reviewNumber": 154,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "汪洋",
+      "question": "洪水淹没了田野，放眼望去全是水，原来的农田变成了一片___。",
+      "options": [
+        "沙漠",
+        "草原",
+        "汪洋",
+        "树林"
+      ],
+      "correct": "汪洋",
+      "answerLetter": "C",
+      "rationale": "汪洋指广阔的水面，这里形容农田完全被洪水覆盖。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q104"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q105",
+      "reviewNumber": 155,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "缓缓",
+      "question": "老人腿脚不便，扶着拐杖___走向座位，每一步都很慢。",
+      "options": [
+        "匆匆",
+        "飞快",
+        "急忙",
+        "缓缓"
+      ],
+      "correct": "缓缓",
+      "answerLetter": "D",
+      "rationale": "缓缓表示慢慢地，符合老人每一步都很慢的行动。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q105"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q106",
+      "reviewNumber": 156,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "大吼",
+      "question": "狮子张开嘴___一声，响亮的声音传遍山谷，小动物们都吓得躲了起来。",
+      "options": [
+        "低语",
+        "轻哼",
+        "大吼",
+        "细说"
+      ],
+      "correct": "大吼",
+      "answerLetter": "C",
+      "rationale": "大吼表示发出很大的喊声或吼声，与响遍山谷的声音相符。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q106"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q107",
+      "reviewNumber": 157,
+      "primaryLesson": 9,
+      "lessonIds": [
+        9
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "晕",
+      "question": "坐车时，小杰觉得有些___，头昏昏的，眼前的东西好像在转。",
+      "options": [
+        "饿",
+        "晕",
+        "渴",
+        "痒"
+      ],
+      "correct": "晕",
+      "answerLetter": "B",
+      "rationale": "晕指头昏或感觉旋转、不稳，题中的感受明确指向头晕。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q107"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q108",
+      "reviewNumber": 158,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "文章",
+      "question": "校刊登了一篇介绍节水方法的___，里面分段说明了怎样减少浪费。",
+      "options": [
+        "文章",
+        "歌曲",
+        "图画",
+        "照片"
+      ],
+      "correct": "文章",
+      "answerLetter": "A",
+      "rationale": "文章是用文字组织成篇、表达内容的作品；分段说明方法符合这一形式。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q108"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q109",
+      "reviewNumber": 159,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "朗读",
+      "question": "老师请小文看着课文，用清楚响亮的声音___给全班同学听。",
+      "options": [
+        "朗读",
+        "默读",
+        "抄写",
+        "翻译"
+      ],
+      "correct": "朗读",
+      "answerLetter": "A",
+      "rationale": "朗读指出声读文字；默读不出声，抄写和翻译则是其他活动。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q109"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q110",
+      "reviewNumber": 160,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "打败",
+      "question": "决赛中，我们队以三比一___了对手，夺得冠军。",
+      "options": [
+        "追随",
+        "打败",
+        "迎接",
+        "保护"
+      ],
+      "correct": "打败",
+      "answerLetter": "B",
+      "rationale": "打败表示在比赛或较量中战胜对方，三比一和夺冠说明获胜。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q110"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q111",
+      "reviewNumber": 161,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "申请",
+      "question": "小文想加入合唱团，便填写报名表，向老师正式___参加。",
+      "options": [
+        "拒绝",
+        "取消",
+        "申请",
+        "退出"
+      ],
+      "correct": "申请",
+      "answerLetter": "C",
+      "rationale": "申请指正式提出请求，等待接受或批准；填写报名表是申请过程。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q111"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q112",
+      "reviewNumber": 162,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "获得",
+      "question": "经过刻苦训练，她终于在比赛中___金牌，领奖时十分激动。",
+      "options": [
+        "错失",
+        "失去",
+        "退还",
+        "获得"
+      ],
+      "correct": "获得",
+      "answerLetter": "D",
+      "rationale": "获得指取得或得到；领奖说明她得到了金牌。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q112"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q113",
+      "reviewNumber": 163,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "贫穷",
+      "question": "这个家庭十分___，连基本的食物和生活用品也常常买不起。",
+      "options": [
+        "富裕",
+        "阔绰",
+        "贫穷",
+        "宽裕"
+      ],
+      "correct": "贫穷",
+      "answerLetter": "C",
+      "rationale": "贫穷表示缺少钱财或生活资源，符合买不起基本用品的情况。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q113"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q114",
+      "reviewNumber": 164,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "多余",
+      "question": "教室只需要三十把椅子，却搬来了三十五把，___的五把可以放回储藏室。",
+      "options": [
+        "多余",
+        "缺少",
+        "损坏",
+        "笨重"
+      ],
+      "correct": "多余",
+      "answerLetter": "A",
+      "rationale": "多余表示超过需要的数量；三十五减三十，多出五把。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q114"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q115",
+      "reviewNumber": 165,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "总算",
+      "question": "钥匙找了一个下午，我把所有抽屉都翻过后，___在旧外套的口袋里找到了。",
+      "options": [
+        "尚未",
+        "从未",
+        "依然",
+        "总算"
+      ],
+      "correct": "总算",
+      "answerLetter": "D",
+      "rationale": "总算表示经过一番努力或等待，最终达到结果。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q115"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q116",
+      "reviewNumber": 166,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "踮",
+      "question": "柜子太高，妹妹脚跟离开地面，___起脚尖，想看清顶上的玩具。",
+      "options": [
+        "跺",
+        "踮",
+        "伸",
+        "踩"
+      ],
+      "correct": "踮",
+      "answerLetter": "B",
+      "rationale": "踮起脚尖指抬起脚跟，靠脚尖支撑身体；脚跟离地是明确线索。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q116"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q117",
+      "reviewNumber": 167,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "惧怕",
+      "question": "小文一想到黑暗就害怕，始终___夜里的树林，不敢独自走进去。",
+      "options": [
+        "喜爱",
+        "惧怕",
+        "向往",
+        "欣赏"
+      ],
+      "correct": "惧怕",
+      "answerLetter": "B",
+      "rationale": "惧怕表示害怕；题目说明想到黑暗便害怕，不敢独自进入。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q117"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q118",
+      "reviewNumber": 168,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "滋味",
+      "question": "第一次赢得比赛后，小杰终于尝到了成功的___，心里又高兴又满足。",
+      "options": [
+        "形状",
+        "重量",
+        "颜色",
+        "滋味"
+      ],
+      "correct": "滋味",
+      "answerLetter": "D",
+      "rationale": "滋味除了味道，也可以指某种经历带来的感受；这里指成功的感受。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q118"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q119",
+      "reviewNumber": 169,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "诱人",
+      "question": "刚出炉的面包散发出___的香味，让人忍不住想咬一口。",
+      "options": [
+        "诱人",
+        "刺鼻",
+        "难闻",
+        "恶臭"
+      ],
+      "correct": "诱人",
+      "answerLetter": "A",
+      "rationale": "诱人形容有吸引力、让人产生欲望，符合闻到香味就想吃的情况。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q119"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q120",
+      "reviewNumber": 170,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "捣蛋",
+      "question": "弟弟故意把姐姐的笔藏起来，又在她找笔时偷笑，真爱___。",
+      "options": [
+        "帮忙",
+        "合作",
+        "捣蛋",
+        "学习"
+      ],
+      "correct": "捣蛋",
+      "answerLetter": "C",
+      "rationale": "捣蛋指故意作弄别人或制造麻烦，藏笔和偷笑体现这种行为。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q120"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q121",
+      "reviewNumber": 171,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "端",
+      "question": "妈妈双手扶稳汤碗，___着它慢慢走向餐桌，尽量不让汤洒出来。",
+      "options": [
+        "甩",
+        "抛",
+        "踢",
+        "端"
+      ],
+      "correct": "端",
+      "answerLetter": "D",
+      "rationale": "端指用手平稳地拿着碗盘等物体，符合防止汤洒出的动作。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q121"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q122",
+      "reviewNumber": 172,
+      "primaryLesson": 10,
+      "lessonIds": [
+        10
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "浑身",
+      "question": "跑完长跑后，小文从头到脚都湿透了，___都是汗。",
+      "options": [
+        "脚底",
+        "手心",
+        "浑身",
+        "额头"
+      ],
+      "correct": "浑身",
+      "answerLetter": "C",
+      "rationale": "浑身指整个身体；从头到脚都湿透说明不只是某一个部位。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q122"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q123",
+      "reviewNumber": 173,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "隐形",
+      "question": "故事里，小杰穿上斗篷后，别人再也看不见他，原来斗篷能让他___。",
+      "options": [
+        "变大",
+        "隐形",
+        "发光",
+        "缩小"
+      ],
+      "correct": "隐形",
+      "answerLetter": "B",
+      "rationale": "隐形表示隐藏身形而无法被看见，不等于改变大小或发光。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q123"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q124",
+      "reviewNumber": 174,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "技术",
+      "question": "这位工匠懂得怎样操作机器、调节零件，凭着熟练的___修好了设备。",
+      "options": [
+        "技术",
+        "运气",
+        "口气",
+        "脾气"
+      ],
+      "correct": "技术",
+      "answerLetter": "A",
+      "rationale": "技术指做某项工作所需的专门知识和技能；操作、调节、维修都需要技术。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q124"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q125",
+      "reviewNumber": 175,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "一眨眼",
+      "question": "小猫动作太快了，___就钻进草丛，我还没来得及拍照。",
+      "options": [
+        "一眨眼",
+        "一整天",
+        "一星期",
+        "一小时"
+      ],
+      "correct": "一眨眼",
+      "answerLetter": "A",
+      "rationale": "一眨眼比喻极短的时间；还没来得及拍照说明动作迅速完成。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q125"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q126",
+      "reviewNumber": 176,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "幻想",
+      "question": "妹妹知道人不能长出翅膀，却常常___自己像鸟一样飞过城市。",
+      "options": [
+        "证实",
+        "幻想",
+        "记录",
+        "观察"
+      ],
+      "correct": "幻想",
+      "answerLetter": "B",
+      "rationale": "幻想指想象现实中不存在或不能实现的情景，符合人长翅膀飞行的想象。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q126"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q127",
+      "reviewNumber": 177,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "瞧见",
+      "question": "我抬头望向树枝，___一只松鼠正抱着果子啃。",
+      "options": [
+        "听见",
+        "闻到",
+        "瞧见",
+        "摸到"
+      ],
+      "correct": "瞧见",
+      "answerLetter": "C",
+      "rationale": "瞧见指看见；抬头望向树枝说明通过视觉发现松鼠。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q127"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q128",
+      "reviewNumber": 178,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "尝",
+      "question": "汤煮好后，妈妈用小勺舀了一点，让我___一口，看看咸淡是否合适。",
+      "options": [
+        "闻",
+        "搅",
+        "吹",
+        "尝"
+      ],
+      "correct": "尝",
+      "answerLetter": "D",
+      "rationale": "尝指吃或喝少量食物来辨别味道；判断咸淡需要品尝。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q128"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q129",
+      "reviewNumber": 179,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "胀",
+      "question": "往气球里不断打气，气球一点点___大，表面也越来越紧。",
+      "options": [
+        "缩",
+        "裂",
+        "胀",
+        "扁"
+      ],
+      "correct": "胀",
+      "answerLetter": "C",
+      "rationale": "胀指体积扩大或鼓起来；不断充气使气球逐渐变大。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q129"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q130",
+      "reviewNumber": 180,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "确定",
+      "question": "小杰亲眼看见妹妹把书放进书包，因此他___书就在里面，不用再猜。",
+      "options": [
+        "确定",
+        "怀疑",
+        "猜测",
+        "否认"
+      ],
+      "correct": "确定",
+      "answerLetter": "A",
+      "rationale": "确定表示有把握、没有疑问；亲眼看见并且不用再猜说明有明确依据。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q130"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q131",
+      "reviewNumber": 181,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "雨丝",
+      "question": "窗外落着细细的___，一条条像轻柔的线，地面慢慢湿了。",
+      "options": [
+        "雪片",
+        "冰雹",
+        "尘土",
+        "雨丝"
+      ],
+      "correct": "雨丝",
+      "answerLetter": "D",
+      "rationale": "雨丝指细而像丝线的雨，题目强调细线般的形态。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q131"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q132",
+      "reviewNumber": 182,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "恰好",
+      "question": "我到车站时，巴士___也到了，时间刚刚好，一分钟也不用等。",
+      "options": [
+        "尚未",
+        "恰好",
+        "从未",
+        "迟迟"
+      ],
+      "correct": "恰好",
+      "answerLetter": "B",
+      "rationale": "恰好表示正好、刚巧，符合两个时间刚好重合。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q132"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q133",
+      "reviewNumber": 183,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "触碰",
+      "question": "展品很容易损坏，工作人员提醒大家只用眼睛看，不要用手___。",
+      "options": [
+        "远望",
+        "触碰",
+        "欣赏",
+        "拍摄"
+      ],
+      "correct": "触碰",
+      "answerLetter": "B",
+      "rationale": "触碰指接触、碰到；只用眼睛看与不要用手碰形成明确对比。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q133"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q134",
+      "reviewNumber": 184,
+      "primaryLesson": 11,
+      "lessonIds": [
+        11
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "晃荡",
+      "question": "小船被一阵阵波浪推得左右___，我们只好扶稳船边。",
+      "options": [
+        "凝固",
+        "停滞",
+        "沉淀",
+        "晃荡"
+      ],
+      "correct": "晃荡",
+      "answerLetter": "D",
+      "rationale": "晃荡指摇摆、不稳定地摆动；左右摇动的小船符合这一动作。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q134"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q135",
+      "reviewNumber": 185,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "毕业",
+      "question": "完成六年的小学课程后，小文即将从小学___，到中学继续学习。",
+      "options": [
+        "毕业",
+        "入学",
+        "留级",
+        "转学"
+      ],
+      "correct": "毕业",
+      "answerLetter": "A",
+      "rationale": "毕业指完成一个阶段的学业；完成小学课程再升中学符合这一阶段。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q135"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q136",
+      "reviewNumber": 186,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "邀请",
+      "question": "我们寄出请柬，___家长下星期来学校参加毕业典礼。",
+      "options": [
+        "责备",
+        "阻止",
+        "邀请",
+        "拒绝"
+      ],
+      "correct": "邀请",
+      "answerLetter": "C",
+      "rationale": "邀请指请别人来参加活动；请柬是邀请的形式。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q136"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q137",
+      "reviewNumber": 187,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "仪式",
+      "question": "升旗时，全体师生肃立，按规定步骤唱国歌，这是庄严的升旗___。",
+      "options": [
+        "设备",
+        "材料",
+        "工具",
+        "仪式"
+      ],
+      "correct": "仪式",
+      "answerLetter": "D",
+      "rationale": "仪式指按一定程序举行的正式活动，升旗、肃立和唱国歌构成这一程序。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q137"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q138",
+      "reviewNumber": 188,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "朗诵",
+      "question": "毕业典礼上，同学们配合语气和节奏，满怀感情地___一首诗。",
+      "options": [
+        "默读",
+        "抄写",
+        "朗诵",
+        "翻译"
+      ],
+      "correct": "朗诵",
+      "answerLetter": "C",
+      "rationale": "朗诵强调有感情、有节奏地出声读诗文；其他选项不符合这种表演。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q138"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q139",
+      "reviewNumber": 189,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "温馨",
+      "question": "生日那天，一家人围坐在桌旁，轻声说笑，互相关心，气氛十分___。",
+      "options": [
+        "紧张",
+        "温馨",
+        "冷清",
+        "严肃"
+      ],
+      "correct": "温馨",
+      "answerLetter": "B",
+      "rationale": "温馨形容温暖、亲切、令人感到幸福的气氛。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q139"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q140",
+      "reviewNumber": 190,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "服务",
+      "question": "志愿者在柜台为居民提供___，帮他们填写表格、解答问题。",
+      "options": [
+        "服务",
+        "批评",
+        "考验",
+        "处罚"
+      ],
+      "correct": "服务",
+      "answerLetter": "A",
+      "rationale": "服务指为别人做事、提供帮助；填写表格和答疑属于帮助居民。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q140"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q141",
+      "reviewNumber": 191,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "关键",
+      "question": "老师说，解题的___是先看清题目要求；这一步弄错，后面的计算也会错。",
+      "options": [
+        "关键",
+        "借口",
+        "负担",
+        "障碍"
+      ],
+      "correct": "关键",
+      "answerLetter": "A",
+      "rationale": "关键指起决定作用的因素或环节；第一步决定后续是否正确。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q141"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q142",
+      "reviewNumber": 192,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "绝不",
+      "question": "小文认真地说：“做人要诚实，我___拿不属于自己的东西。”",
+      "options": [
+        "经常",
+        "绝不",
+        "偶尔",
+        "照样"
+      ],
+      "correct": "绝不",
+      "answerLetter": "B",
+      "rationale": "绝不表示坚定、完全的否定，符合诚实和不拿别人东西的承诺。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q142"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q143",
+      "reviewNumber": 193,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "实验",
+      "question": "同学们把两盆同样的植物分别放在明处和暗处，进行___，比较光照对生长的影响。",
+      "options": [
+        "表演",
+        "旅行",
+        "实验",
+        "访问"
+      ],
+      "correct": "实验",
+      "answerLetter": "C",
+      "rationale": "实验指按设定条件操作和观察，以检验某种影响；两组光照条件构成实验。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q143"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q144",
+      "reviewNumber": 194,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "研究",
+      "question": "科学家多年收集资料、分析数据，深入___植物怎样在干旱环境中生存。",
+      "options": [
+        "宣布",
+        "命令",
+        "庆祝",
+        "研究"
+      ],
+      "correct": "研究",
+      "answerLetter": "D",
+      "rationale": "研究是系统地探索问题，收集资料和分析数据体现研究过程。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q144"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q145",
+      "reviewNumber": 195,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "忙忙碌碌",
+      "question": "典礼前，老师们___，一会儿布置礼堂，一会儿检查座位，几乎没有休息。",
+      "options": [
+        "无所事事",
+        "悠闲自在",
+        "忙忙碌碌",
+        "游手好闲"
+      ],
+      "correct": "忙忙碌碌",
+      "answerLetter": "C",
+      "rationale": "忙忙碌碌形容不停地做很多事情，符合连续准备而没有休息。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q145"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q146",
+      "reviewNumber": 196,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "痕迹",
+      "question": "椅子拖过地板后，留下了两道细长的___，擦了几次也没有完全消失。",
+      "options": [
+        "痕迹",
+        "声音",
+        "气味",
+        "影子"
+      ],
+      "correct": "痕迹",
+      "answerLetter": "A",
+      "rationale": "痕迹是事物经过后留下的印记；细长且擦不掉的是地面上的印记。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q146"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q147",
+      "reviewNumber": 197,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "放弃",
+      "question": "拼图虽然很难，小文却没有___，仍然一块一块地尝试，直到完成。",
+      "options": [
+        "坚持",
+        "继续",
+        "努力",
+        "放弃"
+      ],
+      "correct": "放弃",
+      "answerLetter": "D",
+      "rationale": "放弃指停止原来的目标或行动；没有放弃与继续尝试、最后完成相一致。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q147"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q148",
+      "reviewNumber": 198,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "召唤",
+      "question": "故事里的船长摇响铃铛，___船员们到甲板集合，大家听到后纷纷赶来。",
+      "options": [
+        "驱赶",
+        "召唤",
+        "责骂",
+        "阻拦"
+      ],
+      "correct": "召唤",
+      "answerLetter": "B",
+      "rationale": "召唤指发出声音或信号叫人前来，摇铃并叫船员集合符合此义。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q148"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q149",
+      "reviewNumber": 199,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "前途",
+      "question": "老师希望我们努力学习，将来能够发挥才能，拥有光明的___。",
+      "options": [
+        "过去",
+        "前途",
+        "回忆",
+        "往事"
+      ],
+      "correct": "前途",
+      "answerLetter": "B",
+      "rationale": "前途指未来的发展和前景；将来发挥才能说明谈的是未来。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q149"
+      ]
+    },
+    {
+      "questionID": "P6-CH-DRAFT-B02-Q150",
+      "reviewNumber": 200,
+      "primaryLesson": 12,
+      "lessonIds": [
+        12
+      ],
+      "subject": "Chinese",
+      "kind": "vocab",
+      "targetWord": "守望",
+      "question": "村民们轮流在高处___，仔细观察四周，一发现危险就通知大家。",
+      "options": [
+        "闲逛",
+        "打盹",
+        "奔跑",
+        "守望"
+      ],
+      "correct": "守望",
+      "answerLetter": "D",
+      "rationale": "守望指看守、观察以防危险；轮流观察并报警是守望的职责。",
+      "source": "Original authored draft for parent review; not approved for gameplay.",
+      "integratedQuestionIds": [
+        "P6-CH-AUTHORED-B02-Q150"
+      ]
+    }
+  ]
+}

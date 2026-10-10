@@ -26,7 +26,7 @@ function freshGame() {
         creatures: { collection: { fogling: { level: 3 } }, partner: null }
       }
     },
-    levelPackage: { map: { objects: [{ id: 'apprentice-jun', x: 6, y: 9 }, { id: 'shop-door', x: 10, y: 9 }] }, sets: [], content: { words: [] } }
+    levelPackage: { strings: JSON.parse(fs.readFileSync(path.join(__dirname, '../content/authored/shared/strings.json'), 'utf8')), map: { objects: [{ id: 'apprentice-jun', x: 6, y: 9 }, { id: 'shop-door', x: 10, y: 9 }] }, sets: [], content: { words: [] } }
   };
 }
 
@@ -379,7 +379,7 @@ test('menu teaching highlights Close and advances only after each panel closes',
     assert.equal(dom.window.document.querySelector('#daily-button').classList.contains('tutorial-arrow'), false);
     element.querySelector('[data-close-overlay]').click();
     assert.equal(game.state.progress.tutorial.step, 11);
-    assert.match(element.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /Adventure helps you remember/);
+    assert.match(element.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /return to Adventure/);
   } finally {
     guide.destroy();
     overlay.close();
@@ -403,9 +403,9 @@ test('finishing the guide clears every tutorial highlight even while Jun says go
     assert.equal(game.state.progress.tutorial.step, 16);
     assert.equal(dom.window.document.body.hasAttribute('data-tutorial-step'), false);
     assert.equal(dom.window.document.querySelector('#dictation-button').classList.contains('tutorial-arrow'), false);
-    assert.match(overlay.dialogues.at(-1).lines.join(' '), /You’re prepared for the road/);
-    assert.match(overlay.dialogues.at(-1).lines.join(' '), /You should know most of the features now/);
-    assert.match(overlay.dialogues.at(-1).lines.at(-1), /Goodbye, and I wish you all the best/);
+    assert.match(overlay.dialogues.at(-1).lines.join(' '), /Your supplies are ready/);
+    assert.match(overlay.dialogues.at(-1).lines.join(' '), /You do not need to remember everything now/);
+    assert.match(overlay.dialogues.at(-1).lines.at(-1), /Have fun exploring/);
     overlay.dialogues.at(-1).done();
     assert.equal(game.state.progress.tutorial.pending, null);
     assert.equal(dom.window.document.querySelectorAll('.tutorial-arrow').length, 0);
@@ -448,7 +448,7 @@ test('choosing a creature companion saves the choice and advances Jun’s guide'
     overlayElement.querySelector('[data-choose-creature]').click();
     assert.equal(game.state.progress.creatures.partner, 'fogling');
     assert.equal(game.state.progress.tutorial.step, 9);
-    assert.match(overlayElement.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /Your creature companion can now travel beside you/);
+    assert.match(overlayElement.querySelector('[data-type-dialogue]').getAttribute('aria-label'), /Your partner is ready/);
   } finally {
     guide.destroy();
     overlay.close();
@@ -576,7 +576,7 @@ test('the later guide requires the Restoration explanation, menu visits, and bot
     guide.action('buy-bait');
     assert.equal(game.state.progress.tutorial.step, 16);
     guide.show();
-    assert.match(overlay.dialogues.at(-1).lines.join(' '), /You’re prepared for the road/);
+    assert.match(overlay.dialogues.at(-1).lines.join(' '), /Your supplies are ready/);
     guide.action('buy-bait');
     assert.equal(game.state.progress.tutorial.step, 16);
   } finally {

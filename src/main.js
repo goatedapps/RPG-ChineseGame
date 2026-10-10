@@ -26,7 +26,9 @@ import { enterRegion, regionIdForMap, routeKey, saveCurrentRegion } from './syst
 import { revealRouteTile } from './world/fog.js?p2';
 import { showGateOpening } from './ui/gateTransition.js';
 import { activateVillagePortals } from './systems/ending.js';
-import { createTutorial } from './tutorial.js?p12';
+import { createTutorial } from './tutorial.js?p13';
+
+import { attachJunReminder } from './ui/junReminder.js';
 
 const storage = window.localStorage;
 const overlay = createOverlay($('#overlay'));
@@ -545,7 +547,10 @@ async function boot() {
   $('#daily-button').addEventListener('click', () => { adventure?.questBoard(); tutorial?.action('open-daily'); });
   $('#story-button').addEventListener('click', () => { adventure?.storyJournal(); tutorial?.action('open-journal'); });
   $('#parent-button').addEventListener('click', () => gameplay?.parentPanel());
-  $('#overlay').addEventListener('overlay:changed', () => tutorial?.show());
+  $('#overlay').addEventListener('overlay:changed', () => {
+    tutorial?.show();
+    attachJunReminder(active, $('#overlay'), persist);
+  });
   const pondCanOpen = event => {
     if (!active || overlay.isOpen || gameplay?.battleInProgress() || tutorial?.current()) return false;
     const tile = active.renderer.tileAtClientPoint(event.clientX, event.clientY, active.state.player);

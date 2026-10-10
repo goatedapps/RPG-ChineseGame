@@ -50,3 +50,43 @@ test('battle Usage prefers a vetted matching question, then falls back only when
   const fallback = makeBattleQuestion(usageWord, 'u', content.words, [{ ...usage, lessons: [99] }]);
   assert.equal(fallback.source, 'generated');
 });
+
+test('approved P6 vocabulary questions are available in battle Usage and each word’s regional School pool', async () => {
+  const { makeBattleQuestion, schoolQuestionPool } = await import('../src/gameplay.js');
+  const content = read('content/generated/p6.content.json');
+  const config = read('content/authored/levels/p6/level.json');
+  const approved = content.questions.single.filter(question => /^P6-CH-AUTHORED-B0[12]-Q/.test(question.id));
+  assert.equal(approved.length, 205);
+  const targets = new Set(approved.map(question => question.word));
+  assert.equal(targets.size, 200);
+  const schoolPools = Object.fromEntries(Object.keys(config.regionLessons).map(regionId => [
+    regionId, schoolQuestionPool({ content, config, region: { id: regionId } })
+  ]));
+
+  for (const word of content.words.filter(word => targets.has(word.w))) {
+    const authored = approved.find(question => question.word === word.w && question.lessons.includes(word.lesson));
+    assert.ok(authored, `${word.w}, Lesson ${word.lesson}: approved question exists`);
+    assert.deepEqual(authored.lessons, [word.lesson], `${authored.id}: one lesson keeps School eligibility local`);
+    assert.equal(authored.word, authored.c);
+    const battleQuestion = makeBattleQuestion(word, 'u', content.words, content.questions.single);
+    assert.equal(battleQuestion.source, 'exam', `${word.w}: no generated fallback`);
+    assert.ok(battleQuestion.id.startsWith('P6-CH-AUTHORED-B0'), `${word.w}: approved bank selected`);
+    assert.ok(battleQuestion.options.includes(battleQuestion.correct));
+    const regionId = Object.keys(config.regionLessons).find(id => config.regionLessons[id].includes(word.lesson));
+    assert.ok(schoolPools[regionId].some(question => question.id === authored.id), `${word.w}: available at ${regionId} School`);
+    for (const [otherRegion, pool] of Object.entries(schoolPools)) {
+      if (otherRegion !== regionId) assert.ok(!pool.some(question => question.id === authored.id), `${authored.id}: no out-of-region School leak`);
+    }
+  }
+
+  const covered = content.words.filter(word => content.questions.single.some(question => (
+    ['vocab', 'usage'].includes(question.kind)
+    && question.word === word.w
+    && question.lessons?.includes(word.lesson)
+    && question.subject !== 'Higher Chinese'
+    && Array.isArray(question.o)
+    && question.o.length >= 2
+    && question.o.includes(question.c)
+  )));
+  assert.ok(covered.length >= 263, 'P6 retains reviewed question coverage for at least 263 lesson vocabulary entries');
+});

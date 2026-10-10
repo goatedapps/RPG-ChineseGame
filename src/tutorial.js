@@ -28,16 +28,7 @@ const transitions = {
   3: ['You heard two neighbours. Their stories help you understand who needs help.', 'Let’s go to School. An Exam quiz earns XP, and XP makes you stronger.'],
   4: ['Well done on your quiz! You earned XP toward your next level.', 'Now take the north gate to Mistwood Road and free a Word Spirit. I’ll guide your first battle.'],
   5: ['Good work defeating your first battle! The Word Spirit is free.', 'You are back in the village. Tap the arrow on the left to open the Atlas menu.', 'Now open Spirit Book and tap the glowing card for the Spirit you just freed.'],
-  6: ['There it is! The filled circle came from the attack you chose in battle.', 'You’re ready to explore. Follow Next step, talk to people, and collect more Word Spirits. I’ll tell you more when you reach level 3.'],
-  7: ['Now you know how Bronze, Silver, and Gold Spirits grow. You also have a separate collection of creatures you defeat.', 'Some wild creatures are Elite or Golden. Win against one to keep that special form in your collection.', 'Elite partners earn 6 extra coins per battle win; Golden partners earn 12. Golden is the rarest form, so later Elite or Normal wins cannot take it away.', 'Open Creatures in the left menu to choose a companion and read its battle ability.'],
-  8: ['Your creature companion can now travel beside you. Use its ability once per battle, including boss battles.', 'If your partner is Elite or Golden, its extra coins arrive after each battle you win.', 'Look at the Restoration Board in your room. Sets of Silver Spirits earn room decorations.'],
-  9: ['You know what that set needs. You can finish collecting it later.', 'Open Adventure from the left menu to see the story and villagers’ requests.'],
-  10: ['Adventure helps you remember who needs help.', 'Now open Daily Board. Finishing all three goals gives you a Daily Chest with rewards.'],
-  11: ['Those daily goals are optional, with no timer.', 'Open Bag to see the supplies and items you carry.'],
-  12: ['Your supplies are safe in Bag. You can use some of them on the road.', 'Open Hero Status to see your level and HP, then look at the Craft Table.'],
-  13: ['The Craft Table turns materials and coins into gear. You do not need to make anything yet.', 'Open Dictation Practice and try one word from memory.'],
-  14: ['Good practice! Dictation will help you open the road to the next region later.', 'Return to the Shop. Buy Forest Repellent and one exact-word Spirit Bait.'],
-  15: ['You’re prepared for the road! On a foggy route, open Bag and tap Use on Forest Repellent.', 'Spirit Bait works automatically at the next encounter in its lesson area.', 'You should know most of the features now. Follow Next step whenever you need a reminder.', 'I’m glad we explored together. Goodbye, and I wish you all the best on your adventure!']
+  6: ['There it is! The filled circle came from the attack you chose in battle.', 'You’re ready to explore. Follow Next step, talk to people, and collect more Word Spirits. I’ll tell you more when you reach level 3.']
 };
 
 export function createTutorial({ getActive, persist, render, overlay }) {
@@ -245,7 +236,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
     }
     if (tutorial.pending) {
       const completed = tutorial.pending;
-      speak(transitions[completed] || [], () => {
+      speak(game.levelPackage.strings?.junGuidance?.transitions?.[completed] || transitions[completed] || [], () => {
         tutorial.pending = null;
         lastActionAt = Date.now();
         persist();
@@ -283,7 +274,7 @@ export function createTutorial({ getActive, persist, render, overlay }) {
       }
     }
     if (step === 7 && !tutorial.partTwoIntroduced) {
-      speak(['You reached level 3! Welcome back.', 'Open Spirit Book. Let’s look at how many Bronze, Silver, and Gold Spirits you have, then I’ll show you how they grow.'], () => {
+      speak(game.levelPackage.strings?.junGuidance?.levelThreeWelcome || ['You reached level 3! Welcome back.', 'Open Spirit Book to see how your Spirits can help restore the region.'], () => {
         tutorial.partTwoIntroduced = true;
         persist();
       });

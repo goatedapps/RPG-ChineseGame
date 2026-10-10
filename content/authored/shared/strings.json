@@ -5,6 +5,58 @@
   "readingComplete": "You completed the passage chain and received the Cave Lantern!",
   "supportiveWrong": "Not quite. Study the answer and try again next time.",
   "writingSuccess": "You wrote it all by yourself!",
-  "writingHelp": "That is OK. Study the strokes and try again soon."
+  "writingHelp": "That is OK. Study the strokes and try again soon.",
+  "junGuidance": {
+    "levelThreeWelcome": [
+      "You reached level 3! Welcome back.",
+      "Silver Spirits help restore the region. Open Spirit Book to see your Bronze, Silver, and Gold counts."
+    ],
+    "transitions": {
+      "7": [
+        "You have seen how Spirits grow. Three filled skill circles make Silver; five make Gold.",
+        "Now choose a creature companion in Creatures. Its ability can help you in your next battle."
+      ],
+      "8": [
+        "Your partner is ready! Use its ability once each battle when you need a hand.",
+        "Silver Spirits can earn room decorations. Open the Restoration Board in My Room to see a set you could finish."
+      ],
+      "9": [
+        "You found a set to work toward. Offering it restores part of the region without using up your Spirits.",
+        "Open Adventure. It remembers your story and requests so you can find your next task."
+      ],
+      "10": [
+        "You can return to Adventure whenever you forget who needs help.",
+        "Open Daily Board to see optional goals that can earn a reward chest."
+      ],
+      "11": [
+        "The board remembers your goals. There is no timer, and you can leave them for another day.",
+        "Open Bag and look for your supplies. They can help when the road gets difficult."
+      ],
+      "12": [
+        "You found your supplies. Healing food helps during battle; Repellent helps you walk past encounters.",
+        "Open Hero Status to check your HP and gear, then visit its Craft Table."
+      ],
+      "13": [
+        "You found the recipes. When a recipe is ready, you can turn its materials and coins into gear, then equip it in Hero Status.",
+        "Try one word in Dictation Practice. It helps you prepare for the test at the next-region gate; Show me how can help."
+      ],
+      "14": [
+        "You tried writing from memory. You can practise here again before a gate test.",
+        "Buy Forest Repellent and exact-word Spirit Bait at the Shop: one helps you travel, the other helps you find a chosen Spirit."
+      ],
+      "15": [
+        "Your supplies are ready! Use Repellent from Bag on a fog route. Bait works at the next encounter in its lesson area.",
+        "You do not need to remember everything now. Follow Next step; I have left short notes where these features can help. Have fun exploring!"
+      ]
+    },
+    "reminders": {
+      "companion": "Your partner can help right now. Tap its ability when you need it; you can use it once each battle, including boss battles.",
+      "restoration": "This set is ready! Silver means three filled skill circles; Gold means five. Restore the region to earn its decoration. You keep every Spirit.",
+      "crafting": "You have enough materials and coins for this recipe. Craft the gear if you want its benefit, then equip it in Hero Status.",
+      "equipment": "This gear is yours, but is not equipped. Tap Equip to use the benefit shown on its card.",
+      "dailyChest": "Your three goals are complete! Open the Daily Chest to collect your rewards.",
+      "gateDictation": "This gate checks writing from memory. If you want practice first, return to School for Dictation Practice. Show me how is available while practising.",
+      "repellent": "Want a quieter walk? Use Forest Repellent here to pause encounters for a while. It stays in your Bag until you use it."
+    }
+  }
 }
-

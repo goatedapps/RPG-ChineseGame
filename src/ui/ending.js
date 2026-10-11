@@ -6,7 +6,7 @@ const list = entries => entries.length
 
 const storyScenes = [
   {
-    image: 'assets/images/intro/great-forgetter.jpg',
+    image: 'assets/images/intro/great-forgetter.webp',
     title: 'The last seal breaks',
     body: 'The final stroke of the Spirit Brush cut through the Great Forgetter’s spell. The Word Spirits you freed in every region answered together. The Great Forgetter remembered what he had tried to erase: names, stories, and promises belong to the people who share them.'
   },

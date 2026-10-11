@@ -5,7 +5,7 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 const imageRoot = path.join(root, 'assets', 'images');
-const illustratedFolders = ['creatures', 'rewards', 'shop', 'hero', 'story', 'atlas'];
+const illustratedFolders = ['creatures', 'rewards', 'shop', 'hero', 'story', 'atlas', 'room', 'intro', 'restorations'];
 
 test('illustrated game art stays compact and available offline', () => {
   const serviceWorker = fs.readFileSync(path.join(root, 'sw.js'), 'utf8');

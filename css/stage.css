@@ -370,7 +370,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .service-grid button:disabled span { color: #667078; }
 .service-grid button span { color: #647180; font: 13px system-ui; }
 .reading-panel { width: min(960px,100%); max-height: 100%; overflow: auto; }
-.passage-art { position: relative; width: 100%; height: clamp(310px,48vw,480px); overflow: hidden; border-radius: 8px; background: #f5dfaa url('../assets/images/story/reading-scroll.jpg') center / 100% 100% no-repeat; box-shadow: 0 6px 16px rgba(59,37,20,.22); }
+.passage-art { position: relative; width: 100%; height: clamp(310px,48vw,480px); overflow: hidden; border-radius: 8px; background: #f5dfaa url('../assets/images/story/reading-scroll.webp') center / 100% 100% no-repeat; box-shadow: 0 6px 16px rgba(59,37,20,.22); }
 .passage-text { position: absolute; inset: 20% 15% 21%; overflow: auto; padding: 0 1.5% 2px; color: #3c2b22; font: 600 clamp(21px,2.1vw,24px)/1.6 KaiTi,"Kaiti SC","STKaiti","Noto Serif SC",serif; line-break: strict; overflow-wrap: break-word; scrollbar-color: #a77c4f #eed9aa; scrollbar-width: thin; }
 .passage-text:focus-visible { outline: 3px solid #8e5f37; outline-offset: 2px; }
 .passage-scroll { margin: 10px 0 16px; padding: 10px; border: 2px solid var(--gold); border-radius: 10px; background: #fff8d8; }
@@ -378,7 +378,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .passage-scroll .passage-art { height: clamp(280px,42vw,380px); margin-top: 9px; }
 .answer-field { display: grid; gap: 6px; margin: 12px 0; font-weight: 800; }
 .answer-field input, .answer-field textarea, .answer-field select { min-height: 44px; padding: 9px; border: 2px solid var(--line); border-radius: 8px; font: 16px var(--font-ui); }
-.shop-panel { width: min(900px,100%); max-height: 100%; overflow: auto; padding: 0 18px 18px; background: #e9d5a6 url('../assets/images/shop/shop-background.jpg') center top / cover; }
+.shop-panel { width: min(900px,100%); max-height: 100%; overflow: auto; padding: 0 18px 18px; background: #e9d5a6 url('../assets/images/shop/shop-background.webp') center top / cover; }
 .shop-banner { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; min-height: 180px; margin: 0 -18px 18px; padding: 22px; color: white; background: linear-gradient(90deg,rgba(22,28,34,.9),rgba(22,28,34,.18)); text-shadow: 0 2px 3px rgba(0,0,0,.75); }
 .shop-banner p, .shop-banner h1, .shop-banner span { margin: 0; }
 .shop-banner p { color: #f0ca62; font-weight: 900; }
@@ -648,7 +648,7 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
 .room-header { align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
 .room-header h1 { margin: 0; color: #3b302c; font: 900 clamp(26px,3vw,34px)/1.1 var(--font-ui); }
 .room-header p:last-child { max-width: 48ch; margin: 6px 0 0; color: #5c5348; font: 14px/1.4 system-ui; }
-.room-scene { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 220px; overflow: hidden; border: 5px solid #664932; border-radius: 12px; background: #765238 url('../assets/images/room/grandmas-room.jpg') center / cover no-repeat; box-shadow: 0 9px 0 #cfb886; }
+.room-scene { position: relative; width: 100%; aspect-ratio: 16 / 9; min-height: 220px; overflow: hidden; border: 5px solid #664932; border-radius: 12px; background: #765238 url('../assets/images/room/grandmas-room.webp') center / cover no-repeat; box-shadow: 0 9px 0 #cfb886; }
 .room-shelf-count { position: absolute; top: 4%; right: 3%; display: flex; align-items: center; gap: 8px; padding: 5px 10px; border: 1px solid #e2be79; border-radius: 7px; color: #fff8e8; background: rgba(39,48,59,.9); box-shadow: 0 3px 9px #1c1a1880; }
 .room-shelf-count b { color: #eac268; font-size: 24px; }
 .room-shelf-count span { font: 700 12px system-ui; }
@@ -925,3 +925,17 @@ canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; 
   .shop-banner { align-items: flex-start; }
   .shop-banner-actions { gap: 8px; }
 }
+
+.room-panel .room-scene { min-height: 0; aspect-ratio: 1672 / 941; }
+.room-cosmetic-art { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.room-panel > .room-companion-nook { position: static; margin: 18px 0 12px; }
+.cosmetic-wardrobe { margin-top: 20px; border-top: 1px solid #cbbf9f; padding-top: 16px; }
+.cosmetic-wardrobe > p { font-size: 14px; color: #5c5348; }
+.cosmetic-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: 12px; }
+.cosmetic-card { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px; border: 1px solid #cbbf9f; border-radius: 10px; background: #fffaf0; text-align: center; }
+.cosmetic-card > img { width: 100%; height: 130px; object-fit: contain; }
+.cosmetic-card > button { width: 100%; min-height: 44px; margin-top: auto; }
+.cosmetic-card > button[aria-pressed="true"] { background: #2f8a66; color: #fff; }
+.cosmetic-current-hero { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.cosmetic-current-hero .hero-avatar { width: 100px; height: 148px; flex-shrink: 0; }
+.cosmetic-shop-item .item-icon { object-fit: contain; }

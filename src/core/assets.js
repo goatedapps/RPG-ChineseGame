@@ -5,6 +5,7 @@ export function warmImage(url, { ImageClass = globalThis.Image } = {}) {
   if (warmedImages.has(url)) return warmedImages.get(url).ready;
   const image = new ImageClass();
   image.decoding = 'async';
+  image.fetchPriority = 'low';
   const loaded = typeof image.decode === 'function'
     ? (image.src = url, image.decode())
     : new Promise((resolve, reject) => {

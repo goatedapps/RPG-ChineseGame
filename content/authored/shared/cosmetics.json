@@ -1,0 +1,126 @@
+[
+  {
+    "id": "jade-garden-rug",
+    "name": "Jade Garden Rug",
+    "type": "room",
+    "price": 180,
+    "region": "r1",
+    "description": "A jade woven rug with a gold cloud border.",
+    "image": "assets/images/room/jade-garden-rug.webp",
+    "placement": [
+      238,
+      628,
+      1100,
+      255
+    ]
+  },
+  {
+    "id": "companion-nest",
+    "name": "Companion Nest",
+    "type": "room",
+    "price": 240,
+    "region": "r2",
+    "description": "A woven jade cushion for your chosen companion.",
+    "image": "assets/images/room/companion-nest.webp",
+    "placement": [
+      811,
+      510,
+      242,
+      153
+    ]
+  },
+  {
+    "id": "blossom-pot",
+    "name": "Blossom Pot",
+    "type": "room",
+    "price": 140,
+    "region": "r2",
+    "description": "Pink plum blossoms beside the desk.",
+    "image": "assets/images/room/blossom-pot.webp",
+    "placement": [
+      1320,
+      545,
+      132,
+      235
+    ]
+  },
+  {
+    "id": "festival-lantern",
+    "name": "Festival Lantern",
+    "type": "room",
+    "price": 160,
+    "region": "r4",
+    "description": "A red-and-gold silk lantern beside the window.",
+    "image": "assets/images/room/festival-lantern.webp",
+    "placement": [
+      1106,
+      64,
+      104,
+      272
+    ]
+  },
+  {
+    "id": "mountain-scroll",
+    "name": "Mountain Scroll",
+    "type": "room",
+    "price": 220,
+    "region": "r3",
+    "description": "A misty mountain painting for your wall.",
+    "image": "assets/images/room/mountain-scroll.webp",
+    "placement": [
+      1264,
+      40,
+      172,
+      283
+    ]
+  },
+  {
+    "id": "crimson-bed-throw",
+    "name": "Crimson Bed Throw",
+    "type": "room",
+    "price": 260,
+    "region": "r5",
+    "description": "A crimson silk throw fitted over the bed.",
+    "image": "assets/images/room/crimson-bed-throw.webp"
+  },
+  {
+    "id": "companion-ribbon",
+    "name": "Companion Ribbon",
+    "type": "room",
+    "price": 80,
+    "region": "r2",
+    "requires": "companion-nest",
+    "description": "A red silk bow for the companion in your nest.",
+    "image": "assets/images/room/companion-ribbon.webp"
+  },
+  {
+    "id": "jade-traveller-robe",
+    "name": "Jade Traveller Robe",
+    "type": "outfit",
+    "price": 240,
+    "region": "r2",
+    "description": "A jade robe embroidered with gold bamboo.",
+    "image": "assets/images/hero/jade-traveller-robe.webp",
+    "mapImage": "assets/images/atlas/hero-map-jade.webp"
+  },
+  {
+    "id": "festival-robe",
+    "name": "Festival Robe",
+    "type": "outfit",
+    "price": 300,
+    "region": "r4",
+    "description": "A crimson robe with gold lantern embroidery.",
+    "image": "assets/images/hero/festival-robe.webp",
+    "mapImage": "assets/images/atlas/hero-map-crimson.webp"
+  },
+  {
+    "id": "tidewater-robe",
+    "name": "Tidewater Robe",
+    "type": "outfit",
+    "price": 240,
+    "region": "r3",
+    "description": "A sea-blue robe with silver wave embroidery.",
+    "image": "assets/images/hero/tidewater-robe.webp",
+    "mapImage": "assets/images/atlas/hero-map-teal.webp"
+  }
+]

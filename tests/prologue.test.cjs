@@ -30,7 +30,7 @@ test('prologue artwork resolves relative to the hosted app, not the CSS folder',
   const dom = new JSDOM('<div id="prologue"></div>', { url: 'https://example.com/RPG-ChineseGame/?level=p5' });
   const root = dom.window.document.querySelector('#prologue');
   const prologue = createPrologue({ root, audio: { unlock() {}, setScene() {} }, onComplete() {} });
-  assert.match(root.querySelector('.prologue-screen').style.getPropertyValue('--prologue-image'), /\/RPG-ChineseGame\/assets\/images\/intro\/dictionary-tree\.jpg/);
+  assert.match(root.querySelector('.prologue-screen').style.getPropertyValue('--prologue-image'), /\/RPG-ChineseGame\/assets\/images\/intro\/dictionary-tree\.webp/);
   root.querySelector('[data-prologue-begin]').click();
   for (const slide of PROLOGUE_SLIDES) {
     const image = root.querySelector('.prologue-screen').style.getPropertyValue('--prologue-image');

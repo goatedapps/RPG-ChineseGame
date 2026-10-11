@@ -25,6 +25,7 @@ export async function listLevels(fetcher = fetch, baseUrl = '.') {
 }
 
 export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '.') {
+  const cosmetics = await fetchJson(fetcher, join(baseUrl, 'content/authored/shared/cosmetics.json'));
   const companions = await fetchJson(fetcher, join(baseUrl, 'content/authored/shared/companions.json'));
   const [content, characters, config, regions, r1Map, route1, routeSpecs, r2Map, r3Map, r4Map, r5Map, r6Map, r7Map, balance, strings, items, gear, recipes, milestones, r1Sets, r2Sets, r3Sets, r4Sets, r5Sets, r6Sets, r7Sets, wordTags, dailyQuestTemplates, r1Story, r2Story, r3Story, r4Story, r5Story, r6Story, r7Story] = await Promise.all([
     fetchJson(fetcher, join(baseUrl, `content/generated/${levelId}.content.json`)),
@@ -124,6 +125,7 @@ export async function loadLevelPackage(levelId, fetcher = fetch, baseUrl = '.') 
     milestones,
     wordTags,
     companions,
+    cosmetics,
     dailyQuestTemplates,
   }, 'r1');
 }

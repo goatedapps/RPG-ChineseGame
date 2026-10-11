@@ -65,7 +65,8 @@ Production URLs:
 - For writing-from-memory and dictation, offer “Show me how” without a redundant “I don’t know” action.
 - Hide target Hanzi during dictation, and omit pinyin from battle Hanzi-selection prompts.
 - Keep every regional lesson area open, with difficulty and the Journal guiding a suggested route.
-- Keep exact-word lesson bait in the shop.
+- Keep exact-word lesson bait and three regional healing foods in each shop; Ancient Grove and Summit share their food selection.
+- Keep purchased cosmetics in schema 16 separate from earned keepsakes, with free outfit changes and decoration placement.
 - Keep battle boosts consumable in battle; Forest Repellent blocks encounters, while Scholar's Lantern filters Silver/Gold spirits for 40 encounter-grass steps.
 - Cap new material awards at the needs of uncrafted recipes, and keep Craft Table readiness and completion visible.
 - Require 80% Bronze-or-better regional spirits plus the reading key for each boss, then a parent-configurable from-memory dictation pass to reach the next region.
@@ -84,6 +85,7 @@ Production URLs:
 - Add migrations for save-shape changes.
 - Preserve local Hanzi data and the vendored Hanzi Writer runtime.
 - Keep runtime illustration assets sized for their displayed use, and update image references, offline cache and asset tests together.
+- Start offline installation after the opening screen paints, with at most two low-priority asset downloads at once.
 - Keep the Scholar Atlas shell consistent from curriculum selection through all seven regions, and reuse illustrated buildings and terrain detail across safe villages.
 - Keep village signs and guide dialogue aligned with the routes; all seven villages are safe, including Treehouse Summit.
 - Keep Parent Mode actions in place with a clear confirmation instead of resetting its scroll position.

@@ -83,7 +83,7 @@ test('schema 15 migrates creature forms and preserves them through save transfer
     old.progress.words.example = { collected: true, ticks: { m: 1 } };
     old.progress.tutorial.step = 8;
     const state = migrateState(old, pkg);
-    assert.equal(state.schemaVersion, 15);
+    assert.equal(state.schemaVersion, 16);
     assert.equal(state.progress.tutorial.step, 8);
     assert.deepEqual(state.progress.words, old.progress.words);
     assert.equal(state.progress.partners, undefined);

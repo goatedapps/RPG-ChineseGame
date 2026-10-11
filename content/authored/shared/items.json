@@ -1,11 +1,134 @@
 [
-  { "id": "rice-ball", "name": "Rice Ball 饭团", "price": 25, "effect": "heal", "amount": 10, "healFraction": 0.15 },
-  { "id": "instant-noodles", "name": "Instant Noodles 方便面", "price": 50, "effect": "heal", "amount": 20, "healFraction": 0.3 },
-  { "id": "mooncake", "name": "Mooncake 月饼", "price": 80, "effect": "full-heal" },
-  { "id": "scholars-lantern", "name": "Scholar's Lantern", "price": 40, "effect": "repel-mastered", "amount": 40 },
-  { "id": "ink-pot", "name": "Ink Pot", "price": 40, "effect": "writing-retry" },
-  { "id": "smoke-ball", "name": "Smoke Ball", "price": 20, "effect": "escape" },
-  { "id": "power-tea", "name": "Power Tea 力量茶", "price": 45, "effect": "attack-boost", "amount": 2 },
-  { "id": "guardian-talisman", "name": "Guardian Talisman 护身符", "price": 45, "effect": "defense-boost", "amount": 2 },
-  { "id": "forest-repellent", "name": "Forest Repellent 驱兽香", "price": 30, "effect": "repellent", "amount": 40 }
+  {
+    "id": "rice-ball",
+    "name": "Rice Ball 饭团",
+    "price": 25,
+    "effect": "heal",
+    "amount": 10,
+    "regions": [
+      "r1"
+    ]
+  },
+  {
+    "id": "instant-noodles",
+    "name": "Instant Noodles 方便面",
+    "price": 50,
+    "effect": "heal",
+    "amount": 20,
+    "regions": [
+      "r1",
+      "r2"
+    ]
+  },
+  {
+    "id": "seaweed-broth",
+    "name": "Seaweed Broth 紫菜汤",
+    "price": 70,
+    "effect": "heal",
+    "amount": 40,
+    "regions": [
+      "r1",
+      "r2",
+      "r3"
+    ]
+  },
+  {
+    "id": "harvest-stew",
+    "name": "Harvest Stew 丰收炖菜",
+    "price": 90,
+    "effect": "heal",
+    "amount": 50,
+    "regions": [
+      "r2",
+      "r3",
+      "r4"
+    ]
+  },
+  {
+    "id": "tidewater-congee",
+    "name": "Tidewater Congee 海湾粥",
+    "price": 110,
+    "effect": "heal",
+    "amount": 60,
+    "regions": [
+      "r3",
+      "r4",
+      "r5"
+    ]
+  },
+  {
+    "id": "lantern-tea",
+    "name": "Lantern Tea 灯笼茶",
+    "price": 130,
+    "effect": "heal",
+    "amount": 70,
+    "regions": [
+      "r4",
+      "r5",
+      "r6",
+      "r7"
+    ]
+  },
+  {
+    "id": "mooncake",
+    "name": "Mooncake 月饼",
+    "price": 150,
+    "effect": "heal",
+    "amount": 80,
+    "regions": [
+      "r5",
+      "r6",
+      "r7"
+    ]
+  },
+  {
+    "id": "grove-brew",
+    "name": "Grove Brew 古林药饮",
+    "price": 200,
+    "effect": "full-heal",
+    "regions": [
+      "r6",
+      "r7"
+    ]
+  },
+  {
+    "id": "scholars-lantern",
+    "name": "Scholar's Lantern",
+    "price": 40,
+    "effect": "repel-mastered",
+    "amount": 40
+  },
+  {
+    "id": "ink-pot",
+    "name": "Ink Pot",
+    "price": 40,
+    "effect": "writing-retry"
+  },
+  {
+    "id": "smoke-ball",
+    "name": "Smoke Ball",
+    "price": 20,
+    "effect": "escape"
+  },
+  {
+    "id": "power-tea",
+    "name": "Power Tea 力量茶",
+    "price": 45,
+    "effect": "attack-boost",
+    "amount": 2
+  },
+  {
+    "id": "guardian-talisman",
+    "name": "Guardian Talisman 护身符",
+    "price": 45,
+    "effect": "defense-boost",
+    "amount": 2
+  },
+  {
+    "id": "forest-repellent",
+    "name": "Forest Repellent 驱兽香",
+    "price": 30,
+    "effect": "repellent",
+    "amount": 40
+  }
 ]

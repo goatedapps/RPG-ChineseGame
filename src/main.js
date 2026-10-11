@@ -1,8 +1,8 @@
 import { createEventBus } from './core/events.js';
-import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p13';
-import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p26';
+import { createPlayer, exportSaveEnvelope, listPlayers, loadLevelState, loadProfile, recoveryKey, renamePlayer, saveLevelState, saveProfile, startFreshLevelState } from './core/save.js?p14';
+import { activateRegion, listLevels, loadLevelPackage } from './content/loader.js?p27';
 import { attemptStep, isWalkable, validateMap } from './world/map.js';
-import { createRenderer } from './world/renderer.js?p30';
+import { createRenderer } from './world/renderer.js?p31';
 import { isHarvestPondCenter } from './world/harvestPond.js';
 import { bindInput } from './world/input.js?p10n';
 import { $, escapeHtml } from './ui/dom.js';
@@ -10,12 +10,12 @@ import { createOverlay } from './ui/overlay.js?p10l';
 import { updateHud } from './ui/hud.js?p3';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p60';
-import { createCollection } from './collection.js?p31';
-import { createAdventure } from './adventure.js?p44';
+import { createGameplay } from './gameplay.js?p61';
+import { createCollection } from './collection.js?p32';
+import { createAdventure } from './adventure.js?p46';
 import { createAudioManager } from './core/audio.js?p25';
-import { warmImage } from './core/assets.js';
-import { createPrologue } from './ui/prologue.js?p23';
+import { warmImage } from './core/assets.js?p2';
+import { createPrologue } from './ui/prologue.js?p24';
 import { isPhoneDevice, showPhoneNotice } from './ui/phoneNotice.js';
 import { localDay } from './core/time.js';
 import { encounterStep } from './world/encounters.js?p18';
@@ -286,7 +286,7 @@ async function startLevel(levelId) {
       playerName: selectedPlayer.name,
       levelPackage,
       state: loadResult.state,
-      renderer: createRenderer($('#world'), levelPackage.map),
+      renderer: createRenderer($('#world'), levelPackage.map, levelPackage.cosmetics),
       saveBlocked: Boolean(loadResult.blocked)
     };
     lastRewardState = { level: active.state.player.level, xp: active.state.player.xp, coins: active.state.player.coins };
@@ -385,7 +385,7 @@ function changeRoute(direction) {
     restoreNpcPositions(active.levelPackage.map, active.state.progress.npcs);
   } else if (direction !== 'back') return;
   active.renderer.dispose?.();
-  active.renderer = createRenderer($('#world'), active.levelPackage.map);
+  active.renderer = createRenderer($('#world'), active.levelPackage.map, active.levelPackage.cosmetics);
   persist();
   overlay.close();
   render();
@@ -402,7 +402,7 @@ function switchRegion(regionId) {
   active.renderer.dispose?.();
   active.levelPackage = activateRegion(active.levelPackage, regionId);
   enterRegion(active.state, active.levelPackage);
-  active.renderer = createRenderer($('#world'), active.levelPackage.map);
+  active.renderer = createRenderer($('#world'), active.levelPackage.map, active.levelPackage.cosmetics);
   restoreNpcPositions(active.levelPackage.map, active.state.progress.npcs);
   adventure?.initialize();
   persist();
@@ -533,7 +533,8 @@ async function boot() {
   const walkingHero = $('#boot-loading-hero');
   walkingHero?.decode().then(() => walkingHero.classList.add('ready')).catch(() => {});
   const openingImage = new Image();
-  openingImage.src = new URL('../assets/images/intro/dictionary-tree.jpg', import.meta.url).href;
+  openingImage.fetchPriority = 'high';
+  openingImage.src = new URL('../assets/images/intro/dictionary-tree.webp', import.meta.url).href;
   if (new URLSearchParams(location.search).get('debug') === '1') {
     for (const element of document.querySelectorAll('.debug-only')) element.hidden = false;
   }
@@ -601,8 +602,11 @@ async function boot() {
         showPlayerPicker(levels.some(level => level.id === requestedLevel && level.worldMappingReady) ? requestedLevel : null);
       }
     });
-    requestAnimationFrame(() => $('#boot-loading')?.remove());
-    const warmPaths = ['room/grandmas-room.jpg', 'intro/great-forgetter.jpg', 'intro/spirits-scattered.jpg', 'shop/shop-background.jpg', 'story/reading-scroll.jpg', 'hero/main-hero.webp', 'story/open-book.webp'];
+    requestAnimationFrame(() => {
+      $('#boot-loading')?.remove();
+      requestAnimationFrame(registerOfflineCache);
+    });
+    const warmPaths = ['intro/great-forgetter.webp', 'intro/spirits-scattered.webp'];
     (async () => { for (const path of warmPaths) await warmImage(new URL(`../assets/images/${path}`, import.meta.url).href).catch(() => {}); })();
   } catch (error) {
     console.error(error);
@@ -611,8 +615,10 @@ async function boot() {
   }
 }
 
-if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), { scope: new URL('../', import.meta.url).href }).catch(error => console.warn('Offline support could not start.', error));
+function registerOfflineCache() {
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    navigator.serviceWorker.register(new URL('../sw.js', import.meta.url), { scope: new URL('../', import.meta.url).href }).catch(error => console.warn('Offline support could not start.', error));
+  }
 }
 
 addEventListener('offline', () => { hud.status.textContent = 'Offline · progress stays on this device'; hud.status.classList.add('warning'); });

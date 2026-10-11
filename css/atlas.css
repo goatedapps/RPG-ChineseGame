@@ -314,7 +314,7 @@ body:not([data-tutorial-step]) .tutorial-pointer { display: none; }
 .atlas-pregame .stage {
   grid-column: 1;
   grid-row: 2;
-  background: linear-gradient(180deg, #102d3c85, #102d3cd9), url('../assets/images/intro/dictionary-tree.jpg') center / cover no-repeat, #173744;
+  background: linear-gradient(180deg, #102d3c85, #102d3cd9), url('../assets/images/intro/dictionary-tree.webp') center / cover no-repeat, #173744;
 }
 .atlas-pregame .overlay { background: transparent; }
 .atlas-level-picker {

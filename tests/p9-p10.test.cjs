@@ -118,7 +118,7 @@ test('shop has illustrated supplies, battle boosts and forest repellent', () => 
   assert.ok(items.some(item => item.effect === 'attack-boost'));
   assert.ok(items.some(item => item.effect === 'defense-boost'));
   assert.ok(items.some(item => item.effect === 'repellent' && item.amount >= 20));
-  assert.match(css, /shop-background\.jpg/);
+  assert.match(css, /shop-background\.webp/);
   assert.match(gameplay, /battle\.attackBoost/);
   assert.match(gameplay, /battle\.defenseBoost/);
   assert.match(collection, /data-use-repellent/);
@@ -202,7 +202,7 @@ test('Hero Status shows the main character and links creature selection from My 
   assert.match(collection, /<h1>Hero Status<\/h1>/);
   assert.match(collection, /hero-stat-grid/);
   assert.match(collection, /XP to Level/);
-  assert.match(collection, /heroPortrait\(equipment\.equipped, 'paper-hero'\)/);
+  assert.match(collection, /heroPortrait\(equipment\.equipped, 'paper-hero', game\.state\.progress\.cosmetics\?\.outfit\)/);
   assert.doesNotMatch(collection, /data-partners-open/);
   assert.match(collection, /data-room-creatures><b>Choose a creature companion/);
   assert.doesNotMatch(collection, /paper-hero[^>]*>勇/);

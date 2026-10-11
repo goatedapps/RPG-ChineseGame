@@ -1,0 +1,90 @@
+{
+  "tool": "Built-in imagegen",
+  "purpose": "Regional healing food, purchasable decorations and robe variants",
+  "prompts": [
+    {
+      "id": "rug",
+      "prompt": "Use case: stylized-concept. Create ONE transparent-background game decoration asset: a jade green woven bedroom rug with an antique gold embroidered cloud-and-leaf border. The supplied image is a STYLE AND PERSPECTIVE REFERENCE ONLY; do not reproduce the room. Isolate only the replacement rug, no floor or furniture. Match the room's richly painted storybook Chinese fantasy aesthetic, soft textured brushwork, warm lamplight from the right, natural textile detail. Camera is the same high oblique view as the foreground rug in the reference: a broad trapezoid, far edge horizontal and narrower, near edge horizontal and wider, subtly fringed edges, no folded corners. Rug should occupy almost full width of a wide canvas with tight but safe transparent padding. Jade centre, fine gold border, understated woven lotus motif. Genuine alpha transparency, no checkerboard, no white rectangle, no text."
+    },
+    {
+      "id": "bed",
+      "prompt": "Use case: stylized-concept. ONE standalone game decoration cutout, genuine transparent background. Reference image 1 is only the painted bedroom STYLE/PERSPECTIVE reference. Do not reproduce room or floor, no surrounding furniture, no UI, no lettering or watermark. Match richly textured painted Chinese fantasy storybook art, warm amber lamplight, muted natural materials, no vector/cartoon flat fills. Tight safe transparent padding, unobscured entire object. Create an empty oval woven companion nest: honey-brown wicker rim, soft jade green quilted cushion, subtle gold embroidered cloud details. View from the room's high three-quarter angle so top cushion is a broad ellipse. Nest wide and low, no creature inside (we overlay the existing creature separately)."
+    },
+    {
+      "id": "plant",
+      "prompt": "Use case: stylized-concept. ONE standalone game decoration cutout, genuine transparent background. Reference image 1 is only the painted bedroom STYLE/PERSPECTIVE reference. Do not reproduce room or floor, no surrounding furniture, no UI, no lettering or watermark. Match richly textured painted Chinese fantasy storybook art, warm amber lamplight, muted natural materials, no vector/cartoon flat fills. Tight safe transparent padding, unobscured entire object. Create one flowering plum blossom pot to stand on the room floor: cream glazed Chinese ceramic pot with restrained blue-green bamboo brushwork, slender woody branches, pale pink blossoms and a few jade leaves. High three-quarter view with visible pot rim, softly lit from right. Total silhouette tall about 2:3 width to height. No surrounding furniture."
+    },
+    {
+      "id": "lantern",
+      "prompt": "Use case: stylized-concept. ONE standalone game decoration cutout, genuine transparent background. Reference image 1 is only the painted bedroom STYLE/PERSPECTIVE reference. Do not reproduce room or floor, no surrounding furniture, no UI, no lettering or watermark. Match richly textured painted Chinese fantasy storybook art, warm amber lamplight, muted natural materials, no vector/cartoon flat fills. Tight safe transparent padding, unobscured entire object. Create one small red silk Chinese hanging lantern with antique brass top and bottom, fine gold cloud embroidery, short hanging cord above and red tassel below. Three-quarter perspective, warm glowing amber interior, natural silk ribs, no large external opaque halo. Tall narrow silhouette, full hanging cord and tassel included."
+    },
+    {
+      "id": "scroll",
+      "prompt": "Use case: stylized-concept. ONE standalone game decoration cutout, genuine transparent background. Reference image 1 is only the painted bedroom STYLE/PERSPECTIVE reference. Do not reproduce room or floor, no surrounding furniture, no UI, no lettering or watermark. Match richly textured painted Chinese fantasy storybook art, warm amber lamplight, muted natural materials, no vector/cartoon flat fills. Tight safe transparent padding, unobscured entire object. Create one vertical Chinese landscape scroll on pale antique parchment, dark wooden rods at top and bottom, delicate hanging cord. Misty jade mountains and a tiny gold sun in atmospheric traditional painted landscape, understated. Front view matching reference wall painting; no calligraphy or lettering. Whole vertical scroll isolated, no wall, no extra objects."
+    },
+    {
+      "id": "jade",
+      "prompt": "Use case: identity-preserve. Edit the supplied full-body hero into ONE complete outfit variant for the same game. Keep the EXACT same friendly child's face, eyes, skin tone, hairstyle, red headband, expression, pose, hands, proportions, footwear, bag, red tassels, jade accessories and giant brush. Preserve the brush and open palm. Keep full body including shoes and brush tip safely inside canvas. Same 425:632 portrait aspect and composition, transparent background, no scene/no lettering/no border/no shadow backdrop. Keep richly painted storybook illustration style. Change ONLY the robe fabric and its decorative trim. Jade traveller robe: rich deep jade green main fabric, restrained antique gold embroidered clouds and bamboo-leaf detailing along hem, cream collar and inner robe, darker forest-green outer accents. Recognizably identical hero, no armour."
+    },
+    {
+      "id": "crimson",
+      "prompt": "Use case: identity-preserve. Edit the supplied full-body hero into ONE complete outfit variant for the same game. Keep the EXACT same friendly child's face, eyes, skin tone, hairstyle, red headband, expression, pose, hands, proportions, footwear, bag, red tassels, jade accessories and giant brush. Preserve the brush and open palm. Keep full body including shoes and brush tip safely inside canvas. Same 425:632 portrait aspect and composition, transparent background, no scene/no lettering/no border/no shadow backdrop. Keep richly painted storybook illustration style. Change ONLY the robe fabric and its decorative trim. Festival robe: warm crimson main fabric, fine antique gold embroidered cloud and small lantern motifs on hem and sleeves, cream collar and inner robe, darker red side fabric. Recognizably identical hero, no armour."
+    },
+    {
+      "id": "teal",
+      "prompt": "Use case: identity-preserve. Edit the supplied full-body hero into ONE complete outfit variant for the same game. Keep the EXACT same friendly child's face, eyes, skin tone, hairstyle, red headband, expression, pose, hands, proportions, footwear, bag, red tassels, jade accessories and giant brush. Preserve the brush and open palm. Keep full body including shoes and brush tip safely inside canvas. Same 425:632 portrait aspect and composition, transparent background, no scene/no lettering/no border/no shadow backdrop. Keep richly painted storybook illustration style. Change ONLY the robe fabric and its decorative trim. Tidewater robe: rich sea teal-blue main fabric, subtle pale silver and cream embroidery with wave motifs along hem and cuffs, cream collar and inner robe, darker ocean teal side fabric. Recognizably identical hero, no armour."
+    },
+    {
+      "id": "throw",
+      "prompt": "Use case: stylized-concept. One transparent cutout game decoration: a crimson silk quilted bed runner / throw with understated antique-gold cloud embroidery, soft folds and short tassels. Reference is painted bedroom STYLE and CAMERA perspective only. NO bed, floor, room, wall, other objects or text. Match the bed's angle in reference, long far edge receding to the right and near edge sloping down-left: fabric drapes over the foot of the blue bed, broad top plane and soft hanging near side. Full isolated cloth, warm lamplight, textured storybook painting, alpha transparent all around, no opaque backdrop."
+    },
+    {
+      "id": "ribbon",
+      "prompt": "Use case: stylized-concept. One isolated red silk companion bow cutout with jade bead centre and delicate gold stitching, two neat bow loops and two short flowing tails. Transparent background, no creature, no room, no wall, no text. Match richly painted Chinese fantasy storybook texture and warm lamplight of reference room. Front three-quarter view, full object visible with safe padding. Intended tiny cosmetic accessory for a friendly creature."
+    },
+    {
+      "id": "room-without-rug",
+      "prompt": "Use case: precise-object-edit. Edit this exact illustrated bedroom ONLY by removing the large blue-bordered woven rug on the foreground floor. Replace that rug area with continuous matching wooden floorboards, following the existing perspective and warm lamplight/shadows. Keep every other pixel/element as close as possible to original: same exact viewpoint, image framing and landscape aspect, room architecture, shelves and all keepsakes, window and night village, blue curtains, wall scroll, plants, blue bed, desk, stool, lamps. No new objects, no rug, no character, no changes to wall painting or bedding. This is a neutral compositing background for trying on purchasable rugs. Full opaque room image, not transparent."
+    },
+    {
+      "id": "seaweed-broth",
+      "prompt": "Use case: stylized-concept. Generate ONE small game inventory icon, isolated on genuine transparent background. Reference rice ball is STYLE only: warmly painted Chinese fantasy storybook illustration, crisp readable silhouette, subtle ink outline, textured food, soft amber lighting. A single serving in a simple ceramic vessel, almost filling square canvas with safe margin. No background, no table, no text, no labels, no extra separate objects. A cream ceramic bowl of clear golden seaweed broth with dark green seaweed ribbons, small tofu cubes and a few scallions. View slightly from above, friendly appetizing food icon."
+    },
+    {
+      "id": "harvest-stew",
+      "prompt": "Use case: stylized-concept. Generate ONE small game inventory icon, isolated on genuine transparent background. Reference rice ball is STYLE only: warmly painted Chinese fantasy storybook illustration, crisp readable silhouette, subtle ink outline, textured food, soft amber lighting. A single serving in a simple ceramic vessel, almost filling square canvas with safe margin. No background, no table, no text, no labels, no extra separate objects. A warm terracotta bowl of hearty harvest vegetable stew with bright orange pumpkin, carrots and greens in thick golden broth. View slightly from above, friendly appetizing food icon."
+    },
+    {
+      "id": "tidewater-congee",
+      "prompt": "Use case: stylized-concept. Generate ONE small game inventory icon, isolated on genuine transparent background. Reference rice ball is STYLE only: warmly painted Chinese fantasy storybook illustration, crisp readable silhouette, subtle ink outline, textured food, soft amber lighting. A single serving in a simple ceramic vessel, almost filling square canvas with safe margin. No background, no table, no text, no labels, no extra separate objects. A blue-and-white Chinese ceramic bowl of creamy rice congee with a small cooked fish fillet, ginger slivers and scallion garnish. View slightly from above, friendly appetizing food icon."
+    },
+    {
+      "id": "lantern-tea",
+      "prompt": "Use case: stylized-concept. ONE small game inventory icon on genuine transparent background, same warmly painted storybook style as the reference rice ball. A cream ceramic Chinese tea cup filled with warm amber tea, simple red lantern-and-gold-cloud motif on the cup, tiny matching saucer. View slightly from above, crisp silhouette almost filling square canvas, gentle steam. No table/background/text/labels, one serving, safe margin."
+    },
+    {
+      "id": "grove-brew",
+      "prompt": "Use case: stylized-concept. ONE small game inventory icon on genuine transparent background, same warmly painted storybook style as the reference rice ball. A small jade-green glazed ceramic herbal flask with wooden stopper, embossed leaf and root designs and a soft gold cord tied at neck, faint luminous herbal green liquid visible at the opening. This is the late-game full-healing Grove Brew. Crisp readable silhouette almost filling square canvas, soft warm light, no table/background/text/labels, safe margin."
+    },
+    {
+      "id": "crimson-throw-fitted",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the blue quilt area of this exact room image: add a crimson-and-antique-gold silk bed throw resting flat across the LEFT VISIBLE part of the blue mattress, with its near edge draping down the BLUE BED SIDE. It must fit the mattress perspective and stay fully within the bed silhouette. The desk in front of the bed must remain IN FRONT and occlude the throw where they overlap; never place the throw on, beside or hanging from the table. The throw is on the bed, no floor contact, no floating. Keep everything else unchanged: same viewpoint and 1672:941 landscape composition, architecture, shelves, keepsakes, window, curtains, plants, wooden floor, blue-bordered rug, all desk objects and stool. Match existing warm painterly lighting. Full opaque edited room, no UI/text."
+    },
+    {
+      "id": "hero-map-jade",
+      "prompt": "Use case: identity-preserve. Edit reference image 1, the compact full-body map hero, changing ONLY clothing colour and embroidered trim to match the outfit in reference image 2. Preserve EXACT map sprite friendly face, hair, headband, small brush, pose, full body, proportions, overall small chibi style, all accessories, no background. This is ONE front-facing 256:384 full-body map sprite, not a sprite sheet; entire figure visible with same margins and no floor or drop-shadow panel. Genuine alpha transparent backdrop. Reference image 2 gives outfit only, do not copy its longer body proportions or its pose. Deep jade green robe with gold bamboo/cloud trim."
+    },
+    {
+      "id": "hero-map-crimson",
+      "prompt": "Use case: identity-preserve. Edit reference image 1, the compact full-body map hero, changing ONLY clothing colour and embroidered trim to match the outfit in reference image 2. Preserve EXACT map sprite friendly face, hair, headband, small brush, pose, full body, proportions, overall small chibi style, all accessories, no background. This is ONE front-facing 256:384 full-body map sprite, not a sprite sheet; entire figure visible with same margins and no floor or drop-shadow panel. Genuine alpha transparent backdrop. Reference image 2 gives outfit only, do not copy its longer body proportions or its pose. Crimson robe with antique gold lantern/cloud trim."
+    },
+    {
+      "id": "hero-map-teal",
+      "prompt": "Use case: identity-preserve. Edit reference image 1, the compact full-body map hero, changing ONLY clothing colour and embroidered trim to match the outfit in reference image 2. Preserve EXACT map sprite friendly face, hair, headband, small brush, pose, full body, proportions, overall small chibi style, all accessories, no background. This is ONE front-facing 256:384 full-body map sprite, not a sprite sheet; entire figure visible with same margins and no floor or drop-shadow panel. Genuine alpha transparent backdrop. Reference image 2 gives outfit only, do not copy its longer body proportions or its pose. Sea teal-blue robe with pale silver wave trim."
+    },
+    {
+      "id": "room-throw-no-rug",
+      "prompt": "Use case: precise-object-edit. Remove ONLY the blue-bordered rug from the foreground floor of this reference bedroom with its fitted crimson bed throw. Continue the warm wooden floorboards and existing light/shadows through the rug area. Keep the crimson throw exactly fitted on mattress and bed side behind the desk; preserve everything else, same composition, furniture, keepsakes, window, lighting, exact landscape aspect. Full opaque room, no new objects/no text. This is the matching empty-floor variant used when a jade rug is placed."
+    }
+  ]
+}

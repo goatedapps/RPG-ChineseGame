@@ -93,6 +93,10 @@ Battle XP is half its earlier rate to prevent the hero from outlevelling the reg
 All three areas remain accessible from the start so difficulty, rather than a lock, guides progression.
 
 The shop includes consumables, gear and lesson bait.
+Each village sells three healing foods: keep the stronger two from the preceding village and introduce the next food, with Ancient Grove and Treehouse Summit sharing Lantern Tea, Mooncake and full-heal Grove Brew.
+Ordinary food restores fixed HP; Grove Brew restores maximum HP for 200 coins, and existing inventory quantities survive migration.
+Regional shops also sell one-time cosmetic decorations and robes; schema 16 stores ownership, placed furniture and the selected outfit separately from earned Restoration keepsakes.
+Decorations can be put away for free in My Room, and robes can be changed in My Room or Hero Status and appear in exploration and battle portraits.
 Lesson bait lets the player select the exact missing spirit to attract.
 Each boss gate requires 80% of distinct regional Word Spirits at Bronze or better plus that region's reading key; the game shows the required number, not a percentage.
 After the boss, the onward gate uses a 15-word from-memory dictation with 13 correct required by default; parents can configure both values, and a pass persists for that region.
@@ -131,7 +135,7 @@ Triggers are a correct attack in a named skill, a count of correct attacks, succ
 Support scales with recorded creature level up to the hero’s current level; provisional authored budgets cap combined healing and shielding at 20% of hero maximum HP and total extra damage at 15% of enemy maximum HP.
 The battle card shows the trigger, remaining support and actual effects; pure healing waits until HP is missing, shields survive dodges, and damage charges are spent only when they add damage to a correct attack.
 Apply the boss damage cap to the final combined attack, preserving at least ten successful answers; guided first battles suppress automatic support to preserve the Rice Ball lesson.
-Collection records and selected partners remain compatible with schema 15; support counters exist only in the current battle.
+Collection records and selected partners remain compatible with schema 16; support counters exist only in the current battle.
 Boss discoveries appear after defeat and cannot be selected as companions.
 Schema 15 adds creature forms to collection records, migrating earlier records to Normal while preserving their levels and selected partner.
 Older saves without creature records start collecting species at their next victory because historical creature levels were not saved.
@@ -259,6 +263,8 @@ P6 startup, all twelve lesson choices, final-lesson word selection and from-memo
 Local Lighthouse accessibility scored 100 for both P2 and P5 after the objective contrast fix.
 The minimum-progress audit models 80% Bronze cards, one battle and two correct practice answers per card, confirms all seven bosses are beatable without optional purchases, and enters each next region 1–4 levels below its first creatures.
 The first-paint loading screen shows the illustrated walking hero and waits for the opening art to decode before revealing the prologue.
+Opening, room, shop and reading backgrounds use compact WebP assets, with a display-sized walking hero and Restoration atlas.
+Offline installation begins after the opening screen paints and downloads at most two assets at a time with low priority; full offline availability still requires installation to finish.
 Human audio/content proofread remains open.
 The hosted PWA is the release format; double-click `file://` support does not justify a second single-file build because the modular game and content loading require HTTP.
 

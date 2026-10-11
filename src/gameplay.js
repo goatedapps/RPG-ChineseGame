@@ -2,6 +2,8 @@ import { battleRewardAmounts, createBattleState, escapeSucceeded, gainBattleRewa
 import { CREATURE_VARIANTS, createCreature, creatureSpellName, creatureVariantNote } from './battle/creatures.js?p20';
 import { heroStats } from './battle/damage.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
+import { shopItemsForRegion } from './systems/shop.js';
+import { cosmeticPurchaseReason, normalizeCosmetics, purchaseCosmetic } from './systems/cosmetics.js';
 import { buyItem } from './systems/economy.js';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { gearBonuses } from './systems/gear.js';
@@ -25,13 +27,13 @@ import { escapeHtml } from './ui/dom.js';
 import { showQuestion } from './ui/questionView.js?p19';
 import { showWritingTask } from './ui/writingView.js?p16';
 import { createSpeechController } from './learning/audio.js?p1';
-import { heroPortrait } from './ui/heroPortrait.js?p10o';
+import { heroPortrait } from './ui/heroPortrait.js?p11';
 import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
 import { downloadSaveFile, readSaveFile } from './ui/saveTransfer.js';
 
 const SHOP_ITEM_COPY = Object.freeze({
-  heal: item => `Restore at least ${item.amount} HP (${Math.round(item.healFraction * 100)}% max HP) during battle`,
+  heal: item => `Restore ${item.amount} HP during battle`,
   'full-heal': () => 'Restore all HP during battle',
   'writing-retry': () => 'Retry one writing challenge safely',
   escape: () => 'Guarantee a safe escape from battle',
@@ -182,7 +184,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     const companion = battle.companion;
     overlay.open(`<article class="battle-scene lesson-${battle.word.lesson}">
       <div class="battle-arena">
-        <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion * 100)}%</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
+        <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero', game.state.progress.cosmetics?.outfit)}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense} · EVA ${Math.round(hero.evasion * 100)}%</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
         <div class="battle-enemy ${battle.creature.variant}" style="--creature:${battle.creature.color}"><div class="battle-nameplate"><b>${battle.creature.variant === 'golden' ? 'Golden ' : battle.creature.variant === 'elite' ? 'Elite ' : ''}${escapeHtml(battle.creature.name)} · Lv ${battle.creature.level}</b><small>ATK ${battle.creature.attack} · DEF ${battle.creature.defense} · Weak to ${escapeHtml(SKILLS[battle.creature.weak].name)}</small><div class="enemy-hp"><i style="width:${battle.enemyHp / battle.creature.maxHp * 100}%"></i></div><strong>HP ${battle.enemyHp}/${battle.creature.maxHp}</strong></div><div class="creature-art">${creatureSvg(battle.creature.id, '？')}</div></div>
       </div>
       <div class="battle-console"><p class="panel-kicker">${battle.review ? 'Gold spirit review' : `${battle.creature.variant === 'elite' ? 'Elite' : battle.creature.variant === 'golden' ? 'Golden' : 'Wild'} word spirit`} · Lesson ${battle.word.lesson}</p><h2 tabindex="-1" data-battle-title>Your turn${battle.streak >= 2 ? ` · ${battle.streak} correct in a row!` : ''}</h2>${message ? `<p class="battle-message">${escapeHtml(message)}</p>` : '<p class="battle-message">The spirit’s identity stays sealed until you win. Choose an attack.</p>'}
@@ -415,7 +417,7 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
     let tutorialRoll = 0;
     const creature = createCreature(1, game.levelPackage.balance, () => tutorialRoll++ === 0 ? 0 : 0.5, 'fogling');
     const ask = () => {
-      overlay.open(`<article class="battle-scene lesson-1"><div class="battle-arena"><div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><div class="enemy-hp player-hp"><i style="width:100%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div><div class="battle-enemy"><div class="battle-nameplate"><b>${escapeHtml(creature.name)} · Lv ${creature.level}</b><div class="enemy-hp"><i style="width:100%"></i></div><strong>HP 1/1</strong></div><div class="creature-art">${creatureSvg(creature.id, '？')}</div></div></div><div class="battle-console"><p class="panel-kicker">First Spirit Brush battle</p><h2>Free the Word Spirit</h2><p>The Great Forgetter sealed Word Spirits inside wild creatures. Answer to weaken this Fogling; win the battle to free its Spirit into your Book. That is why you explore and fight.</p><button class="primary" data-tutorial-attack>Try Meaning Strike</button></div></article>`, { dismissible: false });
+      overlay.open(`<article class="battle-scene lesson-1"><div class="battle-arena"><div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero', game.state.progress.cosmetics?.outfit)}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><div class="enemy-hp player-hp"><i style="width:100%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div><div class="battle-enemy"><div class="battle-nameplate"><b>${escapeHtml(creature.name)} · Lv ${creature.level}</b><div class="enemy-hp"><i style="width:100%"></i></div><strong>HP 1/1</strong></div><div class="creature-art">${creatureSvg(creature.id, '？')}</div></div></div><div class="battle-console"><p class="panel-kicker">First Spirit Brush battle</p><h2>Free the Word Spirit</h2><p>The Great Forgetter sealed Word Spirits inside wild creatures. Answer to weaken this Fogling; win the battle to free its Spirit into your Book. That is why you explore and fight.</p><button class="primary" data-tutorial-attack>Try Meaning Strike</button></div></article>`, { dismissible: false });
       document.querySelector('[data-tutorial-attack]').addEventListener('click', () => {
         showQuestion(overlay, makeBattleQuestion(word, 'm', game.levelPackage.content.words), word, result => {
           recordWord(word, 'm', result.ok, false, false);
@@ -757,15 +759,29 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
 
   function shop() {
     const game = active();
-    const shopItems = game.levelPackage.items;
-    const travelSupplies = shopItems.filter(item => item.effect !== 'repel-mastered');
+    const shopItems = shopItemsForRegion(game.levelPackage.items, game.levelPackage.region.id);
+    const cosmetics = normalizeCosmetics(game.state.progress.cosmetics, game.levelPackage.cosmetics);
+    const cosmeticItems = (game.levelPackage.cosmetics || []).filter(item => item.region === game.levelPackage.region.id);
+    const healingItems = shopItems.filter(item => ['heal', 'full-heal'].includes(item.effect));
+    const travelSupplies = shopItems.filter(item => !['repel-mastered', 'heal', 'full-heal'].includes(item.effect));
     const lanterns = shopItems.filter(item => item.effect === 'repel-mastered');
     const redCap = game.levelPackage.gear.find(gear => gear.id === 'red-cap');
     const shopName = game.levelPackage.map.objects.find(object => object.id === 'shop-door')?.interaction?.title || 'Shop';
     const itemCard = item => `<article class="shop-item"><img class="item-icon" src="${itemIcon(item.id)}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(itemDescription(item))}</span><small>${item.price} coins · ${game.state.progress.inventory[item.id] || 0} in bag</small></div><button data-buy="${item.id}" ${game.state.player.coins < item.price ? 'disabled' : ''}>Buy</button></article>`;
+    const cosmeticCards = cosmeticItems.map(item => {
+      const reason = cosmeticPurchaseReason(game.state.player, cosmetics, item, game.levelPackage.region.id);
+      return `<article class="shop-item cosmetic-shop-item"><img class="item-icon" src="${item.image}" alt=""><div><b>${escapeHtml(item.name)}</b><span>${escapeHtml(item.description)} Cosmetic only.</span><small>${item.price} coins · ${cosmetics.owned.includes(item.id) ? 'Owned' : reason || 'Buy once; change freely in My Room'}</small></div><button data-buy-cosmetic="${item.id}" ${reason ? 'disabled' : ''}>${cosmetics.owned.includes(item.id) ? 'Owned' : 'Buy'}</button></article>`;
+    }).join('');
     const baitCards = game.levelPackage.map.zones.map(zone => `<article class="shop-item"><img class="item-icon" src="${itemIcon('spirit-bait')}" alt=""><div><b>${escapeHtml(zone.name)} Bait</b><span>Choose the exact Lesson ${zone.lesson} spirit for your next encounter</span><small>${BAIT_PRICE} coins</small></div><button data-bait-lesson="${zone.lesson}" ${game.state.player.coins < BAIT_PRICE ? 'disabled' : ''}>Choose</button></article>`).join('');
     const gearCard = `<article class="shop-item"><img class="item-icon" src="${itemIcon('red-cap')}" alt=""><div><b>${escapeHtml(redCap.name)}</b><span>Add 3 maximum HP when equipped</span><small>${redCap.price} coins</small></div><button data-buy-gear="red-cap" ${game.state.progress.equipment.owned.includes('red-cap') || game.state.player.coins < redCap.price ? 'disabled' : ''}>${game.state.progress.equipment.owned.includes('red-cap') ? 'Owned' : 'Buy'}</button></article>`;
-    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1 tabindex="-1" data-shop-title>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><div class="shop-banner-actions"><button class="secondary" data-close-overlay>Leave shop</button><strong>${game.state.player.coins} coins</strong></div></header><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${travelSupplies.map(itemCard).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${baitCards}${lanterns.map(itemCard).join('')}${gearCard}</div></section></div>`, { focusSelector: '[data-shop-title]' });
+    overlay.open(`<div class="panel shop-panel"><header class="shop-banner"><div><p>${escapeHtml(shopName)}</p><h1 tabindex="-1" data-shop-title>Supplies for the road</h1><span>Choose healing, battle boosts, or a quieter walk through the forest.</span></div><div class="shop-banner-actions"><button class="secondary" data-close-overlay>Leave shop</button><strong>${game.state.player.coins} coins</strong></div></header><section class="shop-shelf"><h2>Healing food</h2><p>Three local choices. Healing food is used during battle.</p><div class="shop-grid">${healingItems.map(itemCard).join('')}</div></section><section class="shop-shelf"><h2>Travel supplies</h2><div class="shop-grid">${travelSupplies.map(itemCard).join('')}</div></section><section class="shop-shelf"><h2>Spirit bait and gear</h2><div class="shop-grid">${baitCards}${lanterns.map(itemCard).join('')}${gearCard}</div></section>${cosmeticCards ? `<section class="shop-shelf"><h2>Room decorations and outfits</h2><p>Make your room and hero yours. No stat or learning bonuses.</p><div class="shop-grid">${cosmeticCards}</div></section>` : ''}</div>`, { focusSelector: '[data-shop-title]' });
+    for (const button of document.querySelectorAll('[data-buy-cosmetic]')) button.addEventListener('click', () => {
+      const item = cosmeticItems.find(candidate => candidate.id === button.dataset.buyCosmetic);
+      const result = purchaseCosmetic(game.state.player, normalizeCosmetics(game.state.progress.cosmetics, game.levelPackage.cosmetics), item, game.levelPackage.region.id);
+      if (!result.ok) return toast(result.reason);
+      game.state.player = result.player; game.state.progress.cosmetics = result.cosmetics;
+      commit(); audio?.sfx('purchase'); toast(`${item.name} ${item.type === 'outfit' ? 'is now your outfit' : 'placed in My Room'}.`); shop();
+    });
     for (const button of document.querySelectorAll('[data-buy]')) button.addEventListener('click', () => {
       const item = shopItems.find(candidate => candidate.id === button.dataset.buy);
       const completesFirstShopVisit = tutorialStep() === 2 && item.id === 'rice-ball';

@@ -1,9 +1,10 @@
 import { gateDictationRules } from '../systems/dictation.js';
 import { isWalkable } from '../world/map.js';
 import { ROUTE_MAP_VERSION, scaleRouteCell } from '../world/routeMaps.js';
+import { normalizeCosmetics } from '../systems/cosmetics.js';
 import { normalizeCreatures } from '../systems/companions.js';
 
-export const SAVE_SCHEMA_VERSION = 15;
+export const SAVE_SCHEMA_VERSION = 16;
 
 export function createFreshState(levelPackage) {
   const spawn = levelPackage.map.spawn;
@@ -47,6 +48,7 @@ export function createFreshState(levelPackage) {
       sets: {},
       milestones: [],
       room: { decorations: [], trophies: [] },
+      cosmetics: { owned: [], room: [], outfit: null },
       daily: { day: '', quests: [], chestClaimed: false, completedToday: false },
       streak: { count: 0, lastDay: '', freezeWeek: '' },
       scrolls: { day: '', found: false, unlocked: [] },
@@ -204,6 +206,7 @@ export function migrateState(candidate, levelPackage) {
         sets: { ...fresh.progress.sets, ...(candidate.progress?.sets || {}) },
         milestones: Array.isArray(candidate.progress?.milestones) ? candidate.progress.milestones : [],
         room: { ...fresh.progress.room, ...(candidate.progress?.room || {}) },
+        cosmetics: normalizeCosmetics(candidate.progress?.cosmetics, levelPackage.cosmetics),
         daily: { ...fresh.progress.daily, ...(candidate.progress?.daily || {}) },
         streak: { ...fresh.progress.streak, ...(candidate.progress?.streak || {}) },
         scrolls: { ...fresh.progress.scrolls, ...(candidate.progress?.scrolls || {}) },

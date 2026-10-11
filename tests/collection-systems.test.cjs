@@ -9,10 +9,11 @@ const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8
 const silver = { collected: true, ticks: { m: 2, p: 2, h: 2, u: 0, w: 0 } };
 const gold = { collected: true, ticks: { m: 2, p: 2, h: 2, u: 2, w: 2 } };
 
-test('the nine current shop consumables are authored and inventory use is immutable', async () => {
+test('regional shop consumables are authored and inventory use is immutable', async () => {
   const items = readJson('content/authored/shared/items.json');
   const { applyHealing, useConsumable } = await import('../src/systems/inventory.js');
-  assert.deepEqual(items.map(item => item.effect), ['heal', 'heal', 'full-heal', 'repel-mastered', 'writing-retry', 'escape', 'attack-boost', 'defense-boost', 'repellent']);
+  assert.equal(items.filter(item => ['heal', 'full-heal'].includes(item.effect)).length, 8);
+  assert.deepEqual(items.filter(item => !item.regions).map(item => item.effect), ['repel-mastered', 'writing-retry', 'escape', 'attack-boost', 'defense-boost', 'repellent']);
   const used = useConsumable({ 'rice-ball': 2 }, 'rice-ball');
   assert.equal(used.ok, true);
   assert.equal(used.inventory['rice-ball'], 1);

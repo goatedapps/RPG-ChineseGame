@@ -15,7 +15,7 @@ import { companionBattleCard } from './ui/companion.js';
 import { createBoss } from './battle/creatures.js';
 import { gearBonuses } from './systems/gear.js';
 import { creatureSvg } from './battle/creatureArt.js?p10n';
-import { heroPortrait } from './ui/heroPortrait.js?p10o';
+import { heroPortrait } from './ui/heroPortrait.js?p11';
 import { createSpeechController } from './learning/audio.js?p1';
 import { applyHealing, useConsumable } from './systems/inventory.js';
 import { chooseGateDictationWords, gateDictationPool, gateDictationRules } from './systems/dictation.js';
@@ -27,7 +27,7 @@ import { battleQuestionBadge } from './ui/battleBadge.js';
 import { animateBattleHealth } from './ui/battleHealth.js';
 import { completeDictionaryHeart, finaleLedger } from './systems/ending.js';
 import { harvestPondPassage } from './content/harvestPond.js';
-import { showFinalBlow, showFinalReform, showFinale } from './ui/ending.js';
+import { showFinalBlow, showFinalReform, showFinale } from './ui/ending.js?p2';
 
 function addUnique(list, value) {
   if (!list.includes(value)) list.push(value);
@@ -44,7 +44,7 @@ const FRAGMENT_ART = Object.freeze({
 });
 
 const BOSS_ITEM_COPY = Object.freeze({
-  heal: item => `Restore at least ${item.amount} HP (${Math.round(item.healFraction * 100)}% max HP)`,
+  heal: item => `Restore ${item.amount} HP`,
   'full-heal': () => 'Restore all HP',
   escape: () => 'Leave the boss battle safely',
   'attack-boost': item => `Increase successful boss attacks by ${Math.round(item.amount * 8)}%`,
@@ -671,7 +671,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
       const bossId = game.levelPackage.region.boss;
       const bossArt = bossId === 'muddle-king' ? creatureSvg('muddle-king', '') : creatureSvg(bossId, '');
       return `<div class="boss-battle-arena">
-        <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero')}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense}</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
+        <div class="battle-player">${heroPortrait(game.state.progress.equipment?.equipped, 'battle-hero', game.state.progress.cosmetics?.outfit)}<div class="battle-nameplate"><b>You · Lv ${game.state.player.level}</b><small>ATK ${hero.attack} · DEF ${hero.defense}</small><div class="enemy-hp player-hp"><i style="width:${game.state.player.hp / game.state.player.maxHp * 100}%"></i></div><strong>HP ${game.state.player.hp}/${game.state.player.maxHp}</strong></div></div>
         <div class="battle-enemy boss-enemy"><div class="battle-nameplate"><b>${escapeHtml(bossName)} · Lv ${battle.level} Boss</b><small>ATK ${battle.attack} · DEF ${battle.defense}</small><div class="enemy-hp"><i style="width:${battle.hp / battle.maxHp * 100}%"></i></div><strong>HP ${battle.hp}/${battle.maxHp}</strong></div><div class="creature-art">${bossArt}</div></div>
       </div>`;
     };
@@ -743,7 +743,7 @@ export function createAdventure({ overlay, getActive, persist, render, toast, ga
             showFinalBlow(overlay, bossWin);
             return;
           }
-          overlay.open(`<article class="battle-scene boss-victory-scene"><div class="boss-victory-stage"><div class="boss-victory-hero">${heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero')}</div><div class="boss-victory-boss boss-split-left" aria-hidden="true">${bossArt}</div><div class="boss-victory-boss boss-split-right" aria-hidden="true">${bossArt}</div><div class="boss-victory-slash" aria-hidden="true"></div></div><div class="battle-console"><p class="panel-kicker">Victory</p><h1>${escapeHtml(bossName)} defeated!</h1><p>Your final spell dealt ${damage} damage. The Spirit Brush is ready to be restored.</p><button class="primary" data-boss-victory>Continue the story</button></div></article>`, { dismissible: false });
+          overlay.open(`<article class="battle-scene boss-victory-scene"><div class="boss-victory-stage"><div class="boss-victory-hero">${heroPortrait(game.state.progress.equipment?.equipped, 'victory-hero', game.state.progress.cosmetics?.outfit)}</div><div class="boss-victory-boss boss-split-left" aria-hidden="true">${bossArt}</div><div class="boss-victory-boss boss-split-right" aria-hidden="true">${bossArt}</div><div class="boss-victory-slash" aria-hidden="true"></div></div><div class="battle-console"><p class="panel-kicker">Victory</p><h1>${escapeHtml(bossName)} defeated!</h1><p>Your final spell dealt ${damage} damage. The Spirit Brush is ready to be restored.</p><button class="primary" data-boss-victory>Continue the story</button></div></article>`, { dismissible: false });
           document.querySelector('[data-boss-victory]').addEventListener('click', bossWin, { once: true });
           return;
         }

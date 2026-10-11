@@ -75,7 +75,7 @@ test('first paint shows an illustrated walking-hero loader until the opening art
   assert.match(shell, /id="boot-loading-hero"[^>]*hero-walking\.webp/);
   assert.ok(shell.indexOf('id="boot-loading"') < shell.indexOf('id="prologue"'));
   assert.match(startup, /await openingImage\.decode\(\)/);
-  assert.match(startup, /createPrologue\([\s\S]*?requestAnimationFrame\(\(\) => \$\('#boot-loading'\)\?\.remove\(\)\)/);
+  assert.match(startup, /createPrologue\([\s\S]*?requestAnimationFrame\(\(\) => \{\s*\$\('#boot-loading'\)\?\.remove\(\);\s*requestAnimationFrame\(registerOfflineCache\)/);
   assert.match(styles, /@keyframes hero-walk/);
   assert.match(styles, /prefers-reduced-motion: reduce[\s\S]*boot-loading-hero\.ready/);
 });
@@ -83,9 +83,9 @@ test('first paint shows an illustrated walking-hero loader until the opening art
 test('Reading Hall has a packaged scroll backdrop and in-world dialogue avoids curriculum labels', () => {
   const styles = fs.readFileSync('css/stage.css', 'utf8');
   const serviceWorker = fs.readFileSync('sw.js', 'utf8');
-  assert.match(styles, /\.passage-art[^\n]*reading-scroll\.jpg/);
+  assert.match(styles, /\.passage-art[^\n]*reading-scroll\.webp/);
   assert.match(styles, /\.passage-text[^\n]*clamp\(21px,2\.1vw,24px\)/);
-  assert.match(serviceWorker, /assets\/images\/story\/reading-scroll\.jpg/);
+  assert.match(serviceWorker, /assets\/images\/story\/reading-scroll\.webp/);
   for (const file of fs.readdirSync('content/authored/campaign/maps')) {
     if (!/^r[1-7]-.*\.json$/.test(file)) continue;
     const map = JSON.parse(fs.readFileSync(`content/authored/campaign/maps/${file}`, 'utf8'));

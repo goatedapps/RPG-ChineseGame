@@ -9,7 +9,9 @@ import { tierOf } from './learning/mastery.js?p10f';
 import { escapeHtml } from './ui/dom.js';
 import { goalProgress } from './systems/parent.js?p10f';
 import { heroStats } from './battle/damage.js';
-import { heroPortrait } from './ui/heroPortrait.js?p10o';
+import { normalizeCosmetics, arrangeCosmetic } from './systems/cosmetics.js';
+import { cosmeticControls, roomCosmeticArt, roomCosmeticBackground } from './ui/cosmetics.js';
+import { heroPortrait } from './ui/heroPortrait.js?p11';
 import { useConsumable } from './systems/inventory.js';
 import { xpToNextLevel } from './core/progression.js';
 
@@ -60,7 +62,7 @@ function addUnique(list, value) {
 }
 
 function battleItemDescription(item) {
-  if (item.effect === 'heal') return `Restores at least ${item.amount} HP (${Math.round(item.healFraction * 100)}% max HP) in battle`;
+  if (item.effect === 'heal') return `Restores ${item.amount} HP in battle`;
   if (item.effect === 'full-heal') return 'Restores all HP in battle';
   if (item.effect === 'writing-retry') return 'Gives another writing attempt';
   if (item.effect === 'escape') return 'Guarantees escape from battle';
@@ -74,6 +76,15 @@ function battleItemDescription(item) {
 export function createCollection({ overlay, getActive, persist, render, toast, audio, onTutorialAction = () => {}, tutorialStep = () => null }) {
   const active = () => getActive();
   const commit = () => { persist(); render(); };
+
+  function bindCosmeticControls(reopen) {
+    for (const button of document.querySelectorAll('[data-arrange-cosmetic]')) button.addEventListener('click', () => {
+      const game = active();
+      const item = game.levelPackage.cosmetics.find(candidate => candidate.id === button.dataset.arrangeCosmetic);
+      game.state.progress.cosmetics = arrangeCosmetic(normalizeCosmetics(game.state.progress.cosmetics, game.levelPackage.cosmetics), item);
+      commit(); reopen();
+    });
+  }
 
   function collectedWords(game) {
     return game.levelPackage.content.words.filter(word => game.state.progress.words[word.w]?.collected || game.state.progress.words[word.w]?.c);
@@ -121,7 +132,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     const stats = heroStats(game.state.player.level);
     const xpNeeded = xpToNextLevel(game.state.player.level);
     const xpPercent = Math.min(100, game.state.player.xp / xpNeeded * 100);
-    overlay.open(`<div class="panel hero-status-panel"><div class="panel-header"><div><p class="panel-kicker">Main character</p><h1>Hero Status</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="character-preview">${heroPortrait(equipment.equipped, 'paper-hero')}<div class="hero-level"><b>Level ${game.state.player.level}</b><span>${game.state.player.xp}/${xpNeeded} XP to Level ${game.state.player.level + 1}</span><div class="hero-xp" role="progressbar" aria-label="Experience toward next level" aria-valuemin="0" aria-valuemax="${xpNeeded}" aria-valuenow="${game.state.player.xp}"><i style="width:${xpPercent}%"></i></div></div></div><div class="hero-stat-grid"><div><span>Health</span><b>${game.state.player.hp}/${game.state.player.maxHp}</b></div><div><span>Attack</span><b>${stats.attack}</b></div><div><span>Defence</span><b>${stats.defense}</b></div><div><span>Evasion</span><b>${Math.round((stats.evasion + bonuses.evasion) * 100)}%</b></div><div><span>Coins</span><b>${game.state.player.coins}</b></div><div><span>Battles won</span><b>${game.state.progress.battles || 0}</b></div></div><section class="equipment-section"><h2>Equipment</h2><p>Equipped gear currently adds +${bonuses.maxHp} maximum HP, +${Math.round(bonuses.evasion * 100)}% evasion, and +${Math.round(bonuses.xp * 100)}% XP.</p><div class="gear-grid">${game.levelPackage.gear.map(gear => { const owned = equipment.owned.includes(gear.id); const equipped = equipment.equipped[gear.slot] === gear.id; return `<article class="gear-card ${equipped ? 'is-equipped' : ''} ${owned ? '' : 'is-locked'}"><img src="${gearImage(gear.id)}" alt="" width="72" height="72"><div><b>${escapeHtml(gear.name)}</b><span>${escapeHtml(gear.slot)} · ${escapeHtml(gear.effect)}</span></div><button data-equip="${gear.id}" ${owned && !equipped ? '' : 'disabled'}>${equipped ? 'Equipped' : owned ? 'Equip' : 'Not earned'}</button></article>`; }).join('')}</div></section><div class="button-row"><button class="primary" data-craft-open>Craft Table</button></div></div>`);
+    overlay.open(`<div class="panel hero-status-panel"><div class="panel-header"><div><p class="panel-kicker">Main character</p><h1>Hero Status</h1></div><button class="secondary" data-close-overlay>Close</button></div><div class="character-preview">${heroPortrait(equipment.equipped, 'paper-hero', game.state.progress.cosmetics?.outfit)}<div class="hero-level"><b>Level ${game.state.player.level}</b><span>${game.state.player.xp}/${xpNeeded} XP to Level ${game.state.player.level + 1}</span><div class="hero-xp" role="progressbar" aria-label="Experience toward next level" aria-valuemin="0" aria-valuemax="${xpNeeded}" aria-valuenow="${game.state.player.xp}"><i style="width:${xpPercent}%"></i></div></div></div><div class="hero-stat-grid"><div><span>Health</span><b>${game.state.player.hp}/${game.state.player.maxHp}</b></div><div><span>Attack</span><b>${stats.attack}</b></div><div><span>Defence</span><b>${stats.defense}</b></div><div><span>Evasion</span><b>${Math.round((stats.evasion + bonuses.evasion) * 100)}%</b></div><div><span>Coins</span><b>${game.state.player.coins}</b></div><div><span>Battles won</span><b>${game.state.progress.battles || 0}</b></div></div><section class="equipment-section"><h2>Equipment</h2><p>Equipped gear currently adds +${bonuses.maxHp} maximum HP, +${Math.round(bonuses.evasion * 100)}% evasion, and +${Math.round(bonuses.xp * 100)}% XP.</p><div class="gear-grid">${game.levelPackage.gear.map(gear => { const owned = equipment.owned.includes(gear.id); const equipped = equipment.equipped[gear.slot] === gear.id; return `<article class="gear-card ${equipped ? 'is-equipped' : ''} ${owned ? '' : 'is-locked'}"><img src="${gearImage(gear.id)}" alt="" width="72" height="72"><div><b>${escapeHtml(gear.name)}</b><span>${escapeHtml(gear.slot)} · ${escapeHtml(gear.effect)}</span></div><button data-equip="${gear.id}" ${owned && !equipped ? '' : 'disabled'}>${equipped ? 'Equipped' : owned ? 'Equip' : 'Not earned'}</button></article>`; }).join('')}</div></section><div class="button-row"><button class="primary" data-craft-open>Craft Table</button></div>${cosmeticControls(normalizeCosmetics(game.state.progress.cosmetics, game.levelPackage.cosmetics), game.levelPackage.cosmetics || [], equipment.equipped)}</div>`);
     for (const button of document.querySelectorAll('[data-equip]:not([disabled])')) button.addEventListener('click', () => {
       const gear = game.levelPackage.gear.find(item => item.id === button.dataset.equip);
       game.state.progress.equipment = equipGear(game.state.progress.equipment, gear);
@@ -130,6 +141,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       character();
     });
     document.querySelector('[data-craft-open]').addEventListener('click', () => crafting());
+    bindCosmeticControls(character);
   }
 
   function showCraftSuccess(recipe) {
@@ -261,6 +273,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     const goal = goalProgress(game.state.progress.parent.goal, game.state, gold);
     if (goal?.complete && !game.state.progress.parent.goal.celebrated) { game.state.progress.parent.goal.celebrated = true; commit(); toast(`Goal reached: ${goal.label}!`); }
     const hasSets = game.levelPackage.sets.some(set => setProgress(set, game.state.progress.words, game.levelPackage.content.words).words.length >= 3);
+    const cosmetics = normalizeCosmetics(game.state.progress.cosmetics, game.levelPackage.cosmetics);
     const trophies = game.state.progress.room.trophies;
     const decorations = game.state.progress.room.decorations;
     const trophyArt = name => {
@@ -271,11 +284,13 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     };
     overlay.open(`<div class="panel room-panel">
       <div class="panel-header room-header"><div><p class="panel-kicker">Grandma Wang's house</p><h1>My Room</h1><p>A place for your companion and the things you have restored.</p></div><button class="secondary" data-close-overlay>Leave room</button></div>
-      <div class="room-scene" role="img" aria-label="Warm bedroom with trophy shelf, village window, desk and bed">
+      <div class="room-scene" style="background-image:url('${roomCosmeticBackground(cosmetics)}')" role="img" aria-label="Warm bedroom with trophy shelf, village window, desk and bed">
+        ${roomCosmeticArt(cosmetics, game.levelPackage.cosmetics || [], companion)}
         <div class="room-shelf-count"><b>${trophies.length}</b><span>keepsakes earned</span></div>
         <div class="room-restoration-display" aria-label="Restoration keepsakes displayed in the room">${decorations.slice(-4).map(id => restorationArt(id, `${itemName(id)} decoration`)).join('')}</div>
-        <div class="room-companion-nook"><b>Your creature companion</b><div>${companion ? `${creatureSvg(companion.id, '')}<span>${companion.variant === 'normal' ? '' : `${companion.variant === 'golden' ? 'Golden' : 'Elite'} `}${escapeHtml(companion.name)} · Lv. ${companion.level}${companion.bonusCoins ? ` · +${companion.bonusCoins} coins per win` : ''}</span>` : '<span class="room-companion-empty">Choose a companion in Creatures.</span>'}</div></div>
       </div>
+        <div class="room-companion-nook"><b>Your creature companion</b><div>${companion ? `${creatureSvg(companion.id, '')}<span>${companion.variant === 'normal' ? '' : `${companion.variant === 'golden' ? 'Golden' : 'Elite'} `}${escapeHtml(companion.name)} · Lv. ${companion.level}${companion.bonusCoins ? ` · +${companion.bonusCoins} coins per win` : ''}</span>` : '<span class="room-companion-empty">Choose a companion in Creatures.</span>'}</div></div>
+      ${cosmeticControls(cosmetics, game.levelPackage.cosmetics || [], game.state.progress.equipment?.equipped)}
       <div class="room-progress"><section class="room-streak"><span>Lantern Streak</span><b>${game.state.progress.streak?.count || 0} days</b></section>${goal ? `<section class="room-goal ${goal.complete ? 'complete' : ''}"><b>${escapeHtml(goal.label)}</b><span>${goal.value}/${goal.target}</span><div role="progressbar" aria-label="Real-world goal progress" aria-valuemin="0" aria-valuemax="${goal.target}" aria-valuenow="${goal.value}"><i style="width:${goal.percent}%"></i></div></section>` : '<section class="room-goal room-goal-empty"><b>Real-world goal</b><span>A parent can add a goal in Parent Mode.</span></section>'}</div>
       <section class="room-keepsakes"><div class="room-section-heading"><h2>What you have earned</h2><span>${trophies.length} trophies · ${decorations.length} decorations</span></div>${trophies.length || decorations.length ? `<div class="room-keepsake-grid">${trophies.map(name => `<div class="room-keepsake">${trophyArt(name)}<b>${escapeHtml(name)}</b></div>`).join('')}${decorations.map(id => `<div class="room-keepsake room-decoration">${restorationArt(id, `${itemName(id)} decoration`)}<b>${escapeHtml(itemName(id))}</b></div>`).join('')}</div>` : '<p class="room-empty">Your shelf will fill as you restore regions and complete Spirit sets.</p>'}</section>
       <div class="room-action-grid"><button type="button" class="room-action" data-room-creatures><b>Choose a creature companion</b><span>Defeat creatures, grow their abilities and choose one to travel with you.</span></button>${hasSets ? `<button type="button" class="room-action" data-board-open><b>View Restoration Board</b><span>Offer complete Spirit sets to repair ${escapeHtml(game.levelPackage.region.name)}.</span></button>` : ''}</div>
@@ -283,6 +298,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
     </div>`);
     document.querySelector('[data-board-open]')?.addEventListener('click', restorationBoard);
     document.querySelector('[data-room-creatures]').addEventListener('click', () => creatures());
+    bindCosmeticControls(room);
   }
 
   return { bag, character, crafting, creatures, restorationBoard, room, applyMilestones, refreshMaxHp };

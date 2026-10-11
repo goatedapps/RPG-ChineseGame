@@ -22,31 +22,31 @@ const SPLASH_SUBTITLE_ENCODED = encodedSplashSubtitle();
 
 export const PROLOGUE_SLIDES = Object.freeze([
   {
-    image: 'assets/images/intro/dictionary-tree.jpg',
+    image: 'assets/images/intro/dictionary-tree.webp',
     position: 'center',
     title: 'Every word was alive',
     body: 'Long ago, every word in the land lived as a Word Spirit — 字灵 — in the Great Dictionary Tree, 字典树. With their help, people could speak clearly, read bravely and write down the stories that mattered.'
   },
   {
-    image: 'assets/images/intro/great-forgetter.jpg',
+    image: 'assets/images/intro/great-forgetter.webp',
     position: 'center',
     title: 'Then remembering had an enemy',
     body: 'The Great Forgetter — 遗忘大王 — wanted every name, letter and promise to disappear. He reached for the Spirit Brush that guarded the Tree.'
   },
   {
-    image: 'assets/images/intro/spirits-scattered.jpg',
+    image: 'assets/images/intro/spirits-scattered.webp',
     position: 'center',
     title: 'The Spirit Brush shattered',
     body: 'Seven bright fragments flew across the world. The Word Spirits scattered with them and were sealed inside wild creatures.'
   },
   {
-    image: 'assets/images/intro/spirits-scattered.jpg',
+    image: 'assets/images/intro/spirits-scattered.webp',
     position: '66% center',
     title: 'Now the whole world is muddled',
     body: 'People forget names, signs point the wrong way, and cooks mix up salt and sugar. Without their words, people may soon lose their stories and the promises they made.'
   },
   {
-    image: 'assets/images/intro/spirits-scattered.jpg',
+    image: 'assets/images/intro/spirits-scattered.webp',
     position: '54% center',
     title: 'The empty brush handle chose you',
     body: 'Find the lost Word Spirits. Restore the seven Brush Fragments. Help every town remember — before the Great Forgetter reaches the Tree again.'

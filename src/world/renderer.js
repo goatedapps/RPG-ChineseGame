@@ -575,7 +575,7 @@ function drawScroll(context, x, y) {
   context.fillRect(x + 23, y + 7, 5, 18);
 }
 
-export function createRenderer(canvas, map) {
+export function createRenderer(canvas, map, cosmetics = []) {
   const context = canvas.getContext('2d');
   const atlasRegion = map.atlasVillage || map.safeTown ? map.region : null;
   const illustratedStructures = Boolean(map.atlasVillage || map.safeTown || map.route);
@@ -585,6 +585,7 @@ export function createRenderer(canvas, map) {
   let lastState = null;
   const art = {};
   const companionArt = new Map();
+  const outfitArt = new Map();
   if (globalThis.Image) {
     for (const [kind, file] of [...(illustratedStructures ? [['buildings', 'buildings.webp']] : []), ['villagers', 'villagers-full-body.webp'], ['hero', 'hero-map.webp']]) {
       const image = new Image();
@@ -657,7 +658,17 @@ export function createRenderer(canvas, map) {
           context.fillStyle = '#c63f2b'; context.font = '900 14px system-ui'; context.textAlign = 'center'; context.textBaseline = 'middle'; context.fillText('?', x + 16, y - 4 + bob);
         }
       }
-      else if (!drawAtlasSprite(context, art.hero, 0, 1, 256, 384, x - 8, y - 21, 48, 60)) drawHero(context, x, y, state.player.direction, state.progress?.equipment?.equipped);
+      else {
+        const outfit = cosmetics.find(item => item.type === 'outfit' && item.id === state.progress?.cosmetics?.outfit);
+        if (outfit && !outfitArt.has(outfit.id) && globalThis.Image) {
+          const image = new Image();
+          image.onload = () => { if (!disposed && lastState) render(lastState); };
+          image.src = new URL('../../' + outfit.mapImage, import.meta.url).href;
+          outfitArt.set(outfit.id, image);
+        }
+        const heroArt = outfitArt.get(outfit?.id);
+        if (!drawAtlasSprite(context, heroArt, 0, 1, 256, 384, x - 8, y - 21, 48, 60) && !drawAtlasSprite(context, art.hero, 0, 1, 256, 384, x - 8, y - 21, 48, 60)) drawHero(context, x, y, state.player.direction, state.progress?.equipment?.equipped);
+      }
     }
     if (state.progress?.sets?.campfire) drawCampfire(context, 20 * TILE - offsetX, 16 * TILE - offsetY);
     const scroll = state.progress?.scrolls;

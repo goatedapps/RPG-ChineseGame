@@ -1,0 +1,600 @@
+- questionID: P3-CH-2025-SA2-CHIJ-Q1
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 昨天，老师把华文__试卷__还给我们。（选出画线词语的汉语拼音）
+  options:
+    - sì juǎn
+    - sì juàn
+    - shì juǎn
+    - shì juàn
+  correct: shì juàn
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q2
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 14
+  question: 爷爷每天都带小狗去公园__散步__。（选出画线词语的汉语拼音）
+  options:
+    - sàn bù
+    - sàn pù
+    - shàn bù
+    - shàn pù
+  correct: sàn bù
+  targetWord: 散步
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q6
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 王阿姨每个周末都会去__附近__的巴刹买菜。（选出画线词语的汉语拼音）
+  options:
+    - fú qìn
+    - fú qìng
+    - fù jìn
+    - fù jìng
+  correct: fù jìn
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q7
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 14
+  question: 吃完晚餐，我们一家人去公园__散步__。（选出画线词语的汉语拼音）
+  options:
+    - sàn bù
+    - sàn pù
+    - shàn bù
+    - shàn pù
+  correct: sàn bù
+  targetWord: 散步
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q6
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 叔叔不但长得高，身体也很__强壮__。（选出画线词语的汉语拼音）
+  options:
+    - qiáng chuàn
+    - qiáng zhuàn
+    - qiáng chuàng
+    - qiáng zhuàng
+  correct: qiáng zhuàng
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q7
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 欢欢每天__努力__练习唱歌，终于在歌唱比赛中得了第一名。（选出画线词语的汉语拼音）
+  options:
+    - lǔ lì
+    - lǔ nì
+    - nǔ lì
+    - nǔ nì
+  correct: nǔ lì
+  targetWord: 努力
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q6
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: __闹钟__已经响了好几次，哥哥却还是不愿起床。（选出画线词语的汉语拼音）
+  options:
+    - lào zōng
+    - lào zhōng
+    - nào zōng
+    - nào zhōng
+  correct: nào zhōng
+  targetWord: 闹钟
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q7
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 路上来往的__车辆__很多，我们过马路时一定要小心。（选出画线词语的汉语拼音）
+  options:
+    - cē liǎng
+    - cē liàng
+    - chē liǎng
+    - chē liàng
+  correct: chē liàng
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q6
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: __傍晚__，我和爸爸去海边骑脚踏车。（选出画线词语的汉语拼音）
+  options:
+    - bàng wǎn
+    - bàng wǎng
+    - páng wǎn
+    - páng wǎng
+  correct: bàng wǎn
+  targetWord: 傍晚
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q7
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 小文看到老爷爷__跌倒__了，就上前把他扶起来。（选出画线词语的汉语拼音）
+  options:
+    - diē dǎo
+    - diē dào
+    - dié dǎo
+    - dié dào
+  correct: diē dǎo
+  targetWord: 跌倒
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q6
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 上美术课时，老师教我们__折纸__。（选出画线词语的汉语拼音）
+  options:
+    - zé zǐ
+    - zé zhǐ
+    - zhé zǐ
+    - zhé zhǐ
+  correct: zhé zhǐ
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q7
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 弟弟把桌上的书本排得非常__整齐__。（选出画线词语的汉语拼音）
+  options:
+    - zhěn jí
+    - zhěn qí
+    - zhěng jí
+    - zhěng qí
+  correct: zhěng qí
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-AUTHORED-L2-Q01
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 陈."
+  targetWord: 陈
+  lessonIds:
+    - 2
+  question: 我们的华文老师姓【陈】。请选择括号里汉字的汉语拼音。
+  options:
+    - chén
+    - chēn
+    - chéng
+    - chěn
+  correct: chén
+- questionID: P3-CH-AUTHORED-L2-Q02
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 聪明."
+  targetWord: 聪明
+  lessonIds:
+    - 2
+  question: 妹妹很【聪明】，很快就想出了办法。请选择括号里词语的汉语拼音。
+  options:
+    - cōn míng
+    - cōng míng
+    - cōng mín
+    - chōng míng
+  correct: cōng míng
+- questionID: P3-CH-AUTHORED-L4-Q01
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 绿豆."
+  targetWord: 绿豆
+  lessonIds:
+    - 4
+  question: 妈妈买了一袋【绿豆】，准备煮汤。请选择括号里词语的汉语拼音。
+  options:
+    - lǜ dòu
+    - lù dòu
+    - lǜ dōu
+    - lǜ duò
+  correct: lǜ dòu
+- questionID: P3-CH-AUTHORED-L4-Q02
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 幼苗."
+  targetWord: 幼苗
+  lessonIds:
+    - 4
+  question: 花盆里长出了一株【幼苗】。请选择括号里词语的汉语拼音。
+  options:
+    - yōu miáo
+    - yòu miáo
+    - yòu miào
+    - yòu niáo
+  correct: yòu miáo
+- questionID: P3-CH-AUTHORED-L5-Q01
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 杂志."
+  targetWord: 杂志
+  lessonIds:
+    - 5
+  question: 姐姐借了一本介绍动物的【杂志】。请选择括号里词语的汉语拼音。
+  options:
+    - zá zhì
+    - zhá zhì
+    - zá zì
+    - zà zhì
+  correct: zá zhì
+- questionID: P3-CH-AUTHORED-L5-Q02
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 报纸."
+  targetWord: 报纸
+  lessonIds:
+    - 5
+  question: 爷爷每天读【报纸】，了解每天发生的事。请选择括号里词语的汉语拼音。
+  options:
+    - bào zǐ
+    - bào zhǐ
+    - bāo zhǐ
+    - bào zhì
+  correct: bào zhǐ
+- questionID: P3-CH-AUTHORED-L7-Q01
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 电视."
+  targetWord: 电视
+  lessonIds:
+    - 7
+  question: 吃过晚饭后，我们一家人坐在一起看【电视】。请选择括号里词语的汉语拼音。
+  options:
+    - diàn shì
+    - diān shì
+    - diàn sì
+    - diàn shí
+  correct: diàn shì
+- questionID: P3-CH-AUTHORED-L7-Q02
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 地板."
+  targetWord: 地板
+  lessonIds:
+    - 7
+  question: 我们把课室的【地板】擦干净了。请选择括号里词语的汉语拼音。
+  options:
+    - dì pǎn
+    - dì bǎn
+    - dī bǎn
+    - dì bān
+  correct: dì bǎn
+- questionID: P3-CH-AUTHORED-L8-Q01
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 灯笼."
+  targetWord: 灯笼
+  lessonIds:
+    - 8
+  question: 中秋节的晚上，妹妹提着【灯笼】散步。请选择括号里词语的汉语拼音。
+  options:
+    - dēng long
+    - dēng nong
+    - dèng long
+    - tēng long
+  correct: dēng long
+- questionID: P3-CH-AUTHORED-L8-Q02
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 阳台."
+  targetWord: 阳台
+  lessonIds:
+    - 8
+  question: 妈妈在【阳台】上晾衣服。请选择括号里词语的汉语拼音。
+  options:
+    - yáng tài
+    - yáng tái
+    - yǎng tái
+    - yáng dài
+  correct: yáng tái
+- questionID: P3-CH-AUTHORED-L9-Q01
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 竹竿."
+  targetWord: 竹竿
+  lessonIds:
+    - 9
+  question: 妈妈把衣服挂在【竹竿】上晾晒。请选择括号里词语的汉语拼音。
+  options:
+    - zhú gān
+    - zhú gǎn
+    - zú gān
+    - zhǔ gān
+  correct: zhú gān
+- questionID: P3-CH-AUTHORED-L9-Q02
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 篮子."
+  targetWord: 篮子
+  lessonIds:
+    - 9
+  question: 奶奶提着【篮子】去买菜。请选择括号里词语的汉语拼音。
+  options:
+    - lán zhǐ
+    - lán zi
+    - nán zi
+    - làn zi
+  correct: lán zi
+- questionID: P3-CH-AUTHORED-L9-Q03
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 重量."
+  targetWord: 重量
+  lessonIds:
+    - 9
+  question: 店主用秤量出苹果的【重量】。请选择括号里词语的汉语拼音。
+  options:
+    - zhōng liàng
+    - zhòng liǎng
+    - zhòng liàng
+    - zòng liàng
+  correct: zhòng liàng
+- questionID: P3-CH-AUTHORED-L9-Q04
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 小熊."
+  targetWord: 小熊
+  lessonIds:
+    - 9
+  question: 故事里的【小熊】抱着一个蜂蜜罐。请选择括号里词语的汉语拼音。
+  options:
+    - xiǎo xūn
+    - xiǎo xiǒng
+    - xiáo xióng
+    - xiǎo xióng
+  correct: xiǎo xióng
+- questionID: P3-CH-AUTHORED-L11-Q01
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 环保袋."
+  targetWord: 环保袋
+  lessonIds:
+    - 11
+  question: 妈妈带着【环保袋】去买菜，买完后还能再使用。请选择括号里词语的汉语拼音。
+  options:
+    - huán bǎo dài
+    - huán bào dài
+    - huàn bǎo dài
+    - huán bāo dài
+  correct: huán bǎo dài
+- questionID: P3-CH-AUTHORED-L11-Q02
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 海洋."
+  targetWord: 海洋
+  lessonIds:
+    - 11
+  question: 很多鱼生活在【海洋】里。请选择括号里词语的汉语拼音。
+  options:
+    - hái yáng
+    - hǎi yáng
+    - hǎi yǎng
+    - hǎi yán
+  correct: hǎi yáng
+- questionID: P3-CH-AUTHORED-L11-Q03
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 责任."
+  targetWord: 责任
+  lessonIds:
+    - 11
+  question: 照顾自己的物品是我们的【责任】。请选择括号里词语的汉语拼音。
+  options:
+    - zhé rèn
+    - zé rěn
+    - zé rèn
+    - zè rèn
+  correct: zé rèn
+- questionID: P3-CH-AUTHORED-L12-Q01
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 国歌."
+  targetWord: 国歌
+  lessonIds:
+    - 12
+  question: 升旗时，同学们一起唱【国歌】。请选择括号里词语的汉语拼音。
+  options:
+    - guó gē
+    - guó gě
+    - guǒ gē
+    - guó kē
+  correct: guó gē
+- questionID: P3-CH-AUTHORED-L12-Q02
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 世界."
+  targetWord: 世界
+  lessonIds:
+    - 12
+  question: 这张地图画出了【世界】各地的位置。请选择括号里词语的汉语拼音。
+  options:
+    - sì jiè
+    - shì jiè
+    - shì jié
+    - shí jiè
+  correct: shì jiè
+- questionID: P3-CH-AUTHORED-L12-Q03
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 文件夹."
+  targetWord: 文件夹
+  lessonIds:
+    - 12
+  question: 我把练习纸放进【文件夹】，让它们保持整齐。请选择括号里词语的汉语拼音。
+  options:
+    - wén jiàn jiá
+    - wén jiān jiā
+    - wén jiàn jiā
+    - wēn jiàn jiā
+  correct: wén jiàn jiā
+- questionID: P3-CH-AUTHORED-L13-Q01
+  source: "Original authored P3 practice; Lesson 13; taught vocabulary: 森林."
+  targetWord: 森林
+  lessonIds:
+    - 13
+  question: 高大的树木长满了整片【森林】。请选择括号里词语的汉语拼音。
+  options:
+    - sēn lín
+    - shēn lín
+    - sēng lín
+    - sēn líng
+  correct: sēn lín
+- questionID: P3-CH-AUTHORED-L14-Q01
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 眼睛."
+  targetWord: 眼睛
+  lessonIds:
+    - 14
+  question: 小猫睁大【眼睛】，看着飞过的蝴蝶。请选择括号里词语的汉语拼音。
+  options:
+    - yǎn jing
+    - yáng jing
+    - yǎn qing
+    - yǎng jing
+  correct: yǎn jing
+- questionID: P3-CH-AUTHORED-L14-Q02
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 灰色."
+  targetWord: 灰色
+  lessonIds:
+    - 14
+  question: 这只小兔的毛是【灰色】的。请选择括号里词语的汉语拼音。
+  options:
+    - huí sè
+    - huī sè
+    - huī shè
+    - huǐ sè
+  correct: huī sè
+- questionID: P3-CH-AUTHORED-L14-Q03
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 打滚."
+  targetWord: 打滚
+  lessonIds:
+    - 14
+  question: 小狗在草地上【打滚】，一会儿朝左，一会儿朝右。请选择括号里词语的汉语拼音。
+  options:
+    - dá gǔn
+    - dǎ gùn
+    - dǎ gǔn
+    - dǎ kǔn
+  correct: dǎ gǔn
+- questionID: P3-CH-AUTHORED-L14-Q08
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 苦."
+  targetWord: 苦
+  lessonIds:
+    - 14
+  question: 奶奶喝完很【苦】的药，赶紧吃了一块糖。请选择括号里汉字的汉语拼音。
+  options:
+    - gǔ
+    - kù
+    - kū
+    - kǔ
+  correct: kǔ
+- questionID: P3-CH-AUTHORED-L15-Q01
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 漫画."
+  targetWord: 漫画
+  lessonIds:
+    - 15
+  question: 哥哥借了一本有趣的【漫画】。请选择括号里词语的汉语拼音。
+  options:
+    - màn huà
+    - màn huá
+    - mán huà
+    - màn kuà
+  correct: màn huà
+- questionID: P3-CH-AUTHORED-L15-Q02
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 课室."
+  targetWord: 课室
+  lessonIds:
+    - 15
+  question: 上课铃响了，同学们走进【课室】。请选择括号里词语的汉语拼音。
+  options:
+    - kè sì
+    - kè shì
+    - kē shì
+    - kè shí
+  correct: kè shì
+- questionID: P3-CH-AUTHORED-L16-Q01
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 数学."
+  targetWord: 数学
+  lessonIds:
+    - 16
+  question: 今天的【数学】课学习乘法。请选择括号里词语的汉语拼音。
+  options:
+    - shù xué
+    - sù xué
+    - shǔ xué
+    - shù xuě
+  correct: shù xué
+- questionID: P3-CH-AUTHORED-L16-Q02
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 勤学."
+  targetWord: 勤学
+  lessonIds:
+    - 16
+  question: 姐姐【勤学】好问，每天认真读书。请选择括号里词语的汉语拼音。
+  options:
+    - qíng xué
+    - qín xué
+    - qín xuě
+    - qǐn xué
+  correct: qín xué
+- questionID: P3-CH-AUTHORED-L16-Q03
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 滑轮."
+  targetWord: 滑轮
+  lessonIds:
+    - 16
+  question: 实验时，老师用【滑轮】把装着书的篮子慢慢提起来。请选择括号里词语的汉语拼音。
+  options:
+    - huá lǔn
+    - huà lún
+    - huá lún
+    - huá nún
+  correct: huá lún
+- questionID: P3-CH-AUTHORED-L16-Q04
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 认识."
+  targetWord: 认识
+  lessonIds:
+    - 16
+  question: 我在活动中【认识】了几位新朋友。请选择括号里词语的汉语拼音。
+  options:
+    - rén shi
+    - rèn si
+    - rěn shi
+    - rèn shi
+  correct: rèn shi
+- questionID: P3-CH-AUTHORED-L17-Q01
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 农夫."
+  targetWord: 农夫
+  lessonIds:
+    - 17
+  question: 【农夫】在田里种菜，每天细心照顾菜苗。请选择括号里词语的汉语拼音。
+  options:
+    - nóng fū
+    - nóng hū
+    - nòng fū
+    - nóng fǔ
+  correct: nóng fū
+- questionID: P3-CH-AUTHORED-L17-Q02
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 渔夫."
+  targetWord: 渔夫
+  lessonIds:
+    - 17
+  question: 【渔夫】划着小船到河上捕鱼。请选择括号里词语的汉语拼音。
+  options:
+    - yǔ fū
+    - yú fū
+    - yú fǔ
+    - yù fū
+  correct: yú fū
+- questionID: P3-CH-AUTHORED-L17-Q03
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 签名."
+  targetWord: 签名
+  lessonIds:
+    - 17
+  question: 妈妈在报名表上【签名】。请选择括号里词语的汉语拼音。
+  options:
+    - qián míng
+    - qiān mín
+    - qiān míng
+    - qiǎn míng
+  correct: qiān míng

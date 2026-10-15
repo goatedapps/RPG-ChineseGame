@@ -38,6 +38,7 @@ export function createOverlay(element) {
     typingTimer = setTimeout(tick, 80);
   }
   function open(content, { dismissible = true, onClose = null, onReplace = null, focusSelector = null } = {}) {
+    element.querySelector('.confirmation-dialog[open]')?.close('cancel');
     clearTimeout(typingTimer);
     if (element.hidden) {
       returnFocus = document.activeElement;
@@ -68,6 +69,7 @@ export function createOverlay(element) {
     typeDialogue();
   }
   function close() {
+    element.querySelector('.confirmation-dialog[open]')?.close('cancel');
     clearTimeout(typingTimer);
     element.hidden = true;
     element.dataset.open = 'false';
@@ -117,7 +119,29 @@ export function createOverlay(element) {
     };
     render();
   }
+  function confirm({ title, message, confirmLabel = 'Confirm' }) {
+    const previousFocus = ownerDocument.activeElement;
+    const dialog = ownerDocument.createElement('dialog');
+    dialog.className = 'confirmation-dialog';
+    dialog.setAttribute('aria-labelledby', 'confirmation-title');
+    dialog.setAttribute('aria-describedby', 'confirmation-message');
+    dialog.innerHTML = `<h2 id="confirmation-title">${escapeHtml(title)}</h2><p id="confirmation-message">${escapeHtml(message)}</p><div class="confirmation-actions"><button type="button" class="secondary" data-confirm-cancel autofocus>Cancel</button><button type="button" class="primary" data-confirm-accept>${escapeHtml(confirmLabel)}</button></div>`;
+    return new Promise(resolve => {
+      dialog.addEventListener('close', () => {
+        const accepted = dialog.returnValue === 'confirm';
+        dialog.remove();
+        if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
+        resolve(accepted);
+      }, { once: true });
+      dialog.addEventListener('cancel', event => { event.preventDefault(); dialog.close('cancel'); });
+      dialog.querySelector('[data-confirm-cancel]').addEventListener('click', () => dialog.close('cancel'));
+      dialog.querySelector('[data-confirm-accept]').addEventListener('click', () => dialog.close('confirm'));
+      element.append(dialog);
+      dialog.showModal();
+    });
+  }
   element.addEventListener('keydown', event => {
+    if (element.querySelector('.confirmation-dialog[open]')) return;
     if (event.key === 'Escape' && api.dismissible) { event.preventDefault(); close(); return; }
     if (event.key !== 'Tab') return;
     const focusable = [...element.querySelectorAll('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], summary')];
@@ -127,6 +151,6 @@ export function createOverlay(element) {
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
-  const api = { open, close, dialogue, tutorialDialogue, dismissible: true, get isOpen() { return !element.hidden; } };
+  const api = { open, close, dialogue, tutorialDialogue, confirm, dismissible: true, get isOpen() { return !element.hidden; } };
   return api;
 }

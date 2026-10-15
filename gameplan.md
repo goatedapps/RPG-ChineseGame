@@ -4,7 +4,7 @@
 
 Word Spirit Quest is a tablet-friendly exploration RPG for Singapore primary-school Chinese.
 Every creature contains a collectible vocabulary word, and combat actions are powered by learning tasks.
-Primary 2, Primary 5 and Primary 6 use the same engine, world, cast and campaign with separate curriculum packs and per-player saves.
+Primary 2, Primary 3, Primary 5 and Primary 6 use the same engine, world, cast and campaign with separate curriculum packs and per-player saves.
 After the prologue, the player chooses an existing local name or creates one, then chooses a curriculum unless a level link already selected it.
 Player 1 retains all saves made before named profiles were introduced and can be renamed.
 Parent Mode can reopen the player picker so several children can share one device without sharing progress.
@@ -19,7 +19,7 @@ His short handoffs connect each action to its benefit; after completing the tour
 Each note retires for that player and curriculum when dismissed or its action is used; skipped tutorials and older saves that never enrolled receive no notes.
 Tutorial progress resumes at the exact incomplete action; pre-existing saves retain their current progression without being enrolled.
 
-The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with 19 P2 lessons, 17 P5 lessons and 12 P6 lessons.
+The current build contains all seven shared regions through Treehouse Summit and the Great Dictionary Tree, with 19 P2 lessons, 17 P3 lessons, 17 P5 lessons and 12 P6 lessons.
 P0–P17 engineering and the earlier physical tablet pilot are complete.
 P18 release polish is in progress.
 
@@ -64,6 +64,10 @@ Validation checks complete lesson mapping, curriculum-specific Restoration Sets,
 Keep curriculum-specific expected facts in separate tests; general playable-curriculum tests must iterate the registry.
 P6 maps Lessons 1–3, 4–5, 6–7, 8–9, 10, 11 and 12 to Regions 1–7 respectively.
 Its final three regions explicitly allow one lesson while retaining the standard boss questions, two distinct writing prompts and the default 15-word gate dictation.
+P3 maps Lessons 1–3, 4–6, 7–8, 9–10, 11–12, 13–15 and 16–17 to Regions 1–7 and includes the original 825 questions plus 387 new Usage questions.
+Heavy Slam has a dedicated ordinary Chinese Usage question for every one of its 399 lesson vocabulary entries, with separate records for repeated words in different lessons.
+Its 70 adapted vocabulary choice lists preserve the exam originals in `originalOptions`; shared-bank MCQs receive their bank as playable choices during the content build.
+See `content/source/p3/review/game-integration.md` for question coverage and language-review follow-up.
 
 ## Learning and battle rules
 
@@ -131,6 +135,8 @@ Collection systems include mastery tiers, creature companions, Restoration Sets,
 The left-menu Creatures collection records each ordinary species after a battle victory, retaining its highest defeated level and rarest defeated form independently.
 Elite and Golden forms persist through later Normal victories, sparkle differently on collection cards, and grant 6 or 12 bonus coins after each normal or boss battle victory while selected as partner.
 Choose one creature to follow the hero and appear in My Room; each has an authored personality and automatic support that triggers once per normal or boss battle.
+Compact collection cards show the support trigger and effects, with personality, exact ability and any stronger next-level preview inside Ability details.
+When support has reached the hero-level cap, the details say so instead of repeating the same next-level description.
 Triggers are a correct attack in a named skill, a count of correct attacks, successful attacks in different skills, or a damaging hit that would take the hero to half HP or below.
 Support scales with recorded creature level up to the hero’s current level; provisional authored budgets cap combined healing and shielding at 20% of hero maximum HP and total extra damage at 15% of enemy maximum HP.
 The battle card shows the trigger, remaining support and actual effects; pure healing waits until HP is missing, shields survive dodges, and damage charges are spent only when they add damage to a correct attack.
@@ -149,6 +155,7 @@ An optional collapsible parent feedback form follows the PIN controls and sends 
 The app uses plain HTML, CSS and browser ES modules.
 `index.html` is the playable shell at the repository root; `game/` redirects old bookmarks.
 The separate seven-region walkthrough is linked from Parent Mode and begins at `walkthrough/index.html`.
+Its shop tables use the game's regional supply filter and cosmetic catalogue, including prices, fixed-HP healing, clothing, room decoration dependencies and free outfit changes.
 `src/main.js` loads a level package and wires the runtime.
 `src/gameplay.js`, `src/adventure.js` and `src/collection.js` coordinate major flows.
 `src/core/` owns state, saves, dates, events, safety and audio.

@@ -1,0 +1,2119 @@
+- groupId: P3-CH-2025-SA2-ACS-Q28-30
+  subject: Chinese
+  passage:
+    title: 姐姐的学习习惯
+    source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 11–12; 阅读理解（二）; answer key PDF page 13
+    text: |-
+      假期开始了，小新和姐姐分别做了一个学习时间表。小新每天照着时间表完成功课后，就去玩电脑游戏，而姐姐总是一个人留在房间里忙着。
+
+      一天，小新和姐姐做完功课后，小新跟平时一样去玩电脑游戏。这时，妈妈好奇地走进房间，想看姐姐在忙什么。
+
+      妈妈看见姐姐做完功课后，拿出一张纸条，把第二天要做的功课写下来，放在书桌前。然后，她开始收拾书桌和书包。直到这些事情都做完了，姐姐才去看电视。
+
+      看到姐姐这么懂事，妈妈开心地说：“小新，姐姐明白必须先做完功课、收拾好书包后才去看电视，你要向姐姐学习。”小新听了，不好意思地点点头。
+  questions:
+    - sourceQuestion: Q28
+      format: Fill-in
+      marks: 2
+      text: |-
+        从文中找出代表下列意思的词语，然后把它写在括号里。
+        一定要（________）
+      accepted:
+        - 必须
+      displayAnswer: 必须
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 为什么姐姐做完功课后，不马上去看电视？
+      displayAnswer: 因为姐姐做完功课后，要先把第二天要做的功课写下来，然后再去收拾书桌和书包。直到这些事情都做完了，姐姐才去看电视。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: |-
+        小新听了妈妈的话后，有什么反应？（1分）
+        你认为小新以后会怎么做？（1分）
+      displayAnswer: 小新听了妈妈的话后，不好意思地点点头。我认为小新以后会先把第二天要做的功课写下来，再去收拾书桌和书包。
+      notes: 第一问1分，第二问1分。第二问为开放题，合理说明小新会向姐姐学习、先完成学习准备和整理工作再娱乐即可。
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q25-27
+  subject: Chinese
+  passage:
+    title: 小安和妈妈的一天
+    source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 10–11; answer key supplied in PDF
+    text: |-
+      天还没亮，闹钟还没响，小安就起床了。妈妈要小安先把作业做完，她下午回来才带他去动物园。小安吃了早餐，就立刻做作业。
+
+      下午，小安和妈妈搭巴士去动物园。到了动物园入口处，小安兴奋地和妈妈一起去买门票。卖票处贴着一张字条，上面写着“今天休息”。
+
+      小安非常不开心，好像要哭了。妈妈看见了，轻声地说：“别伤心，我们还可以去别的地方。”她带小安去了附近的图书馆看书。图书馆里很安静，有很多小安喜欢的书。他们在图书馆坐了一整个下午。
+
+      回家的路上，小安对妈妈说：“谢谢妈妈，有您陪我，我今天过得很快乐。”
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 小安什么时候做作业？
+      options:
+        - 闹钟响了后。
+        - 妈妈回来后。
+        - 吃完早餐后。
+      correct: 吃完早餐后。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 小安为什么要哭了？
+      options:
+        - 因为妈妈没有去买门票。
+        - 因为动物园今天没开门。
+        - 因为小安不要去图书馆。
+      correct: 因为动物园今天没开门。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 小安有妈妈陪他，觉得怎样？
+      options:
+        - 小安觉得很伤心。
+        - 小安觉得很兴奋。
+        - 小安觉得很开心。
+      correct: 小安觉得很开心。
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q28-30
+  subject: Chinese
+  passage:
+    title: 小乐帮助爸爸妈妈
+    source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 12–13; answer key supplied in PDF
+    text: |-
+      一天，小乐放学回家后，看见妈妈正在忙着做饭。妈妈看起来有点累，小乐觉得应该是妈妈太忙了，便想要帮她。
+
+      于是，小乐放下书包，走到妈妈身旁，对妈妈说：“妈妈，我来帮您洗菜吧！”小乐用心地把青菜洗干净，然后小心地把它们放进篮子里。妈妈看见了，笑着点点头。
+
+      洗了菜后，小乐看见爸爸在收衣服。她连忙走过去，说：“爸爸，我帮您折衣服吧！”小乐先把衣服放在床上，再用手把它弄平，然后细心地折。爸爸看见折得整整齐齐的衣服，笑着点点头。
+
+      小乐看着爸爸妈妈的笑脸，决定以后要常常帮他们做事，让他们天天都高兴。
+  questions:
+    - sourceQuestion: Q28
+      format: Long-Answer
+      marks: 2
+      text: 为什么小乐要帮妈妈洗菜？
+      displayAnswer: 因为小乐看见妈妈正在忙着做饭，妈妈看起来有点累，小乐觉得应该是妈妈太忙了，便想要帮她。
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出小乐会折衣服？
+      displayAnswer: 从“小乐先把衣服放在床上，再用手把它弄平，然后细心地折。”可以看出。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 小乐决定以后要怎么做？为什么？
+      displayAnswer: 小乐决定以后要常常帮爸爸和妈妈做事。因为这样会让他们天天都高兴。
+- groupId: P3-CH-2025-SA2-AITONG-Q10-12
+  subject: Higher Chinese
+  passage:
+    title: 没有脚的鸭子
+    source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      一天早上，林阿姨带着五岁的儿子在湖边散步。看到前面有一群可爱的鸭子，儿子想要跟鸭子一起玩。他一边大声喊，一边向那群鸭子跑过去。鸭子以为儿子要抓它们，吓得四处乱跑。
+
+      突然，一只灰色的鸭子向林阿姨飞了过来。林阿姨吃惊地看着它飞过她的头顶，飞到了湖里。她想：这只鸭子太特别了，我还是第一次看到可以飞这么远的鸭子！
+
+      林阿姨兴奋地找到了鸭子的主人，想要买下那只鸭子。主人笑着对她说：“那只鸭子又瘦又小，连腿都没有，没什么肉可以吃。不如我给你选一只大的吧。”
+
+      主人告诉林阿姨，这只鸭子在很小的时候，被老鼠咬断了双脚。听了主人的话，林阿姨心里有点难过。儿子却对她说：“那只鸭子虽然没有了脚，不能走路，可是它学会了飞，真是太了不起了。”
+  questions:
+    - sourceQuestion: Q10
+      format: MCQ
+      marks: 2
+      text: 儿子为什么要向鸭子跑过去？
+      options:
+        - 因为他想要跟鸭子玩。
+        - 因为他想要吓那群鸭子。
+        - 因为他想要抓住一只鸭子。
+        - 因为他想要看鸭子会不会飞。
+      correct: 因为他想要跟鸭子玩。
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 2
+      text: 看到鸭子突然飞过来，林阿姨的心情是怎样的？
+      options:
+        - 吃惊。
+        - 开心。
+        - 兴奋。
+        - 难过。
+      correct: 吃惊。
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 为什么林阿姨想买那只灰色的鸭子？
+      options:
+        - 因为她很喜欢吃鸭肉。
+        - 因为她觉得它很特别。
+        - 因为她第一次看到鸭子。
+        - 因为她的儿子喜欢鸭子。
+      correct: 因为她觉得它很特别。
+- groupId: P3-CH-2025-SA2-AITONG-Q28-30
+  subject: Higher Chinese
+  passage:
+    title: 李养生的坏习惯
+    source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 16–17; answer key supplied in PDF
+    text: |-
+      李养生上课不专心，老师打了几次电话告诉他父母。爸爸妈妈怕他学习跟不上，会考得不好，都希望李养生改掉这个坏习惯，可是他却不放在心上。
+
+      有一天，老师叫大家写“九十一”这三个字。李养生飞快地写了满满一张：“111111……”他写到九十个“1”才停笔。老师看了，生气地说：“我要你写‘九十一’三个字，不是九十个数字‘1’！”听了老师的话后，李养生低下了头，脸红得像苹果。
+
+      还有一次，老师让大家在作业本上写上自己的姓名。李养生一边想着玩，一边写字，结果把自己的姓名“李养生”写成了“李养牛”。坐在他旁边的大华看到后，忍不住大声地说：“哈哈，你们看李养生‘变成’李养牛了！”同学们都笑坏了肚子。
+
+      在同学们的笑声中，李养生心想：我应该认真学习，才不会闹出笑话来。
+  questions:
+    - sourceQuestion: Q28
+      format: Long-Answer
+      marks: 2
+      text: 为什么爸爸妈妈希望李养生改掉坏习惯？
+      displayAnswer: 因为他们怕李养生学习跟不上，会考得不好。
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 听了老师的话后，李养生有什么反应？
+      displayAnswer: 李养生低下了头，脸红得像苹果。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 李养生把自己的姓名写成了什么？（1分）这件事让他明白了什么？（1分）
+      displayAnswer: 李养生把自己的姓名写成了“李养牛”。这件事让他明白了他应该认真学习，才不会闹出笑话来。
+- groupId: P3-CH-2025-SA2-CHIJ-Q14-16
+  subject: Higher Chinese
+  passage:
+    title: 放羊要专心
+    source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      阿明和大华是放羊人，他们每天的工作是带羊群到山上吃草。
+
+      一天，阿明和大华说好一起到山上放羊。出发前，主人告诉他们：“听说最近邻居家的羊不见了，不知是被野狼捉走了，还是被人偷走了。你们不要只顾着说话，要小心看羊啊！”两人听了，点点头。
+
+      回家时，主人发现羊少了，便问阿明和大华：“羊怎么少了？”阿明红着脸说：“我带了一本书在身边，只顾着看书，没发现羊不见了。”大华也不好意思地说：“我和朋友一起下棋，一不注意，羊就走失了。”
+
+      阿明和大华两人，一个看书，一个下棋，虽然所做的事不一样，但是同样因为做事不专心，最后把羊弄丢了。
+  questions:
+    - sourceQuestion: Q14
+      format: MCQ
+      marks: 2
+      text: 阿明和大华在放羊时发生了什么事？
+      options:
+        - 羊给野狼捉走了。
+        - 羊被邻居偷走了。
+        - 羊让他们弄丢了。
+        - 羊自己回家去了。
+      correct: 羊让他们弄丢了。
+    - sourceQuestion: Q15
+      format: MCQ
+      marks: 2
+      text: 放羊时，阿明和大华在做什么？
+      options:
+        - 他们约了朋友下棋。
+        - 他们一直忙着说话。
+        - 他们很专心地看书。
+        - 他们在做自己的事。
+      correct: 他们在做自己的事。
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: 这个故事让我们明白了什么道理？
+      options:
+        - 我们要注意我们身边的人。
+        - 我们不应该去看书和下棋。
+        - 我们做什么事情都要专心。
+        - 我们不能只顾和别人说话。
+      correct: 我们做什么事情都要专心。
+- groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+  subject: Higher Chinese
+  passage:
+    title: 诚实的小女孩
+    source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 13–14; answer key supplied in PDF
+    text: |-
+      早晨，天下着雨，一家面包店门前有很多人排队买面包。虽然要排很久，但是大家都肯慢慢等。轮到我的时候，我立刻把雨伞放在店门口，走进店里。
+
+      不久，我买了面包，走出面包店。我没仔细看，就拿起一把雨伞走进雨中，想赶快回家吃面包。这时，我听到有人喊道：“等一等！”我回头一看，原来是一个小女孩在叫我。我觉得很奇怪，心想：她是谁？为什么叫住我？只见她一面向我招手，一面跑过来，说道：“大哥哥，我在面包店前排队时，看见你拿着这把雨伞。你刚才拿错了我的雨伞，这把雨伞才是你的。”我这才发现她手里正拿着我刚买的新雨伞，而我手里拿着的是一把旧雨伞。“大哥哥，我们把雨伞换一下吧！”女孩说。我点点头，笑着说：“谢谢你把我的雨伞还给我！”
+
+      我拿回自己的雨伞后，踏着轻快的脚步走回家。我一边走，一边想：这个女孩本来可以拿走我的新雨伞，但她却冒着雨跑过来换回她的旧雨伞，真诚实啊！
+  questions:
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 1
+      text: 下雨的早晨，“我”排队做什么？
+      displayAnswer: 下雨的早晨，“我”排队买面包。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出大家都喜欢吃这家面包店的面包？
+      displayAnswer: 从“早晨，天下着雨，一家面包店门前有很多人排队买面包。虽然要排很久，但是大家都肯慢慢等。”可以看出。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 为什么“我”会拿错雨伞？
+      displayAnswer: 因为“我”没仔细看，就拿起一把雨伞走进雨中，想赶快回家吃面包。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 当女孩说要换雨伞时，“我”有什么反应？
+      displayAnswer: “我”点点头，笑着说谢谢她把雨伞还给“我”。
+    - sourceQuestion: Q34
+      format: Long-Answer
+      marks: 3
+      text: 你认为女孩是一个怎样的人？（1分）为什么？（2分）
+      displayAnswer: 我认为女孩是一个诚实的人。因为她本来可以拿走“我”的新雨伞，但她却冒着雨跑过来换回她的旧雨伞。
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q25-27
+  subject: Chinese
+  passage:
+    title: 雨后的彩虹
+    source: P3_Chinese_2025_SA2_henrypark.pdf; PDF pages 10–11; answer key supplied in PDF
+    text: |-
+      一天，小兔走出家门，想找朋友一起玩。它走着走着，看到小狗、小羊和小鸟在草地上玩。大家都玩得十分开心。突然，小狗停下来，低头看着地上。小兔走过去，好奇地问：“小狗，你怎么了？”小狗回答：“我看到地上有个奇怪的影子，好像一把大雨伞，那是什么呢？”小兔笑了，说：“那是大树的影子，不是雨伞。”
+
+      这时，吹来一阵强风。小牛抬头一看，指着空中问：“天上怎么会有小羊？”小狗看了看，说：“是啊！小羊们怎么在天上跳舞呢？”小鸟飞到空中看了看，笑了。原来是白云被风吹得很快，它们就像是在跳舞。
+
+      突然，乌云来了，开始下着大雨。小兔带着大家跑回它的家躲雨。大家坐在一起喝果汁，慢慢谈一天看到的事。
+
+      雨停了，太阳出来了。动物们跑到屋外，发现天空中挂着一道美丽的彩虹。他们一起抬头看着彩虹，开心地笑了。
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 小狗看到地上有什么奇怪的东西？
+      options:
+        - 大树的影子
+        - 被风吹的云
+        - 一把大雨伞
+        - 美丽的彩虹
+      correct: 大树的影子
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 天上的“羊”指的是什么？
+      options:
+        - 真的小羊们
+        - 像羊的白云
+        - 空中飞的鸟
+        - 跳舞的小羊
+      correct: 像羊的白云
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 以下哪一个句子是不对的？
+      options:
+        - 动物们坐在一起喝果汁。
+        - 动物们都玩得十分开心。
+        - 小鸟飞到空中看一看白云。
+        - 大家都跑回自己的家躲雨。
+      correct: 大家都跑回自己的家躲雨。
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q28-30
+  subject: Higher Chinese
+  passage:
+    title: 狮子也需要朋友
+    source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 16–17; answer key supplied in PDF
+    text: |-
+      森林里住着一头狮子。狮子从来不和森林里的动物玩。因为它认为自己很强壮，也很了不起，不需要有朋友。
+
+      一天，狮子自己去河边玩。突然，它脚下一滑，不小心掉进了河里。它不会游泳，吓得不停地大喊，希望有人来救它。小猴和大象听到了，赶快跑过来帮忙。它们很快就想出了办法救狮子。
+
+      小猴拿了一根树枝，让狮子抓住。接着，大象用鼻子把狮子拉上岸。小猴和大象关心地问：“你没事吧，有没有受伤？”狮子难为情地回答：“我没事，谢谢你们救了我！”
+
+      这件事让狮子发现自己再强壮，也有需要帮助的时候。从那天起，它不再觉得自己很了不起，也会去帮助森林里的小动物。
+  questions:
+    - sourceQuestion: Q28
+      format: Long-Answer
+      marks: 2
+      text: 为什么狮子觉得自己不需要朋友？
+      displayAnswer: 因为狮子觉得自己很强壮，也很了不起。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 狮子被救上岸后，它明白了什么？从哪里可以看出狮子变了？
+      displayAnswer: 它明白了自己再强壮，也有需要帮助的时候。从那天起，它会去帮助其他的小动物。
+- groupId: P3-CH-2025-SA2-METHODIST-Q26-28
+  subject: Chinese
+  passage:
+    title: 学会收拾房间
+    source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 9–10; answer key supplied in PDF
+    text: |-
+      弟弟不爱收拾房间，放学回家后，就把书包乱丢在客厅，书本和衣服也到处乱扔，所以他经常找不到自己想找的东西。
+
+      姐姐跟弟弟很不同，她会把书包放回自己的房间，衣服摆放得整整齐齐，看过的书本也都会放回原位。妈妈经常对弟弟说：“你已经长大了，要学会自己收拾房间。”可是，妈妈说的话，弟弟总是左耳进，右耳出。
+
+      假期里的一天，弟弟玩了玩具后没有收拾。这时，同学找他去踢足球，他急着找袜子，不小心踩到乱丢在地上的玩具，结果跌倒受伤了。他不能和同学一起出去玩了。这件事让弟弟很难过。他对姐姐说：“你可以教我收拾房间吗？”姐姐听了，点了点头。
+
+      弟弟跟姐姐学着收拾好自己的房间后，发现以前他要找一样东西要花很多时间，现在很快就能找到。看到干干净净的房间，弟弟心里也感到非常开心。如果家里干净卫生，家人也不容易生病。
+
+      这次整理房间，还有一个让弟弟惊喜的事情，那就是以前怎么找都找不到的一本书，这次被他找到了。
+  questions:
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 弟弟做事跟姐姐有什么不同？
+      options:
+        - 衣服摆放得整整齐齐。
+        - 书本和衣服到处乱扔。
+        - 看过的书本会放回原位。
+        - 书包会放回自己的房间。
+      correct: 书本和衣服到处乱扔。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 什么原因让弟弟突然想要学会收拾房间？
+      options:
+        - 弟弟觉得自己已经长大了。
+        - 弟弟踩到丢在地上的玩具。
+        - 弟弟受伤不能和朋友出去玩。
+        - 弟弟找不到自己要穿的袜子。
+      correct: 弟弟受伤不能和朋友出去玩。
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 2
+      text: 以下哪个不是收拾房间的好处？
+      options:
+        - 心情会变得十分开心。
+        - 家人会比较容易生病。
+        - 以前找不到的东西能被找到。
+        - 找东西时不用花很长的时间。
+      correct: 家人会比较容易生病。
+- groupId: P3-CH-2025-SA2-METHODIST-Q29-31
+  subject: Chinese
+  passage:
+    title: 合适的舞鞋
+    source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 11–12; answer key supplied in PDF
+    text: |-
+      小美喜欢跳舞。有一次，老师让小美在儿童节时表演跳舞。小美在家试穿舞鞋时，发现她的鞋破了一个洞。周末，妈妈便带她去买一双新的舞鞋。
+
+      她们来到一家鞋店，妈妈拿起一双白色的舞鞋，对小美说：“我们就买这双吧。这双鞋比较软，适合跳舞时穿。”可是，小美看中了一双漂亮的皮鞋，说：“这双皮鞋更漂亮，我要买这双。”不管妈妈怎么说，小美就是听不进去。最后，妈妈只好给她买了那双皮鞋。
+
+      表演的日子到了，小美穿着漂亮的皮鞋上台表演。舞刚跳了一半，她就觉得脚有点痛，但她忍着痛完成表演。走下舞台后，她跟老师说了这件事，老师看了看她的脚说：“你的脚周围红红的，看起来好像要流血了，你以后应该穿合适的鞋子跳舞。”
+
+      小美没有带别的鞋子来学校，只好穿着那双皮鞋回家。她不好意思地对妈妈说：“我应该听您的话，买那双白色的舞鞋。”
+
+      经过这件事后，小美明白了买东西时不能只看外表好看就买，我们要买合适和实用的东西。
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 妈妈为什么要带小美去买一双新的舞鞋？
+      displayAnswer: 因为小美要在儿童节时表演，可是她在家试穿舞鞋时，发现她的鞋破了一个洞。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 妈妈想给小美买哪一双鞋子？为什么？
+      displayAnswer: 妈妈想给小美买一双白色的舞鞋，因为那双鞋比较软，适合跳舞时穿。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出小美穿皮鞋跳舞是不合适的？
+      displayAnswer: 从舞刚跳了一半，小美就觉得脚有点痛，和她的脚周围红红的、看起来好像要流血了可以看出。
+- groupId: P3-CH-2025-SA2-NANHUA-Q29-32
+  subject: Higher Chinese
+  passage:
+    title: 小宝学画画
+    source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 16–17; answer key supplied in PDF
+    text: |-
+      小宝从小就喜欢画画。他常常一画就是几个小时，连妈妈叫他吃饭都听不见。可是，他怎么画都画得不太好。
+
+      有一天，老师让同学在班上画画，并选出最好的三张参加比赛。小宝看到同学都画得很好，对自己没信心，但还是努力地完成他的画。
+
+      当天，小宝的画没被选中，他很难过。老师看到了，对他说：“不要放弃。只要继续努力，你的画以后一定能被选上的！”
+
+      第二年，学校又有画画比赛。这一次，小宝的画被选上了！有同学问他：“你怎么会有那么大的进步？”小宝说：“听了老师的话，我每天花更多时间练习，还会多看和画画有关的书。”老师听了，说：“同学们，我们要多向小宝学习！”
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出小宝喜欢画画？
+      displayAnswer: 从“小宝从小就喜欢画画。他常常一画就是几个小时，连妈妈叫他吃饭都听不见。”可以看出。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 看到同学都画得很好，小宝有什么反应？
+      displayAnswer: 他对自己没有信心，但还是努力地完成他的画。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 3
+      text: 小宝怎么画得越来越好？
+      displayAnswer: 因为他听从老师的鼓励，坚持不断练习，还经常看和画画有关的书。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 3
+      text: 你从小宝身上学到什么？
+      displayAnswer: 我学到做事要坚持不放弃，只要努力就会进步。
+- groupId: P3-CH-2025-SA2-NANYANG-Q30-32
+  subject: Higher Chinese
+  passage:
+    title: 夜市里的好心人
+    source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 9–10; answer key supplied in PDF
+    text: |-
+      一个周末，我和姐姐去逛了本地最大的夜市。
+
+      那天晚上，夜市非常热闹，人来人往，到处都是香喷喷的小吃和各种各样的商品。有的摊位在卖手工艺品，有的在卖玩具，还有不少人在排队买烤肉串和炸鸡翅。我们买了棉花糖和鸡蛋仔，一边吃一边看着各种摊位。姐姐选了一些小礼物，想送给好友。
+
+      我们逛得太开心，没注意时间。正当我们要走时，天空突然下起了大雨。我们没有带伞，周围也没有躲雨的地方，我们又冷又着急。姐姐拿出手机想叫车回家，却发现手机没电了。
+
+      就在这时，一位阿姨走了过来。她看到我们淋湿了，马上把自己的伞递给我们，说：“你们用吧，我家就在前面。”我们连忙道谢，她笑着说：“小事，不用客气。”
+
+      这件事深深感动了我。我相信，世界上和那位阿姨一样的好心人一定还有很多很多！
+  questions:
+    - sourceQuestion: Q30
+      format: MCQ
+      marks: 1
+      text: 在夜市里，“我”买了什么？
+      options:
+        - 玩具和小礼物。
+        - 烤肉串和炸鸡翅。
+        - 棉花糖和鸡蛋仔。
+      correct: 棉花糖和鸡蛋仔。
+    - sourceQuestion: Q31
+      format: MCQ
+      marks: 1
+      text: 以下哪一个是“我们”回不了家的原因？
+      options:
+        - 夜市太大，“我们”迷路了。
+        - “我们”没有手机，不能叫车回家。
+        - 天空下起了大雨，“我们”没带伞。
+      correct: 天空下起了大雨，“我们”没带伞。
+    - sourceQuestion: Q32
+      format: MCQ
+      marks: 1
+      text: 这件事让“我”有什么感受？
+      options:
+        - 夜市的食物很好吃。
+        - 世界上有很多好心人。
+        - 碰到问题要请求别人帮忙。
+      correct: 世界上有很多好心人。
+- groupId: P3-CH-2025-SA2-NANYANG-Q33-37
+  subject: Higher Chinese
+  passage:
+    title: 兄弟之间的原谅
+    source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 11–13; answer key supplied in PDF
+    text: |-
+      一天下午，哥哥在家里写作业。弟弟想找他玩玩具车时，不小心把哥哥的新铅笔碰掉在地上。哥哥捡起笔，发现笔断了，他生气地拍了一下桌子，大声说：“你弄坏了我的笔！”
+
+      弟弟吓了一跳，小声说：“对不起……”哥哥却气呼呼地转过头，不理他。弟弟拿着玩具车，在哥哥旁边转来转去，不肯离开，想要哥哥和他一起玩。可哥哥却好像没看见他一样。
+
+      晚饭后，妈妈摸着哥哥的头，温和地说：“上次你不小心弄坏弟弟的玩具车，他是怎么做的？”哥哥开始回想起那天的事，弟弟不但没生气，还拿了另外一个给自己玩。可是今天，自己却没有原谅弟弟。
+
+      想到这里，哥哥的脸红了。他走到弟弟身边，小声说：“对不起，我不应该那么大声地骂你。”弟弟听了，笑着说：“没关系，我们还是好兄弟！”
+  questions:
+    - sourceQuestion: Q33
+      format: Fill-in
+      marks: 2
+      text: 文中表示“对别人做错事情后不再生气”的词语是________。
+      accepted:
+        - 原谅
+      displayAnswer: 原谅
+    - sourceQuestion: Q34
+      format: Long-Answer
+      marks: 1
+      text: 哥哥的新铅笔是怎样断的？
+      displayAnswer: 弟弟不小心把哥哥的新铅笔碰掉在地上弄断了。
+    - sourceQuestion: Q35
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出弟弟很想要哥哥和他一起玩玩具车？
+      displayAnswer: 弟弟拿着玩具车，在哥哥旁边转来转去，不肯离开，可以看出。
+    - sourceQuestion: Q37
+      format: Long-Answer
+      marks: 2
+      text: 为什么哥哥的脸红了？
+      displayAnswer: 因为哥哥想起上次弄坏弟弟的玩具车时，弟弟不但没生气，还拿了另外一个给自己玩，可是自己今天却大声地骂弟弟，所以感到羞愧，脸红了。
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q29-31
+  subject: Chinese
+  passage:
+    title: 爱哭的表妹
+    source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 9–10; answer key supplied in PDF
+    text: |-
+      表妹是家里最小的孩子。她今年六岁，长得瘦瘦小小的，而且很爱哭。她走路跌倒会哭，听写没学好会哭，别人对她不好会哭，我不带她玩也会哭。我觉得她那双大眼睛，里面好像装满了水！
+
+      只要她一开始哭，我们都拿她没办法。我赶快说：“对不起！请你原谅我，你就别哭了！”一说完，她马上就不哭了。
+
+      有一次，她的玩具娃娃不见了。她一直哭个不停。我想到一个办法。我走进房间里，穿上一件美丽的衣服和鞋子，还把头发弄得卷卷的。当我走出房间时，表妹一看见我，她就不哭了，还大笑了起来。原来我变成了她的玩具娃娃。
+  questions:
+    - sourceQuestion: Q29
+      format: MCQ
+      marks: 2
+      text: 表妹那双大眼睛，为什么好像装满了水？
+      options:
+        - 她很爱哭
+        - 她今年六岁
+        - 她长得瘦瘦的
+        - 她是家里最小的
+      correct: 她很爱哭
+    - sourceQuestion: Q30
+      format: MCQ
+      marks: 2
+      text: 表妹什么时候马上就不哭了？
+      options:
+        - 我不带她去玩
+        - 跟她说对不起
+        - 听写学得不好
+        - 她不小心跌倒
+      correct: 跟她说对不起
+    - sourceQuestion: Q31
+      format: MCQ
+      marks: 2
+      text: “我”想到什么办法让表妹大笑起来？
+      options:
+        - 把头发弄卷
+        - 穿衣服和鞋子
+        - 到处找玩具娃娃
+        - 变成她的玩具娃娃
+      correct: 变成她的玩具娃娃
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q32-34
+  subject: Chinese
+  passage:
+    title: 小狗养鱼
+    source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 11–12; answer key supplied in PDF
+    text: |-
+      一天，小狗来到小猪家玩。小狗看见小猪养了一群小鱼，美极啦！
+
+      小狗也想要养鱼。小猪笑着说：“我送给你几条鱼，你带回家养吧！”小猪马上捉了几条鱼放进瓶子里，里面装了一些水，把它送给小狗。小狗感动地说：“谢谢你！”
+
+      过了几天，小猪到小狗家里玩。小狗一看小猪来了，兴奋地说：“小猪，你快来看你给我的小鱼！”这时，小猪发现小鱼在水面上一动不动，肚子还翻了过来。小猪大声说：“小狗，你看，小鱼都活不了！”小狗一听，着急地说：“怎么会这样？”小猪问：“小狗，你有没有给小鱼干净的水啊？你有喂它们吗？”小狗说：“没有……我就是用你上次给我的水。我也忘了喂它们！”小猪听了，摇了摇头。小狗不好意思地低下了头。
+  questions:
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 小猪是怎么把小鱼送给小狗的？
+      displayAnswer: 小猪捉了几条鱼放进瓶子里，里面装了一些水，把它送给小狗。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 小狗养的鱼怎么了？从哪里可以看出？
+      displayAnswer: 小狗养的鱼都活不了。从“小鱼在水面上一动不动，肚子还翻了过来。”可以看出。
+    - sourceQuestion: Q34
+      format: Long-Answer
+      marks: 2
+      text: 小狗为什么不好意思地低下了头？
+      displayAnswer: 因为小狗没有给小鱼干净的水，也忘了喂它们。
+- groupId: P3-CH-2025-SA2-RAFFLES-Q14-16
+  subject: Chinese
+  passage:
+    title: 学会说不
+    source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      这几天，小文在学校里总是被两个同学欺负。这两个同学不是叫小文背他们的书包，就是叫他买食物给他们吃。小文害怕极了，只好按照他们的话去做。
+
+      上课时，小文不能专心地做作业。回到家里，他伤心得吃不下饭，睡不着觉。
+
+      妈妈看见了，就关心地问小文发生了什么事。小文忍不住，哭着把事情告诉了她。妈妈听了后，对他说：“小文，碰到不对的事情不要哭，要学会说‘不’，也要请老师帮忙。”
+
+      第二天，两个同学又来叫他去买食物了。这一次，小文大声地说：“别再叫我帮你们做事了！”后来李老师知道了，很生气，叫这两个同学不要再欺负小文了。
+
+      经过这件事，小文明白了懂得对欺负自己的人说“不”，才是真的长大了。
+  questions:
+    - sourceQuestion: Q14
+      format: MCQ
+      marks: 2
+      text: 文中的两个同学怎么欺负小文？
+      options:
+        - 他们叫小文做他们的作业。
+        - 他们不让小文在食堂吃饭。
+        - 他们要小文背他们的书包。
+      correct: 他们要小文背他们的书包。
+    - sourceQuestion: Q15
+      format: MCQ
+      marks: 2
+      text: 以下哪个句子是对的？
+      options:
+        - 妈妈让小文去找老师帮忙做作业。
+        - 小文被同学欺负后又害怕又难过。
+        - 李老师叫小文不要帮这两个同学。
+      correct: 小文被同学欺负后又害怕又难过。
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: 从哪里可以看出小文真的长大了？
+      options:
+        - 小文去请李老师来帮忙。
+        - 小文被欺负后没有再哭了。
+        - 小文跟欺负他的人说“不”。
+      correct: 小文跟欺负他的人说“不”。
+- groupId: P3-CH-2025-SA2-RAFFLES-Q28-30
+  subject: Chinese
+  passage:
+    title: 画画要细心
+    source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 14–15; answer key supplied in PDF
+    text: |-
+      学校要举办画画比赛了，小明很爱画画，想要参加这个比赛，十分兴奋。回家后，他就立刻拿起笔，飞快地画了起来。
+
+      比赛结果出来了，小明没得到第一名。他仔细地看了自己的那张画，才发现自己不小心把蓝色涂在了太阳上，把树干也画歪了。他低下头，哭着说：“都怪我太着急了！”
+
+      老师摸摸他的头说：“小明，画画要细心，做事也要一样。不能急，慢慢来，才会把事情做好。”
+
+      小明点点头，说：“我知道错了，一定会改掉这个坏习惯。”回家后，他安静地坐在桌前开始画了起来。这一次他认真地画每个部分。第二天一早，他把画送给了老师，老师笑着说：“非常好！”
+
+      从那天起，小明做事前都会想起老师的话，然后告诉自己：“别着急，要一步一步来！”
+  questions:
+    - sourceQuestion: Q28
+      format: Long-Answer
+      marks: 2
+      text: 为什么小明很兴奋？
+      displayAnswer: 因为学校要举办画画比赛了，小明很爱画画，想要参加这个比赛。
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出小明改掉了不细心的坏习惯？
+      displayAnswer: 回家后，小明安静地坐在桌前开始画了起来，这一次他认真地画每个部分。从这里可以看出。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 小明从这次的比赛中学到了什么？
+      displayAnswer: 他学到了做事要细心，不要急，要一步一步来，才会把事情做得好。
+- groupId: P3-CH-2025-SA2-ROSYTH-Q25-27
+  subject: Chinese
+  passage:
+    title: 合作拿蛋糕
+    source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      放学后，我们去小乐家玩。小乐家里有一大盒蛋糕，可是放在很高的书架上。明华想吃蛋糕，可是跳了几次，还是拿不到。他着急地说：“怎么办？我好想吃啊！”
+
+      我看了看周围，突然想到了一个办法。我搬来一张小椅子，又让小乐拿来几本书，放在椅子上。我小心地站到书上，小乐怕我跌倒，在旁边用力扶着椅子，明华张开双手站在下面，要是蛋糕的盒子掉下来了，他就可以接住盒子。
+
+      “我拿到了！”我高兴地把那个盒子小心地拿下来，交给明华。大家高兴地拍手。明华立刻拿起一块蛋糕，吃了起来。
+
+      这时，小乐的妈妈走过来说：“你们很聪明，想办法拿到了蛋糕。不过要小心，不要跌倒。以后也要先找大人帮忙。”我们听了，都点点头。
+
+      我们坐在一起吃蛋糕，一边吃一边笑着说：“自己想办法拿到的蛋糕好好吃呀！”
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 在小乐家时，明华想做什么？
+      options:
+        - 他想跳得很高。
+        - 他想要吃蛋糕。
+        - 他想站在书上。
+        - 他想扶着椅子。
+      correct: 他想要吃蛋糕。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: “我”、小乐和明华用了什么办法才拿到蛋糕？
+      options:
+        - 先把书本放在椅子上，然后站到书本上。
+        - 先站在椅子上，然后用手去拿蛋糕盒子。
+        - 先爬到书架上，然后用手去拿蛋糕盒子。
+        - 先把盒子放在椅子上，然后站到盒子上。
+      correct: 先把书本放在椅子上，然后站到书本上。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 为什么他们觉得蛋糕很好吃？
+      options:
+        - 因为小乐准备了一大盒蛋糕给大家。
+        - 因为明华拿到蛋糕立刻就吃了起来。
+        - 因为小乐妈妈说他们是聪明的孩子。
+        - 因为蛋糕是他们自己想办法拿到的。
+      correct: 因为蛋糕是他们自己想办法拿到的。
+- groupId: P3-CH-2025-SA2-ROSYTH-Q28-30
+  subject: Chinese
+  passage:
+    title: 一起看书
+    source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      星期天早上，小丽和小花一起到图书馆看书。一个小男孩看到她们一边看一边笑，他感到好奇，便走过去，也想看这本书。小丽急忙说：“这是我们先拿到的书，不给你看！”小男孩听了，低着头，不开心地走开了。
+
+      小花看见了，觉得不太对。她对小丽说：“你先看一会儿，然后给别人看。”小丽想了想，觉得小花说得对。她便点点头，然后跑去对小男孩说：“对不起，刚才我说错话了。我们可以一起看这本书！”
+
+      小男孩笑了，说：“没关系。谢谢你们！”他们便你一页，我一页地一起看书。
+  questions:
+    - sourceQuestion: Q28
+      format: Long-Answer
+      marks: 2
+      text: 为什么小男孩也想看小丽和小花的书？
+      displayAnswer: 因为他看到她们一边看一边笑，感到好奇。
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 小丽不想让小男孩看书，小花看到后怎么做？
+      displayAnswer: 小花叫小丽先看一会儿，然后给别人看。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 你觉得小男孩有没有原谅小丽？你是怎么知道的？
+      displayAnswer: 我觉得小男孩有原谅小丽。从他笑着说“没关系。谢谢你们！”，并和她们一起看书可以看出。
+- groupId: P3-CH-2025-SA2-STHILDAS-Q10-12
+  subject: Chinese
+  passage:
+    title: 小乐帮助哈利
+    source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 10–11; answer key supplied in PDF
+    text: |-
+      上美术课时，老师让同学们画出新加坡动物园。大家拿出画纸和彩色笔，开始认真地画画。
+
+      新同学哈利刚从国外回来，没去过新加坡动物园。他低着头，什么都没画。小乐看到了，走到他身边，慢慢地教他怎么画。他们一起画画，一起上色。哈利画得越来越好。老师看见了，夸他们画得真漂亮。
+
+      放学后，哈利拉着小乐的手，说：“谢谢你的帮助！”小乐笑着说：“不客气！”从那天起，他们成了好朋友。
+  questions:
+    - sourceQuestion: Q10
+      format: MCQ
+      marks: 2
+      text: 为什么哈利什么都没画？
+      options:
+        - 他不喜欢画画。
+        - 他没去过动物园。
+        - 他没有带彩色笔。
+        - 他听不懂老师的话。
+      correct: 他没去过动物园。
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 2
+      text: 哈利开始画画，因为___。
+      options:
+        - 小乐教他怎么画。
+        - 老师要走过来了。
+        - 大家都认真地画。
+        - 他想要老师夸他。
+      correct: 小乐教他怎么画。
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 小乐是一个___的孩子。
+      options:
+        - 不懂得画画
+        - 喜欢夸同学
+        - 会帮助别人
+        - 上课爱讲话
+      correct: 会帮助别人
+- groupId: P3-CH-2025-SA2-STHILDAS-Q32-34
+  subject: Chinese
+  passage:
+    title: 朋友相亲相爱
+    source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 18–19; answer key supplied in PDF
+    text: |-
+      休息时间，小安坐在食堂里看书。这时，文文走过去，想看小安的书。他用力地抢过书本，把书弄破了。小安生气地大叫：“你弄破了我的书！”文文说：“我又不是故意的！”他们吵了起来。
+
+      这时，老师看到小安和文文在争吵，就问他们发生了什么事。老师知道事情的经过后，对他们说：“你们是朋友，应该相亲相爱。”但是他们还是很生气。老师又说：“大家不要为了小事争吵。”说完，他们一起把书贴好。
+  questions:
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 1
+      text: 休息时间，小安在食堂里做什么？
+      displayAnswer: 休息时间，小安在食堂里看书。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 为什么小安很生气？
+      displayAnswer: 因为文文抢了小安的书，把书弄破了。
+    - sourceQuestion: Q34
+      format: Long-Answer
+      marks: 3
+      text: 听了老师的话后，小安和文文怎么做？（1分）老师的话让他们学到了什么？（2分）
+      displayAnswer: 他们一起把书贴好。老师的话让他们学到了朋友应该相亲相爱，不要为了小事争吵。
+- groupId: P3-CH-2025-SA2-TAONAN-Q25-28
+  subject: Higher Chinese
+  passage:
+    title: 小兔找大萝卜
+    source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+    text: |-
+      一天早上，小兔去好朋友小狗家玩。小兔对小狗说：“我昨天去田里拔萝卜，看见一个比你还要大的萝卜！”小狗听了，哈哈大笑地说：“怎么可能？田里是种不出那么大的萝卜的！”小兔生气地说：“我现在就去拔给你看！”说完，它就气冲冲地向田里走去。
+
+      不一会儿，小狗听到不远处传来一阵喊叫声：“救救我！谁来救救我！”它连忙跑出去，看见小兔掉进了一个坑里。小兔边哭边说：“我急着找大萝卜，没注意地上有个坑，一不小心就掉进来了。”
+
+      小狗听了，说：“别怕，我救你出来！”说完，它伸出手想拉小兔子，可是手太短了，拉不到小兔子。小狗又找来一根树枝，可是树枝还是太短了，小兔子怎么也抓不到。这时，小象刚好经过，小狗便请它来帮忙。小象用长长的鼻子轻轻一卷，就把小兔从坑里救了出来。
+
+      小兔高兴地说：“谢谢小象！谢谢小狗！”小狗笑着说：“不客气。我们是朋友，帮助你是应该的。”说完，三个小伙伴一起去田里找那个特别大的萝卜。
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 小兔在田里拔萝卜时，看到了什么？
+      options:
+        - 小狗在玩。
+        - 小象经过。
+        - 一个很大的坑。
+        - 特别大的萝卜。
+      correct: 特别大的萝卜。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 小兔为什么气冲冲地向田里走去？
+      options:
+        - 小狗笑话它种的萝卜不好。
+        - 小狗不相信它能拔出萝卜。
+        - 它要拔个大萝卜给小狗看。
+        - 它看到小狗要拿走大萝卜。
+      correct: 它要拔个大萝卜给小狗看。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 以下哪一个句子是对的？
+      options:
+        - 小狗没有办法自己救出小兔。
+        - 小兔的萝卜不小心掉进了坑里。
+        - 小兔抓着小象的长鼻子爬出了坑。
+        - 小狗和小象把小兔从坑里拉了出来。
+      correct: 小狗没有办法自己救出小兔。
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 2
+      text: 这个故事告诉我们什么道理？
+      options:
+        - 朋友之间不要吵架。
+        - 朋友之间要一起合作。
+        - 朋友说的话一定是对的。
+        - 朋友碰到问题要帮助他们。
+      correct: 朋友碰到问题要帮助他们。
+- groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+  subject: Higher Chinese
+  passage:
+    title: 小丽的画展
+    source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 11–12; answer key supplied in PDF
+    text: |-
+      小丽的爱好是画画。她每天一有空就会拿出彩色笔，在纸上画自己喜欢的东西。小丽每次都很认真地画，却总是觉得自己画得不够好。
+
+      有一天，学校展出了许多学生的画。小丽看着一张张美丽的画，心里十分难过。老师关心地问小丽怎么了。小丽小声地说：“画展上的画真美啊！可是我怎么练习都画不出这么好的画。”老师摸了摸小丽的头，笑着说：“要对自己有信心，继续努力，说不定有一天你的画也会被大家看到。”
+
+      听了老师的话，小丽更加认真地练习。每次画完画，她都会立刻去问老师怎么可以画得更好。日子一天天过去，小丽越画越好，老师也说她的画有进步，小丽对画画有一些信心了。
+
+      一年后，小丽的画被美术老师选中参加学校的画展。展出那天，同学们看了她的画，都竖起大拇指，夸她画得好。小丽听了，心里乐开了花。她这才明白了：要相信自己，再加上认真地练习，就一定会进步的！
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: |-
+        a）文中指“一直这样；经常这样”的词语是：________。（1分）
+        b）文中指“马上”的词语是：________。（1分）
+      displayAnswer: a）总是。b）立刻。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 1
+      text: 小丽每天一有空就会做什么？
+      displayAnswer: 她每天一有空就会拿出彩色笔，在纸上画自己喜欢的东西。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 什么事让小丽感到难过？
+      displayAnswer: 小丽看到学校画展上其他同学的画都很美，而自己怎么练习都画不出这么好的画。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 同学们觉得小丽的画画得怎么样？从哪里可以看出来？
+      displayAnswer: 同学们觉得小丽的画画得很好。从他们看了她的画都竖起大拇指可以看出。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 你从小丽身上学到了什么？
+      displayAnswer: 我学到了要相信自己，再加上认真地练习，就一定会进步。
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q15-17
+  subject: Chinese
+  passage:
+    title: 小安和明光
+    source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF pages 7–8; answer key supplied in PDF
+    text: |-
+      放学时，突然下起了大雨。小安没带雨伞，他站在校门口等雨停。这时，他看到明光拿着伞走过来，就对他说：“我可以和你一起共用伞吗？”明光看着他摇了摇头。小安见时间不早了，只好淋雨跑回家，结果全身都湿了。
+
+      第二天休息时，小安看见明光坐在一旁哭。他觉得很奇怪，立刻走上前问：“明光，发生了什么事？”明光回答：“我忘了带东西来吃，所以现在很饿。”小安听了，拿出一包饼干给明光。
+
+      见小安没有因为自己昨天没借伞给他的事生气，明光低下了头，他知道自己错了。
+  questions:
+    - sourceQuestion: Q15
+      format: Fill-in
+      marks: 1
+      text: 从文中找出代表“马上”的词语。
+      accepted:
+        - 立刻
+      displayAnswer: 立刻
+    - sourceQuestion: Q16
+      format: Long-Answer
+      marks: 2
+      text: 放学时，小安为什么没有回家？
+      displayAnswer: 因为放学时下起了大雨，小安没有带雨伞，只好等雨停。
+    - sourceQuestion: Q17
+      format: Long-Answer
+      marks: 3
+      text: 小安有生明光的气吗？从哪里可以看出？
+      displayAnswer: 小安没有生明光的气。从明光忘了带东西来吃，小安听了拿出一包饼干给他可以看出。
+- groupId: P3-CH-2025-WA1-AITONG-Q9-10
+  subject: Higher Chinese
+  passage:
+    title: 豆豆认错
+    source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      小熊豆豆在森林学校上学。
+
+      一天，上美术课时，豆豆不小心打翻了水壶，弄坏了小兔米米的画。豆豆害怕极了，赶快跑回座位，好像什么事也没发生过一样。
+
+      不久，米米走进教室，看到自己的画被弄坏了，难过地哭了起来。老师问是谁做的，豆豆低下头，一句话也不说。
+
+      晚上，豆豆心里很不安，一口饭也吃不下。妈妈问它发生了什么事，豆豆只好说出实话。妈妈轻轻地抱住它，说：“孩子，认错改过比什么都重要啊！”
+
+      第二天，豆豆一早就走向米米和老师，说：“对不起，是我弄坏了米米的画。”米米原谅了它，老师也笑着点头说：“谢谢你说出来，以后小心点儿就好了。”
+
+      这时，豆豆才放下了心头大石。
+  questions:
+    - sourceQuestion: Q9
+      format: MCQ
+      marks: 2
+      text: 豆豆弄坏了谁的画？
+      options:
+        - 妈妈。
+        - 老师。
+        - 自己。
+        - 米米。
+      correct: 米米。
+    - sourceQuestion: Q10
+      format: MCQ
+      marks: 2
+      text: 妈妈希望豆豆做什么事情？
+      options:
+        - 把饭吃完。
+        - 做事小心。
+        - 认错改过。
+        - 原谅别人。
+      correct: 认错改过。
+- groupId: P3-CH-2025-WA1-AITONG-Q14-16
+  subject: Higher Chinese
+  passage:
+    title: 阿成的好邻居
+    source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 12–13; answer key supplied in PDF
+    text: |-
+      有一天，阿成放学回家，看到奶奶生病了，在房里休息。他不会做饭，肚子很饿。
+
+      这时，邻居林阿姨上门问：“阿成，你奶奶今天没晒衣服，你们家里没事吧？”阿成红着眼睛说：“我奶奶生病了，我还没吃饭，但我不知道怎么办才好。”
+
+      林阿姨立刻从家里拿出煮好的面，还带了鸡蛋和水果。她轻声地说：“别怕，我来帮你们。”说完，林阿姨便请阿成吃面，还带奶奶去看医生。阿成很感动，不停地向林阿姨说：“谢谢您！”
+
+      第二天，阿成也开始帮林阿姨扫地，还帮她倒垃圾。他心想：邻居就是要互相帮助，像一家人一样。那天以后，阿成常常笑着对人说：“林阿姨是我最好的邻居！”
+  questions:
+    - sourceQuestion: Q14
+      format: Long-Answer
+      marks: 3
+      text: 林阿姨为什么要帮阿成和他奶奶？
+      displayAnswer: 因为阿成的奶奶生病了，他还没吃饭，但他不知道怎么办才好。
+    - sourceQuestion: Q15
+      format: Long-Answer
+      marks: 2
+      text: 林阿姨帮了阿成和他奶奶，阿成有什么反应？
+      displayAnswer: 阿成很感动，不停地向林阿姨道谢。
+    - sourceQuestion: Q16
+      format: Long-Answer
+      marks: 2
+      text: 如果你是阿成，你还会怎么帮林阿姨？（1分）为什么？（1分）
+      displayAnswer: 如果我是阿成，我还会帮林阿姨折衣服。因为邻居就是要互相帮助。
+- groupId: P3-CH-2025-WA1-CHIJ-Q23-25
+  subject: Higher Chinese
+  passage:
+    title: 大象也会排队
+    source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 5; answer key supplied in PDF
+    text: |-
+      星期天下午，叔叔带小光到动物园去看大象表演。他们来到大象表演处，见到大家在入口处排着队，一个接一个地走进去。小光看见大象，乐得又叫又跳。他跑了过去，冲到大家的最前面，完全没有排队。
+
+      不久，表演就开始了。几头胖胖的大象给大家表演踢球、玩水，十分有趣！后来，工作人员给大象吃东西。几头大象一只接一只地上前吃，没有一只乱推乱抢。大家看到大象那么可爱，都笑了起来。
+
+      这时，一个小朋友说：“妈妈，大象也会排队呢！”小光听了，看看在吃东西的大象，觉得很不好意思，脸红了起来。
+  questions:
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 2
+      text: 从哪里可以看出小光急着想看表演？
+      options:
+        - 他看到大象后又叫又跳。
+        - 他跑到了大家的最前面。
+        - 他在入口处完全没排队。
+        - 他要叔叔带他去看表演。
+      correct: 他跑到了大家的最前面。
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 2
+      text: 下面哪个句子是正确的？
+      options:
+        - 见了大象后，小光安静地坐在一旁。
+        - 大象表演后，工作人员给它们喂食。
+        - 见大象乱推乱抢食物，大家都笑了。
+        - 小光看到大象表演后，脸红了起来。
+      correct: 大象表演后，工作人员给它们喂食。
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 听了小朋友的话，小光觉得不好意思，因为___。
+      options:
+        - 小朋友比他聪明。
+        - 他的脸红了起来。
+        - 大象表演得很好。
+        - 他完全没有排队。
+      correct: 他完全没有排队。
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q14-16
+  subject: Chinese
+  passage:
+    title: 小白兔吓跑老虎
+    source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      春天来了，森林里的树叶都变绿了。小白兔走出自己的家，闻到了花香，也看到了蝴蝶在花上跳舞。
+
+      这时，小白兔肚子饿了，就想去森林里找一些青菜来吃。于是，它背上小篮子，开开心心地向森林走去。不一会儿，它就在森林的草地上发现了一些自己爱吃的青菜。它刚想伸出手时，就听到大树后有声音。
+
+      小白兔马上躲到一块石头的后面。它小心地看过去，看到一只老虎从大树后跳了出来！老虎好像也发现了小白兔，正一步一步地向小白兔走去。
+
+      小白兔知道自己跑不过老虎，就从篮子里拿出一个红色的气球。小白兔用力地吹起气球来，气球被小白兔越吹越大。很快，气球被小白兔吹破了。老虎听到气球被吹破时发出的响声，吓了一跳，就跑走了。
+
+      看到老虎被自己吓跑了，小白兔高兴得哈哈大笑。
+  questions:
+    - sourceQuestion: Q14
+      format: Fill-in
+      marks: 2
+      text: 小白兔从________里拿出一个红色的气球。
+      accepted:
+        - 篮子
+      displayAnswer: 篮子
+    - sourceQuestion: Q15
+      format: MCQ
+      marks: 2
+      text: 小白兔为什么要到森林里去？
+      options:
+        - 因为它想去看蝴蝶跳舞。
+        - 因为它想去找青菜来吃。
+        - 因为它想要去闻闻花香。
+        - 因为它想要去吓跑老虎。
+      correct: 因为它想去找青菜来吃。
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 2
+      text: 以下哪个句子是不对的？
+      options:
+        - 老虎躲在石头后面。
+        - 老虎被小白兔吓跑。
+        - 小白兔跑不过老虎。
+        - 小白兔把气球吹破。
+      correct: 老虎躲在石头后面。
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q17-19
+  subject: Chinese
+  passage:
+    title: 小文弄坏了小华的画
+    source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      今天早上，林老师带同学们到学校里的花园去画花朵。同学们都拿出自己的彩色笔认真地画了起来。
+
+      小文画了一会儿后，觉得自己画得很好，感到非常开心。但是小文看到坐在自己旁边的小华画的花朵时，就开心不起来了。小文心想：我已经画得很好了，但是小华画得更好。
+
+      小文越想越不开心。于是，在小华离开座位时，小文偷偷地在小华的画纸上乱画，还用手抹掉了画上的颜色。小华回到座位后，发现自己的画被弄坏了。可是小华什么也没说，只是又拿出一张画纸再画一次。老师知道小华的画被弄坏后，就问这是谁做的。
+
+      小文没有告诉老师画是他弄坏的。但是，小文想着自己刚才的行为，觉得越来越难过。最后，下课的铃声响起时，小文知道自己应该做些什么了。他慢慢地向老师和小华走去……
+  questions:
+    - sourceQuestion: Q17
+      format: Long-Answer
+      marks: 2
+      text: 为什么小文看到小华的画后，就开心不起来了？
+      displayAnswer: 因为小文的画已经画得很好了，但是小华画得更好。
+    - sourceQuestion: Q18
+      format: Long-Answer
+      marks: 2
+      text: 小文是怎么弄坏小华的画的？
+      displayAnswer: 小文偷偷地在小华的画纸上乱画，还用手抹掉了画上的颜色。
+    - sourceQuestion: Q19
+      format: Long-Answer
+      marks: 2
+      text: “小文知道自己应该做些什么了。他慢慢地向老师和小华走去……”你觉得小文接下来会做些什么事？
+      displayAnswer: 他会告诉老师和小华画是他弄坏的，并向他们认错。
+- groupId: P3-CH-2025-WA1-NANYANG-Q30-34
+  subject: Higher Chinese
+  passage:
+    title: 回收旧书帮助别人
+    source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 9–11; answer key supplied in PDF
+    text: |-
+      一天早上，王老师对同学们说：“下一周学校有一个回收旧书本的活动，请同学们把不读的旧课本和故事书带来学校。”小光听了，好奇地问道：“那些书都没用处了，收来做什么？”小丁也问：“是拿去卖吗？还是送给图书馆？”王老师摇了摇头，说：“你们记得我以前说过，有些地方的小朋友没钱买书吗？如果把这些书送给他们读，不就能帮助他们吗？”
+
+      第二周，搬书工人来了。他们看着像山一样高的书，着急地对王老师说：“今天有几个工人生病了，这怎么搬得完呢？”于是，王老师大声喊道：“同学们，我们来帮帮他们吧！”大家都点了点头。有的同学按住电梯，让工人把重重的箱子搬进电梯；有的同学把小包的书本拿到了一楼；还有的同学把书本放上卡车。过了一会儿，书搬完了，搬书工人笑着向大家道谢。
+
+      回到课室里，同学们虽然觉得搬书不容易，但他们还是面带笑容，心里也乐开了花，因为大家都明白了“助人为快乐之本”的道理。
+  questions:
+    - sourceQuestion: Q30
+      format: MCQ
+      marks: 1
+      text: 学校为什么要回收旧书？
+      options:
+        - 因为要把旧书拿出去卖。
+        - 因为要摆放在图书馆里。
+        - 因为要帮助有需要的人。
+      correct: 因为要帮助有需要的人。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 小光听到学校要回收旧书后，为什么感到好奇？
+      displayAnswer: 因为小光认为那些书都没用处了，不明白收来做什么，所以感到好奇。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 同学们怎样帮助搬书工人？
+      displayAnswer: 有的同学按住电梯，让工人把重重的箱子搬进电梯；有的把小包的书本拿到一楼；还有的把书本放上卡车。
+    - sourceQuestion: Q34
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出同学们明白了“助人为快乐之本”的道理？
+      displayAnswer: 从同学们虽然觉得搬书不容易，但还是面带笑容，心里也乐开了花可以看出。
+- groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+  subject: Chinese
+  passage:
+    title: 小青蛙收好东西
+    source: P3_Chinese_2025_WA1_rosyth.pdf; PDF pages 5–7; answer key supplied in PDF
+    text: |-
+      小青蛙有个坏习惯，爱掉东西。一天，青蛙妈妈把一本书和一把雨伞交给小青蛙，叫它一定要收好。小青蛙说：“好的，再见！”然后，它就出门了。
+
+      来到树林，小青蛙坐在一棵树下看书。不久，一只兔子跳过来，问它哪里有水喝。小青蛙说：“山上的水很甜，我带你去喝吧。”
+
+      路上，它们看见小鸭子在哭。小鸭子说：“我跟妈妈去小河游泳，它游得好快我跟不上。不一会儿，我就看不到妈妈了。”这时，天空下起雨。小青蛙把自己的雨伞给了小鸭子，说：“我们帮你找妈妈吧！”不久，它们在河边找到了鸭妈妈。接着，它们便到山上找水。
+
+      找到了水，小青蛙跟小鸭子拿回雨伞，就和小兔子说再见。回到家，妈妈看到小青蛙手上的书和雨伞，开心地笑了。
+  questions:
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 2
+      text: 小青蛙和小兔子在哪里发现小鸭子？
+      options:
+        - 树下。
+        - 山下。
+        - 河边。
+        - 路上。
+      correct: 路上。
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 下面哪一个句子是对的？
+      options:
+        - 小青蛙所有的东西都不见了。
+        - 小青蛙带小兔子到山上喝水。
+        - 小青蛙把雨伞给了小兔子。
+        - 小青蛙没有帮小鸭子找妈妈。
+      correct: 小青蛙带小兔子到山上喝水。
+    - sourceQuestion: Q13
+      format: Long-Answer
+      marks: 2
+      text: 小青蛙有什么坏习惯？
+      displayAnswer: 小青蛙有爱掉东西的坏习惯。
+    - sourceQuestion: Q14
+      format: Long-Answer
+      marks: 2
+      text: 为什么小鸭子找不到妈妈？
+      displayAnswer: 因为去小河游泳时，妈妈游得好快，小鸭子跟不上。
+    - sourceQuestion: Q15
+      format: Long-Answer
+      marks: 2
+      text: 小青蛙回到家时，妈妈为什么开心地笑了？
+      displayAnswer: 因为小青蛙把妈妈给它的东西都带回家了。
+- groupId: P3-CH-2025-WA1-TAONAN-Q25-28
+  subject: Higher Chinese
+  passage:
+    title: 老人和狗与狼
+    source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+    text: |-
+      从前，有个卖肉的老人，心地很好。老人自己一个人住，便养了一只小狗帮他看门。
+
+      有一天，老人卖完肉回家，在路上发现一只快要饿死的小狼，就把小狼抱回家。
+
+      不久，小狗和小狼都长大了。它们天天跟老人去卖肉。一天，老人卖完肉，像平时一样带着它们回家。当他们走到一棵大树下时，老人坐下来休息，没想到一会儿就睡着了。
+
+      天黑了，老人还没有醒来。这时，狗和狼都饿了。狼想吃掉主人，可是狗不同意。它一边保护主人，一边大声叫，把老人给吵醒了。狼看见主人醒了，就马上逃走了。
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 有一天，老人在路上发现了什么？
+      options:
+        - 一只会看门的小狗。
+        - 一只大声叫的小狗。
+        - 一只快饿死的小狼。
+        - 一只会卖肉的小狼。
+      correct: 一只快饿死的小狼。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 小狗和小狼长大后做什么？
+      options:
+        - 天天帮老人看门。
+        - 天天在树下睡觉。
+        - 天天吃老人卖的肉。
+        - 天天跟老人去卖肉。
+      correct: 天天跟老人去卖肉。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 狼为什么想吃掉主人？
+      options:
+        - 它想吵醒主人。
+        - 它不想要睡觉。
+        - 它觉得非常饿。
+        - 它已经长大了。
+      correct: 它觉得非常饿。
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 2
+      text: 从哪里可以看出老人的心地很好？
+      options:
+        - 他把快要饿死的小狼卖掉。
+        - 他把快要饿死的小狼抱回家。
+        - 他让快要饿死的小狼吃掉主人。
+        - 他让快要饿死的小狼在树下休息。
+      correct: 他把快要饿死的小狼抱回家。
+- groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+  subject: Higher Chinese
+  passage:
+    title: 排队上校车
+    source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+    text: |-
+      “校车来了！校车来了！”同学们一面大声喊叫，一面向校车冲去。老师在后面提醒道：“大家请排队。”可是同学们都没有听老师的话，有的还一直玩闹，追打身边的同学。
+
+      忽然，前面传来一阵哭声。老师马上跑上前去看发生了什么事。一名学生告诉老师，一些同学互相推挤，结果把其中一个同学——美华给推倒了。美华的脚受伤了，还流了很多血。
+
+      老师听了非常生气，便告诉同学们：“如果你们不排好队，就别想准时回家了！”同学们听了老师的话，都吓了一跳。大家静了下来，看着老师。这时，老师指着美华，说：“你们看，就因为大家不好好排队，结果害同学跌倒受伤了。”同学们听了老师的话后，脸都红了起来。
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: |-
+        a）文中形容“十分”的词语是：________。（1分）
+        b）文中形容“说给人，使人知道”的词语是：________。（1分）
+      displayAnswer: a）非常。b）告诉。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 1
+      text: 看见校车来了，同学们都怎么做？
+      displayAnswer: 同学们一面大声喊叫，一面向校车冲去。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 美华跌倒的原因是什么？
+      displayAnswer: 一些同学互相推挤，结果把美华给推倒了。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 为什么同学们听了老师的话后会脸红？
+      displayAnswer: 因为他们不好好排队，害同学跌倒受伤。他们知道自己做错事，觉得不好意思。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 如果你看到美华被人推倒了，你会怎么做？
+      displayAnswer: 我会跑上前，帮她背书包，扶她去办公室包扎伤口。
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q24-26
+  subject: Chinese
+  passage:
+    title: 小象帮山羊抬水
+    source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      山羊兄弟种了一棵果树。
+
+      有一天，山羊兄弟拿着木桶到河边去装水，准备为果树浇水。装了水后，它们觉得桶很重。才走了几步，它们再也走不动了。
+
+      这时，小象走了过来。山羊弟弟问道：“小象，你可以帮我们抬这桶水吗？”小象说：“可以。你们抬前面，我抬后面。”山羊兄弟点点头说好。它们走的时候，小象把长鼻子伸进桶里。走着走着，山羊兄弟觉得桶越来越轻。
+
+      到了果树的旁边，山羊哥哥看一看桶，发现只有半桶水，就问山羊弟弟：“是不是桶破了？”
+
+      小象笑着说：“是我吸走了桶里的水。”说完，它给果树浇水。山羊兄弟看见了，高兴地向小象说谢谢。
+  questions:
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 2
+      text: 山羊兄弟为什么要找小象帮忙？
+      options:
+        - 因为它们要种一棵果树。
+        - 因为它们要去河边装水。
+        - 因为它们觉得水桶很重。
+        - 因为它们不想抬水桶了。
+      correct: 因为它们觉得水桶很重。
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 小象怎样帮山羊兄弟？
+      options:
+        - 小象叫山羊兄弟在它后面走。
+        - 小象和山羊兄弟去河边装水。
+        - 小象和山羊兄弟种一棵果树。
+        - 小象用长鼻子吸走桶里的水。
+      correct: 小象用长鼻子吸走桶里的水。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 小象是一只怎样的动物？
+      options:
+        - 小象是一只聪明的动物。
+        - 小象是一只马虎的动物。
+        - 小象是一只爱玩闹的动物。
+        - 小象是一只爱环保的动物。
+      correct: 小象是一只聪明的动物。
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q28-30
+  subject: Chinese
+  passage:
+    title: 马和猴子合作
+    source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 10; answer key supplied in PDF
+    text: |-
+      马和猴子的感情不好，它们常常在森林里吵个不停，比谁比较能干。马说：“我可以背很重的东西，你能吗？”猴子说：“我能爬上高高的大树，你能吗？”它们来到河边问牛爷爷：“牛爷爷，我们谁比较能干？”牛爷爷说：“你们谁能到河对面摘到果子给我吃，谁就比较能干。”
+
+      猴子看着河水，说：“我不会游泳，我不敢过河。”马说：“没问题，小猴子，让我背你过去吧！”过了河，马看见果子在高高的树上，说：“我不会爬树。”猴子说：“那就让我来吧！”猴子很快地爬到树上，摘到了果子。然后，马又背着猴子过了河，把果子给牛爷爷吃。这时，牛爷爷说：“你们现在知道谁比较能干了吗？有些事情需要大家合作才能完成。”马和猴子点了点头。
+  questions:
+    - sourceQuestion: Q28
+      format: Long-Answer
+      marks: 2
+      text: 从哪里可以看出马和猴子的感情不好？
+      displayAnswer: 从“它们常常在森林里吵个不停，比谁比较能干。”可以看出。
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: 牛爷爷叫马和猴子做什么来比谁比较能干？
+      displayAnswer: 牛爷爷叫它们到河对面摘果子给他吃。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 2
+      text: 马和猴子从这件事中学到了什么？
+      displayAnswer: 它们学到有些事情需要大家合作才能完成。
+- groupId: P3-CH-2025-WA2-CHIJ-Q23-25
+  subject: Higher Chinese
+  passage:
+    title: 懂事的明明
+    source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 4–5; answer key supplied in PDF
+    text: |-
+      一天，妈妈下班回家了。明明看到后，立刻跑过去接过她的皮包，还倒了一杯水给她喝。妈妈摸了摸明明的头，夸他是个懂事的好孩子。
+
+      吃完晚饭后，明明发现地板上有几粒饭粒，便主动拿起扫把，把地板打扫干净。他还帮忙收拾碗筷，再把餐桌擦干净。爸爸看到了，笑着说：“明明长大了，真是爸爸妈妈的好帮手！”
+
+      周末，明明知道同学小乐生病了，便特地画了一张美丽的卡片给他。卡片上面写着：“小乐，希望你快点好起来，我们一起玩游戏！”接着，他把卡片送到小乐家，还带了一些小饼干，想让小乐开心一点。小乐接过卡片和饼干，感动地说：“谢谢你，明明，你真是我的好朋友！”
+
+      明明不但关心家人，乐于助人，还关心朋友。他用自己的行动，让身边的人感受到爱。
+  questions:
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 2
+      text: 明明是怎样关心妈妈的？
+      options:
+        - 明明跟妈妈一起玩游戏。
+        - 明明给妈妈画了生日卡。
+        - 明明给妈妈倒了一杯水。
+        - 明明给妈妈带了小饼干。
+      correct: 明明给妈妈倒了一杯水。
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 2
+      text: 从哪里可以知道小乐收到明明的卡片后很感动？
+      options:
+        - 小乐说明明真是他的好朋友。
+        - 小乐立刻收下明明的小饼干。
+        - 小乐马上跟明明一起玩游戏。
+        - 小乐把一张卡片送到明明家。
+      correct: 小乐说明明真是他的好朋友。
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 文中的明明是个怎样的孩子？
+      options:
+        - 明明是个很聪明的孩子。
+        - 明明是个很懂事的孩子。
+        - 明明是个爱做事的孩子。
+        - 明明是个爱表现的孩子。
+      correct: 明明是个很懂事的孩子。
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q14-16
+  subject: Chinese
+  passage:
+    title: 小猴子不专心
+    source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      一天，猴妈妈要在家里请客，但家里没米了。猴妈妈很忙，便叫小猴子帮它下山去买一包米回来。猴妈妈还叫小猴子快去快回，不要在路上玩。
+
+      小猴子买了米，走到半路，看到一棵树，树上长了许多它最喜欢吃的香蕉。于是，小猴子把米放下，爬上树去采香蕉。当它采了香蕉，想回去拿米时，米已经被老鼠拿走了。
+
+      小猴子又走了一会儿，看到小河边有很多花。小猴子觉得这些花又香又美丽，便把香蕉丢进河里，跑去采花。
+
+      快到家时，小猴子看到路旁的大树上结了一个大水果。它想知道那是什么东西，便爬上树去。当它刚采到大水果时，一不小心，从树上跌了下来。大水果和花都掉在地上，被小猴子压坏了。
+
+      猴妈妈见小猴子空着手回来，非常生气。它听小猴子说完事情的经过后，说：“你这样不专心，怎能把事情做好呢？”听了妈妈的话，小猴子不好意思地低下了头。
+  questions:
+    - sourceQuestion: Q14
+      format: Fill-in
+      text: 猴妈妈很忙，便叫小猴子帮它下山去________回来。
+      accepted:
+        - 买一包米
+      displayAnswer: 买一包米
+    - sourceQuestion: Q15
+      format: MCQ
+      text: 以下哪个句子是不正确的？
+      options:
+        - 小猴子把花朵丢进了河里。
+        - 小猴子最喜欢吃的是香蕉。
+        - 小猴子买的米被老鼠拿走了。
+        - 小猴子压坏了大水果和花朵。
+      correct: 小猴子把花朵丢进了河里。
+    - sourceQuestion: Q16
+      format: MCQ
+      text: 小猴子从这件事中学到了什么？
+      options:
+        - 要把东西放好
+        - 应该帮助妈妈
+        - 做事时要专心
+        - 做错事要认错
+      correct: 做事时要专心
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q17-19
+  subject: Chinese
+  passage:
+    title: 小鸡学会帮助别人
+    source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      一天早上，小白兔来找小鸡，向它借篮子。小鸡摇摇头说：“不行，我自己要用。”
+
+      过了一会儿，鸭妈妈要去看医生，它请小鸡帮忙照顾小鸭。小鸡听后马上说：“不行，我要去玩。”
+
+      到了晚上，小松鼠来找小鸡。它说：“明天一早我要去采果子。天一亮，请你大声叫我起床。我知道你每天都起得很早。”小鸡苦着脸说：“不行，我没力气大声叫。”
+
+      小松鼠刚走，就下起了大雨。小鸡的木屋倒下来了！小白兔、鸭妈妈和小松鼠知道了，就马上赶来，合力帮小鸡建了一座新的木屋。
+
+      小鸡红着脸对动物们说：“我以前那么对你们，你们还来帮我，真是太谢谢你们了！”
+  questions:
+    - sourceQuestion: Q17
+      format: Long-Answer
+      text: 鸭妈妈要小鸡帮它做什么？小鸡为什么不能帮它？
+      displayAnswer: 鸭妈妈要小鸡帮它照顾小鸭。因为小鸡要去玩。
+    - sourceQuestion: Q18
+      format: Long-Answer
+      text: 动物们有没有生小鸡的气？从哪里可以知道？
+      displayAnswer: 动物们没有生小鸡的气。从它们知道小鸡的木屋倒了，就马上赶来，合力帮小鸡建了一座新的木屋可以知道。
+    - sourceQuestion: Q19
+      format: Long-Answer
+      text: 小鸡为什么会脸红？你认为小鸡以后会有什么变化？
+      displayAnswer: 因为小鸡知道自己做错了。我认为小鸡以后看见有动物需要帮忙时，会马上帮助它们。
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q15-17
+  subject: Higher Chinese
+  passage:
+    title: 小猫和玩具小鸡
+    source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      一天，小猫米米发现桌子上有一个奇怪的书包。这个书包会自己动，还会发出声音。米米很好奇，就走上前去看一看。
+
+      米米试着用爪子拍了拍书包，书包没有再动，也安静了下来。米米感到害怕想要躲起来，可是它又想知道书包里有什么。它跳上桌子，用力地踢了书包一下。书包掉在地上，打开了！
+
+      这时，书包里跳出了一只玩具小鸡。小鸡在地上走来走去，还一直“叽叽”叫。米米怕得马上跳到椅子上。它小心地看了一会儿，发现小鸡原来一点儿也不可怕。
+
+      后来，米米把小鸡当成了好朋友，每天一起玩。米米很高兴自己没有因为害怕就躲起来，要是它躲起来，就不会发现新事物了！
+  questions:
+    - sourceQuestion: Q15
+      format: MCQ
+      text: 米米第一次看到书包时，它是怎么做的？
+      options:
+        - 它用爪子去拍书包。
+        - 它走上前去看一看。
+        - 它马上跳到椅子上。
+        - 它找个地方躲起来。
+      correct: 它走上前去看一看。
+    - sourceQuestion: Q16
+      format: MCQ
+      text: 米米为什么用力地踢了书包一下？
+      options:
+        - 因为它要让书包不停地动。
+        - 因为它要让书包发出声音。
+        - 因为它想知道怎么打开书包。
+        - 因为它想知道书包里有什么。
+      correct: 因为它想知道书包里有什么。
+    - sourceQuestion: Q17
+      format: MCQ
+      text: 这件事让米米学到了什么？
+      options:
+        - 不可以动别人的东西。
+        - 不可以去发现新事物。
+        - 不能因为害怕就躲起来。
+        - 不能因为好奇就做坏事。
+      correct: 不能因为害怕就躲起来。
+- groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+  subject: Chinese
+  passage:
+    title: 新邻居
+    source: P3_Chinese_2025_WA2_methodist.pdf; PDF pages 5–6; answer key supplied in PDF
+    text: |-
+      半年前，我搬新家了。刚开始，我总是觉得很不开心，因为不能跟好朋友一起玩了。
+
+      一天傍晚，我们正在客厅搬沙发。突然，门铃响了，爸爸打开门，一位叔叔和一位阿姨在门口。叔叔说：“我们是你的邻居，来向你们问好。”接着，阿姨请我们尝一尝她刚做好的蛋糕。爸爸和妈妈还来不及道谢，叔叔又指着沙发，说道：“我帮你们搬沙发吧！”看到这里，我的心里十分感动。
+
+      第二天下午放学后，我走到组屋楼下，看到电梯旁边多了一个小书架，上面放着很多本故事书。这时，电梯门开了，邻居阿姨走了出来。她一边把几本书放在书架上，一边对我说：“这是我们的图书角落，大家可以从书架上选书带回家读或者把家里的书放在这里让别人看。”
+
+      原来是这样，我知道应该怎么做了！
+  questions:
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 2
+      text: 为什么刚搬家时，“我”觉得很不开心呢？因为“我”___。
+      options:
+        - 不能吃阿姨做的蛋糕。
+        - 不想去新的学校上学。
+        - 不认识住在旁边的邻居。
+        - 不能跟好朋友一起玩了。
+      correct: 不能跟好朋友一起玩了。
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 邻居为什么会来按我们家的门铃？
+      options:
+        - 他们来请爸爸帮忙搬沙发。
+        - 他们要教我做美味的蛋糕。
+        - 他们要认识和帮助新邻居。
+        - 他们想叫我们去楼下拿书。
+      correct: 他们要认识和帮助新邻居。
+    - sourceQuestion: Q13
+      format: Long-Answer
+      marks: 2
+      text: |-
+        a）文中形容“一直都是”的词语是：________。（1分）
+        b）文中形容“时间短，没赶上”的词语是：________。（1分）
+      displayAnswer: a）总是。b）来不及。
+    - sourceQuestion: Q14
+      format: Long-Answer
+      marks: 2
+      text: 为什么“我”的心里十分感动？
+      displayAnswer: 因为阿姨请“我”和家人尝刚做好的蛋糕，叔叔还主动帮我们搬沙发。
+    - sourceQuestion: Q15
+      format: Long-Answer
+      marks: 2
+      text: 在组屋楼下听了邻居阿姨的话后，“我”可以怎么做？
+      displayAnswer: “我”可以从书架上选书带回家读，或者把家里的书放在那里让别人看。
+- groupId: P3-CH-2025-WA2-RAFFLES-Q11-14
+  subject: Chinese
+  passage:
+    title: 帮助朋友找书
+    source: P3_Chinese_2025_WA2_raffles.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      放学后，我和康康正要走出校门，看到了小美。小美的眼睛红红的，我觉得很奇怪，就问道：“你怎么了？”她伤心地说：“我的故事书不见了。”
+
+      康康说：“安安，我们帮小美找故事书，好吗？”我想回家，不想帮忙。但是康康是我的好朋友，我不好意思说“不”，就答应了。
+
+      我们回到课室四处找，都没有看到那本书。小美说：“时间不早了，你们不要找了，还是回家吧。”康康摇摇头，又拉着小美一起去了音乐室。果然，故事书就在音乐室的一张桌子上！小美看到了，高兴得跳了起来，说：“谢谢你们！”
+
+      看到小美脸上的笑容，我感到很开心，但是又有一点不好意思。原来帮助朋友是一件快乐的事，我以后也要多帮助同学。
+  questions:
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 2
+      text: 什么事情让“我”觉得很奇怪？
+      options:
+        - 小美的眼睛红红的。
+        - 小美的故事书不见了。
+        - 大家在课室里找不到书。
+      correct: 小美的眼睛红红的。
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 以下哪一个句子是对的？
+      options:
+        - “我”本来不想帮忙找书，因为“我”想回家。
+        - 康康感到很不好意思，因为小美跟他们说谢谢。
+        - 他们到音乐室去找，在地上找到小美的故事书。
+      correct: “我”本来不想帮忙找书，因为“我”想回家。
+    - sourceQuestion: Q13
+      format: Long-Answer
+      marks: 3
+      text: 从哪里可以看出康康喜欢帮助别人？
+      displayAnswer: 从康康知道小美的故事书不见了，便主动帮小美找可以看出。
+    - sourceQuestion: Q14
+      format: Long-Answer
+      marks: 2
+      text: 小美最后找到故事书，“我”学到了什么？
+      displayAnswer: “我”学到帮助朋友是一件快乐的事，以后也要多帮助同学。
+- groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+  subject: Chinese
+  passage:
+    title: 小乌龟找妈妈
+    source: P3_Chinese_2025_WA2_rosyth.pdf; PDF pages 4–5; answer key supplied in PDF
+    text: |-
+      放学后，小安和康康到学校旁边的公园去玩。池塘里有一群小乌龟，身体圆圆的，身上披着绿衣服，在水里游来游去。小安看见小乌龟们摆动着四条短短的腿，说：“小乌龟真可爱！”
+
+      康康走到池塘边，看见一只小乌龟站在石头上，就问：“它在睡觉吗？怎么不会动啊？”小安说：“它的腿受伤了！它爬不动。”康康听了，说：“小安，你带它回家吧。你一定要好好照顾它。”小安点点头。
+
+      过了一个星期，小乌龟的腿好了。可是，小安很爱小乌龟，觉得小乌龟是个好伙伴。小安不想把它放回池塘里。有一天，小安读了一本书，书上写着：“乌龟妈妈找不到小乌龟，伤心极了。”小安心想：我把小乌龟带走，乌龟妈妈找不到小乌龟，一定会很着急的。
+
+      第二天，小安把小乌龟带到池塘边。他对小乌龟说：“快去找你的妈妈吧！”
+  questions:
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 2
+      text: 小安为什么觉得小乌龟很可爱？
+      options:
+        - 因为它们的身体是圆形的。
+        - 因为它们披着绿色的衣服。
+        - 因为它们摆动着短短的腿。
+        - 因为它们在水里游来游去。
+      correct: 因为它们摆动着短短的腿。
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 康康走到池塘边，发现了什么？
+      options:
+        - 小乌龟一动也不动。
+        - 小乌龟在石头上爬。
+        - 小乌龟少了一条腿。
+        - 小乌龟在地上睡觉。
+      correct: 小乌龟一动也不动。
+    - sourceQuestion: Q13
+      format: Long-Answer
+      marks: 2
+      text: 知道小乌龟受伤后，康康对小安说了什么？
+      displayAnswer: 康康叫小安带小乌龟回家，一定要好好照顾它。
+    - sourceQuestion: Q14
+      format: Long-Answer
+      marks: 2
+      text: 小乌龟的腿好了后，小安为什么不把它放回池塘里？
+      displayAnswer: 因为小安很爱小乌龟，觉得小乌龟是个好伙伴。
+    - sourceQuestion: Q15
+      format: Long-Answer
+      marks: 2
+      text: 小安最后为什么要带小乌龟去找它的妈妈？
+      displayAnswer: 因为小安读了书，想到乌龟妈妈找不到小乌龟一定会很着急，所以要让它找妈妈。
+- groupId: P3-CH-2025-WA2-STHILDAS-Q6-8
+  subject: Chinese
+  passage:
+    title: 把垃圾丢进垃圾桶
+    source: P3_Chinese_2025_WA2_sthildas.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      上午，老师带同学们到动物园去玩。
+
+      中午，同学们坐在草地上，开心地吃着带来的食物。吃完后，同学们等着坐巴士回家。这时，老师走过来，看到地上的垃圾。她生气地说：“垃圾桶就在不远处，你们乱丢垃圾是不对的。吃完后，你们应该把垃圾捡起来丢进垃圾桶。”
+
+      听了老师的话后，同学们脸红了起来，低下了头。他们想了一会儿，知道怎么做了。
+  questions:
+    - sourceQuestion: Q6
+      format: Long-Answer
+      marks: 1
+      text: 老师带同学们去哪里？
+      displayAnswer: 老师带同学们去动物园。
+    - sourceQuestion: Q7
+      format: Long-Answer
+      marks: 2
+      text: 老师为什么很生气？
+      displayAnswer: 因为同学们乱丢垃圾。
+    - sourceQuestion: Q8
+      format: Long-Answer
+      marks: 2
+      text: 听了老师的话后，同学们接着会怎么做？
+      displayAnswer: 同学们会把垃圾捡起来丢进垃圾桶。
+- groupId: P3-CH-2025-WA2-TAONAN-Q25-28
+  subject: Higher Chinese
+  passage:
+    title: 一家人的晚餐
+    source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+    text: |-
+      今天，我刚走到家门口，就闻到一阵咖喱的香味儿。我轻轻地打开门，把书包放在客厅，然后冲到厨房，大声叫道：“奶奶，我回来了！”奶奶左手拿着一些咖喱叶，右手拿着一盒牛奶，温和地对我说：“你回来了啊！快去洗手。”我问奶奶：“好香啊！您在煮什么？”奶奶回答道：“不就是你和你爸爸最喜欢吃的……”这时，我看见桌上有一些鸡骨头，便高兴地喊道：“咖喱鸡！”奶奶听了，笑着点了点头。
+
+      晚上，奶奶最爱听的电台节目要开始了，但是她还在厨房里忙着。爷爷从书房里走到客厅对我说：“快做功课，你妈妈和妹妹快回来了。”说完，爷爷把报纸整理好，然后走到阳台去给花儿浇水。接着，他把收音机的音量调高，让奶奶可以一边煮饭，一边听电台节目。
+
+      不久，妈妈和妹妹回来了，奶奶也煮好了晚饭。我们一家人开开心心地坐下来，一起享用美味可口的晚餐。
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: “我”和爸爸最爱的食物是什么？
+      options:
+        - 牛奶。
+        - 咖喱叶。
+        - 咖喱鸡。
+        - 鸡骨头。
+      correct: 咖喱鸡。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: “我”回到家时，家里有些什么人？
+      options:
+        - 爸爸和爷爷。
+        - 爷爷和奶奶。
+        - 妈妈和妹妹。
+        - 奶奶和妹妹。
+      correct: 爷爷和奶奶。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 以下哪一项不是爷爷从书房走出来后所做的事情？
+      options:
+        - 帮奶奶煮饭。
+        - 给花儿浇水。
+        - 叫“我”做功课。
+        - 整理客厅里的报纸。
+      correct: 帮奶奶煮饭。
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 2
+      text: 爷爷为什么要把收音机的音量调高？
+      options:
+        - 让爷爷在书房里也听得见。
+        - 让妈妈和妹妹在门外也听得见。
+        - 让奶奶一边煮饭，一边听电台节目。
+        - 让“我”一边做功课，一边听电台节目。
+      correct: 让奶奶一边煮饭，一边听电台节目。
+- groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+  subject: Higher Chinese
+  passage:
+    title: 诚实的小华
+    source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+    text: |-
+      早上，小华在学校门口拾到一个漂亮的文具盒。他想：这应该是我们学校哪位同学的文具盒，不如我拿去交给老师吧！于是，他把文具盒放进书包里，然后走进了校门。
+
+      第一节是华文课。黄老师一走进教室，就大声问道：“文丽昨天新买的文具盒不见了，是谁拿走了？快还给她。”小华听了，心想：如果我把文具盒交出来，同学们可能会认为是我偷的；如果不交出来，让老师发现文具盒在我的书包里，那该怎么办？可是，我又没偷她的文具盒……
+
+      小华想了又想，最后还是决定把文具盒拿出来交给老师。他小声地对老师说：“老师，我在校门口拾到这个文具盒，不知道是不是文丽的。”
+
+      文丽看见心爱的文具盒，马上走上前向小华道谢。老师称赞小华是个诚实的孩子。小华听了，开心地笑了。
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: |-
+        a）文中形容“发觉”的词语是：________。（1分）
+        b）文中形容“对如何行动做出主张”的词语是：________。（1分）
+      displayAnswer: a）发现。b）决定。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 1
+      text: 小华在哪里拾到文具盒？
+      displayAnswer: 小华在学校门口拾到文具盒。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 小华为什么要把文具盒放进书包里？
+      displayAnswer: 小华认为这是他们学校某位同学的文具盒，决定拿去交给老师，所以先把它放进书包里。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 小华交出文具盒后，老师和文丽有什么反应？
+      displayAnswer: 文丽马上走上前向小华道谢。老师称赞小华是个诚实的孩子。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 如果你是小华，你会把文具盒拿出来交给老师吗？为什么？
+      displayAnswer: 我会把文具盒拿出来交给老师，因为我们要做诚实的孩子，不要把别人的东西占为己有。
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q22-24
+  subject: Higher Chinese
+  passage:
+    title: 子文只顾玩手机
+    source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 4–5; answer key supplied in PDF
+    text: |-
+      一个下午，妈妈在喂两岁的妹妹吃水果，子文在玩手机游戏。
+
+      不久，外头下起了大雨。妈妈一边跑到厨房，一边大声喊道：“子文，妈妈去把屋外的衣服收进来，你看着妹妹。”子文没好气地回答道：“别担心，妹妹不会有事的！”子文看了妹妹一眼，又低头继续玩手机游戏，把妈妈的话当耳边风。
+
+      就在这时，妹妹不小心从沙发上跌了下来，痛得她放声大哭。子文见了，吓得不敢出声。妈妈听到妹妹的哭声，马上冲到客厅抱起妹妹，看她有没有受伤。
+
+      过后，妈妈拿走子文的手机，生气地对他说：“你只顾着玩，叫你做点儿事都做不好，以后不准你再玩手机游戏！”
+
+      子文低下头，一句话也不敢说。
+  questions:
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 2
+      text: 妈妈要子文___。
+      options:
+        - 收拾衣服。
+        - 去做午餐。
+        - 照顾妹妹。
+        - 放下手机。
+      correct: 照顾妹妹。
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 2
+      text: 子文不把妈妈的话放在心上，因为他___。
+      options:
+        - 只想玩手机的游戏。
+        - 讨厌年纪小的妹妹。
+        - 一点也不喜欢妹妹。
+        - 觉得妹妹会自己玩。
+      correct: 只想玩手机的游戏。
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 2
+      text: 文中的子文是一个怎样的孩子？
+      options:
+        - 不用功。
+        - 不懂事。
+        - 没爱心。
+        - 没礼貌。
+      correct: 不懂事。
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q22-24
+  subject: Higher Chinese
+  passage:
+    title: 友情第一比赛第二
+    source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 10–11; answer key supplied in PDF
+    text: |-
+      小白兔看不起小乌龟。它认为小乌龟爬得慢，比不上自己。有一次，小白兔在赛跑中输给小乌龟，心里很不高兴。于是，它约小乌龟再比一次，看谁先翻过小山、越过小河。
+
+      比赛一开始，小白兔就快步地向前冲。不久，它爬上了山顶。看见乌龟还在后面慢慢地爬，它忍不住哈哈大笑。可是，小白兔想起上次比赛的教训，便马上往河边跑去。
+
+      当小白兔来到河边时，看见小河上的桥倒了。它不会游泳，心里很着急。小白兔很难过，心想：这次比赛又要输了。就在这时，小乌龟追了上来。它停下脚步，对小白兔说：“来！我背你过河！”
+
+      小白兔听了，睁大了眼睛，不相信乌龟说的话。于是，它问小乌龟：“你为什么要这么做，你不怕输了比赛吗？”小乌龟笑了笑，说：“这没什么，友情第一，比赛第二。”就这样，它们俩一起过了河。
+
+      经过这次的比赛，小白兔知道自己错了，因为小乌龟不但本领一点儿也不小，还乐于助人。
+  questions:
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 2
+      text: 小白兔为什么要跟小乌龟再比一次？
+      options:
+        - 因为它认为小乌龟一定会输的。
+        - 因为它认为小乌龟有不少本领。
+        - 因为它认为小乌龟会慢慢地爬。
+        - 因为它认为小乌龟要得到教训。
+      correct: 因为它认为小乌龟一定会输的。
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 2
+      text: 小乌龟要背小白兔过河，小白兔有什么感受？
+      options:
+        - 很着急。
+        - 很生气。
+        - 很吃惊。
+        - 很难过。
+      correct: 很吃惊。
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 2
+      text: 你认为小乌龟是只怎样的动物？
+      options:
+        - 懂事。
+        - 热心。
+        - 诚实。
+        - 聪明。
+      correct: 热心。
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q14-16
+  subject: Chinese
+  passage:
+    title: 不乱丢果皮
+    source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      小马、小羊和小猪是好朋友。它们住在一起。
+
+      小马和小羊爱吃水果。它们吃完水果，就会把果皮丢在家门口。小猪看见了，轻声对它们说：“你们不能把果皮丢在地上，这样做是不对的。”但是，小马和小羊不听，把小猪的话当耳边风。小猪生气极了，不要跟它们做朋友了。过了没多久，它们的家门口到处都是果皮，又脏又臭。
+
+      一天早上，小马和小羊要出门。小羊刚一走出门口，因为踩到果皮而跌倒了！它坐在地上哇哇大哭，大喊：“谁扔的果皮？”小马低声说：“是我们自己扔的！”这时，小马和小羊才知道自己错了。它们红着脸低下头，向小猪认错：“小猪，你说得对，乱丢果皮是不对的。我们以后再也不这样做了。”
+
+      最后，三只动物一起把门口打扫得干干净净。
+  questions:
+    - sourceQuestion: Q14
+      format: Long-Answer
+      text: 过了没多久，它们的家门口到处都是果皮，________。
+      displayAnswer: 又脏又臭
+    - sourceQuestion: Q15
+      format: MCQ
+      text: 小猪为什么会生气？因为___。
+      options:
+        - 小马和小羊总爱乱丢果皮。
+        - 小马和小羊非常爱吃水果。
+        - 小马和小羊不跟它做朋友。
+        - 小马和小羊忘了打扫房子。
+      correct: 小马和小羊总爱乱丢果皮。
+    - sourceQuestion: Q16
+      format: MCQ
+      text: 从哪里可以知道小马和小羊知错了？
+      options:
+        - 小羊踩到果皮跌倒。
+        - 它们红着脸低下头。
+        - 小羊坐在地上大哭。
+        - 果皮是它们丢掉的。
+      correct: 它们红着脸低下头。
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q17-19
+  subject: Chinese
+  passage:
+    title: 小青蛙想飞
+    source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      一天，小青蛙正站在家门口望着天空，两只海鸟飞了过来。看见小青蛙闷闷不乐的样子，海鸟们问它：“小青蛙，你为什么不开心？”
+
+      小青蛙回答：“我想要像你们一样在天空中飞来飞去，可是我没有翅膀，飞不起来。”
+
+      两只海鸟就和小青蛙一起想办法，怎么才能让它飞到天上去。突然，小青蛙大声说：“我有办法了！”它去找来一根树枝，叫两只海鸟咬住树枝的两头，它自己咬住树枝的中间。
+
+      人们在地上看见海鸟们带着小青蛙飞了起来，都说：“看，这两只海鸟真聪明啊，想出了这么好的办法！”小青蛙听了，连忙喊道：“这是我想出的……啊！”
+
+      原来，它一张嘴，就从天上掉了下来……
+  questions:
+    - sourceQuestion: Q17
+      format: Long-Answer
+      text: 小青蛙为什么不开心？
+      displayAnswer: 因为它想像海鸟一样在天空中飞来飞去，可是没有翅膀，飞不起来。
+    - sourceQuestion: Q18
+      format: Long-Answer
+      text: 小青蛙是怎么让自己飞起来的？
+      displayAnswer: 它找来一根树枝，叫两只海鸟咬住树枝的两头，自己咬住树枝的中间，让两只海鸟带它飞上天空。
+    - sourceQuestion: Q19
+      format: Long-Answer
+      text: 你觉得小青蛙的办法好吗？为什么？
+      displayAnswer: 我觉得小青蛙的办法好，因为它可以让自己飞起来。
+      notes: 参考答案认为办法好；也可认为不好，并合理说明一张嘴就会掉下来。
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q25-28
+  subject: Higher Chinese
+  passage:
+    title: 小狗只为自己着想
+    source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 8–9; answer key supplied in PDF
+    text: |-
+      树林里已经好久没下过一场雨了，连河里的水都干了，只有小狗家里的井还有水。住在小狗家对面的花猫和猴子来找小狗，求小狗给它们一点水喝。
+
+      可是，小狗却摇摇头，大声地说：“不可以！”说完，它就把花猫和猴子赶了出去。
+
+      小狗担心邻居们来偷水，便把井口用盖子盖上，再用锁头锁住，然后才安心上床睡觉。
+
+      夜里，小狗的家着火了。邻居们都赶来救火，可是井盖被锁住了，它们没办法打水灭火。最后，小狗的家被大火烧光了。
+
+      小狗红着脸对大家说：“我只为自己着想，结果害了自己，我知道错了。”
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 河水干了，给大家带来什么不便？
+      options:
+        - 小动物没水喝。
+        - 树林里不再下雨。
+        - 花猫不可以过河。
+        - 小狗无法安心睡觉。
+      correct: 小动物没水喝。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 为什么小狗家里有水喝？
+      options:
+        - 它家里的井还有水。
+        - 它偷了邻居家的水。
+        - 它家对面有一条河。
+        - 它跟猴子要了一点水。
+      correct: 它家里的井还有水。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 从哪里可以看出小狗不为别人着想？
+      options:
+        - 它把邻居赶出去。
+        - 它大声跟邻居说话。
+        - 它不让邻居来喝水。
+        - 它不让邻居打水灭火。
+      correct: 它不让邻居来喝水。
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 2
+      text: 这个故事告诉我们什么道理？
+      options:
+        - 做人要有礼貌。
+        - 应该多认识新朋友。
+        - 不要对朋友说实话。
+        - 做人不能只为自己着想。
+      correct: 做人不能只为自己着想。
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+  subject: Higher Chinese
+  passage:
+    title: 神笔马良
+    source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 10–11; answer key supplied in PDF
+    text: |-
+      古时候，有个名叫马良的孩子。他很喜欢画画，可是没有钱买画笔，每天只能用树枝在地上画画。
+
+      一天晚上，马良躺在床上休息。突然，床前出现了一道亮光，一位白头发的老爷爷出现了，交给马良一支漂亮的笔。“这支笔送给你，它能画出不同的颜色，也能让你画的画成真。”说完，老爷爷就不见了。
+
+      有了这支神笔，马良就到处帮人画画。有人的羊不见了，马良就给他画一只羊。谁家没水牛帮忙种田，马良就画一头水牛送给那家人。
+
+      这件事很快被贪心的国王知道了。国王把马良叫来，对他说：“你画一座金山给我，我就让你当大官。”马良知道国王没安好心，就先画了一片大海，然后又在大海中间画了一座金山。等马良画好了船，国王就上船出发了。
+
+      这时，马良开始画风。风越来越大，海浪也越来越强。最后，国王的船翻了。贪心的国王再也没有回来。
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: |-
+        a）文中指“好看”的词语是：________。（1分）
+        b）文中指“动手做”的词语是：________。（1分）
+      displayAnswer: a）漂亮。b）开始。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 1
+      text: 为什么马良用树枝在地上画画？
+      displayAnswer: 因为他很喜欢画画，可是没有钱买画笔。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 老爷爷送给马良的笔有什么特别的地方？
+      displayAnswer: 它能画出不同的颜色，也能让马良画的画成真。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 你觉得马良是一个怎样的孩子？为什么？
+      displayAnswer: 他是一个乐于助人的孩子。他到处帮人画画，例如给丢了羊的人画一只羊，给没水牛的人画一头水牛。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 如果你有一支神笔，你会怎么做？请举例说明。
+      displayAnswer: 我会帮助别人，比如有人的书包不见了，我会给他画一个书包。
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q25-28
+  subject: Higher Chinese
+  passage:
+    title: 往好的方面想
+    source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 22–23; answer key supplied in PDF
+    text: |-
+      老婆婆有两个儿子，大儿子卖雨伞和雨衣，小儿子卖草鞋。
+
+      一到晴天，老婆婆就担心大儿子的雨伞和雨衣卖不出去，便开始哭个不停。可是到了下雨天，老婆婆又开始担心雨会把草鞋淋湿，这样就没有人要买小儿子的草鞋了。想到这里，她又伤心地哭了起来。
+
+      老婆婆每天都过得很不开心。有一天，她把自己的心事说给朋友听。朋友对她说：“为什么你不往好的方面想呢？下雨天，你的大儿子卖伞的生意一定好。晴天，小儿子卖草鞋的生意也应该不错。你的儿子每天都有生意做，你应该高兴才对呀！”
+
+      老婆婆听了朋友的话后，觉得很有道理。从那天起，老婆婆不再担心孩子的生意，过得非常开心。
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 老婆婆的儿子做什么生意？
+      options:
+        - 大儿子卖草鞋。
+        - 大儿子卖雨伞。
+        - 小儿子卖雨伞。
+        - 小儿子卖雨衣。
+      correct: 大儿子卖雨伞。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 为什么老婆婆每天都不开心？
+      options:
+        - 她担心儿子的生意不好。
+        - 她担心儿子的生意太好。
+        - 她担心儿子不去做生意。
+        - 她担心儿子不会做生意。
+      correct: 她担心儿子的生意不好。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 晴天的时候，老婆婆担心什么？
+      options:
+        - 小儿子的雨伞卖不出去。
+        - 大儿子的雨伞卖不出去。
+        - 大儿子的草鞋卖不出去。
+        - 小儿子的草鞋卖不出去。
+      correct: 大儿子的雨伞卖不出去。
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 2
+      text: 这个故事告诉我们什么道理？
+      options:
+        - 有心事时要告诉朋友。
+        - 晴天比雨天好做生意。
+        - 事情要往好的方面想。
+        - 不要担心孩子的生意。
+      correct: 事情要往好的方面想。
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+  subject: Higher Chinese
+  passage:
+    title: 答应的事要做到
+    source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 24–25; answer key supplied in PDF
+    text: |-
+      星期天下午，文丽要和朋友去海边野餐。五岁的妹妹知道后，吵着要姐姐带她一块儿去。可是，文丽不想和朋友出去玩的时候还要照顾妹妹。于是，她对妹妹说：“妹妹，你去换件漂亮的衣服，我才带你去野餐。”妹妹听了，高兴地拍手叫好，然后跑进房里换衣服。
+
+      文丽一见妹妹跑进房里，就连忙拿起背包跑出家门。在客厅看报纸的爸爸看见了，三步并作两步地走到门口把文丽叫回来，对她说：“孩子，如果你一开始就不想带妹妹去野餐，为什么不直接告诉她呢？”文丽不好意思地回答：“要是我告诉妹妹我不想她跟着去，她一定会哭个不停的。”爸爸听了，笑着问：“如果爸爸答应了你的事没做到，你以后还会相信爸爸吗？”文丽听了，想了想说：“爸爸，我错了。我知道该怎么做了。”
+
+      这时，妹妹换好衣服，踏着轻快的脚步走到文丽身边。她拉着文丽的手，说：“姐姐，我们可以出门了吗？”文丽看着妹妹，说：“我们现在就走！”
+  questions:
+    - sourceQuestion: Q29
+      format: Long-Answer
+      marks: 2
+      text: |-
+        a）文中形容“好看”的词语是：________。（1分）
+        b）文中形容“赶紧；急忙”的词语是：________。（1分）
+      displayAnswer: a）漂亮。b）连忙。
+    - sourceQuestion: Q30
+      format: Long-Answer
+      marks: 1
+      text: 星期天下午，文丽要和朋友做什么？
+      displayAnswer: 文丽要和朋友去海边野餐。
+    - sourceQuestion: Q31
+      format: Long-Answer
+      marks: 2
+      text: 文丽答应带妹妹一起去野餐时，妹妹有什么反应？
+      displayAnswer: 妹妹高兴地拍手叫好，然后跑进房里换衣服。
+    - sourceQuestion: Q32
+      format: Long-Answer
+      marks: 2
+      text: 为什么文丽不直接告诉妹妹自己不想带她去野餐？
+      displayAnswer: 因为她觉得如果直接告诉妹妹，妹妹一定会哭个不停。
+    - sourceQuestion: Q33
+      format: Long-Answer
+      marks: 2
+      text: 你认为文丽是个怎样的孩子？为什么？
+      displayAnswer: 文丽是一个知错能改的孩子。她向爸爸认错，然后带妹妹一起去野餐。

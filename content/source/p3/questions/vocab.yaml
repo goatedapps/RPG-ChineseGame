@@ -1,0 +1,7116 @@
+- questionID: P3-CH-2025-SA2-ACS-Q1
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q1
+  sourceQuestion: Q1
+  sourceMarks: 1
+  lessonIds: []
+  question: 哥哥写完___业后，就去看书。
+  options:
+    - 作
+    - 坐
+    - 做
+  correct: 作
+  sourceSubject: Chinese
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q2
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q2
+  sourceQuestion: Q2
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 我喜欢用吸___喝水，因为这样很方便。
+  originalOptions:
+    - 官
+    - 管
+    - 馆
+  options:
+    - 官
+    - 管
+    - 馆
+    - 棺
+  correct: 管
+  sourceSubject: Chinese
+  targetWord: 吸管
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q3
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q3
+  sourceQuestion: Q3
+  sourceMarks: 1
+  lessonIds: []
+  question: 周末，我___爷爷去公园散步。
+  options:
+    - 根
+    - 很
+    - 跟
+  correct: 跟
+  sourceSubject: Chinese
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q4
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q4
+  sourceQuestion: Q4
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: 读过的杂志，我们可以___物利用。
+  originalOptions:
+    - 非
+    - 费
+    - 废
+  options:
+    - 非
+    - 费
+    - 废
+    - 沸
+  correct: 废
+  sourceSubject: Chinese
+  targetWord: 废物
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q5
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q5
+  sourceQuestion: Q5
+  sourceMarks: 1
+  lessonIds: []
+  question: 小猫的眼睛又___又大，真可爱！
+  options:
+    - 元
+    - 圆
+    - 原
+  correct: 圆
+  sourceSubject: Chinese
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q6
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q6
+  sourceQuestion: Q6
+  sourceMarks: 1
+  lessonIds: []
+  question: 校工刚___好的厕所又被同学弄得又脏又臭了。
+  options:
+    - 清洗
+    - 爱护
+    - 照顾
+    - 收拾
+  correct: 清洗
+  sourceSubject: Chinese
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q7
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q7
+  sourceQuestion: Q7
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: 小安生病了，老师决定让文光___他参加比赛。
+  options:
+    - 讨论
+    - 检查
+    - 代替
+    - 指定
+  correct: 代替
+  sourceSubject: Chinese
+  targetWord: 代替
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q8
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q8
+  sourceQuestion: Q8
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 出门前，妈妈要我们先___好游泳用品。
+  options:
+    - 水准
+    - 准备
+    - 对准
+    - 准时
+  correct: 准备
+  sourceSubject: Chinese
+  targetWord: 准备
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q9
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q9
+  sourceQuestion: Q9
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 我把小乐的故事书___了，连忙跟她道歉。
+  options:
+    - 跌倒
+    - 溜走
+    - 撞到
+    - 弄破
+  correct: 弄破
+  sourceSubject: Chinese
+  targetWord: 弄破
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q14
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q14
+  sourceQuestion: Q14
+  sourceMarks: 1
+  lessonIds: []
+  question: 保卫___
+  options:
+    - 发抖
+    - 画展
+    - 改掉
+    - 健康
+    - 国家
+    - 搬动
+  correct: 国家
+  sourceSubject: Chinese
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q15
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q15
+  sourceQuestion: Q15
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 全身___
+  originalOptions:
+    - 发抖
+    - 画展
+    - 改掉
+    - 健康
+    - 国家
+    - 搬动
+  options:
+    - 发抖
+    - 画展
+    - 国家
+    - 废物
+  correct: 发抖
+  sourceSubject: Chinese
+  targetWord: 发抖
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q16
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q16
+  sourceQuestion: Q16
+  sourceMarks: 1
+  lessonIds: []
+  question: 参观___
+  options:
+    - 发抖
+    - 画展
+    - 改掉
+    - 健康
+    - 国家
+    - 搬动
+  correct: 画展
+  sourceSubject: Chinese
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q17
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q17
+  sourceQuestion: Q17
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: ___椅子
+  originalOptions:
+    - 发抖
+    - 画展
+    - 改掉
+    - 健康
+    - 国家
+    - 搬动
+  options:
+    - 搬动
+    - 发抖
+    - 画展
+    - 国家
+  correct: 搬动
+  sourceSubject: Chinese
+  targetWord: 搬动
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACS-Q18
+  source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q18
+  sourceQuestion: Q18
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: ___习惯
+  originalOptions:
+    - 发抖
+    - 画展
+    - 改掉
+    - 健康
+    - 国家
+    - 搬动
+  options:
+    - 改掉
+    - 画展
+    - 健康
+    - 国家
+  correct: 改掉
+  sourceSubject: Chinese
+  targetWord: 改掉
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q1
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 老师要我们把地上的___圾捡起来。
+  originalOptions:
+    - 位
+    - 拉
+    - 垃
+  options:
+    - 位
+    - 拉
+    - 垃
+    - 啦
+  correct: 垃
+  targetWord: 垃圾
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q2
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 姐姐___计的衣服真好看。
+  originalOptions:
+    - 舌
+    - 设
+    - 色
+  options:
+    - 舌
+    - 设
+    - 色
+    - 舍
+  correct: 设
+  targetWord: 设计
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q3
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 爸爸交给我的___务，我一定要做好。
+  originalOptions:
+    - 任
+    - 仍
+    - 认
+  options:
+    - 任
+    - 仍
+    - 认
+    - 仁
+  correct: 任
+  targetWord: 任务
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q4
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我把不会读的字___起来。
+  options:
+    - 圆
+    - 围
+    - 圈
+  correct: 圈
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q5
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 妹妹___下鞋子，把它放在架子上。
+  originalOptions:
+    - 脱
+    - 肚
+    - 胖
+  options:
+    - 脱
+    - 肚
+    - 胖
+    - 肥
+  correct: 脱
+  targetWord: 脱
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q6
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: ___今天不下雨，我们就去操场踢足球。
+  originalOptions:
+    - 结果
+    - 如果
+    - 果然
+  options:
+    - 结果
+    - 如果
+    - 果然
+    - 虽然
+  correct: 如果
+  targetWord: 如果
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q7
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 老师说我考到全班第一，我感到很___。
+  originalOptions:
+    - 吃惊
+    - 吓坏
+    - 惊吓
+  options:
+    - 吃惊
+    - 吓坏
+    - 惊吓
+    - 吃力
+  correct: 吃惊
+  targetWord: 吃惊
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q8
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 你只要___湖边走，就能走到书店。
+  originalOptions:
+    - 往前
+    - 沿着
+    - 走向
+  options:
+    - 往前
+    - 沿着
+    - 走向
+    - 回来
+  correct: 沿着
+  targetWord: 沿着
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q9
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 文文___爸爸让他去游乐场玩。
+  originalOptions:
+    - 答应
+    - 说话
+    - 请求
+  options:
+    - 答应
+    - 说话
+    - 请求
+    - 回答
+  correct: 请求
+  targetWord: 请求
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q14
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 全身___
+  originalOptions:
+    - 急忙
+    - 小猫
+    - 发抖
+    - 时间
+    - 废物
+    - 生病
+  options:
+    - 发抖
+    - 画展
+    - 国家
+    - 废物
+  correct: 发抖
+  targetWord: 发抖
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q15
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: ___离开
+  originalOptions:
+    - 急忙
+    - 小猫
+    - 发抖
+    - 时间
+    - 废物
+    - 生病
+  options:
+    - 急忙
+    - 小猫
+    - 时间
+    - 废物
+  correct: 急忙
+  targetWord: 急忙
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q16
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 欺负___
+  options:
+    - 急忙
+    - 小猫
+    - 发抖
+    - 时间
+    - 废物
+    - 生病
+  correct: 小猫
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q17
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: ___利用
+  originalOptions:
+    - 急忙
+    - 小猫
+    - 发抖
+    - 时间
+    - 废物
+    - 生病
+  options:
+    - 废物
+    - 冷汗
+    - 发抖
+    - 脚步
+  correct: 废物
+  targetWord: 废物
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ACSJUNIOR-Q18
+  source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 游戏___
+  options:
+    - 急忙
+    - 小猫
+    - 发抖
+    - 时间
+    - 废物
+    - 生病
+  correct: 时间
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q1
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 妹妹喜欢用___管喝果汁。
+  options:
+    - 级
+    - 吸
+    - 极
+    - 圾
+  correct: 吸
+  targetWord: 吸管
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q2
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 我送了一张生日___卡给小美。
+  options:
+    - 河
+    - 喝
+    - 贺
+    - 盒
+  correct: 贺
+  targetWord: 贺卡
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q3
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 大野___太坏了，它把小兔子吃掉了。
+  options:
+    - 狼
+    - 浪
+    - 根
+    - 跟
+  correct: 狼
+  targetWord: 狼
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q4
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: 我们每个人都应该为保护环境___一份力。
+  options:
+    - 进
+    - 近
+    - 紧
+    - 尽
+  correct: 尽
+  targetWord: 尽
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q5
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 哥哥不小心打___了妈妈最喜欢的杯子。
+  options:
+    - 坡
+    - 披
+    - 破
+    - 被
+  correct: 破
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q6
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 我___地看了一下，发现地上有五只蚂蚁。
+  options:
+    - 仔细
+    - 努力
+    - 快活
+    - 有趣
+  correct: 仔细
+  targetWord: 仔细
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q7
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 你弄坏了我的玩具，我要你___。
+  options:
+    - 赔钱
+    - 付钱
+    - 还钱
+    - 借钱
+  correct: 赔钱
+  targetWord: 赔钱
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q8
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 美美每天准时上学，___不迟到。
+  options:
+    - 果然
+    - 然后
+    - 从来
+    - 经常
+  correct: 从来
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-AITONG-Q9
+  source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: 马老师生病了，胡老师___她教我们音乐。
+  options:
+    - 帮助
+    - 请求
+    - 指定
+    - 代替
+  correct: 代替
+  targetWord: 代替
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q3
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我___用废纸做了一个小纸盒。
+  options:
+    - 立
+    - 丽
+    - 利
+    - 力
+  correct: 利
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q4
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 17
+  question: 医生叫奶奶去医院___查身体。
+  options:
+    - 脸
+    - 检
+    - 捡
+    - 签
+  correct: 检
+  targetWord: 检查
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q5
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 学校在我家___近，走路就能到。
+  options:
+    - 复
+    - 父
+    - 负
+    - 附
+  correct: 附
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q6
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 只要我们___河边走，就会走出森林。
+  options:
+    - 按照
+    - 继续
+    - 沿着
+    - 经过
+  correct: 沿着
+  targetWord: 沿着
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q7
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 小文___出现在我面前，吓了我一跳。
+  options:
+    - 如果
+    - 突然
+    - 接着
+    - 一直
+  correct: 突然
+  targetWord: 突然
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q8
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 我们___准时上学，不能迟到。
+  options:
+    - 必须
+    - 总是
+    - 刚刚
+    - 结果
+  correct: 必须
+  targetWord: 必须
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q9
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我不会___弟弟，大家都说我是好哥哥。
+  options:
+    - 相信
+    - 帮忙
+    - 爱护
+    - 欺负
+  correct: 欺负
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-HENRYPARK-Q5
+  source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 小月最爱的玩具不见了，她___不住哭了出来。
+  options:
+    - 认
+    - 任
+    - 扔
+    - 忍
+  correct: 忍
+  targetWord: 忍不住
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-HENRYPARK-Q15
+  source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 明安认真复习，___在听写中拿到满分。
+  options:
+    - 实现
+    - 完成
+    - 争取
+    - 请求
+  correct: 争取
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-HENRYPARK-Q16
+  source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 外面下着大雨，弟弟___想要出去玩。
+  options:
+    - 应该
+    - 仍然
+    - 如果
+    - 果然
+  correct: 仍然
+  targetWord: 仍然
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-HENRYPARK-Q17
+  source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 昨天，我们一家人在公园的草地上___。
+  options:
+    - 出国
+    - 购物
+    - 逛街
+    - 野餐
+  correct: 野餐
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-HENRYPARK-Q18
+  source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 天气的___很快，刚才出太阳，现在下雨。
+  options:
+    - 不同
+    - 变化
+    - 问题
+    - 动作
+  correct: 变化
+  targetWord: 变化
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q1
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 欢欢看到地上有垃___，就把它拾起来。
+  options:
+    - 及
+    - 级
+    - 极
+    - 圾
+  correct: 圾
+  targetWord: 垃圾
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q2
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师出了一道谜语让我们___。
+  options:
+    - 猜
+    - 情
+    - 清
+    - 睛
+  correct: 猜
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q3
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 文文___用旧报纸做手工。
+  options:
+    - 离
+    - 利
+    - 礼
+    - 立
+  correct: 利
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q4
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 这些数学题很___单，我很快就做完了。
+  options:
+    - 健
+    - 捡
+    - 简
+    - 剪
+  correct: 简
+  targetWord: 简单
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q5
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 小乐感到不好意思，真想找个洞___进去。
+  options:
+    - 钱
+    - 钻
+    - 钟
+    - 错
+  correct: 钻
+  targetWord: 钻进
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q6
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 爸爸的生日快到了，我为他___了一张生日卡。
+  options:
+    - 练习
+    - 实现
+    - 设计
+    - 代替
+  correct: 设计
+  targetWord: 设计
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q7
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我们应该爱护小动物，不能___它们。
+  options:
+    - 原谅
+    - 讨论
+    - 陪伴
+    - 欺负
+  correct: 欺负
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q8
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 在图书馆里，大家都___安静地读故事书。
+  options:
+    - 必须
+    - 准时
+    - 完成
+    - 合作
+  correct: 必须
+  targetWord: 必须
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q9
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师告诉同学们写字不能___，不然会闹笑话。
+  options:
+    - 仔细
+    - 马虎
+    - 努力
+    - 浪费
+  correct: 马虎
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q14
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: ___尾巴
+  options:
+    - 全身
+    - 涂上
+    - 环境
+    - 决定
+    - 有趣
+    - 摆动
+    - 任务
+    - 生活
+  correct: 摆动
+  targetWord: 摆动
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q15
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 故事___
+  options:
+    - 全身
+    - 涂上
+    - 环境
+    - 决定
+    - 有趣
+    - 摆动
+    - 任务
+    - 生活
+  correct: 有趣
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q16
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___习惯
+  options:
+    - 全身
+    - 涂上
+    - 环境
+    - 决定
+    - 有趣
+    - 摆动
+    - 任务
+    - 生活
+  correct: 生活
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q17
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 破坏___
+  options:
+    - 全身
+    - 涂上
+    - 环境
+    - 决定
+    - 有趣
+    - 摆动
+    - 任务
+    - 生活
+  correct: 环境
+  targetWord: 环境
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-MAHABODHI-Q18
+  source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___发抖
+  options:
+    - 全身
+    - 涂上
+    - 环境
+    - 决定
+    - 有趣
+    - 摆动
+    - 任务
+    - 生活
+  correct: 全身
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q1
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 我长高了，去年买的裙子对我来说已经太___了。
+  originalOptions:
+    - 短
+    - 知
+    - 矮
+  options:
+    - 短
+    - 知
+    - 矮
+    - 矩
+  correct: 短
+  targetWord: 短
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q2
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 我们班有一___分同学坐校车来学校上学。
+  originalOptions:
+    - 阵
+    - 部
+    - 陪
+  options:
+    - 阵
+    - 部
+    - 陪
+    - 倍
+  correct: 部
+  targetWord: 部分
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q3
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 很多游客喜欢来这家餐厅品___美食。
+  options:
+    - 堂
+    - 当
+    - 尝
+  correct: 尝
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q4
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 爷爷最喜欢吃的食物是鱼___面。
+  options:
+    - 圈
+    - 圆
+    - 园
+  correct: 圆
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q5
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我可以在这间文具店里买到___种文具。
+  options:
+    - 名
+    - 外
+    - 各
+  correct: 各
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q6
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 奶奶现在___记得乐乐小时候的样子。
+  originalOptions:
+    - 突然
+    - 仍然
+    - 不然
+  options:
+    - 突然
+    - 仍然
+    - 不然
+    - 虽然
+  correct: 仍然
+  targetWord: 仍然
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q7
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我送给哥哥的生日卡片上，写满了___的话。
+  options:
+    - 福气
+    - 庆祝
+    - 祝福
+  correct: 祝福
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q8
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小光跑得太快，不小心把旁边的脚踏车___在地。
+  options:
+    - 撞到
+    - 撞倒
+    - 撞见
+  correct: 撞倒
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q9
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 电梯___时，我们不应该在里面乱跑乱跳。
+  options:
+    - 上升
+    - 起立
+    - 起来
+  correct: 上升
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q10
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 哥哥打破王叔叔家的花盆，只好___。
+  originalOptions:
+    - 赔钱
+    - 借钱
+    - 付钱
+  options:
+    - 赔钱
+    - 借钱
+    - 付钱
+    - 存钱
+  correct: 赔钱
+  targetWord: 赔钱
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q11
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 破坏___
+  originalOptions:
+    - 欺负
+    - 发抖
+    - 准时
+    - 消失
+    - 环境
+    - 拇指
+    - 废物
+    - 逃走
+  options:
+    - 环境
+    - 欺负
+    - 发抖
+    - 逃走
+  correct: 环境
+  targetWord: 环境
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q12
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___同学
+  options:
+    - 欺负
+    - 发抖
+    - 准时
+    - 消失
+    - 环境
+    - 拇指
+    - 废物
+    - 逃走
+  correct: 欺负
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q13
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 全身___
+  originalOptions:
+    - 欺负
+    - 发抖
+    - 准时
+    - 消失
+    - 环境
+    - 拇指
+    - 废物
+    - 逃走
+  options:
+    - 发抖
+    - 画展
+    - 国家
+    - 废物
+  correct: 发抖
+  targetWord: 发抖
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q14
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: ___上学
+  originalOptions:
+    - 欺负
+    - 发抖
+    - 准时
+    - 消失
+    - 环境
+    - 拇指
+    - 废物
+    - 逃走
+  options:
+    - 准时
+    - 强壮
+    - 一样
+    - 收到
+  correct: 准时
+  targetWord: 准时
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q15
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 竖起___
+  options:
+    - 欺负
+    - 发抖
+    - 准时
+    - 消失
+    - 环境
+    - 拇指
+    - 废物
+    - 逃走
+  correct: 拇指
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-METHODIST-Q16
+  source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: ___利用
+  originalOptions:
+    - 欺负
+    - 发抖
+    - 准时
+    - 消失
+    - 环境
+    - 拇指
+    - 废物
+    - 逃走
+  options:
+    - 废物
+    - 冷汗
+    - 发抖
+    - 脚步
+  correct: 废物
+  targetWord: 废物
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q1
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 每天傍晚，爷爷都到附___的公园运动。
+  options:
+    - 迟
+    - 近
+    - 退
+    - 逃
+  correct: 近
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q2
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 学校的讲堂共有三百个___位。
+  options:
+    - 作
+    - 做
+    - 坐
+    - 座
+  correct: 座
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q3
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 爸爸教我用瓶___做一辆小汽车。
+  options:
+    - 盆
+    - 蓝
+    - 盖
+    - 盒
+  correct: 盖
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q4
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 姐姐___求妈妈让她到游泳池去游泳。
+  options:
+    - 青
+    - 请
+    - 清
+    - 睛
+  correct: 请
+  targetWord: 请求
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q5
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师告诉我们要___把每件事都做好。
+  options:
+    - 实现
+    - 争取
+    - 相信
+    - 讨论
+  correct: 争取
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q6
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 爸爸说今天会下雨，下午___下起了大雨。
+  options:
+    - 突然
+    - 虽然
+    - 果然
+    - 仍然
+  correct: 果然
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q7
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 看到弟弟把公园里的花摘了，妈妈很___。
+  options:
+    - 兴奋
+    - 认真
+    - 满意
+    - 吃惊
+  correct: 吃惊
+  targetWord: 吃惊
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q8
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 老师___的新游戏，让学习变得更有趣。
+  options:
+    - 设计
+    - 说明
+    - 使用
+    - 检查
+  correct: 设计
+  targetWord: 设计
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q13
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___环境
+  options:
+    - 任务
+    - 破坏
+    - 发抖
+    - 摆动
+    - 强壮
+    - 希望
+  correct: 破坏
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q14
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 全身___
+  options:
+    - 任务
+    - 破坏
+    - 发抖
+    - 摆动
+    - 强壮
+    - 希望
+  correct: 发抖
+  targetWord: 发抖
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q15
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: ___尾巴
+  options:
+    - 任务
+    - 破坏
+    - 发抖
+    - 摆动
+    - 强壮
+    - 希望
+  correct: 摆动
+  targetWord: 摆动
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANHUA-Q16
+  source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 完成___
+  options:
+    - 任务
+    - 破坏
+    - 发抖
+    - 摆动
+    - 强壮
+    - 希望
+  correct: 任务
+  targetWord: 任务
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q1
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 弟弟喜欢___哥哥玩游戏。
+  options:
+    - 眼
+    - 根
+    - 跟
+  correct: 跟
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q2
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师让我们把画___在墙上。
+  options:
+    - 贴
+    - 站
+    - 钻
+  correct: 贴
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q3
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈每天都会给院子里的几___花浇水。
+  options:
+    - 盆
+    - 盖
+    - 盒
+  correct: 盆
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q4
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 张老师在儿___节那天为我们唱了一首歌。
+  options:
+    - 同
+    - 童
+    - 桶
+  correct: 童
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q5
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 9
+  question: 小明___一阵风一样冲过来，把小华撞倒了。
+  options:
+    - 像
+    - 响
+    - 想
+  correct: 像
+  targetWord: 像
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q10
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: ___利用
+  options:
+    - 检查
+    - 宠物
+    - 跑步
+    - 保护
+    - 废物
+    - 散步
+  correct: 废物
+  targetWord: 废物
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q11
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 照顾___
+  options:
+    - 检查
+    - 宠物
+    - 跑步
+    - 保护
+    - 废物
+    - 散步
+  correct: 宠物
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q12
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 17
+  question: ___试卷
+  options:
+    - 检查
+    - 宠物
+    - 跑步
+    - 保护
+    - 废物
+    - 散步
+  correct: 检查
+  targetWord: 检查
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q13
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 练习___
+  options:
+    - 检查
+    - 宠物
+    - 跑步
+    - 保护
+    - 废物
+    - 散步
+  correct: 跑步
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q14
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___环境
+  options:
+    - 检查
+    - 宠物
+    - 跑步
+    - 保护
+    - 废物
+    - 散步
+  correct: 保护
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q15
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 小明做事___，很少会做错。
+  options:
+    - 愿望
+    - 请求
+    - 果然
+    - 虽然
+    - 仔细
+    - 希望
+  correct: 仔细
+  targetWord: 仔细
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q16
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 妈妈答应我的___，带我去动物园玩。
+  options:
+    - 愿望
+    - 请求
+    - 果然
+    - 虽然
+    - 仔细
+    - 希望
+  correct: 请求
+  targetWord: 请求
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q17
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: ___题目很难，但小华仍然努力把它做完。
+  options:
+    - 愿望
+    - 请求
+    - 果然
+    - 虽然
+    - 仔细
+    - 希望
+  correct: 虽然
+  targetWord: 虽然
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q18
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我按照老师说的方法去做，___找到了答案。
+  options:
+    - 愿望
+    - 请求
+    - 果然
+    - 虽然
+    - 仔细
+    - 希望
+  correct: 果然
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NANYANG-Q19
+  source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 我___假期快点到来，这样就可以去海边玩了。
+  options:
+    - 愿望
+    - 请求
+    - 果然
+    - 虽然
+    - 仔细
+    - 希望
+  correct: 希望
+  targetWord: 希望
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q1
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 今天的功课很___单，弟弟很快就做完。
+  options:
+    - 健
+    - 件
+    - 简
+    - 剪
+  correct: 简
+  targetWord: 简单
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q2
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 你家___近开了新的商店。
+  options:
+    - 讨
+    - 附
+    - 树
+    - 对
+  correct: 附
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q3
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+    - 17
+  question: 他们___定去打篮球，不去游泳。
+  options:
+    - 冰
+    - 冷
+    - 冲
+    - 决
+  correct: 决
+  targetWord: 决定
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q4
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 上课时，小乐突然___了起来。
+  options:
+    - 喊
+    - 吹
+    - 吸
+    - 咬
+  correct: 喊
+  targetWord: 喊
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q5
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妹妹折了一个纸___来装垃圾。
+  options:
+    - 和
+    - 合
+    - 盒
+    - 河
+  correct: 盒
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q6
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 下次听写，老师将会___到第十课。
+  options:
+    - 按
+    - 考
+    - 夸
+    - 贴
+  correct: 考
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q7
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 我们明天要去野餐，妈妈___了很多食物。
+  options:
+    - 使用
+    - 扔掉
+    - 准备
+    - 种下
+  correct: 准备
+  targetWord: 准备
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q8
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 弟弟努力练习打球，___得到第一名。
+  options:
+    - 争取
+    - 实现
+    - 请求
+    - 需要
+  correct: 争取
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q9
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 厕所容易脏，要常常___。
+  options:
+    - 陪伴
+    - 散步
+    - 搬动
+    - 清洗
+  correct: 清洗
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q14
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___美术馆
+  options:
+    - 爱护
+    - 参观
+    - 盖子
+    - 冒出
+    - 响声
+  correct: 参观
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q15
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: ___冷汗
+  originalOptions:
+    - 爱护
+    - 参观
+    - 盖子
+    - 冒出
+    - 响声
+  options:
+    - 冒出
+    - 爱护
+    - 盖子
+    - 响声
+  correct: 冒出
+  targetWord: 冒出
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q16
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: ___花草
+  originalOptions:
+    - 爱护
+    - 参观
+    - 盖子
+    - 冒出
+    - 响声
+  options:
+    - 爱护
+    - 盖子
+    - 冒出
+    - 响声
+  correct: 爱护
+  targetWord: 爱护
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q17
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 发出___
+  options:
+    - 爱护
+    - 参观
+    - 盖子
+    - 冒出
+    - 响声
+  correct: 响声
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-NORTHLAND-Q18
+  source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 打开___
+  originalOptions:
+    - 爱护
+    - 参观
+    - 盖子
+    - 冒出
+    - 响声
+  options:
+    - 盖子
+    - 爱护
+    - 参观
+    - 响声
+  correct: 盖子
+  targetWord: 盖子
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q1
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 她个子___，身体却很强壮。
+  originalOptions:
+    - 知
+    - 短
+    - 矮
+  options:
+    - 知
+    - 短
+    - 矮
+    - 矩
+  correct: 矮
+  targetWord: 矮
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q2
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我们分工合作，把厕所___洗干净。
+  options:
+    - 睛
+    - 晴
+    - 清
+  correct: 清
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q3
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 回到家后，小安看到桌上有一张___条。
+  originalOptions:
+    - 便
+    - 使
+    - 像
+  options:
+    - 便
+    - 使
+    - 像
+    - 鞭
+  correct: 便
+  targetWord: 便条
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q4
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: 丽丽生病了，老师叫我代___她参加比赛。
+  originalOptions:
+    - 梯
+    - 替
+    - 提
+  options:
+    - 梯
+    - 替
+    - 提
+    - 题
+  correct: 替
+  targetWord: 代替
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q5
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 为了庆祝新加坡的生日，组屋外挂上了国___。
+  originalOptions:
+    - 奇
+    - 旗
+    - 齐
+  options:
+    - 奇
+    - 旗
+    - 齐
+    - 棋
+  correct: 旗
+  targetWord: 国旗
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q10
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 这道科学题很___，我很快就做完了。
+  originalOptions:
+    - 有趣
+    - 特别
+    - 简单
+  options:
+    - 有趣
+    - 特别
+    - 简单
+    - 困难
+  correct: 简单
+  targetWord: 简单
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q11
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 丽丽来不及___，结果头被皮球打到。
+  options:
+    - 躲开
+    - 运动
+    - 跑步
+  correct: 躲开
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q12
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小明努力地练习游泳，有___能在比赛中得第一。
+  options:
+    - 信心
+    - 热情
+    - 福气
+  correct: 信心
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q13
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 下个星期是我的生日，我___妈妈带我去动物园玩。
+  originalOptions:
+    - 决定
+    - 请求
+    - 答应
+  options:
+    - 决定
+    - 请求
+    - 答应
+    - 通知
+  correct: 请求
+  targetWord: 请求
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q17
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: ___身体
+  originalOptions:
+    - 摆动
+    - 散步
+    - 准时
+    - 搬动
+    - 废物
+    - 冷汗
+    - 附近
+    - 发芽
+  options:
+    - 摆动
+    - 废物
+    - 冷汗
+    - 附近
+  correct: 摆动
+  targetWord: 摆动
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q18
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: ___出发
+  originalOptions:
+    - 摆动
+    - 散步
+    - 准时
+    - 搬动
+    - 废物
+    - 冷汗
+    - 附近
+    - 发芽
+  options:
+    - 准时
+    - 强壮
+    - 一样
+    - 收到
+  correct: 准时
+  targetWord: 准时
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q19
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: ___利用
+  originalOptions:
+    - 摆动
+    - 散步
+    - 准时
+    - 搬动
+    - 废物
+    - 冷汗
+    - 附近
+    - 发芽
+  options:
+    - 废物
+    - 冷汗
+    - 发抖
+    - 脚步
+  correct: 废物
+  targetWord: 废物
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q20
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+  sourceQuestion: Q20
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 14
+  question: 出去___
+  originalOptions:
+    - 摆动
+    - 散步
+    - 准时
+    - 搬动
+    - 废物
+    - 冷汗
+    - 附近
+    - 发芽
+  options:
+    - 散步
+    - 废物
+    - 冷汗
+    - 附近
+  correct: 散步
+  targetWord: 散步
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-RAFFLES-Q21
+  source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+  sourceQuestion: Q21
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 冒出___
+  originalOptions:
+    - 摆动
+    - 散步
+    - 准时
+    - 搬动
+    - 废物
+    - 冷汗
+    - 附近
+    - 发芽
+  options:
+    - 冷汗
+    - 准时
+    - 废物
+    - 脚步
+  correct: 冷汗
+  targetWord: 冷汗
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q1
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 奶奶昨天到___市买了一些水果。
+  options:
+    - 起
+    - 越
+    - 赶
+    - 超
+  correct: 超
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q2
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 妈妈竖起大___指说弟弟是个懂事的好孩子。
+  options:
+    - 海
+    - 每
+    - 拇
+    - 母
+  correct: 拇
+  targetWord: 大拇指
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q3
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 我们应该爱护___境，不应该乱扔垃圾。
+  options:
+    - 环
+    - 还
+    - 杯
+    - 坏
+  correct: 环
+  targetWord: 环境
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q4
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我们不应该___负同学。
+  options:
+    - 欺
+    - 旗
+    - 棋
+    - 期
+  correct: 欺
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q5
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妹妹正在___小兔子吃萝卜。
+  options:
+    - 位
+    - 卫
+    - 喂
+    - 味
+  correct: 喂
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q8
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 我们一家人正在___要怎么庆祝爷爷的生日。
+  options:
+    - 告诉
+    - 答应
+    - 争取
+    - 讨论
+  correct: 讨论
+  targetWord: 讨论
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q9
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师说___时间是不好的习惯。
+  options:
+    - 表演
+    - 保护
+    - 浪费
+    - 设计
+  correct: 浪费
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q14
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 转身___
+  options:
+    - 任务
+    - 保卫
+    - 冷汗
+    - 发抖
+    - 脚步
+    - 废物
+    - 离开
+    - 起点
+  correct: 离开
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q15
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: ___利用
+  originalOptions:
+    - 任务
+    - 保卫
+    - 冷汗
+    - 发抖
+    - 脚步
+    - 废物
+    - 离开
+    - 起点
+  options:
+    - 废物
+    - 冷汗
+    - 发抖
+    - 脚步
+  correct: 废物
+  targetWord: 废物
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q16
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 完成___
+  originalOptions:
+    - 任务
+    - 保卫
+    - 冷汗
+    - 发抖
+    - 脚步
+    - 废物
+    - 离开
+    - 起点
+  options:
+    - 任务
+    - 冷汗
+    - 发抖
+    - 脚步
+  correct: 任务
+  targetWord: 任务
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q17
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: ___国家
+  originalOptions:
+    - 任务
+    - 保卫
+    - 冷汗
+    - 发抖
+    - 脚步
+    - 废物
+    - 离开
+    - 起点
+  options:
+    - 保卫
+    - 任务
+    - 冷汗
+    - 脚步
+  correct: 保卫
+  targetWord: 保卫
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-ROSYTH-Q18
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 冒出___
+  originalOptions:
+    - 任务
+    - 保卫
+    - 冷汗
+    - 发抖
+    - 脚步
+    - 废物
+    - 离开
+    - 起点
+  options:
+    - 冷汗
+    - 准时
+    - 废物
+    - 脚步
+  correct: 冷汗
+  targetWord: 冷汗
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q1
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我和妈妈一起___祝母亲节。
+  options:
+    - 应
+    - 店
+    - 床
+    - 庆
+  correct: 庆
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q2
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 这片面包又___又甜，好吃极了！
+  options:
+    - 较
+    - 软
+    - 轻
+    - 转
+  correct: 软
+  targetWord: 软
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q3
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 弟弟跌倒了，痛得___不住哭了起来。
+  options:
+    - 思
+    - 总
+    - 忍
+    - 忘
+  correct: 忍
+  targetWord: 忍不住
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q4
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 9
+  question: 太阳从东边___起来了。
+  options:
+    - 身
+    - 伸
+    - 声
+    - 升
+  correct: 升
+  targetWord: 升
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q5
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 11
+  question: 我们都要为保护环境___一份力。
+  options:
+    - 尽
+    - 近
+    - 镜
+    - 静
+  correct: 尽
+  targetWord: 尽
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q6
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 今天是我的生日，我很___。
+  options:
+    - 兴奋
+    - 吃惊
+    - 着急
+    - 伤心
+  correct: 兴奋
+  targetWord: 兴奋
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q7
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 我很___地看着小猫，才把它画出来。
+  options:
+    - 奇怪
+    - 仔细
+    - 简单
+    - 粗心
+  correct: 仔细
+  targetWord: 仔细
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q8
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈洗完衣服后，把它们放在外面___。
+  options:
+    - 扔掉
+    - 逃跑
+    - 晒干
+    - 摆动
+  correct: 晒干
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q17
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 引来___
+  options:
+    - 蚊虫
+    - 咬断
+    - 森林
+    - 跌倒
+    - 必须
+    - 发抖
+  correct: 蚊虫
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q18
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 全身___
+  originalOptions:
+    - 蚊虫
+    - 咬断
+    - 森林
+    - 跌倒
+    - 必须
+    - 发抖
+  options:
+    - 发抖
+    - 画展
+    - 国家
+    - 废物
+  correct: 发抖
+  targetWord: 发抖
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q19
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: ___找到
+  originalOptions:
+    - 蚊虫
+    - 咬断
+    - 森林
+    - 跌倒
+    - 必须
+    - 发抖
+  options:
+    - 必须
+    - 蚊虫
+    - 森林
+    - 发抖
+  correct: 必须
+  targetWord: 必须
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q20
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+  sourceQuestion: Q20
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 14
+  question: ___竹子
+  originalOptions:
+    - 蚊虫
+    - 咬断
+    - 森林
+    - 跌倒
+    - 必须
+    - 发抖
+  options:
+    - 咬断
+    - 蚊虫
+    - 必须
+    - 发抖
+  correct: 咬断
+  targetWord: 咬断
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q21
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+  sourceQuestion: Q21
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: ___受伤
+  originalOptions:
+    - 蚊虫
+    - 咬断
+    - 森林
+    - 跌倒
+    - 必须
+    - 发抖
+  options:
+    - 跌倒
+    - 蚊虫
+    - 森林
+    - 必须
+  correct: 跌倒
+  targetWord: 跌倒
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q1
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 上华文课时，同学们开心地___谜语。
+  options:
+    - 情
+    - 睛
+    - 清
+    - 猜
+  correct: 猜
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q2
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 弟弟在家玩球时，不小心弄坏了妈妈的花___。
+  options:
+    - 桶
+    - 瓶
+    - 箱
+    - 袋
+  correct: 瓶
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q3
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 下雨了，奶奶叫我___上雨衣再出门。
+  options:
+    - 披
+    - 坡
+    - 破
+    - 皮
+  correct: 披
+  targetWord: 披
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q4
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妹妹把地上的玩具___起来，放进盒子里。
+  options:
+    - 实
+    - 识
+    - 拾
+    - 食
+  correct: 拾
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q5
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 弟弟___了鞋子，把它整齐地放在门口。
+  options:
+    - 系
+    - 钻
+    - 脱
+    - 提
+  correct: 脱
+  targetWord: 脱
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q8
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 小美的生日快到了，我为她___了一份礼物。
+  options:
+    - 使用
+    - 变化
+    - 保护
+    - 准备
+  correct: 准备
+  targetWord: 准备
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q9
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 叔叔很___，一只手就能把我举起来。
+  options:
+    - 有趣
+    - 热情
+    - 强壮
+    - 聪明
+  correct: 强壮
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q10
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师要小文改掉___时间的坏习惯。
+  options:
+    - 忘记
+    - 浪费
+    - 利用
+    - 争取
+  correct: 浪费
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q11
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 课堂上，同学们在___教师节要表演什么节目。
+  options:
+    - 谈天
+    - 说明
+    - 回答
+    - 讨论
+  correct: 讨论
+  targetWord: 讨论
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q12
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 请求___
+  options:
+    - 简单
+    - 设计
+    - 原谅
+    - 摆动
+    - 满意
+    - 受伤
+  correct: 原谅
+  targetWord: 原谅
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q13
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 跌倒___
+  options:
+    - 简单
+    - 设计
+    - 原谅
+    - 摆动
+    - 满意
+    - 受伤
+  correct: 受伤
+  targetWord: 受伤
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q14
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 问题___
+  options:
+    - 简单
+    - 设计
+    - 原谅
+    - 摆动
+    - 满意
+    - 受伤
+  correct: 简单
+  targetWord: 简单
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q15
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: ___尾巴
+  options:
+    - 简单
+    - 设计
+    - 原谅
+    - 摆动
+    - 满意
+    - 受伤
+  correct: 摆动
+  targetWord: 摆动
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-TAONAN-Q16
+  source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: ___卡片
+  options:
+    - 简单
+    - 设计
+    - 原谅
+    - 摆动
+    - 满意
+    - 受伤
+  correct: 设计
+  targetWord: 设计
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q1
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈不___我一个人到游乐场玩。
+  options:
+    - 谁
+    - 准
+    - 难
+  correct: 准
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q2
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 弟弟长大后想成为军人，保___国家。
+  originalOptions:
+    - 为
+    - 位
+    - 卫
+  options:
+    - 为
+    - 位
+    - 卫
+    - 围
+  correct: 卫
+  targetWord: 保卫
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q3
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 弟弟弄___了我的书，连忙跟我说对不起。
+  originalOptions:
+    - 坡
+    - 破
+    - 披
+  options:
+    - 坡
+    - 破
+    - 披
+    - 波
+  correct: 破
+  targetWord: 弄破
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q4
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 妹妹跌倒了，妈妈___她起来。
+  originalOptions:
+    - 扶
+    - 付
+    - 服
+  options:
+    - 扶
+    - 付
+    - 服
+    - 夫
+  correct: 扶
+  targetWord: 扶
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q5
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 小光把美美的笔弄丢了，只好___钱给她。
+  originalOptions:
+    - 赔
+    - 陪
+    - 部
+  options:
+    - 赔
+    - 陪
+    - 部
+    - 倍
+  correct: 赔
+  targetWord: 赔钱
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q6
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 妈妈___我长大后一定能成为一个有用的人。
+  options:
+    - 希望
+    - 请求
+    - 相信
+    - 实现
+  correct: 相信
+  targetWord: 相信
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q7
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 老师要小光改掉迟到的___。
+  options:
+    - 问题
+    - 习惯
+    - 决定
+    - 办法
+  correct: 习惯
+  targetWord: 习惯
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q8
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 看到爸爸回来了，小狗高兴得一直___尾巴。
+  options:
+    - 举起
+    - 伸出
+    - 摆动
+    - 张开
+  correct: 摆动
+  targetWord: 摆动
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ACSPRIMARY-Q9
+  source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈说前面有条河，小月照着她的话往前走，___看到了一条河。
+  options:
+    - 果然
+    - 已经
+    - 连忙
+    - 反正
+  correct: 果然
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q1
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 这个红色的文具___是表姐送给我的。
+  options:
+    - 盖
+    - 盒
+    - 盆
+    - 盘
+  correct: 盒
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q2
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 他们在食堂里跑，___到一个低年级的学生。
+  options:
+    - 撞
+    - 状
+    - 壮
+    - 装
+  correct: 撞
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q3
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 9
+  question: 太阳每天从东边___上来，从西边落下。
+  options:
+    - 身
+    - 声
+    - 升
+    - 伸
+  correct: 升
+  targetWord: 升
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q4
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 这件事做起来一点儿也不难，太___易了！
+  options:
+    - 空
+    - 容
+    - 客
+    - 穿
+  correct: 容
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q5
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 看到小华跌倒了，我___走上前扶他起来。
+  options:
+    - 一直
+    - 连忙
+    - 然后
+    - 正在
+  correct: 连忙
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q6
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 为了实现当医生的___，小晴从小就努力学习。
+  options:
+    - 练习
+    - 愿望
+    - 事情
+    - 部分
+  correct: 愿望
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q7
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妹妹很___，看到爸爸累了，就不去吵他。
+  options:
+    - 懂事
+    - 聪明
+    - 热情
+    - 能干
+  correct: 懂事
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-AITONG-Q8
+  source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 7; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 下个星期一，老师会带我们全班去___动物园。
+  options:
+    - 陪伴
+    - 碰见
+    - 参观
+    - 保护
+  correct: 参观
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q1
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 天气越来越冷，奶奶只好再___上一件衣服。
+  options:
+    - 被
+    - 坡
+    - 披
+    - 婆
+  correct: 披
+  targetWord: 披
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q2
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 老师让我们把课本打开到第七___。
+  options:
+    - 夜
+    - 叶
+    - 业
+    - 页
+  correct: 页
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q5
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 我们在操场上运动时，天空___下起了大雨。
+  options:
+    - 果然
+    - 突然
+    - 一定
+    - 立刻
+  correct: 突然
+  targetWord: 突然
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q6
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 妈妈要哥哥___不做功课的坏习惯。
+  options:
+    - 练习
+    - 发现
+    - 改掉
+    - 跟着
+  correct: 改掉
+  targetWord: 改掉
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q7
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: ___礼物
+  originalOptions:
+    - 强壮
+    - 一样
+    - 溜走
+    - 准时
+    - 收到
+    - 迟到
+  options:
+    - 收到
+    - 强壮
+    - 一样
+    - 准时
+  correct: 收到
+  targetWord: 收到
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q8
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: ___上学
+  originalOptions:
+    - 强壮
+    - 一样
+    - 溜走
+    - 准时
+    - 收到
+    - 迟到
+  options:
+    - 准时
+    - 强壮
+    - 一样
+    - 收到
+  correct: 准时
+  targetWord: 准时
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q9
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 赶快___
+  originalOptions:
+    - 强壮
+    - 一样
+    - 溜走
+    - 准时
+    - 收到
+    - 迟到
+  options:
+    - 溜走
+    - 强壮
+    - 一样
+    - 收到
+  correct: 溜走
+  targetWord: 溜走
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-HENRYPARK-Q10
+  source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 身体___
+  options:
+    - 强壮
+    - 一样
+    - 溜走
+    - 准时
+    - 收到
+    - 迟到
+  correct: 强壮
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q1
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 哥哥不小心打___了水杯。
+  options:
+    - 披
+    - 坡
+    - 破
+  correct: 破
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q2
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我水壶的盖子是___色的。
+  options:
+    - 绿
+    - 线
+    - 练
+  correct: 绿
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q3
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+    - 11
+  question: 楼下的马路上有很多___车。
+  options:
+    - 转
+    - 辆
+    - 较
+  correct: 辆
+  targetWord: 辆
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q4
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 那本书总共有三百五十___。
+  options:
+    - 页
+    - 业
+    - 叶
+  correct: 页
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q5
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 我认真学习，每天___习课文。
+  options:
+    - 付
+    - 复
+    - 父
+  correct: 复
+  targetWord: 复习
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q10
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 学校___
+  options:
+    - 健康
+    - 爱护
+    - 附近
+    - 保卫
+    - 答应
+    - 愿望
+  correct: 附近
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q11
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: ___动物
+  options:
+    - 健康
+    - 爱护
+    - 附近
+    - 保卫
+    - 答应
+    - 愿望
+  correct: 爱护
+  targetWord: 爱护
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q12
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 身体___
+  options:
+    - 健康
+    - 爱护
+    - 附近
+    - 保卫
+    - 答应
+    - 愿望
+  correct: 健康
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q13
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___请求
+  options:
+    - 健康
+    - 爱护
+    - 附近
+    - 保卫
+    - 答应
+    - 愿望
+  correct: 答应
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q14
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 实现___
+  options:
+    - 健康
+    - 爱护
+    - 附近
+    - 保卫
+    - 答应
+    - 愿望
+  correct: 愿望
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q15
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 只要多运动，身体就会更加___。
+  options:
+    - 连忙
+    - 傍晚
+    - 强壮
+    - 意思
+    - 伙伴
+    - 努力
+  correct: 强壮
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q16
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 看到校长走了过来，我___向他问好。
+  options:
+    - 连忙
+    - 傍晚
+    - 强壮
+    - 意思
+    - 伙伴
+    - 努力
+  correct: 连忙
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q17
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q17
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 小文平日很关心同学，有很多好___。
+  options:
+    - 连忙
+    - 傍晚
+    - 强壮
+    - 意思
+    - 伙伴
+    - 努力
+  correct: 伙伴
+  targetWord: 伙伴
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q18
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 每天___，我都会陪奶奶去公园找朋友。
+  options:
+    - 连忙
+    - 傍晚
+    - 强壮
+    - 意思
+    - 伙伴
+    - 努力
+  correct: 傍晚
+  targetWord: 傍晚
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-NANYANG-Q19
+  source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 同学们都不知道这个字的___，只好去问老师。
+  options:
+    - 连忙
+    - 傍晚
+    - 强壮
+    - 意思
+    - 伙伴
+    - 努力
+  correct: 意思
+  targetWord: 意思
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q1
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 李叔叔长得不___也不瘦。
+  options:
+    - 脸
+    - 胖
+    - 脑
+    - 脱
+  correct: 胖
+  targetWord: 胖
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q2
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+    - 17
+  question: 弟弟一回到家，就立___去做功课。
+  options:
+    - 刻
+    - 课
+    - 科
+    - 可
+  correct: 刻
+  targetWord: 立刻
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q3
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 每天早上，妈妈都给我们___早餐。
+  options:
+    - 实现
+    - 摆满
+    - 准备
+    - 搬动
+  correct: 准备
+  targetWord: 准备
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q4
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+    - 15
+  question: 学校运动会要到了，同学们在操场上___跑步。
+  options:
+    - 争取
+    - 躲开
+    - 陪伴
+    - 练习
+  correct: 练习
+  targetWord: 练习
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q5
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 14
+  question: 摆动___
+  originalOptions:
+    - 准时
+    - 发出
+    - 脚步
+    - 尾巴
+    - 复习
+    - 故事
+  options:
+    - 尾巴
+    - 准时
+    - 发出
+    - 复习
+  correct: 尾巴
+  targetWord: 尾巴
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q6
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___有趣
+  options:
+    - 准时
+    - 发出
+    - 脚步
+    - 尾巴
+    - 复习
+    - 故事
+  correct: 故事
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q7
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 停下___
+  options:
+    - 准时
+    - 发出
+    - 脚步
+    - 尾巴
+    - 复习
+    - 故事
+  correct: 脚步
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-ROSYTH-Q8
+  source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___响声
+  options:
+    - 准时
+    - 发出
+    - 脚步
+    - 尾巴
+    - 复习
+    - 故事
+  correct: 发出
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q1
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 姐姐___望长大后可以成为一名护士。
+  options:
+    - 西
+    - 希
+    - 息
+    - 吸
+  correct: 希
+  targetWord: 希望
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q2
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 我相___你可以学会游泳。
+  options:
+    - 位
+    - 像
+    - 住
+    - 信
+  correct: 信
+  targetWord: 相信
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q3
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 同学们在课室里认真地___书。
+  options:
+    - 说
+    - 取
+    - 读
+    - 丢
+  correct: 读
+  targetWord: 读
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q4
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈每天都来学校___妹妹放学。
+  options:
+    - 报
+    - 打
+    - 捉
+    - 接
+  correct: 接
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q5
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 王老师叫同学们把课本___到第十页。
+  options:
+    - 开
+    - 翻
+    - 张
+    - 拿
+  correct: 翻
+  targetWord: 翻到
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q8
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 妈妈起床后，___会先去做早餐。
+  options:
+    - 其实
+    - 一定
+    - 主要
+    - 可是
+  correct: 一定
+  targetWord: 一定
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q9
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 班长小美很能干，是老师的好___。
+  options:
+    - 帮手
+    - 伙伴
+    - 家人
+    - 朋友
+  correct: 帮手
+  targetWord: 帮手
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q10
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 为了___我的愿望，我每天都认真学习。
+  options:
+    - 现在
+    - 现实
+    - 实现
+    - 实在
+  correct: 实现
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q11
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 当老师提问的时候，小光___第一个举手回答。
+  options:
+    - 不但
+    - 从来
+    - 也许
+    - 总是
+  correct: 总是
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q12
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 保卫___
+  options:
+    - 写字
+    - 懂事
+    - 华文
+    - 成为
+    - 国家
+    - 争取
+  correct: 国家
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q13
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: ___歌手
+  options:
+    - 写字
+    - 懂事
+    - 华文
+    - 成为
+    - 国家
+    - 争取
+  correct: 成为
+  targetWord: 成为
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q14
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 复习___
+  options:
+    - 写字
+    - 懂事
+    - 华文
+    - 成为
+    - 国家
+    - 争取
+  correct: 华文
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q15
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___时间
+  options:
+    - 写字
+    - 懂事
+    - 华文
+    - 成为
+    - 国家
+    - 争取
+  correct: 争取
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-TAONAN-Q16
+  source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 用心___
+  options:
+    - 写字
+    - 懂事
+    - 华文
+    - 成为
+    - 国家
+    - 争取
+  correct: 写字
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q1
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈在超市买了五公___的米。
+  options:
+    - 紧
+    - 金
+    - 今
+    - 斤
+  correct: 斤
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q2
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+  question: 因为大家不乱丢垃圾，所以这里___境好。
+  options:
+    - 环
+    - 坏
+    - 杯
+    - 还
+  correct: 环
+  targetWord: 环境
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q3
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 我们在___论送什么生日礼物给妈妈。
+  options:
+    - 付
+    - 讨
+    - 时
+    - 对
+  correct: 讨
+  targetWord: 讨论
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q4
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 12
+  question: 大家都很喜欢小明___计的明信片。
+  options:
+    - 船
+    - 沿
+    - 没
+    - 设
+  correct: 设
+  targetWord: 设计
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q5
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 你别___，小美很快就会把你要的东西带过来。
+  options:
+    - 及
+    - 急
+    - 几
+    - 己
+  correct: 急
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q6
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈讲的故事真___，我还想再听一次。
+  options:
+    - 美丽
+    - 快乐
+    - 有趣
+    - 热闹
+  correct: 有趣
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q7
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 大明___了妹妹的气球，妹妹哭了起来。
+  options:
+    - 弄破
+    - 翻开
+    - 披上
+    - 使用
+  correct: 弄破
+  targetWord: 弄破
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q8
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 10
+    - 17
+  question: 爸爸想了想，___带我们去海边玩。
+  options:
+    - 回答
+    - 决定
+    - 认为
+    - 请求
+  correct: 决定
+  targetWord: 决定
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q9
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小美___周末学习跳舞。
+  options:
+    - 沿着
+    - 利用
+    - 保护
+    - 按照
+  correct: 利用
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q10
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: ___反面
+  originalOptions:
+    - 翻到
+    - 转身
+    - 简单
+    - 撞倒
+    - 努力
+    - 画展
+    - 美术
+    - 扔掉
+  options:
+    - 翻到
+    - 简单
+    - 努力
+    - 美术
+  correct: 翻到
+  targetWord: 翻到
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q11
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 问题___
+  originalOptions:
+    - 翻到
+    - 转身
+    - 简单
+    - 撞倒
+    - 努力
+    - 画展
+    - 美术
+    - 扔掉
+  options:
+    - 简单
+    - 转身
+    - 撞倒
+    - 画展
+  correct: 简单
+  targetWord: 简单
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q12
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___果皮
+  options:
+    - 翻到
+    - 转身
+    - 简单
+    - 撞倒
+    - 努力
+    - 画展
+    - 美术
+    - 扔掉
+  correct: 扔掉
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q13
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 参观___
+  options:
+    - 翻到
+    - 转身
+    - 简单
+    - 撞倒
+    - 努力
+    - 画展
+    - 美术
+    - 扔掉
+  correct: 画展
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-CATHOLIC-Q14
+  source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: ___练习
+  originalOptions:
+    - 翻到
+    - 转身
+    - 简单
+    - 撞倒
+    - 努力
+    - 画展
+    - 美术
+    - 扔掉
+  options:
+    - 努力
+    - 转身
+    - 画展
+    - 美术
+  correct: 努力
+  targetWord: 努力
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q1
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  lessonIds:
+    - 3
+  question: 妈妈叫我不要用___管喝水。
+  options:
+    - 西
+    - 吸
+    - 洗
+    - 喜
+  correct: 吸
+  targetWord: 吸管
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q2
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  lessonIds:
+    - 2
+  question: 这里没位了，请大家向后___几步。
+  options:
+    - 很
+    - 根
+    - 退
+    - 跟
+  correct: 退
+  targetWord: 退
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q5
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  lessonIds:
+    - 3
+  question: 书包是我的好___，每天陪着我去上学。
+  options:
+    - 帮手
+    - 伙伴
+    - 老师
+    - 主人
+  correct: 伙伴
+  targetWord: 伙伴
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q6
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  lessonIds:
+    - 2
+  question: 他唱歌好听，我___他将来一定会成为歌手。
+  options:
+    - 祝愿
+    - 希望
+    - 相信
+    - 争取
+  correct: 相信
+  targetWord: 相信
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q7
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  lessonIds: []
+  question: ___盖子
+  options:
+    - 打开
+    - 上学
+    - 摆动
+    - 背着
+    - 双手
+    - 翻到
+  correct: 打开
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q8
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  lessonIds:
+    - 4
+  question: ___尾巴
+  originalOptions:
+    - 打开
+    - 上学
+    - 摆动
+    - 背着
+    - 双手
+    - 翻到
+  options:
+    - 摆动
+    - 废物
+    - 冷汗
+    - 附近
+  correct: 摆动
+  targetWord: 摆动
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q9
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  lessonIds: []
+  question: 举起___
+  options:
+    - 打开
+    - 上学
+    - 摆动
+    - 背着
+    - 双手
+    - 翻到
+  correct: 双手
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-HENRYPARK-Q10
+  source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  lessonIds: []
+  question: 准时___
+  options:
+    - 打开
+    - 上学
+    - 摆动
+    - 背着
+    - 双手
+    - 翻到
+  correct: 上学
+  subject: Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q1
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  lessonIds: []
+  question: 快下雨了，妈妈___忙把衣服收进屋里。
+  options:
+    - 连
+    - 遍
+    - 边
+    - 迟
+  correct: 连
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q2
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 3
+  question: 奶奶叫我___她到楼下去买面包。
+  options:
+    - 队
+    - 除
+    - 阵
+    - 陪
+  correct: 陪
+  targetWord: 陪
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q3
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  lessonIds: []
+  question: 小树的树干越来越___，树枝越来越长。
+  options:
+    - 组
+    - 姐
+    - 粗
+    - 助
+  correct: 粗
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q4
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 1
+  question: 文华将来想当___学家。
+  options:
+    - 棵
+    - 科
+    - 客
+    - 渴
+  correct: 科
+  targetWord: 科学
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q5
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 1
+  question: 小乐每天都会___习老师教的课文。
+  options:
+    - 福
+    - 复
+    - 服
+    - 父
+  correct: 复
+  targetWord: 复习
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q6
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 1
+  question: 只要你好好___，一定可以把画画好。
+  options:
+    - 希望
+    - 睡觉
+    - 努力
+    - 变化
+  correct: 努力
+  targetWord: 努力
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q7
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 2
+  question: 他说的话都不是真的，你不要___他。
+  options:
+    - 认识
+    - 相信
+    - 保卫
+    - 争取
+  correct: 相信
+  targetWord: 相信
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q8
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 4
+  question: 鱼儿___着尾巴，在水里游来游去。
+  options:
+    - 摆动
+    - 活动
+    - 走动
+    - 运动
+  correct: 摆动
+  targetWord: 摆动
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q9
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  lessonIds:
+    - 3
+  question: 哥哥改掉了坏___，不再让妈妈伤心。
+  options:
+    - 练习
+    - 心情
+    - 伙伴
+    - 习惯
+  correct: 习惯
+  targetWord: 习惯
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-MAHABODHI-Q10
+  source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  lessonIds: []
+  question: 林阿姨讲的故事非常___，大家都听得很认真。
+  options:
+    - 准时
+    - 有趣
+    - 懂事
+    - 热闹
+  correct: 有趣
+  subject: Higher Chinese
+- questionID: P3-CH-2025-WA2-METHODIST-Q1
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 星期六下午，妈妈带我去参观画___。
+  options:
+    - 居
+    - 尾
+    - 屋
+    - 展
+  correct: 展
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q2
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 小明上学又___到了，他觉得很不好意思。
+  options:
+    - 迟
+    - 近
+    - 运
+    - 远
+  correct: 迟
+  targetWord: 迟到
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q3
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 听到闹___响了，我马上起床。
+  options:
+    - 错
+    - 钱
+    - 钟
+    - 镜
+  correct: 钟
+  targetWord: 闹钟
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q4
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 我把种子种在花___里，天天给它浇水。
+  options:
+    - 盖
+    - 盒
+    - 盆
+    - 篮
+  correct: 盆
+  targetWord: 花盆
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q5
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+    - 10
+  question: 我们不应该把果皮___在地上。
+  options:
+    - 扫
+    - 扔
+    - 扶
+    - 打
+  correct: 扔
+  targetWord: 扔
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q6
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: ___礼物
+  originalOptions:
+    - 原谅
+    - 姓名
+    - 收到
+    - 健康
+    - 复习
+    - 努力
+  options:
+    - 收到
+    - 强壮
+    - 一样
+    - 准时
+  correct: 收到
+  targetWord: 收到
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q7
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: ___功课
+  originalOptions:
+    - 原谅
+    - 姓名
+    - 收到
+    - 健康
+    - 复习
+    - 努力
+  options:
+    - 复习
+    - 原谅
+    - 姓名
+    - 健康
+  correct: 复习
+  targetWord: 复习
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q8
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 身体___
+  options:
+    - 原谅
+    - 姓名
+    - 收到
+    - 健康
+    - 复习
+    - 努力
+  correct: 健康
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q9
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: ___别人
+  originalOptions:
+    - 原谅
+    - 姓名
+    - 收到
+    - 健康
+    - 复习
+    - 努力
+  options:
+    - 原谅
+    - 姓名
+    - 收到
+    - 健康
+  correct: 原谅
+  targetWord: 原谅
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-METHODIST-Q10
+  source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 写上___
+  options:
+    - 原谅
+    - 姓名
+    - 收到
+    - 健康
+    - 复习
+    - 努力
+  correct: 姓名
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q1
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 我们做错事时，___该道歉。
+  options:
+    - 庆
+    - 应
+    - 店
+    - 康
+  correct: 应
+  targetWord: 应该
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q2
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 医生说妈妈生病了，要在家里多休___。
+  options:
+    - 西
+    - 戏
+    - 息
+    - 喜
+  correct: 息
+  targetWord: 休息
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q3
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 我不小心撞到小乐，所以想让她___我。
+  options:
+    - 陪伴
+    - 回答
+    - 原谅
+    - 知道
+  correct: 原谅
+  targetWord: 原谅
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q4
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 上学快要迟到了，我们___出门吧！
+  options:
+    - 赶快
+    - 刚刚
+    - 突然
+    - 已经
+  correct: 赶快
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q8
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 实现___
+  options:
+    - 愿望
+    - 收到
+    - 强壮
+    - 参观
+  correct: 愿望
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q9
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 身体___
+  options:
+    - 愿望
+    - 收到
+    - 强壮
+    - 参观
+  correct: 强壮
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q10
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___书展
+  options:
+    - 愿望
+    - 收到
+    - 强壮
+    - 参观
+  correct: 参观
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-NANHUA-Q11
+  source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: ___卡片
+  options:
+    - 愿望
+    - 收到
+    - 强壮
+    - 参观
+  correct: 收到
+  targetWord: 收到
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q1
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 2
+  question: 小华的爸爸___张，我叫他张叔叔。
+  options:
+    - 形
+    - 信
+    - 姓
+  correct: 姓
+  targetWord: 姓
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q2
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 欢欢吐了，妈妈___她去看医生。
+  options:
+    - 倍
+    - 培
+    - 陪
+  correct: 陪
+  targetWord: 陪
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q3
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 姐姐的家___近有一所学校。
+  options:
+    - 附
+    - 付
+    - 咐
+  correct: 附
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q4
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 这次画画比赛，我想要___拿到第一。
+  options:
+    - 安排
+    - 学习
+    - 争取
+    - 取得
+  correct: 争取
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q5
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 小明已养成睡前整理书包的好___。
+  options:
+    - 朋友
+    - 习惯
+    - 练习
+    - 帮手
+  correct: 习惯
+  targetWord: 习惯
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q6
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: 哥哥长大后想当军人，___国家。
+  options:
+    - 安全
+    - 认识
+    - 庆祝
+    - 保卫
+  correct: 保卫
+  targetWord: 保卫
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q7
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 弟弟向爸爸认错，爸爸___了他。
+  options:
+    - 改正
+    - 弄坏
+    - 忘记
+    - 原谅
+  correct: 原谅
+  targetWord: 原谅
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q12
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 停下___
+  options:
+    - 认真
+    - 意思
+    - 跌倒
+    - 脚步
+  correct: 脚步
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q13
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: ___受伤
+  options:
+    - 认真
+    - 意思
+    - 跌倒
+    - 脚步
+  correct: 跌倒
+  targetWord: 跌倒
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-PEIHWA-Q14
+  source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 6; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___复习
+  options:
+    - 认真
+    - 意思
+    - 跌倒
+    - 脚步
+  correct: 认真
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-RAFFLES-Q1
+  source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 10
+  question: 有人在楼下大喊，弟弟听了很吃___。
+  originalOptions:
+    - 凉
+    - 谅
+    - 惊
+  options:
+    - 凉
+    - 谅
+    - 惊
+    - 景
+  correct: 惊
+  targetWord: 吃惊
+  subject: Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-RAFFLES-Q2
+  source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 5
+  question: 我买了一些日用品，___了十元。
+  originalOptions:
+    - 付
+    - 复
+    - 父
+  options:
+    - 付
+    - 复
+    - 父
+    - 附
+  correct: 付
+  targetWord: 付
+  subject: Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-RAFFLES-Q3
+  source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 12
+  question: 老师给了我们几___绿豆，让我们回家种。
+  originalOptions:
+    - 课
+    - 颗
+    - 棵
+  options:
+    - 课
+    - 颗
+    - 棵
+    - 渴
+  correct: 颗
+  targetWord: 颗
+  subject: Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-RAFFLES-Q4
+  source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 2
+  lessonIds: []
+  question: 看到妹妹改掉了___水的坏习惯，妈妈很开心。
+  options:
+    - 使用
+    - 浪费
+    - 清洗
+  correct: 浪费
+  subject: Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-RAFFLES-Q5
+  source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 10
+  question: 弟弟___地看着爬在叶子上的蚂蚁，半天也不动。
+  originalOptions:
+    - 轻轻
+    - 不停
+    - 仔细
+  options:
+    - 轻轻
+    - 不停
+    - 仔细
+    - 立刻
+  correct: 仔细
+  targetWord: 仔细
+  subject: Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-RAFFLES-Q6
+  source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 12
+  question: 这是小丽准备的___，她让我们猜一猜。
+  originalOptions:
+    - 谜语
+    - 便条
+    - 办法
+  options:
+    - 谜语
+    - 便条
+    - 办法
+    - 故事
+  correct: 谜语
+  targetWord: 谜语
+  subject: Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-ROSYTH-Q1
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 星期六早上，我___着爸爸去婆婆家。
+  options:
+    - 根
+    - 退
+    - 眼
+    - 跟
+  correct: 跟
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q2
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 弟弟跑得太快，一不小心跌___了。
+  options:
+    - 到
+    - 倒
+    - 岛
+    - 道
+  correct: 倒
+  targetWord: 跌倒
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q3
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 下雨了，我___打开雨伞。
+  options:
+    - 突然
+    - 连忙
+    - 努力
+    - 继续
+  correct: 连忙
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q4
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我们___地在草地上玩耍。
+  options:
+    - 专心
+    - 热情
+    - 快活
+    - 好奇
+  correct: 快活
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q5
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 一束___
+  originalOptions:
+    - 脚步
+    - 准备
+    - 鲜花
+    - 原谅
+    - 餐馆
+    - 弄破
+  options:
+    - 鲜花
+    - 脚步
+    - 准备
+    - 原谅
+  correct: 鲜花
+  targetWord: 鲜花
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q6
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___附近
+  options:
+    - 脚步
+    - 准备
+    - 鲜花
+    - 原谅
+    - 餐馆
+    - 弄破
+  correct: 餐馆
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q7
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 停下___
+  options:
+    - 脚步
+    - 准备
+    - 鲜花
+    - 原谅
+    - 餐馆
+    - 弄破
+  correct: 脚步
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-ROSYTH-Q8
+  source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: ___晚餐
+  originalOptions:
+    - 脚步
+    - 准备
+    - 鲜花
+    - 原谅
+    - 餐馆
+    - 弄破
+  options:
+    - 准备
+    - 脚步
+    - 鲜花
+    - 餐馆
+  correct: 准备
+  targetWord: 准备
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q1
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 我觉得有点儿冷，爸爸便为我___上一件外套。
+  options:
+    - 皮
+    - 坡
+    - 披
+    - 被
+  correct: 披
+  targetWord: 披
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q2
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小丽生日那天，妈妈送了一块三___形的手表给她。
+  options:
+    - 脚
+    - 角
+    - 教
+    - 交
+  correct: 角
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q3
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 老师要我早睡早起，改___迟到的坏习惯。
+  options:
+    - 掉
+    - 过
+    - 变
+    - 进
+  correct: 掉
+  targetWord: 改掉
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q4
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: 我最喜欢做的事，就是和小___伴们一起玩游戏。
+  options:
+    - 伙
+    - 什
+    - 保
+    - 休
+  correct: 伙
+  targetWord: 伙伴
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q5
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小树一天天长高，树干也越来越___。
+  options:
+    - 大
+    - 短
+    - 幼
+    - 粗
+  correct: 粗
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q8
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___明文搬走后，我就再也没有见过他了。
+  options:
+    - 果然
+    - 只要
+    - 自从
+    - 除了
+  correct: 自从
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q9
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 鱼儿在水里___着身体，自由自在地游来游去。
+  options:
+    - 摆动
+    - 运动
+    - 活动
+    - 行动
+  correct: 摆动
+  targetWord: 摆动
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q10
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 休息时，同学们在操场上___地玩游戏。
+  options:
+    - 好奇
+    - 快活
+    - 努力
+    - 热情
+  correct: 快活
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q11
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 爷爷很疼爱妹妹，___没有骂过她。
+  options:
+    - 从前
+    - 从小
+    - 从头
+    - 从来
+  correct: 从来
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q12
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___高大
+  options:
+    - 健康
+    - 变化
+    - 个子
+    - 陪伴
+    - 准时
+    - 爱惜
+  correct: 个子
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q13
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 身体___
+  options:
+    - 健康
+    - 变化
+    - 个子
+    - 陪伴
+    - 准时
+    - 爱惜
+  correct: 健康
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q14
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 3
+  question: ___上课
+  options:
+    - 健康
+    - 变化
+    - 个子
+    - 陪伴
+    - 准时
+    - 爱惜
+  correct: 准时
+  targetWord: 准时
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q15
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 4
+  question: 发生___
+  options:
+    - 健康
+    - 变化
+    - 个子
+    - 陪伴
+    - 准时
+    - 爱惜
+  correct: 变化
+  targetWord: 变化
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA2-TAONAN-Q16
+  source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___家人
+  options:
+    - 健康
+    - 变化
+    - 个子
+    - 陪伴
+    - 准时
+    - 爱惜
+  correct: 陪伴
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q1
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Chinese
+  lessonIds: []
+  question: 你___前走，就能看见图书馆了。
+  options:
+    - 主
+    - 住
+    - 往
+    - 注
+  correct: 往
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q2
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Chinese
+  lessonIds: []
+  question: 我们可以___用字卡学习华文。
+  options:
+    - 丽
+    - 立
+    - 力
+    - 利
+  correct: 利
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q5
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Chinese
+  lessonIds:
+    - 8
+  question: 我___爸爸让我来折衣服，他答应了。
+  options:
+    - 请求
+    - 帮助
+    - 想问
+    - 教过
+  correct: 请求
+  targetWord: 请求
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q6
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q6
+  sourceSubject: Chinese
+  lessonIds:
+    - 10
+    - 17
+  question: 下雨了，我们___不去游泳了。
+  options:
+    - 觉得
+    - 希望
+    - 认为
+    - 决定
+  correct: 决定
+  targetWord: 决定
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q7
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  lessonIds: []
+  question: ___喷水
+  options:
+    - 兴奋
+    - 浪费
+    - 任务
+    - 仔细
+    - 不停
+    - 废物
+  correct: 不停
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q8
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Chinese
+  lessonIds: []
+  question: ___时间
+  options:
+    - 兴奋
+    - 浪费
+    - 任务
+    - 仔细
+    - 不停
+    - 废物
+  correct: 浪费
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q9
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  lessonIds:
+    - 13
+  question: 完成___
+  originalOptions:
+    - 兴奋
+    - 浪费
+    - 任务
+    - 仔细
+    - 不停
+    - 废物
+  options:
+    - 任务
+    - 冷汗
+    - 发抖
+    - 脚步
+  correct: 任务
+  targetWord: 任务
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-HENRYPARK-Q10
+  source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Chinese
+  lessonIds:
+    - 12
+  question: 感到___
+  originalOptions:
+    - 兴奋
+    - 浪费
+    - 任务
+    - 仔细
+    - 不停
+    - 废物
+  options:
+    - 兴奋
+    - 浪费
+    - 不停
+    - 废物
+  correct: 兴奋
+  targetWord: 兴奋
+  subject: Chinese
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q1
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我的家离学校很___，我可以走路去上学。
+  options:
+    - 进
+    - 金
+    - 近
+    - 今
+  correct: 近
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q2
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 5
+  question: 上课前，我们要___备好课本和文具。
+  options:
+    - 难
+    - 准
+    - 谁
+    - 推
+  correct: 准
+  targetWord: 准备
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q3
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 1; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小华跑得太快，不小心___到了小明。
+  options:
+    - 撞
+    - 追
+    - 跳
+    - 跌
+  correct: 撞
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q4
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 下午，爸爸带我去书___买了几本故事书。
+  options:
+    - 尾
+    - 屋
+    - 居
+    - 展
+  correct: 展
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q5
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 小安和欢欢吵架了，谁也不___谁。
+  options:
+    - 管
+    - 说
+    - 听
+    - 理
+  correct: 理
+  targetWord: 不理
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q8
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 明天我们会去___新加坡动物园。
+  options:
+    - 访问
+    - 参观
+    - 拜访
+    - 看望
+  correct: 参观
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q9
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 妹妹做错了事情，请求妈妈___她。
+  options:
+    - 明白
+    - 感谢
+    - 原谅
+    - 夸奖
+  correct: 原谅
+  targetWord: 原谅
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q10
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妈妈觉得巴刹里卖的青菜和水果都非常___。
+  options:
+    - 新奇
+    - 新鲜
+    - 清新
+    - 清甜
+  correct: 新鲜
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q11
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 明天是奶奶的生日，我想送她一份___的礼物。
+  options:
+    - 特色
+    - 特意
+    - 特地
+    - 特别
+  correct: 特别
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q12
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___美食
+  options:
+    - 参加
+    - 时间
+    - 打扫
+    - 努力
+    - 品尝
+    - 表演
+  correct: 品尝
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q13
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 抓紧___
+  options:
+    - 参加
+    - 时间
+    - 打扫
+    - 努力
+    - 品尝
+    - 表演
+  correct: 时间
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q14
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___课室
+  options:
+    - 参加
+    - 时间
+    - 打扫
+    - 努力
+    - 品尝
+    - 表演
+  correct: 打扫
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q15
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 观看___
+  options:
+    - 参加
+    - 时间
+    - 打扫
+    - 努力
+    - 品尝
+    - 表演
+  correct: 表演
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S3-Q16
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 1
+  question: ___学习
+  options:
+    - 参加
+    - 时间
+    - 打扫
+    - 努力
+    - 品尝
+    - 表演
+  correct: 努力
+  targetWord: 努力
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q1
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 15; answer key supplied in PDF
+  sourceQuestion: Q1
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 弟弟给图片___上了漂亮的颜色。
+  options:
+    - 涂
+    - 画
+    - 写
+    - 抄
+  correct: 涂
+  targetWord: 涂上
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q2
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 15; answer key supplied in PDF
+  sourceQuestion: Q2
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 小明是我的___居，也是我的好朋友。
+  options:
+    - 邻
+    - 铃
+    - 冷
+    - 领
+  correct: 邻
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q3
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 15; answer key supplied in PDF
+  sourceQuestion: Q3
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我帮老师把桌子___到课室的角落去。
+  options:
+    - 提
+    - 扔
+    - 扶
+    - 搬
+  correct: 搬
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q4
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+  sourceQuestion: Q4
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 7
+  question: 弟弟打破了爸爸的花___，令爸爸十分生气。
+  options:
+    - 盘
+    - 盒
+    - 盆
+    - 盖
+  correct: 盆
+  targetWord: 花盆
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q5
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+  sourceQuestion: Q5
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: 下课后，一___分同学需要留下来打扫卫生。
+  options:
+    - 不
+    - 部
+    - 布
+    - 步
+  correct: 部
+  targetWord: 部分
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q8
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+  sourceQuestion: Q8
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我们过马路时一定要___，以免发生意外。
+  options:
+    - 好心
+    - 小心
+    - 用心
+    - 细心
+  correct: 小心
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q9
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 13
+  question: 上课的铃声响了，我___走进课室。
+  options:
+    - 着急
+    - 紧张
+    - 急忙
+    - 害怕
+  correct: 急忙
+  targetWord: 急忙
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q10
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 我在表演时，班上的同学都在台下为我加油___。
+  options:
+    - 打开
+    - 打气
+    - 打听
+    - 打结
+  correct: 打气
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q11
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 妹妹出的___很不错，大家都举手说好。
+  options:
+    - 心意
+    - 主意
+    - 想法
+    - 方法
+  correct: 主意
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q12
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 低头___
+  options:
+    - 彩色
+    - 祝福
+    - 受伤
+    - 需要
+    - 认错
+    - 庆祝
+  correct: 认错
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q13
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___照片
+  options:
+    - 彩色
+    - 祝福
+    - 受伤
+    - 需要
+    - 认错
+    - 庆祝
+  correct: 彩色
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q14
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+  sourceQuestion: Q14
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 6
+  question: 跌倒___
+  options:
+    - 彩色
+    - 祝福
+    - 受伤
+    - 需要
+    - 认错
+    - 庆祝
+  correct: 受伤
+  targetWord: 受伤
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q15
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+  sourceQuestion: Q15
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 8
+  question: ___帮助
+  options:
+    - 彩色
+    - 祝福
+    - 受伤
+    - 需要
+    - 认错
+    - 庆祝
+  correct: 需要
+  targetWord: 需要
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA3-TAONAN-S4-Q16
+  source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+  sourceQuestion: Q16
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 接受___
+  options:
+    - 彩色
+    - 祝福
+    - 受伤
+    - 需要
+    - 认错
+    - 庆祝
+  correct: 祝福
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-AUTHORED-L2-Q03
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 双."
+  targetWord: 双
+  lessonIds:
+    - 2
+  question: 这只鞋找到了，可是另一只还没找到，还不能凑成一___鞋。
+  options:
+    - 条
+    - 件
+    - 双
+    - 颗
+  correct: 双
+- questionID: P3-CH-AUTHORED-L2-Q04
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 语言."
+  targetWord: 语言
+  lessonIds:
+    - 2
+  question: 华语、英语和马来语都是不同的___。
+  options:
+    - 名字
+    - 颜色
+    - 形状
+    - 语言
+  correct: 语言
+- questionID: P3-CH-AUTHORED-L2-Q05
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 谈天."
+  targetWord: 谈天
+  lessonIds:
+    - 2
+  question: 两位老朋友坐在树下___，互相说说最近发生的事。
+  options:
+    - 谈天
+    - 比赛
+    - 睡觉
+    - 劳动
+  correct: 谈天
+- questionID: P3-CH-AUTHORED-L2-Q06
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 瘦."
+  targetWord: 瘦
+  lessonIds:
+    - 2
+  question: 这只小猫身体很___，肋骨都快看得见了。
+  options:
+    - 胖
+    - 瘦
+    - 圆
+    - 宽
+  correct: 瘦
+- questionID: P3-CH-AUTHORED-L4-Q03
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 窄."
+  targetWord: 窄
+  lessonIds:
+    - 4
+  question: 这条小路很___，两个人不能并排走。
+  options:
+    - 宽
+    - 深
+    - 窄
+    - 高
+  correct: 窄
+- questionID: P3-CH-AUTHORED-L4-Q04
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 后腿."
+  targetWord: 后腿
+  lessonIds:
+    - 4
+  question: 兔子用两条___用力一蹬，向前跳了出去。
+  options:
+    - 翅膀
+    - 尾巴
+    - 耳朵
+    - 后腿
+  correct: 后腿
+- questionID: P3-CH-AUTHORED-L4-Q05
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 披."
+  targetWord: 披
+  lessonIds:
+    - 4
+  question: 奶奶把外套___在肩上，外套的袖子并没有穿好。
+  options:
+    - 披
+    - 吞
+    - 喝
+    - 种
+  correct: 披
+- questionID: P3-CH-AUTHORED-L4-Q06
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 嘴巴."
+  targetWord: 嘴巴
+  lessonIds:
+    - 4
+  question: 弟弟刚喝完牛奶，___周围沾了一圈奶汁。
+  options:
+    - 脚趾
+    - 嘴巴
+    - 膝盖
+    - 头发
+  correct: 嘴巴
+- questionID: P3-CH-AUTHORED-L5-Q03
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 美食展."
+  targetWord: 美食展
+  lessonIds:
+    - 5
+  question: 我们在___品尝了来自不同地方的菜肴和点心。
+  options:
+    - 电脑展
+    - 旅游展
+    - 美食展
+    - 园艺展
+  correct: 美食展
+- questionID: P3-CH-AUTHORED-L5-Q04
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 园艺展."
+  targetWord: 园艺展
+  lessonIds:
+    - 5
+  question: 奶奶想看盆栽和花草，还想学习种花，就报名去参观___。
+  options:
+    - 电脑展
+    - 美食展
+    - 旅游展
+    - 园艺展
+  correct: 园艺展
+- questionID: P3-CH-AUTHORED-L5-Q05
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 束."
+  targetWord: 束
+  lessonIds:
+    - 5
+  question: 我把几朵花用绳子扎在一起，做成一___花送给妈妈。
+  options:
+    - 束
+    - 辆
+    - 篇
+    - 条
+  correct: 束
+- questionID: P3-CH-AUTHORED-L5-Q06
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 扫地."
+  targetWord: 扫地
+  lessonIds:
+    - 5
+  question: 弟弟拿起扫帚开始___，把地上的纸屑扫进畚斗。
+  options:
+    - 洗衣
+    - 扫地
+    - 煮饭
+    - 浇花
+  correct: 扫地
+- questionID: P3-CH-AUTHORED-L7-Q03
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 打碎."
+  targetWord: 打碎
+  lessonIds:
+    - 7
+  question: 玻璃杯摔在地上，变成了许多小碎片，是谁把它___的？
+  options:
+    - 收拾
+    - 搬动
+    - 打碎
+    - 挂起
+  correct: 打碎
+- questionID: P3-CH-AUTHORED-L7-Q04
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 踩断."
+  targetWord: 踩断
+  lessonIds:
+    - 7
+  question: 我脚下一用力，就把地上的细树枝___了。
+  options:
+    - 浇湿
+    - 吹走
+    - 挂起
+    - 踩断
+  correct: 踩断
+- questionID: P3-CH-AUTHORED-L7-Q05
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 食堂."
+  targetWord: 食堂
+  lessonIds:
+    - 7
+  question: 下课铃一响，同学们便到___买午饭。
+  options:
+    - 食堂
+    - 书房
+    - 浴室
+    - 操场
+  correct: 食堂
+- questionID: P3-CH-AUTHORED-L8-Q03
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 客厅."
+  targetWord: 客厅
+  lessonIds:
+    - 8
+  question: 客人来了，爸爸请他们到摆着沙发的___坐下。
+  options:
+    - 浴室
+    - 厨房
+    - 客厅
+    - 阳台
+  correct: 客厅
+- questionID: P3-CH-AUTHORED-L8-Q04
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 挂."
+  targetWord: 挂
+  lessonIds:
+    - 8
+  question: 我把外套___在衣架上，让它垂下来。
+  options:
+    - 吞
+    - 喝
+    - 咬
+    - 挂
+  correct: 挂
+- questionID: P3-CH-AUTHORED-L8-Q05
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 塞."
+  targetWord: 塞
+  lessonIds:
+    - 8
+  question: 书包已经快满了，弟弟还用力把一件外套___进去。
+  options:
+    - 塞
+    - 晒
+    - 扫
+    - 称
+  correct: 塞
+- questionID: P3-CH-AUTHORED-L8-Q06
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 裙子."
+  targetWord: 裙子
+  lessonIds:
+    - 8
+  question: 妹妹穿着一条___，下摆随风轻轻摆动。
+  options:
+    - 衬衫
+    - 裙子
+    - 外套
+    - 帽子
+  correct: 裙子
+- questionID: P3-CH-AUTHORED-L8-Q07
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 重."
+  targetWord: 重
+  lessonIds:
+    - 8
+  question: 箱子里装满了石头，非常___，我一个人搬不动。
+  options:
+    - 轻
+    - 薄
+    - 重
+    - 软
+  correct: 重
+- questionID: P3-CH-AUTHORED-L9-Q05
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 倒进."
+  targetWord: 倒进
+  lessonIds:
+    - 9
+  question: 妈妈把牛奶从瓶子里___杯子，杯子里的牛奶渐渐多了。
+  options:
+    - 倒进
+    - 剪开
+    - 挂起
+    - 晒干
+  correct: 倒进
+- questionID: P3-CH-AUTHORED-L9-Q06
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 坑."
+  targetWord: 坑
+  lessonIds:
+    - 9
+  question: 工人在地上挖了一个___，准备把小树种进去。
+  options:
+    - 墙
+    - 坑
+    - 桥
+    - 门
+  correct: 坑
+- questionID: P3-CH-AUTHORED-L9-Q07
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 鼻子."
+  targetWord: 鼻子
+  lessonIds:
+    - 9
+  question: 小狗用___闻食物的气味。
+  options:
+    - 脚
+    - 尾巴
+    - 鼻子
+    - 耳朵
+  correct: 鼻子
+- questionID: P3-CH-AUTHORED-L9-Q08
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 河."
+  targetWord: 河
+  lessonIds:
+    - 9
+  question: 这条___从山脚一直流到海边，两岸都有树。
+  options:
+    - 路
+    - 墙
+    - 桥
+    - 河
+  correct: 河
+- questionID: P3-CH-AUTHORED-L9-Q09
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 救."
+  targetWord: 救
+  lessonIds:
+    - 9
+  question: 小猫被困在树上，消防员爬上去把它___了下来。
+  options:
+    - 救
+    - 踢
+    - 推
+    - 吞
+  correct: 救
+- questionID: P3-CH-AUTHORED-L9-Q10
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 满."
+  targetWord: 满
+  lessonIds:
+    - 9
+  question: 水已经到杯口了，杯子___了，不能再倒水进去。
+  options:
+    - 空
+    - 满
+    - 矮
+    - 窄
+  correct: 满
+- questionID: P3-CH-AUTHORED-L9-Q11
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 喷."
+  targetWord: 喷
+  lessonIds:
+    - 9
+  question: 弟弟一按水枪，水就从小孔里___了出来。
+  options:
+    - 写
+    - 挂
+    - 喷
+    - 称
+  correct: 喷
+- questionID: P3-CH-AUTHORED-L9-Q12
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 称."
+  targetWord: 称
+  lessonIds:
+    - 9
+  question: 店主要知道这袋米有多重，便用秤来___它。
+  options:
+    - 听
+    - 闻
+    - 画
+    - 称
+  correct: 称
+- questionID: P3-CH-AUTHORED-L9-Q13
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 墙."
+  targetWord: 墙
+  lessonIds:
+    - 9
+  question: 爸爸把全家福挂在客厅的___上。
+  options:
+    - 墙
+    - 水
+    - 云
+    - 风
+  correct: 墙
+- questionID: P3-CH-AUTHORED-L9-Q14
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 拉."
+  targetWord: 拉
+  lessonIds:
+    - 9
+  question: 抽屉关着，妹妹握住把手，往外一___，抽屉就打开了。
+  options:
+    - 推
+    - 拉
+    - 踩
+    - 压
+  correct: 拉
+- questionID: P3-CH-AUTHORED-L11-Q04
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 停车场."
+  targetWord: 停车场
+  lessonIds:
+    - 11
+  question: 爸爸把汽车开进___，停在一个空车位里。
+  options:
+    - 游泳池
+    - 课室
+    - 厨房
+    - 停车场
+  correct: 停车场
+- questionID: P3-CH-AUTHORED-L11-Q05
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 日用品."
+  targetWord: 日用品
+  lessonIds:
+    - 11
+  question: 牙刷、毛巾和肥皂是我们每天会用到的___。
+  options:
+    - 日用品
+    - 玩具
+    - 水果
+    - 课本
+  correct: 日用品
+- questionID: P3-CH-AUTHORED-L11-Q06
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 纸."
+  targetWord: 纸
+  lessonIds:
+    - 11
+  question: 我拿出一张白___，用它折了一只小船。
+  options:
+    - 铁
+    - 纸
+    - 水
+    - 沙
+  correct: 纸
+- questionID: P3-CH-AUTHORED-L11-Q07
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 瓶子."
+  targetWord: 瓶子
+  lessonIds:
+    - 11
+  question: 这个空___原来装着果汁，洗干净后还可以装水。
+  options:
+    - 信封
+    - 衣架
+    - 瓶子
+    - 枕头
+  correct: 瓶子
+- questionID: P3-CH-AUTHORED-L12-Q04
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 新加坡."
+  targetWord: 新加坡
+  lessonIds:
+    - 12
+  question: 我们的国家是___，简称“新”。
+  options:
+    - 马来西亚
+    - 印度
+    - 中国
+    - 新加坡
+  correct: 新加坡
+- questionID: P3-CH-AUTHORED-L12-Q05
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 国庆日."
+  targetWord: 国庆日
+  lessonIds:
+    - 12
+  question: 八月九日是新加坡的___，人们会庆祝国家的生日。
+  options:
+    - 国庆日
+    - 儿童节
+    - 母亲节
+    - 教师节
+  correct: 国庆日
+- questionID: P3-CH-AUTHORED-L12-Q06
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 合唱团."
+  targetWord: 合唱团
+  lessonIds:
+    - 12
+  question: 姐姐加入学校的___，和其他团员一起练习唱歌。
+  options:
+    - 游泳队
+    - 合唱团
+    - 篮球队
+    - 舞蹈队
+  correct: 合唱团
+- questionID: P3-CH-AUTHORED-L12-Q07
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 礼物."
+  targetWord: 礼物
+  lessonIds:
+    - 12
+  question: 妈妈生日那天，我把做好的贺卡当作___送给她。
+  options:
+    - 垃圾
+    - 作业
+    - 礼物
+    - 工具
+  correct: 礼物
+- questionID: P3-CH-AUTHORED-L14-Q04
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 饿."
+  targetWord: 饿
+  lessonIds:
+    - 14
+  question: 我今天还没吃早饭，肚子很___，真想吃些东西。
+  options:
+    - 饱
+    - 圆
+    - 宽
+    - 饿
+  correct: 饿
+- questionID: P3-CH-AUTHORED-L14-Q05
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 饱."
+  targetWord: 饱
+  lessonIds:
+    - 14
+  question: 我已经吃了两碗饭，肚子很___，吃不下更多了。
+  options:
+    - 饱
+    - 饿
+    - 空
+    - 窄
+  correct: 饱
+- questionID: P3-CH-AUTHORED-L14-Q06
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 咸."
+  targetWord: 咸
+  lessonIds:
+    - 14
+  question: 妹妹往汤里放了太多盐，汤变得很___。
+  options:
+    - 甜
+    - 咸
+    - 淡
+    - 酸
+  correct: 咸
+- questionID: P3-CH-AUTHORED-L14-Q07
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 淡."
+  targetWord: 淡
+  lessonIds:
+    - 14
+  question: 汤里几乎没有放盐，味道很___。
+  options:
+    - 咸
+    - 甜
+    - 淡
+    - 酸
+  correct: 淡
+- questionID: P3-CH-AUTHORED-L14-Q09
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 懒."
+  targetWord: 懒
+  lessonIds:
+    - 14
+  question: 他很___，连自己的书包也不愿意收拾。
+  options:
+    - 懒
+    - 勤劳
+    - 认真
+    - 整齐
+  correct: 懒
+- questionID: P3-CH-AUTHORED-L14-Q10
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 躺."
+  targetWord: 躺
+  lessonIds:
+    - 14
+  question: 弟弟困了，就___在床上，把头放在枕头上。
+  options:
+    - 站
+    - 躺
+    - 跑
+    - 跳
+  correct: 躺
+- questionID: P3-CH-AUTHORED-L14-Q11
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 吞."
+  targetWord: 吞
+  lessonIds:
+    - 14
+  question: 妹妹把嘴里的饭嚼碎后，才慢慢___下去。
+  options:
+    - 唱
+    - 看
+    - 吞
+    - 听
+  correct: 吞
+- questionID: P3-CH-AUTHORED-L14-Q12
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 够."
+  targetWord: 够
+  lessonIds:
+    - 14
+  question: 我们有四个人，也有四把椅子，椅子___大家坐了。
+  options:
+    - 缺
+    - 少
+    - 窄
+    - 够
+  correct: 够
+- questionID: P3-CH-AUTHORED-L15-Q03
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 怀里."
+  targetWord: 怀里
+  lessonIds:
+    - 15
+  question: 妈妈抱着妹妹，妹妹安静地靠在妈妈的___睡着了。
+  options:
+    - 脚底
+    - 背后
+    - 怀里
+    - 头顶
+  correct: 怀里
+- questionID: P3-CH-AUTHORED-L15-Q04
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 痛."
+  targetWord: 痛
+  lessonIds:
+    - 15
+  question: 弟弟跌倒后膝盖擦破了皮，觉得很___。
+  options:
+    - 甜
+    - 轻
+    - 香
+    - 痛
+  correct: 痛
+- questionID: P3-CH-AUTHORED-L15-Q05
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 哈哈大笑."
+  targetWord: 哈哈大笑
+  lessonIds:
+    - 15
+  question: 这个笑话太好笑了，大家听完都___，笑声传遍了房间。
+  options:
+    - 哈哈大笑
+    - 号啕大哭
+    - 低声道歉
+    - 安静睡觉
+  correct: 哈哈大笑
+- questionID: P3-CH-AUTHORED-L16-Q05
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 俩."
+  targetWord: 俩
+  lessonIds:
+    - 16
+  question: 这里只有我和妹妹两个人，我们___一起做贺卡。
+  options:
+    - 俩
+    - 仨
+    - 群
+    - 排
+  correct: 俩
+- questionID: P3-CH-AUTHORED-L16-Q06
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 泡泡."
+  targetWord: 泡泡
+  lessonIds:
+    - 16
+  question: 妹妹对着肥皂水轻轻一吹，就吹出一串彩色的___。
+  options:
+    - 石头
+    - 泡泡
+    - 树叶
+    - 沙子
+  correct: 泡泡
+- questionID: P3-CH-AUTHORED-L16-Q07
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 钓鱼."
+  targetWord: 钓鱼
+  lessonIds:
+    - 16
+  question: 爷爷拿着鱼竿坐在河边___，等着鱼儿咬钩。
+  options:
+    - 种花
+    - 扫地
+    - 钓鱼
+    - 唱歌
+  correct: 钓鱼
+- questionID: P3-CH-AUTHORED-L16-Q08
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 题."
+  targetWord: 题
+  lessonIds:
+    - 16
+  question: 这张练习纸有十道___，我已经答完了九道。
+  options:
+    - 门
+    - 河
+    - 墙
+    - 题
+  correct: 题
+- questionID: P3-CH-AUTHORED-L16-Q09
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 念."
+  targetWord: 念
+  lessonIds:
+    - 16
+  question: 老师请我把这段课文___给大家听。
+  options:
+    - 念
+    - 写
+    - 画
+    - 剪
+  correct: 念
+- questionID: P3-CH-AUTHORED-L16-Q10
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 传."
+  targetWord: 传
+  lessonIds:
+    - 16
+  question: 请把这本书一位一位地往后___，让最后一排的同学也能拿到。
+  options:
+    - 扔
+    - 传
+    - 扫
+    - 喝
+  correct: 传
+- questionID: P3-CH-AUTHORED-L16-Q11
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 别人."
+  targetWord: 别人
+  lessonIds:
+    - 16
+  question: 我向___借东西以前，都会先问对方愿不愿意。
+  options:
+    - 自己
+    - 桌子
+    - 别人
+    - 铅笔
+  correct: 别人
+- questionID: P3-CH-AUTHORED-L16-Q12
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 感到."
+  targetWord: 感到
+  lessonIds:
+    - 16
+  question: 收到朋友亲手做的贺卡，我___十分开心。
+  options:
+    - 尝到
+    - 闻到
+    - 摸到
+    - 感到
+  correct: 感到
+- questionID: P3-CH-AUTHORED-L16-Q13
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 低."
+  targetWord: 低
+  lessonIds:
+    - 16
+  question: 弟弟把头___下来，看着地上的小蚂蚁。
+  options:
+    - 低
+    - 抬
+    - 举
+    - 张
+  correct: 低
+- questionID: P3-CH-AUTHORED-L16-Q14
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 抬."
+  targetWord: 抬
+  lessonIds:
+    - 16
+  question: 我把头___起来，望着天空中的风筝。
+  options:
+    - 低
+    - 抬
+    - 缩
+    - 关
+  correct: 抬
+- questionID: P3-CH-AUTHORED-L17-Q04
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 捞出."
+  targetWord: 捞出
+  lessonIds:
+    - 17
+  question: 面条煮熟了，妈妈用漏勺把面条从锅里___。
+  options:
+    - 放入
+    - 倒进
+    - 挂起
+    - 捞出
+  correct: 捞出
+- questionID: P3-CH-AUTHORED-L17-Q05
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 摘下."
+  targetWord: 摘下
+  lessonIds:
+    - 17
+  question: 活动结束后，妹妹把帽子从头上___，拿在手里。
+  options:
+    - 摘下
+    - 戴上
+    - 放入
+    - 吹走
+  correct: 摘下
+- questionID: P3-CH-AUTHORED-L17-Q06
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 铁."
+  targetWord: 铁
+  lessonIds:
+    - 17
+  question: 这把锤子的头是用___做的，十分坚硬。
+  options:
+    - 纸
+    - 铁
+    - 布
+    - 棉花
+  correct: 铁
+- questionID: P3-CH-AUTHORED-L17-Q07
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 银牌."
+  targetWord: 银牌
+  lessonIds:
+    - 17
+  question: 姐姐在游泳比赛中得了第二名，获得一枚___。
+  options:
+    - 金牌
+    - 铜牌
+    - 银牌
+    - 奖状
+  correct: 银牌
+- questionID: P3-CH-AUTHORED-L17-Q08
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 等."
+  targetWord: 等
+  lessonIds:
+    - 17
+  question: 妈妈还没有来，我就在校门口___她。
+  options:
+    - 踩
+    - 种
+    - 吞
+    - 等
+  correct: 等
+- questionID: P3-CH-AUTHORED-L17-Q09
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 减掉."
+  targetWord: 减掉
+  lessonIds:
+    - 17
+  question: 原来有十颗糖，___三颗后，还剩下七颗。
+  options:
+    - 减掉
+    - 加上
+    - 乘上
+    - 添上
+  correct: 减掉
+- questionID: P3-CH-AUTHORED-L17-Q10
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 算."
+  targetWord: 算
+  lessonIds:
+    - 17
+  question: 我用加法___出两盒彩笔一共有多少支。
+  options:
+    - 看
+    - 算
+    - 画
+    - 唱
+  correct: 算

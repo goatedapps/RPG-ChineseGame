@@ -113,7 +113,11 @@ function auditLevel(level) {
         summary.passageQuestions += questions.length;
         for (const [index, question] of questions.entries()) {
           if (!question.text) errors.push(`${id || file} question ${index + 1} has no text.`);
-          if (question.options && !question.options.includes(question.correct)) {
+          const options = question.options || (question.format === 'MCQ' ? group.optionBank : null);
+          if (question.format === 'MCQ' && (!Array.isArray(options) || options.length < 2 || new Set(options).size !== options.length)) {
+            errors.push(`${id || file} question ${index + 1} needs distinct playable answer options.`);
+          }
+          if (options && !options.includes(question.correct)) {
             errors.push(`${id || file} question ${index + 1} has a correct answer outside its options.`);
           }
         }

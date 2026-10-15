@@ -1,0 +1,188 @@
+- groupId: P3-CH-2025-SA2-ACS-Q25-27
+  passage:
+    title: 母亲节音乐会
+    source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 9–10; 阅读理解（一）; answer key PDF page 13
+    text: |-
+      哥哥：
+
+      这个5月12日是母亲节。我知道你想了好几天，还是不知道怎么为她庆祝。
+
+      我知道妈妈最喜欢听音乐！这个星期六下午5点，我们家附近的公园有一特别的音乐会，他们会把不同国家的音乐表演出来，他们也会请观众一起参加表演。参加表演的观众都能得到一份小礼物。音乐会结束后，我们可以留在公园散步。
+
+      要是你想请妈妈一起去，我们明天下午放学后一起去报名。
+
+      大明
+      5月7日
+      上午11点
+  questions:
+    - sourceQuestion: Q25
+      format: Long-Answer
+      marks: 2
+      text: 这张便条是________写给________的。
+      displayAnswer: 这张便条是大明写给哥哥的。
+      notes: 两个空格分别填“大明”和“哥哥”。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 音乐会的观众要怎么得到小礼物？
+      options:
+        - 看完音乐会。
+        - 和妈妈一起去。
+        - 放学后到公园去。
+        - 参加音乐会的表演。
+      correct: 参加音乐会的表演。
+    - sourceQuestion: Q27
+      format: Fill-in
+      marks: 2
+      text: 哥哥看了大明的便条，发了一条短信请妈妈和他一起参加音乐会，请帮哥哥完成以下的短信。
+      context: 妈妈，我知道您最喜欢听音乐。这个星期六下午5点，在我们家________的公园有一场音乐会，我和大明买了票，请您和我们一起参加。
+      accepted:
+        - 附近
+      displayAnswer: 附近
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q25-27
+  subject: Higher Chinese
+  passage:
+    title: 爸爸给明安的便条
+    source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 14–15; answer key supplied in PDF
+    text: |-
+      明安：
+
+      爷爷生病了，我去超市买一些水果，然后把水果送到爷爷的家。你放学回来先吃午餐，午餐已经准备好了，就放在桌子上。你要做完所有的功课，才可以看电视。妹妹五点下课，你记得去接她回家。
+
+      你有什么事就给我打电话。
+
+      爸爸
+      10月8日
+      上午11点
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 2
+      text: 爸爸为什么要去超市买水果？
+      options:
+        - 因为他要给生病的爷爷送水果。
+        - 因为明安跟他说想要吃水果。
+        - 因为准备午餐时需要加入水果。
+        - 因为他要明安拿水果给妹妹吃。
+      correct: 因为他要给生病的爷爷送水果。
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 明安回到家后要先做什么？
+      options:
+        - 看电视
+        - 接妹妹
+        - 吃午餐
+        - 做功课
+      correct: 吃午餐
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 要是明安需要帮助，他可以怎么做？
+      options:
+        - 让爷爷来帮忙。
+        - 打电话给爸爸。
+        - 到学校找老师。
+        - 在家里等妹妹。
+      correct: 打电话给爸爸。
+- groupId: P3-CH-2025-SA2-NANHUA-Q26-28
+  subject: Higher Chinese
+  passage:
+    title: 欢天喜地庆祝儿童节
+    source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 14–15; answer key supplied in PDF
+    text: |-
+      为了庆祝儿童节，老师们准备了各种有趣的活动，希望同学们能有一个难忘的儿童节。
+
+      同学们当天将会有一个小时的休息时间，让大家能到各个地点去参加不同的活动。
+
+      日期：2025年10月10日
+      时间：休息时间，上午9点至11点
+      地点：礼堂／图书馆／篮球场
+
+      上午9点到10点（一、二、三年级）：
+      折纸飞机——礼堂（学会废物利用）
+      书法比赛——图书馆
+
+      上午10点到11点（四、五、六年级）：
+      制作彩虹转盘——篮球场（必须自己带硬纸板）
+      猜字谜比赛——图书馆
+
+      如果你想要参加书法比赛或者猜字谜比赛，请在10月8日以前向你的华文老师报名。
+
+      欢乐小学
+      10月1日
+  questions:
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 2
+      text: 为什么欢乐小学要准备各种有趣的活动？
+      options:
+        - 希望同学们可以有一个难忘的下午。
+        - 希望同学们能过一个快乐的儿童节。
+        - 希望同学们有一个小时的休息时间。
+        - 希望同学们参加活动后能得到礼物。
+      correct: 希望同学们能过一个快乐的儿童节。
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 2
+      text: 以下哪一句话是对的？
+      options:
+        - 小四的学生可以报名参加书法比赛。
+        - 想折纸飞机的学生可以到篮球场报到。
+        - 学生必须自己带硬纸板来制作彩虹转盘。
+        - 参加各种活动都必须在10月8日以前报名。
+      correct: 学生必须自己带硬纸板来制作彩虹转盘。
+    - sourceQuestion: Q28
+      format: Writing-Constrained
+      marks: 2
+      text: 如果你是小康，今年三年级，想要参加儿童节的庆祝活动。请你完成以下便条，告诉安安儿童节庆祝活动的日期，你想参加哪一个活动，以及那个活动的地点，并问他要不要和你一起参加这个活动。
+      context: |-
+        安安：
+        学校将在________庆祝儿童节，当天会有很多有趣的活动。我想要参加的活动是________，想请你和我一起去。我们可以在休息时间去________参加这个活动。你________吗？
+        小康
+        10月2日
+        下午5点
+      displayAnswer: |-
+        安安：
+        学校将在10月10日庆祝儿童节，当天会有很多有趣的活动。我想要参加的活动是折纸飞机，想请你和我一起去。我们可以在休息时间去礼堂参加这个活动。你可以和我一起参加吗？
+        小康
+      notes: 活动也可选书法比赛，地点须相应为图书馆。
+- groupId: P3-CH-2025-WA2-NANHUA-Q12-14
+  subject: Higher Chinese
+  passage:
+    title: 南华小学书法比赛
+    source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 6–7; answer key supplied in PDF
+    text: |-
+      为了让同学们对书法更感兴趣，也让大家有机会练习书法，我校将会有一场书法比赛。比赛后，学校也会在不同角落贴上每一班前三名同学的书法作品。
+
+      日期：10月5日（星期四）
+      时间：早上8时至11时
+      地点：南华小学礼堂
+
+      想参加比赛的同学，可以在10月1日前告诉你的华文老师。
+
+      南华小学
+      9月1日
+  questions:
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 2
+      text: 以下哪一句话是不对的？
+      options:
+        - 同学们会在南华小学的礼堂比赛书法。
+        - 南华小学书法比赛会在上午的时候开始。
+        - 只有南华小学的学生才可以参加书法比赛。
+        - 想参加比赛的同学可以在10月5日告诉老师。
+      correct: 想参加比赛的同学可以在10月5日告诉老师。
+    - sourceQuestion: Q13
+      format: Long-Answer
+      marks: 2
+      text: |-
+        小文看到这则通告后，决定发短信请同班的小丽和他一起参加。请你帮小文完成以下短信。
+        小丽，我校今年将会有书法比赛。比赛日期是10月5日（星期四），时间是早上8时至11时，地点是在南华小学的礼堂。我想请你和我一起参加。我们可以在________。
+      displayAnswer: 我们可以在10月1日前告诉我们的华文老师。
+    - sourceQuestion: Q14
+      format: Long-Answer
+      marks: 2
+      text: 为什么学校会有书法比赛？
+      displayAnswer: 因为学校要让同学们对书法更感兴趣，也让大家有机会练习书法。

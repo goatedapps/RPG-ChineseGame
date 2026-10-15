@@ -1,0 +1,264 @@
+- questionID: P3-CH-AUTHORED-L2-Q07
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 姑妈."
+  targetWord: 姑妈
+  lessonIds:
+    - 2
+  question: 爸爸的姐姐来看我们，我叫她【姑妈】。请选择括号里词语的意思。
+  options:
+    - 妈妈的姐妹
+    - 爸爸的兄弟
+    - 爸爸的姐妹
+    - 妈妈的兄弟
+  correct: 爸爸的姐妹
+- questionID: P3-CH-AUTHORED-L2-Q08
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 梦想成真."
+  targetWord: 梦想成真
+  lessonIds:
+    - 2
+  question: 姐姐一直想当医生，如今终于当上了医生，真是【梦想成真】。请选择括号里词语的意思。
+  options:
+    - 忘记了自己的愿望
+    - 做了一个奇怪的梦
+    - 改变了原来的愿望
+    - 一直盼望的愿望实现了
+  correct: 一直盼望的愿望实现了
+- questionID: P3-CH-AUTHORED-L4-Q07
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 浅."
+  targetWord: 浅
+  lessonIds:
+    - 4
+  question: 池塘边的水很【浅】，还不到小鸭子的腿那么高。请选择括号里词语的意思。
+  options:
+    - 水里没有一点水
+    - 水面离水底很远
+    - 水面离水底很近
+    - 水面结成了冰
+  correct: 水面离水底很近
+- questionID: P3-CH-AUTHORED-L5-Q07
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 刚刚."
+  targetWord: 刚刚
+  lessonIds:
+    - 5
+  question: 爸爸【刚刚】走出家门，还没走远。请选择括号里词语的意思。
+  options:
+    - 很久以前
+    - 明天早上
+    - 不久以前
+    - 每个星期
+  correct: 不久以前
+- questionID: P3-CH-AUTHORED-L7-Q06
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 轻手轻脚."
+  targetWord: 轻手轻脚
+  lessonIds:
+    - 7
+  question: 为了不吵醒弟弟，姐姐【轻手轻脚】地走出房间。请选择括号里词语的意思。
+  options:
+    - 急着跑步，大声喊叫
+    - 动作很轻，尽量不发出声音
+    - 双手双脚都受了伤
+    - 手脚上沾满了泥土
+  correct: 动作很轻，尽量不发出声音
+- questionID: P3-CH-AUTHORED-L7-Q07
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 灵机一动."
+  targetWord: 灵机一动
+  lessonIds:
+    - 7
+  question: 小文正发愁没有花瓶，忽然【灵机一动】，想到可以用空瓶子。请选择括号里词语的意思。
+  options:
+    - 忘记了原来的办法
+    - 一直没有想到办法
+    - 突然想出了一个办法
+    - 照着别人说的办法做
+  correct: 突然想出了一个办法
+- questionID: P3-CH-AUTHORED-L8-Q08
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 歪."
+  targetWord: 歪
+  lessonIds:
+    - 8
+  question: 墙上的画挂【歪】了，左边高，右边低。请选择括号里词语的意思。
+  options:
+    - 又大又圆
+    - 干净整齐
+    - 完全看不见
+    - 偏斜，不正
+  correct: 偏斜，不正
+- questionID: P3-CH-AUTHORED-L8-Q09
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 满头大汗."
+  targetWord: 满头大汗
+  lessonIds:
+    - 8
+  question: 哥哥跑完步后【满头大汗】，赶紧用毛巾擦脸。请选择括号里词语的意思。
+  options:
+    - 头上出了很多汗
+    - 头发上沾满了泥
+    - 头上长了很多头发
+    - 头发完全被雨淋湿
+  correct: 头上出了很多汗
+- questionID: P3-CH-AUTHORED-L9-Q15
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 下沉."
+  targetWord: 下沉
+  lessonIds:
+    - 9
+  question: 石头放进水里后慢慢【下沉】，最后到了水底。请选择括号里词语的意思。
+  options:
+    - 往上面浮
+    - 留在水面
+    - 往下面落
+    - 向旁边转
+  correct: 往下面落
+- questionID: P3-CH-AUTHORED-L9-Q16
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 神童."
+  targetWord: 神童
+  lessonIds:
+    - 9
+  question: 这位年幼的孩子已经能解很难的题，大家称他为【神童】。请选择括号里词语的意思。
+  options:
+    - 年纪很大的老人
+    - 会帮助别人的神仙
+    - 爱玩耍的小动物
+    - 特别聪明、有才能的儿童
+  correct: 特别聪明、有才能的儿童
+- questionID: P3-CH-AUTHORED-L11-Q08
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 并排."
+  targetWord: 并排
+  lessonIds:
+    - 11
+  question: 两辆车【并排】停着，谁也没有停在另一辆的前面。请选择括号里词语的意思。
+  options:
+    - 一辆在另一辆的后面
+    - 两辆朝不同方向行驶
+    - 两辆车分开很远
+    - 一辆挨着一辆，横着排列
+  correct: 一辆挨着一辆，横着排列
+- questionID: P3-CH-AUTHORED-L11-Q09
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 一直."
+  targetWord: 一直
+  lessonIds:
+    - 11
+  question: 我从早上到中午【一直】在图书馆读书，中间没有离开。请选择括号里词语的意思。
+  options:
+    - 持续地，没有中断
+    - 只做了一小会儿
+    - 偶尔才做一次
+    - 已经完全停止了
+  correct: 持续地，没有中断
+- questionID: P3-CH-AUTHORED-L12-Q08
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 亮晶晶."
+  targetWord: 亮晶晶
+  lessonIds:
+    - 12
+  question: 阳光照在水面上，水面【亮晶晶】的。请选择括号里词语的意思。
+  options:
+    - 很暗，看不清楚
+    - 粗糙，沾满泥土
+    - 安静，没有声音
+    - 明亮，闪着光
+  correct: 明亮，闪着光
+- questionID: P3-CH-AUTHORED-L13-Q02
+  source: "Original authored P3 practice; Lesson 13; taught vocabulary: 指定."
+  targetWord: 指定
+  lessonIds:
+    - 13
+  question: 老师请大家在【指定】的地点集合，不能随便换地方。请选择括号里词语的意思。
+  options:
+    - 随意猜测出来
+    - 明确规定或选定
+    - 完全不知道
+    - 临时忘记了
+  correct: 明确规定或选定
+- questionID: P3-CH-AUTHORED-L14-Q13
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 笨重."
+  targetWord: 笨重
+  lessonIds:
+    - 14
+  question: 这个大木箱很【笨重】，需要几个人一起搬。请选择括号里词语的意思。
+  options:
+    - 又大又重，不容易移动
+    - 又小又轻，容易拿起
+    - 又软又薄，可以折好
+    - 又亮又滑，十分好看
+  correct: 又大又重，不容易移动
+- questionID: P3-CH-AUTHORED-L14-Q14
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 假."
+  targetWord: 假
+  lessonIds:
+    - 14
+  question: 这朵花是塑料做的，是【假】花。请选择括号里词语的意思。
+  options:
+    - 正在生长的
+    - 不是真的
+    - 刚刚摘下的
+    - 已经枯萎的
+  correct: 不是真的
+- questionID: P3-CH-AUTHORED-L15-Q06
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 逃不掉."
+  targetWord: 逃不掉
+  lessonIds:
+    - 15
+  question: 小偷被警察围住，已经【逃不掉】了。请选择括号里词语的意思。
+  options:
+    - 早已经走远
+    - 没办法逃走
+    - 不想离开这里
+    - 还没有被发现
+  correct: 没办法逃走
+- questionID: P3-CH-AUTHORED-L16-Q15
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 有始无终."
+  targetWord: 有始无终
+  lessonIds:
+    - 16
+  question: 他开始学琴时很认真，没学几天就不学了，真是【有始无终】。请选择括号里词语的意思。
+  options:
+    - 从头到尾都没有开始
+    - 遇到困难仍然坚持
+    - 开始做了，却没有坚持到完成
+    - 把事情从头到尾做好
+  correct: 开始做了，却没有坚持到完成
+- questionID: P3-CH-AUTHORED-L16-Q16
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 虎头蛇尾."
+  targetWord: 虎头蛇尾
+  lessonIds:
+    - 16
+  question: 他的作文开头写得认真，结尾却很草率，有些【虎头蛇尾】。请选择括号里词语的意思。
+  options:
+    - 从头到尾都很认真
+    - 开始草率，结尾认真
+    - 根本没有开始去做
+    - 开始认真，后来却草草结束
+  correct: 开始认真，后来却草草结束
+- questionID: P3-CH-AUTHORED-L16-Q17
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 半途而废."
+  targetWord: 半途而废
+  lessonIds:
+    - 16
+  question: 小文的模型只做了一半就放弃了，老师劝他不要【半途而废】。请选择括号里词语的意思。
+  options:
+    - 事情还没有完成就停止了
+    - 把事情做完以后再休息
+    - 开始以前认真作好准备
+    - 遇到困难仍然继续做
+  correct: 事情还没有完成就停止了
+- questionID: P3-CH-AUTHORED-L17-Q11
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 劳动."
+  targetWord: 劳动
+  lessonIds:
+    - 17
+  question: 农夫每天在田里【劳动】，给菜苗浇水、除草。请选择括号里词语的意思。
+  options:
+    - 躺着休息，什么也不做
+    - 坐着看别人做事情
+    - 进行工作，付出体力或脑力
+    - 只在田边欣赏景色
+  correct: 进行工作，付出体力或脑力
+- questionID: P3-CH-AUTHORED-L17-Q12
+  source: "Original authored P3 practice; Lesson 17; taught vocabulary: 神仙."
+  targetWord: 神仙
+  lessonIds:
+    - 17
+  question: 童话里的【神仙】挥一挥手，就让枯树重新开了花。请选择括号里词语的意思。
+  options:
+    - 在田里种菜的人
+    - 划船捕鱼的人
+    - 读书很认真的学生
+    - 传说中有神奇能力的人物
+  correct: 传说中有神奇能力的人物

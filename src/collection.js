@@ -2,7 +2,7 @@ import { canCraft, craft } from './systems/crafting.js';
 import { equipGear, gearBonuses, normalizeEquipment } from './systems/gear.js';
 import { claimMilestones } from './systems/milestones.js';
 import { activeCompanion, chooseCompanion } from './systems/companions.js';
-import { creatureCollectionMarkup } from './ui/creatureCollection.js?p3';
+import { creatureCollectionMarkup } from './ui/creatureCollection.js?p5';
 import { creatureSvg } from './battle/creatureArt.js';
 import { offerSet, setProgress } from './systems/sets.js?p10f';
 import { tierOf } from './learning/mastery.js?p10f';
@@ -222,7 +222,7 @@ export function createCollection({ overlay, getActive, persist, render, toast, a
       if (tutorialStep() === 8) {
         overlay.close();
         onTutorialAction('companion-chosen');
-      } else creatures(`${companion.variant === 'normal' ? '' : `${companion.variant === 'golden' ? 'Golden' : 'Elite'} `}${companion.name} is now your partner. ${companion.ability.description}${companion.bonusCoins ? ` Win battles for ${companion.bonusCoins} bonus coins.` : ''}`);
+      } else creatures(`${companion.variant === 'normal' ? '' : `${companion.variant === 'golden' ? 'Golden' : 'Elite'} `}${companion.name} is now your partner.${companion.bonusCoins ? ` Win battles for ${companion.bonusCoins} bonus coins.` : ''}`);
     });
     document.querySelector('[data-release-creature]')?.addEventListener('click', () => {
       chooseCompanion(game.state.progress, null);

@@ -1,0 +1,2488 @@
+level: p3
+status: integrated
+registeredInApp: true
+minimumPerLesson: 20
+countedCategories:
+  - pinyin
+  - vocab
+  - phrase
+  - usage
+authoredQuestionCount: 521
+examVocabularyQuestions: 391
+vocabularyQuestionCount: 912
+overallQuestionCount: 1212
+matchingRule: Only the tested target word is matched to taught vocabulary; incidental words and distractors do not assign lessons.
+distinctRule: Category, prompt text and correct answer identify a distinct question, ignoring source IDs and option order.
+lessons:
+  - lessonId: 1
+    title: 第一课 (Lesson 1)
+    paperQuestions: 20
+    authoredQuestions: 25
+    totalQuestions: 45
+    distinctQuestions: 45
+    categoryCounts:
+      pinyin: 1
+      vocab: 17
+      phrase: 0
+      usage: 27
+    questions:
+      - questionID: P3-CH-2025-WA1-TAONAN-Q7
+        category: pinyin
+        targetWord: 努力
+      - questionID: P3-CH-2025-SA2-NANYANG-Q19
+        category: vocab
+        targetWord: 希望
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q17
+        category: vocab
+        targetWord: 保卫
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q2
+        category: vocab
+        targetWord: 保卫
+      - questionID: P3-CH-2025-WA1-NANYANG-Q5
+        category: vocab
+        targetWord: 复习
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q4
+        category: vocab
+        targetWord: 练习
+      - questionID: P3-CH-2025-WA1-TAONAN-Q1
+        category: vocab
+        targetWord: 希望
+      - questionID: P3-CH-2025-WA1-TAONAN-Q3
+        category: vocab
+        targetWord: 读
+      - questionID: P3-CH-2025-WA1-TAONAN-Q5
+        category: vocab
+        targetWord: 翻到
+      - questionID: P3-CH-2025-WA1-TAONAN-Q13
+        category: vocab
+        targetWord: 成为
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q10
+        category: vocab
+        targetWord: 翻到
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q14
+        category: vocab
+        targetWord: 努力
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q4
+        category: vocab
+        targetWord: 科学
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q5
+        category: vocab
+        targetWord: 复习
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q6
+        category: vocab
+        targetWord: 努力
+      - questionID: P3-CH-2025-WA2-METHODIST-Q7
+        category: vocab
+        targetWord: 复习
+      - questionID: P3-CH-2025-WA2-PEIHWA-Q6
+        category: vocab
+        targetWord: 保卫
+      - questionID: P3-CH-2025-WA3-TAONAN-S3-Q16
+        category: vocab
+        targetWord: 努力
+      - questionID: P3-CH-2025-WA1-CHIJ-Q19
+        category: usage
+        targetWord: 希望
+      - questionID: P3-CH-2025-WA1-CHIJ-Q20
+        category: usage
+        targetWord: 练习
+      - questionID: WSQ-P3-L01-USAGE-01
+        category: usage
+        targetWord: 龙争虎斗
+      - questionID: WSQ-P3-L01-USAGE-02
+        category: usage
+        targetWord: 你追我赶
+      - questionID: WSQ-P3-L01-USAGE-03
+        category: usage
+        targetWord: 马到成功
+      - questionID: WSQ-P3-L01-USAGE-04
+        category: usage
+        targetWord: 科学
+      - questionID: WSQ-P3-L01-USAGE-05
+        category: usage
+        targetWord: 将来
+      - questionID: WSQ-P3-L01-USAGE-06
+        category: usage
+        targetWord: 当
+      - questionID: WSQ-P3-L01-USAGE-07
+        category: usage
+        targetWord: 司机
+      - questionID: WSQ-P3-L01-USAGE-08
+        category: usage
+        targetWord: 希望
+      - questionID: WSQ-P3-L01-USAGE-09
+        category: usage
+        targetWord: 成为
+      - questionID: WSQ-P3-L01-USAGE-10
+        category: usage
+        targetWord: 军人
+      - questionID: WSQ-P3-L01-USAGE-11
+        category: usage
+        targetWord: 保卫
+      - questionID: WSQ-P3-L01-USAGE-12
+        category: usage
+        targetWord: 练习
+      - questionID: WSQ-P3-L01-USAGE-13
+        category: usage
+        targetWord: 就
+      - questionID: WSQ-P3-L01-USAGE-14
+        category: usage
+        targetWord: 努力
+      - questionID: WSQ-P3-L01-USAGE-15
+        category: usage
+        targetWord: 讲
+      - questionID: WSQ-P3-L01-USAGE-16
+        category: usage
+        targetWord: 篇
+      - questionID: WSQ-P3-L01-USAGE-17
+        category: usage
+        targetWord: 课文
+      - questionID: WSQ-P3-L01-USAGE-18
+        category: usage
+        targetWord: 复习
+      - questionID: WSQ-P3-L01-USAGE-19
+        category: usage
+        targetWord: 做
+      - questionID: WSQ-P3-L01-USAGE-20
+        category: usage
+        targetWord: 第一
+      - questionID: WSQ-P3-L01-USAGE-21
+        category: usage
+        targetWord: 交
+      - questionID: WSQ-P3-L01-USAGE-22
+        category: usage
+        targetWord: 举手
+      - questionID: WSQ-P3-L01-USAGE-23
+        category: usage
+        targetWord: 件
+      - questionID: WSQ-P3-L01-USAGE-24
+        category: usage
+        targetWord: 翻到
+      - questionID: WSQ-P3-L01-USAGE-25
+        category: usage
+        targetWord: 读
+    dedicatedOrdinaryChineseUsageQuestions: 25
+  - lessonId: 2
+    title: 第二课 (Lesson 2)
+    paperQuestions: 11
+    authoredQuestions: 33
+    totalQuestions: 44
+    distinctQuestions: 44
+    categoryCounts:
+      pinyin: 2
+      vocab: 15
+      phrase: 2
+      usage: 25
+    questions:
+      - questionID: P3-CH-AUTHORED-L2-Q01
+        category: pinyin
+        targetWord: 陈
+      - questionID: P3-CH-AUTHORED-L2-Q02
+        category: pinyin
+        targetWord: 聪明
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q1
+        category: vocab
+        targetWord: 矮
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q6
+        category: vocab
+        targetWord: 相信
+      - questionID: P3-CH-2025-WA1-NANYANG-Q19
+        category: vocab
+        targetWord: 意思
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q1
+        category: vocab
+        targetWord: 胖
+      - questionID: P3-CH-2025-WA1-TAONAN-Q2
+        category: vocab
+        targetWord: 相信
+      - questionID: P3-CH-2025-WA1-TAONAN-Q8
+        category: vocab
+        targetWord: 一定
+      - questionID: P3-CH-2025-WA1-TAONAN-Q9
+        category: vocab
+        targetWord: 帮手
+      - questionID: P3-CH-2025-WA2-HENRYPARK-Q2
+        category: vocab
+        targetWord: 退
+      - questionID: P3-CH-2025-WA2-HENRYPARK-Q6
+        category: vocab
+        targetWord: 相信
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q7
+        category: vocab
+        targetWord: 相信
+      - questionID: P3-CH-2025-WA2-PEIHWA-Q1
+        category: vocab
+        targetWord: 姓
+      - questionID: P3-CH-AUTHORED-L2-Q03
+        category: vocab
+        targetWord: 双
+      - questionID: P3-CH-AUTHORED-L2-Q04
+        category: vocab
+        targetWord: 语言
+      - questionID: P3-CH-AUTHORED-L2-Q05
+        category: vocab
+        targetWord: 谈天
+      - questionID: P3-CH-AUTHORED-L2-Q06
+        category: vocab
+        targetWord: 瘦
+      - questionID: P3-CH-AUTHORED-L2-Q07
+        category: phrase
+        targetWord: 姑妈
+      - questionID: P3-CH-AUTHORED-L2-Q08
+        category: phrase
+        targetWord: 梦想成真
+      - questionID: P3-CH-AUTHORED-L2-Q09
+        category: usage
+        targetWord: 奇怪
+      - questionID: WSQ-P3-L02-USAGE-01
+        category: usage
+        targetWord: 陈
+      - questionID: WSQ-P3-L02-USAGE-02
+        category: usage
+        targetWord: 双
+      - questionID: WSQ-P3-L02-USAGE-03
+        category: usage
+        targetWord: 胡
+      - questionID: WSQ-P3-L02-USAGE-04
+        category: usage
+        targetWord: 李
+      - questionID: WSQ-P3-L02-USAGE-05
+        category: usage
+        targetWord: 吴
+      - questionID: WSQ-P3-L02-USAGE-06
+        category: usage
+        targetWord: 言
+      - questionID: WSQ-P3-L02-USAGE-07
+        category: usage
+        targetWord: 姓
+      - questionID: WSQ-P3-L02-USAGE-08
+        category: usage
+        targetWord: 名
+      - questionID: WSQ-P3-L02-USAGE-09
+        category: usage
+        targetWord: 胖
+      - questionID: WSQ-P3-L02-USAGE-10
+        category: usage
+        targetWord: 瘦
+      - questionID: WSQ-P3-L02-USAGE-11
+        category: usage
+        targetWord: 矮
+      - questionID: WSQ-P3-L02-USAGE-12
+        category: usage
+        targetWord: 帮手
+      - questionID: WSQ-P3-L02-USAGE-13
+        category: usage
+        targetWord: 聪明
+      - questionID: WSQ-P3-L02-USAGE-14
+        category: usage
+        targetWord: 意思
+      - questionID: WSQ-P3-L02-USAGE-15
+        category: usage
+        targetWord: 姑妈
+      - questionID: WSQ-P3-L02-USAGE-16
+        category: usage
+        targetWord: 因为
+      - questionID: WSQ-P3-L02-USAGE-17
+        category: usage
+        targetWord: 语言
+      - questionID: WSQ-P3-L02-USAGE-18
+        category: usage
+        targetWord: 谈天
+      - questionID: WSQ-P3-L02-USAGE-19
+        category: usage
+        targetWord: 一些
+      - questionID: WSQ-P3-L02-USAGE-21
+        category: usage
+        targetWord: 问题
+      - questionID: WSQ-P3-L02-USAGE-22
+        category: usage
+        targetWord: 退
+      - questionID: WSQ-P3-L02-USAGE-23
+        category: usage
+        targetWord: 相信
+      - questionID: WSQ-P3-L02-USAGE-24
+        category: usage
+        targetWord: 一定
+      - questionID: WSQ-P3-L02-USAGE-25
+        category: usage
+        targetWord: 梦想成真
+    dedicatedOrdinaryChineseUsageQuestions: 25
+  - lessonId: 3
+    title: 第三课 (Lesson 3)
+    paperQuestions: 23
+    authoredQuestions: 25
+    totalQuestions: 48
+    distinctQuestions: 47
+    categoryCounts:
+      pinyin: 1
+      vocab: 22
+      phrase: 0
+      usage: 25
+    questions:
+      - questionID: P3-CH-2025-WA2-TAONAN-Q6
+        category: pinyin
+        targetWord: 闹钟
+      - questionID: P3-CH-2025-SA2-ACS-Q2
+        category: vocab
+        targetWord: 吸管
+      - questionID: P3-CH-2025-SA2-ACS-Q18
+        category: vocab
+        targetWord: 改掉
+      - questionID: P3-CH-2025-SA2-AITONG-Q1
+        category: vocab
+        targetWord: 吸管
+      - questionID: P3-CH-2025-SA2-METHODIST-Q14
+        category: vocab
+        targetWord: 准时
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q18
+        category: vocab
+        targetWord: 盖子
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q18
+        category: vocab
+        targetWord: 准时
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q7
+        category: vocab
+        targetWord: 习惯
+      - questionID: P3-CH-2025-WA1-HENRYPARK-Q6
+        category: vocab
+        targetWord: 改掉
+      - questionID: P3-CH-2025-WA1-HENRYPARK-Q8
+        category: vocab
+        targetWord: 准时
+      - questionID: P3-CH-2025-WA1-NANYANG-Q3
+        category: vocab
+        targetWord: 辆
+      - questionID: P3-CH-2025-WA1-NANYANG-Q17
+        category: vocab
+        targetWord: 伙伴
+      - questionID: P3-CH-2025-WA2-HENRYPARK-Q1
+        category: vocab
+        targetWord: 吸管
+      - questionID: P3-CH-2025-WA2-HENRYPARK-Q5
+        category: vocab
+        targetWord: 伙伴
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q2
+        category: vocab
+        targetWord: 陪
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q9
+        category: vocab
+        targetWord: 习惯
+      - questionID: P3-CH-2025-WA2-METHODIST-Q2
+        category: vocab
+        targetWord: 迟到
+      - questionID: P3-CH-2025-WA2-METHODIST-Q3
+        category: vocab
+        targetWord: 闹钟
+      - questionID: P3-CH-2025-WA2-PEIHWA-Q2
+        category: vocab
+        targetWord: 陪
+      - questionID: P3-CH-2025-WA2-PEIHWA-Q5
+        category: vocab
+        targetWord: 习惯
+      - questionID: P3-CH-2025-WA2-TAONAN-Q3
+        category: vocab
+        targetWord: 改掉
+      - questionID: P3-CH-2025-WA2-TAONAN-Q4
+        category: vocab
+        targetWord: 伙伴
+      - questionID: P3-CH-2025-WA2-TAONAN-Q14
+        category: vocab
+        targetWord: 准时
+      - questionID: WSQ-P3-L03-USAGE-01
+        category: usage
+        targetWord: 陪
+      - questionID: WSQ-P3-L03-USAGE-02
+        category: usage
+        targetWord: 装
+      - questionID: WSQ-P3-L03-USAGE-03
+        category: usage
+        targetWord: 喝
+      - questionID: WSQ-P3-L03-USAGE-04
+        category: usage
+        targetWord: 蓝色
+      - questionID: WSQ-P3-L03-USAGE-05
+        category: usage
+        targetWord: 辆
+      - questionID: WSQ-P3-L03-USAGE-06
+        category: usage
+        targetWord: 床单
+      - questionID: WSQ-P3-L03-USAGE-07
+        category: usage
+        targetWord: 超人
+      - questionID: WSQ-P3-L03-USAGE-08
+        category: usage
+        targetWord: 按
+      - questionID: WSQ-P3-L03-USAGE-09
+        category: usage
+        targetWord: 盖子
+      - questionID: WSQ-P3-L03-USAGE-10
+        category: usage
+        targetWord: 吸管
+      - questionID: WSQ-P3-L03-USAGE-11
+        category: usage
+        targetWord: 弹
+      - questionID: WSQ-P3-L03-USAGE-12
+        category: usage
+        targetWord: 闹钟
+      - questionID: WSQ-P3-L03-USAGE-13
+        category: usage
+        targetWord: 伙伴
+      - questionID: WSQ-P3-L03-USAGE-14
+        category: usage
+        targetWord: 背
+      - questionID: WSQ-P3-L03-USAGE-15
+        category: usage
+        targetWord: 手表
+      - questionID: WSQ-P3-L03-USAGE-16
+        category: usage
+        targetWord: 粉红
+      - questionID: WSQ-P3-L03-USAGE-17
+        category: usage
+        targetWord: 形状
+      - questionID: WSQ-P3-L03-USAGE-18
+        category: usage
+        targetWord: 响
+      - questionID: WSQ-P3-L03-USAGE-19
+        category: usage
+        targetWord: 睡觉
+      - questionID: WSQ-P3-L03-USAGE-20
+        category: usage
+        targetWord: 准时
+      - questionID: WSQ-P3-L03-USAGE-21
+        category: usage
+        targetWord: 改掉
+      - questionID: WSQ-P3-L03-USAGE-22
+        category: usage
+        targetWord: 迟到
+      - questionID: WSQ-P3-L03-USAGE-23
+        category: usage
+        targetWord: 习惯
+      - questionID: WSQ-P3-L03-USAGE-24
+        category: usage
+        targetWord: 名字
+      - questionID: WSQ-P3-L03-USAGE-25
+        category: usage
+        targetWord: 真
+    dedicatedOrdinaryChineseUsageQuestions: 25
+  - lessonId: 4
+    title: 第四课 (Lesson 4)
+    paperQuestions: 15
+    authoredQuestions: 35
+    totalQuestions: 50
+    distinctQuestions: 47
+    categoryCounts:
+      pinyin: 2
+      vocab: 19
+      phrase: 1
+      usage: 28
+    questions:
+      - questionID: P3-CH-AUTHORED-L4-Q01
+        category: pinyin
+        targetWord: 绿豆
+      - questionID: P3-CH-AUTHORED-L4-Q02
+        category: pinyin
+        targetWord: 幼苗
+      - questionID: P3-CH-2025-SA2-HENRYPARK-Q18
+        category: vocab
+        targetWord: 变化
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q14
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-SA2-METHODIST-Q1
+        category: vocab
+        targetWord: 短
+      - questionID: P3-CH-2025-SA2-NANHUA-Q15
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q4
+        category: vocab
+        targetWord: 喊
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q17
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-SA2-TAONAN-Q3
+        category: vocab
+        targetWord: 披
+      - questionID: P3-CH-2025-SA2-TAONAN-Q15
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q8
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-WA1-HENRYPARK-Q1
+        category: vocab
+        targetWord: 披
+      - questionID: P3-CH-2025-WA2-HENRYPARK-Q8
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-WA2-MAHABODHI-Q8
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-WA2-TAONAN-Q1
+        category: vocab
+        targetWord: 披
+      - questionID: P3-CH-2025-WA2-TAONAN-Q9
+        category: vocab
+        targetWord: 摆动
+      - questionID: P3-CH-2025-WA2-TAONAN-Q15
+        category: vocab
+        targetWord: 变化
+      - questionID: P3-CH-AUTHORED-L4-Q03
+        category: vocab
+        targetWord: 窄
+      - questionID: P3-CH-AUTHORED-L4-Q04
+        category: vocab
+        targetWord: 后腿
+      - questionID: P3-CH-AUTHORED-L4-Q05
+        category: vocab
+        targetWord: 披
+      - questionID: P3-CH-AUTHORED-L4-Q06
+        category: vocab
+        targetWord: 嘴巴
+      - questionID: P3-CH-AUTHORED-L4-Q07
+        category: phrase
+        targetWord: 浅
+      - questionID: P3-CH-AUTHORED-L4-Q08
+        category: usage
+        targetWord: 哪里
+      - questionID: WSQ-P3-L04-USAGE-01
+        category: usage
+        targetWord: 内
+      - questionID: WSQ-P3-L04-USAGE-02
+        category: usage
+        targetWord: 入
+      - questionID: WSQ-P3-L04-USAGE-03
+        category: usage
+        targetWord: 由
+      - questionID: WSQ-P3-L04-USAGE-04
+        category: usage
+        targetWord: 浅
+      - questionID: WSQ-P3-L04-USAGE-05
+        category: usage
+        targetWord: 变
+      - questionID: WSQ-P3-L04-USAGE-06
+        category: usage
+        targetWord: 深
+      - questionID: WSQ-P3-L04-USAGE-07
+        category: usage
+        targetWord: 窄
+      - questionID: WSQ-P3-L04-USAGE-08
+        category: usage
+        targetWord: 宽
+      - questionID: WSQ-P3-L04-USAGE-09
+        category: usage
+        targetWord: 短
+      - questionID: WSQ-P3-L04-USAGE-10
+        category: usage
+        targetWord: 绿豆
+      - questionID: WSQ-P3-L04-USAGE-11
+        category: usage
+        targetWord: 变化
+      - questionID: WSQ-P3-L04-USAGE-12
+        category: usage
+        targetWord: 细
+      - questionID: WSQ-P3-L04-USAGE-13
+        category: usage
+        targetWord: 根
+      - questionID: WSQ-P3-L04-USAGE-14
+        category: usage
+        targetWord: 越
+      - questionID: WSQ-P3-L04-USAGE-15
+        category: usage
+        targetWord: 幼苗
+      - questionID: WSQ-P3-L04-USAGE-16
+        category: usage
+        targetWord: 干死
+      - questionID: WSQ-P3-L04-USAGE-17
+        category: usage
+        targetWord: 摆动
+      - questionID: WSQ-P3-L04-USAGE-18
+        category: usage
+        targetWord: 条
+      - questionID: WSQ-P3-L04-USAGE-19
+        category: usage
+        targetWord: 后腿
+      - questionID: WSQ-P3-L04-USAGE-21
+        category: usage
+        targetWord: 嘴巴
+      - questionID: WSQ-P3-L04-USAGE-22
+        category: usage
+        targetWord: 找
+      - questionID: WSQ-P3-L04-USAGE-23
+        category: usage
+        targetWord: 喊
+      - questionID: WSQ-P3-L04-USAGE-24
+        category: usage
+        targetWord: 披
+      - questionID: WSQ-P3-L04-USAGE-25
+        category: usage
+        targetWord: 露
+      - questionID: WSQ-P3-L04-USAGE-26
+        category: usage
+        targetWord: 肚皮
+      - questionID: WSQ-P3-L04-USAGE-27
+        category: usage
+        targetWord: 孩子们
+      - questionID: WSQ-P3-L04-USAGE-28
+        category: usage
+        targetWord: 已经
+    dedicatedOrdinaryChineseUsageQuestions: 28
+  - lessonId: 5
+    title: 第五课 (Lesson 5)
+    paperQuestions: 13
+    authoredQuestions: 28
+    totalQuestions: 41
+    distinctQuestions: 40
+    categoryCounts:
+      pinyin: 3
+      vocab: 16
+      phrase: 1
+      usage: 21
+    questions:
+      - questionID: P3-CH-2025-WA3-TAONAN-S3-Q6
+        category: pinyin
+        targetWord: 傍晚
+      - questionID: P3-CH-AUTHORED-L5-Q01
+        category: pinyin
+        targetWord: 杂志
+      - questionID: P3-CH-AUTHORED-L5-Q02
+        category: pinyin
+        targetWord: 报纸
+      - questionID: P3-CH-2025-SA2-ACS-Q8
+        category: vocab
+        targetWord: 准备
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q7
+        category: vocab
+        targetWord: 准备
+      - questionID: P3-CH-2025-SA2-TAONAN-Q8
+        category: vocab
+        targetWord: 准备
+      - questionID: P3-CH-2025-WA1-HENRYPARK-Q7
+        category: vocab
+        targetWord: 收到
+      - questionID: P3-CH-2025-WA1-NANYANG-Q18
+        category: vocab
+        targetWord: 傍晚
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q3
+        category: vocab
+        targetWord: 准备
+      - questionID: P3-CH-2025-WA2-METHODIST-Q6
+        category: vocab
+        targetWord: 收到
+      - questionID: P3-CH-2025-WA2-NANHUA-Q11
+        category: vocab
+        targetWord: 收到
+      - questionID: P3-CH-2025-WA2-RAFFLES-Q2
+        category: vocab
+        targetWord: 付
+      - questionID: P3-CH-2025-WA2-ROSYTH-Q5
+        category: vocab
+        targetWord: 鲜花
+      - questionID: P3-CH-2025-WA2-ROSYTH-Q8
+        category: vocab
+        targetWord: 准备
+      - questionID: P3-CH-2025-WA3-TAONAN-S3-Q2
+        category: vocab
+        targetWord: 准备
+      - questionID: P3-CH-AUTHORED-L5-Q03
+        category: vocab
+        targetWord: 美食展
+      - questionID: P3-CH-AUTHORED-L5-Q04
+        category: vocab
+        targetWord: 园艺展
+      - questionID: P3-CH-AUTHORED-L5-Q05
+        category: vocab
+        targetWord: 束
+      - questionID: P3-CH-AUTHORED-L5-Q06
+        category: vocab
+        targetWord: 扫地
+      - questionID: P3-CH-AUTHORED-L5-Q07
+        category: phrase
+        targetWord: 刚刚
+      - questionID: P3-CH-AUTHORED-L5-Q08
+        category: usage
+        targetWord: 或者
+      - questionID: WSQ-P3-L05-USAGE-01
+        category: usage
+        targetWord: 电脑展
+      - questionID: WSQ-P3-L05-USAGE-02
+        category: usage
+        targetWord: 旅游展
+      - questionID: WSQ-P3-L05-USAGE-03
+        category: usage
+        targetWord: 美食展
+      - questionID: WSQ-P3-L05-USAGE-04
+        category: usage
+        targetWord: 园艺展
+      - questionID: WSQ-P3-L05-USAGE-05
+        category: usage
+        targetWord: 多彩
+      - questionID: WSQ-P3-L05-USAGE-06
+        category: usage
+        targetWord: 傍晚
+      - questionID: WSQ-P3-L05-USAGE-08
+        category: usage
+        targetWord: 报纸
+      - questionID: WSQ-P3-L05-USAGE-09
+        category: usage
+        targetWord: 杂志
+      - questionID: WSQ-P3-L05-USAGE-10
+        category: usage
+        targetWord: 号
+      - questionID: WSQ-P3-L05-USAGE-11
+        category: usage
+        targetWord: 刚刚
+      - questionID: WSQ-P3-L05-USAGE-12
+        category: usage
+        targetWord: 付
+      - questionID: WSQ-P3-L05-USAGE-13
+        category: usage
+        targetWord: 钱
+      - questionID: WSQ-P3-L05-USAGE-14
+        category: usage
+        targetWord: 束
+      - questionID: WSQ-P3-L05-USAGE-15
+        category: usage
+        targetWord: 鲜花
+      - questionID: WSQ-P3-L05-USAGE-16
+        category: usage
+        targetWord: 提
+      - questionID: WSQ-P3-L05-USAGE-17
+        category: usage
+        targetWord: 扫地
+      - questionID: WSQ-P3-L05-USAGE-18
+        category: usage
+        targetWord: 都
+      - questionID: WSQ-P3-L05-USAGE-19
+        category: usage
+        targetWord: 收到
+      - questionID: WSQ-P3-L05-USAGE-20
+        category: usage
+        targetWord: 知道
+      - questionID: WSQ-P3-L05-USAGE-21
+        category: usage
+        targetWord: 准备
+    dedicatedOrdinaryChineseUsageQuestions: 21
+  - lessonId: 6
+    title: 第六课 (Lesson 6)
+    paperQuestions: 23
+    authoredQuestions: 25
+    totalQuestions: 48
+    distinctQuestions: 46
+    categoryCounts:
+      pinyin: 1
+      vocab: 21
+      phrase: 0
+      usage: 26
+    questions:
+      - questionID: P3-CH-2025-WA3-TAONAN-S3-Q7
+        category: pinyin
+        targetWord: 跌倒
+      - questionID: P3-CH-2025-SA2-ACS-Q9
+        category: vocab
+        targetWord: 弄破
+      - questionID: P3-CH-2025-SA2-CHIJ-Q7
+        category: vocab
+        targetWord: 突然
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q2
+        category: vocab
+        targetWord: 软
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q21
+        category: vocab
+        targetWord: 跌倒
+      - questionID: P3-CH-2025-SA2-TAONAN-Q12
+        category: vocab
+        targetWord: 原谅
+      - questionID: P3-CH-2025-SA2-TAONAN-Q13
+        category: vocab
+        targetWord: 受伤
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q3
+        category: vocab
+        targetWord: 弄破
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q4
+        category: vocab
+        targetWord: 扶
+      - questionID: P3-CH-2025-WA1-HENRYPARK-Q5
+        category: vocab
+        targetWord: 突然
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q2
+        category: vocab
+        targetWord: 立刻
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q7
+        category: vocab
+        targetWord: 弄破
+      - questionID: P3-CH-2025-WA2-METHODIST-Q5
+        category: vocab
+        targetWord: 扔
+      - questionID: P3-CH-2025-WA2-METHODIST-Q9
+        category: vocab
+        targetWord: 原谅
+      - questionID: P3-CH-2025-WA2-NANHUA-Q1
+        category: vocab
+        targetWord: 应该
+      - questionID: P3-CH-2025-WA2-NANHUA-Q3
+        category: vocab
+        targetWord: 原谅
+      - questionID: P3-CH-2025-WA2-PEIHWA-Q7
+        category: vocab
+        targetWord: 原谅
+      - questionID: P3-CH-2025-WA2-PEIHWA-Q13
+        category: vocab
+        targetWord: 跌倒
+      - questionID: P3-CH-2025-WA2-ROSYTH-Q2
+        category: vocab
+        targetWord: 跌倒
+      - questionID: P3-CH-2025-WA3-TAONAN-S3-Q5
+        category: vocab
+        targetWord: 不理
+      - questionID: P3-CH-2025-WA3-TAONAN-S3-Q9
+        category: vocab
+        targetWord: 原谅
+      - questionID: P3-CH-2025-WA3-TAONAN-S4-Q14
+        category: vocab
+        targetWord: 受伤
+      - questionID: P3-CH-2025-WA2-CHIJ-Q20
+        category: usage
+        targetWord: 原谅
+      - questionID: WSQ-P3-L06-USAGE-01
+        category: usage
+        targetWord: 软
+      - questionID: WSQ-P3-L06-USAGE-02
+        category: usage
+        targetWord: 硬
+      - questionID: WSQ-P3-L06-USAGE-03
+        category: usage
+        targetWord: 松
+      - questionID: WSQ-P3-L06-USAGE-04
+        category: usage
+        targetWord: 紧
+      - questionID: WSQ-P3-L06-USAGE-05
+        category: usage
+        targetWord: 失去
+      - questionID: WSQ-P3-L06-USAGE-06
+        category: usage
+        targetWord: 错误
+      - questionID: WSQ-P3-L06-USAGE-07
+        category: usage
+        targetWord: 应该
+      - questionID: WSQ-P3-L06-USAGE-08
+        category: usage
+        targetWord: 扔
+      - questionID: WSQ-P3-L06-USAGE-09
+        category: usage
+        targetWord: 错
+      - questionID: WSQ-P3-L06-USAGE-10
+        category: usage
+        targetWord: 推
+      - questionID: WSQ-P3-L06-USAGE-11
+        category: usage
+        targetWord: 原谅
+      - questionID: WSQ-P3-L06-USAGE-12
+        category: usage
+        targetWord: 弄破
+      - questionID: WSQ-P3-L06-USAGE-13
+        category: usage
+        targetWord: 没关系
+      - questionID: WSQ-P3-L06-USAGE-14
+        category: usage
+        targetWord: 突然
+      - questionID: WSQ-P3-L06-USAGE-15
+        category: usage
+        targetWord: 来不及
+      - questionID: WSQ-P3-L06-USAGE-16
+        category: usage
+        targetWord: 爬起来
+      - questionID: WSQ-P3-L06-USAGE-17
+        category: usage
+        targetWord: 怎么
+      - questionID: WSQ-P3-L06-USAGE-18
+        category: usage
+        targetWord: 不理
+      - questionID: WSQ-P3-L06-USAGE-19
+        category: usage
+        targetWord: 比赛
+      - questionID: WSQ-P3-L06-USAGE-20
+        category: usage
+        targetWord: 跌倒
+      - questionID: WSQ-P3-L06-USAGE-21
+        category: usage
+        targetWord: 受伤
+      - questionID: WSQ-P3-L06-USAGE-22
+        category: usage
+        targetWord: 立刻
+      - questionID: WSQ-P3-L06-USAGE-23
+        category: usage
+        targetWord: 扶
+      - questionID: WSQ-P3-L06-USAGE-24
+        category: usage
+        targetWord: 不好意思
+      - questionID: WSQ-P3-L06-USAGE-25
+        category: usage
+        targetWord: 谢谢
+    dedicatedOrdinaryChineseUsageQuestions: 25
+  - lessonId: 7
+    title: 第七课 (Lesson 7)
+    paperQuestions: 12
+    authoredQuestions: 29
+    totalQuestions: 41
+    distinctQuestions: 41
+    categoryCounts:
+      pinyin: 2
+      vocab: 14
+      phrase: 2
+      usage: 23
+    questions:
+      - questionID: P3-CH-AUTHORED-L7-Q01
+        category: pinyin
+        targetWord: 电视
+      - questionID: P3-CH-AUTHORED-L7-Q02
+        category: pinyin
+        targetWord: 地板
+      - questionID: P3-CH-2025-SA2-ACS-Q17
+        category: vocab
+        targetWord: 搬动
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q5
+        category: vocab
+        targetWord: 脱
+      - questionID: P3-CH-2025-SA2-AITONG-Q7
+        category: vocab
+        targetWord: 赔钱
+      - questionID: P3-CH-2025-SA2-METHODIST-Q10
+        category: vocab
+        targetWord: 赔钱
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q3
+        category: vocab
+        targetWord: 便条
+      - questionID: P3-CH-2025-SA2-TAONAN-Q5
+        category: vocab
+        targetWord: 脱
+      - questionID: P3-CH-2025-WA1-ACSPRIMARY-Q5
+        category: vocab
+        targetWord: 赔钱
+      - questionID: P3-CH-2025-WA1-HENRYPARK-Q9
+        category: vocab
+        targetWord: 溜走
+      - questionID: P3-CH-2025-WA2-METHODIST-Q4
+        category: vocab
+        targetWord: 花盆
+      - questionID: P3-CH-2025-WA2-NANHUA-Q2
+        category: vocab
+        targetWord: 休息
+      - questionID: P3-CH-2025-WA3-TAONAN-S4-Q4
+        category: vocab
+        targetWord: 花盆
+      - questionID: P3-CH-AUTHORED-L7-Q03
+        category: vocab
+        targetWord: 打碎
+      - questionID: P3-CH-AUTHORED-L7-Q04
+        category: vocab
+        targetWord: 踩断
+      - questionID: P3-CH-AUTHORED-L7-Q05
+        category: vocab
+        targetWord: 食堂
+      - questionID: P3-CH-AUTHORED-L7-Q06
+        category: phrase
+        targetWord: 轻手轻脚
+      - questionID: P3-CH-AUTHORED-L7-Q07
+        category: phrase
+        targetWord: 灵机一动
+      - questionID: P3-CH-2025-WA2-CHIJ-Q21
+        category: usage
+        targetWord: 休息
+      - questionID: P3-CH-AUTHORED-L7-Q08
+        category: usage
+        targetWord: 道歉
+      - questionID: WSQ-P3-L07-USAGE-01
+        category: usage
+        targetWord: 打碎
+      - questionID: WSQ-P3-L07-USAGE-02
+        category: usage
+        targetWord: 赔钱
+      - questionID: WSQ-P3-L07-USAGE-03
+        category: usage
+        targetWord: 留
+      - questionID: WSQ-P3-L07-USAGE-04
+        category: usage
+        targetWord: 张
+      - questionID: WSQ-P3-L07-USAGE-05
+        category: usage
+        targetWord: 便条
+      - questionID: WSQ-P3-L07-USAGE-06
+        category: usage
+        targetWord: 花盆
+      - questionID: WSQ-P3-L07-USAGE-08
+        category: usage
+        targetWord: 食堂
+      - questionID: WSQ-P3-L07-USAGE-09
+        category: usage
+        targetWord: 溜走
+      - questionID: WSQ-P3-L07-USAGE-10
+        category: usage
+        targetWord: 踩断
+      - questionID: WSQ-P3-L07-USAGE-11
+        category: usage
+        targetWord: 眼镜
+      - questionID: WSQ-P3-L07-USAGE-12
+        category: usage
+        targetWord: 病
+      - questionID: WSQ-P3-L07-USAGE-13
+        category: usage
+        targetWord: 休息
+      - questionID: WSQ-P3-L07-USAGE-14
+        category: usage
+        targetWord: 电视
+      - questionID: WSQ-P3-L07-USAGE-15
+        category: usage
+        targetWord: 轻轻地
+      - questionID: WSQ-P3-L07-USAGE-16
+        category: usage
+        targetWord: 脱
+      - questionID: WSQ-P3-L07-USAGE-17
+        category: usage
+        targetWord: 走路
+      - questionID: WSQ-P3-L07-USAGE-18
+        category: usage
+        targetWord: 事情
+      - questionID: WSQ-P3-L07-USAGE-19
+        category: usage
+        targetWord: 轻手轻脚
+      - questionID: WSQ-P3-L07-USAGE-20
+        category: usage
+        targetWord: 搬动
+      - questionID: WSQ-P3-L07-USAGE-21
+        category: usage
+        targetWord: 地板
+      - questionID: WSQ-P3-L07-USAGE-22
+        category: usage
+        targetWord: 灵机一动
+    dedicatedOrdinaryChineseUsageQuestions: 22
+  - lessonId: 8
+    title: 第八课 (Lesson 8)
+    paperQuestions: 10
+    authoredQuestions: 36
+    totalQuestions: 46
+    distinctQuestions: 46
+    categoryCounts:
+      pinyin: 2
+      vocab: 15
+      phrase: 2
+      usage: 27
+    questions:
+      - questionID: P3-CH-AUTHORED-L8-Q01
+        category: pinyin
+        targetWord: 灯笼
+      - questionID: P3-CH-AUTHORED-L8-Q02
+        category: pinyin
+        targetWord: 阳台
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q9
+        category: vocab
+        targetWord: 请求
+      - questionID: P3-CH-2025-SA2-AITONG-Q2
+        category: vocab
+        targetWord: 贺卡
+      - questionID: P3-CH-2025-SA2-METHODIST-Q2
+        category: vocab
+        targetWord: 部分
+      - questionID: P3-CH-2025-SA2-NANHUA-Q4
+        category: vocab
+        targetWord: 请求
+      - questionID: P3-CH-2025-SA2-NANYANG-Q16
+        category: vocab
+        targetWord: 请求
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q13
+        category: vocab
+        targetWord: 请求
+      - questionID: P3-CH-2025-WA3-HENRYPARK-Q5
+        category: vocab
+        targetWord: 请求
+      - questionID: P3-CH-2025-WA3-TAONAN-S4-Q1
+        category: vocab
+        targetWord: 涂上
+      - questionID: P3-CH-2025-WA3-TAONAN-S4-Q5
+        category: vocab
+        targetWord: 部分
+      - questionID: P3-CH-2025-WA3-TAONAN-S4-Q15
+        category: vocab
+        targetWord: 需要
+      - questionID: P3-CH-AUTHORED-L8-Q03
+        category: vocab
+        targetWord: 客厅
+      - questionID: P3-CH-AUTHORED-L8-Q04
+        category: vocab
+        targetWord: 挂
+      - questionID: P3-CH-AUTHORED-L8-Q05
+        category: vocab
+        targetWord: 塞
+      - questionID: P3-CH-AUTHORED-L8-Q06
+        category: vocab
+        targetWord: 裙子
+      - questionID: P3-CH-AUTHORED-L8-Q07
+        category: vocab
+        targetWord: 重
+      - questionID: P3-CH-AUTHORED-L8-Q08
+        category: phrase
+        targetWord: 歪
+      - questionID: P3-CH-AUTHORED-L8-Q09
+        category: phrase
+        targetWord: 满头大汗
+      - questionID: P3-CH-AUTHORED-L8-Q10
+        category: usage
+        targetWord: 然后
+      - questionID: WSQ-P3-L08-USAGE-01
+        category: usage
+        targetWord: 需要
+      - questionID: WSQ-P3-L08-USAGE-02
+        category: usage
+        targetWord: 贺卡
+      - questionID: WSQ-P3-L08-USAGE-03
+        category: usage
+        targetWord: 部分
+      - questionID: WSQ-P3-L08-USAGE-04
+        category: usage
+        targetWord: 接着
+      - questionID: WSQ-P3-L08-USAGE-05
+        category: usage
+        targetWord: 涂上
+      - questionID: WSQ-P3-L08-USAGE-06
+        category: usage
+        targetWord: 洞
+      - questionID: WSQ-P3-L08-USAGE-07
+        category: usage
+        targetWord: 穿
+      - questionID: WSQ-P3-L08-USAGE-09
+        category: usage
+        targetWord: 吊
+      - questionID: WSQ-P3-L08-USAGE-10
+        category: usage
+        targetWord: 阳台
+      - questionID: WSQ-P3-L08-USAGE-11
+        category: usage
+        targetWord: 灯笼
+      - questionID: WSQ-P3-L08-USAGE-12
+        category: usage
+        targetWord: 挂
+      - questionID: WSQ-P3-L08-USAGE-13
+        category: usage
+        targetWord: 客厅
+      - questionID: WSQ-P3-L08-USAGE-14
+        category: usage
+        targetWord: 裙子
+      - questionID: WSQ-P3-L08-USAGE-15
+        category: usage
+        targetWord: 裤子
+      - questionID: WSQ-P3-L08-USAGE-16
+        category: usage
+        targetWord: 衣服
+      - questionID: WSQ-P3-L08-USAGE-17
+        category: usage
+        targetWord: 开始
+      - questionID: WSQ-P3-L08-USAGE-18
+        category: usage
+        targetWord: 请求
+      - questionID: WSQ-P3-L08-USAGE-19
+        category: usage
+        targetWord: 让
+      - questionID: WSQ-P3-L08-USAGE-20
+        category: usage
+        targetWord: 比较
+      - questionID: WSQ-P3-L08-USAGE-21
+        category: usage
+        targetWord: 晒
+      - questionID: WSQ-P3-L08-USAGE-22
+        category: usage
+        targetWord: 重
+      - questionID: WSQ-P3-L08-USAGE-23
+        category: usage
+        targetWord: 歪
+      - questionID: WSQ-P3-L08-USAGE-24
+        category: usage
+        targetWord: 乱
+      - questionID: WSQ-P3-L08-USAGE-25
+        category: usage
+        targetWord: 累
+      - questionID: WSQ-P3-L08-USAGE-26
+        category: usage
+        targetWord: 满头大汗
+      - questionID: WSQ-P3-L08-USAGE-27
+        category: usage
+        targetWord: 塞
+    dedicatedOrdinaryChineseUsageQuestions: 27
+  - lessonId: 9
+    title: 第九课 (Lesson 9)
+    paperQuestions: 3
+    authoredQuestions: 40
+    totalQuestions: 43
+    distinctQuestions: 43
+    categoryCounts:
+      pinyin: 4
+      vocab: 13
+      phrase: 2
+      usage: 24
+    questions:
+      - questionID: P3-CH-AUTHORED-L9-Q01
+        category: pinyin
+        targetWord: 竹竿
+      - questionID: P3-CH-AUTHORED-L9-Q02
+        category: pinyin
+        targetWord: 篮子
+      - questionID: P3-CH-AUTHORED-L9-Q03
+        category: pinyin
+        targetWord: 重量
+      - questionID: P3-CH-AUTHORED-L9-Q04
+        category: pinyin
+        targetWord: 小熊
+      - questionID: P3-CH-2025-SA2-NANYANG-Q5
+        category: vocab
+        targetWord: 像
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q4
+        category: vocab
+        targetWord: 升
+      - questionID: P3-CH-2025-WA1-AITONG-Q3
+        category: vocab
+        targetWord: 升
+      - questionID: P3-CH-AUTHORED-L9-Q05
+        category: vocab
+        targetWord: 倒进
+      - questionID: P3-CH-AUTHORED-L9-Q06
+        category: vocab
+        targetWord: 坑
+      - questionID: P3-CH-AUTHORED-L9-Q07
+        category: vocab
+        targetWord: 鼻子
+      - questionID: P3-CH-AUTHORED-L9-Q08
+        category: vocab
+        targetWord: 河
+      - questionID: P3-CH-AUTHORED-L9-Q09
+        category: vocab
+        targetWord: 救
+      - questionID: P3-CH-AUTHORED-L9-Q10
+        category: vocab
+        targetWord: 满
+      - questionID: P3-CH-AUTHORED-L9-Q11
+        category: vocab
+        targetWord: 喷
+      - questionID: P3-CH-AUTHORED-L9-Q12
+        category: vocab
+        targetWord: 称
+      - questionID: P3-CH-AUTHORED-L9-Q13
+        category: vocab
+        targetWord: 墙
+      - questionID: P3-CH-AUTHORED-L9-Q14
+        category: vocab
+        targetWord: 拉
+      - questionID: P3-CH-AUTHORED-L9-Q15
+        category: phrase
+        targetWord: 下沉
+      - questionID: P3-CH-AUTHORED-L9-Q16
+        category: phrase
+        targetWord: 神童
+      - questionID: P3-CH-AUTHORED-L9-Q17
+        category: usage
+        targetWord: 夸
+      - questionID: WSQ-P3-L09-USAGE-01
+        category: usage
+        targetWord: 小熊
+      - questionID: WSQ-P3-L09-USAGE-02
+        category: usage
+        targetWord: 倒进
+      - questionID: WSQ-P3-L09-USAGE-03
+        category: usage
+        targetWord: 坑
+      - questionID: WSQ-P3-L09-USAGE-04
+        category: usage
+        targetWord: 鼻子
+      - questionID: WSQ-P3-L09-USAGE-05
+        category: usage
+        targetWord: 河
+      - questionID: WSQ-P3-L09-USAGE-06
+        category: usage
+        targetWord: 救
+      - questionID: WSQ-P3-L09-USAGE-07
+        category: usage
+        targetWord: 小猴子
+      - questionID: WSQ-P3-L09-USAGE-08
+        category: usage
+        targetWord: 竹竿
+      - questionID: WSQ-P3-L09-USAGE-09
+        category: usage
+        targetWord: 篮子
+      - questionID: WSQ-P3-L09-USAGE-10
+        category: usage
+        targetWord: 满
+      - questionID: WSQ-P3-L09-USAGE-11
+        category: usage
+        targetWord: 喷
+      - questionID: WSQ-P3-L09-USAGE-12
+        category: usage
+        targetWord: 升
+      - questionID: WSQ-P3-L09-USAGE-13
+        category: usage
+        targetWord: 称
+      - questionID: WSQ-P3-L09-USAGE-14
+        category: usage
+        targetWord: 官员
+      - questionID: WSQ-P3-L09-USAGE-15
+        category: usage
+        targetWord: 像
+      - questionID: WSQ-P3-L09-USAGE-16
+        category: usage
+        targetWord: 墙
+      - questionID: WSQ-P3-L09-USAGE-17
+        category: usage
+        targetWord: 谁
+      - questionID: WSQ-P3-L09-USAGE-18
+        category: usage
+        targetWord: 回答
+      - questionID: WSQ-P3-L09-USAGE-19
+        category: usage
+        targetWord: 拉
+      - questionID: WSQ-P3-L09-USAGE-20
+        category: usage
+        targetWord: 下沉
+      - questionID: WSQ-P3-L09-USAGE-21
+        category: usage
+        targetWord: 最后
+      - questionID: WSQ-P3-L09-USAGE-22
+        category: usage
+        targetWord: 重量
+      - questionID: WSQ-P3-L09-USAGE-24
+        category: usage
+        targetWord: 神童
+    dedicatedOrdinaryChineseUsageQuestions: 24
+  - lessonId: 10
+    title: 第十课 (Lesson 10)
+    paperQuestions: 21
+    authoredQuestions: 24
+    totalQuestions: 45
+    distinctQuestions: 44
+    categoryCounts:
+      pinyin: 0
+      vocab: 19
+      phrase: 0
+      usage: 26
+    questions:
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q1
+        category: vocab
+        targetWord: 垃圾
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q7
+        category: vocab
+        targetWord: 吃惊
+      - questionID: P3-CH-2025-SA2-AITONG-Q6
+        category: vocab
+        targetWord: 仔细
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q1
+        category: vocab
+        targetWord: 垃圾
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q17
+        category: vocab
+        targetWord: 环境
+      - questionID: P3-CH-2025-SA2-METHODIST-Q11
+        category: vocab
+        targetWord: 环境
+      - questionID: P3-CH-2025-SA2-NANHUA-Q7
+        category: vocab
+        targetWord: 吃惊
+      - questionID: P3-CH-2025-SA2-NANYANG-Q15
+        category: vocab
+        targetWord: 仔细
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q3
+        category: vocab
+        targetWord: 决定
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q16
+        category: vocab
+        targetWord: 爱护
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q3
+        category: vocab
+        targetWord: 环境
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q7
+        category: vocab
+        targetWord: 仔细
+      - questionID: P3-CH-2025-WA1-NANYANG-Q11
+        category: vocab
+        targetWord: 爱护
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q2
+        category: vocab
+        targetWord: 环境
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q8
+        category: vocab
+        targetWord: 决定
+      - questionID: P3-CH-2025-WA2-METHODIST-Q5
+        category: vocab
+        targetWord: 扔
+      - questionID: P3-CH-2025-WA2-RAFFLES-Q1
+        category: vocab
+        targetWord: 吃惊
+      - questionID: P3-CH-2025-WA2-RAFFLES-Q5
+        category: vocab
+        targetWord: 仔细
+      - questionID: P3-CH-2025-WA3-HENRYPARK-Q6
+        category: vocab
+        targetWord: 决定
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q18
+        category: usage
+        targetWord: 决定
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q20
+        category: usage
+        targetWord: 吃惊
+      - questionID: WSQ-P3-L10-USAGE-01
+        category: usage
+        targetWord: 扔
+      - questionID: WSQ-P3-L10-USAGE-02
+        category: usage
+        targetWord: 垃圾
+      - questionID: WSQ-P3-L10-USAGE-03
+        category: usage
+        targetWord: 蚊子
+      - questionID: WSQ-P3-L10-USAGE-04
+        category: usage
+        targetWord: 收拾
+      - questionID: WSQ-P3-L10-USAGE-05
+        category: usage
+        targetWord: 乌鸦
+      - questionID: WSQ-P3-L10-USAGE-06
+        category: usage
+        targetWord: 随地
+      - questionID: WSQ-P3-L10-USAGE-07
+        category: usage
+        targetWord: 痰
+      - questionID: WSQ-P3-L10-USAGE-08
+        category: usage
+        targetWord: 保持
+      - questionID: WSQ-P3-L10-USAGE-09
+        category: usage
+        targetWord: 爱护
+      - questionID: WSQ-P3-L10-USAGE-10
+        category: usage
+        targetWord: 环境
+      - questionID: WSQ-P3-L10-USAGE-11
+        category: usage
+        targetWord: 厨房
+      - questionID: WSQ-P3-L10-USAGE-12
+        category: usage
+        targetWord: 脏
+      - questionID: WSQ-P3-L10-USAGE-13
+        category: usage
+        targetWord: 衣橱
+      - questionID: WSQ-P3-L10-USAGE-14
+        category: usage
+        targetWord: 仔细
+      - questionID: WSQ-P3-L10-USAGE-15
+        category: usage
+        targetWord: 啊
+      - questionID: WSQ-P3-L10-USAGE-16
+        category: usage
+        targetWord: 漂亮
+      - questionID: WSQ-P3-L10-USAGE-17
+        category: usage
+        targetWord: 招手
+      - questionID: WSQ-P3-L10-USAGE-18
+        category: usage
+        targetWord: 决定
+      - questionID: WSQ-P3-L10-USAGE-19
+        category: usage
+        targetWord: 吃惊
+      - questionID: WSQ-P3-L10-USAGE-20
+        category: usage
+        targetWord: 不能
+      - questionID: WSQ-P3-L10-USAGE-21
+        category: usage
+        targetWord: 伸出
+      - questionID: WSQ-P3-L10-USAGE-22
+        category: usage
+        targetWord: 缩
+      - questionID: WSQ-P3-L10-USAGE-23
+        category: usage
+        targetWord: 追上
+      - questionID: WSQ-P3-L10-USAGE-24
+        category: usage
+        targetWord: 觉得
+    dedicatedOrdinaryChineseUsageQuestions: 24
+  - lessonId: 11
+    title: 第十一课 (Lesson 11)
+    paperQuestions: 14
+    authoredQuestions: 31
+    totalQuestions: 45
+    distinctQuestions: 41
+    categoryCounts:
+      pinyin: 3
+      vocab: 17
+      phrase: 2
+      usage: 23
+    questions:
+      - questionID: P3-CH-AUTHORED-L11-Q01
+        category: pinyin
+        targetWord: 环保袋
+      - questionID: P3-CH-AUTHORED-L11-Q02
+        category: pinyin
+        targetWord: 海洋
+      - questionID: P3-CH-AUTHORED-L11-Q03
+        category: pinyin
+        targetWord: 责任
+      - questionID: P3-CH-2025-SA2-ACS-Q4
+        category: vocab
+        targetWord: 废物
+      - questionID: P3-CH-2025-SA2-ACS-Q7
+        category: vocab
+        targetWord: 代替
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q6
+        category: vocab
+        targetWord: 如果
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q17
+        category: vocab
+        targetWord: 废物
+      - questionID: P3-CH-2025-SA2-AITONG-Q4
+        category: vocab
+        targetWord: 尽
+      - questionID: P3-CH-2025-SA2-AITONG-Q9
+        category: vocab
+        targetWord: 代替
+      - questionID: P3-CH-2025-SA2-METHODIST-Q16
+        category: vocab
+        targetWord: 废物
+      - questionID: P3-CH-2025-SA2-NANYANG-Q10
+        category: vocab
+        targetWord: 废物
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q4
+        category: vocab
+        targetWord: 代替
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q19
+        category: vocab
+        targetWord: 废物
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q15
+        category: vocab
+        targetWord: 废物
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q5
+        category: vocab
+        targetWord: 尽
+      - questionID: P3-CH-2025-WA1-NANYANG-Q3
+        category: vocab
+        targetWord: 辆
+      - questionID: P3-CH-AUTHORED-L11-Q04
+        category: vocab
+        targetWord: 停车场
+      - questionID: P3-CH-AUTHORED-L11-Q05
+        category: vocab
+        targetWord: 日用品
+      - questionID: P3-CH-AUTHORED-L11-Q06
+        category: vocab
+        targetWord: 纸
+      - questionID: P3-CH-AUTHORED-L11-Q07
+        category: vocab
+        targetWord: 瓶子
+      - questionID: P3-CH-AUTHORED-L11-Q08
+        category: phrase
+        targetWord: 并排
+      - questionID: P3-CH-AUTHORED-L11-Q09
+        category: phrase
+        targetWord: 一直
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q19
+        category: usage
+        targetWord: 如果
+      - questionID: P3-CH-AUTHORED-L11-Q10
+        category: usage
+        targetWord: 使用
+      - questionID: WSQ-P3-L11-USAGE-01
+        category: usage
+        targetWord: 环保袋
+      - questionID: WSQ-P3-L11-USAGE-02
+        category: usage
+        targetWord: 代替
+      - questionID: WSQ-P3-L11-USAGE-03
+        category: usage
+        targetWord: 塑料袋
+      - questionID: WSQ-P3-L11-USAGE-04
+        category: usage
+        targetWord: 巴刹
+      - questionID: WSQ-P3-L11-USAGE-06
+        category: usage
+        targetWord: 废物
+      - questionID: WSQ-P3-L11-USAGE-07
+        category: usage
+        targetWord: 瓶子
+      - questionID: WSQ-P3-L11-USAGE-08
+        category: usage
+        targetWord: 组屋
+      - questionID: WSQ-P3-L11-USAGE-09
+        category: usage
+        targetWord: 并排
+      - questionID: WSQ-P3-L11-USAGE-10
+        category: usage
+        targetWord: 停车场
+      - questionID: WSQ-P3-L11-USAGE-11
+        category: usage
+        targetWord: 辆
+      - questionID: WSQ-P3-L11-USAGE-12
+        category: usage
+        targetWord: 一直
+      - questionID: WSQ-P3-L11-USAGE-13
+        category: usage
+        targetWord: 海洋
+      - questionID: WSQ-P3-L11-USAGE-14
+        category: usage
+        targetWord: 所以
+      - questionID: WSQ-P3-L11-USAGE-15
+        category: usage
+        targetWord: 纸
+      - questionID: WSQ-P3-L11-USAGE-16
+        category: usage
+        targetWord: 日用品
+      - questionID: WSQ-P3-L11-USAGE-17
+        category: usage
+        targetWord: 吧
+      - questionID: WSQ-P3-L11-USAGE-18
+        category: usage
+        targetWord: 认为
+      - questionID: WSQ-P3-L11-USAGE-19
+        category: usage
+        targetWord: 责任
+      - questionID: WSQ-P3-L11-USAGE-20
+        category: usage
+        targetWord: 如果
+      - questionID: WSQ-P3-L11-USAGE-21
+        category: usage
+        targetWord: 尽
+      - questionID: WSQ-P3-L11-USAGE-22
+        category: usage
+        targetWord: 份
+    dedicatedOrdinaryChineseUsageQuestions: 22
+  - lessonId: 12
+    title: 第十二课 (Lesson 12)
+    paperQuestions: 11
+    authoredQuestions: 29
+    totalQuestions: 40
+    distinctQuestions: 40
+    categoryCounts:
+      pinyin: 3
+      vocab: 15
+      phrase: 1
+      usage: 21
+    questions:
+      - questionID: P3-CH-AUTHORED-L12-Q01
+        category: pinyin
+        targetWord: 国歌
+      - questionID: P3-CH-AUTHORED-L12-Q02
+        category: pinyin
+        targetWord: 世界
+      - questionID: P3-CH-AUTHORED-L12-Q03
+        category: pinyin
+        targetWord: 文件夹
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q2
+        category: vocab
+        targetWord: 设计
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q6
+        category: vocab
+        targetWord: 设计
+      - questionID: P3-CH-2025-SA2-NANHUA-Q8
+        category: vocab
+        targetWord: 设计
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q5
+        category: vocab
+        targetWord: 国旗
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q2
+        category: vocab
+        targetWord: 大拇指
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q6
+        category: vocab
+        targetWord: 兴奋
+      - questionID: P3-CH-2025-SA2-TAONAN-Q16
+        category: vocab
+        targetWord: 设计
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q4
+        category: vocab
+        targetWord: 设计
+      - questionID: P3-CH-2025-WA2-RAFFLES-Q3
+        category: vocab
+        targetWord: 颗
+      - questionID: P3-CH-2025-WA2-RAFFLES-Q6
+        category: vocab
+        targetWord: 谜语
+      - questionID: P3-CH-2025-WA3-HENRYPARK-Q10
+        category: vocab
+        targetWord: 兴奋
+      - questionID: P3-CH-AUTHORED-L12-Q04
+        category: vocab
+        targetWord: 新加坡
+      - questionID: P3-CH-AUTHORED-L12-Q05
+        category: vocab
+        targetWord: 国庆日
+      - questionID: P3-CH-AUTHORED-L12-Q06
+        category: vocab
+        targetWord: 合唱团
+      - questionID: P3-CH-AUTHORED-L12-Q07
+        category: vocab
+        targetWord: 礼物
+      - questionID: P3-CH-AUTHORED-L12-Q08
+        category: phrase
+        targetWord: 亮晶晶
+      - questionID: P3-CH-AUTHORED-L12-Q09
+        category: usage
+        targetWord: 其中
+      - questionID: WSQ-P3-L12-USAGE-01
+        category: usage
+        targetWord: 设计
+      - questionID: WSQ-P3-L12-USAGE-02
+        category: usage
+        targetWord: 亮晶晶
+      - questionID: WSQ-P3-L12-USAGE-03
+        category: usage
+        targetWord: 新加坡
+      - questionID: WSQ-P3-L12-USAGE-04
+        category: usage
+        targetWord: 国旗
+      - questionID: WSQ-P3-L12-USAGE-05
+        category: usage
+        targetWord: 颗
+      - questionID: WSQ-P3-L12-USAGE-06
+        category: usage
+        targetWord: 世界
+      - questionID: WSQ-P3-L12-USAGE-07
+        category: usage
+        targetWord: 种族
+      - questionID: WSQ-P3-L12-USAGE-08
+        category: usage
+        targetWord: 华人
+      - questionID: WSQ-P3-L12-USAGE-09
+        category: usage
+        targetWord: 印度人
+      - questionID: WSQ-P3-L12-USAGE-10
+        category: usage
+        targetWord: 文件夹
+      - questionID: WSQ-P3-L12-USAGE-11
+        category: usage
+        targetWord: 国庆日
+      - questionID: WSQ-P3-L12-USAGE-12
+        category: usage
+        targetWord: 礼物
+      - questionID: WSQ-P3-L12-USAGE-14
+        category: usage
+        targetWord: 唱
+      - questionID: WSQ-P3-L12-USAGE-15
+        category: usage
+        targetWord: 国歌
+      - questionID: WSQ-P3-L12-USAGE-16
+        category: usage
+        targetWord: 竖起
+      - questionID: WSQ-P3-L12-USAGE-17
+        category: usage
+        targetWord: 大拇指
+      - questionID: WSQ-P3-L12-USAGE-18
+        category: usage
+        targetWord: 谜语
+      - questionID: WSQ-P3-L12-USAGE-19
+        category: usage
+        targetWord: 合唱团
+      - questionID: WSQ-P3-L12-USAGE-20
+        category: usage
+        targetWord: 呢
+      - questionID: WSQ-P3-L12-USAGE-21
+        category: usage
+        targetWord: 兴奋
+    dedicatedOrdinaryChineseUsageQuestions: 21
+  - lessonId: 13
+    title: 第十三课 (Lesson 13)
+    paperQuestions: 20
+    authoredQuestions: 25
+    totalQuestions: 45
+    distinctQuestions: 43
+    categoryCounts:
+      pinyin: 1
+      vocab: 18
+      phrase: 1
+      usage: 25
+    questions:
+      - questionID: P3-CH-AUTHORED-L13-Q01
+        category: pinyin
+        targetWord: 森林
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q3
+        category: vocab
+        targetWord: 任务
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q8
+        category: vocab
+        targetWord: 沿着
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q15
+        category: vocab
+        targetWord: 急忙
+      - questionID: P3-CH-2025-SA2-AITONG-Q3
+        category: vocab
+        targetWord: 狼
+      - questionID: P3-CH-2025-SA2-CHIJ-Q6
+        category: vocab
+        targetWord: 沿着
+      - questionID: P3-CH-2025-SA2-CHIJ-Q8
+        category: vocab
+        targetWord: 必须
+      - questionID: P3-CH-2025-SA2-HENRYPARK-Q16
+        category: vocab
+        targetWord: 仍然
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q8
+        category: vocab
+        targetWord: 必须
+      - questionID: P3-CH-2025-SA2-METHODIST-Q6
+        category: vocab
+        targetWord: 仍然
+      - questionID: P3-CH-2025-SA2-NANHUA-Q16
+        category: vocab
+        targetWord: 任务
+      - questionID: P3-CH-2025-SA2-NANYANG-Q17
+        category: vocab
+        targetWord: 虽然
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q8
+        category: vocab
+        targetWord: 讨论
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q16
+        category: vocab
+        targetWord: 任务
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q19
+        category: vocab
+        targetWord: 必须
+      - questionID: P3-CH-2025-SA2-TAONAN-Q11
+        category: vocab
+        targetWord: 讨论
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q3
+        category: vocab
+        targetWord: 讨论
+      - questionID: P3-CH-2025-WA3-HENRYPARK-Q9
+        category: vocab
+        targetWord: 任务
+      - questionID: P3-CH-2025-WA3-TAONAN-S4-Q9
+        category: vocab
+        targetWord: 急忙
+      - questionID: P3-CH-AUTHORED-L13-Q02
+        category: phrase
+        targetWord: 指定
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q18
+        category: usage
+        targetWord: 虽然
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q19
+        category: usage
+        targetWord: 必须
+      - questionID: WSQ-P3-L13-USAGE-01
+        category: usage
+        targetWord: 养
+      - questionID: WSQ-P3-L13-USAGE-02
+        category: usage
+        targetWord: 虾
+      - questionID: WSQ-P3-L13-USAGE-03
+        category: usage
+        targetWord: 湖
+      - questionID: WSQ-P3-L13-USAGE-04
+        category: usage
+        targetWord: 森林
+      - questionID: WSQ-P3-L13-USAGE-05
+        category: usage
+        targetWord: 狐狸
+      - questionID: WSQ-P3-L13-USAGE-06
+        category: usage
+        targetWord: 狼
+      - questionID: WSQ-P3-L13-USAGE-07
+        category: usage
+        targetWord: 桥
+      - questionID: WSQ-P3-L13-USAGE-08
+        category: usage
+        targetWord: 猩猩
+      - questionID: WSQ-P3-L13-USAGE-09
+        category: usage
+        targetWord: 沿着
+      - questionID: WSQ-P3-L13-USAGE-10
+        category: usage
+        targetWord: 沙滩
+      - questionID: WSQ-P3-L13-USAGE-11
+        category: usage
+        targetWord: 棵
+      - questionID: WSQ-P3-L13-USAGE-12
+        category: usage
+        targetWord: 信封
+      - questionID: WSQ-P3-L13-USAGE-13
+        category: usage
+        targetWord: 地图
+      - questionID: WSQ-P3-L13-USAGE-14
+        category: usage
+        targetWord: 必须
+      - questionID: WSQ-P3-L13-USAGE-15
+        category: usage
+        targetWord: 指定
+      - questionID: WSQ-P3-L13-USAGE-16
+        category: usage
+        targetWord: 讨论
+      - questionID: WSQ-P3-L13-USAGE-17
+        category: usage
+        targetWord: 带领
+      - questionID: WSQ-P3-L13-USAGE-18
+        category: usage
+        targetWord: 任务
+      - questionID: WSQ-P3-L13-USAGE-19
+        category: usage
+        targetWord: 急忙
+      - questionID: WSQ-P3-L13-USAGE-20
+        category: usage
+        targetWord: 漂亮
+      - questionID: WSQ-P3-L13-USAGE-21
+        category: usage
+        targetWord: 虽然
+      - questionID: WSQ-P3-L13-USAGE-22
+        category: usage
+        targetWord: 但是
+      - questionID: WSQ-P3-L13-USAGE-23
+        category: usage
+        targetWord: 仍然
+    dedicatedOrdinaryChineseUsageQuestions: 23
+  - lessonId: 14
+    title: 第十四课 (Lesson 14)
+    paperQuestions: 5
+    authoredQuestions: 38
+    totalQuestions: 43
+    distinctQuestions: 43
+    categoryCounts:
+      pinyin: 6
+      vocab: 11
+      phrase: 2
+      usage: 24
+    questions:
+      - questionID: P3-CH-2025-SA2-CHIJ-Q2
+        category: pinyin
+        targetWord: 散步
+      - questionID: P3-CH-2025-SA2-TAONAN-Q7
+        category: pinyin
+        targetWord: 散步
+      - questionID: P3-CH-AUTHORED-L14-Q01
+        category: pinyin
+        targetWord: 眼睛
+      - questionID: P3-CH-AUTHORED-L14-Q02
+        category: pinyin
+        targetWord: 灰色
+      - questionID: P3-CH-AUTHORED-L14-Q03
+        category: pinyin
+        targetWord: 打滚
+      - questionID: P3-CH-AUTHORED-L14-Q08
+        category: pinyin
+        targetWord: 苦
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q20
+        category: vocab
+        targetWord: 散步
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q20
+        category: vocab
+        targetWord: 咬断
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q5
+        category: vocab
+        targetWord: 尾巴
+      - questionID: P3-CH-AUTHORED-L14-Q04
+        category: vocab
+        targetWord: 饿
+      - questionID: P3-CH-AUTHORED-L14-Q05
+        category: vocab
+        targetWord: 饱
+      - questionID: P3-CH-AUTHORED-L14-Q06
+        category: vocab
+        targetWord: 咸
+      - questionID: P3-CH-AUTHORED-L14-Q07
+        category: vocab
+        targetWord: 淡
+      - questionID: P3-CH-AUTHORED-L14-Q09
+        category: vocab
+        targetWord: 懒
+      - questionID: P3-CH-AUTHORED-L14-Q10
+        category: vocab
+        targetWord: 躺
+      - questionID: P3-CH-AUTHORED-L14-Q11
+        category: vocab
+        targetWord: 吞
+      - questionID: P3-CH-AUTHORED-L14-Q12
+        category: vocab
+        targetWord: 够
+      - questionID: P3-CH-AUTHORED-L14-Q13
+        category: phrase
+        targetWord: 笨重
+      - questionID: P3-CH-AUTHORED-L14-Q14
+        category: phrase
+        targetWord: 假
+      - questionID: P3-CH-AUTHORED-L14-Q15
+        category: usage
+        targetWord: 玩耍
+      - questionID: WSQ-P3-L14-USAGE-01
+        category: usage
+        targetWord: 假
+      - questionID: WSQ-P3-L14-USAGE-02
+        category: usage
+        targetWord: 强
+      - questionID: WSQ-P3-L14-USAGE-03
+        category: usage
+        targetWord: 弱
+      - questionID: WSQ-P3-L14-USAGE-04
+        category: usage
+        targetWord: 吞
+      - questionID: WSQ-P3-L14-USAGE-05
+        category: usage
+        targetWord: 慢
+      - questionID: WSQ-P3-L14-USAGE-06
+        category: usage
+        targetWord: 懒
+      - questionID: WSQ-P3-L14-USAGE-07
+        category: usage
+        targetWord: 苦
+      - questionID: WSQ-P3-L14-USAGE-08
+        category: usage
+        targetWord: 咸
+      - questionID: WSQ-P3-L14-USAGE-09
+        category: usage
+        targetWord: 淡
+      - questionID: WSQ-P3-L14-USAGE-10
+        category: usage
+        targetWord: 滑滑
+      - questionID: WSQ-P3-L14-USAGE-11
+        category: usage
+        targetWord: 眼睛
+      - questionID: WSQ-P3-L14-USAGE-12
+        category: usage
+        targetWord: 灰色
+      - questionID: WSQ-P3-L14-USAGE-13
+        category: usage
+        targetWord: 饿
+      - questionID: WSQ-P3-L14-USAGE-14
+        category: usage
+        targetWord: 饱
+      - questionID: WSQ-P3-L14-USAGE-15
+        category: usage
+        targetWord: 散步
+      - questionID: WSQ-P3-L14-USAGE-16
+        category: usage
+        targetWord: 胖胖
+      - questionID: WSQ-P3-L14-USAGE-17
+        category: usage
+        targetWord: 尾巴
+      - questionID: WSQ-P3-L14-USAGE-18
+        category: usage
+        targetWord: 圆圆
+      - questionID: WSQ-P3-L14-USAGE-20
+        category: usage
+        targetWord: 笨重
+      - questionID: WSQ-P3-L14-USAGE-21
+        category: usage
+        targetWord: 打滚
+      - questionID: WSQ-P3-L14-USAGE-22
+        category: usage
+        targetWord: 咬断
+      - questionID: WSQ-P3-L14-USAGE-23
+        category: usage
+        targetWord: 够
+      - questionID: WSQ-P3-L14-USAGE-24
+        category: usage
+        targetWord: 躺
+    dedicatedOrdinaryChineseUsageQuestions: 24
+  - lessonId: 15
+    title: 第十五课 (Lesson 15)
+    paperQuestions: 19
+    authoredQuestions: 28
+    totalQuestions: 47
+    distinctQuestions: 41
+    categoryCounts:
+      pinyin: 2
+      vocab: 20
+      phrase: 1
+      usage: 24
+    questions:
+      - questionID: P3-CH-AUTHORED-L15-Q01
+        category: pinyin
+        targetWord: 漫画
+      - questionID: P3-CH-AUTHORED-L15-Q02
+        category: pinyin
+        targetWord: 课室
+      - questionID: P3-CH-2025-SA2-ACS-Q15
+        category: vocab
+        targetWord: 发抖
+      - questionID: P3-CH-2025-SA2-ACSJUNIOR-Q14
+        category: vocab
+        targetWord: 发抖
+      - questionID: P3-CH-2025-SA2-HENRYPARK-Q5
+        category: vocab
+        targetWord: 忍不住
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q4
+        category: vocab
+        targetWord: 简单
+      - questionID: P3-CH-2025-SA2-MAHABODHI-Q5
+        category: vocab
+        targetWord: 钻进
+      - questionID: P3-CH-2025-SA2-METHODIST-Q13
+        category: vocab
+        targetWord: 发抖
+      - questionID: P3-CH-2025-SA2-NANHUA-Q14
+        category: vocab
+        targetWord: 发抖
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q1
+        category: vocab
+        targetWord: 简单
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q15
+        category: vocab
+        targetWord: 冒出
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q10
+        category: vocab
+        targetWord: 简单
+      - questionID: P3-CH-2025-SA2-RAFFLES-Q21
+        category: vocab
+        targetWord: 冷汗
+      - questionID: P3-CH-2025-SA2-ROSYTH-Q18
+        category: vocab
+        targetWord: 冷汗
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q3
+        category: vocab
+        targetWord: 忍不住
+      - questionID: P3-CH-2025-SA2-STHILDAS-Q18
+        category: vocab
+        targetWord: 发抖
+      - questionID: P3-CH-2025-SA2-TAONAN-Q14
+        category: vocab
+        targetWord: 简单
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q4
+        category: vocab
+        targetWord: 练习
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q11
+        category: vocab
+        targetWord: 简单
+      - questionID: P3-CH-AUTHORED-L15-Q03
+        category: vocab
+        targetWord: 怀里
+      - questionID: P3-CH-AUTHORED-L15-Q04
+        category: vocab
+        targetWord: 痛
+      - questionID: P3-CH-AUTHORED-L15-Q05
+        category: vocab
+        targetWord: 哈哈大笑
+      - questionID: P3-CH-AUTHORED-L15-Q06
+        category: phrase
+        targetWord: 逃不掉
+      - questionID: P3-CH-2025-SA2-CHIJ-Q10
+        category: usage
+        targetWord: 简单
+      - questionID: P3-CH-2025-WA1-CHIJ-Q20
+        category: usage
+        targetWord: 练习
+      - questionID: P3-CH-AUTHORED-L15-Q07
+        category: usage
+        targetWord: 不敢
+      - questionID: WSQ-P3-L15-USAGE-01
+        category: usage
+        targetWord: 小偷
+      - questionID: WSQ-P3-L15-USAGE-02
+        category: usage
+        targetWord: 课室
+      - questionID: WSQ-P3-L15-USAGE-03
+        category: usage
+        targetWord: 吓
+      - questionID: WSQ-P3-L15-USAGE-04
+        category: usage
+        targetWord: 逃不掉
+      - questionID: WSQ-P3-L15-USAGE-05
+        category: usage
+        targetWord: 痛
+      - questionID: WSQ-P3-L15-USAGE-06
+        category: usage
+        targetWord: 冒出
+      - questionID: WSQ-P3-L15-USAGE-07
+        category: usage
+        targetWord: 冷汗
+      - questionID: WSQ-P3-L15-USAGE-08
+        category: usage
+        targetWord: 发抖
+      - questionID: WSQ-P3-L15-USAGE-10
+        category: usage
+        targetWord: 钻进
+      - questionID: WSQ-P3-L15-USAGE-11
+        category: usage
+        targetWord: 怀里
+      - questionID: WSQ-P3-L15-USAGE-12
+        category: usage
+        targetWord: 朱
+      - questionID: WSQ-P3-L15-USAGE-13
+        category: usage
+        targetWord: 班
+      - questionID: WSQ-P3-L15-USAGE-14
+        category: usage
+        targetWord: 练习
+      - questionID: WSQ-P3-L15-USAGE-15
+        category: usage
+        targetWord: 简单
+      - questionID: WSQ-P3-L15-USAGE-16
+        category: usage
+        targetWord: 桌
+      - questionID: WSQ-P3-L15-USAGE-17
+        category: usage
+        targetWord: 漫画
+      - questionID: WSQ-P3-L15-USAGE-18
+        category: usage
+        targetWord: 忍不住
+      - questionID: WSQ-P3-L15-USAGE-19
+        category: usage
+        targetWord: 肚皮
+      - questionID: WSQ-P3-L15-USAGE-20
+        category: usage
+        targetWord: 哈哈大笑
+      - questionID: WSQ-P3-L15-USAGE-21
+        category: usage
+        targetWord: 哎呀
+      - questionID: WSQ-P3-L15-USAGE-22
+        category: usage
+        targetWord: 闹笑话
+    dedicatedOrdinaryChineseUsageQuestions: 22
+  - lessonId: 16
+    title: 第十六课 (Lesson 16)
+    paperQuestions: 1
+    authoredQuestions: 37
+    totalQuestions: 38
+    distinctQuestions: 38
+    categoryCounts:
+      pinyin: 4
+      vocab: 10
+      phrase: 3
+      usage: 21
+    questions:
+      - questionID: P3-CH-AUTHORED-L16-Q01
+        category: pinyin
+        targetWord: 数学
+      - questionID: P3-CH-AUTHORED-L16-Q02
+        category: pinyin
+        targetWord: 勤学
+      - questionID: P3-CH-AUTHORED-L16-Q03
+        category: pinyin
+        targetWord: 滑轮
+      - questionID: P3-CH-AUTHORED-L16-Q04
+        category: pinyin
+        targetWord: 认识
+      - questionID: P3-CH-AUTHORED-L16-Q05
+        category: vocab
+        targetWord: 俩
+      - questionID: P3-CH-AUTHORED-L16-Q06
+        category: vocab
+        targetWord: 泡泡
+      - questionID: P3-CH-AUTHORED-L16-Q07
+        category: vocab
+        targetWord: 钓鱼
+      - questionID: P3-CH-AUTHORED-L16-Q08
+        category: vocab
+        targetWord: 题
+      - questionID: P3-CH-AUTHORED-L16-Q09
+        category: vocab
+        targetWord: 念
+      - questionID: P3-CH-AUTHORED-L16-Q10
+        category: vocab
+        targetWord: 传
+      - questionID: P3-CH-AUTHORED-L16-Q11
+        category: vocab
+        targetWord: 别人
+      - questionID: P3-CH-AUTHORED-L16-Q12
+        category: vocab
+        targetWord: 感到
+      - questionID: P3-CH-AUTHORED-L16-Q13
+        category: vocab
+        targetWord: 低
+      - questionID: P3-CH-AUTHORED-L16-Q14
+        category: vocab
+        targetWord: 抬
+      - questionID: P3-CH-AUTHORED-L16-Q15
+        category: phrase
+        targetWord: 有始无终
+      - questionID: P3-CH-AUTHORED-L16-Q16
+        category: phrase
+        targetWord: 虎头蛇尾
+      - questionID: P3-CH-AUTHORED-L16-Q17
+        category: phrase
+        targetWord: 半途而废
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q20
+        category: usage
+        targetWord: 结果
+      - questionID: P3-CH-AUTHORED-L16-Q18
+        category: usage
+        targetWord: 却
+      - questionID: P3-CH-AUTHORED-L16-Q19
+        category: usage
+        targetWord: 终于
+      - questionID: WSQ-P3-L16-USAGE-01
+        category: usage
+        targetWord: 有始无终
+      - questionID: WSQ-P3-L16-USAGE-02
+        category: usage
+        targetWord: 虎头蛇尾
+      - questionID: WSQ-P3-L16-USAGE-03
+        category: usage
+        targetWord: 半途而废
+      - questionID: WSQ-P3-L16-USAGE-04
+        category: usage
+        targetWord: 勤学
+      - questionID: WSQ-P3-L16-USAGE-05
+        category: usage
+        targetWord: 俩
+      - questionID: WSQ-P3-L16-USAGE-06
+        category: usage
+        targetWord: 泡泡
+      - questionID: WSQ-P3-L16-USAGE-07
+        category: usage
+        targetWord: 滑轮
+      - questionID: WSQ-P3-L16-USAGE-08
+        category: usage
+        targetWord: 钓鱼
+      - questionID: WSQ-P3-L16-USAGE-09
+        category: usage
+        targetWord: 结果
+      - questionID: WSQ-P3-L16-USAGE-10
+        category: usage
+        targetWord: 数学
+      - questionID: WSQ-P3-L16-USAGE-11
+        category: usage
+        targetWord: 题
+      - questionID: WSQ-P3-L16-USAGE-13
+        category: usage
+        targetWord: 认识
+      - questionID: WSQ-P3-L16-USAGE-14
+        category: usage
+        targetWord: 念
+      - questionID: WSQ-P3-L16-USAGE-15
+        category: usage
+        targetWord: 传
+      - questionID: WSQ-P3-L16-USAGE-16
+        category: usage
+        targetWord: 别人
+      - questionID: WSQ-P3-L16-USAGE-17
+        category: usage
+        targetWord: 感到
+      - questionID: WSQ-P3-L16-USAGE-18
+        category: usage
+        targetWord: 低
+      - questionID: WSQ-P3-L16-USAGE-19
+        category: usage
+        targetWord: 抬
+    dedicatedOrdinaryChineseUsageQuestions: 20
+  - lessonId: 17
+    title: 第十七课 (Lesson 17)
+    paperQuestions: 8
+    authoredQuestions: 33
+    totalQuestions: 41
+    distinctQuestions: 41
+    categoryCounts:
+      pinyin: 3
+      vocab: 13
+      phrase: 2
+      usage: 23
+    questions:
+      - questionID: P3-CH-AUTHORED-L17-Q01
+        category: pinyin
+        targetWord: 农夫
+      - questionID: P3-CH-AUTHORED-L17-Q02
+        category: pinyin
+        targetWord: 渔夫
+      - questionID: P3-CH-AUTHORED-L17-Q03
+        category: pinyin
+        targetWord: 签名
+      - questionID: P3-CH-2025-SA2-CHIJ-Q4
+        category: vocab
+        targetWord: 检查
+      - questionID: P3-CH-2025-SA2-NANYANG-Q12
+        category: vocab
+        targetWord: 检查
+      - questionID: P3-CH-2025-SA2-NORTHLAND-Q3
+        category: vocab
+        targetWord: 决定
+      - questionID: P3-CH-2025-WA1-ROSYTH-Q2
+        category: vocab
+        targetWord: 立刻
+      - questionID: P3-CH-2025-WA2-CATHOLIC-Q8
+        category: vocab
+        targetWord: 决定
+      - questionID: P3-CH-2025-WA3-HENRYPARK-Q6
+        category: vocab
+        targetWord: 决定
+      - questionID: P3-CH-AUTHORED-L17-Q04
+        category: vocab
+        targetWord: 捞出
+      - questionID: P3-CH-AUTHORED-L17-Q05
+        category: vocab
+        targetWord: 摘下
+      - questionID: P3-CH-AUTHORED-L17-Q06
+        category: vocab
+        targetWord: 铁
+      - questionID: P3-CH-AUTHORED-L17-Q07
+        category: vocab
+        targetWord: 银牌
+      - questionID: P3-CH-AUTHORED-L17-Q08
+        category: vocab
+        targetWord: 等
+      - questionID: P3-CH-AUTHORED-L17-Q09
+        category: vocab
+        targetWord: 减掉
+      - questionID: P3-CH-AUTHORED-L17-Q10
+        category: vocab
+        targetWord: 算
+      - questionID: P3-CH-AUTHORED-L17-Q11
+        category: phrase
+        targetWord: 劳动
+      - questionID: P3-CH-AUTHORED-L17-Q12
+        category: phrase
+        targetWord: 神仙
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q18
+        category: usage
+        targetWord: 决定
+      - questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q21
+        category: usage
+        targetWord: 检查
+      - questionID: WSQ-P3-L17-USAGE-01
+        category: usage
+        targetWord: 农夫
+      - questionID: WSQ-P3-L17-USAGE-02
+        category: usage
+        targetWord: 劳动
+      - questionID: WSQ-P3-L17-USAGE-03
+        category: usage
+        targetWord: 渔夫
+      - questionID: WSQ-P3-L17-USAGE-04
+        category: usage
+        targetWord: 神仙
+      - questionID: WSQ-P3-L17-USAGE-05
+        category: usage
+        targetWord: 捞出
+      - questionID: WSQ-P3-L17-USAGE-06
+        category: usage
+        targetWord: 摘下
+      - questionID: WSQ-P3-L17-USAGE-07
+        category: usage
+        targetWord: 精灵
+      - questionID: WSQ-P3-L17-USAGE-08
+        category: usage
+        targetWord: 失去
+      - questionID: WSQ-P3-L17-USAGE-09
+        category: usage
+        targetWord: 铁
+      - questionID: WSQ-P3-L17-USAGE-10
+        category: usage
+        targetWord: 金
+      - questionID: WSQ-P3-L17-USAGE-11
+        category: usage
+        targetWord: 银
+      - questionID: WSQ-P3-L17-USAGE-12
+        category: usage
+        targetWord: 银牌
+      - questionID: WSQ-P3-L17-USAGE-13
+        category: usage
+        targetWord: 签名
+      - questionID: WSQ-P3-L17-USAGE-14
+        category: usage
+        targetWord: 等
+      - questionID: WSQ-P3-L17-USAGE-15
+        category: usage
+        targetWord: 万
+      - questionID: WSQ-P3-L17-USAGE-16
+        category: usage
+        targetWord: 千
+      - questionID: WSQ-P3-L17-USAGE-17
+        category: usage
+        targetWord: 减掉
+      - questionID: WSQ-P3-L17-USAGE-18
+        category: usage
+        targetWord: 算
+      - questionID: WSQ-P3-L17-USAGE-19
+        category: usage
+        targetWord: 立刻
+      - questionID: WSQ-P3-L17-USAGE-20
+        category: usage
+        targetWord: 检查
+      - questionID: WSQ-P3-L17-USAGE-21
+        category: usage
+        targetWord: 决定
+    dedicatedOrdinaryChineseUsageQuestions: 21
+dedicatedOrdinaryChineseUsageCoverage: 399

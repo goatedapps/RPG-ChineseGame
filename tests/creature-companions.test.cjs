@@ -193,6 +193,51 @@ test('the Creatures sidebar action cannot replace a battle or another locked act
   dom.window.close();
 });
 
+test('all 35 compact creature cards keep full abilities in closed details and avoid repeated capped growth', async () => {
+  const { creatureCollectionMarkup } = await import('../src/ui/creatureCollection.js');
+  const { CREATURES } = await import('../src/battle/creatures.js');
+  const { createFreshState } = await import('../src/core/state.js');
+  const { loadLevelPackage } = await import('../src/content/loader.js');
+  const { creatureAbility } = await api();
+  const pkg = await loadLevelPackage('p3', fetcher, '');
+  const game = { levelPackage: pkg, state: createFreshState(pkg) };
+  game.state.player.level = 20;
+  game.state.progress.creatures.collection = Object.fromEntries(CREATURES.map(creature => [creature.id, { level: 2, variant: 'normal' }]));
+  const dom = new JSDOM(creatureCollectionMarkup(game));
+  try {
+    const cards = [...dom.window.document.querySelectorAll('.creature-card')];
+    assert.equal(cards.length, 35);
+    assert.ok(dom.window.document.querySelector('.creature-roster'));
+    for (const [index, card] of cards.entries()) {
+      const creature = CREATURES[index];
+      const ability = creatureAbility(definitions[creature.id], 2, 20);
+      const details = card.querySelector('.creature-ability-details');
+      assert.equal(details.open, false, `${creature.id}: details start closed`);
+      assert.equal(card.querySelectorAll('details').length, 1);
+      assert.equal(card.querySelector('.creature-card-heading h2').textContent, creature.name);
+      assert.ok(card.querySelector('.creature-card-title .creature-level'));
+      assert.equal(card.querySelector('.creature-card-portrait .creature-level'), null);
+      const summary = card.querySelector('.creature-ability-summary');
+      assert.ok(summary.textContent);
+      assert.match(summary.textContent, /^(After|When).+, (heal|shield|deal).+\.$/);
+      assert.equal(card.querySelector('.creature-ability-trigger, .creature-ability-effects'), null);
+      assert.equal(card.querySelector('.creature-personality').closest('details'), details);
+      assert.equal([...details.querySelectorAll('p')].filter(p => p.textContent === ability.description).length, 1);
+      assert.match(details.querySelector('.creature-growth').textContent, /At creature Lv\. 3:/);
+      assert.doesNotMatch(card.textContent, /Support growth/);
+      assert.ok(card.querySelector('[data-choose-creature]').getAttribute('aria-label').includes(creature.name));
+    }
+    game.state.player.level = 2;
+    dom.window.document.body.innerHTML = creatureCollectionMarkup(game);
+    for (const card of dom.window.document.querySelectorAll('.creature-card')) {
+      assert.match(card.querySelector('.creature-growth').textContent, /At full support strength for your current hero level/);
+      assert.doesNotMatch(card.textContent, /At creature Lv\. 3:/);
+    }
+  } finally {
+    dom.window.close();
+  }
+});
+
 test('a real encounter does not collect a creature when the player escapes', async () => {
   const { createGameplay } = await import('../src/gameplay.js');
   const { createFreshState } = await import('../src/core/state.js');

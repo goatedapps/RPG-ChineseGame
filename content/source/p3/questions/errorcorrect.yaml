@@ -1,0 +1,348 @@
+- groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+  subject: Higher Chinese
+  passage:
+    title: 改正错字
+    source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+    text: |-
+      Q1 我在纸上画了一个三脚形。
+      Q2 小明改桌了迟到的坏习惯。
+      Q3 我常常具手回答老师的问题。
+      Q4 她每天跑步，身体变得月来月健康。
+      Q5 小鱼摆动未巴，在水里游来游去。
+      Q6 姐姐很东事，每天都会帮妈妈扫地。
+      Q7 妈妈告诉我出门前要几得把门关好。
+      Q8 课室里的书架上放了一此华文故事书。
+      Q9 哥哥想看看种在土里的绿豆会有什么变画。
+      Q10 只要他努力都书，就一定能考到好成绩。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我在纸上画了一个三脚形。
+      accepted:
+        - 角
+      displayAnswer: 角
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：小明改桌了迟到的坏习惯。
+      accepted:
+        - 掉
+      displayAnswer: 掉
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我常常具手回答老师的问题。
+      accepted:
+        - 举
+      displayAnswer: 举
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：她每天跑步，身体变得月来月健康。
+      accepted:
+        - 越
+      displayAnswer: 越
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：小鱼摆动未巴，在水里游来游去。
+      accepted:
+        - 尾
+      displayAnswer: 尾
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：姐姐很东事，每天都会帮妈妈扫地。
+      accepted:
+        - 懂
+      displayAnswer: 懂
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：妈妈告诉我出门前要几得把门关好。
+      accepted:
+        - 记
+      displayAnswer: 记
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：课室里的书架上放了一此华文故事书。
+      accepted:
+        - 些
+      displayAnswer: 些
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：哥哥想看看种在土里的绿豆会有什么变画。
+      accepted:
+        - 化
+      displayAnswer: 化
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：只要他努力都书，就一定能考到好成绩。
+      accepted:
+        - 读
+      displayAnswer: 读
+- groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+  subject: Higher Chinese
+  passage:
+    title: 改正错字
+    source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+    text: |-
+      Q1 一开时，我就跑在最前面。
+      Q2 妹妹帮娃娃船上漂亮的裙子。
+      Q3 弟弟很热，就把外衣给说了。
+      Q4 外公的角受伤了，不能做运动。
+      Q5 我一不小心朋倒了邻居的花盆。
+      Q6 我和妈妈到服近的公园做运动。
+      Q7 我今天迟到了，来不记坐校车上学。
+      Q8 妹妹跌倒了，爸爸叫她自己吧起来。
+      Q9 外婆父了钱后，便拿着水果回家去。
+      Q10 姐姐吐然出现在我面前，把我吓了一跳。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：一开时，我就跑在最前面。
+      accepted:
+        - 始
+      displayAnswer: 始
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：妹妹帮娃娃船上漂亮的裙子。
+      accepted:
+        - 穿
+      displayAnswer: 穿
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：弟弟很热，就把外衣给说了。
+      accepted:
+        - 脱
+      displayAnswer: 脱
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：外公的角受伤了，不能做运动。
+      accepted:
+        - 脚
+      displayAnswer: 脚
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我一不小心朋倒了邻居的花盆。
+      accepted:
+        - 碰
+      displayAnswer: 碰
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我和妈妈到服近的公园做运动。
+      accepted:
+        - 附
+      displayAnswer: 附
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我今天迟到了，来不记坐校车上学。
+      accepted:
+        - 及
+      displayAnswer: 及
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：妹妹跌倒了，爸爸叫她自己吧起来。
+      accepted:
+        - 爬
+      displayAnswer: 爬
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：外婆父了钱后，便拿着水果回家去。
+      accepted:
+        - 付
+      displayAnswer: 付
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：姐姐吐然出现在我面前，把我吓了一跳。
+      accepted:
+        - 突
+      displayAnswer: 突
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+  subject: Higher Chinese
+  passage:
+    title: 复习（三）改正错字
+    source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+    text: |-
+      Q1 我让为乱丢垃圾是不对的。
+      Q2 我们不应该再公园里的花朵。
+      Q3 桌上的糖果印来了很多蚂蚁。
+      Q4 我把国七画在明信片的中间。
+      Q5 妈妈对我的学习表现很慢意。
+      Q6 小明专过头来，笑着对我说话。
+      Q7 周末，我和妹妹到公园奇脚踏车。
+      Q8 妈妈每天都会提着环保带去买东西。
+      Q9 曹冲想办法，称出来大象的重亮。
+      Q10 上课铃声响了，同学们都忘课室的方向走去。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我让为乱丢垃圾是不对的。
+      accepted:
+        - 认
+      displayAnswer: 认
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我们不应该再公园里的花朵。
+      accepted:
+        - 摘
+      displayAnswer: 摘
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：桌上的糖果印来了很多蚂蚁。
+      accepted:
+        - 引
+      displayAnswer: 引
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我把国七画在明信片的中间。
+      accepted:
+        - 旗
+      displayAnswer: 旗
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：妈妈对我的学习表现很慢意。
+      accepted:
+        - 满
+      displayAnswer: 满
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：小明专过头来，笑着对我说话。
+      accepted:
+        - 转
+      displayAnswer: 转
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：周末，我和妹妹到公园奇脚踏车。
+      accepted:
+        - 骑
+      displayAnswer: 骑
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：妈妈每天都会提着环保带去买东西。
+      accepted:
+        - 袋
+      displayAnswer: 袋
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：曹冲想办法，称出来大象的重亮。
+      accepted:
+        - 量
+      displayAnswer: 量
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：上课铃声响了，同学们都忘课室的方向走去。
+      accepted:
+        - 往
+      displayAnswer: 往
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+  subject: Higher Chinese
+  passage:
+    title: 复习（四）改正错字
+    source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+    text: |-
+      Q1 我不感在半夜上厕所。
+      Q2 我们不应该给猴子为食。
+      Q3 他总是七负弟弟，真过分！
+      Q4 爸爸在水池里样了几条鱼。
+      Q5 我在士卷上写上自己的名字。
+      Q6 听写时，我发现小文在头看。
+      Q7 灯了三十分钟，巴士却还不来。
+      Q8 我们刚搬来这里，认视的人不多。
+      Q9 我站了起来，把做位让给了老奶奶。
+      Q10 我望了把作业带回家，结果被老师骂。
+  questions:
+    - sourceQuestion: Q1
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我不感在半夜上厕所。
+      accepted:
+        - 敢
+      displayAnswer: 敢
+    - sourceQuestion: Q2
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我们不应该给猴子为食。
+      accepted:
+        - 喂
+      displayAnswer: 喂
+    - sourceQuestion: Q3
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：他总是七负弟弟，真过分！
+      accepted:
+        - 欺
+      displayAnswer: 欺
+    - sourceQuestion: Q4
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：爸爸在水池里样了几条鱼。
+      accepted:
+        - 养
+      displayAnswer: 养
+    - sourceQuestion: Q5
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我在士卷上写上自己的名字。
+      accepted:
+        - 试
+      displayAnswer: 试
+    - sourceQuestion: Q6
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：听写时，我发现小文在头看。
+      accepted:
+        - 偷
+      displayAnswer: 偷
+    - sourceQuestion: Q7
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：灯了三十分钟，巴士却还不来。
+      accepted:
+        - 等
+      displayAnswer: 等
+    - sourceQuestion: Q8
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我们刚搬来这里，认视的人不多。
+      accepted:
+        - 识
+      displayAnswer: 识
+    - sourceQuestion: Q9
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我站了起来，把做位让给了老奶奶。
+      accepted:
+        - 座
+      displayAnswer: 座
+    - sourceQuestion: Q10
+      format: Fill-in
+      marks: 2
+      text: 请改正句子中的错字，只写正确的字：我望了把作业带回家，结果被老师骂。
+      accepted:
+        - 忘
+      displayAnswer: 忘

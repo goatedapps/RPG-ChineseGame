@@ -1,0 +1,524 @@
+- groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+  subject: Higher Chinese
+  passage:
+    title: 袋鼠的笼子
+    source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 10; answer key supplied in PDF
+    text: |-
+      一天，动物园管理员发现袋鼠从笼子里跑了出来。于是，他们便在一起Q17___怎样不让这种事再发生。他们发现笼子太低，便将笼子加高。可是笼子被加高后，袋鼠Q18___跑到外面来。
+
+      管理员不明白笼子加高了，袋鼠为什么还能跑出来？最后，他们做了一个Q19___，将笼子再加高。
+
+      这天，山羊和几只袋鼠在谈天。山羊问袋鼠：“你们Q20___管理员会不会再加高你们的笼子？”袋鼠笑着回答：“哈哈哈！如果他们还是忘了关门，笼子可能还会加高。”
+
+      这个故事告诉我们，我们应该仔细想想问题为什么会发生，才能找到对的Q21___，让问题不再出现。
+  optionBank:
+    - 决定
+    - 觉得
+    - 知道
+    - 仍然
+    - 变成
+    - 讨论
+    - 办法
+    - 任务
+  questions:
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 1
+      text: Q17
+      correct: 讨论
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 1
+      text: Q18
+      correct: 仍然
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 1
+      text: Q19
+      correct: 决定
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 1
+      text: Q20
+      correct: 觉得
+    - sourceQuestion: Q21
+      format: MCQ
+      marks: 1
+      text: Q21
+      correct: 办法
+- groupId: P3-CH-2025-SA2-METHODIST-Q17-20
+  subject: Chinese
+  passage:
+    title: 一起学听写
+    source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 6; answer key supplied in PDF
+    text: |-
+      欢欢和文文是同班同学，也是邻居。欢欢就住在文文家的楼上。除了常在一起玩乐，如果学习上有不会做的难题，她们也都会一起Q17___。
+
+      一个周末的下午，欢欢请文文来家里一起练习听写。她们两人会先安安静静地学十分钟听写，然后欢欢就做小老师给文文考听写。等文文都写完了，欢欢会学着老师的样子，Q18___文文写的字，给她打分。
+
+      接下来，文文也会用同样的方法给欢欢听写。最后，欢欢和文文还会拿出小白板，一起Q19___刚才写错的字，记不住的句子也会一起背。她们在一起学习时，从不玩闹Q20___时间。
+
+      有这样的好邻居好伙伴，欢欢和文文都觉得很开心。
+  optionBank:
+    - 检查
+    - 谈天
+    - 复习
+    - 认错
+    - 讨论
+    - 浪费
+  questions:
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 1
+      text: Q17
+      correct: 讨论
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 1
+      text: Q18
+      correct: 检查
+    - sourceQuestion: Q19
+      format: MCQ
+      marks: 1
+      text: Q19
+      correct: 复习
+    - sourceQuestion: Q20
+      format: MCQ
+      marks: 1
+      text: Q20
+      correct: 浪费
+- groupId: P3-CH-2025-SA2-NANHUA-Q9-12
+  subject: Higher Chinese
+  passage:
+    title: 小华向康康认错
+    source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 10; answer key supplied in PDF
+    text: |-
+      休息时，小华和康康在草场上玩球。小华踢得太用力，康康Q9___躲开，被球打到了，痛得哇哇大哭。小华看见了，吓得冒出冷汗，Q10___溜走。
+
+      第二天，小华在玩“你追我跑”的时候，不小心跌伤了。康康见了，立刻跑上前去扶他。小华觉得Q11___，不好意思地说：“谢谢你！对——对不起，昨天是我的错，你可以Q12___我吗？”
+
+      康康听了，笑着说：“没关系，你以后小心点儿。”说完，他们便一起走回课室。
+  optionBank:
+    - 连忙
+    - 不客气
+    - 来不及
+    - 难为情
+    - 原谅
+    - 着急
+  questions:
+    - sourceQuestion: Q9
+      format: MCQ
+      marks: 1
+      text: Q9
+      correct: 来不及
+    - sourceQuestion: Q10
+      format: MCQ
+      marks: 1
+      text: Q10
+      correct: 连忙
+    - sourceQuestion: Q11
+      format: MCQ
+      marks: 1
+      text: Q11
+      correct: 难为情
+    - sourceQuestion: Q12
+      format: MCQ
+      marks: 1
+      text: Q12
+      correct: 原谅
+- groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+  subject: Higher Chinese
+  passage:
+    title: 爱惜自助餐的食物
+    source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+    text: |-
+      小安一家人喜欢吃自助餐。
+
+      这天，爸爸、妈妈和小安来到一家餐馆，兴高采烈地选自己喜欢的食物。
+
+      小安不停地拿菜，Q25___拿了好多食物。小安看到一道新菜，又拿了一大盘。可是，吃了一口，他发现不合口味，就不吃了。爸爸妈妈Q26___他不要拿那么多食物，但是小安不听。
+
+      爸爸拿出钱包，Q27___付钱时，桌上还有好多没吃完的食物。服务生过来称了食物的重量，并生气地对他们说，为了让人们懂得爱惜食物，没吃完的食物都要按重量付钱。
+
+      小安听了，感到十分Q28___。他决定以后要更爱惜食物，吃多少就拿多少，不再Q29___。
+  optionBank:
+    - 告诉
+    - 浪费
+    - 轻手轻脚
+    - 准备
+    - 难为情
+    - 不知不觉
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 1
+      text: Q25
+      correct: 不知不觉
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 1
+      text: Q26
+      correct: 告诉
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 1
+      text: Q27
+      correct: 准备
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 1
+      text: Q28
+      correct: 难为情
+    - sourceQuestion: Q29
+      format: MCQ
+      marks: 1
+      text: Q29
+      correct: 浪费
+- groupId: P3-CH-2025-SA2-TAONAN-Q21-24
+  subject: Higher Chinese
+  passage:
+    title: 种豆芽
+    source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 7; answer key supplied in PDF
+    text: |-
+      今天，老师教我们种豆芽。一开始，我觉得很Q21___，只要让它喝饱水，放在阳光多的地方就行了。
+
+      回到家，我就开始种豆芽。每天放学后，我都会给它浇水，还把它放在窗边晒太阳。可是过了几天，我的豆芽Q22___长不大。
+
+      奶奶看到后笑着说：“孩子，种豆芽不Q23___太多阳光。”她帮我把豆芽拿到客厅里，还教我用湿布盖着。几天后，豆芽就长得白白胖胖了。
+
+      经过这件事，我明白了每种植物都有自己喜欢的生长Q24___。现在我的豆芽长得可好了，我要把它们做成美味的豆芽炒蛋！
+  optionBank:
+    - 仍然
+    - 容易
+    - 需要
+    - 果然
+    - 必须
+    - 环境
+  questions:
+    - sourceQuestion: Q21
+      format: MCQ
+      marks: 1
+      text: Q21
+      correct: 容易
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 1
+      text: Q22
+      correct: 仍然
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 1
+      text: Q23
+      correct: 需要
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 1
+      text: Q24
+      correct: 环境
+- groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+  subject: Higher Chinese
+  passage:
+    title: 小丽归还手表
+    source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+    text: |-
+      一天，美云带了一只新手表来学校。那只手表很漂亮，小丽很Q25___自己也能有一只一样的。
+
+      当同学们去操场上体育课时，小丽Q26___在课室门口的地上看到一只手表。她定睛一看——这不是美云的手表吗？小丽见旁边没人，就Q27___把手表捡起来，放进自己的书包里。后来，美云发现手表不见了，到处去找，但怎么都找不到。
+
+      接下来的几堂课，小丽一个字也听不进去，因为心里有个声音Q28___在说：“你这样做是错的，你这样做是错的……”
+
+      放学了，小丽把手表还给美云，低着头对她说：“对不起……”美云笑了笑，Q29___了小丽。
+  optionBank:
+    - 原谅
+    - 习惯
+    - 赶快
+    - 希望
+    - 突然
+    - 一直
+  questions:
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 1
+      text: Q25
+      correct: 希望
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 1
+      text: Q26
+      correct: 突然
+    - sourceQuestion: Q27
+      format: MCQ
+      marks: 1
+      text: Q27
+      correct: 赶快
+    - sourceQuestion: Q28
+      format: MCQ
+      marks: 1
+      text: Q28
+      correct: 一直
+    - sourceQuestion: Q29
+      format: MCQ
+      marks: 1
+      text: Q29
+      correct: 原谅
+- groupId: P3-CH-2025-WA1-TAONAN-Q21-24
+  subject: Higher Chinese
+  passage:
+    title: 弟弟开始运动
+    source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 6; answer key supplied in PDF
+    text: |-
+      弟弟不喜欢做运动。他平时只喜欢坐在沙发上一面看电视节目，一面吃东西，Q21___越来越胖。我们一家人看了都非常担心。
+
+      一天，上体育课时，弟弟只跑了一会儿就要坐下来休息。他脸色发白，还一直想吐。老师看见了，Q22___打电话叫妈妈来带弟弟去看医生。
+
+      医生为弟弟检查身体后，对妈妈说：“他太胖了，又不运动。Q23___再这样下去，他的身体会越来越多毛病的。”弟弟听了，非常害怕。
+
+      从那天起，弟弟每个星期天都会和爸爸到公园去做运动，身体也Q24___变得强壮了。我们见了，都为他感到开心。
+  optionBank:
+    - 常常
+    - 结果
+    - 如果
+    - 开始
+    - 排队
+    - 连忙
+  questions:
+    - sourceQuestion: Q21
+      format: MCQ
+      marks: 1
+      text: Q21
+      correct: 结果
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 1
+      text: Q22
+      correct: 连忙
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 1
+      text: Q23
+      correct: 如果
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 1
+      text: Q24
+      correct: 开始
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q15-18
+  subject: Chinese
+  passage:
+    title: 小华照顾奶奶的花
+    source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 6; answer key supplied in PDF
+    text: |-
+      奶奶很喜欢花，种了很多花。她每天细心地Q15___它们。
+
+      有一次，奶奶出国了，叫小华帮忙给这些花浇水。小华每天开心地为这些花浇水。
+
+      有一天，小华浇水时，不小心Q16___了一盆奶奶最喜欢的花，花盆掉到地上破了。小明很害怕。
+
+      不久，奶奶回来了，小华把Q17___的经过告诉了奶奶，然后说：“奶奶，对不起！请你Q18___我！”奶奶说：“没关系，你又不是故意的，我不怪你。”
+  optionBank:
+    - 碰倒
+    - 摇摆
+    - 事情
+    - 原谅
+    - 照顾
+    - 搬动
+  questions:
+    - sourceQuestion: Q15
+      format: MCQ
+      marks: 1
+      text: Q15
+      correct: 照顾
+    - sourceQuestion: Q16
+      format: MCQ
+      marks: 1
+      text: Q16
+      correct: 碰倒
+    - sourceQuestion: Q17
+      format: MCQ
+      marks: 1
+      text: Q17
+      correct: 事情
+    - sourceQuestion: Q18
+      format: MCQ
+      marks: 1
+      text: Q18
+      correct: 原谅
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q11-14
+  subject: Higher Chinese
+  passage:
+    title: 愿望和手表
+    source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 5; answer key supplied in PDF
+    text: |-
+      有时候，我站在镜子前，学着老师的Q11___：“同学们，请把书打开，翻到第十页，跟我读。”这个美丽的Q12___好像就在眼前。
+
+      这只手表十分特别。它是粉红的，是我最喜欢的Q13___。它的形状是三角形的，我Q14___没有见过三角形的手表！它还有一个表盖，上面画着一个小公主的图案。表盖旁边有一个按钮，一按按钮，表盖就会打开，我就能看到时间。
+  optionBank:
+    - 从来
+    - 样子
+    - 上面
+    - 愿望
+    - 为了
+    - 颜色
+  questions:
+    - sourceQuestion: Q11
+      format: MCQ
+      text: Q11
+      correct: 样子
+    - sourceQuestion: Q12
+      format: MCQ
+      text: Q12
+      correct: 愿望
+    - sourceQuestion: Q13
+      format: MCQ
+      text: Q13
+      correct: 颜色
+    - sourceQuestion: Q14
+      format: MCQ
+      text: Q14
+      correct: 从来
+- groupId: P3-CH-2025-WA2-NANHUA-Q5-7
+  subject: Higher Chinese
+  passage:
+    title: 妹妹帮助老奶奶
+    source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 4; answer key supplied in PDF
+    text: 上个周末，妈妈带妹妹和我到餐馆吃早餐，然后我们到附近Q5___商场。一到那里，妹妹就看到一位老奶奶在上楼时不小心跌倒Q6___了。妹妹对妈妈和我说：“请你们在这里等我一会儿。我很快就回来。”说完，妹妹Q7___跑上前，扶起了老奶奶。妈妈看到了，说：“你真是一个好孩子！”
+  optionBank:
+    - 找
+    - 逛
+    - 立刻
+    - 受伤
+  questions:
+    - sourceQuestion: Q5
+      format: MCQ
+      marks: 2
+      text: Q5
+      correct: 逛
+    - sourceQuestion: Q6
+      format: MCQ
+      marks: 2
+      text: Q6
+      correct: 受伤
+    - sourceQuestion: Q7
+      format: MCQ
+      marks: 2
+      text: Q7
+      correct: 立刻
+- groupId: P3-CH-2025-WA2-TAONAN-Q21-24
+  subject: Higher Chinese
+  passage:
+    title: 朋友不应该作弊
+    source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 6; answer key supplied in PDF
+    text: |-
+      小美是我的同学，也是我最Q21___的朋友。每天放学后，她都会来我家和我一起做功课，一起游戏。
+
+      有一次听写时，坐在我旁边的小美碰了我一下，要我让她看我的听写本子。我不停地Q22___，还把本子合起来，不让她看。她睁大了Q23___，看了看我，然后生气地转过头去。
+
+      下课后，我对小美说：“虽然我们是好朋友，可是你要我把听写本子借给你看是不对的。你以后Q24___要用功读书。”
+
+      小美听了，不好意思地低下了头。
+  optionBank:
+    - 眼睛
+    - 定时
+    - 摇头
+    - 爱好
+    - 要好
+    - 一定
+  questions:
+    - sourceQuestion: Q21
+      format: MCQ
+      marks: 1
+      text: Q21
+      correct: 要好
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 1
+      text: Q22
+      correct: 摇头
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 1
+      text: Q23
+      correct: 眼睛
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 1
+      text: Q24
+      correct: 一定
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q21-24
+  subject: Higher Chinese
+  passage:
+    title: 聪明的鸭子
+    source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 6; answer key supplied in PDF
+    text: |-
+      一天鸭子在河里洗完澡后，就往村子里走去。Q21___，一只狐狸从树林里跳了出来，想要吃掉鸭子。鸭子说：“狐狸先生，您先别吃我。告诉您，我会学狐狸叫。您先听我叫几声，再吃掉我吧！”狐狸听了，觉得很Q22___，心想：怎么可能？鸭子怎么会叫得像狐狸呢？于是，狐狸Q23___了鸭子的请求，放开了它。
+
+      狐狸听鸭子叫了几声后，说：“你叫得一点儿也不像，还是听听我的叫声吧。”说完，它也叫了几声。这时，村子里的狗听到狐狸的叫声，一起冲了过来。狐狸听到远处的狗叫声，Q24___逃走了。看到狐狸逃走了，鸭子便高高兴兴地回家了。
+  optionBank:
+    - 着急
+    - 答应
+    - 好奇
+    - 回答
+    - 突然
+    - 急忙
+  questions:
+    - sourceQuestion: Q21
+      format: MCQ
+      marks: 1
+      text: Q21
+      correct: 突然
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 1
+      text: Q22
+      correct: 好奇
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 1
+      text: Q23
+      correct: 答应
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 1
+      text: Q24
+      correct: 急忙
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q21-24
+  subject: Higher Chinese
+  passage:
+    title: 王康撞倒小男孩
+    source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 20; answer key supplied in PDF
+    text: |-
+      一个星期天早上，爸爸妈妈带王康去Q21___动物园。
+
+      走着走着，王康看见了他最喜欢的猴子，就冲了过去。一个小男孩Q22___躲开，结果被王康撞倒了。看见小男孩的脚受伤了，王康心里非常Q23___，不知道该怎么办才好。
+
+      王康的爸爸妈妈看见了，Q24___走上前把小男孩扶了起来，还叫王康向小男孩说对不起。
+
+      从那天起，王康再也不敢到处乱跑了。
+  optionBank:
+    - 来不及
+    - 赶紧
+    - 紧急
+    - 参观
+    - 着急
+    - 参加
+  questions:
+    - sourceQuestion: Q21
+      format: MCQ
+      marks: 1
+      text: Q21
+      correct: 参观
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 1
+      text: Q22
+      correct: 来不及
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 1
+      text: Q23
+      correct: 着急
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 1
+      text: Q24
+      correct: 赶紧

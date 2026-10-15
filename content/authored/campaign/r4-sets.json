@@ -13,5 +13,9 @@
     { "id": "neighbour-stories", "name": "Neighbour Stories", "words": ["讲古", "津津有味", "左邻右舍", "娱乐"], "restoration": "Neighbours gather for stories at the theatre." },
     { "id": "city-memories", "name": "City Memories", "words": ["市区重建局", "大厦", "政府", "贡献"], "restoration": "The theatre displays memories of the changing city." },
     { "id": "dragon-stage", "name": "Dragon Stage", "words": ["龙舟", "九龙壁", "翻腾", "龙宫"], "restoration": "The players bring a dragon story to the lantern stage." }
+  ],
+  "p3": [
+    {"id":"rescue","name":"The Rescue Stage","words":["河","救","竹竿","篮子"],"restoration":"The theatre can stage its river rescue story again."},
+    {"id":"clean-stage","name":"A Clean Stage","words":["收拾","爱护","环境","保持"],"restoration":"The performers return to a clean and welcoming stage."}
   ]
 }

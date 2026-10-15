@@ -13,5 +13,9 @@
     { "id": "honest-market", "name": "Honest Market", "words": ["原价", "便宜", "质量", "销售"], "restoration": "Clear prices and reliable goods return to the market." },
     { "id": "careful-repairs", "name": "Careful Repairs", "words": ["损坏", "修理", "均匀", "态度"], "restoration": "The crossing repairs its tools with patience and care." },
     { "id": "truthful-signs", "name": "Truthful Signs", "words": ["说谎", "哑口无言", "掩耳盗铃", "毫不在意"], "restoration": "The market signs remind neighbours to speak honestly." }
+  ],
+  "p3": [
+    {"id":"garden","name":"Growing Garden","words":["绿豆","幼苗","根","变化"],"restoration":"Young plants fill the market garden again."},
+    {"id":"kindness","name":"Making Amends","words":["错误","原谅","扶","谢谢"],"restoration":"Neighbours repair their friendship at the market."}
   ]
 }

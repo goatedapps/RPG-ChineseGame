@@ -43,6 +43,7 @@ function parseStory(markdown, lesson) {
 
 function mapQuestionWord(kind, question, knownWords) {
   const exact = value => knownWords.has(value) ? value : null;
+  if (exact(question.targetWord)) return question.targetWord;
   if (kind === 'vocab') return exact(question.correct);
   if (kind === 'usage') return exact(question.question.match(/（词语[：:]\s*([^）]+)）/)?.[1]?.trim());
   if (kind === 'pinyin' || kind === 'phrase') return exact(question.question.match(/__(.+?)__/)?.[1]?.trim());
@@ -74,7 +75,7 @@ function normalizeGroup(kind, group) {
     items: (group.questions || []).map(question => ({
       format: question.format || (question.options ? 'MCQ' : 'Fill-in'),
       q: question.text,
-      o: question.options || [],
+      o: question.options || (question.format === 'MCQ' ? group.optionBank : null) || [],
       c: question.correct ?? null,
       accepted: question.accepted || null,
       displayAnswer: question.displayAnswer || null,

@@ -122,3 +122,74 @@ test('collapsed parent feedback keeps its summary in the Settings scroll layout'
   assert.match(css, /\.parent-feedback summary \{[^}]*min-height: 54px/);
   assert.doesNotMatch(css, /\.parent-feedback \{[^}]*overflow: hidden/);
 });
+
+test('skipping the child tutorial uses a modal confirmation and cancellation preserves Parent Mode', async () => {
+  const { createOverlay } = await import('../src/ui/overlay.js');
+  const { createGameplay } = await import('../src/gameplay.js');
+  const { createFreshState } = await import('../src/core/state.js');
+  const { loadLevelPackage } = await import('../src/content/loader.js');
+  const dom = new JSDOM('<body><div id="overlay" hidden></div></body>', { url: 'http://localhost/' });
+  const previousDocument = global.document;
+  global.document = dom.window.document;
+  dom.window.HTMLDialogElement.prototype.showModal = function () {
+    this.setAttribute('open', '');
+    this.querySelector('[autofocus]').focus();
+  };
+  dom.window.HTMLDialogElement.prototype.close = function (value = '') {
+    this.returnValue = value;
+    this.removeAttribute('open');
+    this.dispatchEvent(new dom.window.Event('close'));
+  };
+  try {
+    const pkg = await loadLevelPackage('p3', async url => ({ ok: true, json: async () => JSON.parse(fs.readFileSync(url.replace(/^\//, ''), 'utf8')) }), '');
+    const game = { levelPackage: pkg, state: createFreshState(pkg) };
+    const element = document.querySelector('#overlay');
+    const overlay = createOverlay(element);
+    let skips = 0;
+    const coins = game.state.player.coins;
+    const gameplay = createGameplay({ overlay, storage: dom.window.localStorage, getActive: () => game, persist() {}, render() {}, toast() {}, onSkipTutorial() { skips++; game.state.progress.tutorial.step = 16; game.state.progress.tutorial.skipped = true; } });
+    gameplay.parentPanel();
+    document.querySelector('[data-parent-pin]').value = '0000';
+    document.querySelector('[data-parent-unlock]').click();
+    const content = document.querySelector('.parent-tab-content');
+    content.scrollTop = 220;
+    const goal = document.querySelector('[data-goal-label]');
+    goal.value = 'Keep this draft';
+    const skip = document.querySelector('[data-tutorial-parent-skip]');
+    skip.focus();
+    skip.click();
+    let dialog = document.querySelector('dialog[open]');
+    assert.ok(dialog);
+    assert.equal(skips, 0);
+    assert.match(dialog.textContent, /Primary 3/);
+    assert.equal(document.activeElement, dialog.querySelector('[data-confirm-cancel]'));
+    assert.equal(skip.textContent, 'Skip child tutorial');
+    dialog.querySelector('[data-confirm-cancel]').click();
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(skips, 0);
+    assert.equal(document.querySelector('.parent-tab-content'), content);
+    assert.equal(content.scrollTop, 220);
+    assert.equal(goal.value, 'Keep this draft');
+    assert.equal(document.activeElement, skip);
+    skip.click();
+    dialog = document.querySelector('dialog[open]');
+    dialog.dispatchEvent(new dom.window.KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    assert.equal(element.hidden, false, 'Escape must not close Parent Mode while confirmation is open');
+    dialog.dispatchEvent(new dom.window.Event('cancel', { cancelable: true }));
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(skips, 0);
+    assert.equal(document.querySelector('dialog'), null);
+    skip.click();
+    document.querySelector('[data-confirm-accept]').click();
+    await new Promise(resolve => setImmediate(resolve));
+    assert.equal(skips, 1);
+    assert.equal(game.state.progress.tutorial.skipped, true);
+    assert.equal(game.state.player.coins, coins);
+    assert.equal(document.querySelector('[data-tutorial-parent-skip]'), null);
+    assert.equal(document.querySelector('.parent-tab-content').scrollTop, 220);
+    assert.match(document.querySelector('[data-parent-change]').textContent, /Child tutorial skipped/);
+  } finally {
+    global.document = previousDocument;
+    dom.window.close();
+  }
+});

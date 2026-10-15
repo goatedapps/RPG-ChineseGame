@@ -1,0 +1,50 @@
+- groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+  subject: Higher Chinese
+  passage:
+    title: 邻居的苹果
+    source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 11; answer key supplied in PDF
+    text: |-
+      小文：志明，你的邻居在家吗？
+      志明：Q22___？
+      小文：他们门口种的苹果树结的苹果又红又大，我真想咬一口尝尝。
+      志明：你这么说是什么意思？Q23___？
+      小文：我在想要是能摘一个来吃，那该多好呀！
+      志明：你最好想都别想！Q24___。
+      小文：我只是说说，Q25___？
+      志明：我们是好朋友，我才会提醒你。如果你想吃苹果，Q26___。
+      小文：好啊！我们现在就去超市。
+  optionBank:
+    - 他们出国去了
+    - 超市离这里很远
+    - 你问这个做什么
+    - 你要摘那些苹果吗
+    - 不要以为别人听不见
+    - 老师说过偷东西是不对的
+    - 我们现在就去超市买来吃
+    - 你怎么把我说得像个小偷一样
+  questions:
+    - sourceQuestion: Q22
+      format: MCQ
+      marks: 1
+      text: Q22
+      correct: 你问这个做什么
+    - sourceQuestion: Q23
+      format: MCQ
+      marks: 1
+      text: Q23
+      correct: 你要摘那些苹果吗
+    - sourceQuestion: Q24
+      format: MCQ
+      marks: 1
+      text: Q24
+      correct: 老师说过偷东西是不对的
+    - sourceQuestion: Q25
+      format: MCQ
+      marks: 1
+      text: Q25
+      correct: 你怎么把我说得像个小偷一样
+    - sourceQuestion: Q26
+      format: MCQ
+      marks: 1
+      text: Q26
+      correct: 我们现在就去超市买来吃

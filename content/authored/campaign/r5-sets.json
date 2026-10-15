@@ -13,5 +13,9 @@
     { "id": "festival-reading", "name": "Festival Reading", "words": ["书籍", "介绍", "目录", "页码"], "restoration": "The festival book stall helps every reader find a story." },
     { "id": "story-parade", "name": "Story Parade", "words": ["师徒", "打败", "妖魔鬼怪", "朗读"], "restoration": "The parade brings heroic stories to life." },
     { "id": "shared-meal", "name": "Shared Meal", "words": ["饥饿", "滋味", "诱人", "端"], "restoration": "Neighbours share a delicious festival meal." }
+  ],
+  "p3": [
+    {"id":"green-city","name":"A Greener Festival","words":["环保袋","塑料袋","废物","瓶子"],"restoration":"The festival opens a stall for reusing useful materials."},
+    {"id":"celebration","name":"Voices Together","words":["新加坡","国旗","国庆日","合唱团"],"restoration":"Songs and flags fill the festival square."}
   ]
 }

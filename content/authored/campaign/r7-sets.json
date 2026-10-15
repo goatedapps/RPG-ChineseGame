@@ -13,5 +13,9 @@
     { "id": "graduation", "name": "Graduation Gathering", "words": ["毕业", "邀请", "仪式", "温馨"], "restoration": "The summit celebrates every learner who has travelled this far." },
     { "id": "lasting-effort", "name": "Lasting Effort", "words": ["恒心", "半途而废", "放弃", "前途"], "restoration": "The Tree remembers the value of continuing through difficulties." },
     { "id": "summit-music", "name": "Summit Music", "words": ["钢琴", "独奏", "朗诵", "守望"], "restoration": "Music and poetry welcome Word Spirits home to the summit." }
+  ],
+  "p3": [
+    {"id":"persistence","name":"Finish What You Start","words":["勤学","数学","终于","认识"],"restoration":"The summit study desk welcomes determined learners."},
+    {"id":"harvest","name":"Honest Work","words":["农夫","劳动","渔夫","检查"],"restoration":"The summit honours patient work and honest discoveries."}
   ]
 }

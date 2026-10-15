@@ -960,14 +960,13 @@ export function createGameplay({ overlay, storage, getActive, persist, render, t
       document.querySelector('[data-weekly]').addEventListener('click', showWeeklySummary);
       return;
     }
-    document.querySelector('[data-tutorial-parent-skip]')?.addEventListener('click', event => {
-      const button = event.currentTarget;
-      if (button.dataset.confirm !== 'true') {
-        button.dataset.confirm = 'true';
-        button.textContent = 'Confirm skip tutorial';
-        showParentChange('This permanently ends the child tutorial on this save. No tutorial rewards are granted.', 'error');
-        return;
-      }
+    document.querySelector('[data-tutorial-parent-skip]')?.addEventListener('click', async () => {
+      const accepted = await overlay.confirm({
+        title: 'Skip the child tutorial?',
+        message: `End Apprentice Jun’s guide for this player’s ${game.levelPackage.label} adventure. The remaining tutorial steps and their rewards will be skipped.`,
+        confirmLabel: 'Skip tutorial'
+      });
+      if (!accepted) return;
       onSkipTutorial();
       showParentDashboard('settings', null, { keepPosition: true, message: 'Child tutorial skipped for this save.' });
     });

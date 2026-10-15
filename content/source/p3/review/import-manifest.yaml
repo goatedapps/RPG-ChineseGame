@@ -1,0 +1,3978 @@
+level: p3
+scope: exam_questions_only
+status: integrated
+registeredInApp: true
+sourcePaperCount: 35
+totalQuestionCount: 691
+categoryCounts:
+  pinyin: 12
+  vocab: 359
+  phrase: 0
+  usage: 20
+  conjunction: 2
+  sentence: 0
+  cloze: 54
+  errorcorrect: 40
+  comprehension: 187
+  dialogue: 5
+  practical: 12
+heldQuestionCount: 13
+held:
+  - file: P3_Chinese_2025_SA2_henrypark.pdf
+    questions:
+      - Q1
+      - Q2
+      - Q3
+      - Q4
+    reason: Multiple-choice options obscured by overprinting.
+  - file: P3_Chinese_2025_SA2_henrypark.pdf
+    questions:
+      - Q10
+      - Q11
+      - Q12
+      - Q13
+      - Q14
+    reason: Shared word bank obscured by overprinting.
+  - file: P3_Chinese_2025_SA2_henrypark.pdf
+    questions:
+      - Q28
+      - Q29
+      - Q30
+    reason: Reading passage contains unreadable wording.
+  - file: P3_Chinese_2025_SA2_rosyth.pdf
+    questions:
+      - Q6
+    reason: Question wording obscured by overprinting.
+papers:
+  - file: P3_Chinese_2025_SA2_acs.pdf
+    sourceSubject: Chinese
+    questionCount: 20
+    review: acs-2025-sa2.md
+    categoryCounts:
+      vocab: 14
+      practical: 3
+      comprehension: 3
+    excluded:
+      - Q10–13 picture matching
+      - Q19–23 sentence expansion/combination
+      - Q24 paragraph ordering
+    notes:
+      - The first-paper draft was approved before the remaining-paper import.
+    questions:
+      - id: P3-CH-2025-SA2-ACS-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-ACS-Q1
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q1
+      - id: P3-CH-2025-SA2-ACS-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-ACS-Q2
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q2
+      - id: P3-CH-2025-SA2-ACS-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-ACS-Q3
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q3
+      - id: P3-CH-2025-SA2-ACS-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-ACS-Q4
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q4
+      - id: P3-CH-2025-SA2-ACS-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-ACS-Q5
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 2; 辨字测验; Q5
+      - id: P3-CH-2025-SA2-ACS-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-ACS-Q6
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q6
+      - id: P3-CH-2025-SA2-ACS-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-ACS-Q7
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q7
+      - id: P3-CH-2025-SA2-ACS-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-ACS-Q8
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q8
+      - id: P3-CH-2025-SA2-ACS-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-ACS-Q9
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 3; 词语选择; Q9
+      - id: P3-CH-2025-SA2-ACS-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-ACS-Q14
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q14
+      - id: P3-CH-2025-SA2-ACS-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-ACS-Q15
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q15
+      - id: P3-CH-2025-SA2-ACS-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-ACS-Q16
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q16
+      - id: P3-CH-2025-SA2-ACS-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-ACS-Q17
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q17
+      - id: P3-CH-2025-SA2-ACS-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-ACS-Q18
+        category: vocab
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF page 5; 词语搭配; Q18
+      - id: P3-CH-2025-SA2-ACS-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-ACS-Q25-27
+        category: practical
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 9–10; 阅读理解（一）; answer key PDF page 13
+      - id: P3-CH-2025-SA2-ACS-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-ACS-Q25-27
+        category: practical
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 9–10; 阅读理解（一）; answer key PDF page 13
+      - id: P3-CH-2025-SA2-ACS-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-ACS-Q25-27
+        category: practical
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 9–10; 阅读理解（一）; answer key PDF page 13
+      - id: P3-CH-2025-SA2-ACS-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-ACS-Q28-30
+        category: comprehension
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 11–12; 阅读理解（二）; answer key PDF page 13
+      - id: P3-CH-2025-SA2-ACS-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-ACS-Q28-30
+        category: comprehension
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 11–12; 阅读理解（二）; answer key PDF page 13
+      - id: P3-CH-2025-SA2-ACS-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-ACS-Q28-30
+        category: comprehension
+        source: Anglo-Chinese School (Primary), Primary 3 Chinese, 2025 End-of-Year Examination, Paper 2; P3_Chinese_2025_SA2_acs.pdf; PDF pages 11–12; 阅读理解（二）; answer key PDF page 13
+  - file: P3_Chinese_2025_SA2_acsjunior.pdf
+    sourceSubject: Chinese
+    questionCount: 20
+    review: SA2_acsjunior.md
+    categoryCounts:
+      vocab: 14
+      comprehension: 6
+    excluded:
+      - Q10–13 picture selection
+      - Q19 paragraph ordering
+      - Q20–24 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 12–13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 12–13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ACSJUNIOR-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-ACSJUNIOR-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_acsjunior.pdf; PDF pages 12–13; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_aitong.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 15
+    review: SA2_aitong.md
+    categoryCounts:
+      vocab: 9
+      comprehension: 6
+    excluded:
+      - Paper 1 picture composition
+      - Q13–16 picture selection
+      - Q17–21 word matching by lines
+      - Q22–26 sentence rewriting
+      - Q27 paragraph ordering
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-AITONG-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-AITONG-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-AITONG-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-AITONG-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-AITONG-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-AITONG-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-AITONG-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-AITONG-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-AITONG-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-AITONG-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-AITONG-Q10-12
+        category: comprehension
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-AITONG-Q10-12
+        category: comprehension
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-AITONG-Q10-12
+        category: comprehension
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-AITONG-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 16–17; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-AITONG-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 16–17; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-AITONG-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-AITONG-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_aitong.pdf; PDF pages 16–17; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_chij.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 31
+    review: SA2_chij.md
+    categoryCounts:
+      pinyin: 2
+      vocab: 7
+      usage: 4
+      comprehension: 8
+      cloze: 5
+      dialogue: 5
+    excluded:
+      - Paper 1 picture composition
+      - Q27–29 sentence creation
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-CHIJ-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-CHIJ-Q1
+        category: pinyin
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-CHIJ-Q2
+        category: pinyin
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-CHIJ-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-CHIJ-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-CHIJ-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-CHIJ-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-CHIJ-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-CHIJ-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-CHIJ-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-CHIJ-Q10
+        category: usage
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-CHIJ-Q11
+        category: usage
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-CHIJ-Q12
+        category: usage
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-SA2-CHIJ-Q13
+        category: usage
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-CHIJ-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-CHIJ-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-CHIJ-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 13–14; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 13–14; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 13–14; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 13–14; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q34
+        sourceQuestion: Q34
+        groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 13–14; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+        category: cloze
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+        category: cloze
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+        category: cloze
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+        category: cloze
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+        category: cloze
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+        category: dialogue
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+        category: dialogue
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+        category: dialogue
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+        category: dialogue
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-CHIJ-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+        category: dialogue
+        source: P3_Chinese_2025_SA2_chij.pdf; PDF pages 11; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_henrypark.pdf
+    sourceSubject: Chinese
+    questionCount: 8
+    review: SA2_henrypark.md
+    categoryCounts:
+      vocab: 5
+      comprehension: 3
+    excluded:
+      - Paper 1 picture composition
+      - Q1–4 choices obscured by overprinting
+      - Q6–9 picture-supported questions
+      - Q19 paragraph ordering
+      - Q20–24 sentence rewriting
+      - Q10–14 shared word bank obscured by overprinting
+      - Q28–30 second passage has unreadable wording
+    notes:
+      - Q1–4 need a clearer source scan before inclusion.
+      - The second passage and vocabulary option banks are held out, rather than reconstructed.
+    questions:
+      - id: P3-CH-2025-SA2-HENRYPARK-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-HENRYPARK-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-HENRYPARK-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_henrypark.pdf; PDF pages 10–11; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_mahabodhi.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 19
+    review: SA2_mahabodhi.md
+    categoryCounts:
+      vocab: 14
+      practical: 3
+      comprehension: 2
+    excluded:
+      - Picture composition and listening paper
+      - Q10–13 picture selection
+      - Q19–23 sentence rewriting
+      - Q24 paragraph ordering
+      - Q29 table completion
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-MAHABODHI-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q25-27
+        category: practical
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q25-27
+        category: practical
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q25-27
+        category: practical
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 16–17; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-MAHABODHI-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-MAHABODHI-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_mahabodhi.pdf; PDF pages 16–17; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_methodist.pdf
+    sourceSubject: Chinese
+    questionCount: 26
+    review: SA2_methodist.md
+    categoryCounts:
+      vocab: 16
+      cloze: 4
+      comprehension: 6
+    excluded:
+      - Q21–24 sentence rewriting
+      - Q25 paragraph ordering
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-METHODIST-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-METHODIST-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-METHODIST-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-METHODIST-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-METHODIST-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-METHODIST-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-METHODIST-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-METHODIST-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-METHODIST-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-METHODIST-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-METHODIST-Q10
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-METHODIST-Q11
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-METHODIST-Q12
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-SA2-METHODIST-Q13
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-METHODIST-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-METHODIST-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-METHODIST-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-METHODIST-Q17-20
+        category: cloze
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-METHODIST-Q17-20
+        category: cloze
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-SA2-METHODIST-Q17-20
+        category: cloze
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-SA2-METHODIST-Q17-20
+        category: cloze
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-METHODIST-Q26-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-METHODIST-Q26-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-METHODIST-Q26-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-METHODIST-Q29-31
+        category: comprehension
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-METHODIST-Q29-31
+        category: comprehension
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-METHODIST-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-SA2-METHODIST-Q29-31
+        category: comprehension
+        source: P3_Chinese_2025_SA2_methodist.pdf; PDF pages 11–12; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_nanhua.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 23
+    review: SA2_nanhua.md
+    categoryCounts:
+      vocab: 12
+      cloze: 4
+      practical: 3
+      comprehension: 4
+    excluded:
+      - Paper 1 picture composition and listening paper
+      - Q17–20 sentence writing/rewriting
+      - Q21–25 paragraph ordering
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-NANHUA-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-NANHUA-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-NANHUA-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-NANHUA-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-NANHUA-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-NANHUA-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-NANHUA-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-NANHUA-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-NANHUA-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-SA2-NANHUA-Q13
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-NANHUA-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-NANHUA-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-NANHUA-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF page 11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-NANHUA-Q9-12
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-NANHUA-Q9-12
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-NANHUA-Q9-12
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-NANHUA-Q9-12
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-NANHUA-Q26-28
+        category: practical
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-NANHUA-Q26-28
+        category: practical
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-NANHUA-Q26-28
+        category: practical
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-NANHUA-Q29-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 16–17; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-NANHUA-Q29-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 16–17; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-SA2-NANHUA-Q29-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 16–17; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANHUA-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-SA2-NANHUA-Q29-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanhua.pdf; PDF pages 16–17; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_nanyang.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 27
+    review: SA2_nanyang.md
+    categoryCounts:
+      vocab: 15
+      cloze: 5
+      comprehension: 7
+    excluded:
+      - Paper 1 picture composition
+      - Q6–9 writing Chinese from pinyin
+      - Q20–24 sentence expansion
+      - Q36 table completion
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-NANYANG-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-NANYANG-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-NANYANG-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-NANYANG-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-NANYANG-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-NANYANG-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-NANYANG-Q10
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-NANYANG-Q11
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-NANYANG-Q12
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-SA2-NANYANG-Q13
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-NANYANG-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-NANYANG-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-NANYANG-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-NANYANG-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-NANYANG-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-SA2-NANYANG-Q19
+        category: vocab
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-NANYANG-Q30-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-SA2-NANYANG-Q30-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-SA2-NANYANG-Q30-32
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-SA2-NANYANG-Q33-37
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 11–13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q34
+        sourceQuestion: Q34
+        groupId: P3-CH-2025-SA2-NANYANG-Q33-37
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 11–13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q35
+        sourceQuestion: Q35
+        groupId: P3-CH-2025-SA2-NANYANG-Q33-37
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 11–13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NANYANG-Q37
+        sourceQuestion: Q37
+        groupId: P3-CH-2025-SA2-NANYANG-Q33-37
+        category: comprehension
+        source: P3_Chinese_2025_SA2_nanyang.pdf; PDF pages 11–13; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_northland.pdf
+    sourceSubject: Chinese
+    questionCount: 20
+    review: SA2_northland.md
+    categoryCounts:
+      vocab: 14
+      comprehension: 6
+    excluded:
+      - Q10–13 picture matching
+      - Q19–23 sentence rewriting
+      - Q24–28 paragraph ordering
+    notes:
+      - Paper cover says Chinese; answer sheet says Higher Chinese. Subject follows paper cover.
+    questions:
+      - id: P3-CH-2025-SA2-NORTHLAND-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q29-31
+        category: comprehension
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q29-31
+        category: comprehension
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q29-31
+        category: comprehension
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q32-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q32-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-NORTHLAND-Q34
+        sourceQuestion: Q34
+        groupId: P3-CH-2025-SA2-NORTHLAND-Q32-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_northland.pdf; PDF pages 11–12; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_raffles.pdf
+    sourceSubject: Chinese
+    questionCount: 20
+    review: SA2_raffles.md
+    categoryCounts:
+      vocab: 14
+      comprehension: 6
+    excluded:
+      - Paper 1 picture composition
+      - Q6–9 picture selection
+      - Q22–26 sentence rewriting
+      - Q27 paragraph ordering
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-RAFFLES-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-RAFFLES-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-RAFFLES-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-RAFFLES-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-RAFFLES-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-RAFFLES-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-RAFFLES-Q10
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-RAFFLES-Q11
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-RAFFLES-Q12
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-SA2-RAFFLES-Q13
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-RAFFLES-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-RAFFLES-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-SA2-RAFFLES-Q19
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-SA2-RAFFLES-Q20
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-SA2-RAFFLES-Q21
+        category: vocab
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF page 10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-RAFFLES-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-RAFFLES-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-RAFFLES-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-RAFFLES-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-RAFFLES-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 14–15; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-RAFFLES-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-RAFFLES-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_raffles.pdf; PDF pages 14–15; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_rosyth.pdf
+    sourceSubject: Chinese
+    questionCount: 19
+    review: SA2_rosyth.md
+    categoryCounts:
+      vocab: 12
+      conjunction: 1
+      comprehension: 6
+    excluded:
+      - Q6 wording obscured by overprinting
+      - Q10–13 picture selection
+      - Q19 paragraph ordering
+      - Q20–24 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-ROSYTH-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-ROSYTH-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-ROSYTH-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-ROSYTH-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-ROSYTH-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-ROSYTH-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-ROSYTH-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-ROSYTH-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-ROSYTH-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-ROSYTH-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-ROSYTH-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-ROSYTH-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-ROSYTH-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-ROSYTH-Q7
+        category: conjunction
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-ROSYTH-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-ROSYTH-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-ROSYTH-Q25-27
+        category: comprehension
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-ROSYTH-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-ROSYTH-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-ROSYTH-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-ROSYTH-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_SA2_rosyth.pdf; PDF pages 8–9; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_sthildas.pdf
+    sourceSubject: Chinese
+    questionCount: 20
+    review: SA2_sthildas.md
+    categoryCounts:
+      vocab: 13
+      conjunction: 1
+      comprehension: 6
+    excluded:
+      - Paper 1 picture composition
+      - Q13–16 picture matching
+      - Q22–26 sentence rewriting/imitation
+      - Q27–31 paragraph ordering
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-STHILDAS-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-STHILDAS-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-STHILDAS-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-STHILDAS-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-STHILDAS-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-STHILDAS-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-STHILDAS-Q6
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-STHILDAS-Q7
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 8; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-STHILDAS-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-SA2-STHILDAS-Q17
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-SA2-STHILDAS-Q18
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-SA2-STHILDAS-Q19
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-SA2-STHILDAS-Q20
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-SA2-STHILDAS-Q21
+        category: vocab
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 13; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-STHILDAS-Q9
+        category: conjunction
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-STHILDAS-Q10-12
+        category: comprehension
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-STHILDAS-Q10-12
+        category: comprehension
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-STHILDAS-Q10-12
+        category: comprehension
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-SA2-STHILDAS-Q32-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 18–19; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-SA2-STHILDAS-Q32-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 18–19; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-STHILDAS-Q34
+        sourceQuestion: Q34
+        groupId: P3-CH-2025-SA2-STHILDAS-Q32-34
+        category: comprehension
+        source: P3_Chinese_2025_SA2_sthildas.pdf; PDF pages 18–19; answer key supplied in PDF
+  - file: P3_Chinese_2025_SA2_taonan.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 29
+    review: SA2_taonan.md
+    categoryCounts:
+      vocab: 14
+      pinyin: 2
+      cloze: 4
+      comprehension: 9
+    excluded:
+      - Q17–20 sentence rewriting/expansion
+    notes: []
+    questions:
+      - id: P3-CH-2025-SA2-TAONAN-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-SA2-TAONAN-Q1
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-SA2-TAONAN-Q2
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-SA2-TAONAN-Q3
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-SA2-TAONAN-Q4
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-SA2-TAONAN-Q5
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-SA2-TAONAN-Q8
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-SA2-TAONAN-Q9
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-SA2-TAONAN-Q10
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-SA2-TAONAN-Q11
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-SA2-TAONAN-Q12
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-SA2-TAONAN-Q13
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-SA2-TAONAN-Q14
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-SA2-TAONAN-Q15
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-SA2-TAONAN-Q16
+        category: vocab
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-SA2-TAONAN-Q6
+        category: pinyin
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-SA2-TAONAN-Q7
+        category: pinyin
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-SA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-SA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-SA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-SA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 7; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-SA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-SA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-SA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-SA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 11–12; answer key supplied in PDF
+      - id: P3-CH-2025-SA2-TAONAN-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_SA2_taonan.pdf; PDF pages 11–12; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_acsprimary.pdf
+    sourceSubject: Chinese
+    questionCount: 12
+    review: WA1_acsprimary.md
+    categoryCounts:
+      vocab: 9
+      comprehension: 3
+    excluded:
+      - Q10–14 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q15-17
+        category: comprehension
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q15-17
+        category: comprehension
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ACSPRIMARY-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA1-ACSPRIMARY-Q15-17
+        category: comprehension
+        source: P3_Chinese_2025_WA1_acsprimary.pdf; PDF pages 7–8; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_aitong.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 13
+    review: WA1_aitong.md
+    categoryCounts:
+      vocab: 8
+      comprehension: 5
+    excluded:
+      - Picture composition
+      - Q11–13 sentence rewriting
+    notes:
+      - The language paper cover calls this a third-term exercise, despite the WA1 filename.
+    questions:
+      - id: P3-CH-2025-WA1-AITONG-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-AITONG-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-AITONG-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA1-AITONG-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA1-AITONG-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-AITONG-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA1-AITONG-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA1-AITONG-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA1-AITONG-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF page 7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA1-AITONG-Q9-10
+        category: comprehension
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA1-AITONG-Q9-10
+        category: comprehension
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA1-AITONG-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 12–13; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA1-AITONG-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 12–13; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-AITONG-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA1-AITONG-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA1_aitong.pdf; PDF pages 12–13; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_chij.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 17
+    review: WA1_chij.md
+    categoryCounts:
+      errorcorrect: 10
+      usage: 4
+      comprehension: 3
+    excluded:
+      - Q11–15 writing Chinese from pinyin
+      - Q16–18 writing pinyin
+      - Q26–28 strokes/stroke order/pinyin
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA1-CHIJ-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA1-CHIJ-Q19
+        category: usage
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-WA1-CHIJ-Q20
+        category: usage
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA1-CHIJ-Q21
+        category: usage
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA1-CHIJ-Q22
+        category: usage
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA1-CHIJ-Q23-25
+        category: comprehension
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA1-CHIJ-Q23-25
+        category: comprehension
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-CHIJ-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA1-CHIJ-Q23-25
+        category: comprehension
+        source: P3_Chinese_2025_WA1_chij.pdf; PDF pages 5; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_henrypark.pdf
+    sourceSubject: Chinese
+    questionCount: 14
+    review: WA1_henrypark.md
+    categoryCounts:
+      vocab: 8
+      comprehension: 6
+    excluded:
+      - Q3–4 picture-supported questions
+      - Q11 paragraph ordering
+      - Q12–13 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA1-HENRYPARK-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-HENRYPARK-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA1-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA1_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_nanyang.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 24
+    review: WA1_nanyang.md
+    categoryCounts:
+      vocab: 15
+      cloze: 5
+      comprehension: 4
+    excluded:
+      - Picture composition
+      - Q6–9 writing Chinese from pinyin
+      - Q20–24 sentence expansion
+      - Q33 table completion
+    notes:
+      - Filename says WA1; language paper cover says Second Weighted Assessment.
+    questions:
+      - id: P3-CH-2025-WA1-NANYANG-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-NANYANG-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-NANYANG-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA1-NANYANG-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA1-NANYANG-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-NANYANG-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA1-NANYANG-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA1-NANYANG-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA1-NANYANG-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA1-NANYANG-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA1-NANYANG-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA1-NANYANG-Q15
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA1-NANYANG-Q16
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA1-NANYANG-Q17
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA1-NANYANG-Q18
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA1-NANYANG-Q19
+        category: vocab
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+        category: cloze
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-WA1-NANYANG-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 9–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-WA1-NANYANG-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 9–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-WA1-NANYANG-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 9–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-NANYANG-Q34
+        sourceQuestion: Q34
+        groupId: P3-CH-2025-WA1-NANYANG-Q30-34
+        category: comprehension
+        source: P3_Chinese_2025_WA1_nanyang.pdf; PDF pages 9–11; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_rosyth.pdf
+    sourceSubject: Chinese
+    questionCount: 13
+    review: WA1_rosyth.md
+    categoryCounts:
+      vocab: 8
+      comprehension: 5
+    excluded:
+      - Q9–10 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA1-ROSYTH-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-ROSYTH-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-ROSYTH-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA1-ROSYTH-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA1-ROSYTH-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-ROSYTH-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA1-ROSYTH-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA1-ROSYTH-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA1-ROSYTH-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF pages 5–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF pages 5–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF pages 5–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF pages 5–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-ROSYTH-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA1_rosyth.pdf; PDF pages 5–7; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA1_taonan.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 29
+    review: WA1_taonan.md
+    categoryCounts:
+      vocab: 14
+      cloze: 4
+      comprehension: 9
+      pinyin: 2
+    excluded:
+      - Q17–20 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA1-TAONAN-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA1-TAONAN-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA1-TAONAN-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA1-TAONAN-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA1-TAONAN-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA1-TAONAN-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA1-TAONAN-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA1-TAONAN-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA1-TAONAN-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA1-TAONAN-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA1-TAONAN-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA1-TAONAN-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA1-TAONAN-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA1-TAONAN-Q15
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA1-TAONAN-Q16
+        category: vocab
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA1-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA1-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA1-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA1-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA1-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-WA1-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-WA1-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-WA1-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA1-TAONAN-Q6
+        category: pinyin
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA1-TAONAN-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA1-TAONAN-Q7
+        category: pinyin
+        source: P3_Chinese_2025_WA1_taonan.pdf; PDF page 2; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_catholic.pdf
+    sourceSubject: Chinese
+    questionCount: 24
+    review: WA2_catholic.md
+    categoryCounts:
+      vocab: 14
+      cloze: 4
+      comprehension: 6
+    excluded:
+      - Q19–21 sentence combining
+      - Q22–23 word ordering
+      - Q27 paragraph ordering
+    notes:
+      - Cloze prints 小明 in one sentence although the character is otherwise 小华; retained as printed.
+    questions:
+      - id: P3-CH-2025-WA2-CATHOLIC-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q15-18
+        category: cloze
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q15-18
+        category: cloze
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q15-18
+        category: cloze
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q15-18
+        category: cloze
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q24-26
+        category: comprehension
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q24-26
+        category: comprehension
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q24-26
+        category: comprehension
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CATHOLIC-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-WA2-CATHOLIC-Q28-30
+        category: comprehension
+        source: P3_Chinese_2025_WA2_catholic.pdf; PDF pages 10; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_chij.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 17
+    review: WA2_chij.md
+    categoryCounts:
+      errorcorrect: 10
+      usage: 4
+      comprehension: 3
+    excluded:
+      - Q11–15 writing Chinese from pinyin
+      - Q16–18 writing pinyin
+      - Q26–28 stroke order/pinyin
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA2-CHIJ-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA2-CHIJ-Q19
+        category: usage
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-WA2-CHIJ-Q20
+        category: usage
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA2-CHIJ-Q21
+        category: usage
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA2-CHIJ-Q22
+        category: usage
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA2-CHIJ-Q23-25
+        category: comprehension
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA2-CHIJ-Q23-25
+        category: comprehension
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-CHIJ-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA2-CHIJ-Q23-25
+        category: comprehension
+        source: P3_Chinese_2025_WA2_chij.pdf; PDF pages 4–5; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_henrypark.pdf
+    sourceSubject: Chinese
+    questionCount: 14
+    review: WA2_henrypark.md
+    categoryCounts:
+      vocab: 8
+      comprehension: 6
+    excluded:
+      - Q3–4 picture-supported questions
+      - Q11 paragraph ordering
+      - Q12–13 sentence rewriting
+    notes:
+      - Individual question marks are not printed; sourceMarks is omitted, and passage questions use the existing parser’s default of 2 marks.
+    questions:
+      - id: P3-CH-2025-WA2-HENRYPARK-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-HENRYPARK-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA2-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA2_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_mahabodhi.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 17
+    review: WA2_mahabodhi.md
+    categoryCounts:
+      vocab: 10
+      cloze: 4
+      comprehension: 3
+    excluded:
+      - Picture composition
+    notes:
+      - Language paper cover says 语文挑战（一）, dated 12 March, despite WA2 filename. Individual marks are not printed in the language questions.
+      - Individual question marks are not printed; sourceMarks is omitted, and passage questions use the existing parser’s default of 2 marks.
+    questions:
+      - id: P3-CH-2025-WA2-MAHABODHI-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q11-14
+        category: cloze
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q11-14
+        category: cloze
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q11-14
+        category: cloze
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q11-14
+        category: cloze
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q15-17
+        category: comprehension
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q15-17
+        category: comprehension
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-MAHABODHI-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA2-MAHABODHI-Q15-17
+        category: comprehension
+        source: P3_Chinese_2025_WA2_mahabodhi.pdf; PDF pages 6–7; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_methodist.pdf
+    sourceSubject: Chinese
+    questionCount: 15
+    review: WA2_methodist.md
+    categoryCounts:
+      vocab: 10
+      comprehension: 5
+    excluded: []
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA2-METHODIST-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-METHODIST-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-METHODIST-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-METHODIST-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-METHODIST-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-METHODIST-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-METHODIST-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-METHODIST-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-METHODIST-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-METHODIST-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-METHODIST-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF pages 5–6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF pages 5–6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF pages 5–6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF pages 5–6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-METHODIST-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_methodist.pdf; PDF pages 5–6; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_nanhua.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 14
+    review: WA2_nanhua.md
+    categoryCounts:
+      vocab: 8
+      cloze: 3
+      practical: 3
+    excluded: []
+    notes:
+      - The notice prints 10月5日（星期四）; retained without changing its weekday to fit the filename year.
+    questions:
+      - id: P3-CH-2025-WA2-NANHUA-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-NANHUA-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-NANHUA-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-NANHUA-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-NANHUA-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-NANHUA-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-NANHUA-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-NANHUA-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-NANHUA-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF page 5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-NANHUA-Q5-7
+        category: cloze
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-NANHUA-Q5-7
+        category: cloze
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-NANHUA-Q5-7
+        category: cloze
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-NANHUA-Q12-14
+        category: practical
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-NANHUA-Q12-14
+        category: practical
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-NANHUA-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-NANHUA-Q12-14
+        category: practical
+        source: P3_Chinese_2025_WA2_nanhua.pdf; PDF pages 6–7; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_peihwa.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 10
+    review: WA2_peihwa.md
+    categoryCounts:
+      vocab: 10
+    excluded:
+      - Q8–11 picture matching
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA2-PEIHWA-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-PEIHWA-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-PEIHWA-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-PEIHWA-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-PEIHWA-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-PEIHWA-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-PEIHWA-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-PEIHWA-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-PEIHWA-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-PEIHWA-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-PEIHWA-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-PEIHWA-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA2_peihwa.pdf; PDF page 6; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_raffles.pdf
+    sourceSubject: Chinese
+    questionCount: 10
+    review: WA2_raffles.md
+    categoryCounts:
+      vocab: 6
+      comprehension: 4
+    excluded:
+      - Q7–9 picture selection
+      - Q10 paragraph ordering
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA2-RAFFLES-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-RAFFLES-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-RAFFLES-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-RAFFLES-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-RAFFLES-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-RAFFLES-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-RAFFLES-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-RAFFLES-Q11-14
+        category: comprehension
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-RAFFLES-Q11-14
+        category: comprehension
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-RAFFLES-Q11-14
+        category: comprehension
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-RAFFLES-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-RAFFLES-Q11-14
+        category: comprehension
+        source: P3_Chinese_2025_WA2_raffles.pdf; PDF pages 6–7; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_rosyth.pdf
+    sourceSubject: Chinese
+    questionCount: 13
+    review: WA2_rosyth.md
+    categoryCounts:
+      vocab: 8
+      comprehension: 5
+    excluded:
+      - Q9–10 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA2-ROSYTH-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-ROSYTH-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-ROSYTH-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-ROSYTH-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-ROSYTH-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-ROSYTH-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-ROSYTH-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-ROSYTH-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-ROSYTH-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-ROSYTH-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+        category: comprehension
+        source: P3_Chinese_2025_WA2_rosyth.pdf; PDF pages 4–5; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_sthildas.pdf
+    sourceSubject: Chinese
+    questionCount: 3
+    review: WA2_sthildas.md
+    categoryCounts:
+      comprehension: 3
+    excluded:
+      - Term 2 picture composition
+      - Q1–5 sentence rewriting/imitation
+    notes:
+      - Filename WA2 contains a Term 3 language paper; its cover and answer sheet are retained as the source of the content.
+    questions:
+      - id: P3-CH-2025-WA2-STHILDAS-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-STHILDAS-Q6-8
+        category: comprehension
+        source: P3_Chinese_2025_WA2_sthildas.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-STHILDAS-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-STHILDAS-Q6-8
+        category: comprehension
+        source: P3_Chinese_2025_WA2_sthildas.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-STHILDAS-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-STHILDAS-Q6-8
+        category: comprehension
+        source: P3_Chinese_2025_WA2_sthildas.pdf; PDF pages 8–9; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA2_taonan.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 29
+    review: WA2_taonan.md
+    categoryCounts:
+      vocab: 14
+      cloze: 4
+      comprehension: 9
+      pinyin: 2
+    excluded:
+      - Q17–20 sentence rewriting
+    notes: []
+    questions:
+      - id: P3-CH-2025-WA2-TAONAN-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA2-TAONAN-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA2-TAONAN-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA2-TAONAN-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA2-TAONAN-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA2-TAONAN-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA2-TAONAN-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA2-TAONAN-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA2-TAONAN-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA2-TAONAN-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA2-TAONAN-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA2-TAONAN-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA2-TAONAN-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA2-TAONAN-Q15
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA2-TAONAN-Q16
+        category: vocab
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA2-TAONAN-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-WA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-WA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-WA2-TAONAN-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 7–8; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF pages 9–10; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA2-TAONAN-Q6
+        category: pinyin
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA2-TAONAN-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA2-TAONAN-Q7
+        category: pinyin
+        source: P3_Chinese_2025_WA2_taonan.pdf; PDF page 2; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA3_catholic.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 34
+    review: WA3_catholic.md
+    categoryCounts:
+      errorcorrect: 20
+      usage: 8
+      comprehension: 6
+    excluded:
+      - "Both revision sets: Q11–15 writing Chinese from pinyin, Q16–17 writing pinyin, Q25–27 strokes/stroke order/pinyin"
+    notes:
+      - Despite the Catholic WA3 filename, this PDF contains CHIJ St Nicholas Higher Chinese revision exercises（三）and（四）. Set suffixes S3/S4 keep repeated question numbers unique.
+    questions:
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+        category: errorcorrect
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 8; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q18
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q19
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q20
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q21
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q18
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q19
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q20
+        sourceQuestion: Q20
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q20
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q21
+        category: usage
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q22-24
+        category: comprehension
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q22-24
+        category: comprehension
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S3-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q22-24
+        category: comprehension
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 4–5; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q22-24
+        category: comprehension
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q22-24
+        category: comprehension
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-CATHOLIC-S4-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q22-24
+        category: comprehension
+        source: P3_Chinese_2025_WA3_catholic.pdf; PDF pages 10–11; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA3_henrypark.pdf
+    sourceSubject: Chinese
+    questionCount: 14
+    review: WA3_henrypark.md
+    categoryCounts:
+      vocab: 8
+      comprehension: 6
+    excluded:
+      - Q3–4 picture-supported questions
+      - Q11 paragraph ordering
+      - Q12–13 sentence expansion/imitation
+    notes:
+      - Individual question marks are not printed; sourceMarks is omitted, and passage questions use the existing parser’s default of 2 marks.
+    questions:
+      - id: P3-CH-2025-WA3-HENRYPARK-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q6
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q7
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q14-16
+        category: comprehension
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 6–7; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q17
+        sourceQuestion: Q17
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q18
+        sourceQuestion: Q18
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-HENRYPARK-Q19
+        sourceQuestion: Q19
+        groupId: P3-CH-2025-WA3-HENRYPARK-Q17-19
+        category: comprehension
+        source: P3_Chinese_2025_WA3_henrypark.pdf; PDF pages 8–9; answer key supplied in PDF
+  - file: P3_Chinese_2025_WA3_taonan.pdf
+    sourceSubject: Higher Chinese
+    questionCount: 58
+    review: WA3_taonan.md
+    categoryCounts:
+      vocab: 28
+      pinyin: 4
+      cloze: 8
+      comprehension: 18
+    excluded:
+      - "Both supplementary exercises: Q17–20 sentence rewriting/imitation"
+    notes:
+      - This PDF contains supplementary exercises（三）and（四）. Set suffixes S3/S4 keep repeated question numbers unique.
+    questions:
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 1; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 3; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q15
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q16
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 4; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q1
+        sourceQuestion: Q1
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q1
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 15; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q2
+        sourceQuestion: Q2
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q2
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 15; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q3
+        sourceQuestion: Q3
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q3
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 15; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q4
+        sourceQuestion: Q4
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q4
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q5
+        sourceQuestion: Q5
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q5
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q8
+        sourceQuestion: Q8
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q8
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q9
+        sourceQuestion: Q9
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q9
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q10
+        sourceQuestion: Q10
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q10
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q11
+        sourceQuestion: Q11
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q11
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 17; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q12
+        sourceQuestion: Q12
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q12
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q13
+        sourceQuestion: Q13
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q13
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q14
+        sourceQuestion: Q14
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q14
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q15
+        sourceQuestion: Q15
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q15
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q16
+        sourceQuestion: Q16
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q16
+        category: vocab
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 18; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q6
+        category: pinyin
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q7
+        category: pinyin
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 2; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q6
+        sourceQuestion: Q6
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q6
+        category: pinyin
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q7
+        sourceQuestion: Q7
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q7
+        category: pinyin
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF page 16; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 6; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q21
+        sourceQuestion: Q21
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 20; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q22
+        sourceQuestion: Q22
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 20; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q23
+        sourceQuestion: Q23
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 20; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q24
+        sourceQuestion: Q24
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q21-24
+        category: cloze
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 20; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 8–9; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S3-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 10–11; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q25
+        sourceQuestion: Q25
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 22–23; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q26
+        sourceQuestion: Q26
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 22–23; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q27
+        sourceQuestion: Q27
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 22–23; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q28
+        sourceQuestion: Q28
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q25-28
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 22–23; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q29
+        sourceQuestion: Q29
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 24–25; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q30
+        sourceQuestion: Q30
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 24–25; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q31
+        sourceQuestion: Q31
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 24–25; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q32
+        sourceQuestion: Q32
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 24–25; answer key supplied in PDF
+      - id: P3-CH-2025-WA3-TAONAN-S4-Q33
+        sourceQuestion: Q33
+        groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+        category: comprehension
+        source: P3_Chinese_2025_WA3_taonan.pdf; PDF pages 24–25; answer key supplied in PDF

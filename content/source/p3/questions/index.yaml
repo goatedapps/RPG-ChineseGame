@@ -1,0 +1,5700 @@
+- groupId: P3-CH-2025-SA2-CHIJ-Q17-21
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-SA2-METHODIST-Q17-20
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-SA2-NANHUA-Q9-12
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-SA2-NANYANG-Q25-29
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-SA2-TAONAN-Q21-24
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA1-NANYANG-Q25-29
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA1-TAONAN-Q21-24
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q15-18
+  subject: Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q11-14
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA2-NANHUA-Q5-7
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-TAONAN-Q21-24
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q21-24
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q21-24
+  subject: Higher Chinese
+  category: cloze
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-SA2-ACS-Q28-30
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q25-27
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q28-30
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-AITONG-Q10-12
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-AITONG-Q28-30
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-CHIJ-Q14-16
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-CHIJ-Q30-34
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q25-27
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q28-30
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 2
+- groupId: P3-CH-2025-SA2-METHODIST-Q26-28
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-METHODIST-Q29-31
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-NANHUA-Q29-32
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-SA2-NANYANG-Q30-32
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-NANYANG-Q33-37
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q29-31
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q32-34
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-RAFFLES-Q14-16
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-RAFFLES-Q28-30
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-ROSYTH-Q25-27
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-ROSYTH-Q28-30
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-STHILDAS-Q10-12
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-STHILDAS-Q32-34
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-TAONAN-Q25-28
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-SA2-TAONAN-Q29-33
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q15-17
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA1-AITONG-Q9-10
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 2
+- groupId: P3-CH-2025-WA1-AITONG-Q14-16
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA1-CHIJ-Q23-25
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q14-16
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q17-19
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA1-NANYANG-Q30-34
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA1-ROSYTH-Q11-15
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA1-TAONAN-Q25-28
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA1-TAONAN-Q29-33
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q24-26
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q28-30
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-CHIJ-Q23-25
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q14-16
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q17-19
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q15-17
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-METHODIST-Q11-15
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA2-RAFFLES-Q11-14
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA2-ROSYTH-Q11-15
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA2-STHILDAS-Q6-8
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-TAONAN-Q25-28
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA2-TAONAN-Q29-33
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q22-24
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q22-24
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q14-16
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q17-19
+  subject: Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q25-28
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q29-33
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q25-28
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 4
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q29-33
+  subject: Higher Chinese
+  category: comprehension
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-SA2-ROSYTH-Q7
+  subject: Chinese
+  category: conjunction
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q9
+  subject: Chinese
+  category: conjunction
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q22-26
+  subject: Higher Chinese
+  category: dialogue
+  lessonIds: []
+  questionCount: 5
+- groupId: P3-CH-2025-WA1-CHIJ-Q1-10
+  subject: Higher Chinese
+  category: errorcorrect
+  lessonIds: []
+  questionCount: 10
+- groupId: P3-CH-2025-WA2-CHIJ-Q1-10
+  subject: Higher Chinese
+  category: errorcorrect
+  lessonIds: []
+  questionCount: 10
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q1-10
+  subject: Higher Chinese
+  category: errorcorrect
+  lessonIds: []
+  questionCount: 10
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q1-10
+  subject: Higher Chinese
+  category: errorcorrect
+  lessonIds: []
+  questionCount: 10
+- groupId: P3-CH-AUTHORED-L2-Q07
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q08
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q07
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q07
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q06
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q07
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q08
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q09
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q15
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q16
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q08
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q09
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q08
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L13-Q02
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q13
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q14
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q06
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q15
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q16
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q17
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q11
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q12
+  subject: Chinese
+  category: phrase
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q1
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q2
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q6
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q7
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q6
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q7
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q6
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q7
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q6
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q7
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q6
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q7
+  subject: Higher Chinese
+  category: pinyin
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q03
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q04
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q03
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q03
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L13-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q03
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q08
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q03
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q04
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q01
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q02
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q03
+  subject: Chinese
+  category: pinyin
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q25-27
+  subject: Chinese
+  category: practical
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q25-27
+  subject: Higher Chinese
+  category: practical
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-NANHUA-Q26-28
+  subject: Higher Chinese
+  category: practical
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-WA2-NANHUA-Q12-14
+  subject: Higher Chinese
+  category: practical
+  lessonIds: []
+  questionCount: 3
+- groupId: P3-CH-2025-SA2-CHIJ-Q10
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q11
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q12
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q13
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-CHIJ-Q19
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-CHIJ-Q20
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 1
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-CHIJ-Q21
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-CHIJ-Q22
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CHIJ-Q19
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CHIJ-Q20
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CHIJ-Q21
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CHIJ-Q22
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q18
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 10
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q19
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q20
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S3-Q21
+  subject: Higher Chinese
+  category: usage
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q18
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q19
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q20
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-CATHOLIC-S4-Q21
+  subject: Higher Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACS-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ACSJUNIOR-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-AITONG-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-CHIJ-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-HENRYPARK-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q17
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-MAHABODHI-Q18
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q13
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-METHODIST-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANHUA-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q17
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q18
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NANYANG-Q19
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-NORTHLAND-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q13
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q19
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q20
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-RAFFLES-Q21
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q15
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q16
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-ROSYTH-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q17
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q18
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q19
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q20
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-STHILDAS-Q21
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-SA2-TAONAN-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ACSPRIMARY-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-AITONG-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-HENRYPARK-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+    - 11
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q17
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q18
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-NANYANG-Q19
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-ROSYTH-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA1-TAONAN-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q13
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-CATHOLIC-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-HENRYPARK-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-MAHABODHI-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-METHODIST-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-NANHUA-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q6
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q7
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-PEIHWA-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-RAFFLES-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-RAFFLES-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-RAFFLES-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-RAFFLES-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-RAFFLES-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-RAFFLES-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q3
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q4
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-ROSYTH-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-2025-WA2-TAONAN-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q1
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q2
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q5
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q6
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 10
+    - 17
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q7
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q8
+  subject: Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q9
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-HENRYPARK-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S3-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q1
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q2
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q3
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q4
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q5
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q8
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q9
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q10
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q11
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q12
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q13
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q14
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q15
+  subject: Higher Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-2025-WA3-TAONAN-S4-Q16
+  subject: Higher Chinese
+  category: vocab
+  lessonIds: []
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L2-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L4-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L5-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L7-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L8-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q08
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q09
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q13
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L9-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L11-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L12-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q09
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L14-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q03
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L15-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q08
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q09
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q11
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q12
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q13
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L16-Q14
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q04
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q05
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q06
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q07
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q08
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q09
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: P3-CH-AUTHORED-L17-Q10
+  subject: Chinese
+  category: vocab
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L01-USAGE-25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 1
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L02-USAGE-25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 2
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L03-USAGE-25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 3
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-26
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-27
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L04-USAGE-28
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 4
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L05-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 5
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L06-USAGE-25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 6
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L07-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 7
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-25
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-26
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L08-USAGE-27
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 8
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L09-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 9
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L10-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 10
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L11-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 11
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L12-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 12
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L13-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 13
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-23
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L14-USAGE-24
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 14
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L15-USAGE-22
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 15
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L16-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 16
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-01
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-02
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-03
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-04
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-05
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-06
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-07
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-08
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-09
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-10
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-11
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-12
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-13
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-14
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-15
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-16
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-17
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-18
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-19
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-20
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1
+- groupId: WSQ-P3-L17-USAGE-21
+  subject: Chinese
+  category: usage
+  lessonIds:
+    - 17
+  questionCount: 1

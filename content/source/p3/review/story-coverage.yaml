@@ -1,0 +1,580 @@
+level: p3
+storyCount: 17
+totalPages: 88
+vocabularyMinimumPercent: 50
+minimumActualPercent: 58.3
+coverageMethod: Unique taught vocabulary in parsed story prose, excluding titles, page headings and incidental character/morpheme matches.
+stories:
+  - lessonId: 1
+    title: 纸马也要练习
+    type: 校园喜剧
+    pages: 5
+    sentenceCount: 24
+    vocabularyUsed: 18
+    vocabularyTotal: 25
+    percentage: 72
+    usedWords:
+      - 龙争虎斗
+      - 你追我赶
+      - 马到成功
+      - 科学
+      - 将来
+      - 当
+      - 司机
+      - 希望
+      - 成为
+      - 练习
+      - 就
+      - 努力
+      - 讲
+      - 做
+      - 第一
+      - 交
+      - 举手
+      - 件
+    unusedWords:
+      - 军人
+      - 保卫
+      - 篇
+      - 课文
+      - 复习
+      - 翻到
+      - 读
+  - lessonId: 2
+    title: 谁是“虎先生”？
+    type: 书店里的误会
+    pages: 5
+    sentenceCount: 24
+    vocabularyUsed: 19
+    vocabularyTotal: 25
+    percentage: 76
+    usedWords:
+      - 陈
+      - 双
+      - 胡
+      - 李
+      - 吴
+      - 姓
+      - 名
+      - 胖
+      - 帮手
+      - 聪明
+      - 意思
+      - 姑妈
+      - 语言
+      - 谈天
+      - 奇怪
+      - 问题
+      - 退
+      - 相信
+      - 一定
+    unusedWords:
+      - 言
+      - 瘦
+      - 矮
+      - 因为
+      - 一些
+      - 梦想成真
+    incidentalMatchesNotCounted:
+      - 言
+  - lessonId: 3
+    title: 我不叫“再睡五分钟”
+    type: 梦境故事
+    pages: 5
+    sentenceCount: 24
+    vocabularyUsed: 21
+    vocabularyTotal: 25
+    percentage: 84
+    usedWords:
+      - 陪
+      - 装
+      - 喝
+      - 蓝色
+      - 床单
+      - 超人
+      - 按
+      - 盖子
+      - 吸管
+      - 闹钟
+      - 伙伴
+      - 背
+      - 手表
+      - 响
+      - 睡觉
+      - 准时
+      - 改掉
+      - 迟到
+      - 习惯
+      - 名字
+      - 真
+    unusedWords:
+      - 辆
+      - 弹
+      - 粉红
+      - 形状
+  - lessonId: 4
+    title: 我的尾巴去哪里了？
+    type: 动物成长故事
+    pages: 6
+    sentenceCount: 27
+    vocabularyUsed: 20
+    vocabularyTotal: 28
+    percentage: 71.4
+    usedWords:
+      - 浅
+      - 变
+      - 深
+      - 窄
+      - 宽
+      - 短
+      - 变化
+      - 细
+      - 根
+      - 越
+      - 幼苗
+      - 摆动
+      - 条
+      - 后腿
+      - 嘴巴
+      - 找
+      - 喊
+      - 露
+      - 肚皮
+      - 已经
+    unusedWords:
+      - 内
+      - 入
+      - 由
+      - 绿豆
+      - 干死
+      - 哪里
+      - 披
+      - 孩子们
+  - lessonId: 5
+    title: 面包味的鲜花
+    type: 家庭生活喜剧
+    pages: 5
+    sentenceCount: 22
+    vocabularyUsed: 17
+    vocabularyTotal: 21
+    percentage: 81
+    usedWords:
+      - 美食展
+      - 园艺展
+      - 傍晚
+      - 或者
+      - 报纸
+      - 号
+      - 刚刚
+      - 付
+      - 钱
+      - 束
+      - 鲜花
+      - 提
+      - 扫地
+      - 都
+      - 收到
+      - 知道
+      - 准备
+    unusedWords:
+      - 电脑展
+      - 旅游展
+      - 多彩
+      - 杂志
+  - lessonId: 6
+    title: 刺猬的专座
+    type: 动物友情故事
+    pages: 5
+    sentenceCount: 23
+    vocabularyUsed: 19
+    vocabularyTotal: 25
+    percentage: 76
+    usedWords:
+      - 软
+      - 硬
+      - 松
+      - 紧
+      - 应该
+      - 推
+      - 原谅
+      - 弄破
+      - 突然
+      - 来不及
+      - 爬起来
+      - 怎么
+      - 不理
+      - 跌倒
+      - 受伤
+      - 立刻
+      - 扶
+      - 不好意思
+      - 谢谢
+    unusedWords:
+      - 失去
+      - 错误
+      - 扔
+      - 错
+      - 没关系
+      - 比赛
+  - lessonId: 7
+    title: 猫爪印的便条
+    type: 家庭生活故事
+    pages: 5
+    sentenceCount: 24
+    vocabularyUsed: 18
+    vocabularyTotal: 22
+    percentage: 81.8
+    usedWords:
+      - 打碎
+      - 赔钱
+      - 留
+      - 张
+      - 便条
+      - 花盆
+      - 道歉
+      - 溜走
+      - 眼镜
+      - 病
+      - 休息
+      - 电视
+      - 轻轻地
+      - 脱
+      - 事情
+      - 轻手轻脚
+      - 搬动
+      - 地板
+    unusedWords:
+      - 食堂
+      - 踩断
+      - 走路
+      - 灵机一动
+  - lessonId: 8
+    title: 巨人的小灯笼
+    type: 巨人童话
+    pages: 6
+    sentenceCount: 26
+    vocabularyUsed: 24
+    vocabularyTotal: 27
+    percentage: 88.9
+    usedWords:
+      - 需要
+      - 贺卡
+      - 部分
+      - 接着
+      - 涂上
+      - 洞
+      - 穿
+      - 然后
+      - 吊
+      - 阳台
+      - 灯笼
+      - 挂
+      - 客厅
+      - 衣服
+      - 开始
+      - 请求
+      - 比较
+      - 晒
+      - 重
+      - 歪
+      - 乱
+      - 累
+      - 满头大汗
+      - 塞
+    unusedWords:
+      - 裙子
+      - 裤子
+      - 让
+  - lessonId: 9
+    title: 坑里的大鼻子
+    type: 动物救援冒险
+    pages: 5
+    sentenceCount: 23
+    vocabularyUsed: 15
+    vocabularyTotal: 24
+    percentage: 62.5
+    usedWords:
+      - 小熊
+      - 坑
+      - 鼻子
+      - 河
+      - 救
+      - 小猴子
+      - 竹竿
+      - 篮子
+      - 满
+      - 谁
+      - 回答
+      - 拉
+      - 最后
+      - 重量
+      - 夸
+    unusedWords:
+      - 倒进
+      - 喷
+      - 升
+      - 称
+      - 官员
+      - 像
+      - 墙
+      - 下沉
+      - 神童
+  - lessonId: 10
+    title: 乌鸦旅店的一号房
+    type: 动物寓言
+    pages: 5
+    sentenceCount: 23
+    vocabularyUsed: 21
+    vocabularyTotal: 24
+    percentage: 87.5
+    usedWords:
+      - 扔
+      - 垃圾
+      - 蚊子
+      - 收拾
+      - 乌鸦
+      - 保持
+      - 爱护
+      - 环境
+      - 厨房
+      - 脏
+      - 衣橱
+      - 仔细
+      - 啊
+      - 漂亮
+      - 招手
+      - 决定
+      - 吃惊
+      - 不能
+      - 伸出
+      - 缩
+      - 觉得
+    unusedWords:
+      - 随地
+      - 痰
+      - 追上
+  - lessonId: 11
+    title: 大鲸鱼卡在门口
+    type: 社区环保故事
+    pages: 6
+    sentenceCount: 28
+    vocabularyUsed: 20
+    vocabularyTotal: 22
+    percentage: 90.9
+    usedWords:
+      - 环保袋
+      - 代替
+      - 塑料袋
+      - 巴刹
+      - 使用
+      - 废物
+      - 瓶子
+      - 组屋
+      - 并排
+      - 停车场
+      - 辆
+      - 一直
+      - 海洋
+      - 纸
+      - 日用品
+      - 认为
+      - 责任
+      - 如果
+      - 尽
+      - 份
+    unusedWords:
+      - 所以
+      - 吧
+  - lessonId: 12
+    title: 向后闪的第五颗星
+    type: 校园节庆喜剧
+    pages: 5
+    sentenceCount: 21
+    vocabularyUsed: 18
+    vocabularyTotal: 21
+    percentage: 85.7
+    usedWords:
+      - 设计
+      - 亮晶晶
+      - 新加坡
+      - 颗
+      - 世界
+      - 种族
+      - 华人
+      - 印度人
+      - 文件夹
+      - 国庆日
+      - 礼物
+      - 唱
+      - 国歌
+      - 竖起
+      - 大拇指
+      - 合唱团
+      - 呢
+      - 兴奋
+    unusedWords:
+      - 国旗
+      - 其中
+      - 谜语
+  - lessonId: 13
+    title: 狐狸邮差绕远路
+    type: 森林邮差冒险
+    pages: 6
+    sentenceCount: 26
+    vocabularyUsed: 21
+    vocabularyTotal: 23
+    percentage: 91.3
+    usedWords:
+      - 湖
+      - 森林
+      - 狐狸
+      - 狼
+      - 桥
+      - 猩猩
+      - 沿着
+      - 沙滩
+      - 棵
+      - 信封
+      - 地图
+      - 必须
+      - 指定
+      - 讨论
+      - 带领
+      - 任务
+      - 急忙
+      - 漂亮
+      - 虽然
+      - 但是
+      - 仍然
+    unusedWords:
+      - 养
+      - 虾
+  - lessonId: 14
+    title: 小猪的大勺子
+    type: 动物厨房喜剧
+    pages: 4
+    sentenceCount: 20
+    vocabularyUsed: 14
+    vocabularyTotal: 24
+    percentage: 58.3
+    usedWords:
+      - 吞
+      - 慢
+      - 咸
+      - 淡
+      - 眼睛
+      - 灰色
+      - 饿
+      - 饱
+      - 散步
+      - 尾巴
+      - 圆圆
+      - 笨重
+      - 够
+      - 躺
+    unusedWords:
+      - 假
+      - 强
+      - 弱
+      - 懒
+      - 苦
+      - 滑滑
+      - 胖胖
+      - 玩耍
+      - 打滚
+      - 咬断
+    incidentalMatchesNotCounted:
+      - 胖胖
+  - lessonId: 15
+    title: 肚子也想当演员
+    type: 校园表演故事
+    pages: 5
+    sentenceCount: 25
+    vocabularyUsed: 19
+    vocabularyTotal: 22
+    percentage: 86.4
+    usedWords:
+      - 小偷
+      - 课室
+      - 吓
+      - 冒出
+      - 冷汗
+      - 发抖
+      - 不敢
+      - 钻进
+      - 怀里
+      - 朱
+      - 班
+      - 练习
+      - 简单
+      - 桌
+      - 漫画
+      - 忍不住
+      - 肚皮
+      - 哈哈大笑
+      - 闹笑话
+    unusedWords:
+      - 逃不掉
+      - 痛
+      - 哎呀
+  - lessonId: 16
+    title: 小鸭子的最后一页
+    type: 故事里的故事
+    pages: 5
+    sentenceCount: 23
+    vocabularyUsed: 19
+    vocabularyTotal: 20
+    percentage: 95
+    usedWords:
+      - 有始无终
+      - 虎头蛇尾
+      - 半途而废
+      - 勤学
+      - 俩
+      - 泡泡
+      - 钓鱼
+      - 结果
+      - 数学
+      - 题
+      - 却
+      - 认识
+      - 念
+      - 传
+      - 别人
+      - 感到
+      - 低
+      - 抬
+      - 终于
+    unusedWords:
+      - 滑轮
+  - lessonId: 17
+    title: 神仙的第一盘青菜
+    type: 神仙童话
+    pages: 5
+    sentenceCount: 23
+    vocabularyUsed: 15
+    vocabularyTotal: 21
+    percentage: 71.4
+    usedWords:
+      - 农夫
+      - 劳动
+      - 神仙
+      - 摘下
+      - 精灵
+      - 铁
+      - 金
+      - 银
+      - 签名
+      - 等
+      - 减掉
+      - 算
+      - 立刻
+      - 检查
+      - 决定
+    unusedWords:
+      - 渔夫
+      - 捞出
+      - 失去
+      - 银牌
+      - 万
+      - 千

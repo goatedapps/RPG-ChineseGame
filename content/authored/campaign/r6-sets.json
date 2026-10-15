@@ -13,5 +13,9 @@
     { "id": "research-tools", "name": "Research Tools", "words": ["技术", "搜索", "确定", "储存"], "restoration": "The researchers recover their carefully stored discoveries." },
     { "id": "hidden-wonders", "name": "Hidden Wonders", "words": ["隐形", "幻想", "魔术", "瞧见"], "restoration": "The grove displays its hidden wonders again." },
     { "id": "patient-discovery", "name": "Patient Discovery", "words": ["逐渐", "恰好", "触碰", "晃荡"], "restoration": "The dig team resumes its patient exploration beneath the canopy." }
+  ],
+  "p3": [
+    {"id":"expedition","name":"Grove Expedition","words":["地图","讨论","带领","任务"],"restoration":"The researchers plan their next expedition together."},
+    {"id":"laughter","name":"Laughter Returns","words":["简单","漫画","忍不住","哈哈大笑"],"restoration":"Laughter returns to the researchers’ reading corner."}
   ]
 }

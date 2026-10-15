@@ -11,6 +11,7 @@ Jun’s benefit-focused level-3 handoffs lead to contextual notes that retire on
 Read `gameplan.md` for product rules, architecture and the remaining roadmap.
 Read `CURRICULUM_REQUIREMENTS.md` before adding or changing a playable curriculum or its lesson content.
 P6 includes 200 parent-reviewed vocabulary questions with separate records for repeated-word lessons; matching authored battle questions cover 263 of its 300 lesson vocabulary entries.
+P3 has 17 lessons and 1,212 questions, with dedicated Heavy Slam Usage for all 399 lesson vocabulary entries; `content/source/p3/review/authored-usage.md` lists the 387 additions and ten approved samples.
 
 Production URLs:
 
@@ -21,7 +22,7 @@ Production URLs:
 ## Repository map
 
 - `index.html` is the playable shell; `game/` redirects old bookmarks.
-- `walkthrough/index.html` introduces the separate seven-region walkthrough linked from Parent Mode.
+- `walkthrough/index.html` introduces the separate seven-region walkthrough linked from Parent Mode; its shop lists use the game's regional stock filter and cosmetic catalogue.
 - `src/` contains the ES-module runtime.
 - `css/` contains the modular visual system.
 - `content/source/<level>/` contains curriculum source material.
@@ -32,6 +33,7 @@ Production URLs:
 - `assets/audio/` contains packaged music and effects.
 - `tests/` contains regression coverage.
 - `src/systems/ending.js` owns the post-game portal and optional-discovery ledger; `src/ui/ending.js` presents the finale.
+- `src/ui/creatureCollection.js` keeps creature cards compact, with exact support and meaningful next-level growth inside collapsed Ability details.
 
 ## Product invariants
 
@@ -88,7 +90,7 @@ Production URLs:
 - Start offline installation after the opening screen paints, with at most two low-priority asset downloads at once.
 - Keep the Scholar Atlas shell consistent from curriculum selection through all seven regions, and reuse illustrated buildings and terrain detail across safe villages.
 - Keep village signs and guide dialogue aligned with the routes; all seven villages are safe, including Treehouse Summit.
-- Keep Parent Mode actions in place with a clear confirmation instead of resetting its scroll position.
+- Keep Parent Mode actions in place without resetting scroll; confirm tutorial skipping in a modal pop-up.
 - Keep the Spirit Book, Bag, Daily Board and equipment art lightweight and available offline.
 - Reuse the Atlas panel treatment across navigation and building windows, and use the shared building/gate sprites on both towns and fog routes.
 - Reuse the same optimized Word Spirit emblem for the game header, favicon and install icons.
@@ -115,5 +117,3 @@ Production URLs:
 - Use `?debug=1` to expose the Learning Lab and build-status controls.
 - Update `gameplan.md`, `PILOT.md` and this file only when their durable facts change.
 - Keep this file below 120 lines and remove stale guidance instead of appending history.
-- For long Markdown edits, place each full sentence on its own physical line.
-- Prefer quality, simplicity, robustness and maintainability over short-term development cost.

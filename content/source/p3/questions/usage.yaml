@@ -1,0 +1,5511 @@
+- questionID: P3-CH-2025-SA2-CHIJ-Q10
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q10
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds:
+    - 15
+  question: 以下哪个句子是正确的？
+  options:
+    - 今天的功课很__简单__，我一下子就做好了。
+    - 爷爷的生活很__简单__，他常常出国去游玩。
+    - 包粽子很__简单__，不管我怎么包都包不好。
+    - 这双鞋的设计很__简单__，要花很多时间做。
+  correct: 今天的功课很__简单__，我一下子就做好了。
+  targetWord: 简单
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q11
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q11
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 以下哪个句子是正确的？
+  options:
+    - 弟弟__浪费__一张纸，做了生日卡给爸爸。
+    - 妈妈常常去看奶奶，__浪费__了很多时间。
+    - 我不__浪费__水，洗手后会把水龙头关好。
+    - 这些玩具都已经坏了，丢掉非常__浪费__。
+  correct: 我不__浪费__水，洗手后会把水龙头关好。
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q12
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q12
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 以下哪个句子是正确的？
+  options:
+    - 我很__强壮__，没有人能让我改掉坏习惯。
+    - 这些树的树干很__强壮__，建房子最合适。
+    - 今天的太阳很__强壮__，我热得满头大汗。
+    - 爷爷虽然九十岁了，但是身体很__强壮__。
+  correct: 爷爷虽然九十岁了，但是身体很__强壮__。
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-CHIJ-Q13
+  source: P3_Chinese_2025_SA2_chij.pdf; PDF page 5; answer key supplied in PDF
+  sourceQuestion: Q13
+  sourceSubject: Higher Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 以下哪个句子是正确的？
+  options:
+    - 弟弟真__有趣__，常常让爸爸妈妈很生气。
+    - 爸爸的工作很__有趣__，他很晚才能回家。
+    - 老师的游戏__有趣__极了，我们玩了又玩。
+    - 这部戏非常__有趣__，我们都感动得哭了。
+  correct: 老师的游戏__有趣__极了，我们玩了又玩。
+  subject: Higher Chinese
+  marks: 1
+- questionID: P3-CH-2025-WA1-CHIJ-Q19
+  source: P3_Chinese_2025_WA1_chij.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 1
+  question: “希望”用在哪个句子中是正确的？
+  options:
+    - 我__希望__将来能成为一名飞机师。
+    - 我们__希望__很久的假期终于来了。
+    - 同学们都__希望__着儿童节的到来。
+    - 脚踏车是弟弟一直__希望__的礼物。
+  correct: 我__希望__将来能成为一名飞机师。
+  targetWord: 希望
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA1-CHIJ-Q20
+  source: P3_Chinese_2025_WA1_chij.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q20
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 1
+    - 15
+  question: “练习”用在哪个句子中是正确的？
+  options:
+    - 老师说只要我经常__练习__课本，就不会忘了新学的字。
+    - 表哥读大学的时候，曾经到美国的一家大工厂__练习__。
+    - 哥哥正在为明天的考试__练习__，因此没空和我玩游戏。
+    - 我每天都__练习__唱歌，这样以后就能够参加歌唱比赛。
+  correct: 我每天都__练习__唱歌，这样以后就能够参加歌唱比赛。
+  targetWord: 练习
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA1-CHIJ-Q21
+  source: P3_Chinese_2025_WA1_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q21
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds: []
+  question: “强壮”用在哪个句子中是正确的？
+  options:
+    - 这支笔非常__强壮__，我用了几年都没坏。
+    - 他的数学很__强壮__，考试每次都得满分。
+    - 这阵大风十分__强壮__，把大树都吹倒了。
+    - 哥哥常常跑步和游泳，身体十分__强壮__。
+  correct: 哥哥常常跑步和游泳，身体十分__强壮__。
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA1-CHIJ-Q22
+  source: P3_Chinese_2025_WA1_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q22
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds: []
+  question: “陪伴”用在哪个句子中是正确的？
+  options:
+    - 听到喜欢的歌后，妹妹__陪伴__着歌声跳起舞来。
+    - 我家的小狗每天都__陪伴__我，是我最好的朋友。
+    - 下课后，老师让班长拿本子__陪伴__她去办公室。
+    - 我们四个人互相__陪伴__，很快完成了小组作业。
+  correct: 我家的小狗每天都__陪伴__我，是我最好的朋友。
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-CHIJ-Q19
+  source: P3_Chinese_2025_WA2_chij.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds: []
+  question: “连忙”用在哪个句子中是正确的？
+  options:
+    - 看见弟弟跌倒了，我__连忙__跑过去把他扶起来。
+    - 我帮妈妈扫地和洗菜，妈妈__连忙__感到很开心。
+    - 门外的小树一天一天__连忙__长高，变成了大树。
+    - 哥哥__连忙__去跑步和游泳，身体变得非常强壮。
+  correct: 看见弟弟跌倒了，我__连忙__跑过去把他扶起来。
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-CHIJ-Q20
+  source: P3_Chinese_2025_WA2_chij.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q20
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 6
+  question: “原谅”用在哪个句子中是正确的？
+  options:
+    - 爸妈工作十分辛苦，我们应该__原谅__他们。
+    - 哥哥今天身体很不舒服，我们要__原谅__他。
+    - 他只是去帮同学拿书，我们不要__原谅__他。
+    - 虽然妹妹弄坏我的玩具，我还是__原谅__她。
+  correct: 虽然妹妹弄坏我的玩具，我还是__原谅__她。
+  targetWord: 原谅
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-CHIJ-Q21
+  source: P3_Chinese_2025_WA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q21
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 7
+  question: “休息”用在哪个句子中是正确的？
+  options:
+    - 过去的三年里，王奶奶都在国外的老人院__休息__。
+    - 妹妹放学回家后觉得非常累，就躺在床上__休息__。
+    - 爷爷六十岁那年__休息__后，每天都到公园打太极。
+    - 这家在山上的旅馆空气很新鲜，适合人们__休息__。
+  correct: 妹妹放学回家后觉得非常累，就躺在床上__休息__。
+  targetWord: 休息
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA2-CHIJ-Q22
+  source: P3_Chinese_2025_WA2_chij.pdf; PDF page 4; answer key supplied in PDF
+  sourceQuestion: Q22
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds: []
+  question: “整齐”用在哪个句子中是正确的？
+  options:
+    - 图书馆里的书摆放得很__整齐__。
+    - 妈妈气我没有把书包__整齐__好。
+    - 老师喜欢鞋袜都__整齐__的学生。
+    - 妹妹每天自己把房间__整齐__好。
+  correct: 图书馆里的书摆放得很__整齐__。
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q18
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 10
+    - 17
+  question: “决定”用在哪个句子中是正确的？
+  options:
+    - 我和妈妈都__决定__这一件衣服十分美丽。
+    - 同学们__决定__班长这次的听写得了高分。
+    - 大家都__决定__老师刚才讲的故事很有趣。
+    - 我和姐姐__决定__每天早上都去公园跑步。
+  correct: 我和姐姐__决定__每天早上都去公园跑步。
+  targetWord: 决定
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q19
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 11
+  question: “如果”用在哪个句子中是正确的？
+  options:
+    - __如果__外面下着雨，我还是要去图书馆借书。
+    - __如果__哥哥每天专心听课，就能有好的表现。
+    - __如果__妹妹没有在比赛中得奖，但她很高兴。
+    - __如果__弟弟用心学习，妈妈说他是个好孩子。
+  correct: __如果__哥哥每天专心听课，就能有好的表现。
+  targetWord: 如果
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q20
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q20
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 10
+  question: “吃惊”用在哪个句子中是正确的？
+  options:
+    - 那个不学习的孩子又迟到了，老师很__吃惊__。
+    - 我的小狗已经病了几个月，我感到很__吃惊__。
+    - 妹妹一直找不到回家的路，心里__吃惊__极了。
+    - 今天早上学校突然停电，我们都十分__吃惊__。
+  correct: 今天早上学校突然停电，我们都十分__吃惊__。
+  targetWord: 吃惊
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S3-Q21
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 3; answer key supplied in PDF
+  sourceQuestion: Q21
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds: []
+  question: “利用”用在哪个句子中是正确的？
+  options:
+    - 我__利用__休息的时间，完成了大部分的功课。
+    - 电脑的__利用__十分大，帮助我们做了很多事。
+    - 这台洗衣机是新的，奶奶不知道怎么__利用__。
+    - 这支蓝色的笔用了很久也没坏，十分__利用__。
+  correct: 我__利用__休息的时间，完成了大部分的功课。
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q18
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q18
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 13
+  question: “虽然”用在哪个句子中是正确的？
+  options:
+    - __虽然__妹妹身体不舒服，我们就不要出去了。
+    - __虽然__老师不在教室，但同学们还是很安静。
+    - __虽然__大家都用环保袋购物，就能保护环境。
+    - __虽然__班长生病了，所以今天没来学校上课。
+  correct: __虽然__老师不在教室，但同学们还是很安静。
+  targetWord: 虽然
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q19
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q19
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 13
+  question: “必须”用在哪个句子中是正确的？
+  options:
+    - 弟弟__必须__先把功课做完，才可以出去玩。
+    - 公公刚刚跌倒了，请朋友__必须__扶他回家。
+    - 植物生长__必须__充足的阳光、水分和空气。
+    - 妈妈一早到超市，买了__必须__的用品回来。
+  correct: 弟弟__必须__先把功课做完，才可以出去玩。
+  targetWord: 必须
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q20
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q20
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 16
+  question: “结果”用在哪个句子中是正确的？
+  options:
+    - 哥哥每天只想着玩耍，__结果__听写不及格。
+    - 我先把功课做完，__结果__才和妹妹一起玩。
+    - 老师叫我们回家做功课，__结果__我做对了。
+    - 我们不应该乱扔垃圾，__结果__会引来蚊虫。
+  correct: 哥哥每天只想着玩耍，__结果__听写不及格。
+  targetWord: 结果
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-2025-WA3-CATHOLIC-S4-Q21
+  source: P3_Chinese_2025_WA3_catholic.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q21
+  sourceSubject: Higher Chinese
+  sourceMarks: 2
+  lessonIds:
+    - 17
+  question: “检查”用在哪个句子中是正确的？
+  options:
+    - 只要__检查__报纸，就能知道最近发生的事。
+    - 爸爸__检查__了手表，发现时间已经不早了。
+    - 老师要我们__检查__之后，再把作业交给她。
+    - 我们一做错事，妈妈就要我们好好__检查__。
+  correct: 老师要我们__检查__之后，再把作业交给她。
+  targetWord: 检查
+  subject: Higher Chinese
+  marks: 2
+- questionID: P3-CH-AUTHORED-L2-Q09
+  source: "Original authored P3 practice; Lesson 2; taught vocabulary: 奇怪."
+  targetWord: 奇怪
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“奇怪”？
+  options:
+    - 抽屉里明明没有东西，却传出声音，真奇怪。
+    - 我用奇怪把纸剪成小花。
+    - 妈妈买了三公斤奇怪回家。
+    - 他把书奇怪到第十页。
+  correct: 抽屉里明明没有东西，却传出声音，真奇怪。
+- questionID: P3-CH-AUTHORED-L4-Q08
+  source: "Original authored P3 practice; Lesson 4; taught vocabulary: 哪里."
+  targetWord: 哪里
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“哪里”？
+  options:
+    - 我买了三本哪里放在书包里。
+    - 弟弟把哪里喝得一滴不剩。
+    - 妈妈用哪里把地板擦干净。
+    - 我的橡皮不见了，你知道它在哪里吗？
+  correct: 我的橡皮不见了，你知道它在哪里吗？
+- questionID: P3-CH-AUTHORED-L5-Q08
+  source: "Original authored P3 practice; Lesson 5; taught vocabulary: 或者."
+  targetWord: 或者
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“或者”？
+  options:
+    - 妈妈把或者倒进杯子里。
+    - 这个箱子很或者，我搬不动。
+    - 弟弟穿着一条或者的裤子。
+    - 你可以选苹果或者梨，只能拿一个。
+  correct: 你可以选苹果或者梨，只能拿一个。
+- questionID: P3-CH-AUTHORED-L7-Q08
+  source: "Original authored P3 practice; Lesson 7; taught vocabulary: 道歉."
+  targetWord: 道歉
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“道歉”？
+  options:
+    - 妈妈到商店道歉了一袋米。
+    - 弟弟把窗户道歉得很干净。
+    - 这碗汤很道歉，我喝了两碗。
+    - 我弄坏了朋友的玩具，便向他道歉。
+  correct: 我弄坏了朋友的玩具，便向他道歉。
+- questionID: P3-CH-AUTHORED-L8-Q10
+  source: "Original authored P3 practice; Lesson 8; taught vocabulary: 然后."
+  targetWord: 然后
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“然后”？
+  options:
+    - 妈妈买了一件然后送给我。
+    - 我先把手洗干净，然后才吃面包。
+    - 这只小猫很然后，大家都喜欢它。
+    - 爷爷用然后浇花。
+  correct: 我先把手洗干净，然后才吃面包。
+- questionID: P3-CH-AUTHORED-L9-Q17
+  source: "Original authored P3 practice; Lesson 9; taught vocabulary: 夸."
+  targetWord: 夸
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“夸”？
+  options:
+    - 老师夸我的字写得整齐，我听了很开心。
+    - 弟弟把书夸到第三页。
+    - 妈妈用夸把汤盛进碗里。
+    - 这张桌子太夸，我搬不动。
+  correct: 老师夸我的字写得整齐，我听了很开心。
+- questionID: P3-CH-AUTHORED-L11-Q10
+  source: "Original authored P3 practice; Lesson 11; taught vocabulary: 使用."
+  targetWord: 使用
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“使用”？
+  options:
+    - 今天的雨使用得很大。
+    - 使用剪刀时，要小心刀口。
+    - 我使用了一碗饭，肚子饱了。
+    - 这件外套的颜色很使用。
+  correct: 使用剪刀时，要小心刀口。
+- questionID: P3-CH-AUTHORED-L12-Q09
+  source: "Original authored P3 practice; Lesson 12; taught vocabulary: 其中."
+  targetWord: 其中
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“其中”？
+  options:
+    - 桌上有三本书，其中一本是我的。
+    - 妈妈把衣服其中在阳台上。
+    - 弟弟其中了一杯水。
+    - 这条裙子很其中。
+  correct: 桌上有三本书，其中一本是我的。
+- questionID: P3-CH-AUTHORED-L14-Q15
+  source: "Original authored P3 practice; Lesson 14; taught vocabulary: 玩耍."
+  targetWord: 玩耍
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“玩耍”？
+  options:
+    - 妈妈把晚饭玩耍好了。
+    - 这张桌子太玩耍，放不进房间。
+    - 放学后，孩子们在操场上玩耍。
+    - 我穿上一件玩耍出门。
+  correct: 放学后，孩子们在操场上玩耍。
+- questionID: P3-CH-AUTHORED-L15-Q07
+  source: "Original authored P3 practice; Lesson 15; taught vocabulary: 不敢."
+  targetWord: 不敢
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“不敢”？
+  options:
+    - 妈妈用不敢扫地。
+    - 这本书有三页不敢。
+    - 水太深了，弟弟害怕，所以不敢下水。
+    - 我把外套不敢在衣架上。
+  correct: 水太深了，弟弟害怕，所以不敢下水。
+- questionID: P3-CH-AUTHORED-L16-Q18
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 却."
+  targetWord: 却
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“却”？
+  options:
+    - 我买了一件却送给妹妹。
+    - 我想把这件事做好，却不小心弄错了。
+    - 这碗汤却得很好喝。
+    - 弟弟把书却在桌上。
+  correct: 我想把这件事做好，却不小心弄错了。
+- questionID: P3-CH-AUTHORED-L16-Q19
+  source: "Original authored P3 practice; Lesson 16; taught vocabulary: 终于."
+  targetWord: 终于
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“终于”？
+  options:
+    - 妈妈终于着一篮青菜回家。
+    - 这块石头很终于，我搬不动。
+    - 练习了很多次，我终于学会了游泳。
+    - 我把课本终于到第十页。
+  correct: 练习了很多次，我终于学会了游泳。
+- questionID: WSQ-P3-L01-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 龙争虎斗.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 龙争虎斗
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“龙争虎斗”？
+  options:
+    - 大家安静地吃着午饭，真是一场龙争虎斗。
+    - 两支强队展开了一场龙争虎斗，比赛十分精彩。
+    - 妹妹躺在床上睡着了，睡得龙争虎斗。
+    - 妈妈把房间打扫得龙争虎斗，非常干净。
+  correct: 两支强队展开了一场龙争虎斗，比赛十分精彩。
+- questionID: WSQ-P3-L01-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 你追我赶.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 你追我赶
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“你追我赶”？
+  options:
+    - 两张桌子你追我赶地放在教室里。
+    - 妹妹你追我赶地坐着，一动也不动。
+    - 这碗汤你追我赶，喝起来很鲜美。
+    - 跑道上的选手你追我赶，都想最先到达终点。
+  correct: 跑道上的选手你追我赶，都想最先到达终点。
+- questionID: WSQ-P3-L01-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 马到成功.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 马到成功
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“马到成功”？
+  options:
+    - 姐姐明天参加比赛，我们祝她马到成功。
+    - 弟弟把杯子打破了，真是马到成功。
+    - 这条路很马到成功，走起来十分舒服。
+    - 我马到成功地等了一个小时，朋友还是没来。
+  correct: 姐姐明天参加比赛，我们祝她马到成功。
+- questionID: WSQ-P3-L01-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 科学.'
+  subject: Chinese
+  targetWord: 科学
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“科学”？
+  options:
+    - 哥哥把科学穿在脚上去踢球。
+    - 科学课上，我们观察种子怎样发芽。
+    - 妈妈切了一片科学放进锅里。
+    - 弟弟用科学把门锁上了。
+  correct: 科学课上，我们观察种子怎样发芽。
+- questionID: WSQ-P3-L01-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 将来.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 将来
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“将来”？
+  options:
+    - 将来放在桌上的那本书是我的。
+    - 妹妹把将来装进书包，准备上学。
+    - 我希望将来能成为一名医生，帮助生病的人。
+    - 爷爷将来小时候，住在一个小村子里。
+  correct: 我希望将来能成为一名医生，帮助生病的人。
+- questionID: WSQ-P3-L01-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 当.'
+  subject: Chinese
+  targetWord: 当
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“当”？
+  options:
+    - 爸爸当了一碗汤给我喝。
+    - 妈妈用毛巾把桌子当干净。
+    - 妹妹把鞋子当进鞋柜里。
+    - 姐姐长大后想当一名老师。
+  correct: 姐姐长大后想当一名老师。
+- questionID: WSQ-P3-L01-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 司机.'
+  subject: Chinese
+  targetWord: 司机
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“司机”？
+  options:
+    - 巴士司机把车稳稳地停在车站。
+    - 爸爸把司机戴在头上挡太阳。
+    - 我用司机擦掉本子上的铅笔字。
+    - 妈妈买了两公斤司机来煮汤。
+  correct: 巴士司机把车稳稳地停在车站。
+- questionID: WSQ-P3-L01-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 希望.'
+  subject: Chinese
+  targetWord: 希望
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“希望”？
+  options:
+    - 弟弟把皮球希望到墙上。
+    - 我希望明天天气晴朗，可以去公园玩。
+    - 妈妈希望着一把雨伞出门。
+    - 这双鞋很希望，穿起来不合脚。
+  correct: 我希望明天天气晴朗，可以去公园玩。
+- questionID: WSQ-P3-L01-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 成为.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 成为
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“成为”？
+  options:
+    - 妈妈成为了一篮水果回家。
+    - 经过努力练习，姐姐成为学校游泳队的一员。
+    - 我们成为明天的比赛做准备。
+    - 弟弟拿起水壶，成为杯子里倒水。
+  correct: 经过努力练习，姐姐成为学校游泳队的一员。
+- questionID: WSQ-P3-L01-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 军人.'
+  subject: Chinese
+  targetWord: 军人
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“军人”？
+  options:
+    - 哥哥穿上一件军人去上学。
+    - 妈妈把军人倒进杯子里。
+    - 我用军人在纸上写名字。
+    - 叔叔是一名军人，每天都要参加训练。
+  correct: 叔叔是一名军人，每天都要参加训练。
+- questionID: WSQ-P3-L01-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 保卫.'
+  subject: Chinese
+  targetWord: 保卫
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“保卫”？
+  options:
+    - 军人保卫国家，让人民安心生活。
+    - 妈妈把青菜保卫进锅里煮。
+    - 妹妹用铅笔保卫了一幅画。
+    - 这条裙子穿起来很保卫。
+  correct: 军人保卫国家，让人民安心生活。
+- questionID: WSQ-P3-L01-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 练习.'
+  subject: Chinese
+  targetWord: 练习
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“练习”？
+  options:
+    - 我用练习把头发梳整齐。
+    - 我每天练习写字，字越写越整齐。
+    - 奶奶买了一公斤练习回家。
+    - 这杯水很练习，喝起来很凉。
+  correct: 我每天练习写字，字越写越整齐。
+- questionID: WSQ-P3-L01-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 就.'
+  subject: Chinese
+  targetWord: 就
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“就”？
+  options:
+    - 妈妈买了一件就给妹妹穿。
+    - 这只小狗就得很可爱。
+    - 做完作业，我就去洗澡。
+    - 我用就把瓶盖打开了。
+  correct: 做完作业，我就去洗澡。
+- questionID: WSQ-P3-L01-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 努力.'
+  subject: Chinese
+  targetWord: 努力
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“努力”？
+  options:
+    - 哥哥把努力戴在手腕上看时间。
+    - 妈妈盛了一碗努力给我吃。
+    - 这面墙努力得很高。
+    - 他努力学习，希望取得好成绩。
+  correct: 他努力学习，希望取得好成绩。
+- questionID: WSQ-P3-L01-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 讲.'
+  subject: Chinese
+  targetWord: 讲
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“讲”？
+  options:
+    - 爷爷给我们讲了一个有趣的故事。
+    - 妈妈把窗户讲得很干净。
+    - 弟弟把鞋带讲紧了。
+    - 我拿起雨伞，讲在头上挡雨。
+  correct: 爷爷给我们讲了一个有趣的故事。
+- questionID: WSQ-P3-L01-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 篇.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 篇
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“篇”？
+  options:
+    - 我用一篇铅笔写下自己的名字。
+    - 爸爸带我们看了一篇电影。
+    - 妹妹拿来一篇白纸画画。
+    - 我写了一篇介绍校园的作文。
+  correct: 我写了一篇介绍校园的作文。
+- questionID: WSQ-P3-L01-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 课文.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 课文
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“课文”？
+  options:
+    - 放学后，我把课文穿在身上。
+    - 老师请我们朗读课文的第一段。
+    - 妈妈用课文把地板扫干净。
+    - 弟弟很口渴，一口气喝完了课文。
+  correct: 老师请我们朗读课文的第一段。
+- questionID: WSQ-P3-L01-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 复习.'
+  subject: Chinese
+  targetWord: 复习
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“复习”？
+  options:
+    - 妈妈在厨房里复习了一碗汤。
+    - 我把门复习上，免得风吹进来。
+    - 弟弟用毛巾复习头发上的水。
+    - 测验前，我复习了学过的生字。
+  correct: 测验前，我复习了学过的生字。
+- questionID: WSQ-P3-L01-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 做.'
+  subject: Chinese
+  targetWord: 做
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“做”？
+  options:
+    - 我先做作业，再去玩。
+    - 我用耳朵做见了门外的声音。
+    - 妹妹把课文做得很大声，大家都听见了。
+    - 爸爸做进房间，坐在椅子上。
+  correct: 我先做作业，再去玩。
+- questionID: WSQ-P3-L01-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 第一.'
+  subject: Chinese
+  targetWord: 第一
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“第一”？
+  options:
+    - 妈妈把第一切成薄片煮汤。
+    - 她在跑步比赛中得了第一名。
+    - 我用第一量一量桌子的长度。
+    - 妹妹穿上一件第一出门。
+  correct: 她在跑步比赛中得了第一名。
+- questionID: WSQ-P3-L01-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 交.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 交
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“交”？
+  options:
+    - 我检查好作业，才把作业交给老师。
+    - 弟弟把帽子交在头上，准备出门。
+    - 老师把这道数学题交得很清楚，大家都听懂了。
+    - 妹妹用彩笔把小花交成红色。
+  correct: 我检查好作业，才把作业交给老师。
+- questionID: WSQ-P3-L01-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 举手.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 举手
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“举手”？
+  options:
+    - 这道题很举手，我一下子就做完了。
+    - 妈妈举手了一锅汤，准备吃晚饭。
+    - 我把书包举手在椅子上。
+    - 老师问谁知道答案，小明马上举手。
+  correct: 老师问谁知道答案，小明马上举手。
+- questionID: WSQ-P3-L01-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 件.'
+  reviewStatus: user-approved-sample
+  subject: Chinese
+  targetWord: 件
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“件”？
+  options:
+    - 我喝了一件温水，觉得舒服多了。
+    - 操场上有三件孩子在踢球。
+    - 帮助有困难的同学是一件好事。
+    - 这件小路通向学校的大门。
+  correct: 帮助有困难的同学是一件好事。
+- questionID: WSQ-P3-L01-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 翻到.'
+  subject: Chinese
+  targetWord: 翻到
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“翻到”？
+  options:
+    - 妈妈把盐翻到得很咸。
+    - 老师请我们把课本翻到第十页。
+    - 弟弟用胶水翻到断开的纸条。
+    - 爷爷翻到了一口茶，觉得很香。
+  correct: 老师请我们把课本翻到第十页。
+- questionID: WSQ-P3-L01-USAGE-25
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 1; taught vocabulary: 读.'
+  subject: Chinese
+  targetWord: 读
+  lessonIds:
+    - 1
+  question: 以下哪一个句子正确使用了“读”？
+  options:
+    - 爸爸用眼睛读见远处的飞机。
+    - 妈妈把衣服读在阳台上晾干。
+    - 我每天晚上读一本故事书。
+    - 弟弟把牛奶读进杯子里。
+  correct: 我每天晚上读一本故事书。
+- questionID: WSQ-P3-L02-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 陈.'
+  subject: Chinese
+  targetWord: 陈
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“陈”？
+  options:
+    - 妈妈把米饭陈进碗里。
+    - 弟弟的书包很陈，装不下课本。
+    - 我陈着雨伞走进学校。
+    - 我们的华文老师姓陈。
+  correct: 我们的华文老师姓陈。
+- questionID: WSQ-P3-L02-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 双.'
+  subject: Chinese
+  targetWord: 双
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“双”？
+  options:
+    - 妈妈买了一双新鞋。
+    - 我喝了一双牛奶。
+    - 门口停着一双巴士。
+    - 爸爸读了一双报纸。
+  correct: 妈妈买了一双新鞋。
+- questionID: WSQ-P3-L02-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 胡.'
+  subject: Chinese
+  targetWord: 胡
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“胡”？
+  options:
+    - 妈妈胡了一锅热汤。
+    - 胡叔叔是一位司机。
+    - 这杯果汁很胡，我想再喝一杯。
+    - 弟弟把书胡进抽屉里。
+  correct: 胡叔叔是一位司机。
+- questionID: WSQ-P3-L02-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 李.'
+  subject: Chinese
+  targetWord: 李
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“李”？
+  options:
+    - 爸爸用李把门锁好。
+    - 姐姐把衣服李在阳台上。
+    - 我的朋友姓李，名叫小明。
+    - 妈妈李了一碗面给我。
+  correct: 我的朋友姓李，名叫小明。
+- questionID: WSQ-P3-L02-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 吴.'
+  subject: Chinese
+  targetWord: 吴
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“吴”？
+  options:
+    - 奶奶把水果吴在盘子里。
+    - 我用吴擦干桌上的水。
+    - 这道题很吴，我不会做。
+    - 吴老师教我们画画。
+  correct: 吴老师教我们画画。
+- questionID: WSQ-P3-L02-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 言.'
+  subject: Chinese
+  targetWord: 言
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“言”？
+  options:
+    - “许”字左边的“讠”是“言”字的偏旁形式。
+    - “江”字左边的三点水叫作言字旁。
+    - “妈”字左边的女字旁叫作言字旁。
+    - “拍”字左边的提手旁叫作言字旁。
+  correct: “许”字左边的“讠”是“言”字的偏旁形式。
+- questionID: WSQ-P3-L02-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 姓.'
+  subject: Chinese
+  targetWord: 姓
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“姓”？
+  options:
+    - 我把名字姓在本子上。
+    - 我姓王，名叫小华。
+    - 妈妈姓了一件外套给我穿。
+    - 小狗姓进屋里躲雨。
+  correct: 我姓王，名叫小华。
+- questionID: WSQ-P3-L02-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 名.'
+  subject: Chinese
+  targetWord: 名
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“名”？
+  options:
+    - 一名汽车停在路边。
+    - 我喝了一名热水。
+    - 他姓陈，名叫小明。
+    - 爸爸买了一名桌子。
+  correct: 他姓陈，名叫小明。
+- questionID: WSQ-P3-L02-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 胖.'
+  subject: Chinese
+  targetWord: 胖
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“胖”？
+  options:
+    - 这个杯子里的水很胖。
+    - 妹妹把课本胖进书包。
+    - 哥哥胖着一首歌，大家都听见了。
+    - 这只胖猫走路慢慢的。
+  correct: 这只胖猫走路慢慢的。
+- questionID: WSQ-P3-L02-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 瘦.'
+  subject: Chinese
+  targetWord: 瘦
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“瘦”？
+  options:
+    - 这只小猫很瘦，需要好好照顾。
+    - 这首歌唱起来很瘦。
+    - 我把地板瘦得很干净。
+    - 姐姐瘦了一杯水给我喝。
+  correct: 这只小猫很瘦，需要好好照顾。
+- questionID: WSQ-P3-L02-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 矮.'
+  subject: Chinese
+  targetWord: 矮
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“矮”？
+  options:
+    - 这碗汤很矮，我喝了两碗。
+    - 弟弟比我矮半个头。
+    - 弟弟把房门矮上了。
+    - 姐姐矮着书包去学校。
+  correct: 弟弟比我矮半个头。
+- questionID: WSQ-P3-L02-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 帮手.'
+  subject: Chinese
+  targetWord: 帮手
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“帮手”？
+  options:
+    - 妈妈用帮手把汤煮开。
+    - 弟弟把帮手喝光了。
+    - 姐姐是妈妈做家务的好帮手。
+    - 这件衣服很帮手，穿起来舒服。
+  correct: 姐姐是妈妈做家务的好帮手。
+- questionID: WSQ-P3-L02-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 聪明.'
+  subject: Chinese
+  targetWord: 聪明
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“聪明”？
+  options:
+    - 这块石头很聪明，所以我搬不动。
+    - 妈妈把衣服聪明在衣架上。
+    - 弟弟聪明了一碗饭。
+    - 她很聪明，很快就想出了答案。
+  correct: 她很聪明，很快就想出了答案。
+- questionID: WSQ-P3-L02-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 意思.'
+  subject: Chinese
+  targetWord: 意思
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“意思”？
+  options:
+    - 我不明白这个词的意思。
+    - 老师请我意思一张图画。
+    - 哥哥把意思戴在手腕上。
+    - 妈妈意思了一锅粥。
+  correct: 我不明白这个词的意思。
+- questionID: WSQ-P3-L02-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 姑妈.'
+  subject: Chinese
+  targetWord: 姑妈
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“姑妈”？
+  options:
+    - 我用姑妈把地板拖干净。
+    - 姑妈是爸爸的姐姐。
+    - 妹妹喝了一杯姑妈。
+    - 爸爸把一件姑妈穿在身上。
+  correct: 姑妈是爸爸的姐姐。
+- questionID: WSQ-P3-L02-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 因为.'
+  subject: Chinese
+  targetWord: 因为
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“因为”？
+  options:
+    - 我先吃饭，因为再洗碗。
+    - 妹妹买了一本因为来看。
+    - 因为下雨，我们留在家里。
+    - 这件衣服很因为，穿着舒服。
+  correct: 因为下雨，我们留在家里。
+- questionID: WSQ-P3-L02-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 语言.'
+  subject: Chinese
+  targetWord: 语言
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“语言”？
+  options:
+    - 妈妈把语言倒进花盆里浇花。
+    - 我用语言把纸剪成圆形。
+    - 爸爸穿上一双语言出门。
+    - 华语和英语是两种不同的语言。
+  correct: 华语和英语是两种不同的语言。
+- questionID: WSQ-P3-L02-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 谈天.'
+  subject: Chinese
+  targetWord: 谈天
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“谈天”？
+  options:
+    - 爷爷和邻居在楼下谈天。
+    - 妈妈把米饭谈天进碗里。
+    - 我用毛巾谈天脸上的汗。
+    - 这条路很谈天，汽车过不去。
+  correct: 爷爷和邻居在楼下谈天。
+- questionID: WSQ-P3-L02-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 一些.'
+  subject: Chinese
+  targetWord: 一些
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“一些”？
+  options:
+    - 我买了一些只铅笔。
+    - 篮子里有一些苹果。
+    - 桌上放着一些个苹果。
+    - 弟弟喝了一些杯牛奶。
+  correct: 篮子里有一些苹果。
+- questionID: WSQ-P3-L02-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 问题.'
+  subject: Chinese
+  targetWord: 问题
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“问题”？
+  options:
+    - 姐姐把问题穿在脚上。
+    - 爸爸用问题把墙刷白。
+    - 奶奶把问题煮熟给我吃。
+    - 我有一个问题想请教老师。
+  correct: 我有一个问题想请教老师。
+- questionID: WSQ-P3-L02-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 退.'
+  subject: Chinese
+  targetWord: 退
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“退”？
+  options:
+    - 他向后退了一步，让别人先走。
+    - 哥哥把书退开，开始读第一课。
+    - 妹妹退了一首歌给我们听。
+    - 妈妈用刀退了几个苹果。
+  correct: 他向后退了一步，让别人先走。
+- questionID: WSQ-P3-L02-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 相信.'
+  subject: Chinese
+  targetWord: 相信
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“相信”？
+  options:
+    - 我相信了一碗汤，肚子饱了。
+    - 我相信你会认真完成任务。
+    - 哥哥把书包相信在椅子上。
+    - 这面墙相信得很高。
+  correct: 我相信你会认真完成任务。
+- questionID: WSQ-P3-L02-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 一定.'
+  subject: Chinese
+  targetWord: 一定
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“一定”？
+  options:
+    - 爸爸把一定锁在抽屉里。
+    - 小狗一定着尾巴跑过来。
+    - 我答应了你，就一定会来。
+    - 妈妈买了一公斤一定。
+  correct: 我答应了你，就一定会来。
+- questionID: WSQ-P3-L02-USAGE-25
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 2; taught vocabulary: 梦想成真.'
+  subject: Chinese
+  targetWord: 梦想成真
+  lessonIds:
+    - 2
+  question: 以下哪一个句子正确使用了“梦想成真”？
+  options:
+    - 他从来没实现过愿望，真是梦想成真。
+    - 这碗面梦想成真，吃起来很香。
+    - 妹妹把桌子擦得梦想成真。
+    - 她终于当上老师，梦想成真了。
+  correct: 她终于当上老师，梦想成真了。
+- questionID: WSQ-P3-L03-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 陪.'
+  subject: Chinese
+  targetWord: 陪
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“陪”？
+  options:
+    - 妈妈陪我去图书馆。
+    - 我把外套陪在衣架上。
+    - 妹妹用杯子陪了一口水。
+    - 妈妈陪了一锅饭给我们吃。
+  correct: 妈妈陪我去图书馆。
+- questionID: WSQ-P3-L03-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 装.'
+  subject: Chinese
+  targetWord: 装
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“装”？
+  options:
+    - 姐姐用眼睛装见一只小鸟。
+    - 我把水装进水壶。
+    - 弟弟把课文装得很响，大家都听见了。
+    - 我把水杯装在嘴里，一口喝下去。
+  correct: 我把水装进水壶。
+- questionID: WSQ-P3-L03-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 喝.'
+  subject: Chinese
+  targetWord: 喝
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“喝”？
+  options:
+    - 姐姐用铅笔喝出自己的名字。
+    - 妈妈喝着自行车去巴刹。
+    - 跑步后，我喝了一杯水。
+    - 姐姐把衣服喝得很干净。
+  correct: 跑步后，我喝了一杯水。
+- questionID: WSQ-P3-L03-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 蓝色.'
+  subject: Chinese
+  targetWord: 蓝色
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“蓝色”？
+  options:
+    - 爸爸把房门蓝色上了。
+    - 我用蓝色把纸剪成两半。
+    - 这碗面蓝色得很好吃。
+    - 我的书包是蓝色的。
+  correct: 我的书包是蓝色的。
+- questionID: WSQ-P3-L03-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 辆.'
+  subject: Chinese
+  targetWord: 辆
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“辆”？
+  options:
+    - 门口停着一辆汽车。
+    - 爸爸买了一辆自行车轮胎。
+    - 桌上有一辆苹果。
+    - 我读完了一辆故事书。
+  correct: 门口停着一辆汽车。
+- questionID: WSQ-P3-L03-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 床单.'
+  subject: Chinese
+  targetWord: 床单
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“床单”？
+  options:
+    - 我用床单刷牙，刷得很干净。
+    - 妈妈把干净的床单铺在床上。
+    - 弟弟把床单戴在手腕上看时间。
+    - 妈妈煮了一锅床单给全家吃。
+  correct: 妈妈把干净的床单铺在床上。
+- questionID: WSQ-P3-L03-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 超人.'
+  subject: Chinese
+  targetWord: 超人
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“超人”？
+  options:
+    - 妹妹用超人擦掉纸上的铅笔字。
+    - 我喝完了一杯超人。
+    - 故事里的超人飞上天空救人。
+    - 爸爸超人着汽车回家。
+  correct: 故事里的超人飞上天空救人。
+- questionID: WSQ-P3-L03-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 按.'
+  subject: Chinese
+  targetWord: 按
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“按”？
+  options:
+    - 妈妈按了一锅汤给我喝。
+    - 姐姐用眼睛按见远处的大树。
+    - 小鸟按着翅膀飞上天空。
+    - 我按了门铃，等妈妈开门。
+  correct: 我按了门铃，等妈妈开门。
+- questionID: WSQ-P3-L03-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 盖子.'
+  subject: Chinese
+  targetWord: 盖子
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“盖子”？
+  options:
+    - 请把水壶的盖子盖好。
+    - 爸爸把盖子穿在脚上走路。
+    - 妹妹用盖子把头发梳整齐。
+    - 我把盖子当作饭菜吃下去了。
+  correct: 请把水壶的盖子盖好。
+- questionID: WSQ-P3-L03-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 吸管.'
+  subject: Chinese
+  targetWord: 吸管
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“吸管”？
+  options:
+    - 妈妈用吸管把木板锯开。
+    - 妹妹用吸管喝果汁。
+    - 我把吸管穿在身上挡雨。
+    - 爸爸用吸管给汽车换轮胎。
+  correct: 妹妹用吸管喝果汁。
+- questionID: WSQ-P3-L03-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 弹.'
+  subject: Chinese
+  targetWord: 弹
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“弹”？
+  options:
+    - 妈妈把米饭弹熟了，大家开始吃饭。
+    - 我用耳朵弹见有人敲门。
+    - 球落到地上，又弹了起来。
+    - 哥哥把衣服弹在身上，准备出门。
+  correct: 球落到地上，又弹了起来。
+- questionID: WSQ-P3-L03-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 闹钟.'
+  subject: Chinese
+  targetWord: 闹钟
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“闹钟”？
+  options:
+    - 我用闹钟把苹果削皮。
+    - 妈妈把闹钟倒进锅里煮汤。
+    - 爸爸把闹钟穿在脚上去跑步。
+    - 闹钟早上七点响了。
+  correct: 闹钟早上七点响了。
+- questionID: WSQ-P3-L03-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 伙伴.'
+  subject: Chinese
+  targetWord: 伙伴
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“伙伴”？
+  options:
+    - 小明是我一起踢球的伙伴。
+    - 妹妹把伙伴戴在手腕上看时间。
+    - 我喝了一大杯伙伴。
+    - 妈妈用伙伴把衣服熨平。
+  correct: 小明是我一起踢球的伙伴。
+- questionID: WSQ-P3-L03-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 背.'
+  subject: Chinese
+  targetWord: 背
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“背”？
+  options:
+    - 哥哥背了一口面条，觉得很好吃。
+    - 哥哥背着书包去学校。
+    - 我用眼睛背见天上的月亮。
+    - 我把午饭背进肚子里。
+  correct: 哥哥背着书包去学校。
+- questionID: WSQ-P3-L03-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 手表.'
+  subject: Chinese
+  targetWord: 手表
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“手表”？
+  options:
+    - 我用手表把牙齿刷干净。
+    - 妹妹把手表穿在两只脚上。
+    - 爸爸看了看手表，知道快迟到了。
+    - 妈妈把手表倒进杯子里给我喝。
+  correct: 爸爸看了看手表，知道快迟到了。
+- questionID: WSQ-P3-L03-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 粉红.'
+  subject: Chinese
+  targetWord: 粉红
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“粉红”？
+  options:
+    - 爸爸把门粉红上才离开。
+    - 这首歌粉红得很好听。
+    - 我用粉红把绳子剪断。
+    - 妹妹喜欢粉红的花朵。
+  correct: 妹妹喜欢粉红的花朵。
+- questionID: WSQ-P3-L03-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 形状.'
+  subject: Chinese
+  targetWord: 形状
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“形状”？
+  options:
+    - 这块饼干的形状像一颗星星。
+    - 姐姐把形状戴在头上挡雨。
+    - 妈妈切了一片形状放在面包上。
+    - 弟弟形状着一杯温水。
+  correct: 这块饼干的形状像一颗星星。
+- questionID: WSQ-P3-L03-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 响.'
+  subject: Chinese
+  targetWord: 响
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“响”？
+  options:
+    - 姐姐把书响在抽屉里。
+    - 上课铃响了，同学们走进教室。
+    - 妈妈响了一碗饭给我吃。
+    - 我穿上一双响去踢球。
+  correct: 上课铃响了，同学们走进教室。
+- questionID: WSQ-P3-L03-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 睡觉.'
+  subject: Chinese
+  targetWord: 睡觉
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“睡觉”？
+  options:
+    - 爸爸把房门睡觉上了。
+    - 妈妈睡觉了一锅汤。
+    - 弟弟九点就上床睡觉了。
+    - 我用睡觉把作业写完。
+  correct: 弟弟九点就上床睡觉了。
+- questionID: WSQ-P3-L03-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 准时.'
+  subject: Chinese
+  targetWord: 准时
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“准时”？
+  options:
+    - 这道菜准时得很香。
+    - 妈妈把准时装进书包里。
+    - 哥哥准时着一把雨伞出门。
+    - 我们准时到达学校。
+  correct: 我们准时到达学校。
+- questionID: WSQ-P3-L03-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 改掉.'
+  subject: Chinese
+  targetWord: 改掉
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“改掉”？
+  options:
+    - 我想改掉乱丢东西的坏习惯。
+    - 姐姐把窗户改掉得很亮。
+    - 妹妹改掉了一口牛奶。
+    - 爸爸用改掉把螺丝拧紧。
+  correct: 我想改掉乱丢东西的坏习惯。
+- questionID: WSQ-P3-L03-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 迟到.'
+  subject: Chinese
+  targetWord: 迟到
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“迟到”？
+  options:
+    - 妈妈把地板迟到干净了。
+    - 他错过巴士，上学迟到了。
+    - 弟弟迟到着一首儿歌。
+    - 姐姐喝了一杯迟到。
+  correct: 他错过巴士，上学迟到了。
+- questionID: WSQ-P3-L03-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 习惯.'
+  subject: Chinese
+  targetWord: 习惯
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“习惯”？
+  options:
+    - 我用习惯把木头锯断。
+    - 妈妈习惯了一碗面条给我。
+    - 我养成了每天读书的习惯。
+    - 这只箱子太习惯，我提不动。
+  correct: 我养成了每天读书的习惯。
+- questionID: WSQ-P3-L03-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 名字.'
+  subject: Chinese
+  targetWord: 名字
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“名字”？
+  options:
+    - 我把名字穿在脚上走路。
+    - 爸爸用名字把门打开。
+    - 妈妈炒了一盘名字给我们吃。
+    - 请把名字写在本子上。
+  correct: 请把名字写在本子上。
+- questionID: WSQ-P3-L03-USAGE-25
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 3; taught vocabulary: 真.'
+  subject: Chinese
+  targetWord: 真
+  lessonIds:
+    - 3
+  question: 以下哪一个句子正确使用了“真”？
+  options:
+    - 这朵花真漂亮！
+    - 妹妹把书真在桌上。
+    - 爸爸用真修好了自行车。
+    - 妈妈倒了一杯真给我喝。
+  correct: 这朵花真漂亮！
+- questionID: WSQ-P3-L04-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 内.'
+  subject: Chinese
+  targetWord: 内
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“内”？
+  options:
+    - 妹妹把内穿在脚上去学校。
+    - 盒子内放着几支笔。
+    - 我内了一杯水给奶奶喝。
+    - 这道菜内得很香。
+  correct: 盒子内放着几支笔。
+- questionID: WSQ-P3-L04-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 入.'
+  subject: Chinese
+  targetWord: 入
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“入”？
+  options:
+    - 妈妈把窗户入得很干净。
+    - 哥哥入了一首歌给大家听。
+    - 同学们走入教室。
+    - 奶奶用针入了一碗饭。
+  correct: 同学们走入教室。
+- questionID: WSQ-P3-L04-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 由.'
+  subject: Chinese
+  targetWord: 由
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“由”？
+  options:
+    - 妈妈由了一锅汤给我们喝。
+    - 这条围巾很由，戴着很暖和。
+    - 弟弟把由放进文具盒。
+    - 我们由学校出发，走向公园。
+  correct: 我们由学校出发，走向公园。
+- questionID: WSQ-P3-L04-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 浅.'
+  subject: Chinese
+  targetWord: 浅
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“浅”？
+  options:
+    - 这条小溪很浅，可以看见水底。
+    - 这口井浅得怎么也看不到底。
+    - 妈妈把饭浅进我的碗里。
+    - 我用浅把画贴在墙上。
+  correct: 这条小溪很浅，可以看见水底。
+- questionID: WSQ-P3-L04-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 变.'
+  subject: Chinese
+  targetWord: 变
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“变”？
+  options:
+    - 妹妹变了一口牛奶，觉得很好喝。
+    - 冰受热后变成了水。
+    - 我把雨伞变在头上挡雨。
+    - 妈妈用扫把变地板。
+  correct: 冰受热后变成了水。
+- questionID: WSQ-P3-L04-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 深.'
+  subject: Chinese
+  targetWord: 深
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“深”？
+  options:
+    - 这条小河很深，水才刚到我的脚背。
+    - 姐姐把书深进抽屉里。
+    - 这个水池很深，不能随便下去。
+    - 妈妈深了一件外套给我穿。
+  correct: 这个水池很深，不能随便下去。
+- questionID: WSQ-P3-L04-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 窄.'
+  subject: Chinese
+  targetWord: 窄
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“窄”？
+  options:
+    - 路面太窄，能让十辆大巴并排通过。
+    - 妹妹把窄系在鞋子上。
+    - 我窄了一口热汤。
+    - 这条小路很窄，只能一人通过。
+  correct: 这条小路很窄，只能一人通过。
+- questionID: WSQ-P3-L04-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 宽.'
+  subject: Chinese
+  targetWord: 宽
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“宽”？
+  options:
+    - 这条马路很宽，有好几条车道。
+    - 这条路宽得连一个人侧身也过不去。
+    - 妈妈宽了一杯茶给爷爷喝。
+    - 弟弟把衣服宽进衣柜。
+  correct: 这条马路很宽，有好几条车道。
+- questionID: WSQ-P3-L04-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 短.'
+  subject: Chinese
+  targetWord: 短
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“短”？
+  options:
+    - 这根绳子很短，从山脚一直伸到山顶。
+    - 这支铅笔太短，不好握。
+    - 哥哥用短把木板钉牢。
+    - 妈妈把短煮熟了。
+  correct: 这支铅笔太短，不好握。
+- questionID: WSQ-P3-L04-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 绿豆.'
+  subject: Chinese
+  targetWord: 绿豆
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“绿豆”？
+  options:
+    - 爸爸用绿豆刷牙，刷得很干净。
+    - 姐姐把绿豆穿在脚上跑步。
+    - 妈妈用绿豆煮了一锅汤。
+    - 我们在绿豆上坐车去学校。
+  correct: 妈妈用绿豆煮了一锅汤。
+- questionID: WSQ-P3-L04-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 变化.'
+  subject: Chinese
+  targetWord: 变化
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“变化”？
+  options:
+    - 妈妈把变化穿在身上去上班。
+    - 我喝了一杯变化，觉得很甜。
+    - 弟弟用变化剪开了纸袋。
+    - 几天后，种子的样子有了变化。
+  correct: 几天后，种子的样子有了变化。
+- questionID: WSQ-P3-L04-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 细.'
+  subject: Chinese
+  targetWord: 细
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“细”？
+  options:
+    - 这根线很细，要小心拿。
+    - 大象的腿很细，比大树的树干还粗。
+    - 姐姐细了一碗面给我吃。
+    - 我把门细上，免得小狗跑出去。
+  correct: 这根线很细，要小心拿。
+- questionID: WSQ-P3-L04-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 根.'
+  subject: Chinese
+  targetWord: 根
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“根”？
+  options:
+    - 我读完了一根课文。
+    - 小树的根长在泥土里。
+    - 门口停着一根巴士。
+    - 姐姐穿了一根裙子。
+  correct: 小树的根长在泥土里。
+- questionID: WSQ-P3-L04-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 越.'
+  subject: Chinese
+  targetWord: 越
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“越”？
+  options:
+    - 我越了一碗饭给弟弟吃。
+    - 妈妈用越把地板拖干净。
+    - 雨越下越大了。
+    - 小狗戴着一条越出门。
+  correct: 雨越下越大了。
+- questionID: WSQ-P3-L04-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 幼苗.'
+  subject: Chinese
+  targetWord: 幼苗
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“幼苗”？
+  options:
+    - 爸爸把幼苗开到停车场。
+    - 妹妹穿上一双幼苗去跑步。
+    - 哥哥把幼苗写在信封上寄出去。
+    - 花盆里长出了一株幼苗。
+  correct: 花盆里长出了一株幼苗。
+- questionID: WSQ-P3-L04-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 干死.'
+  subject: Chinese
+  targetWord: 干死
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“干死”？
+  options:
+    - 这株植物一直没有浇水，干死了。
+    - 爸爸把鲜花干死在花瓶里，每天给它换水。
+    - 妹妹把作业干死给老师。
+    - 我干死了一首歌，大家都拍手。
+  correct: 这株植物一直没有浇水，干死了。
+- questionID: WSQ-P3-L04-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 摆动.'
+  subject: Chinese
+  targetWord: 摆动
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“摆动”？
+  options:
+    - 我把作业摆动得很整齐，老师给了满分。
+    - 树枝在风中轻轻摆动。
+    - 妈妈摆动了一锅粥。
+    - 哥哥用耳朵摆动见有人叫他。
+  correct: 树枝在风中轻轻摆动。
+- questionID: WSQ-P3-L04-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 条.'
+  subject: Chinese
+  targetWord: 条
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“条”？
+  options:
+    - 妹妹买了一条篮球。
+    - 我读了一条故事书。
+    - 小狗有四条腿。
+    - 爸爸喝了一条咖啡。
+  correct: 小狗有四条腿。
+- questionID: WSQ-P3-L04-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 后腿.'
+  subject: Chinese
+  targetWord: 后腿
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“后腿”？
+  options:
+    - 我用后腿把牙齿刷干净。
+    - 妈妈把后腿倒进杯子里给我喝。
+    - 这只猫只有两条前腿，完全没有后腿，可是它的后腿很有力。
+    - 兔子用后腿一蹬，就跳了出去。
+  correct: 兔子用后腿一蹬，就跳了出去。
+- questionID: WSQ-P3-L04-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 嘴巴.'
+  subject: Chinese
+  targetWord: 嘴巴
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“嘴巴”？
+  options:
+    - 我用嘴巴听见远处的音乐。
+    - 弟弟的嘴巴上沾了牛奶。
+    - 他用嘴巴看清了黑板上的字。
+    - 小狗用嘴巴闻到了远处的气味。
+  correct: 弟弟的嘴巴上沾了牛奶。
+- questionID: WSQ-P3-L04-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 找.'
+  subject: Chinese
+  targetWord: 找
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“找”？
+  options:
+    - 妈妈用找把花盆里的土铲松。
+    - 姐姐找了一首歌给大家听。
+    - 我在书包里找铅笔。
+    - 弟弟把牛奶找进杯子里。
+  correct: 我在书包里找铅笔。
+- questionID: WSQ-P3-L04-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 喊.'
+  subject: Chinese
+  targetWord: 喊
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“喊”？
+  options:
+    - 我喊了一口饭，肚子就饱了。
+    - 妈妈把衣服喊得很干净。
+    - 哥哥喊着汽车去上班。
+    - 我大声喊哥哥来帮忙。
+  correct: 我大声喊哥哥来帮忙。
+- questionID: WSQ-P3-L04-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 披.'
+  subject: Chinese
+  targetWord: 披
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“披”？
+  options:
+    - 奶奶把外套披在肩上。
+    - 我把饭披进嘴里吃。
+    - 姐姐披了一首歌，声音很好听。
+    - 爸爸用披把桌子量了一遍。
+  correct: 奶奶把外套披在肩上。
+- questionID: WSQ-P3-L04-USAGE-25
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 露.'
+  subject: Chinese
+  targetWord: 露
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“露”？
+  options:
+    - 妈妈露了一锅汤给我们喝。
+    - 小猫从箱子里露出头来。
+    - 我把鞋带露得紧紧的，打了两个结。
+    - 弟弟把课文露了一遍，大家都听见了。
+  correct: 小猫从箱子里露出头来。
+- questionID: WSQ-P3-L04-USAGE-26
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 肚皮.'
+  subject: Chinese
+  targetWord: 肚皮
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“肚皮”？
+  options:
+    - 我用肚皮看清了黑板上的字。
+    - 小狗用肚皮听见远处的声音。
+    - 小猫的肚皮上有白色的毛。
+    - 妹妹把肚皮戴在手腕上看时间。
+  correct: 小猫的肚皮上有白色的毛。
+- questionID: WSQ-P3-L04-USAGE-27
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 孩子们.'
+  subject: Chinese
+  targetWord: 孩子们
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“孩子们”？
+  options:
+    - 这一群孩子们桌子摆得很整齐。
+    - 妈妈煮了一锅孩子们给我们吃。
+    - 爸爸用孩子们把窗户擦亮。
+    - 孩子们在公园里玩耍。
+  correct: 孩子们在公园里玩耍。
+- questionID: WSQ-P3-L04-USAGE-28
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 4; taught vocabulary: 已经.'
+  subject: Chinese
+  targetWord: 已经
+  lessonIds:
+    - 4
+  question: 以下哪一个句子正确使用了“已经”？
+  options:
+    - 我已经做完作业了。
+    - 妹妹已经了一件漂亮的裙子。
+    - 妈妈把已经盛进碗里。
+    - 这只小狗很已经，大家都喜欢它。
+  correct: 我已经做完作业了。
+- questionID: WSQ-P3-L05-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 电脑展.'
+  subject: Chinese
+  targetWord: 电脑展
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“电脑展”？
+  options:
+    - 爸爸把电脑展穿在脚上去跑步。
+    - 妈妈炒了一盘电脑展给我们吃。
+    - 爸爸带我去电脑展看新电脑。
+    - 弟弟用电脑展把铅笔削尖。
+  correct: 爸爸带我去电脑展看新电脑。
+- questionID: WSQ-P3-L05-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 旅游展.'
+  subject: Chinese
+  targetWord: 旅游展
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“旅游展”？
+  options:
+    - 妹妹把旅游展倒进杯子里。
+    - 爸爸开着一辆旅游展去上班。
+    - 我把旅游展戴在手腕上看时间。
+    - 我们在旅游展了解旅行路线。
+  correct: 我们在旅游展了解旅行路线。
+- questionID: WSQ-P3-L05-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 美食展.'
+  subject: Chinese
+  targetWord: 美食展
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“美食展”？
+  options:
+    - 美食展里有许多好吃的食物。
+    - 妈妈把美食展切成薄片放进锅里。
+    - 我用美食展擦掉本子上的铅笔字。
+    - 哥哥穿上一件美食展出门。
+  correct: 美食展里有许多好吃的食物。
+- questionID: WSQ-P3-L05-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 园艺展.'
+  subject: Chinese
+  targetWord: 园艺展
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“园艺展”？
+  options:
+    - 爸爸用园艺展把头发梳整齐。
+    - 奶奶到园艺展欣赏花草。
+    - 奶奶喝了一杯园艺展。
+    - 我穿上一双园艺展去踢球。
+  correct: 奶奶到园艺展欣赏花草。
+- questionID: WSQ-P3-L05-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 多彩.'
+  subject: Chinese
+  targetWord: 多彩
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“多彩”？
+  options:
+    - 妹妹把多彩系在鞋子上。
+    - 爷爷多彩了一碗面给我吃。
+    - 我们的假期生活丰富多彩。
+    - 我用多彩打开了房门。
+  correct: 我们的假期生活丰富多彩。
+- questionID: WSQ-P3-L05-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 傍晚.'
+  subject: Chinese
+  targetWord: 傍晚
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“傍晚”？
+  options:
+    - 傍晚的太阳刚从东边升起，大家开始吃早餐。
+    - 我把傍晚收进文具盒。
+    - 妈妈傍晚了一锅汤。
+    - 傍晚，爸爸带我们去散步。
+  correct: 傍晚，爸爸带我们去散步。
+- questionID: WSQ-P3-L05-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 报纸.'
+  subject: Chinese
+  targetWord: 报纸
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“报纸”？
+  options:
+    - 妹妹把报纸当作洗发水洗头。
+    - 爷爷每天早上看报纸。
+    - 爸爸报纸着汽车去上班。
+    - 我把报纸穿在两只脚上去跑步。
+  correct: 爷爷每天早上看报纸。
+- questionID: WSQ-P3-L05-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 杂志.'
+  subject: Chinese
+  targetWord: 杂志
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“杂志”？
+  options:
+    - 我用杂志把指甲剪短。
+    - 妈妈把杂志倒进水杯里。
+    - 姐姐借了一本介绍动物的杂志。
+    - 爸爸杂志了一碗饭。
+  correct: 姐姐借了一本介绍动物的杂志。
+- questionID: WSQ-P3-L05-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 号.'
+  subject: Chinese
+  targetWord: 号
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“号”？
+  options:
+    - 这道菜很号，我吃了两碗饭。
+    - 妹妹号着自行车回家。
+    - 妈妈把号煮熟了。
+    - 今天是十月十五号。
+  correct: 今天是十月十五号。
+- questionID: WSQ-P3-L05-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 刚刚.'
+  subject: Chinese
+  targetWord: 刚刚
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“刚刚”？
+  options:
+    - 爸爸刚刚回到家。
+    - 哥哥把刚刚放在书架上。
+    - 这只猫很刚刚，大家都怕它。
+    - 妈妈用刚刚缝补衣服。
+  correct: 爸爸刚刚回到家。
+- questionID: WSQ-P3-L05-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 付.'
+  subject: Chinese
+  targetWord: 付
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“付”？
+  options:
+    - 我把鞋子付在脚上。
+    - 妈妈付了钱，拿走面包。
+    - 弟弟付着一首儿歌，声音很大。
+    - 妈妈用刀付开了西瓜。
+  correct: 妈妈付了钱，拿走面包。
+- questionID: WSQ-P3-L05-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 钱.'
+  subject: Chinese
+  targetWord: 钱
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“钱”？
+  options:
+    - 我用钱把水煮开，完全不用锅或炉子。
+    - 妹妹穿上一双钱去跑步。
+    - 我把零用钱存进小猪钱箱。
+    - 爸爸把钱当作午饭吃进肚子里。
+  correct: 我把零用钱存进小猪钱箱。
+- questionID: WSQ-P3-L05-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 束.'
+  subject: Chinese
+  targetWord: 束
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“束”？
+  options:
+    - 爸爸买了一束汽车。
+    - 我喝了一束牛奶。
+    - 姐姐读完了一束课文。
+    - 我送妈妈一束鲜花。
+  correct: 我送妈妈一束鲜花。
+- questionID: WSQ-P3-L05-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 鲜花.'
+  subject: Chinese
+  targetWord: 鲜花
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“鲜花”？
+  options:
+    - 花瓶里插着美丽的鲜花。
+    - 爸爸把鲜花开到停车场。
+    - 我用鲜花把螺丝拧紧。
+    - 妹妹把鲜花当作书本来朗读。
+  correct: 花瓶里插着美丽的鲜花。
+- questionID: WSQ-P3-L05-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 提.'
+  subject: Chinese
+  targetWord: 提
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“提”？
+  options:
+    - 妈妈用眼睛提见树上的小鸟。
+    - 爸爸提着购物袋回家。
+    - 弟弟提了一首歌给大家听。
+    - 我用毛巾把头发提干。
+  correct: 爸爸提着购物袋回家。
+- questionID: WSQ-P3-L05-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 扫地.'
+  subject: Chinese
+  targetWord: 扫地
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“扫地”？
+  options:
+    - 妹妹把牛奶扫地进杯子里。
+    - 爸爸扫地了一封信给爷爷。
+    - 我用扫帚帮妈妈扫地。
+    - 我把外套扫地在身上。
+  correct: 我用扫帚帮妈妈扫地。
+- questionID: WSQ-P3-L05-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 都.'
+  subject: Chinese
+  targetWord: 都
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“都”？
+  options:
+    - 这本书有三页都。
+    - 妈妈把都放进锅里煮。
+    - 小狗都着一双新鞋。
+    - 同学们都到齐了。
+  correct: 同学们都到齐了。
+- questionID: WSQ-P3-L05-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 收到.'
+  subject: Chinese
+  targetWord: 收到
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“收到”？
+  options:
+    - 我收到了朋友寄来的卡片。
+    - 妹妹把地板收到得很干净。
+    - 妈妈收到了一口饭，觉得很好吃。
+    - 爸爸用收到把木板锯断。
+  correct: 我收到了朋友寄来的卡片。
+- questionID: WSQ-P3-L05-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 知道.'
+  subject: Chinese
+  targetWord: 知道
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“知道”？
+  options:
+    - 妈妈用知道把衣服缝好。
+    - 我知道图书馆在哪里。
+    - 弟弟把知道穿在脚上。
+    - 爸爸知道了一碗饭给我。
+  correct: 我知道图书馆在哪里。
+- questionID: WSQ-P3-L05-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 5; taught vocabulary: 准备.'
+  subject: Chinese
+  targetWord: 准备
+  lessonIds:
+    - 5
+  question: 以下哪一个句子正确使用了“准备”？
+  options:
+    - 我准备了一口汤，觉得很鲜美。
+    - 妹妹把头发准备得很整齐，用梳子梳了两遍。
+    - 妈妈正在准备晚饭。
+    - 爸爸用准备把门锁上。
+  correct: 妈妈正在准备晚饭。
+- questionID: WSQ-P3-L06-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 软.'
+  subject: Chinese
+  targetWord: 软
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“软”？
+  options:
+    - 这块面包软得像石头，怎么也咬不动。
+    - 妈妈软了一碗饭给弟弟吃。
+    - 我用软把窗户关紧。
+    - 这个枕头很软，睡起来很舒服。
+  correct: 这个枕头很软，睡起来很舒服。
+- questionID: WSQ-P3-L06-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 硬.'
+  subject: Chinese
+  targetWord: 硬
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“硬”？
+  options:
+    - 这块石头很硬，压不碎。
+    - 这团棉花硬得轻轻一碰就扁了。
+    - 爸爸硬着汽车去上班。
+    - 妹妹把硬挂在墙上。
+  correct: 这块石头很硬，压不碎。
+- questionID: WSQ-P3-L06-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 松.'
+  subject: Chinese
+  targetWord: 松
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“松”？
+  options:
+    - 鞋子穿得很松，紧紧勒住脚背，一点空隙也没有。
+    - 鞋带松了，我重新绑好。
+    - 妈妈松了一锅粥。
+    - 我用松把纸剪开。
+  correct: 鞋带松了，我重新绑好。
+- questionID: WSQ-P3-L06-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 紧.'
+  subject: Chinese
+  targetWord: 紧
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“紧”？
+  options:
+    - 裤子的腰很紧，走两步就掉下来了。
+    - 妹妹把紧喝光了。
+    - 妈妈把袋口绑紧。
+    - 爸爸紧了一首歌给我听。
+  correct: 妈妈把袋口绑紧。
+- questionID: WSQ-P3-L06-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 失去.'
+  subject: Chinese
+  targetWord: 失去
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“失去”？
+  options:
+    - 我失去了一杯水给妈妈喝。
+    - 爸爸用抹布失去桌上的灰尘。
+    - 妹妹把书失去在书包里，整齐地放好。
+    - 他不小心松手，失去了手里的气球。
+  correct: 他不小心松手，失去了手里的气球。
+- questionID: WSQ-P3-L06-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 错误.'
+  subject: Chinese
+  targetWord: 错误
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“错误”？
+  options:
+    - 老师指出了我答案中的错误。
+    - 老师请我们把错误穿在脚上。
+    - 妈妈错误了一锅汤。
+    - 我用错误把断绳接起来。
+  correct: 老师指出了我答案中的错误。
+- questionID: WSQ-P3-L06-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 应该.'
+  subject: Chinese
+  targetWord: 应该
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“应该”？
+  options:
+    - 爸爸把应该戴在头上挡太阳。
+    - 我们应该爱护学校的东西。
+    - 妹妹应该了一碗粥，觉得很好吃。
+    - 这条路很应该，车子过不去。
+  correct: 我们应该爱护学校的东西。
+- questionID: WSQ-P3-L06-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 扔.'
+  subject: Chinese
+  targetWord: 扔
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“扔”？
+  options:
+    - 姐姐扔着自行车去学校，车轮一直在地上转。
+    - 我用眼睛扔见一只小鸟。
+    - 我把废纸扔进垃圾桶。
+    - 妈妈扔了一口汤，觉得很鲜美。
+  correct: 我把废纸扔进垃圾桶。
+- questionID: WSQ-P3-L06-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 错.'
+  subject: Chinese
+  targetWord: 错
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“错”？
+  options:
+    - 我把书错在桌上，整整齐齐地放好了。
+    - 妈妈错了一件外套给我穿。
+    - 哥哥用错把木头锯成两段。
+    - 这道题我答错了。
+  correct: 这道题我答错了。
+- questionID: WSQ-P3-L06-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 推.'
+  subject: Chinese
+  targetWord: 推
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“推”？
+  options:
+    - 爸爸推开门，走进屋里。
+    - 妹妹推了一口面条，肚子饱了。
+    - 妈妈把课文推得很大声。
+    - 我用推把铅笔字擦掉。
+  correct: 爸爸推开门，走进屋里。
+- questionID: WSQ-P3-L06-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 原谅.'
+  subject: Chinese
+  targetWord: 原谅
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“原谅”？
+  options:
+    - 姐姐把书原谅进书包里。
+    - 我诚恳道歉，希望朋友原谅我。
+    - 爸爸用原谅把门锁好。
+    - 妈妈原谅了一盘青菜给我吃。
+  correct: 我诚恳道歉，希望朋友原谅我。
+- questionID: WSQ-P3-L06-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 弄破.'
+  subject: Chinese
+  targetWord: 弄破
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“弄破”？
+  options:
+    - 妈妈把完整的杯子弄破得亮晶晶，一点裂缝也没有。
+    - 姐姐弄破了一首歌给大家听。
+    - 我不小心把纸袋弄破了。
+    - 我弄破着巴士去学校。
+  correct: 我不小心把纸袋弄破了。
+- questionID: WSQ-P3-L06-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 没关系.'
+  subject: Chinese
+  targetWord: 没关系
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“没关系”？
+  options:
+    - 我用没关系把门打开。
+    - 妹妹把没关系装进铅笔盒。
+    - 妈妈没关系了一锅热汤。
+    - 我说“对不起”，朋友回答“没关系”。
+  correct: 我说“对不起”，朋友回答“没关系”。
+- questionID: WSQ-P3-L06-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 突然.'
+  subject: Chinese
+  targetWord: 突然
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“突然”？
+  options:
+    - 天空突然下起了雨。
+    - 这张桌子很突然，放不进房间。
+    - 妈妈用突然把菜切碎。
+    - 弟弟买了两公斤突然。
+  correct: 天空突然下起了雨。
+- questionID: WSQ-P3-L06-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 来不及.'
+  subject: Chinese
+  targetWord: 来不及
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“来不及”？
+  options:
+    - 奶奶把来不及放进冰箱。
+    - 我起床太晚，来不及吃早餐。
+    - 这条围巾很来不及，戴着很暖和。
+    - 我用来不及把作业写完。
+  correct: 我起床太晚，来不及吃早餐。
+- questionID: WSQ-P3-L06-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 爬起来.'
+  subject: Chinese
+  targetWord: 爬起来
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“爬起来”？
+  options:
+    - 妈妈把青菜爬起来进锅里煮。
+    - 弟弟爬起来了一首歌，大家都听见了。
+    - 跌倒后，他自己爬起来。
+    - 我把鞋带爬起来得紧紧的。
+  correct: 跌倒后，他自己爬起来。
+- questionID: WSQ-P3-L06-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 怎么.'
+  subject: Chinese
+  targetWord: 怎么
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“怎么”？
+  options:
+    - 妈妈买了一件怎么送给我。
+    - 这碗汤怎么得很香。
+    - 妹妹把怎么收进抽屉。
+    - 这个字怎么写？
+  correct: 这个字怎么写？
+- questionID: WSQ-P3-L06-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 不理.'
+  subject: Chinese
+  targetWord: 不理
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“不理”？
+  options:
+    - 他生气了，不理我。
+    - 爸爸不理着一辆巴士去上班。
+    - 我把衣服不理在衣架上。
+    - 妈妈用不理把地板拖干净。
+  correct: 他生气了，不理我。
+- questionID: WSQ-P3-L06-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 比赛.'
+  subject: Chinese
+  targetWord: 比赛
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“比赛”？
+  options:
+    - 奶奶把比赛倒进茶杯里。
+    - 明天学校举行跑步比赛。
+    - 我用比赛把门上的锁打开。
+    - 妈妈比赛了一锅饭。
+  correct: 明天学校举行跑步比赛。
+- questionID: WSQ-P3-L06-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 跌倒.'
+  subject: Chinese
+  targetWord: 跌倒
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“跌倒”？
+  options:
+    - 姐姐把头发跌倒得整整齐齐。
+    - 我跌倒了一杯水给爸爸喝。
+    - 地面太滑，弟弟跌倒了。
+    - 妈妈用跌倒把纸剪开。
+  correct: 地面太滑，弟弟跌倒了。
+- questionID: WSQ-P3-L06-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 受伤.'
+  subject: Chinese
+  targetWord: 受伤
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“受伤”？
+  options:
+    - 爸爸受伤着汽车去上班。
+    - 妹妹把书受伤在书架上。
+    - 妈妈受伤了一锅粥。
+    - 他跌倒后膝盖受伤了。
+  correct: 他跌倒后膝盖受伤了。
+- questionID: WSQ-P3-L06-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 立刻.'
+  subject: Chinese
+  targetWord: 立刻
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“立刻”？
+  options:
+    - 听到妈妈叫我，我立刻跑过去。
+    - 我把立刻戴在头上挡雨。
+    - 这道题很立刻，大家都会做。
+    - 妈妈用立刻把桌子擦干净。
+  correct: 听到妈妈叫我，我立刻跑过去。
+- questionID: WSQ-P3-L06-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 扶.'
+  subject: Chinese
+  targetWord: 扶
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“扶”？
+  options:
+    - 姐姐扶了一口水，觉得很清凉。
+    - 我扶着奶奶走下台阶。
+    - 妈妈扶了一首歌给我们听。
+    - 我用扶把头发梳顺。
+  correct: 我扶着奶奶走下台阶。
+- questionID: WSQ-P3-L06-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 不好意思.'
+  subject: Chinese
+  targetWord: 不好意思
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“不好意思”？
+  options:
+    - 这碗汤不好意思得很鲜美。
+    - 爸爸把不好意思放进钱包。
+    - 我忘了朋友的名字，觉得不好意思。
+    - 我用不好意思把纸剪开。
+  correct: 我忘了朋友的名字，觉得不好意思。
+- questionID: WSQ-P3-L06-USAGE-25
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 6; taught vocabulary: 谢谢.'
+  subject: Chinese
+  targetWord: 谢谢
+  lessonIds:
+    - 6
+  question: 以下哪一个句子正确使用了“谢谢”？
+  options:
+    - 妈妈用谢谢把地板拖干净。
+    - 哥哥谢谢了一口果汁。
+    - 妹妹把谢谢穿在脚上。
+    - 我对帮忙的同学说谢谢。
+  correct: 我对帮忙的同学说谢谢。
+- questionID: WSQ-P3-L07-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 打碎.'
+  subject: Chinese
+  targetWord: 打碎
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“打碎”？
+  options:
+    - 我不小心打碎了杯子。
+    - 姐姐用打碎把头发梳好。
+    - 妈妈把米饭打碎进碗里，米粒都完整无缺。
+    - 我打碎了一首歌，大家都听见了。
+  correct: 我不小心打碎了杯子。
+- questionID: WSQ-P3-L07-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 赔钱.'
+  subject: Chinese
+  targetWord: 赔钱
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“赔钱”？
+  options:
+    - 弟弟把赔钱穿在脚上。
+    - 他弄坏了别人的玩具，主动赔钱。
+    - 这碗汤赔钱得很香。
+    - 妈妈用赔钱把扣子缝好。
+  correct: 他弄坏了别人的玩具，主动赔钱。
+- questionID: WSQ-P3-L07-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 留.'
+  subject: Chinese
+  targetWord: 留
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“留”？
+  options:
+    - 妈妈留了一口饭，嚼了几下就吞下去了。
+    - 弟弟留着一首歌，声音很好听。
+    - 妈妈在桌上留了一张便条。
+    - 我用毛巾把脸留干净。
+  correct: 妈妈在桌上留了一张便条。
+- questionID: WSQ-P3-L07-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 张.'
+  subject: Chinese
+  targetWord: 张
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“张”？
+  options:
+    - 我喝了一张牛奶。
+    - 爸爸买了一张汽车。
+    - 姐姐抱着一张小猫。
+    - 请给我一张白纸。
+  correct: 请给我一张白纸。
+- questionID: WSQ-P3-L07-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 便条.'
+  subject: Chinese
+  targetWord: 便条
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“便条”？
+  options:
+    - 爸爸用便条告诉我他去买菜了。
+    - 妹妹把便条当作雨鞋穿在脚上。
+    - 妈妈便条了一锅粥。
+    - 我用便条把木板锯断。
+  correct: 爸爸用便条告诉我他去买菜了。
+- questionID: WSQ-P3-L07-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 花盆.'
+  subject: Chinese
+  targetWord: 花盆
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“花盆”？
+  options:
+    - 我穿上一双花盆去跑步。
+    - 奶奶在花盆里种了一朵花。
+    - 姐姐用花盆把长发梳顺。
+    - 爸爸把花盆当作课文来朗读。
+  correct: 奶奶在花盆里种了一朵花。
+- questionID: WSQ-P3-L07-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 食堂.'
+  subject: Chinese
+  targetWord: 食堂
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“食堂”？
+  options:
+    - 妈妈把食堂倒进碗里给我吃。
+    - 我穿上一件食堂出门。
+    - 爸爸用食堂修好了手表。
+    - 我们到学校食堂吃午饭。
+  correct: 我们到学校食堂吃午饭。
+- questionID: WSQ-P3-L07-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 溜走.'
+  subject: Chinese
+  targetWord: 溜走
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“溜走”？
+  options:
+    - 小猫趁门开着，悄悄溜走了。
+    - 爸爸溜走了一首歌给我听。
+    - 我用溜走把饭菜盛进碗里。
+    - 这张桌子很溜走，坐着很舒服。
+  correct: 小猫趁门开着，悄悄溜走了。
+- questionID: WSQ-P3-L07-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 踩断.'
+  subject: Chinese
+  targetWord: 踩断
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“踩断”？
+  options:
+    - 妈妈用手轻轻踩断我的头发，把它梳顺了。
+    - 我不小心踩断了地上的树枝。
+    - 哥哥踩断了一杯水给奶奶喝。
+    - 我把课文踩断得很响。
+  correct: 我不小心踩断了地上的树枝。
+- questionID: WSQ-P3-L07-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 眼镜.'
+  subject: Chinese
+  targetWord: 眼镜
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“眼镜”？
+  options:
+    - 我把眼镜穿在脚上走路。
+    - 爸爸用眼镜把指甲剪短。
+    - 爷爷戴上眼镜看报纸。
+    - 妈妈把眼镜煮熟，给全家当晚饭。
+  correct: 爷爷戴上眼镜看报纸。
+- questionID: WSQ-P3-L07-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 病.'
+  subject: Chinese
+  targetWord: 病
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“病”？
+  options:
+    - 我病了一杯水给爷爷喝。
+    - 姐姐把病戴在头上挡雨。
+    - 妈妈用病把布剪开。
+    - 妹妹病了，今天没有上学。
+  correct: 妹妹病了，今天没有上学。
+- questionID: WSQ-P3-L07-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 休息.'
+  subject: Chinese
+  targetWord: 休息
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“休息”？
+  options:
+    - 跑步后，我们坐下来休息。
+    - 妈妈在厨房休息了一锅汤。
+    - 我把休息系在鞋子上。
+    - 爸爸用休息把墙刷白。
+  correct: 跑步后，我们坐下来休息。
+- questionID: WSQ-P3-L07-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 电视.'
+  subject: Chinese
+  targetWord: 电视
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“电视”？
+  options:
+    - 妹妹把电视戴在手腕上看时间。
+    - 客厅里放着一台电视。
+    - 妈妈倒了一杯电视给我喝。
+    - 我用电视把牙齿刷干净。
+  correct: 客厅里放着一台电视。
+- questionID: WSQ-P3-L07-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 轻轻地.'
+  subject: Chinese
+  targetWord: 轻轻地
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“轻轻地”？
+  options:
+    - 我轻轻地吼叫，声音震得全楼都听见了。
+    - 爸爸把轻轻地收进工具箱。
+    - 她轻轻地关上门。
+    - 这道题很轻轻地，大家都会做。
+  correct: 她轻轻地关上门。
+- questionID: WSQ-P3-L07-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 脱.'
+  subject: Chinese
+  targetWord: 脱
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“脱”？
+  options:
+    - 天冷了，妈妈让我把外套脱上，裹得暖暖的。
+    - 我用脱把铅笔削尖。
+    - 爸爸脱着一首歌，声音很好听。
+    - 回到家，我脱下鞋子。
+  correct: 回到家，我脱下鞋子。
+- questionID: WSQ-P3-L07-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 走路.'
+  subject: Chinese
+  targetWord: 走路
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“走路”？
+  options:
+    - 爷爷每天走路到公园。
+    - 我用铅笔走路出自己的名字。
+    - 妈妈把饭走路进碗里。
+    - 弟弟喝了一杯走路。
+  correct: 爷爷每天走路到公园。
+- questionID: WSQ-P3-L07-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 事情.'
+  subject: Chinese
+  targetWord: 事情
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“事情”？
+  options:
+    - 爸爸用事情把钉子敲进木板。
+    - 今天发生了一件有趣的事情。
+    - 妹妹事情着一杯热水。
+    - 妈妈把事情穿在身上。
+  correct: 今天发生了一件有趣的事情。
+- questionID: WSQ-P3-L07-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 轻手轻脚.'
+  subject: Chinese
+  targetWord: 轻手轻脚
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“轻手轻脚”？
+  options:
+    - 为了不吵醒妹妹，我轻手轻脚地大喊起来。
+    - 妈妈把轻手轻脚倒进锅里。
+    - 奶奶睡着了，我轻手轻脚地走进屋里。
+    - 这道菜很轻手轻脚，大家都爱吃。
+  correct: 奶奶睡着了，我轻手轻脚地走进屋里。
+- questionID: WSQ-P3-L07-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 搬动.'
+  subject: Chinese
+  targetWord: 搬动
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“搬动”？
+  options:
+    - 我用耳朵搬动见有人敲门。
+    - 妈妈搬动了一首歌给我们听。
+    - 哥哥搬动了一口牛奶，觉得很甜。
+    - 爸爸帮我搬动书桌。
+  correct: 爸爸帮我搬动书桌。
+- questionID: WSQ-P3-L07-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 地板.'
+  subject: Chinese
+  targetWord: 地板
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“地板”？
+  options:
+    - 妹妹把地板擦干净。
+    - 我把地板戴在头上挡太阳。
+    - 妈妈把一杯地板喝完了。
+    - 弟弟用地板把指甲剪短。
+  correct: 妹妹把地板擦干净。
+- questionID: WSQ-P3-L07-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 7; taught vocabulary: 灵机一动.'
+  subject: Chinese
+  targetWord: 灵机一动
+  lessonIds:
+    - 7
+  question: 以下哪一个句子正确使用了“灵机一动”？
+  options:
+    - 妈妈把灵机一动煮熟，端上桌来。
+    - 他灵机一动，想到用纸盒做玩具屋。
+    - 我穿上一双灵机一动去跑步。
+    - 这块蛋糕灵机一动，吃起来很甜。
+  correct: 他灵机一动，想到用纸盒做玩具屋。
+- questionID: WSQ-P3-L08-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 需要.'
+  subject: Chinese
+  targetWord: 需要
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“需要”？
+  options:
+    - 妹妹把需要穿在脚上。
+    - 做这张贺卡需要彩纸和胶水。
+    - 妈妈需要了一口热汤。
+    - 爸爸用需要把螺丝拧紧。
+  correct: 做这张贺卡需要彩纸和胶水。
+- questionID: WSQ-P3-L08-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 贺卡.'
+  subject: Chinese
+  targetWord: 贺卡
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“贺卡”？
+  options:
+    - 我把贺卡当作牙刷刷牙。
+    - 妈妈贺卡了一锅面条。
+    - 我做了一张贺卡送给妈妈。
+    - 爸爸开着一辆贺卡去上班。
+  correct: 我做了一张贺卡送给妈妈。
+- questionID: WSQ-P3-L08-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 部分.'
+  subject: Chinese
+  targetWord: 部分
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“部分”？
+  options:
+    - 爸爸把部分戴在手腕上看时间。
+    - 妹妹用部分把纸剪开。
+    - 妈妈部分了一碗饭给我吃。
+    - 这幅画的上半部分是天空。
+  correct: 这幅画的上半部分是天空。
+- questionID: WSQ-P3-L08-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 接着.'
+  subject: Chinese
+  targetWord: 接着
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“接着”？
+  options:
+    - 我先画花，接着涂颜色。
+    - 我先写完作业，接着之前才开始写作业。
+    - 妈妈把接着切成小块放进锅里。
+    - 这张椅子很接着，坐起来很舒服。
+  correct: 我先画花，接着涂颜色。
+- questionID: WSQ-P3-L08-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 涂上.'
+  subject: Chinese
+  targetWord: 涂上
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“涂上”？
+  options:
+    - 我用耳朵涂上了门外的声音。
+    - 我给小花涂上红色。
+    - 姐姐把课文涂上得很响，大家都听见了。
+    - 爸爸涂上一口水，觉得很清凉。
+  correct: 我给小花涂上红色。
+- questionID: WSQ-P3-L08-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 洞.'
+  subject: Chinese
+  targetWord: 洞
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“洞”？
+  options:
+    - 我穿上一件洞去参加聚会。
+    - 妈妈煮了一碗洞给我吃。
+    - 袜子上破了一个小洞。
+    - 弟弟用洞把头发梳整齐。
+  correct: 袜子上破了一个小洞。
+- questionID: WSQ-P3-L08-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 穿.'
+  subject: Chinese
+  targetWord: 穿
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“穿”？
+  options:
+    - 我穿了一口牛奶，觉得很甜。
+    - 姐姐穿着自行车去学校，车轮在地上转。
+    - 爸爸用眼睛穿见远处的大楼。
+    - 她把绳子穿过纸上的洞。
+  correct: 她把绳子穿过纸上的洞。
+- questionID: WSQ-P3-L08-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 吊.'
+  subject: Chinese
+  targetWord: 吊
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“吊”？
+  options:
+    - 妈妈吊了一口饭，慢慢嚼着。
+    - 风铃吊在窗边，随风摇动。
+    - 我用吊把名字写在纸上。
+    - 弟弟吊了一首歌，唱得很响。
+  correct: 风铃吊在窗边，随风摇动。
+- questionID: WSQ-P3-L08-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 阳台.'
+  subject: Chinese
+  targetWord: 阳台
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“阳台”？
+  options:
+    - 妈妈把阳台倒进杯子里。
+    - 妹妹把阳台穿在两只脚上。
+    - 妈妈在阳台上晒衣服。
+    - 我用阳台把书包上的拉链拉好。
+  correct: 妈妈在阳台上晒衣服。
+- questionID: WSQ-P3-L08-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 灯笼.'
+  subject: Chinese
+  targetWord: 灯笼
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“灯笼”？
+  options:
+    - 爸爸把灯笼当作午饭吃进肚子里。
+    - 妹妹用灯笼把纸剪开。
+    - 妈妈把灯笼涂在头发上洗头。
+    - 妹妹提着灯笼走进花园。
+  correct: 妹妹提着灯笼走进花园。
+- questionID: WSQ-P3-L08-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 挂.'
+  subject: Chinese
+  targetWord: 挂
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“挂”？
+  options:
+    - 我把外套挂在衣架上。
+    - 妈妈挂了一口汤，觉得很鲜美。
+    - 我用耳朵挂见老师叫我。
+    - 弟弟把课文挂得很响，大家都听见了。
+  correct: 我把外套挂在衣架上。
+- questionID: WSQ-P3-L08-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 客厅.'
+  subject: Chinese
+  targetWord: 客厅
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“客厅”？
+  options:
+    - 妹妹把客厅戴在头上遮太阳。
+    - 一家人在客厅里谈天。
+    - 妈妈切了一片客厅放在面包上。
+    - 我用客厅把指甲剪短。
+  correct: 一家人在客厅里谈天。
+- questionID: WSQ-P3-L08-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 裙子.'
+  subject: Chinese
+  targetWord: 裙子
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“裙子”？
+  options:
+    - 爸爸开着裙子去停车场。
+    - 妈妈把裙子倒进杯子里。
+    - 她穿着一条蓝色裙子。
+    - 弟弟用裙子把铅笔削尖。
+  correct: 她穿着一条蓝色裙子。
+- questionID: WSQ-P3-L08-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 裤子.'
+  subject: Chinese
+  targetWord: 裤子
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“裤子”？
+  options:
+    - 爸爸把裤子当作牙膏刷牙。
+    - 妹妹把裤子当作米饭吃下去了。
+    - 爸爸裤子着汽车去上班。
+    - 哥哥穿了一条黑色裤子。
+  correct: 哥哥穿了一条黑色裤子。
+- questionID: WSQ-P3-L08-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 衣服.'
+  subject: Chinese
+  targetWord: 衣服
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“衣服”？
+  options:
+    - 妈妈把衣服叠好。
+    - 妈妈把衣服倒进茶杯里。
+    - 我用衣服当作剪刀把纸剪开。
+    - 弟弟衣服了一首歌给大家听。
+  correct: 妈妈把衣服叠好。
+- questionID: WSQ-P3-L08-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 开始.'
+  subject: Chinese
+  targetWord: 开始
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“开始”？
+  options:
+    - 爸爸把开始戴在手上看时间。
+    - 铃声响了，比赛开始。
+    - 妈妈开始了一口饭，嚼得很慢。
+    - 这只箱子很开始，我提不动。
+  correct: 铃声响了，比赛开始。
+- questionID: WSQ-P3-L08-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 请求.'
+  subject: Chinese
+  targetWord: 请求
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“请求”？
+  options:
+    - 我请求了一口汤，觉得很热。
+    - 爸爸把请求钉在墙上。
+    - 我请求老师再解释一次。
+    - 这张床很请求，睡起来很舒服。
+  correct: 我请求老师再解释一次。
+- questionID: WSQ-P3-L08-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 让.'
+  subject: Chinese
+  targetWord: 让
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“让”？
+  options:
+    - 妈妈让了一碗饭给我煮熟。
+    - 姐姐用眼睛让见一只蝴蝶。
+    - 弟弟让着一首儿歌，大家都听见了。
+    - 妈妈让我周末去朋友家玩。
+  correct: 妈妈让我周末去朋友家玩。
+- questionID: WSQ-P3-L08-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 比较.'
+  subject: Chinese
+  targetWord: 比较
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“比较”？
+  options:
+    - 这只箱子比较轻，我能搬动。
+    - 妈妈把比较倒进碗里。
+    - 我用比较把指甲剪短。
+    - 爸爸比较着巴士去学校。
+  correct: 这只箱子比较轻，我能搬动。
+- questionID: WSQ-P3-L08-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 晒.'
+  subject: Chinese
+  targetWord: 晒
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“晒”？
+  options:
+    - 姐姐晒了一口水，觉得很清凉。
+    - 妈妈把湿衣服拿出去晒。
+    - 我用耳朵晒见有人唱歌。
+    - 妈妈用刀把西瓜晒成两半。
+  correct: 妈妈把湿衣服拿出去晒。
+- questionID: WSQ-P3-L08-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 重.'
+  subject: Chinese
+  targetWord: 重
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“重”？
+  options:
+    - 这块石头很重，风一吹就像羽毛一样飘走了。
+    - 妹妹用重把图画贴在墙上。
+    - 这只箱子很重，我搬不动。
+    - 妈妈把门重上了。
+  correct: 这只箱子很重，我搬不动。
+- questionID: WSQ-P3-L08-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 歪.'
+  subject: Chinese
+  targetWord: 歪
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“歪”？
+  options:
+    - 这条线很歪，笔直得像尺子一样。
+    - 爸爸歪了一锅汤。
+    - 姐姐用歪把头发绑好。
+    - 墙上的画挂歪了。
+  correct: 墙上的画挂歪了。
+- questionID: WSQ-P3-L08-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 乱.'
+  subject: Chinese
+  targetWord: 乱
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“乱”？
+  options:
+    - 桌上的书摆得很乱。
+    - 房间里东西摆得很乱，每样东西都整整齐齐地放在原位。
+    - 妈妈把乱倒进花盆浇花。
+    - 我用乱把铅笔削尖。
+  correct: 桌上的书摆得很乱。
+- questionID: WSQ-P3-L08-USAGE-25
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 累.'
+  subject: Chinese
+  targetWord: 累
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“累”？
+  options:
+    - 妹妹把玩具累进箱子里。
+    - 走了很久，我们都累了。
+    - 爸爸用累把窗户擦干净。
+    - 妈妈把累盛进碗里。
+  correct: 走了很久，我们都累了。
+- questionID: WSQ-P3-L08-USAGE-26
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 满头大汗.'
+  subject: Chinese
+  targetWord: 满头大汗
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“满头大汗”？
+  options:
+    - 爸爸把满头大汗装进文具盒。
+    - 这碗汤很满头大汗，喝起来很鲜美。
+    - 跑完步，他累得满头大汗。
+    - 妹妹用满头大汗把头发绑起来。
+  correct: 跑完步，他累得满头大汗。
+- questionID: WSQ-P3-L08-USAGE-27
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 8; taught vocabulary: 塞.'
+  subject: Chinese
+  targetWord: 塞
+  lessonIds:
+    - 8
+  question: 以下哪一个句子正确使用了“塞”？
+  options:
+    - 姐姐塞了一口汤，喝得津津有味。
+    - 爸爸用耳朵塞见远处的歌声。
+    - 妈妈把小狗塞得很干净，给它洗了澡。
+    - 他把衣服塞进小袋子里。
+  correct: 他把衣服塞进小袋子里。
+- questionID: WSQ-P3-L09-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 小熊.'
+  subject: Chinese
+  targetWord: 小熊
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“小熊”？
+  options:
+    - 妈妈把小熊当作洗衣粉洗衣服。
+    - 爸爸小熊着汽车去上班。
+    - 故事里的小熊住在森林里。
+    - 我把小熊戴在手腕上看时间。
+  correct: 故事里的小熊住在森林里。
+- questionID: WSQ-P3-L09-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 倒进.'
+  subject: Chinese
+  targetWord: 倒进
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“倒进”？
+  options:
+    - 姐姐把课文倒进得很大声，大家都听见了。
+    - 弟弟倒进着自行车去公园。
+    - 妈妈用针线倒进破衣服。
+    - 妈妈把牛奶倒进杯子。
+  correct: 妈妈把牛奶倒进杯子。
+- questionID: WSQ-P3-L09-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 坑.'
+  subject: Chinese
+  targetWord: 坑
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“坑”？
+  options:
+    - 工人在地上挖了一个坑。
+    - 我喝了一杯坑，觉得很甜。
+    - 妹妹把坑穿在脚上。
+    - 爸爸用坑把长发梳顺。
+  correct: 工人在地上挖了一个坑。
+- questionID: WSQ-P3-L09-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 鼻子.'
+  subject: Chinese
+  targetWord: 鼻子
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“鼻子”？
+  options:
+    - 我用鼻子听见树上的鸟叫。
+    - 小狗用鼻子闻食物。
+    - 弟弟用鼻子看清黑板上的字。
+    - 姐姐用鼻子咬了一口苹果。
+  correct: 小狗用鼻子闻食物。
+- questionID: WSQ-P3-L09-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 河.'
+  subject: Chinese
+  targetWord: 河
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“河”？
+  options:
+    - 妹妹把河戴在手腕上。
+    - 我用河把本子上的铅笔字擦掉。
+    - 一条河穿过这个村庄。
+    - 妈妈把河穿在身上。
+  correct: 一条河穿过这个村庄。
+- questionID: WSQ-P3-L09-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 救.'
+  subject: Chinese
+  targetWord: 救
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“救”？
+  options:
+    - 姐姐救了一口汤，觉得很鲜美。
+    - 我用救把鞋带系紧。
+    - 爸爸救着一首歌给大家听。
+    - 消防员救出了被困的人。
+  correct: 消防员救出了被困的人。
+- questionID: WSQ-P3-L09-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 小猴子.'
+  subject: Chinese
+  targetWord: 小猴子
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“小猴子”？
+  options:
+    - 小猴子在树上跳来跳去。
+    - 我用小猴子把纸剪成圆形。
+    - 爸爸把小猴子开到停车场。
+    - 妈妈用小猴子当作洗发水洗头。
+  correct: 小猴子在树上跳来跳去。
+- questionID: WSQ-P3-L09-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 竹竿.'
+  subject: Chinese
+  targetWord: 竹竿
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“竹竿”？
+  options:
+    - 我把竹竿当作牛奶喝了下去。
+    - 妈妈用竹竿晾衣服。
+    - 弟弟把竹竿涂在面包上吃。
+    - 爸爸用竹竿把纸上的铅笔字擦干净。
+  correct: 妈妈用竹竿晾衣服。
+- questionID: WSQ-P3-L09-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 篮子.'
+  subject: Chinese
+  targetWord: 篮子
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“篮子”？
+  options:
+    - 我用篮子当剪刀把布剪开。
+    - 姐姐把篮子戴在手腕上看时间。
+    - 妈妈提着篮子去买菜。
+    - 妈妈把篮子当作一盘菜吃下去了。
+  correct: 妈妈提着篮子去买菜。
+- questionID: WSQ-P3-L09-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 满.'
+  subject: Chinese
+  targetWord: 满
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“满”？
+  options:
+    - 杯子里满满的，一滴水也没有。
+    - 妈妈满了一首歌，声音很好听。
+    - 我用满把指甲剪短。
+    - 杯子里装满了水。
+  correct: 杯子里装满了水。
+- questionID: WSQ-P3-L09-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 喷.'
+  subject: Chinese
+  targetWord: 喷
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“喷”？
+  options:
+    - 喷泉向上喷水。
+    - 姐姐喷着自行车去学校。
+    - 爸爸用眼睛喷见一只老鹰。
+    - 妈妈把门喷上，锁得很紧。
+  correct: 喷泉向上喷水。
+- questionID: WSQ-P3-L09-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 升.'
+  subject: Chinese
+  targetWord: 升
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“升”？
+  options:
+    - 妈妈用升把碗洗干净。
+    - 太阳慢慢升起来。
+    - 弟弟升了一口果汁。
+    - 姐姐把课文升得很响，大家都听见了。
+  correct: 太阳慢慢升起来。
+- questionID: WSQ-P3-L09-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 称.'
+  subject: Chinese
+  targetWord: 称
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“称”？
+  options:
+    - 哥哥把一杯牛奶称进嘴里喝。
+    - 我用称把地板拖干净。
+    - 店主用秤称水果的重量。
+    - 妈妈把帽子称在头上。
+  correct: 店主用秤称水果的重量。
+- questionID: WSQ-P3-L09-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 官员.'
+  subject: Chinese
+  targetWord: 官员
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“官员”？
+  options:
+    - 我把官员穿在脚上走路。
+    - 妈妈用官员擦掉本子上的铅笔字。
+    - 爸爸把官员倒进杯子里。
+    - 故事中的官员向国王报告消息。
+  correct: 故事中的官员向国王报告消息。
+- questionID: WSQ-P3-L09-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 像.'
+  subject: Chinese
+  targetWord: 像
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“像”？
+  options:
+    - 这朵云像一只小兔。
+    - 妈妈用像把苹果切开。
+    - 弟弟像了一口牛奶，觉得很甜。
+    - 姐姐把书像进书包里。
+  correct: 这朵云像一只小兔。
+- questionID: WSQ-P3-L09-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 墙.'
+  subject: Chinese
+  targetWord: 墙
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“墙”？
+  options:
+    - 我穿上一双墙去运动。
+    - 我们把画挂在墙上。
+    - 妈妈把墙当作饮料喝下去。
+    - 爸爸墙着汽车回家。
+  correct: 我们把画挂在墙上。
+- questionID: WSQ-P3-L09-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 谁.'
+  subject: Chinese
+  targetWord: 谁
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“谁”？
+  options:
+    - 妈妈把谁切成小块煮汤。
+    - 这首歌谁得真好听。
+    - 这是谁的书包？
+    - 我用谁把门锁上。
+  correct: 这是谁的书包？
+- questionID: WSQ-P3-L09-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 回答.'
+  subject: Chinese
+  targetWord: 回答
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“回答”？
+  options:
+    - 我把鞋子回答在脚上。
+    - 妈妈回答了一碗汤给我喝。
+    - 爸爸用回答把木板锯断。
+    - 她举手回答老师的问题。
+  correct: 她举手回答老师的问题。
+- questionID: WSQ-P3-L09-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 拉.'
+  subject: Chinese
+  targetWord: 拉
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“拉”？
+  options:
+    - 他拉开抽屉，拿出铅笔。
+    - 妈妈拉了一首歌，唱得很响。
+    - 妹妹把课文拉得很流利，大家都听懂了。
+    - 我用耳朵拉见有人叫我。
+  correct: 他拉开抽屉，拿出铅笔。
+- questionID: WSQ-P3-L09-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 下沉.'
+  subject: Chinese
+  targetWord: 下沉
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“下沉”？
+  options:
+    - 气球飞得越来越高，一直向天空下沉。
+    - 石头放进水里，慢慢下沉。
+    - 姐姐下沉了一杯水给我喝。
+    - 爸爸用下沉把门锁好。
+  correct: 石头放进水里，慢慢下沉。
+- questionID: WSQ-P3-L09-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 最后.'
+  subject: Chinese
+  targetWord: 最后
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“最后”？
+  options:
+    - 比赛还没开始，最后才是第一步。
+    - 妈妈把最后倒进锅里。
+    - 我们先画画，最后写上名字。
+    - 我用最后把鞋带系紧。
+  correct: 我们先画画，最后写上名字。
+- questionID: WSQ-P3-L09-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 重量.'
+  subject: Chinese
+  targetWord: 重量
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“重量”？
+  options:
+    - 妹妹把重量穿在身上。
+    - 爸爸用重量把牙齿刷干净。
+    - 妈妈重量了一首歌给我们听。
+    - 我们用秤测量书包的重量。
+  correct: 我们用秤测量书包的重量。
+- questionID: WSQ-P3-L09-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 9; taught vocabulary: 神童.'
+  subject: Chinese
+  targetWord: 神童
+  lessonIds:
+    - 9
+  question: 以下哪一个句子正确使用了“神童”？
+  options:
+    - 我喝了一杯神童，觉得很清凉。
+    - 这位孩子年纪很小就能弹难曲，被称为神童。
+    - 姐姐用神童把头发梳顺。
+    - 爸爸把神童穿在脚上。
+  correct: 这位孩子年纪很小就能弹难曲，被称为神童。
+- questionID: WSQ-P3-L10-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 扔.'
+  subject: Chinese
+  targetWord: 扔
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“扔”？
+  options:
+    - 妈妈用梳子把头发扔整齐。
+    - 哥哥扔了一首歌，大家都听见了。
+    - 我把米饭扔熟了，才端上桌。
+    - 请把垃圾扔进垃圾桶。
+  correct: 请把垃圾扔进垃圾桶。
+- questionID: WSQ-P3-L10-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 垃圾.'
+  subject: Chinese
+  targetWord: 垃圾
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“垃圾”？
+  options:
+    - 我们把地上的垃圾捡起来。
+    - 我用垃圾当作牙膏刷牙。
+    - 爸爸垃圾着巴士去上班。
+    - 妹妹把垃圾戴在手腕上看时间。
+  correct: 我们把地上的垃圾捡起来。
+- questionID: WSQ-P3-L10-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 蚊子.'
+  subject: Chinese
+  targetWord: 蚊子
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“蚊子”？
+  options:
+    - 妈妈把蚊子当作洗衣粉洗衣服。
+    - 一只蚊子在耳边飞来飞去。
+    - 我用蚊子剪开纸袋。
+    - 爸爸开着一辆蚊子去停车场。
+  correct: 一只蚊子在耳边飞来飞去。
+- questionID: WSQ-P3-L10-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 收拾.'
+  subject: Chinese
+  targetWord: 收拾
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“收拾”？
+  options:
+    - 妹妹收拾了一口饭，慢慢地嚼着。
+    - 爸爸用眼睛收拾见天上的星星。
+    - 玩完后，我们收拾玩具。
+    - 我把鞋带收拾在脚上，穿好鞋子。
+  correct: 玩完后，我们收拾玩具。
+- questionID: WSQ-P3-L10-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 乌鸦.'
+  subject: Chinese
+  targetWord: 乌鸦
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“乌鸦”？
+  options:
+    - 我用乌鸦当剪刀剪纸。
+    - 妈妈乌鸦了一碗汤给我喝。
+    - 姐姐把乌鸦穿在脚上去学校。
+    - 一只乌鸦停在树枝上。
+  correct: 一只乌鸦停在树枝上。
+- questionID: WSQ-P3-L10-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 随地.'
+  subject: Chinese
+  targetWord: 随地
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“随地”？
+  options:
+    - 不要随地吐痰。
+    - 妈妈把随地放进锅里煮。
+    - 爸爸随地了一首歌给我们听。
+    - 这张椅子很随地，坐着很舒服。
+  correct: 不要随地吐痰。
+- questionID: WSQ-P3-L10-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 痰.'
+  subject: Chinese
+  targetWord: 痰
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“痰”？
+  options:
+    - 爸爸痰着自行车去上班。
+    - 爷爷咳嗽时咳出了一点痰。
+    - 我用痰把门上的螺丝拧紧。
+    - 妹妹把痰穿在脚上走路。
+  correct: 爷爷咳嗽时咳出了一点痰。
+- questionID: WSQ-P3-L10-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 保持.'
+  subject: Chinese
+  targetWord: 保持
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“保持”？
+  options:
+    - 妈妈保持了一口牛奶，觉得很香。
+    - 我用保持把绳子剪断。
+    - 我们要保持教室清洁。
+    - 姐姐把保持戴在头上遮阳。
+  correct: 我们要保持教室清洁。
+- questionID: WSQ-P3-L10-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 爱护.'
+  subject: Chinese
+  targetWord: 爱护
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“爱护”？
+  options:
+    - 奶奶爱护了一锅饭给大家吃。
+    - 爸爸用爱护把桌子的长度量出来。
+    - 我把帽子爱护在头上。
+    - 我们应该爱护花草，不随便采摘。
+  correct: 我们应该爱护花草，不随便采摘。
+- questionID: WSQ-P3-L10-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 环境.'
+  subject: Chinese
+  targetWord: 环境
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“环境”？
+  options:
+    - 这里的环境干净又安静。
+    - 姐姐用环境把头发绑起来。
+    - 我喝了一杯环境，觉得很甜。
+    - 妈妈环境了一件新衣服给我穿。
+  correct: 这里的环境干净又安静。
+- questionID: WSQ-P3-L10-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 厨房.'
+  subject: Chinese
+  targetWord: 厨房
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“厨房”？
+  options:
+    - 爸爸把厨房开到车站。
+    - 妈妈在厨房里煮饭。
+    - 妹妹穿上一双厨房去跑步。
+    - 我用厨房当牙刷刷牙。
+  correct: 妈妈在厨房里煮饭。
+- questionID: WSQ-P3-L10-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 脏.'
+  subject: Chinese
+  targetWord: 脏
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“脏”？
+  options:
+    - 这件衣服很脏，一点污渍也没有，干净极了。
+    - 姐姐脏了一首歌给我听。
+    - 我的鞋子沾了泥，变脏了。
+    - 妈妈用脏把饭菜盛进碗里。
+  correct: 我的鞋子沾了泥，变脏了。
+- questionID: WSQ-P3-L10-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 衣橱.'
+  subject: Chinese
+  targetWord: 衣橱
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“衣橱”？
+  options:
+    - 我用衣橱把纸剪成两半。
+    - 妹妹把衣橱戴在手腕上看时间。
+    - 妈妈倒了一杯衣橱给我喝。
+    - 她把衣服挂进衣橱。
+  correct: 她把衣服挂进衣橱。
+- questionID: WSQ-P3-L10-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 仔细.'
+  subject: Chinese
+  targetWord: 仔细
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“仔细”？
+  options:
+    - 我仔细检查作业，没有漏题。
+    - 爸爸把仔细放进工具箱。
+    - 这杯水仔细得很甜。
+    - 妹妹用仔细把鞋带系好。
+  correct: 我仔细检查作业，没有漏题。
+- questionID: WSQ-P3-L10-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 啊.'
+  subject: Chinese
+  targetWord: 啊
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“啊”？
+  options:
+    - 我买了一件啊送给妹妹。
+    - 这朵花真美啊！
+    - 爸爸用啊把门锁好。
+    - 妈妈把啊切成薄片煮汤。
+  correct: 这朵花真美啊！
+- questionID: WSQ-P3-L10-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 漂亮.'
+  subject: Chinese
+  targetWord: 漂亮
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“漂亮”？
+  options:
+    - 弟弟把漂亮倒进杯子里。
+    - 妈妈用漂亮把钮扣缝上。
+    - 这条裙子很漂亮。
+    - 爸爸漂亮了一锅粥。
+  correct: 这条裙子很漂亮。
+- questionID: WSQ-P3-L10-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 招手.'
+  subject: Chinese
+  targetWord: 招手
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“招手”？
+  options:
+    - 妈妈用招手把菜切成小块。
+    - 哥哥招手了一口果汁。
+    - 我把招手戴在手腕上看时间。
+    - 我向远处的朋友招手。
+  correct: 我向远处的朋友招手。
+- questionID: WSQ-P3-L10-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 决定.'
+  subject: Chinese
+  targetWord: 决定
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“决定”？
+  options:
+    - 我决定每天读十分钟的书。
+    - 妹妹把决定穿在脚上走路。
+    - 妈妈决定了一口汤，觉得很好喝。
+    - 爸爸用决定把木板锯开。
+  correct: 我决定每天读十分钟的书。
+- questionID: WSQ-P3-L10-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 吃惊.'
+  subject: Chinese
+  targetWord: 吃惊
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“吃惊”？
+  options:
+    - 爸爸把吃惊倒进花盆里浇花。
+    - 看见这么大的蛋糕，我很吃惊。
+    - 这张桌子很吃惊，放不进房间。
+    - 姐姐吃惊了一首歌，大家都听见了。
+  correct: 看见这么大的蛋糕，我很吃惊。
+- questionID: WSQ-P3-L10-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 不能.'
+  subject: Chinese
+  targetWord: 不能
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“不能”？
+  options:
+    - 妈妈用不能把衣服晾起来。
+    - 我把不能放进冰箱。
+    - 这杯水太热，不能马上喝。
+    - 这只猫很不能，所以大家都喜欢它。
+  correct: 这杯水太热，不能马上喝。
+- questionID: WSQ-P3-L10-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 伸出.'
+  subject: Chinese
+  targetWord: 伸出
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“伸出”？
+  options:
+    - 妹妹伸出了一首歌给我们听。
+    - 爸爸用伸出把铅笔字擦掉。
+    - 妈妈把一锅粥伸出得很好吃。
+    - 她伸出手，接住气球。
+  correct: 她伸出手，接住气球。
+- questionID: WSQ-P3-L10-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 缩.'
+  subject: Chinese
+  targetWord: 缩
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“缩”？
+  options:
+    - 乌龟把头缩进壳里。
+    - 气球越吹越大，慢慢缩成一个大球。
+    - 姐姐缩了一口茶，觉得很香。
+    - 我用缩把指甲剪短。
+  correct: 乌龟把头缩进壳里。
+- questionID: WSQ-P3-L10-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 追上.'
+  subject: Chinese
+  targetWord: 追上
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“追上”？
+  options:
+    - 姐姐追上了一口面条，觉得很好吃。
+    - 我加快脚步，追上前面的朋友。
+    - 我用追上把窗户擦亮。
+    - 爸爸把追上戴在头上挡太阳。
+  correct: 我加快脚步，追上前面的朋友。
+- questionID: WSQ-P3-L10-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 10; taught vocabulary: 觉得.'
+  subject: Chinese
+  targetWord: 觉得
+  lessonIds:
+    - 10
+  question: 以下哪一个句子正确使用了“觉得”？
+  options:
+    - 我觉得了一口饭，肚子饱了。
+    - 妹妹把觉得摆在书架上。
+    - 我觉得这本书很有趣。
+    - 妈妈用觉得把衣服缝好。
+  correct: 我觉得这本书很有趣。
+- questionID: WSQ-P3-L11-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 环保袋.'
+  subject: Chinese
+  targetWord: 环保袋
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“环保袋”？
+  options:
+    - 妈妈带环保袋去买菜。
+    - 我用环保袋当作牙刷刷牙。
+    - 妹妹把环保袋戴在手腕上看时间。
+    - 妈妈环保袋了一碗饭给我吃。
+  correct: 妈妈带环保袋去买菜。
+- questionID: WSQ-P3-L11-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 代替.'
+  subject: Chinese
+  targetWord: 代替
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“代替”？
+  options:
+    - 爸爸把代替穿在脚上。
+    - 我们用环保袋代替一次性塑料袋。
+    - 姐姐代替了一口水，觉得很甜。
+    - 我用代替把房间打扫干净。
+  correct: 我们用环保袋代替一次性塑料袋。
+- questionID: WSQ-P3-L11-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 塑料袋.'
+  subject: Chinese
+  targetWord: 塑料袋
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“塑料袋”？
+  options:
+    - 爸爸塑料袋着汽车去上班。
+    - 我用塑料袋当作剪刀剪布。
+    - 这个塑料袋里装着面包。
+    - 妈妈把塑料袋当作面包吃下去了。
+  correct: 这个塑料袋里装着面包。
+- questionID: WSQ-P3-L11-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 巴刹.'
+  subject: Chinese
+  targetWord: 巴刹
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“巴刹”？
+  options:
+    - 妹妹把巴刹戴在头上遮阳。
+    - 我喝了一杯巴刹。
+    - 爸爸用巴刹把螺丝拧紧。
+    - 奶奶每天到巴刹买菜。
+  correct: 奶奶每天到巴刹买菜。
+- questionID: WSQ-P3-L11-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 废物.'
+  subject: Chinese
+  targetWord: 废物
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“废物”？
+  options:
+    - 姐姐用废物当作牙膏刷牙。
+    - 旧纸盒是可以再利用的废物。
+    - 妈妈废物了一首歌给我们听。
+    - 我把废物穿在两只脚上去学校。
+  correct: 旧纸盒是可以再利用的废物。
+- questionID: WSQ-P3-L11-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 瓶子.'
+  subject: Chinese
+  targetWord: 瓶子
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“瓶子”？
+  options:
+    - 我把瓶子当作一块饼干吃进肚子里。
+    - 爸爸瓶子着汽车去停车场。
+    - 瓶子里装着清水。
+    - 妹妹用瓶子把本子上的铅笔字擦干净。
+  correct: 瓶子里装着清水。
+- questionID: WSQ-P3-L11-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 组屋.'
+  subject: Chinese
+  targetWord: 组屋
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“组屋”？
+  options:
+    - 我把组屋收进铅笔盒里。
+    - 妹妹穿上一双组屋去运动。
+    - 爸爸用组屋把头发梳整齐。
+    - 我们住在这座组屋里。
+  correct: 我们住在这座组屋里。
+- questionID: WSQ-P3-L11-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 并排.'
+  subject: Chinese
+  targetWord: 并排
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“并排”？
+  options:
+    - 两辆车并排停在停车场。
+    - 两辆车一前一后，紧紧并排着行驶。
+    - 妈妈并排了一锅粥。
+    - 这杯水很并排，喝起来很甜。
+  correct: 两辆车并排停在停车场。
+- questionID: WSQ-P3-L11-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 停车场.'
+  subject: Chinese
+  targetWord: 停车场
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“停车场”？
+  options:
+    - 姐姐把停车场戴在手腕上看时间。
+    - 爸爸把车停在停车场。
+    - 妈妈切了一片停车场放在面包上。
+    - 我用停车场把扣子缝好。
+  correct: 爸爸把车停在停车场。
+- questionID: WSQ-P3-L11-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 辆.'
+  subject: Chinese
+  targetWord: 辆
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“辆”？
+  options:
+    - 我吃了一辆苹果。
+    - 姐姐写了一辆作文。
+    - 停车场里有十辆汽车。
+    - 爸爸买了一辆衬衫。
+  correct: 停车场里有十辆汽车。
+- questionID: WSQ-P3-L11-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 一直.'
+  subject: Chinese
+  targetWord: 一直
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“一直”？
+  options:
+    - 妈妈把一直收进钱包里。
+    - 妹妹一直了一首歌给我们听。
+    - 这座山很一直，我们爬了很久。
+    - 她一直认真听老师讲课。
+  correct: 她一直认真听老师讲课。
+- questionID: WSQ-P3-L11-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 海洋.'
+  subject: Chinese
+  targetWord: 海洋
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“海洋”？
+  options:
+    - 海洋里生活着许多动物。
+    - 我用海洋把头发梳顺。
+    - 爸爸把海洋穿在脚上。
+    - 妈妈倒了一杯海洋，给我当牛奶喝。
+  correct: 海洋里生活着许多动物。
+- questionID: WSQ-P3-L11-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 所以.'
+  subject: Chinese
+  targetWord: 所以
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“所以”？
+  options:
+    - 我先做作业，所以然后才洗澡。
+    - 因为下雨，所以我们留在家里。
+    - 爸爸把所以放进工具箱。
+    - 这道菜所以得很鲜美。
+  correct: 因为下雨，所以我们留在家里。
+- questionID: WSQ-P3-L11-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 纸.'
+  subject: Chinese
+  targetWord: 纸
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“纸”？
+  options:
+    - 我用纸当作铁锤，把钉子敲进厚木板。
+    - 妹妹把纸当作一碗面条吃下去了。
+    - 我用纸折了一只小船。
+    - 爸爸纸着汽车去上班。
+  correct: 我用纸折了一只小船。
+- questionID: WSQ-P3-L11-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 日用品.'
+  subject: Chinese
+  targetWord: 日用品
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“日用品”？
+  options:
+    - 妈妈把日用品当作一首歌唱给我听。
+    - 爸爸日用品着汽车回家。
+    - 我把日用品当作课文的题目来计算。
+    - 妈妈到商店买牙刷和肥皂等日用品。
+  correct: 妈妈到商店买牙刷和肥皂等日用品。
+- questionID: WSQ-P3-L11-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 吧.'
+  subject: Chinese
+  targetWord: 吧
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“吧”？
+  options:
+    - 我们一起去图书馆吧。
+    - 我买了一斤吧回家。
+    - 爸爸把吧穿在脚上。
+    - 妈妈用吧把汤盛进碗里。
+  correct: 我们一起去图书馆吧。
+- questionID: WSQ-P3-L11-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 认为.'
+  subject: Chinese
+  targetWord: 认为
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“认为”？
+  options:
+    - 妈妈认为了一口粥，觉得很热。
+    - 我认为这个办法很好。
+    - 我用认为把绳子绑紧。
+    - 姐姐把认为摆在书架上。
+  correct: 我认为这个办法很好。
+- questionID: WSQ-P3-L11-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 责任.'
+  subject: Chinese
+  targetWord: 责任
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“责任”？
+  options:
+    - 爸爸用责任把头发梳好。
+    - 妈妈责任了一碗面给我吃。
+    - 照顾自己的物品是我的责任。
+    - 我把责任穿在脚上。
+  correct: 照顾自己的物品是我的责任。
+- questionID: WSQ-P3-L11-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 如果.'
+  subject: Chinese
+  targetWord: 如果
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“如果”？
+  options:
+    - 弟弟把如果装进书包。
+    - 妈妈如果了一锅汤。
+    - 这朵花很如果，大家都喜欢它。
+    - 如果明天下雨，我们就留在家里。
+  correct: 如果明天下雨，我们就留在家里。
+- questionID: WSQ-P3-L11-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 尽.'
+  subject: Chinese
+  targetWord: 尽
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“尽”？
+  options:
+    - 我会尽力完成这项任务。
+    - 我尽了一口水，觉得很清凉。
+    - 妈妈用尽把地板拖干净。
+    - 姐姐把帽子尽在头上。
+  correct: 我会尽力完成这项任务。
+- questionID: WSQ-P3-L11-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 11; taught vocabulary: 份.'
+  subject: Chinese
+  targetWord: 份
+  lessonIds:
+    - 11
+  question: 以下哪一个句子正确使用了“份”？
+  options:
+    - 门口停着一份汽车。
+    - 我也想为班级出一份力。
+    - 爸爸穿上一份衬衫。
+    - 我用一份铅笔写字。
+  correct: 我也想为班级出一份力。
+- questionID: WSQ-P3-L12-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 设计.'
+  subject: Chinese
+  targetWord: 设计
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“设计”？
+  options:
+    - 妹妹设计了一口水，觉得很清凉。
+    - 我设计了一张生日贺卡。
+    - 妈妈用设计把菜切碎。
+    - 我把设计戴在手腕上看时间。
+  correct: 我设计了一张生日贺卡。
+- questionID: WSQ-P3-L12-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 亮晶晶.'
+  subject: Chinese
+  targetWord: 亮晶晶
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“亮晶晶”？
+  options:
+    - 星星亮晶晶得一点光也没有。
+    - 妈妈把亮晶晶煮熟端上桌。
+    - 夜空中的星星亮晶晶的。
+    - 爸爸用亮晶晶把窗户关好。
+  correct: 夜空中的星星亮晶晶的。
+- questionID: WSQ-P3-L12-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 新加坡.'
+  subject: Chinese
+  targetWord: 新加坡
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“新加坡”？
+  options:
+    - 我把新加坡装进文具盒。
+    - 妹妹穿上一双新加坡出门。
+    - 妈妈新加坡了一锅粥。
+    - 我的家在新加坡。
+  correct: 我的家在新加坡。
+- questionID: WSQ-P3-L12-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 国旗.'
+  subject: Chinese
+  targetWord: 国旗
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“国旗”？
+  options:
+    - 国旗在旗杆上迎风飘扬。
+    - 爸爸用国旗当作剪刀剪开纸袋。
+    - 妈妈把国旗当作牛奶喝下去了。
+    - 我把国旗当作一首儿歌唱。
+  correct: 国旗在旗杆上迎风飘扬。
+- questionID: WSQ-P3-L12-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 颗.'
+  subject: Chinese
+  targetWord: 颗
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“颗”？
+  options:
+    - 爸爸买了一颗自行车。
+    - 夜空中有一颗明亮的星星。
+    - 我读了一颗故事书。
+    - 妹妹穿上一颗裙子。
+  correct: 夜空中有一颗明亮的星星。
+- questionID: WSQ-P3-L12-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 世界.'
+  subject: Chinese
+  targetWord: 世界
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“世界”？
+  options:
+    - 妈妈把世界切成小块煮汤。
+    - 我用世界把铅笔削尖。
+    - 我想了解世界各地的文化。
+    - 爸爸穿上一双世界去跑步。
+  correct: 我想了解世界各地的文化。
+- questionID: WSQ-P3-L12-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 种族.'
+  subject: Chinese
+  targetWord: 种族
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“种族”？
+  options:
+    - 妹妹把种族穿在身上去上学。
+    - 妈妈种族了一口饭给我吃。
+    - 我用种族把纸剪开。
+    - 我们尊重不同种族的朋友。
+  correct: 我们尊重不同种族的朋友。
+- questionID: WSQ-P3-L12-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 华人.'
+  subject: Chinese
+  targetWord: 华人
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“华人”？
+  options:
+    - 我的华人朋友教我写春联。
+    - 我把华人戴在手腕上看时间。
+    - 妈妈煮了一锅华人给大家吃。
+    - 爸爸用华人当作洗发水洗头。
+  correct: 我的华人朋友教我写春联。
+- questionID: WSQ-P3-L12-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 印度人.'
+  subject: Chinese
+  targetWord: 印度人
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“印度人”？
+  options:
+    - 妈妈把印度人倒进杯子里。
+    - 我的印度人朋友邀请我到他家。
+    - 我用印度人把铅笔字擦掉。
+    - 爸爸印度人着巴士去上班。
+  correct: 我的印度人朋友邀请我到他家。
+- questionID: WSQ-P3-L12-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 文件夹.'
+  subject: Chinese
+  targetWord: 文件夹
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“文件夹”？
+  options:
+    - 我用文件夹当作牙膏刷牙。
+    - 姐姐喝了一杯文件夹。
+    - 我把练习纸收进文件夹。
+    - 爸爸文件夹着汽车去上班。
+  correct: 我把练习纸收进文件夹。
+- questionID: WSQ-P3-L12-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 国庆日.'
+  subject: Chinese
+  targetWord: 国庆日
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“国庆日”？
+  options:
+    - 我用国庆日把门打开。
+    - 妹妹把国庆日穿在脚上。
+    - 妈妈把国庆日炒熟，端上饭桌。
+    - 国庆日，学校举行庆祝活动。
+  correct: 国庆日，学校举行庆祝活动。
+- questionID: WSQ-P3-L12-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 礼物.'
+  subject: Chinese
+  targetWord: 礼物
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“礼物”？
+  options:
+    - 奶奶送我一本书作为生日礼物。
+    - 爸爸礼物着汽车去上班。
+    - 这条路很礼物，车子开不过去。
+    - 妈妈礼物了一锅汤。
+  correct: 奶奶送我一本书作为生日礼物。
+- questionID: WSQ-P3-L12-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 唱.'
+  subject: Chinese
+  targetWord: 唱
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“唱”？
+  options:
+    - 我用眼睛唱见远处的船。
+    - 妹妹把米饭唱进碗里。
+    - 妹妹开心地唱起歌来。
+    - 妈妈用梳子把头发唱整齐。
+  correct: 妹妹开心地唱起歌来。
+- questionID: WSQ-P3-L12-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 国歌.'
+  subject: Chinese
+  targetWord: 国歌
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“国歌”？
+  options:
+    - 妹妹用国歌把纸剪开。
+    - 妈妈把国歌倒进茶杯。
+    - 爸爸穿上一双国歌去跑步。
+    - 升旗时，我们一起唱国歌。
+  correct: 升旗时，我们一起唱国歌。
+- questionID: WSQ-P3-L12-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 竖起.'
+  subject: Chinese
+  targetWord: 竖起
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“竖起”？
+  options:
+    - 妈妈竖起大拇指，夸我做得好。
+    - 哥哥把课文竖起得很响，大家都听见了。
+    - 我用竖起把木头锯成两段。
+    - 妈妈竖起了一口饭，慢慢嚼着。
+  correct: 妈妈竖起大拇指，夸我做得好。
+- questionID: WSQ-P3-L12-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 大拇指.'
+  subject: Chinese
+  targetWord: 大拇指
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“大拇指”？
+  options:
+    - 我用大拇指听见窗外的鸟叫。
+    - 爸爸竖起大拇指表示赞许。
+    - 妹妹把大拇指穿在脚上走路。
+    - 妈妈用大拇指当作铁锅煮汤。
+  correct: 爸爸竖起大拇指表示赞许。
+- questionID: WSQ-P3-L12-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 谜语.'
+  subject: Chinese
+  targetWord: 谜语
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“谜语”？
+  options:
+    - 爸爸谜语着一辆巴士回家。
+    - 我用谜语把钉子敲进墙里。
+    - 爷爷出了一个谜语让我们猜。
+    - 妈妈把谜语倒在锅里炒熟。
+  correct: 爷爷出了一个谜语让我们猜。
+- questionID: WSQ-P3-L12-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 合唱团.'
+  subject: Chinese
+  targetWord: 合唱团
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“合唱团”？
+  options:
+    - 妹妹用合唱团把牙齿刷干净。
+    - 妈妈把合唱团切成片，夹在面包里。
+    - 爸爸穿上一件合唱团出门。
+    - 姐姐加入了学校合唱团。
+  correct: 姐姐加入了学校合唱团。
+- questionID: WSQ-P3-L12-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 呢.'
+  subject: Chinese
+  targetWord: 呢
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“呢”？
+  options:
+    - 我带了水壶，你的呢？
+    - 妈妈把呢装进购物袋。
+    - 爸爸用呢把木板钉牢。
+    - 这碗汤呢得很香。
+  correct: 我带了水壶，你的呢？
+- questionID: WSQ-P3-L12-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 12; taught vocabulary: 兴奋.'
+  subject: Chinese
+  targetWord: 兴奋
+  lessonIds:
+    - 12
+  question: 以下哪一个句子正确使用了“兴奋”？
+  options:
+    - 妹妹兴奋得一点也不激动，只觉得无聊。
+    - 听说要去旅行，我们都很兴奋。
+    - 爸爸兴奋了一锅粥。
+    - 我用兴奋把纸贴在墙上。
+  correct: 听说要去旅行，我们都很兴奋。
+- questionID: WSQ-P3-L13-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 养.'
+  subject: Chinese
+  targetWord: 养
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“养”？
+  options:
+    - 爸爸把一碗面养进肚子里，吃得很快。
+    - 姐姐用梳子把头发养整齐。
+    - 爷爷在家养了两只小鸟。
+    - 弟弟养着一首儿歌，大家都听见了。
+  correct: 爷爷在家养了两只小鸟。
+- questionID: WSQ-P3-L13-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 虾.'
+  subject: Chinese
+  targetWord: 虾
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“虾”？
+  options:
+    - 爸爸虾着汽车去上班。
+    - 姐姐把虾当作尺子量桌子的长度。
+    - 我用虾把门锁上。
+    - 妈妈买了一些新鲜的虾。
+  correct: 妈妈买了一些新鲜的虾。
+- questionID: WSQ-P3-L13-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 湖.'
+  subject: Chinese
+  targetWord: 湖
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“湖”？
+  options:
+    - 山脚下有一个美丽的湖。
+    - 妹妹把湖穿在身上。
+    - 妈妈湖了一锅粥。
+    - 我用湖把本子上的铅笔字擦掉。
+  correct: 山脚下有一个美丽的湖。
+- questionID: WSQ-P3-L13-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 森林.'
+  subject: Chinese
+  targetWord: 森林
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“森林”？
+  options:
+    - 我把森林收进铅笔盒。
+    - 森林里长着许多高大的树。
+    - 妈妈用森林把扣子缝在衣服上。
+    - 妹妹把森林戴在手腕上看时间。
+  correct: 森林里长着许多高大的树。
+- questionID: WSQ-P3-L13-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 狐狸.'
+  subject: Chinese
+  targetWord: 狐狸
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“狐狸”？
+  options:
+    - 爸爸狐狸着汽车去停车场。
+    - 妈妈把狐狸当作洗衣粉倒进洗衣机。
+    - 一只狐狸从树林里跑出来。
+    - 我用狐狸当作剪刀剪纸。
+  correct: 一只狐狸从树林里跑出来。
+- questionID: WSQ-P3-L13-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 狼.'
+  subject: Chinese
+  targetWord: 狼
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“狼”？
+  options:
+    - 爸爸用狼当作牙刷刷牙。
+    - 妹妹把狼戴在手腕上看时间。
+    - 妈妈狼了一碗面给我吃。
+    - 故事里的狼躲在树后。
+  correct: 故事里的狼躲在树后。
+- questionID: WSQ-P3-L13-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 桥.'
+  subject: Chinese
+  targetWord: 桥
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“桥”？
+  options:
+    - 这座桥连接河的两岸。
+    - 我穿上一双桥去跑步。
+    - 妈妈桥了一锅粥给我喝。
+    - 姐姐用桥把头发绑好。
+  correct: 这座桥连接河的两岸。
+- questionID: WSQ-P3-L13-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 猩猩.'
+  subject: Chinese
+  targetWord: 猩猩
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“猩猩”？
+  options:
+    - 爸爸开着一辆猩猩去上班。
+    - 影片里的猩猩在树上活动。
+    - 我用猩猩把指甲剪短。
+    - 妹妹把猩猩穿在脚上。
+  correct: 影片里的猩猩在树上活动。
+- questionID: WSQ-P3-L13-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 沿着.'
+  subject: Chinese
+  targetWord: 沿着
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“沿着”？
+  options:
+    - 妈妈把沿着倒进锅里煮。
+    - 这道题很沿着，我一下子就做完了。
+    - 我们沿着河岸慢慢走。
+    - 弟弟沿着了一口汤。
+  correct: 我们沿着河岸慢慢走。
+- questionID: WSQ-P3-L13-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 沙滩.'
+  subject: Chinese
+  targetWord: 沙滩
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“沙滩”？
+  options:
+    - 我把沙滩戴在手腕上看时间。
+    - 妈妈用沙滩把衬衫的扣子缝好。
+    - 弟弟穿上一双沙滩出门。
+    - 孩子们在沙滩上堆沙堡。
+  correct: 孩子们在沙滩上堆沙堡。
+- questionID: WSQ-P3-L13-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 棵.'
+  subject: Chinese
+  targetWord: 棵
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“棵”？
+  options:
+    - 院子里有一棵大树。
+    - 我读了一棵故事书。
+    - 爸爸开着一棵巴士去车站。
+    - 妹妹穿上一棵裙子。
+  correct: 院子里有一棵大树。
+- questionID: WSQ-P3-L13-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 信封.'
+  subject: Chinese
+  targetWord: 信封
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“信封”？
+  options:
+    - 妈妈把信封当作蔬菜炒熟。
+    - 我把贺卡放进信封。
+    - 姐姐用信封当作钢锯锯木头。
+    - 爸爸信封着汽车回家。
+  correct: 我把贺卡放进信封。
+- questionID: WSQ-P3-L13-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 地图.'
+  subject: Chinese
+  targetWord: 地图
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“地图”？
+  options:
+    - 我把地图当作牙膏刷牙。
+    - 爸爸地图了一首歌给我听。
+    - 爸爸看地图寻找路线。
+    - 妈妈倒了一杯地图给我喝。
+  correct: 爸爸看地图寻找路线。
+- questionID: WSQ-P3-L13-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 必须.'
+  subject: Chinese
+  targetWord: 必须
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“必须”？
+  options:
+    - 妈妈把必须收进冰箱。
+    - 这张桌子必须得很高。
+    - 弟弟用必须把球打出去。
+    - 过马路时，我们必须注意车辆。
+  correct: 过马路时，我们必须注意车辆。
+- questionID: WSQ-P3-L13-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 指定.'
+  subject: Chinese
+  targetWord: 指定
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“指定”？
+  options:
+    - 老师请我们在指定地点集合。
+    - 姐姐指定了一口水，觉得很甜。
+    - 我用指定把门锁好。
+    - 妈妈把指定穿在脚上。
+  correct: 老师请我们在指定地点集合。
+- questionID: WSQ-P3-L13-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 讨论.'
+  subject: Chinese
+  targetWord: 讨论
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“讨论”？
+  options:
+    - 奶奶讨论了一锅粥给我喝。
+    - 我们一起讨论怎样完成任务。
+    - 爸爸用讨论把自行车修好。
+    - 妹妹把讨论系在鞋子上。
+  correct: 我们一起讨论怎样完成任务。
+- questionID: WSQ-P3-L13-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 带领.'
+  subject: Chinese
+  targetWord: 带领
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“带领”？
+  options:
+    - 姐姐带领了一口汤，觉得很热。
+    - 我用带领把头发梳顺。
+    - 老师带领我们走进图书馆。
+    - 爸爸把带领穿在身上。
+  correct: 老师带领我们走进图书馆。
+- questionID: WSQ-P3-L13-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 任务.'
+  subject: Chinese
+  targetWord: 任务
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“任务”？
+  options:
+    - 我用任务把纸剪开。
+    - 妈妈任务了一盘菜给我吃。
+    - 弟弟把任务当作雨鞋穿在脚上。
+    - 我的任务是给花浇水。
+  correct: 我的任务是给花浇水。
+- questionID: WSQ-P3-L13-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 急忙.'
+  subject: Chinese
+  targetWord: 急忙
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“急忙”？
+  options:
+    - 下雨了，她急忙收衣服。
+    - 爸爸把急忙戴在手腕上看时间。
+    - 这碗面急忙得很好吃。
+    - 妈妈用急忙把衣服缝好。
+  correct: 下雨了，她急忙收衣服。
+- questionID: WSQ-P3-L13-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 漂亮.'
+  subject: Chinese
+  targetWord: 漂亮
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“漂亮”？
+  options:
+    - 我把漂亮收进文具盒。
+    - 这片沙滩的景色很漂亮。
+    - 爸爸用漂亮把木板锯开。
+    - 奶奶漂亮了一碗面给我吃。
+  correct: 这片沙滩的景色很漂亮。
+- questionID: WSQ-P3-L13-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 虽然.'
+  subject: Chinese
+  targetWord: 虽然
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“虽然”？
+  options:
+    - 姐姐把虽然戴在头上挡太阳。
+    - 这道菜虽然得很香。
+    - 虽然下雨，我们仍准时到达。
+    - 爸爸用虽然把门锁住。
+  correct: 虽然下雨，我们仍准时到达。
+- questionID: WSQ-P3-L13-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 但是.'
+  subject: Chinese
+  targetWord: 但是
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“但是”？
+  options:
+    - 妈妈把但是煮熟端上桌。
+    - 我穿上一件但是去上学。
+    - 弟弟用但是把铅笔字擦掉。
+    - 我想出去玩，但是作业还没做完。
+  correct: 我想出去玩，但是作业还没做完。
+- questionID: WSQ-P3-L13-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 13; taught vocabulary: 仍然.'
+  subject: Chinese
+  targetWord: 仍然
+  lessonIds:
+    - 13
+  question: 以下哪一个句子正确使用了“仍然”？
+  options:
+    - 雨停了，地面仍然很湿。
+    - 爸爸把仍然放进钱包里。
+    - 妹妹仍然了一口牛奶。
+    - 这条路很仍然，车子过不去。
+  correct: 雨停了，地面仍然很湿。
+- questionID: WSQ-P3-L14-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 假.'
+  subject: Chinese
+  targetWord: 假
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“假”？
+  options:
+    - 弟弟把玩具假进箱子里。
+    - 妈妈假了一锅饭给我吃。
+    - 爸爸用假把头发梳好。
+    - 这朵花是塑料做的，是假花。
+  correct: 这朵花是塑料做的，是假花。
+- questionID: WSQ-P3-L14-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 强.'
+  subject: Chinese
+  targetWord: 强
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“强”？
+  options:
+    - 这位选手的实力很强。
+    - 他的力气很强，连一张纸都拿不起来。
+    - 妈妈把强倒进花盆里。
+    - 我用强把图画贴在墙上。
+  correct: 这位选手的实力很强。
+- questionID: WSQ-P3-L14-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 弱.'
+  subject: Chinese
+  targetWord: 弱
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“弱”？
+  options:
+    - 这束光很弱，亮得我睁不开眼睛。
+    - 这只受伤的小鸟身体很弱。
+    - 爸爸弱了一锅汤。
+    - 妹妹把弱系在鞋子上。
+  correct: 这只受伤的小鸟身体很弱。
+- questionID: WSQ-P3-L14-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 吞.'
+  subject: Chinese
+  targetWord: 吞
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“吞”？
+  options:
+    - 姐姐吞着自行车去公园。
+    - 我用吞把头发梳整齐。
+    - 小猫把嘴里的食物吞下去。
+    - 爸爸把课文吞得很响，大家都听见了。
+  correct: 小猫把嘴里的食物吞下去。
+- questionID: WSQ-P3-L14-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 慢.'
+  subject: Chinese
+  targetWord: 慢
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“慢”？
+  options:
+    - 乌龟跑得很慢，一眨眼就跑完了一百公里。
+    - 我用慢把饭菜盛进碗里。
+    - 妈妈把慢挂在衣架上。
+    - 爷爷走得很慢。
+  correct: 爷爷走得很慢。
+- questionID: WSQ-P3-L14-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 懒.'
+  subject: Chinese
+  targetWord: 懒
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“懒”？
+  options:
+    - 他很懒，连自己的书包也不愿收拾。
+    - 他从不肯做家务，真是懒得很勤快。
+    - 妹妹懒了一首歌给我听。
+    - 妈妈用懒把指甲剪短。
+  correct: 他很懒，连自己的书包也不愿收拾。
+- questionID: WSQ-P3-L14-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 苦.'
+  subject: Chinese
+  targetWord: 苦
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“苦”？
+  options:
+    - 妹妹苦着自行车去学校。
+    - 这杯药很苦。
+    - 爸爸苦着汽车去上班。
+    - 姐姐把苦穿在脚上。
+  correct: 这杯药很苦。
+- questionID: WSQ-P3-L14-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 咸.'
+  subject: Chinese
+  targetWord: 咸
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“咸”？
+  options:
+    - 白开水里没有盐，咸得像海水一样。
+    - 妹妹把咸戴在头上。
+    - 这碗汤放了太多盐，太咸了。
+    - 爸爸用咸把窗户擦亮。
+  correct: 这碗汤放了太多盐，太咸了。
+- questionID: WSQ-P3-L14-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 淡.'
+  subject: Chinese
+  targetWord: 淡
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“淡”？
+  options:
+    - 这碗汤加了很多盐，味道淡得咸极了。
+    - 妈妈淡了一件外套给我穿。
+    - 我用淡把鞋带系紧。
+    - 这碗汤没放盐，味道很淡。
+  correct: 这碗汤没放盐，味道很淡。
+- questionID: WSQ-P3-L14-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 滑滑.'
+  subject: Chinese
+  targetWord: 滑滑
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“滑滑”？
+  options:
+    - 这块肥皂摸起来滑滑的。
+    - 粗糙的砂纸摸起来滑滑的，一点也不粗。
+    - 爸爸用滑滑把钉子敲进木板。
+    - 妈妈把滑滑倒进茶杯里。
+  correct: 这块肥皂摸起来滑滑的。
+- questionID: WSQ-P3-L14-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 眼睛.'
+  subject: Chinese
+  targetWord: 眼睛
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“眼睛”？
+  options:
+    - 我用眼睛听见了老师的歌声。
+    - 小猫的眼睛又圆又亮。
+    - 弟弟用眼睛闻出花的香味。
+    - 姐姐用眼睛咬了一口面包。
+  correct: 小猫的眼睛又圆又亮。
+- questionID: WSQ-P3-L14-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 灰色.'
+  subject: Chinese
+  targetWord: 灰色
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“灰色”？
+  options:
+    - 这首歌灰色得非常好听。
+    - 妈妈用灰色把绳子剪断。
+    - 这只小兔的毛是灰色的。
+    - 爸爸灰色着汽车回家。
+  correct: 这只小兔的毛是灰色的。
+- questionID: WSQ-P3-L14-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 饿.'
+  subject: Chinese
+  targetWord: 饿
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“饿”？
+  options:
+    - 我刚吃得很饱，肚子饿得一点也不想吃东西。
+    - 妈妈饿了一锅汤给我喝。
+    - 妹妹用饿把头发绑好。
+    - 我还没吃午饭，肚子很饿。
+  correct: 我还没吃午饭，肚子很饿。
+- questionID: WSQ-P3-L14-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 饱.'
+  subject: Chinese
+  targetWord: 饱
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“饱”？
+  options:
+    - 吃完午饭，我已经饱了。
+    - 我一整天没吃东西，肚子饱得咕咕叫，直想吃饭。
+    - 爸爸饱着汽车去车站。
+    - 姐姐把饱穿在身上。
+  correct: 吃完午饭，我已经饱了。
+- questionID: WSQ-P3-L14-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 散步.'
+  subject: Chinese
+  targetWord: 散步
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“散步”？
+  options:
+    - 妈妈在厨房里散步了一锅粥。
+    - 晚饭后，我们到公园散步。
+    - 我用散步把纸剪成圆形。
+    - 弟弟把散步戴在头上挡太阳。
+  correct: 晚饭后，我们到公园散步。
+- questionID: WSQ-P3-L14-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 胖胖.'
+  subject: Chinese
+  targetWord: 胖胖
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“胖胖”？
+  options:
+    - 这只猫瘦得只剩皮包骨，却胖胖得像个大球。
+    - 妹妹把胖胖装进文具盒。
+    - 这只小猪胖胖的，很可爱。
+    - 妈妈用胖胖把地板擦干。
+  correct: 这只小猪胖胖的，很可爱。
+- questionID: WSQ-P3-L14-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 尾巴.'
+  subject: Chinese
+  targetWord: 尾巴
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“尾巴”？
+  options:
+    - 爸爸用尾巴把牙齿刷干净。
+    - 我用尾巴看见了远处的船。
+    - 妹妹把尾巴戴在手腕上看时间。
+    - 小狗摇着尾巴迎接主人。
+  correct: 小狗摇着尾巴迎接主人。
+- questionID: WSQ-P3-L14-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 圆圆.'
+  subject: Chinese
+  targetWord: 圆圆
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“圆圆”？
+  options:
+    - 月亮圆圆的，像一个盘子。
+    - 这张纸有四个尖角，是圆圆的正方形。
+    - 爸爸圆圆了一锅面条。
+    - 我用圆圆把窗户关上。
+  correct: 月亮圆圆的，像一个盘子。
+- questionID: WSQ-P3-L14-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 笨重.'
+  subject: Chinese
+  targetWord: 笨重
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“笨重”？
+  options:
+    - 这根羽毛轻得几乎没有重量，拿着十分笨重。
+    - 妹妹把笨重倒进杯子里。
+    - 这个大木箱很笨重，不容易搬动。
+    - 妈妈用笨重把衣服缝好。
+  correct: 这个大木箱很笨重，不容易搬动。
+- questionID: WSQ-P3-L14-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 打滚.'
+  subject: Chinese
+  targetWord: 打滚
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“打滚”？
+  options:
+    - 爸爸打滚着汽车去上班。
+    - 姐姐打滚了一口果汁。
+    - 我把书包打滚在身上，背着走了。
+    - 小狗躺在草地上打滚。
+  correct: 小狗躺在草地上打滚。
+- questionID: WSQ-P3-L14-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 咬断.'
+  subject: Chinese
+  targetWord: 咬断
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“咬断”？
+  options:
+    - 小狗把细绳咬断了。
+    - 我用耳朵咬断了一根绳子。
+    - 妈妈咬断了一首歌，大家都听见了。
+    - 姐姐把课文咬断得很流利。
+  correct: 小狗把细绳咬断了。
+- questionID: WSQ-P3-L14-USAGE-23
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 够.'
+  subject: Chinese
+  targetWord: 够
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“够”？
+  options:
+    - 爸爸够了一锅汤给我喝。
+    - 这些椅子够大家坐。
+    - 我用够把房门锁好。
+    - 妹妹把书够得很整齐，放进书包里。
+  correct: 这些椅子够大家坐。
+- questionID: WSQ-P3-L14-USAGE-24
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 14; taught vocabulary: 躺.'
+  subject: Chinese
+  targetWord: 躺
+  lessonIds:
+    - 14
+  question: 以下哪一个句子正确使用了“躺”？
+  options:
+    - 妈妈躺了一碗面条给我吃。
+    - 我用躺把头发梳顺。
+    - 爷爷躺在床上休息。
+    - 爸爸躺着汽车去上班，双手握着方向盘。
+  correct: 爷爷躺在床上休息。
+- questionID: WSQ-P3-L15-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 小偷.'
+  subject: Chinese
+  targetWord: 小偷
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“小偷”？
+  options:
+    - 故事里的小偷拿走了别人的钱。
+    - 我用小偷把纸剪开。
+    - 妈妈把小偷当作洗发水洗头。
+    - 爸爸小偷着汽车去上班。
+  correct: 故事里的小偷拿走了别人的钱。
+- questionID: WSQ-P3-L15-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 课室.'
+  subject: Chinese
+  targetWord: 课室
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“课室”？
+  options:
+    - 妹妹把课室戴在头上挡雨。
+    - 同学们走进课室准备上课。
+    - 妈妈课室了一锅粥。
+    - 我用课室把作业本上的铅笔字擦掉。
+  correct: 同学们走进课室准备上课。
+- questionID: WSQ-P3-L15-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 吓.'
+  subject: Chinese
+  targetWord: 吓
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“吓”？
+  options:
+    - 姐姐用吓把鞋带系紧。
+    - 妈妈吓了一口汤，觉得很鲜美。
+    - 突然的雷声吓了我一跳。
+    - 爸爸把帽子吓在头上。
+  correct: 突然的雷声吓了我一跳。
+- questionID: WSQ-P3-L15-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 逃不掉.'
+  subject: Chinese
+  targetWord: 逃不掉
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“逃不掉”？
+  options:
+    - 姐姐把逃不掉戴在手腕上看时间。
+    - 这碗面逃不掉得很好吃。
+    - 妈妈用逃不掉把钮扣缝好。
+    - 故事里的小偷被围住，逃不掉了。
+  correct: 故事里的小偷被围住，逃不掉了。
+- questionID: WSQ-P3-L15-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 痛.'
+  subject: Chinese
+  targetWord: 痛
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“痛”？
+  options:
+    - 跌倒后，我的膝盖很痛。
+    - 我把痛收进文具盒。
+    - 爸爸痛了一锅粥。
+    - 妈妈用痛把地板拖干净。
+  correct: 跌倒后，我的膝盖很痛。
+- questionID: WSQ-P3-L15-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 冒出.'
+  subject: Chinese
+  targetWord: 冒出
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“冒出”？
+  options:
+    - 妈妈冒出了一首歌给我们听。
+    - 天气很热，他的额头冒出汗珠。
+    - 姐姐把课文冒出得很流利。
+    - 我用冒出把书包的拉链拉好。
+  correct: 天气很热，他的额头冒出汗珠。
+- questionID: WSQ-P3-L15-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 冷汗.'
+  subject: Chinese
+  targetWord: 冷汗
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“冷汗”？
+  options:
+    - 妹妹把冷汗穿在脚上去上学。
+    - 爸爸冷汗着汽车回家。
+    - 他吓得冒出一身冷汗。
+    - 我用冷汗当作剪刀剪纸。
+  correct: 他吓得冒出一身冷汗。
+- questionID: WSQ-P3-L15-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 发抖.'
+  subject: Chinese
+  targetWord: 发抖
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“发抖”？
+  options:
+    - 妈妈把发抖盛进碗里。
+    - 我用发抖把牙齿刷干净。
+    - 爸爸发抖了一首歌给我听。
+    - 天气太冷，妹妹不停地发抖。
+  correct: 天气太冷，妹妹不停地发抖。
+- questionID: WSQ-P3-L15-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 钻进.'
+  subject: Chinese
+  targetWord: 钻进
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“钻进”？
+  options:
+    - 哥哥把课文钻进得很响。
+    - 小猫钻进纸箱里睡觉。
+    - 妈妈钻进了一锅汤给大家喝。
+    - 我用钻进把窗户关好。
+  correct: 小猫钻进纸箱里睡觉。
+- questionID: WSQ-P3-L15-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 怀里.'
+  subject: Chinese
+  targetWord: 怀里
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“怀里”？
+  options:
+    - 爸爸把汽车开怀里停车场。
+    - 妹妹怀里了一首歌，声音很好听。
+    - 妹妹躺在妈妈怀里睡着了。
+    - 妈妈用怀里把毛衣织好。
+  correct: 妹妹躺在妈妈怀里睡着了。
+- questionID: WSQ-P3-L15-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 朱.'
+  subject: Chinese
+  targetWord: 朱
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“朱”？
+  options:
+    - 妹妹把朱穿在脚上。
+    - 妈妈朱了一碗粥给我喝。
+    - 我用朱把绳子剪成两段。
+    - 朱老师教我们华文。
+  correct: 朱老师教我们华文。
+- questionID: WSQ-P3-L15-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 班.'
+  subject: Chinese
+  targetWord: 班
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“班”？
+  options:
+    - 我们班有三十位学生。
+    - 我喝了一班果汁。
+    - 桌上摆着一班碗。
+    - 妹妹穿上一班新衣服。
+  correct: 我们班有三十位学生。
+- questionID: WSQ-P3-L15-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 练习.'
+  subject: Chinese
+  targetWord: 练习
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“练习”？
+  options:
+    - 我把练习戴在手腕上看时间。
+    - 他每天练习读华文。
+    - 妈妈用练习把花插在瓶子里。
+    - 爸爸练习了一口茶，觉得很香。
+  correct: 他每天练习读华文。
+- questionID: WSQ-P3-L15-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 简单.'
+  subject: Chinese
+  targetWord: 简单
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“简单”？
+  options:
+    - 这道题非常简单，全班没有一个人会做。
+    - 妈妈简单了一碗饭。
+    - 这个游戏的规则很简单。
+    - 我用简单把头发梳好。
+  correct: 这个游戏的规则很简单。
+- questionID: WSQ-P3-L15-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 桌.'
+  subject: Chinese
+  targetWord: 桌
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“桌”？
+  options:
+    - 我喝了一桌牛奶瓶。
+    - 爸爸用桌把字写在本子上。
+    - 妈妈桌了一首歌给我们听。
+    - 书桌上放着一盏灯。
+  correct: 书桌上放着一盏灯。
+- questionID: WSQ-P3-L15-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 漫画.'
+  subject: Chinese
+  targetWord: 漫画
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“漫画”？
+  options:
+    - 哥哥借了一本有趣的漫画。
+    - 爸爸漫画着汽车去上班。
+    - 妹妹把漫画当作牛奶喝下去。
+    - 妈妈用漫画当铁锤敲钉子。
+  correct: 哥哥借了一本有趣的漫画。
+- questionID: WSQ-P3-L15-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 忍不住.'
+  subject: Chinese
+  targetWord: 忍不住
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“忍不住”？
+  options:
+    - 我用忍不住把房门锁好。
+    - 故事太好笑，我忍不住笑了。
+    - 妈妈把忍不住倒进水杯。
+    - 这双鞋忍不住得很舒服。
+  correct: 故事太好笑，我忍不住笑了。
+- questionID: WSQ-P3-L15-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 肚皮.'
+  subject: Chinese
+  targetWord: 肚皮
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“肚皮”？
+  options:
+    - 妹妹把肚皮穿在脚上跑步。
+    - 我用肚皮听清老师说的话。
+    - 小狗肚皮上的毛软软的。
+    - 妈妈用肚皮当作剪刀剪布。
+  correct: 小狗肚皮上的毛软软的。
+- questionID: WSQ-P3-L15-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 哈哈大笑.'
+  subject: Chinese
+  targetWord: 哈哈大笑
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“哈哈大笑”？
+  options:
+    - 爸爸把哈哈大笑盛进碗里。
+    - 我用哈哈大笑把铅笔削尖。
+    - 这张桌子哈哈大笑得很高。
+    - 爷爷讲的笑话让大家哈哈大笑。
+  correct: 爷爷讲的笑话让大家哈哈大笑。
+- questionID: WSQ-P3-L15-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 哎呀.'
+  subject: Chinese
+  targetWord: 哎呀
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“哎呀”？
+  options:
+    - 哎呀，我把书忘在家里了！
+    - 我买了一公斤哎呀。
+    - 妈妈把哎呀戴在头上。
+    - 爸爸用哎呀把墙刷白。
+  correct: 哎呀，我把书忘在家里了！
+- questionID: WSQ-P3-L15-USAGE-22
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 15; taught vocabulary: 闹笑话.'
+  subject: Chinese
+  targetWord: 闹笑话
+  lessonIds:
+    - 15
+  question: 以下哪一个句子正确使用了“闹笑话”？
+  options:
+    - 这道菜闹笑话得很好吃。
+    - 他把鞋穿反了，闹笑话了。
+    - 爸爸把闹笑话穿在脚上。
+    - 我用闹笑话把纸袋打开。
+  correct: 他把鞋穿反了，闹笑话了。
+- questionID: WSQ-P3-L16-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 有始无终.'
+  subject: Chinese
+  targetWord: 有始无终
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“有始无终”？
+  options:
+    - 他每次都坚持把事情做完，真是有始无终。
+    - 他总是有始无终，模型做了一半就不做了。
+    - 这碗汤有始无终，喝起来很鲜美。
+    - 妈妈把书包擦得有始无终。
+  correct: 他总是有始无终，模型做了一半就不做了。
+- questionID: WSQ-P3-L16-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 虎头蛇尾.'
+  subject: Chinese
+  targetWord: 虎头蛇尾
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“虎头蛇尾”？
+  options:
+    - 她从头到尾都认真检查，一点也不马虎，真是虎头蛇尾。
+    - 爸爸用虎头蛇尾把门锁好。
+    - 他的作文开头精彩，结尾草率，有点虎头蛇尾。
+    - 这件衣服虎头蛇尾，穿着很暖和。
+  correct: 他的作文开头精彩，结尾草率，有点虎头蛇尾。
+- questionID: WSQ-P3-L16-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 半途而废.'
+  subject: Chinese
+  targetWord: 半途而废
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“半途而废”？
+  options:
+    - 他一直坚持到终点，成功完成了比赛，真是半途而废。
+    - 妈妈把半途而废煮熟端上桌。
+    - 我穿上一双半途而废去跑步。
+    - 学游泳不能半途而废，要继续练习。
+  correct: 学游泳不能半途而废，要继续练习。
+- questionID: WSQ-P3-L16-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 勤学.'
+  subject: Chinese
+  targetWord: 勤学
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“勤学”？
+  options:
+    - 她勤学好问，每天认真读书。
+    - 他从来不愿学习，连书也不肯看，真是勤学。
+    - 妈妈用勤学把头发梳整齐。
+    - 爸爸勤学了一口茶，觉得很香。
+  correct: 她勤学好问，每天认真读书。
+- questionID: WSQ-P3-L16-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 俩.'
+  subject: Chinese
+  targetWord: 俩
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“俩”？
+  options:
+    - 我们俩三个人一起去图书馆。
+    - 我们俩一起做贺卡。
+    - 桌上放着俩只铅笔。
+    - 我买了俩个苹果。
+  correct: 我们俩一起做贺卡。
+- questionID: WSQ-P3-L16-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 泡泡.'
+  subject: Chinese
+  targetWord: 泡泡
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“泡泡”？
+  options:
+    - 我用泡泡当钢锯，把粗木板锯开。
+    - 爸爸泡泡着汽车回家。
+    - 妹妹吹出一串彩色的泡泡。
+    - 妈妈把泡泡当铁锅，在炉上煮饭。
+  correct: 妹妹吹出一串彩色的泡泡。
+- questionID: WSQ-P3-L16-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 滑轮.'
+  subject: Chinese
+  targetWord: 滑轮
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“滑轮”？
+  options:
+    - 爸爸把滑轮当作一杯饮料喝下去了。
+    - 妹妹用滑轮当作梳子梳头。
+    - 妈妈滑轮了一首歌给我们听。
+    - 哥哥练习滑轮运动时，穿着带轮子的鞋。
+  correct: 哥哥练习滑轮运动时，穿着带轮子的鞋。
+- questionID: WSQ-P3-L16-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 钓鱼.'
+  subject: Chinese
+  targetWord: 钓鱼
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“钓鱼”？
+  options:
+    - 爷爷拿着鱼竿去钓鱼。
+    - 妈妈钓鱼了一锅粥给我喝。
+    - 爸爸把钓鱼穿在脚上。
+    - 我用钓鱼把头发绑好。
+  correct: 爷爷拿着鱼竿去钓鱼。
+- questionID: WSQ-P3-L16-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 结果.'
+  subject: Chinese
+  targetWord: 结果
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“结果”？
+  options:
+    - 爸爸把结果戴在头上挡雨。
+    - 他忘了带伞，结果淋湿了。
+    - 我用结果把窗户擦亮。
+    - 妹妹结果了一口牛奶。
+  correct: 他忘了带伞，结果淋湿了。
+- questionID: WSQ-P3-L16-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 数学.'
+  subject: Chinese
+  targetWord: 数学
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“数学”？
+  options:
+    - 妈妈把数学切成片放进锅里。
+    - 我用数学当作梳子梳头发。
+    - 今天的数学课学习加法。
+    - 爸爸数学着巴士去上班。
+  correct: 今天的数学课学习加法。
+- questionID: WSQ-P3-L16-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 题.'
+  subject: Chinese
+  targetWord: 题
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“题”？
+  options:
+    - 爸爸买了一题汽车。
+    - 妹妹喝了一题果汁。
+    - 我穿上一题新衣服。
+    - 我做完了第一题。
+  correct: 我做完了第一题。
+- questionID: WSQ-P3-L16-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 认识.'
+  subject: Chinese
+  targetWord: 认识
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“认识”？
+  options:
+    - 妈妈认识了一口汤，觉得很鲜美。
+    - 我在活动中认识了新朋友。
+    - 姐姐用认识把纸剪开。
+    - 爸爸把认识穿在身上。
+  correct: 我在活动中认识了新朋友。
+- questionID: WSQ-P3-L16-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 念.'
+  subject: Chinese
+  targetWord: 念
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“念”？
+  options:
+    - 我用眼睛念见了远处的大树。
+    - 妈妈把衣服念在衣架上。
+    - 老师请我念这段课文。
+    - 爸爸用念把门锁紧。
+  correct: 老师请我念这段课文。
+- questionID: WSQ-P3-L16-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 传.'
+  subject: Chinese
+  targetWord: 传
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“传”？
+  options:
+    - 妈妈把米饭传熟了，大家开始吃饭。
+    - 我用传把头发梳整齐。
+    - 姐姐传了一口水，觉得很清凉。
+    - 请把这本书传给后面的同学。
+  correct: 请把这本书传给后面的同学。
+- questionID: WSQ-P3-L16-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 别人.'
+  subject: Chinese
+  targetWord: 别人
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“别人”？
+  options:
+    - 借别人的东西要先问。
+    - 妈妈用别人当作洗衣粉洗衣服。
+    - 爸爸别人了一首歌给我们听。
+    - 我把别人倒进杯子里。
+  correct: 借别人的东西要先问。
+- questionID: WSQ-P3-L16-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 感到.'
+  subject: Chinese
+  targetWord: 感到
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“感到”？
+  options:
+    - 妈妈感到了一口饭，慢慢嚼着。
+    - 收到礼物后，我感到很开心。
+    - 我用感到把书上的灰尘擦掉。
+    - 爸爸把感到戴在手腕上看时间。
+  correct: 收到礼物后，我感到很开心。
+- questionID: WSQ-P3-L16-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 低.'
+  subject: Chinese
+  targetWord: 低
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“低”？
+  options:
+    - 这座山很低，高得伸进云层里。
+    - 妹妹把低煮熟端上桌。
+    - 他低下头，认真写字。
+    - 我用低把鞋带系紧。
+  correct: 他低下头，认真写字。
+- questionID: WSQ-P3-L16-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 16; taught vocabulary: 抬.'
+  subject: Chinese
+  targetWord: 抬
+  lessonIds:
+    - 16
+  question: 以下哪一个句子正确使用了“抬”？
+  options:
+    - 姐姐抬了一口汤，觉得很热。
+    - 妈妈抬了一首歌，大家都听见了。
+    - 我用耳朵抬见门外的声音。
+    - 我抬起头看天空。
+  correct: 我抬起头看天空。
+- questionID: WSQ-P3-L17-USAGE-01
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 农夫.'
+  subject: Chinese
+  targetWord: 农夫
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“农夫”？
+  options:
+    - 爸爸把农夫穿在脚上。
+    - 我用农夫把纸剪成圆形。
+    - 农夫在田里种菜。
+    - 妈妈农夫了一锅粥。
+  correct: 农夫在田里种菜。
+- questionID: WSQ-P3-L17-USAGE-02
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 劳动.'
+  subject: Chinese
+  targetWord: 劳动
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“劳动”？
+  options:
+    - 爸爸把劳动戴在手腕上看时间。
+    - 妹妹劳动了一口水，觉得很清凉。
+    - 我用劳动把窗户锁好。
+    - 农夫每天在田里劳动。
+  correct: 农夫每天在田里劳动。
+- questionID: WSQ-P3-L17-USAGE-03
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 渔夫.'
+  subject: Chinese
+  targetWord: 渔夫
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“渔夫”？
+  options:
+    - 渔夫划着船去捕鱼。
+    - 妈妈把渔夫当作洗发水洗头。
+    - 爸爸渔夫着汽车去上班。
+    - 我用渔夫把铅笔削尖。
+  correct: 渔夫划着船去捕鱼。
+- questionID: WSQ-P3-L17-USAGE-04
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 神仙.'
+  subject: Chinese
+  targetWord: 神仙
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“神仙”？
+  options:
+    - 妹妹把神仙倒进杯子里。
+    - 故事中的神仙帮助了诚实的孩子。
+    - 爸爸用神仙当牙刷刷牙。
+    - 我穿上一件神仙去学校。
+  correct: 故事中的神仙帮助了诚实的孩子。
+- questionID: WSQ-P3-L17-USAGE-05
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 捞出.'
+  subject: Chinese
+  targetWord: 捞出
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“捞出”？
+  options:
+    - 姐姐捞出了一首歌给我们听。
+    - 我用捞出把书包拉链拉好。
+    - 妈妈把煮好的面条捞出锅。
+    - 爸爸捞出着汽车回家。
+  correct: 妈妈把煮好的面条捞出锅。
+- questionID: WSQ-P3-L17-USAGE-06
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 摘下.'
+  subject: Chinese
+  targetWord: 摘下
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“摘下”？
+  options:
+    - 妈妈用眼睛摘下了远处的风景。
+    - 妹妹摘下了一口牛奶，觉得很香。
+    - 我用摘下把绳子绑紧。
+    - 她摘下帽子，放在桌上。
+  correct: 她摘下帽子，放在桌上。
+- questionID: WSQ-P3-L17-USAGE-07
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 精灵.'
+  subject: Chinese
+  targetWord: 精灵
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“精灵”？
+  options:
+    - 童话里的精灵住在森林中。
+    - 爸爸精灵着汽车去停车场。
+    - 我用精灵把牙齿刷干净。
+    - 妈妈把精灵当作洗衣粉洗衣服。
+  correct: 童话里的精灵住在森林中。
+- questionID: WSQ-P3-L17-USAGE-08
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 失去.'
+  subject: Chinese
+  targetWord: 失去
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“失去”？
+  options:
+    - 姐姐失去了一首歌给大家听。
+    - 农夫失去了自己常用的斧头。
+    - 妈妈用失去把窗户关上。
+    - 我把书包失去在身上，背着去学校。
+  correct: 农夫失去了自己常用的斧头。
+- questionID: WSQ-P3-L17-USAGE-09
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 铁.'
+  subject: Chinese
+  targetWord: 铁
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“铁”？
+  options:
+    - 我用铁当作橡皮擦，把纸上的字擦干净。
+    - 妈妈把铁当作白开水喝下去了。
+    - 这把斧头的斧刃是铁做的。
+    - 爸爸铁着汽车回家。
+  correct: 这把斧头的斧刃是铁做的。
+- questionID: WSQ-P3-L17-USAGE-10
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 金.'
+  subject: Chinese
+  targetWord: 金
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“金”？
+  options:
+    - 姐姐金了一首歌给我听。
+    - 我用金把头发梳整齐。
+    - 妈妈把金倒进茶杯里，给我当水喝。
+    - 这枚戒指是金做的。
+  correct: 这枚戒指是金做的。
+- questionID: WSQ-P3-L17-USAGE-11
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 银.'
+  subject: Chinese
+  targetWord: 银
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“银”？
+  options:
+    - 这只手镯是银做的。
+    - 爸爸银着汽车去上班。
+    - 妹妹把银当作果汁喝完了。
+    - 妈妈银了一锅粥给我吃。
+  correct: 这只手镯是银做的。
+- questionID: WSQ-P3-L17-USAGE-12
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 银牌.'
+  subject: Chinese
+  targetWord: 银牌
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“银牌”？
+  options:
+    - 爸爸用银牌当作牙膏刷牙。
+    - 她在游泳比赛中获得银牌。
+    - 我把银牌当作雨鞋穿在两只脚上。
+    - 妹妹银牌了一口热汤。
+  correct: 她在游泳比赛中获得银牌。
+- questionID: WSQ-P3-L17-USAGE-13
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 签名.'
+  subject: Chinese
+  targetWord: 签名
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“签名”？
+  options:
+    - 妈妈签名了一口饭，慢慢嚼着。
+    - 我把签名穿在脚上走路。
+    - 妈妈在报名表上签名。
+    - 爸爸用签名把螺丝拧紧。
+  correct: 妈妈在报名表上签名。
+- questionID: WSQ-P3-L17-USAGE-14
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 等.'
+  subject: Chinese
+  targetWord: 等
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“等”？
+  options:
+    - 姐姐等了一口水，觉得很清凉。
+    - 我用等把铅笔字擦掉。
+    - 妈妈把书等在书架上。
+    - 我在校门口等妈妈。
+  correct: 我在校门口等妈妈。
+- questionID: WSQ-P3-L17-USAGE-15
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 万.'
+  subject: Chinese
+  targetWord: 万
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“万”？
+  options:
+    - 一万就是十个一千。
+    - 我万了一口面条，觉得很香。
+    - 妈妈把万穿在脚上。
+    - 爸爸用万把窗户擦干净。
+  correct: 一万就是十个一千。
+- questionID: WSQ-P3-L17-USAGE-16
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 千.'
+  subject: Chinese
+  targetWord: 千
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“千”？
+  options:
+    - 我千了一首歌给奶奶听。
+    - 一千等于十个一百。
+    - 爸爸把千戴在头上。
+    - 妈妈用千把绳子剪断。
+  correct: 一千等于十个一百。
+- questionID: WSQ-P3-L17-USAGE-17
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 减掉.'
+  subject: Chinese
+  targetWord: 减掉
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“减掉”？
+  options:
+    - 原来有五个苹果，再放上三个，减掉后共有八个。
+    - 姐姐减掉了一首歌给我听。
+    - 十减掉三，剩下七。
+    - 我用减掉把窗户擦亮。
+  correct: 十减掉三，剩下七。
+- questionID: WSQ-P3-L17-USAGE-18
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 算.'
+  subject: Chinese
+  targetWord: 算
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“算”？
+  options:
+    - 妈妈把饭算熟，端上桌来。
+    - 姐姐算了一口热汤。
+    - 我用算把头发绑好。
+    - 我用加法算出总数。
+  correct: 我用加法算出总数。
+- questionID: WSQ-P3-L17-USAGE-19
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 立刻.'
+  subject: Chinese
+  targetWord: 立刻
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“立刻”？
+  options:
+    - 看到小狗受伤，她立刻请大人帮忙。
+    - 妈妈立刻了一首歌给我们听。
+    - 我把立刻穿在脚上跑步。
+    - 爸爸用立刻把木板锯开。
+  correct: 看到小狗受伤，她立刻请大人帮忙。
+- questionID: WSQ-P3-L17-USAGE-20
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 检查.'
+  subject: Chinese
+  targetWord: 检查
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“检查”？
+  options:
+    - 妈妈把检查煮熟端上桌。
+    - 交作业前，我仔细检查答案。
+    - 妹妹检查了一口水，觉得很甜。
+    - 我用检查把头发梳好。
+  correct: 交作业前，我仔细检查答案。
+- questionID: WSQ-P3-L17-USAGE-21
+  source: 'Original Word Spirit Quest P3 Heavy Slam practice; Lesson 17; taught vocabulary: 决定.'
+  subject: Chinese
+  targetWord: 决定
+  lessonIds:
+    - 17
+  question: 以下哪一个句子正确使用了“决定”？
+  options:
+    - 姐姐把决定戴在手腕上看时间。
+    - 我用决定把地板拖干净。
+    - 大家讨论后，作出了一个决定。
+    - 爸爸决定了一口饭，觉得很香。
+  correct: 大家讨论后，作出了一个决定。

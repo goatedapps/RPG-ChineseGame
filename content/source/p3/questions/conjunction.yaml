@@ -1,0 +1,30 @@
+- questionID: P3-CH-2025-SA2-ROSYTH-Q7
+  source: P3_Chinese_2025_SA2_rosyth.pdf; PDF page 2; answer key supplied in PDF
+  sourceQuestion: Q7
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: 你不要跑得太快，___会受伤。
+  options:
+    - 但是
+    - 不然
+    - 所以
+    - 为了
+  correct: 不然
+  subject: Chinese
+  marks: 1
+- questionID: P3-CH-2025-SA2-STHILDAS-Q9
+  source: P3_Chinese_2025_SA2_sthildas.pdf; PDF page 9; answer key supplied in PDF
+  sourceQuestion: Q9
+  sourceSubject: Chinese
+  sourceMarks: 1
+  lessonIds: []
+  question: ___功课很多，___我会认真地完成。
+  options:
+    - 一……就
+    - 先……再
+    - 虽然……但是
+    - 不是……就是
+  correct: 虽然……但是
+  subject: Chinese
+  marks: 1

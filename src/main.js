@@ -10,8 +10,8 @@ import { createOverlay } from './ui/overlay.js?p11';
 import { updateHud } from './ui/hud.js?p3';
 import { createToast } from './ui/toast.js';
 import { bindAtlasMenu, guardAtlasPanels, setAtlasRegion } from './ui/atlas.js?p4';
-import { createGameplay } from './gameplay.js?p62';
-import { createCollection } from './collection.js?p34';
+import { createGameplay } from './gameplay.js?p63';
+import { createCollection } from './collection.js?p35';
 import { createAdventure } from './adventure.js?p46';
 import { createAudioManager } from './core/audio.js?p25';
 import { warmImage } from './core/assets.js?p2';
@@ -116,7 +116,7 @@ function persist({ rewardSound = true } = {}) {
 }
 
 function importCurrentLevelSave(state) {
-  if (!active || state.level !== active.levelPackage.id) throw new Error('This save belongs to a different curriculum. Switch curriculum first.');
+  if (!active || state.level !== active.levelPackage.id) throw new Error('This save belongs to a different level. Switch level first.');
   const matchingMap = Object.values(active.levelPackage.campaigns).some(campaign => campaign.map.id === state.player.map || campaign.route?.id === state.player.map);
   if (!matchingMap) throw new Error('This save refers to a map that is not in this version of the game.');
   saveLevelState(storage, state, active.playerId);
@@ -252,7 +252,7 @@ function showWelcome(loadResult) {
 async function startLevel(levelId) {
   if (!selectedPlayer) return showPlayerPicker();
   if (active) persist();
-  overlay.open('<div class="panel"><h2>Opening the shared world…</h2><p>Loading curriculum, map and save data.</p></div>', { dismissible: false });
+  overlay.open('<div class="panel"><h2>Opening the shared world…</h2><p>Loading level, map and save data.</p></div>', { dismissible: false });
   try {
     let levelPackage = await loadLevelPackage(levelId);
     for (const campaign of Object.values(levelPackage.campaigns)) {
@@ -416,7 +416,7 @@ function switchRegion(regionId) {
 
 function levelStatus(level) {
   if (level.worldMappingReady) return '';
-  if (level.sourceReady) return 'Curriculum imported · world mapping in progress';
+  if (level.sourceReady) return 'Level imported · world mapping in progress';
   return 'Coming soon';
 }
 
@@ -473,14 +473,14 @@ function showPlayerPicker(requestedLevel = null) {
 function showLevelPicker(resetToActive = false) {
   if (resetToActive) restoreActivePlayerSelection();
   if (!selectedPlayer) return showPlayerPicker();
-  if (!active) $('#game-stage').setAttribute('aria-label', 'Curriculum selection');
+  if (!active) $('#game-stage').setAttribute('aria-label', 'Level selection');
   overlay.open(`<div class="panel atlas-level-picker">
     <p class="panel-kicker">${escapeHtml(selectedPlayer.name)}'s adventure</p>
-    <h1>Choose your curriculum</h1>
-    <p>Every level follows the same seven-region adventure. Each player keeps separate progress in each curriculum.</p>
+    <h1>Choose your level</h1>
+    <p>Every level follows the same seven-region adventure. Each player keeps separate progress in each level.</p>
     <div class="level-grid">
       ${levels.map(level => `<button class="level-card" data-level="${level.id}" ${level.worldMappingReady ? '' : 'disabled'}>
-        <i aria-hidden="true">${escapeHtml(level.badge || '学')}</i><b>${escapeHtml(level.label)}</b><span>${levelStatus(level) || 'Enter the seven-region adventure'}</span>
+        <i aria-hidden="true">${escapeHtml(level.badge || '学')}</i><b>${escapeHtml(level.label)}</b>${levelStatus(level) ? `<span>${escapeHtml(levelStatus(level))}</span>` : ''}
       </button>`).join('')}
     </div>
     <div class="button-row"><button class="secondary" data-change-player>Choose another player</button>${active ? '<button class="secondary" data-close-overlay>Return to village</button>' : ''}</div>
@@ -496,17 +496,17 @@ function showBuildStatus() {
   const { levelPackage, state } = active;
   overlay.open(`<div class="panel">
     <div class="panel-header"><h2>Development status</h2><button class="secondary" data-close-overlay>Close</button></div>
-    <p>Every playable curriculum shares the seven-region campaign with its own save, lessons and tuning.</p>
+    <p>Every playable level shares the seven-region campaign with its own save, lessons and tuning.</p>
     ${active.saveBlocked ? '<p class="save-warning">Saving is paused because the stored save could not be recovered. Export the current in-memory state before reloading.</p>' : ''}
     <div class="status-grid">
-      <div>Curriculum<b>${levelPackage.label}</b></div>
+      <div>Level<b>${levelPackage.label}</b></div>
       <div>Content version<b>${levelPackage.content.contentVersion}</b></div>
       <div>Vocabulary loaded<b>${levelPackage.content.words.length}</b></div>
       <div>Local Hanzi loaded<b>${Object.keys(levelPackage.characters.characters).length}</b></div>
       <div>Position<b>${state.player.x}, ${state.player.y}</b></div>
       <div>Save integrity<b>${state.tampered ? 'Edited' : 'Verified'}</b></div>
     </div>
-    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-replay-intro>Replay introduction</button><button class="secondary" data-switch-level>Switch curriculum</button>${Object.values(levelPackage.campaigns).map(campaign => `<button class="secondary" data-debug-region="${campaign.region.id}" ${campaign.region.id === levelPackage.region.id ? 'disabled' : ''}>Open ${escapeHtml(campaign.region.name)}</button>`).join('')}</div>
+    <div class="button-row"><button class="primary" data-export-current>Export current state</button><button class="secondary" data-replay-intro>Replay introduction</button><button class="secondary" data-switch-level>Switch level</button>${Object.values(levelPackage.campaigns).map(campaign => `<button class="secondary" data-debug-region="${campaign.region.id}" ${campaign.region.id === levelPackage.region.id ? 'disabled' : ''}>Open ${escapeHtml(campaign.region.name)}</button>`).join('')}</div>
   </div>`);
   $('[data-switch-level]').addEventListener('click', () => showLevelPicker(true), { once: true });
   $('[data-replay-intro]').addEventListener('click', () => {

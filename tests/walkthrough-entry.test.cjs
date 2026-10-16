@@ -64,6 +64,7 @@ test('every curriculum walkthrough matches village shops, cosmetics and lessons 
         for (let attempt = 0; attempt < 20 && !dom.window.document.querySelector(number ? '#route' : 'main'); attempt += 1) await new Promise(resolve => setTimeout(resolve, 5));
         const main = dom.window.document.querySelector('main');
         assert.ok(main, `${level} ${region} rendered`);
+        assert.doesNotMatch(dom.window.document.body.textContent, /curricul(?:um|a)/i, `${level} ${region}: use level wording`);
         assert.doesNotMatch(dom.window.document.body.textContent, /\b(?:undefined|null|NaN)\b/, `${level} ${region}: no invalid text, including closed disclosures`);
         for (const element of dom.window.document.querySelectorAll('*')) {
           for (const attribute of element.attributes) assert.doesNotMatch(attribute.value, /\b(?:undefined|null|NaN)\b/, `${level} ${region}: valid ${attribute.name}`);

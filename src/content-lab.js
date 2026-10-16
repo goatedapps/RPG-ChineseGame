@@ -70,7 +70,7 @@ function renderSummary() {
   }
   const progress = normalizeWordProgress(wordProgress.get(word.w));
   elements.summary.innerHTML = `
-    <div>Curriculum<b>${escapeHtml(levelPackage.label)}</b></div>
+    <div>Level<b>${escapeHtml(levelPackage.label)}</b></div>
     <div>Selected word<b>${escapeHtml(word.w)} · ${escapeHtml(word.p)}</b></div>
     <div>Lesson<b>${word.lesson}</b></div>
     <div>Mastery preview<b>${tierOf(progress) || 'Not collected'} · ${starsOf(progress)}/5 stars</b></div>
@@ -260,7 +260,7 @@ function runTask() {
 
 async function loadLevel() {
   stopActivity();
-  elements.workspace.innerHTML = '<div class="lab-loading"><h2>Loading curriculum…</h2></div>';
+  elements.workspace.innerHTML = '<div class="lab-loading"><h2>Loading level…</h2></div>';
   try {
     levelPackage = await loadLevelPackage(elements.level.value);
     supportedExam = filterSupportedQuestions(levelPackage.content, levelPackage.config);
@@ -286,7 +286,7 @@ window.addEventListener('beforeunload', stopActivity);
 window.__WSQ_LEARNING_LAB__ = { get levelPackage() { return levelPackage; }, runTask, wordProgress, characterProgress };
 try {
   const levels = (await listLevels()).filter(level => level.worldMappingReady);
-  if (!levels.length) throw new Error('No playable curriculum is registered.');
+  if (!levels.length) throw new Error('No playable level is registered.');
   elements.level.innerHTML = levels.map(level => `<option value="${escapeHtml(level.id)}">${escapeHtml(level.label)}</option>`).join('');
   const requested = new URLSearchParams(window.location.search).get('level');
   if (levels.some(level => level.id === requested)) elements.level.value = requested;

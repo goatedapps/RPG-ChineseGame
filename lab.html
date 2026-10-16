@@ -15,13 +15,13 @@
       <div>
         <p class="lab-kicker">P2 Learning Core</p>
         <h1>Content Lab <span>学习工坊</span></h1>
-        <p>Run every reusable learning task against the real P2 and P5 curriculum.</p>
+        <p>Run every reusable learning task against the selected level.</p>
       </div>
       <a class="secondary" href="./">Return to village</a>
     </header>
 
     <section class="lab-controls" aria-label="Learning task controls">
-      <label>Curriculum<select id="lab-level"></select></label>
+      <label>Level<select id="lab-level"></select></label>
       <label>Lesson<select id="lab-lesson"></select></label>
       <label class="lab-word-control">Word<input id="lab-word-search" type="search" placeholder="Search Hanzi, pinyin, or meaning" autocomplete="off"><select id="lab-word" size="1"></select></label>
       <label>Task<select id="lab-task"></select></label>
@@ -30,10 +30,10 @@
 
     <section class="lab-summary" id="lab-summary" aria-live="polite"></section>
     <section class="lab-workspace" id="lab-workspace" aria-live="polite">
-      <div class="lab-loading"><h2>Opening the learning lab…</h2><p>Loading curriculum and local writing data.</p></div>
+      <div class="lab-loading"><h2>Opening the learning lab…</h2><p>Loading level and local writing data.</p></div>
     </section>
   </main>
   <script src="./vendor/hanzi-writer/hanzi-writer.min.js"></script>
-  <script type="module" src="./src/content-lab.js?p3"></script>
+  <script type="module" src="./src/content-lab.js?p4"></script>
 </body>
 </html>
